@@ -2554,11 +2554,18 @@
 #
 #   The bar may be a dot, and the stem may be to the right or alternatively to
 #   the left. This scheme supports all four sets using digits 1..5 and letters
-#   T for bar-shaped tone bars, or I for dotted tone bars, with leading digits
-#   for standard tone bars, or trailing digits for left-stem tone bars. Digits
-#   are assigned mnemonically from 1 for extra-low, to 5 for extra-high. Both
-#   letters are case insensitive, but order does matter since the additional
-#   tone bars "꜈" UA708.."꜖" UA716 are supported.
+#   "t" for bar-shaped tone bars, or "i" for dotted tone bars, with leading
+#   digits for standard tone bars, or trailing digits for left-stem tone bars.
+#
+#   Digits are assigned mnemonically from 1 for extra-low, to 5 for extra-high.
+#
+#   Order matters since the tone bars "꜈" UA708.."꜖" UA716 are supported.
+#
+#   Since "T" is used for mathematical tack or turnstile symbols, "t" is case
+#   sensitive when it occurs in association with leading or trailing "2" or "3"
+#   (used for double- and triple-line tacks and turnstiles). Otherwise, both
+#   letters are case insensitive so far.
+#   See #   Tacks and turnstiles
 #
 #
 # # Standard tone bars
@@ -2571,13 +2578,13 @@
 <Multi_key><KP_1><t>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><2><t>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><2><T>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+#   <Multi_key><2><T> is used for tacks and turnstiles.
 <Multi_key><KP_2><t>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><KP_2><T>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+#   <Multi_key><KP_2><T> is used for tacks and turnstiles.
 <Multi_key><3><t>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><3><T>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+#   <Multi_key><3><T> is used for tacks and turnstiles.
 <Multi_key><KP_3><t>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><KP_3><T>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+#   <Multi_key><KP_3><T> is used for tacks and turnstiles.
 <Multi_key><4><t>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><KP_4><t>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
@@ -2595,13 +2602,13 @@
 <Multi_key><t><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
 <Multi_key><T><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
 <Multi_key><t><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
-<Multi_key><T><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+#   <Multi_key><T><2> is used for tacks and turnstiles.
 <Multi_key><t><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
-<Multi_key><T><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+#   <Multi_key><T><KP_2> is used for tacks and turnstiles.
 <Multi_key><t><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
-<Multi_key><T><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+#   <Multi_key><T><3> is used for tacks and turnstiles.
 <Multi_key><t><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
-<Multi_key><T><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+#   <Multi_key><T><KP_3> is used for tacks and turnstiles.
 <Multi_key><t><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
 <Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
 <Multi_key><t><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
@@ -2665,7 +2672,7 @@
 #   The dotted Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718 and "ꜙ" UA719 are
 #   intuitively supported in dead_abovedot with base characters matching the
 #   vertical, diagonal or horizontal dash, but without multikey equivalents,
-#   while "ꜚ" UA71A is in dead_horn as a spacing clone of horn.
+#   while "ꜚ" UA71A is in dead_horn in lieu of a spacing clone of horn.
 #   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
 #   https://www.unicode.org/L2/L2004/04349r-chinantec.pdf
 #   See #*# DOT_ABOVE
@@ -5094,18 +5101,27 @@
 #   assumed to refer to the same angle.
 #
 #
-#   Mathematical tack symbols
+#   Tacks and turnstiles
 #
 #   The most straightforward multikey sequences for tacks are based on capital
-#   letter T, with both graphic and alphabetic mnemonics. Non-down tacks have a
-#   trailing transform in their sequence: "%" for down tacks with a multikey
-#   equivalent based mnemonic, and "<" for left tacks, ">" for right tacks. But
-#   other sequences accumulated over time as well, descriptive or elsewise, and
-#   are maintained for variety, since removing any is unnecessary so far.
+#   letter "T", with both graphic and alphabetic mnemonics. Non-down tacks have
+#   a trailing transform in their sequence: "%" for down tacks, with a multikey
+#   equivalent based mnemonic, and "<" for left tacks, ">" for right tacks.
+#
+#   Tacks pointing both ways have order insensitive less and greater, or double
+#   percent, or double "T" and single percent for intuitivity.
 #
 #   Various lengths (short, long) are supported by leading space or by trailing
 #   additional transforms: "'" for short tacks, "|" for long tacks, at the very
-#   end of the sequence.
+#   end of the sequence (unless space termination is required, but mostly it is
+#   not, then).
+#
+#   Tacks with a multiple-line head have a leading digit (typically 2 or 3) in
+#   their sequence, and those with multiple stems (again 2 or 3) have a digit
+#   after the "T". Part of these are referred to as turnstiles instead,
+#
+#   But other sequences accumulated over time as well, descriptive or elsewise,
+#   and are maintained for variety, since removing any is unnecessary so far.
 #
 #
 #   Small symbols
@@ -6236,15 +6252,19 @@
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
 #
-#   The duplicate minus in "⊢" U22A2, "⊣" U22A3 accounts for "⊦" U22A6 ASSERTION and "⫞" U2ADE SHORT LEFT TACK.
+#   The duplicate minus in the descriptive sequences for "⊢" U22A2, "⊣" U22A3
+#   is required because single minus is used for "⊦" U22A6 ASSERTION and
+#   "⫞" U2ADE SHORT LEFT TACK. The "T"-based sequences are more powerful and
+#   straightforward as soon as the scheme is known.
+#   See #   Tacks and turnstiles
 #
-<Multi_key><bar><minus><minus>                                                             <space> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><bar><minus><minus>                                                      <nobreakspace> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><T><greater>                                                                    <space> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><T><greater>                                                             <nobreakspace> : "⊢" U22A2 # RIGHT TACK
-<Multi_key><minus><minus><bar>                                                                     : "⊣" U22A3 # LEFT TACK
+<Multi_key><bar><minus><minus>                                                             <space> : "⊢" U22A2 # RIGHT TACK
+<Multi_key><bar><minus><minus>                                                      <nobreakspace> : "⊢" U22A2 # RIGHT TACK
 <Multi_key><T><less>                                                                       <space> : "⊣" U22A3 # LEFT TACK
 <Multi_key><T><less>                                                                <nobreakspace> : "⊣" U22A3 # LEFT TACK
+<Multi_key><minus><minus><bar>                                                                     : "⊣" U22A3 # LEFT TACK
 #@
 <Multi_key><T>                                                                             <space> : "⊤" U22A4 # DOWN TACK
 <Multi_key><T>                                                                      <nobreakspace> : "⊤" U22A4 # DOWN TACK
@@ -7089,10 +7109,10 @@
 <Multi_key><bracketright><backslash><slash><bracketleft>                                   <space> : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><bracketright><backslash><slash><bracketleft>                            <nobreakspace> : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><T><T><bar>                                                                             : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><T><percent><bar>                                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T><T>                                                                    : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><space><T><T>                                                             : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><T><T>                                                      : "⟘" U27D8 # LARGE UP TACK
-<Multi_key><T><percent><bar>                                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T><percent>                                                              : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><space><T><percent>                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><T><percent>                                                : "⟘" U27D8 # LARGE UP TACK
