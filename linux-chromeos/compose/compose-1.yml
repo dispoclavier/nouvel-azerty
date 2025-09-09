@@ -5118,10 +5118,13 @@
 #
 #   Tacks with a multiple-line head have a leading digit (typically 2 or 3) in
 #   their sequence, and those with multiple stems (again 2 or 3) have a digit
-#   after the "T". Part of these are referred to as turnstiles instead,
+#   after the "T". Part of these are referred to as turnstiles instead.
 #
-#   But other sequences accumulated over time as well, descriptive or elsewise,
-#   and are maintained for variety, since removing any is unnecessary so far.
+#   Supporting T-based sequences throughout is part of a last move, requiring
+#   some adaptation in tone bar sequences for the purpose, while descriptive
+#   sequences are kept for variety, assuming that removing any is not desirable
+#   at this point.
+#   See #^# Tone bars
 #
 #
 #   Small symbols
@@ -6274,30 +6277,50 @@
 <Multi_key><I><underscore>                                                          <nobreakspace> : "⊥" U22A5 # UP TACK
 <Multi_key><bar><minus>                                                                    <space> : "⊦" U22A6 # ASSERTION
 <Multi_key><bar><minus>                                                             <nobreakspace> : "⊦" U22A6 # ASSERTION
+<Multi_key><T><greater><apostrophe>                                                                : "⊦" U22A6 # ASSERTION
+<Multi_key><T><greater><rightsinglequotemark>                                                      : "⊦" U22A6 # ASSERTION
 <Multi_key><bar><equal>                                                                    <space> : "⊧" U22A7 # MODELS
 <Multi_key><bar><equal>                                                             <nobreakspace> : "⊧" U22A7 # MODELS
+<Multi_key><T><2><greater><apostrophe>                                                             : "⊧" U22A7 # MODELS
+<Multi_key><T><KP_2><greater><apostrophe>                                                          : "⊧" U22A7 # MODELS
+<Multi_key><T><2><greater><rightsinglequotemark>                                                   : "⊧" U22A7 # MODELS
+<Multi_key><T><KP_2><greater><rightsinglequotemark>                                                : "⊧" U22A7 # MODELS
 <Multi_key><bar><equal><equal>                                                             <space> : "⊨" U22A8 # TRUE
 <Multi_key><bar><equal><equal>                                                      <nobreakspace> : "⊨" U22A8 # TRUE
-<Multi_key><space><bar><bar><minus>                                                        <space> : "⊩" U22A9 # FORCES
-<Multi_key><space><bar><bar><minus>                                                 <nobreakspace> : "⊩" U22A9 # FORCES
-<Multi_key><nobreakspace><bar><bar><minus>                                                 <space> : "⊩" U22A9 # FORCES
-<Multi_key><nobreakspace><bar><bar><minus>                                          <nobreakspace> : "⊩" U22A9 # FORCES
-<Multi_key><space><bar><bar><bar><minus>                                                   <space> : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
-<Multi_key><space><bar><bar><bar><minus>                                            <nobreakspace> : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
-<Multi_key><nobreakspace><bar><bar><bar><minus>                                            <space> : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
-<Multi_key><nobreakspace><bar><bar><bar><minus>                                     <nobreakspace> : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
+<Multi_key><T><2><greater>                                                                 <space> : "⊨" U22A8 # TRUE
+<Multi_key><T><2><greater>                                                          <nobreakspace> : "⊨" U22A8 # TRUE
+<Multi_key><T><KP_2><greater>                                                              <space> : "⊨" U22A8 # TRUE
+<Multi_key><T><KP_2><greater>                                                       <nobreakspace> : "⊨" U22A8 # TRUE
+<Multi_key><2><T><greater>                                                                 <space> : "⊩" U22A9 # FORCES
+<Multi_key><2><T><greater>                                                          <nobreakspace> : "⊩" U22A9 # FORCES
+<Multi_key><KP_2><T><greater>                                                              <space> : "⊩" U22A9 # FORCES
+<Multi_key><KP_2><T><greater>                                                       <nobreakspace> : "⊩" U22A9 # FORCES
+<Multi_key><space><bar><bar><minus>                                                                : "⊩" U22A9 # FORCES
+<Multi_key><nobreakspace><bar><bar><minus>                                                         : "⊩" U22A9 # FORCES
+<Multi_key><KP_3><T><greater>                                                                      : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
+<Multi_key><space><bar><bar><bar><minus>                                                           : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
+<Multi_key><nobreakspace><bar><bar><bar><minus>                                                    : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
+<Multi_key><2><T><2><greater>                                                              <space> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
+<Multi_key><2><T><2><greater>                                                       <nobreakspace> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
+<Multi_key><KP_2><T><KP_2><greater>                                                        <space> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
+<Multi_key><KP_2><T><KP_2><greater>                                                 <nobreakspace> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><bar><bar><equal>                                                               <space> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><bar><bar><equal>                                                        <nobreakspace> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
-<Multi_key><bar><minus><slash>                                                             <space> : "⊬" U22AC # DOES NOT PROVE
-<Multi_key><bar><minus><slash>                                                      <nobreakspace> : "⊬" U22AC # DOES NOT PROVE
-<Multi_key><bar><minus><minus><slash>                                                      <space> : "⊬" U22AC # DOES NOT PROVE
-<Multi_key><bar><minus><minus><slash>                                               <nobreakspace> : "⊬" U22AC # DOES NOT PROVE
+<Multi_key><T><greater><slash>                                                                     : "⊬" U22AC # DOES NOT PROVE
+<Multi_key><bar><minus><slash>                                                                     : "⊬" U22AC # DOES NOT PROVE
+<Multi_key><bar><minus><minus><slash>                                                              : "⊬" U22AC # DOES NOT PROVE
+<Multi_key><T><2><greater><slash>                                                                  : "⊭" U22AD # NOT TRUE
+<Multi_key><T><KP_2><greater><slash>                                                               : "⊭" U22AD # NOT TRUE
 <Multi_key><bar><equal><slash>                                                                     : "⊭" U22AD # NOT TRUE
 #
 #   Optional sequence consistent with "⊨" U22A8 as opposed to "⊧" U22A7.
 #
 <Multi_key><bar><equal><equal><slash>                                                              : "⊭" U22AD # NOT TRUE
+<Multi_key><2><T><greater><slash>                                                                  : "⊮" U22AE # DOES NOT FORCE
+<Multi_key><KP_2><T><greater><slash>                                                               : "⊮" U22AE # DOES NOT FORCE
 <Multi_key><bar><bar><minus><slash>                                                                : "⊮" U22AE # DOES NOT FORCE
+<Multi_key><2><T><2><greater><slash>                                                               : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
+<Multi_key><KP_2><T><KP_2><greater><slash>                                                         : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><bar><bar><equal><slash>                                                                : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><j><less>                                                                       <space> : "⊰" U22B0 # PRECEDES UNDER RELATION
 <Multi_key><j><less>                                                                <nobreakspace> : "⊰" U22B0 # PRECEDES UNDER RELATION
@@ -7121,14 +7144,20 @@
 <Multi_key><space><space><I>                                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><space><I>                                                                : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><I>                                                         : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><T><bar>                                                                                : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><space><space><T>                                                               <space> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><space><space><T>                                                        <nobreakspace> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><nobreakspace><space><T>                                                        <space> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><nobreakspace><space><T>                                                 <nobreakspace> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><nobreakspace><nobreakspace><T>                                                 <space> : "⟙" U27D9 # LARGE DOWN TACK
 <Multi_key><nobreakspace><nobreakspace><T>                                          <nobreakspace> : "⟙" U27D9 # LARGE DOWN TACK
-<Multi_key><equal><bar><bar><equal>                                                        <space> : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
-<Multi_key><equal><bar><bar><equal>                                                 <nobreakspace> : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><T><2><less><greater>                                                                   : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><T><KP_2><less><greater>                                                                : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><T><2><greater><less>                                                                   : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><T><KP_2><greater><less>                                                                : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><equal><bar><bar><equal>                                                                : "⟚" U27DA # LEFT AND RIGHT DOUBLE TURNSTILE
+<Multi_key><T><less><greater>                                                                      : "⟛" U27DB # LEFT AND RIGHT TACK
+<Multi_key><T><greater><less>                                                                      : "⟛" U27DB # LEFT AND RIGHT TACK
 <Multi_key><minus><bar><bar><minus>                                                        <space> : "⟛" U27DB # LEFT AND RIGHT TACK
 <Multi_key><minus><bar><bar><minus>                                                 <nobreakspace> : "⟛" U27DB # LEFT AND RIGHT TACK
 <Multi_key><space><space><o><minus>                                                        <space> : "⟜" U27DC # LEFT MULTIMAP
@@ -7137,12 +7166,14 @@
 <Multi_key><nobreakspace><space><o><minus>                                          <nobreakspace> : "⟜" U27DC # LEFT MULTIMAP
 <Multi_key><nobreakspace><nobreakspace><o><minus>                                          <space> : "⟜" U27DC # LEFT MULTIMAP
 <Multi_key><nobreakspace><nobreakspace><o><minus>                                   <nobreakspace> : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><T><greater><bar>                                                                       : "⟝" U27DD # LONG RIGHT TACK
 <Multi_key><bar><minus><minus><minus>                                                      <space> : "⟝" U27DD # LONG RIGHT TACK
 <Multi_key><bar><minus><minus><minus>                                               <nobreakspace> : "⟝" U27DD # LONG RIGHT TACK
-<Multi_key><minus><minus><minus><bar>                                                      <space> : "⟞" U27DE # LONG LEFT TACK
-<Multi_key><minus><minus><minus><bar>                                               <nobreakspace> : "⟞" U27DE # LONG LEFT TACK
-<Multi_key><o><bar><underscore>                                                            <space> : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
-<Multi_key><o><bar><underscore>                                                     <nobreakspace> : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+<Multi_key><T><less><bar>                                                                          : "⟞" U27DE # LONG LEFT TACK
+<Multi_key><minus><minus><minus><bar>                                                              : "⟞" U27DE # LONG LEFT TACK
+<Multi_key><o><T><T>                                                                               : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+<Multi_key><o><T><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+<Multi_key><o><bar><underscore>                                                                    : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><A><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><V>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><greater><parenright><parenleft>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
@@ -8818,7 +8849,10 @@
 <Multi_key><nobreakspace><bar><parenright>                                          <nobreakspace> : "⫝" U2ADD # NONFORKING
 <Multi_key><minus><bar>                                                                    <space> : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><minus><bar>                                                             <nobreakspace> : "⫞" U2ADE # SHORT LEFT TACK
+<Multi_key><T><less><apostrophe>                                                                   : "⫞" U2ADE # SHORT LEFT TACK
+<Multi_key><T><less><rightsinglequotemark>                                                         : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><apostrophe>                                                                         : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><T><rightsinglequotemark>                                                               : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                                      <space> : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                               <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><minus><apostrophe><minus>                                                       : "⫟" U2ADF # SHORT DOWN TACK
@@ -8838,30 +8872,55 @@
 <Multi_key><minus><apostrophe><minus>                                                              : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><minus><rightsinglequotemark><minus>                                                    : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><bar><underscore><s>                                                                    : "⫡" U2AE1 # PERPENDICULAR WITH S
+<Multi_key><T><3><greater>                                                                         : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
+<Multi_key><T><KP_3><greater>                                                                      : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><bar><minus><equal>                                                                     : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><bar><equal><minus>                                                                     : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><minus><bar><bar>                                                               <space> : "⫣" U2AE3 # DOUBLE VERTICAL BAR LEFT TURNSTILE
 <Multi_key><minus><bar><bar>                                                        <nobreakspace> : "⫣" U2AE3 # DOUBLE VERTICAL BAR LEFT TURNSTILE
+<Multi_key><2><T><less>                                                                            : "⫣" U2AE3 # DOUBLE VERTICAL BAR LEFT TURNSTILE
+<Multi_key><KP_2><T><less>                                                                         : "⫣" U2AE3 # DOUBLE VERTICAL BAR LEFT TURNSTILE
 <Multi_key><equal><bar>                                                                    <space> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><equal><bar>                                                             <nobreakspace> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><T><2><less>                                                                    <space> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><T><2><less>                                                             <nobreakspace> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><T><KP_2><less>                                                                 <space> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><T><KP_2><less>                                                          <nobreakspace> : "⫤" U2AE4 # VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><equal><bar><bar>                                                               <space> : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><equal><bar><bar>                                                        <nobreakspace> : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><2><T><2><less>                                                                         : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
+<Multi_key><KP_2><T><KP_2><less>                                                                   : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><bar><minus><bar><minus>                                                        <space> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
 <Multi_key><bar><minus><bar><minus>                                                 <nobreakspace> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
-<Multi_key><equal><apostrophe><equal>                                                      <space> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
-<Multi_key><equal><apostrophe><equal>                                               <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
-<Multi_key><equal><rightsinglequotemark><equal>                                            <space> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
-<Multi_key><equal><rightsinglequotemark><equal>                                     <nobreakspace> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><2><T><apostrophe>                                                                      : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><2><T><rightsinglequotemark>                                                            : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><KP_2><T><apostrophe>                                                                   : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><KP_2><T><rightsinglequotemark>                                                         : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><equal><apostrophe><equal>                                                              : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><equal><rightsinglequotemark><equal>                                                    : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><apostrophe><equal>                                                             <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><apostrophe><equal>                                                      <nobreakspace> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><rightsinglequotemark><equal>                                                   <space> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><rightsinglequotemark><equal>                                            <nobreakspace> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+#Multi_key><2><T><percent><apostrophe>                                                             : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><2><T><percent>                                                                         : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><KP_2><T><percent>                                                                      : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+#Multi_key><T><percent><percent><apostrophe>                                                       : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><percent><percent>                                                                   : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><percent><apostrophe>                                                             : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><percent><rightsinglequotemark>                                                   : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><apostrophe><equal><apostrophe>                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><rightsinglequotemark><equal><rightsinglequotemark>                                     : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T>                                                                          <space> : "⫪" U2AEA # DOUBLE DOWN TACK
 <Multi_key><T><T>                                                                   <nobreakspace> : "⫪" U2AEA # DOUBLE DOWN TACK
+<Multi_key><T><2>                                                                          <space> : "⫪" U2AEA # DOUBLE DOWN TACK
+<Multi_key><T><2>                                                                   <nobreakspace> : "⫪" U2AEA # DOUBLE DOWN TACK
+<Multi_key><T><KP_2>                                                                       <space> : "⫪" U2AEA # DOUBLE DOWN TACK
+<Multi_key><T><KP_2>                                                                <nobreakspace> : "⫪" U2AEA # DOUBLE DOWN TACK
 <Multi_key><T><T><percent>                                                                 <space> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><T><percent>                                                          <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><2><percent>                                                                         : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><KP_2><percent>                                                                      : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><equal><apostrophe>                                                             <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                                   <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
@@ -8890,10 +8949,10 @@
 <Multi_key><space><bar><o>                                                          <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><nobreakspace><bar><o>                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><nobreakspace><bar><o>                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
-<Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><T><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><T><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><minus><bar><o>                                                                 <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><minus><bar><o>                                                          <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><bar><minus><bar>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
