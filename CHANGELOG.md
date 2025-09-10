@@ -23,10 +23,17 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
 * Composition :
-	* Simplifier, améliorer ou corriger les séquences de "⊈" U+2288, "⊊" U+228A, "⊌" U+228C, "⊍" U+228D, "⊎" U+228E, "⊓" U+2293, "⊔" U+2294, "⊗" U+2297, "⊘" U+2298, "⊙" U+2299, "⊜" U+229C, "⊝" U+229D, "⊞" U+229E, "⊟" U+229F, "⊠" U+22A0, "⊡" U+22A1. compose-1.yml [f01f779](https://github.com/dispoclavier/nouvel-azerty/commit/f01f779bf8a154853fb866d1ae6c2758e932c12d)
+	* Rendre les séquences de "˧" U+02E7, "˨" U+02E8, "꜔" U+A714, "꜕" U+A715 sensibles à la casse. compose-1.yml [b692f9f](https://github.com/dispoclavier/nouvel-azerty/commit/b692f9f4d8c14c80b585d5b3228c3ba0989a6f43)
+	* Compléter et simplifier les séquences des taquets et tourniquets :
+		* Compléter et simplifier les séquences de "⊢" U+22A2, "⊣" U+22A3, "⟘" U+27D8, "⟙" U+27D9, "⫟" U+2ADF, "⫠" U+2AE0. compose-1.yml [eadda4a](https://github.com/dispoclavier/nouvel-azerty/commit/eadda4a3deedae6725f28b3c6cd110e1cb1952f2), [f4b2648](https://github.com/dispoclavier/nouvel-azerty/commit/f4b26481b1db8da576dfe92a35e42180103fa0d5)
+		* Compléter et simplifier les séquences de "⊦" U+22A6, "⊧" U+22A7, "⊨" U+22A8, "⊩" U+22A9, "⊪" U+22AA, "⊫" U+22AB, "⊬" U+22AC, "⊭" U+22AD, "⊮" U+22AE, "⊯" U+22AF, "⟙" U+27D9, "⟚" U+27DA, "⟛" U+27DB, "⟝" U+27DD, "⟞" U+27DE, "⟟" U+27DF, "⫞" U+2ADE, "⫟" U+2ADF, "⫢" U+2AE2, "⫣" U+2AE3, "⫤" U+2AE4, "⫥" U+2AE5, "⫧" U+2AE7, "⫨" U+2AE8, "⫩" U+2AE9, "⫪" U+2AEA, "⫫" U+2AEB. compose-1.yml [e6f3202](https://github.com/dispoclavier/nouvel-azerty/commit/e6f32029e2e75ac0c16f6f664326d10121256695)
+	* Simplifier, corriger ou compléter les séquences de "⊈" U+2288, "⊊" U+228A, "⊌" U+228C, "⊍" U+228D, "⊎" U+228E, "⊓" U+2293, "⊔" U+2294, "⊗" U+2297, "⊘" U+2298, "⊙" U+2299, "⊜" U+229C, "⊝" U+229D, "⊞" U+229E, "⊟" U+229F, "⊠" U+22A0, "⊡" U+22A1. compose-1.yml [f01f779](https://github.com/dispoclavier/nouvel-azerty/commit/f01f779bf8a154853fb866d1ae6c2758e932c12d)
+	* Simplifier, corriger ou compléter les séquences de "⊰" U+22B0, "⊱" U+22B1, "⊶" U+22B6, "⊷" U+22B7, "⊹" U+22B9, "⊼" U+22BC, "⋀" U+22C0, "⋄" U+22C4, "◇" U+25C7, "♢" U+2662. compose-1.yml [fce1074](https://github.com/dispoclavier/nouvel-azerty/commit/fce1074a0e865c52306c051f8fc7287667578bf1)
 * Transformations :
 	* Accent grave :
-		* Redonder "⟦" U+27E6, "⟧" U+27E7 par "[", "]". compose-2.yml [059a209](https://github.com/dispoclavier/nouvel-azerty/commit/059a20953480fecb38ea7b07d1dbea28054c8ceb)
+		* Redonder "⟦" U+27E6, "⟧" U+27E7 par "[", "]". compose-2.yml [059a209](https://github.com/dispoclavier/nouvel-azerty/commit/059a20953480fecb38ea7b07d1dbea28054c8ceb), kbdeadtrans.c [4d0c038](https://github.com/dispoclavier/nouvel-azerty/commit/4d0c0380256e486c9c2d9ab2448c360aaff6913f), [617c9d8](https://github.com/dispoclavier/nouvel-azerty/commit/617c9d8fb753d1b7ff96a59904185b46b78cf380)
+* Documentation :
+	* Corriger ou compléter des annotations. compose-1.yml [eadda4a](https://github.com/dispoclavier/nouvel-azerty/commit/eadda4a3deedae6725f28b3c6cd110e1cb1952f2), [f4b2648](https://github.com/dispoclavier/nouvel-azerty/commit/f4b26481b1db8da576dfe92a35e42180103fa0d5), [b692f9f](https://github.com/dispoclavier/nouvel-azerty/commit/b692f9f4d8c14c80b585d5b3228c3ba0989a6f43), [e6f3202](https://github.com/dispoclavier/nouvel-azerty/commit/e6f32029e2e75ac0c16f6f664326d10121256695)
 
 ## 6.0.6 (2025-09-03)
 
@@ -41,7 +48,7 @@ Rectification et simplification de séquences de composition.
 * Composition :
 	* Changer la séquence de "⎋" U+238B de « ¦es » en « ¦esc ». compose-1.yml [94916d7](https://github.com/dispoclavier/nouvel-azerty/commit/94916d75a177870fbfebf901c9c179a0df22bd05)
 	* Changer la séquence de "℮" U+212E de « ¦␣e » en « ¦est ». ibidem
-	* Simplifier, améliorer ou corriger les séquences de "∋" U+220B, "∌" U+220C, "∍" U+220D, "≞" U+225E, "≟" U+225F, "≡" U+2261, "≢" U+2262, "≣" U+2263, "≨" U+2268, "≩" U+2269, "≭" U+226D, "≰" U+2270, "≱" U+2271, "≴" U+2274, "≵" U+2275, "≸" U+2278, "≹" U+2279, "⊀" U+2280, "⊁" U+2281, "⊃" U+2283, "⊅" U+2285, "⊇" U+2287, "⊉" U+2289, "⊐" U+2290, "⊒" U+2292, "⟄" U+27C4, "⥻" U+297B, "⋥" U+22E5, "⟄" U+27C4, "⟉" U+27C9. ibidem
+	* Simplifier, corriger ou compléter les séquences de "∋" U+220B, "∌" U+220C, "∍" U+220D, "≞" U+225E, "≟" U+225F, "≡" U+2261, "≢" U+2262, "≣" U+2263, "≨" U+2268, "≩" U+2269, "≭" U+226D, "≰" U+2270, "≱" U+2271, "≴" U+2274, "≵" U+2275, "≸" U+2278, "≹" U+2279, "⊀" U+2280, "⊁" U+2281, "⊃" U+2283, "⊅" U+2285, "⊇" U+2287, "⊉" U+2289, "⊐" U+2290, "⊒" U+2292, "⟄" U+27C4, "⥻" U+297B, "⋥" U+22E5, "⟄" U+27C4, "⟉" U+27C9. ibidem
 * Transformations : Touche morte groupe : Groupe 1 : Supprimer "―" U+2015 par "ʻ" U+02BB, qui ne prend plus la place de "―" U+2015 sur les variantes pour la Polynésie. compose-2.yml [844c0bf](https://github.com/dispoclavier/nouvel-azerty/commit/844c0bfc11f01c55c2e16c92c43a55cf03848319), kbdeadtrans.c [0ff59d7](https://github.com/dispoclavier/nouvel-azerty/commit/0ff59d70f0d619a9e95b05284025ee8128e132c5)
 * Documentation : Mettre à jour et déboguer les modes d’emploi :
 	* Commun : readme.md [d66b174](https://github.com/dispoclavier/nouvel-azerty/commit/d66b1747204665b2f7a6ed60d075da06bce85356)
@@ -59,8 +66,8 @@ Rectification et simplification de séquences de composition.
 		* Ajouter la variante Polynésie française AZERTY sous Windows. kbfrPFs.C, kbfrPFs.klc, kbcomazerty.c [f3c0922](https://github.com/dispoclavier/nouvel-azerty/commit/f3c09220211458f3bf009d5e8a308749c79bec79), kbcomredispo.c [4e0f39e](https://github.com/dispoclavier/nouvel-azerty/commit/4e0f39ea52ccda80d6052c4e2928a12b859daace)
 		* Ajouter la variante Afrique francophone AZERTY sous Windows. kbfrAFs.C, kbfrAFs.klc ibidem
 * Composition :
-	* Simplifier, améliorer ou corriger les séquences de "∱" U+2231, "∲" U+2232, "∳" U+2233, "∴" U+2234, "∵" U+2235. compose-1.yml [6bf5037](https://github.com/dispoclavier/nouvel-azerty/commit/6bf5037c7b71fe8c493e5143aab88cf68880a814)
-	* Simplifier, améliorer ou corriger les séquences de "∷" U+2237, "∹" U+2239, "∺" U+223A, "∻" U+223B, "∾" U+223E, "∿" U+223F, "≀" U+2240, "≂" U+2242, "≋" U+224B, "≎" U+224E, "≎" U+224E, "≒" U+2252, "≓" U+2253, "≔" U+2254, "≕" U+2255, "≖" U+2256, "≗" U+2257, "≘" U+2258, "≙" U+2259, "≙" U+2259, "≚" U+225A, "≛" U+225B, "≝" U+225D. compose-1.yml [3f9ab87](https://github.com/dispoclavier/nouvel-azerty/commit/3f9ab8791478048f0e4f3b90bd02f53d1a2d023d)
+	* Simplifier, corriger ou compléter les séquences de "∱" U+2231, "∲" U+2232, "∳" U+2233, "∴" U+2234, "∵" U+2235. compose-1.yml [6bf5037](https://github.com/dispoclavier/nouvel-azerty/commit/6bf5037c7b71fe8c493e5143aab88cf68880a814)
+	* Simplifier, corriger ou compléter les séquences de "∷" U+2237, "∹" U+2239, "∺" U+223A, "∻" U+223B, "∾" U+223E, "∿" U+223F, "≀" U+2240, "≂" U+2242, "≋" U+224B, "≎" U+224E, "≎" U+224E, "≒" U+2252, "≓" U+2253, "≔" U+2254, "≕" U+2255, "≖" U+2256, "≗" U+2257, "≘" U+2258, "≙" U+2259, "≙" U+2259, "≚" U+225A, "≛" U+225B, "≝" U+225D. compose-1.yml [3f9ab87](https://github.com/dispoclavier/nouvel-azerty/commit/3f9ab8791478048f0e4f3b90bd02f53d1a2d023d)
 * Documentation :
 	* Mettre à jour les modes d’emploi. windows/readme.md [2c20a49](https://github.com/dispoclavier/nouvel-azerty/commit/2c20a496ae4916f6f621d2887d733cb25f657fa6), [9529865](https://github.com/dispoclavier/nouvel-azerty/commit/9529865df20c98d248cf882271885b3be2b850bf), [bd3c651](https://github.com/dispoclavier/nouvel-azerty/commit/bd3c651f6f8b484fa73e670c4974d278bc24b08c), Démarrage-rapide.md [d71be81](https://github.com/dispoclavier/nouvel-azerty/commit/d71be816c73cd7bf8bef1c71a9f84a2a1f552504), Lisez-moi-svp.md [0a31ebc](https://github.com/dispoclavier/nouvel-azerty/commit/0a31ebcff4ec7156ce443d9b18b57173edecfafb), linux-chromeos/readme.md [cbe0a60](https://github.com/dispoclavier/nouvel-azerty/commit/cbe0a60e0194d75d7f6d94aaaccbb195726fbd3e), Lisez-moi-svp.md [3a34a5b](https://github.com/dispoclavier/nouvel-azerty/commit/3a34a5b36d870f525a738265994b3848ddb616ab), [ad81541](https://github.com/dispoclavier/nouvel-azerty/commit/ad81541318b4b1e58066afaefaf8b15d76ed12f5), [40c790a](https://github.com/dispoclavier/nouvel-azerty/commit/40c790ac2c450521415e7dd1f7091b6eac986da1)
 	* Mieux décrire les bogues connus. kbcommon.c [f3c0922](https://github.com/dispoclavier/nouvel-azerty/commit/f3c09220211458f3bf009d5e8a308749c79bec79)
@@ -68,7 +75,7 @@ Rectification et simplification de séquences de composition.
 
 ## 6.0.4 (2025-08-27)
 
-Mise à jour vers Unicode 17.0.
+Mise à jour vers [Unicode 17.0](https://www.unicode.org/versions/Unicode17.0.0/).
 
 Dans réfléchi, "ʕ" U+0295 est désormais par "G" au lieu de "q".
 
@@ -423,10 +430,10 @@ Reconception, rectification et simplification de séquences de composition.
 	* Améliorer la prise en charge de "⨣" U+2A23. compose-1.yml [986a2e8](https://github.com/dispoclavier/nouvel-azerty/commit/986a2e86a3d87150ea7d30af36409eaef4db8748)
 	* Redonder "¦" U+00A6 par double frappe de la touche de composition. ibidem
 	* Simplifier les séquences de "⪁" U+2A81, "⪂" U+2A82. compose-1.yml [0f40ccf](https://github.com/dispoclavier/nouvel-azerty/commit/0f40ccf4ac4f8ab9e5bc3cd7fcad35b1497eba80)
-	* Simplifier, améliorer ou corriger les séquences de "↨" U+21A8, "↩" U+21A9, "↪" U+21AA, "↬" U+21AC, "↭" U+21AD, "↮" U+21AE, "↯" U+21AF, "↰" U+21B0, "↶" U+21B6, "↷" U+21B7, "↽" U+21BD, "↾" U+21BE, "↿" U+21BF, "⇀" U+21C0, "⇁" U+21C1, "⇂" U+21C2, "⇃" U+21C3, "⇄" U+21C4, "⇅" U+21C5, "⇆" U+21C6, "⇇" U+21C7, "⇈" U+21C8, "⇉" U+21C9, "⇊" U+21CA, "⇋" U+21CB, "⇌" U+21CC, "⇎" U+21CE, "⇏" U+21CF, "⇚" U+21DA, "⇥" U+21E5, "⇵" U+21F5, "⇶" U+21F6, "⇷" U+21F7, "⇸" U+21F8, "⇹" U+21F9, "⇺" U+21FA, "⇼" U+21FC, "⇿" U+21FF. compose-1.yml [c856506](https://github.com/dispoclavier/nouvel-azerty/commit/c856506ff3f3e740949ee6b03413d2354dafc272), compose-2.yml [b72a8e5](https://github.com/dispoclavier/nouvel-azerty/commit/b72a8e5752e39e1c82c920dacdd54b93ca145ef7)
+	* Simplifier, corriger ou compléter les séquences de "↨" U+21A8, "↩" U+21A9, "↪" U+21AA, "↬" U+21AC, "↭" U+21AD, "↮" U+21AE, "↯" U+21AF, "↰" U+21B0, "↶" U+21B6, "↷" U+21B7, "↽" U+21BD, "↾" U+21BE, "↿" U+21BF, "⇀" U+21C0, "⇁" U+21C1, "⇂" U+21C2, "⇃" U+21C3, "⇄" U+21C4, "⇅" U+21C5, "⇆" U+21C6, "⇇" U+21C7, "⇈" U+21C8, "⇉" U+21C9, "⇊" U+21CA, "⇋" U+21CB, "⇌" U+21CC, "⇎" U+21CE, "⇏" U+21CF, "⇚" U+21DA, "⇥" U+21E5, "⇵" U+21F5, "⇶" U+21F6, "⇷" U+21F7, "⇸" U+21F8, "⇹" U+21F9, "⇺" U+21FA, "⇼" U+21FC, "⇿" U+21FF. compose-1.yml [c856506](https://github.com/dispoclavier/nouvel-azerty/commit/c856506ff3f3e740949ee6b03413d2354dafc272), compose-2.yml [b72a8e5](https://github.com/dispoclavier/nouvel-azerty/commit/b72a8e5752e39e1c82c920dacdd54b93ca145ef7)
 	* Prendre en charge "﬩" U+FB29 en tant que symbole mathématique. ibidem
 	* Compléter ou rectifier les séquences de "¡" U+00A1, "•" U+2022, "‣" U+2023, "∎" U+220E, "▪" U+25AA, "▮" U+25AE, "▴" U+25B4, "▵" U+25B5, "▾" U+25BE, "▿" U+25BF, "◂" U+25C2, "◦" U+25E6, "☆" U+2606. compose-1.yml [d424a41](https://github.com/dispoclavier/nouvel-azerty/commit/d424a41a2a53831e0d461a71cc1b59ee292544e7)
-	* Simplifier, améliorer ou corriger les séquences de "∉" U+2209, "∊" U+220A, "∌" U+220C, "∍" U+220D, "∙" U+2219, "√" U+221A, "∛" U+221B, "∜" U+221C, "∝" U+221D. ibidem
+	* Simplifier, corriger ou compléter les séquences de "∉" U+2209, "∊" U+220A, "∌" U+220C, "∍" U+220D, "∙" U+2219, "√" U+221A, "∛" U+221B, "∜" U+221C, "∝" U+221D. ibidem
 * Transformations :
 	* Rétablir la symétrie des enchaînements de touches mortes, suite à la dissociation des équivalents en composition. compose-2.yml [c32ffcc](https://github.com/dispoclavier/nouvel-azerty/commit/c32ffcc62ad3ff8ae66897924d31ab01730d9e91), [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
 		* Accent circonflexe et accent aigu : Idem. compose-2.yml [63745d3](https://github.com/dispoclavier/nouvel-azerty/commit/63745d31059ee53796f7f93a7515f14a08729b95), [d2a4a05](https://github.com/dispoclavier/nouvel-azerty/commit/d2a4a059bd8e421dc473ca835838ed331f66ab7a), [88e4556](https://github.com/dispoclavier/nouvel-azerty/commit/88e45568700fa3e0aa2c63cf705b6b67d1287b89)
