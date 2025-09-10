@@ -13414,8 +13414,9 @@
 #   RING as a base character, and uppercase "X" is required for "ꭘ" UAB58 LATIN
 #   SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING. For "ꭔ" UAB54 LATIN
 #   SMALL LETTER CHI WITH LOW RIGHT RING, "q" is picked as the most expected
-#   base character, because previously, it had been used as a base character
-#   for Greek chi, when phonetic mnemonics prevailed over graphic mnemonics.
+#   base character, because in en_US.UTF-8/Compose, it was previously used as a
+#   base character for Greek chi when French-style phonetic mnemonics prevailed
+#   over graphic mnemonics.
 #   See #*# GREEK_OR_CIRCLED
 #   See #+# GROUP_3
 #   See #+# GROUP_4
@@ -13423,9 +13424,9 @@
 #   This also supports combining half rings "͑" U0351, "͗" U0357 with matching
 #   parentheses as base characters.
 #
-#   As a matter of extensively supporting half rings, spacing half rings are
-#   also included. As these are either right, left, raised or centered, digits
-#   are used as base characters, with numpad-based mnemonics:
+#   So as to extensively support half rings, spacing half rings are also
+#   included. As these are either right, left, raised or centered, digits are
+#   used as base characters, with numpad-based mnemonics:
 #
 #       4  "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING
 #       6  "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING
@@ -13433,13 +13434,14 @@
 #       9  "ʾ" U02BE MODIFIER LETTER RIGHT HALF RING
 #
 #   Asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042 are also supported, with
-#   the related digits as base characters, and so is the asterisk operator
+#   the related digits as base characters, and so are the asterisk operator
 #   "∗" U2217, by "5" with mnemonics based on the centered alignment of this
-#   operator.
+#   operator, and the star operator "⋆" U22C6 by "8". (But there is no room
+#   left for stars "★" U2605 and "☆" U2606, that have easy support in group 1.)
 #
 #   As a matter of supporting the degree sign by dead key after the loss of its
 #   en_US.UTF-8/Compose sequence, and regardless of its support on live key,
-#   left-over base characters "0" and "8" are convenient for "°" U00B0.
+#   the left-over base character "0" is convenient for "°" U00B0.
 #   See # # Degree sign
 #
 #   Unpreferred yet not discouraged precomposed temperature units "℃" U2103 and
@@ -13510,10 +13512,10 @@
 <Multi_key><asterisk>                                                                          <7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <dead_abovering>                                                                            <KP_7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
 <Multi_key><KP_Multiply>                                                                    <KP_7> : "ʿ" U02BF # MODIFIER LETTER LEFT HALF RING
-<dead_abovering>                                                                               <8> : "°" U00B0 # DEGREE SIGN
-<Multi_key><asterisk>                                                                          <8> : "°" U00B0 # DEGREE SIGN
-<dead_abovering>                                                                            <KP_8> : "°" U00B0 # DEGREE SIGN
-<Multi_key><KP_Multiply>                                                                    <KP_8> : "°" U00B0 # DEGREE SIGN
+<dead_abovering>                                                                               <8> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><asterisk>                                                                          <8> : "⋆" U22C6 # STAR OPERATOR
+<dead_abovering>                                                                            <KP_8> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><KP_Multiply>                                                                    <KP_8> : "⋆" U22C6 # STAR OPERATOR
 <dead_abovering>                                                                               <9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <Multi_key><asterisk>                                                                          <9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
 <dead_abovering>                                                                            <KP_9> : "ʾ" U02BE # MODIFIER LETTER RIGHT HALF RING
