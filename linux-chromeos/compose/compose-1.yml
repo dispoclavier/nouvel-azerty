@@ -4708,6 +4708,9 @@
 #   *    match the documentation.                                             *
 #   *    See # # Design of math sequences
 #   *                                                                         *
+#   *    Progress is not always linear, but "#@" marks the point up to where  *
+#   *    all sequences have been reviewed.                                    *
+#   *                                                                         *
 #   ***************************************************************************
 #
 #   This section is limited to symbols in the Basic Multilingual Plane (BMP) of
@@ -6268,7 +6271,6 @@
 <Multi_key><T><less>                                                                       <space> : "⊣" U22A3 # LEFT TACK
 <Multi_key><T><less>                                                                <nobreakspace> : "⊣" U22A3 # LEFT TACK
 <Multi_key><minus><minus><bar>                                                                     : "⊣" U22A3 # LEFT TACK
-#@
 <Multi_key><T>                                                                             <space> : "⊤" U22A4 # DOWN TACK
 <Multi_key><T>                                                                      <nobreakspace> : "⊤" U22A4 # DOWN TACK
 <Multi_key><T><percent>                                                                    <space> : "⊥" U22A5 # UP TACK
@@ -6322,10 +6324,8 @@
 <Multi_key><2><T><2><greater><slash>                                                               : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><KP_2><T><KP_2><greater><slash>                                                         : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><bar><bar><equal><slash>                                                                : "⊯" U22AF # NEGATED DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
-<Multi_key><j><less>                                                                       <space> : "⊰" U22B0 # PRECEDES UNDER RELATION
-<Multi_key><j><less>                                                                <nobreakspace> : "⊰" U22B0 # PRECEDES UNDER RELATION
-<Multi_key><j><greater>                                                                    <space> : "⊱" U22B1 # SUCCEEDS UNDER RELATION
-<Multi_key><j><greater>                                                             <nobreakspace> : "⊱" U22B1 # SUCCEEDS UNDER RELATION
+<Multi_key><j><less>                                                                               : "⊰" U22B0 # PRECEDES UNDER RELATION
+<Multi_key><j><greater>                                                                            : "⊱" U22B1 # SUCCEEDS UNDER RELATION
 <Multi_key><less><bar>                                                                     <space> : "⊲" U22B2 # NORMAL SUBGROUP OF
 <Multi_key><less><bar>                                                              <nobreakspace> : "⊲" U22B2 # NORMAL SUBGROUP OF
 <Multi_key><bar><greater>                                                                  <space> : "⊳" U22B3 # CONTAINS AS NORMAL SUBGROUP
@@ -6334,26 +6334,23 @@
 <Multi_key><less><bar><underscore>                                                  <nobreakspace> : "⊴" U22B4 # NORMAL SUBGROUP OF OR EQUAL TO
 <Multi_key><bar><greater><underscore>                                                      <space> : "⊵" U22B5 # CONTAINS AS NORMAL SUBGROUP OR EQUAL TO
 <Multi_key><bar><greater><underscore>                                               <nobreakspace> : "⊵" U22B5 # CONTAINS AS NORMAL SUBGROUP OR EQUAL TO
-<Multi_key><o><minus><period>                                                              <space> : "⊶" U22B6 # ORIGINAL OF
-<Multi_key><o><minus><period>                                                       <nobreakspace> : "⊶" U22B6 # ORIGINAL OF
-<Multi_key><period><minus><o>                                                              <space> : "⊷" U22B7 # IMAGE OF
-<Multi_key><period><minus><o>                                                       <nobreakspace> : "⊷" U22B7 # IMAGE OF
+<Multi_key><o><minus><period>                                                                      : "⊶" U22B6 # ORIGINAL OF
+<Multi_key><period><minus><o>                                                                      : "⊷" U22B7 # IMAGE OF
 <Multi_key><space><minus><o>                                                               <space> : "⊸" U22B8 # MULTIMAP
 <Multi_key><space><minus><o>                                                        <nobreakspace> : "⊸" U22B8 # MULTIMAP
 <Multi_key><nobreakspace><minus><o>                                                        <space> : "⊸" U22B8 # MULTIMAP
 <Multi_key><nobreakspace><minus><o>                                                 <nobreakspace> : "⊸" U22B8 # MULTIMAP
-<Multi_key><space><apostrophe><plus>                                                       <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><apostrophe><plus>                                                <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><apostrophe><plus>                                                <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><apostrophe><plus>                                         <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><rightsinglequotemark><plus>                                             <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><rightsinglequotemark><plus>                                      <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><rightsinglequotemark><plus>                                      <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><rightsinglequotemark><plus>                               <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><minus><apostrophe><apostrophe><minus>                                          <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><minus><apostrophe><apostrophe><minus>                                   <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><minus><rightsinglequotemark><rightsinglequotemark><minus>                      <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><minus><rightsinglequotemark><rightsinglequotemark><minus>               <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><space><plus><apostrophe>                                                               : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><nobreakspace><plus><apostrophe>                                                        : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><space><plus><rightsinglequotemark>                                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><nobreakspace><plus><rightsinglequotemark>                                              : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><space><apostrophe><plus>                                                               : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><nobreakspace><apostrophe><plus>                                                        : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><space><rightsinglequotemark><plus>                                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><nobreakspace><rightsinglequotemark><plus>                                              : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+#Multi_key><minus><apostrophe><apostrophe><minus>                                                  : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><minus><apostrophe><apostrophe>                                                         : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><minus><rightsinglequotemark><rightsinglequotemark>                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 <Multi_key><t>                                                                             <space> : "⊺" U22BA # INTERCALATE
 <Multi_key><t>                                                                      <nobreakspace> : "⊺" U22BA # INTERCALATE
 <Multi_key><v><underscore>                                                                 <space> : "⊻" U22BB # XOR
@@ -6364,8 +6361,10 @@
 <Multi_key><nobreakspace><underscore><a>                                                           : "⊼" U22BC # NAND
 <Multi_key><space><underscore><v><v>                                                               : "⊼" U22BC # NAND
 <Multi_key><nobreakspace><underscore><v><v>                                                        : "⊼" U22BC # NAND
-<Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
-<Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
+#Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
+<Multi_key><n><a><n>                                                                               : "⊼" U22BC # NAND
+#Multi_key><N><A><N><D>                                                                            : "⊼" U22BC # NAND
+<Multi_key><N><A>                                                                                  : "⊼" U22BC # NAND
 <Multi_key><space><underscore><v>                                                          <space> : "⊽" U22BD # NOR
 <Multi_key><space><underscore><v>                                                   <nobreakspace> : "⊽" U22BD # NOR
 <Multi_key><nobreakspace><underscore><v>                                                   <space> : "⊽" U22BD # NOR
@@ -6379,18 +6378,18 @@
 <Multi_key><space><A>                                                               <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                               <space> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                        <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><V><backslash>                                                                  <space> : "⋀" U22C0 # N-ARY LOGICAL AND
-<Multi_key><V><backslash>                                                           <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
+<Multi_key><V><backslash>                                                                          : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V>                                                                             <space> : "⋁" U22C1 # N-ARY LOGICAL OR
 <Multi_key><V>                                                                      <nobreakspace> : "⋁" U22C1 # N-ARY LOGICAL OR
 <Multi_key><N>                                                                             <space> : "⋂" U22C2 # N-ARY INTERSECTION
 <Multi_key><N>                                                                      <nobreakspace> : "⋂" U22C2 # N-ARY INTERSECTION
 <Multi_key><U>                                                                             <space> : "⋃" U22C3 # N-ARY UNION
 <Multi_key><U>                                                                      <nobreakspace> : "⋃" U22C3 # N-ARY UNION
-<Multi_key><space><asciicircum><asciicircum>                                               <space> : "⋄" U22C4 # DIAMOND OPERATOR
-<Multi_key><space><asciicircum><asciicircum>                                        <nobreakspace> : "⋄" U22C4 # DIAMOND OPERATOR
-<Multi_key><nobreakspace><asciicircum><asciicircum>                                        <space> : "⋄" U22C4 # DIAMOND OPERATOR
-<Multi_key><nobreakspace><asciicircum><asciicircum>                                 <nobreakspace> : "⋄" U22C4 # DIAMOND OPERATOR
+<Multi_key><space><asciicircum><asciicircum>                                                       : "⋄" U22C4 # DIAMOND OPERATOR
+<Multi_key><nobreakspace><asciicircum><asciicircum>                                                : "⋄" U22C4 # DIAMOND OPERATOR
+<Multi_key><space><less><greater>                                                                  : "⋄" U22C4 # DIAMOND OPERATOR
+<Multi_key><nobreakspace><less><greater>                                                           : "⋄" U22C4 # DIAMOND OPERATOR
+#@
 <Multi_key><space><period>                                                                 <space> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><space><period>                                                          <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><nobreakspace><period>                                                          <space> : "⋅" U22C5 # DOT OPERATOR
@@ -6837,10 +6836,9 @@
 <Multi_key><nobreakspace><nobreakspace><slash><backslash><bar>                      <nobreakspace> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><less><numbersign><greater>                                                     <space> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><less><numbersign><greater>                                              <nobreakspace> : "◆" U25C6 # BLACK DIAMOND
-<Multi_key><space><less><greater>                                                          <space> : "◇" U25C7 # WHITE DIAMOND
-<Multi_key><space><less><greater>                                                   <nobreakspace> : "◇" U25C7 # WHITE DIAMOND
-<Multi_key><nobreakspace><less><greater>                                                   <space> : "◇" U25C7 # WHITE DIAMOND
-<Multi_key><nobreakspace><less><greater>                                            <nobreakspace> : "◇" U25C7 # WHITE DIAMOND
+<Multi_key><space><space><less><greater>                                                           : "◇" U25C7 # WHITE DIAMOND
+<Multi_key><nobreakspace><space><less><greater>                                                    : "◇" U25C7 # WHITE DIAMOND
+<Multi_key><nobreakspace><nobreakspace><less><greater>                                             : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><space><a><v>                                                                   <space> : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                            <nobreakspace> : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                            <space> : "◊" U25CA # LOZENGE
@@ -6985,8 +6983,10 @@
 <Multi_key><8><greater>                                                             <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                                 <space> : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                          <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><space><space><less><greater>                                                   <space> : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><space><space><less><greater>                                            <nobreakspace> : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><space><space><space><less><greater>                                                    : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><nobreakspace><space><space><less><greater>                                             : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><nobreakspace><nobreakspace><space><less><greater>                                      : "♢" U2662 # WHITE DIAMOND SUIT
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><less><greater>                               : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><o><8><numbersign>                                                               : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><space><o><KP_8><numbersign>                                                            : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><nobreakspace><o><8><numbersign>                                                        : "♣" U2663 # BLACK CLUB SUIT
