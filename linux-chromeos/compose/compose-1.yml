@@ -4718,16 +4718,17 @@
 #
 #   The General Category "Symbol, other" (So) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated "Symbol, math" (Sm).
-#   Indeed both Sm and So are only informative, not normative.
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G134153
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=199
 #
-#   The reason why is that labeling all math symbols as Sm is not feasible,
-#   and it is not advisable either, since mathematics repurposed many symbols
-#   intrinsically extraneous to mathematics, such as the male and female signs,
-#   already supercharged as planet symbols ("♀" U2640, "♂" U2642), three music
-#   symbols, one of which is Sm ("♯" U266F) and two, So ("♭" U266D, "♮" U266E),
-#   and the first four suits, regardless whether filled or empty ("♠" U2660,
-#   "♡" U2661, "♢" U2662, "♣" U2663), but not the last four.
+#   Indeed both Sm and So are only informative, not normative. The reason why
+#   is that labeling all math symbols as Sm is not feasible, and it is not
+#   advisable either, since mathematics repurposed many symbols intrinsically
+#   extraneous to mathematics, such as the male and female signs, already
+#   supercharged as planet symbols ("♀" U2640, "♂" U2642), three music symbols,
+#   one of which is Sm ("♯" U266F) and two, So ("♭" U266D, "♮" U266E), and the
+#   first four suits, regardless whether filled or empty ("♠" U2660, "♡" U2661,
+#   "♢" U2662, "♣" U2663), but not the last four.
 #
 #   The derived Unicode property "Math" in turn still only defines a subset of
 #   the symbols that need to be supported as math symbols.
