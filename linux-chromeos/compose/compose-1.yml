@@ -6390,15 +6390,14 @@
 <Multi_key><nobreakspace><asciicircum><asciicircum>                                                : "⋄" U22C4 # DIAMOND OPERATOR
 <Multi_key><space><less><greater>                                                                  : "⋄" U22C4 # DIAMOND OPERATOR
 <Multi_key><nobreakspace><less><greater>                                                           : "⋄" U22C4 # DIAMOND OPERATOR
-#@
 <Multi_key><space><period>                                                                 <space> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><space><period>                                                          <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><nobreakspace><period>                                                          <space> : "⋅" U22C5 # DOT OPERATOR
 <Multi_key><nobreakspace><period>                                                   <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
-<Multi_key><space><asterisk><asterisk>                                                     <space> : "⋆" U22C6 # STAR OPERATOR
-<Multi_key><space><asterisk><asterisk>                                              <nobreakspace> : "⋆" U22C6 # STAR OPERATOR
-<Multi_key><nobreakspace><asterisk><asterisk>                                              <space> : "⋆" U22C6 # STAR OPERATOR
-<Multi_key><nobreakspace><asterisk><asterisk>                                       <nobreakspace> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><space><space><asterisk>                                                                : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><nobreakspace><space><asterisk>                                                         : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><nobreakspace><nobreakspace><asterisk>                                                  : "⋆" U22C6 # STAR OPERATOR
+#@
 <Multi_key><colon><minus><x>                                                               <space> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><colon><minus><x>                                                        <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><x><colon><minus>                                                               <space> : "⋇" U22C7 # DIVISION TIMES
@@ -6961,18 +6960,18 @@
 #   https://www.unicode.org/charts/PDF/U2600.pdf
 #   https://www.unicode.org/charts/nameslist/n_2600.html
 #
-<Multi_key><space><space><asterisk><numbersign>                                            <space> : "★" U2605 # BLACK STAR
-<Multi_key><space><space><asterisk><numbersign>                                     <nobreakspace> : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><space><asterisk><numbersign>                                     <space> : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><space><asterisk><numbersign>                              <nobreakspace> : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                              <space> : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                       <nobreakspace> : "★" U2605 # BLACK STAR
-<Multi_key><space><space><asterisk>                                                        <space> : "☆" U2606 # WHITE STAR
-<Multi_key><space><space><asterisk>                                                 <nobreakspace> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><space><asterisk>                                          <nobreakspace> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><nobreakspace><asterisk>                                          <space> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><nobreakspace><asterisk>                                   <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><space><space><space><asterisk><numbersign>                                             : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><space><space><asterisk><numbersign>                                      : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><nobreakspace><space><asterisk><numbersign>                               : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk><numbersign>                        : "★" U2605 # BLACK STAR
+<Multi_key><space><space><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
+<Multi_key><space><space><space><asterisk>                                          <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><space><space><asterisk>                                          <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><space><space><asterisk>                                   <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><space><asterisk>                                   <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><space><asterisk>                            <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                            <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                     <nobreakspace> : "☆" U2606 # WHITE STAR
 <Multi_key><space><o><plus>                                                                <space> : "♀" U2640 # FEMALE SIGN
 <Multi_key><space><o><plus>                                                         <nobreakspace> : "♀" U2640 # FEMALE SIGN
 <Multi_key><nobreakspace><o><plus>                                                         <space> : "♀" U2640 # FEMALE SIGN
