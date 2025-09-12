@@ -6,6 +6,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* "°" U00B0 2 ➔ "⋆" U22C6 in !abovering  6.0.7.01.00 Fri 2025-09-12T0441+0200
 * Outline brackets U27E6.. in !grave     6.0.7.00.00 Wed 2025-09-03T0803+0200
 * Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1459+0200
 * Upgrade to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
@@ -21,7 +22,7 @@
 * On Windows, the dead key output is restricted to the low surrogate. An input
 * method for the high surrogates is provided separately at the root of related
 * dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
-* most dead keys, on level 4 of the space bar in French mode.
+* most dead keys, at level 4 of the space bar in French mode.
 *
 * The number of required high surrogates amounts to eight:
 *
@@ -40,15 +41,13 @@
 *     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 *     DB40 dead_flag as built-in (tag characters)
 *
-* The output is directly in C, where an array of DEADTRANS macro calls makes
-* for a flat layout of dead key data, while in KLC format, the data is grouped
-* under DEADKEY headers. Transpilation by KbdUTool produces C code without any
-* of the comments placed in the KLC file. Anyway, KLC only supports end-of-line
-* comments, while leading block comments (in addition to EOL comments) are best
-* for human readability, and with long lists are more readable than the grouped
-* layout. Given that furthermore, the KLC-to-C transpiler in KbdUTool is broken
-* and unable to support the Kana Lock levels, using the KLC format is pointless
-* and induces a significant amount of waste.
+* The array of DEADTRANS macro calls makes for a flat layout of dead key data,
+* while in KLC format, the data is grouped under DEADKEY headers. Transpiling
+* KbdUTool strips comments. Anyway, KLC only supports EOL comments, while extra
+* leading block comments are most human readable, and with long lists are more
+* readable than the grouped layout. Additionally, the transpiler in KbdUTool is
+* broken and unable to support the Kana Lock levels, so using the KLC format is
+* pointless and would be wasteful.
 *
 * As a result, any DEADTRANS macro call can be overridden by a similar call,
 * with the same input and the same dead character, but another output, provided
@@ -333,7 +332,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!abovering>                                                     */ DEADTRANS( L'5'	,0x00E5	,0x2217	,0x0000	), // "∗" ASTERISK OPERATOR
 /*<!abovering>                                                     */ DEADTRANS( L'6'	,0x00E5	,0x02D2	,0x0000	), // "˒" MODIFIER LETTER CENTRED RIGHT HALF RING
 /*<!abovering>                                                     */ DEADTRANS( L'7'	,0x00E5	,0x02BF	,0x0000	), // "ʿ" MODIFIER LETTER LEFT HALF RING
-/*<!abovering>                                                     */ DEADTRANS( L'8'	,0x00E5	,0x00B0	,0x0000	), // "°" DEGREE SIGN
+/*<!abovering>                                                     */ DEADTRANS( L'8'	,0x00E5	,0x22C6	,0x0000	), // "⋆" STAR OPERATOR
 /*<!abovering>                                                     */ DEADTRANS( L'9'	,0x00E5	,0x02BE	,0x0000	), // "ʾ" MODIFIER LETTER RIGHT HALF RING
 /*<!abovering>                                                     */ DEADTRANS( L'A'	,0x00E5	,0x00C5	,0x0000	), // "Å" LATIN CAPITAL LETTER A WITH RING ABOVE
 /*<!abovering>                                                     */ DEADTRANS( L'a'	,0x00E5	,0x00E5	,0x0000	), // "å" LATIN SMALL LETTER A WITH RING ABOVE
@@ -8334,4 +8333,3 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 };
 
 // EOF
-
