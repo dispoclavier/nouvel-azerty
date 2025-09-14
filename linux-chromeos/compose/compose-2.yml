@@ -7213,6 +7213,13 @@
 #   See # # Primes
 #   See # # Quadruple prime
 #
+#   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
+#   dead_acute by "/" and "\" additionally to their support in dead_grave and
+#   dead_tilde by "[" and "]", to work around the special formatting triggered
+#   by some ASCII-bracketed strings in Markdown while the actual intent is to
+#   mark up keycaps in documentation.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
+#
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method, the more as there are no precomposed
 #   letters with an acute accent below. Therefore, a virtual dead key is not
@@ -7241,6 +7248,10 @@
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
+<dead_acute>                                                                               <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><apostrophe>                                                                    <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<dead_acute>                                                                           <backslash> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><apostrophe>                                                                <backslash> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <dead_acute>                                                                                   <1> : "′" U2032 # PRIME
 <Multi_key><apostrophe>                                                                        <1> : "′" U2032 # PRIME
 <dead_acute>                                                                                <KP_1> : "′" U2032 # PRIME
