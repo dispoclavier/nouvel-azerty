@@ -7,13 +7,14 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
 * Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2106+0200
 * Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
 * Redocument circumflex dead key bug     6.0.4.00.00 Wed 2025-08-27T1827+0200
 * Document disordered table dead key bug 6.0.3.04.00 Sun 2025-08-24T1334+0200
 * Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
 * Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
-*
+* Add partial file kbcommon.c            6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
 * Due to the static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[],
 * this file needs to be included after all the allocation tables. So, this
@@ -21,6 +22,9 @@
 *
 * Known bugs are documented in this file.
 * See ## Known bugs
+*
+* This file includes the dead key content.
+* See #include "kbdeadtrans.c"
 \*****************************************************************************/
 
 /*****************************************************************************\
@@ -570,7 +574,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * keys.
 *
 *
-* ### Circumflex dead key bug
+* ### Dead key bug
 *
 * Dead keys may get buggy in that they are turned off, or the circumflex dead
 * key randomly adds its diacritic without being pressed, like so:
@@ -582,15 +586,13 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * (bug […] circumflex dead key randomly activated without pressing it)
 *
-* Rebooting Windows 10 Pro 22H2 19045.2006 fixed it for a while.
-*
-* This bug only occurred in builds 6.0.3.03 and 6.0.3.04, where windows.h was
+* This bug occurred in builds 6.0.3.03 and 6.0.3.04, where windows.h was
 * included in a header instead of being included in the main C source, and so
 * was kbd.h.
 *
-* The bug did not occur since #include <windows.h> was moved back to C sources
-* for the next version 6.0.4.00 on Wed 2025-08-27T1304+0200, so the cause of
-* the bug is narrowed down to the way how the windows.h header is included.
+* This bug not occurring since #include <windows.h> was moved back to C sources
+* for next version 6.0.4.00 on Wed 2025-08-27T1304+0200 fooled into assuming a
+* relationship with the way how the windows.h header is included.
 *
 * As in build 6.0.3.03, the main allocation table was also upside down, it
 * seemed like this was causing the bug. But ultimately it was not.
@@ -600,6 +602,24 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * Build 6.0.3.04 was released as version 6.0.3 on 2025-08-24T2048+0200 because
 * it seemed okay. It ended up turning crazy days later (2025-08-27T1133+0200).
+*
+* The bug occurred again at some point in build 6.0.7.00. While holding down
+# the comma key, the output turned like so:
+*
+*     ḙ,ḙ,ȟ,ȟ,ḙ,ȟ,ȟ,ȟ,ȟ,ȟ,ḙ,ȟ,ḙ,ȟ,ḙ,ḙ,ḙ,ȟ,ȟ,ḙ,ȟ,ȟ,ḙ,ḙ,ȟ,ȟ,ḙ,ȟ,ḙ,ḙ,ḙ,ȟ,ḙ,ḙ,ḙ,ȟ,ȟ,ȟ,ȟ,ȟ,ḙ,ḙ,ḙ,ȟ,ȟ,ḙ,ḙ,ȟ,ȟ,ȟ,ȟ,ȟ,ḙ,ḙ,ȟ,
+*     2025-09-15T0241+0200
+*
+*     ȟbṷǧ̌ďǐšḙpḙǒ̭̭̌̌
+*     bug dispo debugged by reboot 2025-09-15T0246+0200
+*
+* Rebooting Windows 10 Pro 22H2 19045.2006 fixed it, indeed.
+*
+* Hunting down the cause of this bug led to the assumption that it might be
+* a matter of where exactly in the C source the DEADTRANS macro call array is
+* located. Since build 6.0.7.02, it is included exactly like when KbdUTool
+* transpiles a KLC file, except that it is not followed by the ligature array,
+* conveniently located in the C source at this point, because it contains the
+* variant identifier string output.
 *
 * Admittedly, such a bug is unexpected in a robust rock-solid operating system.
 * Consistently, this disorder is unheard of on Linux and macOS. So the question
@@ -808,6 +828,20 @@ static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
     L"\x0219"	L"MINUSCULE LATINE S VIRGULE SOUSCRITE",
     NULL
 };
+
+/*****************************************************************************\
+* Dead key content.
+*
+* The array of DEADTRANS macro calls comes after the dead key names above.
+* See ### Dead key bug
+\*****************************************************************************/
+
+#include "kbdeadtrans.c"
+
+/*****************************************************************************\
+* Keyboard tables.
+*
+\*****************************************************************************/
 
 static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
     /*

@@ -6,16 +6,19 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Outline brackets U27E6.. in !acute     6.0.7.01.02 Sun 2025-09-14T1926+0200
+* Outline brackets U27E6.. in !tilde     6.0.7.01.01 Sun 2025-09-14T1911+0200
 * "°" U00B0 2 ➔ "⋆" U22C6 in !abovering  6.0.7.01.00 Fri 2025-09-12T0441+0200
 * Outline brackets U27E6.. in !grave     6.0.7.00.00 Wed 2025-09-03T0803+0200
 * Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1459+0200
 * Upgrade to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
 * Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
+* Add partial file kbdeadtrans.c         6.0.2.01.00 Tue 2025-08-19T1952+0200
 *
 * By courtesy of respondents to:
 * https://stackoverflow.com/questions/11334371/cant-we-include-c-file
 *
-*
+* This file is included in kbcommon.c.
 *
 * Dead key array.
 *
@@ -361,8 +364,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L'&'	,0x00E1	,0x0317	,0x0000	), // "̗" COMBINING ACUTE ACCENT BELOW
 /*<!acute>                                                         */ DEADTRANS( L'\''	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x2019	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+/*<!acute>                                                         */ DEADTRANS( L'\\'	,0x00E1	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!acute>                                                         */ DEADTRANS( L'"'	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x20AC	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+/*<!acute>                                                         */ DEADTRANS( L'/'	,0x00E1	,0x27E6	,0x0000	), // "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET
 /*<!acute>                                                         */ DEADTRANS( L'_'	,0x00E1	,0x02CF	,0x0000	), // "ˏ" MODIFIER LETTER LOW ACUTE ACCENT
 /*<!acute>                                                         */ DEADTRANS( L'1'	,0x00E1	,0x2032	,0x0000	), // "′" PRIME
 /*<!acute>                                                         */ DEADTRANS( L'2'	,0x00E1	,0x2033	,0x0000	), // "″" DOUBLE PRIME
@@ -1714,6 +1719,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!superscript>                                                   */ DEADTRANS( L' '	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!superscript>                                                   */ DEADTRANS( 0x200B	,L'^'	,0x0305	,0x0000	), // "̅" COMBINING OVERLINE
 /*<!tilde>                                                         */ DEADTRANS( L'*'	,0x00F5	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
+/*<!tilde>                                                         */ DEADTRANS( L'['	,0x00F5	,0x27E6	,0x0000	), // "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET
+/*<!tilde>                                                         */ DEADTRANS( L']'	,0x00F5	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!tilde>                                                         */ DEADTRANS( L'$'	,0x00F5	,0x0360	,0x0000	), // "͠" COMBINING DOUBLE TILDE
 /*<!tilde>                                                         */ DEADTRANS( L'='	,0x00F5	,0x034C	,0x0000	), // "͌" COMBINING ALMOST EQUAL TO ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'#'	,0x00F5	,0x29E4	,0x0000	), // "⧤" EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
