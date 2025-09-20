@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Correct and update annotations         6.0.7.02.01 Sun 2025-09-21T0143+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
 * Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2106+0200
 * Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
@@ -16,14 +17,14 @@
 * Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
 * Add partial file kbcommon.c            6.0.3.01.00 Wed 2025-08-20T2203+0200
 *
-* Due to the static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[],
-* this file needs to be included after all the allocation tables. So, this
+* This file needs to be included after all the allocation tables, due to the
+* static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[]. So, this
 * #include stands typically near the file end.
 *
 * Known bugs are documented in this file.
 * See ## Known bugs
 *
-* This file includes the dead key content.
+* This file includes the file containing the dead key content.
 * See #include "kbdeadtrans.c"
 \*****************************************************************************/
 
@@ -620,11 +621,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * transpiles a KLC file, except that it is not followed by the ligature array,
 * conveniently located in the C source at this point, because it contains the
 * variant identifier string output.
-*
-* Admittedly, such a bug is unexpected in a robust rock-solid operating system.
-* Consistently, this disorder is unheard of on Linux and macOS. So the question
-* is why it could happen on Windows. The defective DEADTRANS macro as discussed
-* in kbdeadtrans.c hints that other parts may be problematic, too.
+* https://github.com/dispoclavier/nouvel-azerty/blob/c3f0eaad69f3e9682c8d78267e589bdca4b822b4/windows/kbcommon.c#L839
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
@@ -639,9 +636,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
   // Modification #     |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
   // UX Level           |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|
-  // The backspace key is bugged with Shift and does not work with nor without the modification #1 allocation.
   {VK_BACK      ,0      ,'\b'     ,'\b'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x007f   },
-  // The escape key yields a short variant descriptor at level 5, and the version # at level 6.
+  // The escape key yields the version # at level 5, and a short variant descriptor at level 6.
   {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_NONE ,WCH_NONE ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,0x001b   },
   {VK_RETURN    ,0      ,'\r'     ,'\r'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'\n'     },
   {VK_CANCEL    ,0      ,0x0003   ,0x0003   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0003   },
