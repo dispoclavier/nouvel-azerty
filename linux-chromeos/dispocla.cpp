@@ -1,4 +1,4 @@
-//                       Date: 2025-09-02T0305+0200
+//                       Date: 2025-09-20T0743+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -658,13 +658,15 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1]= "FOUR_LEVEL";
 	key.type[Group2]= "FOUR_LEVEL";
 	key <LSGT> {
-		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ],
-		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift ],
+		[    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift ]
 	};
 
 	key <MDSW> {
-		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ],
-		[ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift ],
+		[    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift,    ISO_Level5_Shift ]
 	};
 
 	// ## Regular level 3 (AltGr) modifier key
@@ -674,8 +676,9 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <RALT> {
-		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ],
-		[ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ]
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift ],
+		[    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift,    ISO_Level3_Shift ]
 	};
 
 	//
@@ -686,14 +689,27 @@ xkb_symbols "kbfrFRs" {
 	// ISO_First_Group is interpreted as: action= LockGroup(group=1)
 	// ISO_Last_Group  is interpreted as: action= LockGroup(group=2)
 	//
+	// The TLDE key is dedicated to this toggle for cross-platform consistency
+	// with the KANA toggle on Windows, where however this key is supercharged
+	// with the AltQr modifier as a way to compensate the suboptimal dead key
+	// support on Windows due to the defective DEADTRANS macro.
+	//
+	// This toggle is duplicated on the CAPS key for an opportunity to free up
+	// the TLDE key, in case it is to be repurposed for graphics (as part of
+	// customization).
+	//
 
-	key.type[Group1]= "EIGHT_LEVELS_BASIC";
-	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <TLDE> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,               UEFA1,               UEFA0 ],
-		[     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,               UEFA1,               UEFA0 ]
-	}; // UEFA1 variant descriptor; UEFA0 version number
+		[      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group ],
+		[     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group ]
+	};
+
+	key <CAPS> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[           Caps_Lock,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group,      ISO_Last_Group ],
+		[           Caps_Lock,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group,     ISO_First_Group ]
+	};
 
 	//
 	// ## Superscript letters
@@ -1014,6 +1030,23 @@ xkb_symbols "kbfrFRs" {
 	// than 20 characters.
 	// https://lists.freedesktop.org/archives/wayland-devel/2023-October/043121.html
 	//
+	//
+	// ## Version number and variant descriptor
+	//
+	// The version number as the most looked-after information is output at level
+	// AltFr on the escape key consistently with what is feasible on Windows, for
+	// cross-platform consistency.
+	//
+	// The variant descriptor is output when adding the Shift modifier to this.
+	//
+
+	key.type[Group1]= "EIGHT_LEVELS_BASIC";
+	key.type[Group2]= "EIGHT_LEVELS_BASIC";
+	key <ESC> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[              Escape,              Escape,              Escape,              Escape,               UEFA0,               UEFA1 ],
+		[              Escape,              Escape,              Escape,              Escape,               UEFA0,               UEFA1 ]
+	}; // UEFA0 version number; UEFA1 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1672,10 +1705,10 @@ xkb_symbols "kbbrFRs" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
 	}; // UEFA2 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
@@ -1709,10 +1742,10 @@ xkb_symbols "kbbrFRsr" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
 	}; // UEFAA variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
@@ -1763,10 +1796,10 @@ xkb_symbols "kbfrPFs" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
 	}; // UEFA3 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1800,10 +1833,10 @@ xkb_symbols "kbfrPFsr" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
 	}; // UEFAB variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1849,10 +1882,10 @@ xkb_symbols "kbfrAFs" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
 	}; // UEFA4 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
@@ -1886,10 +1919,10 @@ xkb_symbols "kbfrAFsr" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
 	}; // UEFAC variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
@@ -1939,10 +1972,10 @@ xkb_symbols "kbfrBEs" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
 	}; // UEFA5 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1991,10 +2024,10 @@ xkb_symbols "kbfrFRsr" {
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
-	key <TLDE> {
+	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
 	}; // UEFA9 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";

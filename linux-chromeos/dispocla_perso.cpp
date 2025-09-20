@@ -1,4 +1,4 @@
-//                      Date : 2025-08-08T0740+0200
+//                      Date : 2025-09-20T0246+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -92,6 +92,14 @@ xkb_symbols "perso" {
 
 	name[Group1] = "Personnalisations";
 	name[Group2] = "Personnalisations, mode ASCII";
+
+	key.type[Group1] = "EIGHT_LEVELS_BASIC";
+	key.type[Group2] = "EIGHT_LEVELS_BASIC";
+	key <TLDE> {
+		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
+	};
 
 	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL3_CONTROL";
