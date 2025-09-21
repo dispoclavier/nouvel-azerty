@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-09-21T0444+0200
+# 2025-09-21T1739+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -316,6 +316,7 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/emdash/2014/;
 			$input =~ s/Greek_horizbar/2015/;
 			$input =~ s/ellipsis/2026/;
+			$input =~ s/periodcentered/00B7/;
 			$input =~ s/eacute/00E9/;
 			$input =~ s/Eacute/00C9/;
 			$input =~ s/egrave/00E8/;
