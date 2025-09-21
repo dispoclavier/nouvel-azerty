@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-08-16T1056+0200
+# 2025-09-21T0444+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -221,10 +221,9 @@ while ( my $line = <INPUT> ) {
 			# Prepare for sorting, further decode.
 			$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
 			$line =~ s/<section>/<\%semsection>/g;
-			$line =~ s/<at>/<\%aat>/g;
 			$line =~ s/<rightsinglequotemark>/<\%aprightsinglequotemark>/g;
-			$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/g;
-			$line =~ s/<((nobreak)?)space>/<~$1space>/g;
+			$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/g;
+			$line =~ s/<((nobreak)?space)>/<~$1>/g;
 			$line =~ s/<U202F>/<~nobreakthinspace>/g;
 			$line =~ s/<U200B>/<~spacezerowidth>/g;
 
@@ -290,7 +289,7 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/%equal/=/;
 			$input =~ s/%greater/>/;
 			$input =~ s/%question/?/;
-			$input =~ s/%aat/@/;
+			$input =~ s/%at/@/;
 			$input =~ s/%bracketleft/[/;
 			$input =~ s/%backslash/\\\\/;
 			$input =~ s/%bracketright/]/;
