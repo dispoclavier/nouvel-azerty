@@ -7214,10 +7214,10 @@
 #   See # # Quadruple prime
 #
 #   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
-#   dead_acute by "/" and "\" additionally to their support in dead_grave and
-#   dead_tilde by "[" and "]", to work around the special formatting triggered
-#   by some ASCII-bracketed strings in Markdown while the actual intent is to
-#   mark up keycaps in documentation.
+#   dead_acute by "/" and "\" or "·" U00B7 periodcentered additionally to their
+#   support in dead_grave and dead_tilde by "[" and "]", to work around the
+#   special formatting triggered by some ASCII-bracketed strings in Markdown,
+#   when the actual intent is to mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
 #   The acute accent below virtual dead key is removed as designed to foster
@@ -7249,9 +7249,11 @@
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <dead_acute>                                                                               <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><apostrophe>                                                                    <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+#   Multikey conflicts with "Ǿ" U01FE, "ǿ" U01FF.                                          <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
 <dead_acute>                                                                           <backslash> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <Multi_key><apostrophe>                                                                <backslash> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<dead_acute>                                                                      <periodcentered> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><apostrophe>                                                           <periodcentered> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <dead_acute>                                                                                   <1> : "′" U2032 # PRIME
 <Multi_key><apostrophe>                                                                        <1> : "′" U2032 # PRIME
 <dead_acute>                                                                                <KP_1> : "′" U2032 # PRIME
@@ -15370,7 +15372,8 @@
 #   WAVING BLACK FLAG, is in the SMP, cross-platform incompatible.
 #
 #   However, "🏴" U1F3F4 WAVING BLACK FLAG is supported by backslash, with
-#   phonetic mnemonics, and "🏳" U1F3F3 WAVING WHITE FLAG, by slash.
+#   phonetic mnemonics, as well as by periodcentered (at the base level instead
+#   of backslash on most variants), and "🏳" U1F3F3 WAVING WHITE FLAG, by slash.
 #
 <UEFD7><UEFD7>                                                                             <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal><equal>                                                                  <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
@@ -15384,6 +15387,8 @@
 <Multi_key><equal><equal>                                                                  <slash> : "🏳" U1F3F3 # WAVING WHITE FLAG
 <UEFD7><UEFD7>                                                                         <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
 <Multi_key><equal><equal>                                                              <backslash> : "🏴" U1F3F4 # WAVING BLACK FLAG
+<UEFD7><UEFD7>                                                                    <periodcentered> : "🏴" U1F3F4 # WAVING BLACK FLAG
+<Multi_key><equal><equal>                                                         <periodcentered> : "🏴" U1F3F4 # WAVING BLACK FLAG
 #
 #
 #   Country flags
@@ -16585,7 +16590,7 @@
 #
 #   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
 #   dead_grave by "[" and "]" to work around the special formatting triggered
-#   by some ASCII-bracketed strings in Markdown while the actual intent is to
+#   by some ASCII-bracketed strings in Markdown, when the actual intent is to
 #   mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
@@ -17176,16 +17181,14 @@
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
-#   by dead_diaeresis followed by slash, or backslash respectively, for ease of
-#   input, as both the dead key and the base characters are at the base level.
-#   By contrast, the more mnemonic but less practical bar is not used in this
-#   context, due to conflicts with the diaeresis and macron virtual dead keys.
+#   by dead_diaeresis followed by slash, or periodcentered (for AZERTY) and
+#   backslash (for remapped variants) respectively, for ease of input, as both
+#   the dead key and the base characters are at the base level. (By contrast,
+#   the more mnemonic but less practical bar is not used in this context, due
+#   to conflicts with the diaeresis and macron virtual dead keys.)
 #   See # # Symbols for multikey
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
-#
-#   "¦" U00A6 is also in group 11 of ":".
-#   See # # B09 colon
 #
 #   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
 #   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
@@ -17217,6 +17220,8 @@
 #   Multikey conflicts with "ᷲ" U1DF2, "ᷳ" U1DF3, "ᷴ" U1DF4.                            <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
 <dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<dead_diaeresis>                                                                  <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><colon>                                                                <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                           <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
