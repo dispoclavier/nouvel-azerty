@@ -6,6 +6,8 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update after correcting sortability    6.0.7.02.01 Sun 2025-09-21T0447+0200
+* Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
 * Outline brackets U27E6.. in !acute     6.0.7.01.02 Sun 2025-09-14T1926+0200
 * Outline brackets U27E6.. in !tilde     6.0.7.01.01 Sun 2025-09-14T1911+0200
 * "°" U00B0 2 ➔ "⋆" U22C6 in !abovering  6.0.7.01.00 Fri 2025-09-12T0441+0200
@@ -1006,13 +1008,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!group>                                                         */ DEADTRANS( 0x00EB	,0x2460	,0x003D	,0x0000	), // "=" EQUALS SIGN
 /*<!group>                                                         */ DEADTRANS( 0x00F2	,0x2460	,0x00A4	,0x0000	), // "¤" CURRENCY SIGN
 /*<!group>                                                         */ DEADTRANS( 0x03B5	,0x2460	,0x25CC	,0x0000	), // "◌" DOTTED CIRCLE, generic base character for combining diacritics
-/*<!group>                                                         */ DEADTRANS( L'@'	,0x2460	,0x25CC	,0x0000	), // "◌" DOTTED CIRCLE, generic base character for combining diacritics
 /*<!group>                                                         */ DEADTRANS( L'&'	,0x2460	,0x03C0	,0x0000	), // "π" GREEK SMALL LETTER PI math
 /*<!group>                                                         */ DEADTRANS( L'\''	,0x2460	,0x02BC	,0x0000	), // "ʼ" MODIFIER LETTER APOSTROPHE
 /*<!group>                                                         */ DEADTRANS( 0x2019	,0x2460	,0x02BC	,0x0000	), // "ʼ" MODIFIER LETTER APOSTROPHE
 /*<!group>                                                         */ DEADTRANS( L'^'	,0x2460	,0x26A0	,0x0000	), // "⚠" WARNING SIGN emoji, ergonomic mapping
 /*<!group>                                                         */ DEADTRANS( L'~'	,0x2460	,0x2243	,0x0000	), // "≃" ASYMPTOTICALLY EQUAL TO math
 /*<!group>                                                         */ DEADTRANS( L'*'	,0x2460	,0x2717	,0x0000	), // "✗" BALLOT X
+/*<!group>                                                         */ DEADTRANS( L'@'	,0x2460	,0x25CC	,0x0000	), // "◌" DOTTED CIRCLE, generic base character for combining diacritics
 /*<!group>                                                         */ DEADTRANS( L'\\'	,0x2460	,0x221A	,0x0000	), // "√" SQUARE ROOT math
 /*<!group>                                                         */ DEADTRANS( L'|'	,0x2460	,0x2020	,0x0000	), // "†" DAGGER
 /*<!group>                                                         */ DEADTRANS( L'{'	,0x2460	,0x222B	,0x0000	), // "∫" INTEGRAL math
