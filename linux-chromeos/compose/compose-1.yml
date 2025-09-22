@@ -1,15 +1,15 @@
-#                      Scope: part 1 of Compose.yml
+#                      Scope: Part 1 of Compose.yml
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
-#                       Date: [see Compose.yml]
+#                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.7" # See #   End of line comments
-#       Operating file name*: Compose or .XCompose
+<UEFA0>                     : "version 6.0.7.03" # See #   End of line comments
+#       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: Linux using XKB with XCompose**
 #     Syntactic highlighting: YAML
-#               Installation: Please do not use this file but the all-in-one file XCompose.yml.
+#               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
@@ -781,8 +781,9 @@
 #   This fallback works everywhere U2009 THIN SPACE and UFEFF ZERO WIDTH
 #   NO-BREAK SPACE are supported.
 #
-#   The Draw Spaces extension for Gedit consistently represents THIN SPACE like
+#   The Draw Spaces plugin of Gedit consistently represents THIN SPACE like
 #   normal SPACE, given that U2009 THIN SPACE is breaking.
+#   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
 #   These spaces are U2009 THIN SPACE followed by UFEFF ZWNBSP.
 #
@@ -3880,7 +3881,6 @@
 #
 #^# Emoji by multikey
 #
-#
 # # Sun emoji
 #
 #   Due to its hijacked character, the sun emoji is not supported in group 4 of
@@ -4047,7 +4047,6 @@
 #
 #^# Technical symbols
 #
-#
 # # Diameter sign
 #
 #   This sequence is case sensitive, as uppercase is used for "∅" U2205 EMPTY
@@ -4081,23 +4080,28 @@
 #
 # # Symbols for NO-BREAK SPACE
 #
-#   The down-pointing triangle conforms to Gedit’s Draw Spaces extension.
+#   The down-pointing triangle conforms to Gedit’s Draw Spaces plugin.
+#   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
+#
 #   The shouldered open box is also in group 2 of dollar.
 #
+<Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 <Multi_key><n><b><s>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B><S>                                                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><nobreakspace>                                                                   : "⍽" U237D # SHOULDERED OPEN BOX
 #
 #
-# # Symbols for NARROW NO-BREAK SPACE, the no-break thin space NBTSP
+# # Symbols for no-break thin space NBTSP
+#
+#   The down-pointing triangle conforms to Gedit’s Draw Spaces plugin.
+#   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
 #   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
 #   repurposed by lack of an unsuccessful symbol in L2/10-351.
 #   https://unicode.org/L2/L2010/10351-n3897-jtc1sc35n1579.pdf
 #
-<Multi_key><U202F><space>                                                                          : "⎍" U238D # MONOSTABLE SYMBOL
 <Multi_key><n><b><t>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B><T>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><U202F><space>                                                                          : "⎍" U238D # MONOSTABLE SYMBOL
 <Multi_key><w><v>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><W><V>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><w><l>                                                                                  : "⌇" U2307 # WAVY LINE

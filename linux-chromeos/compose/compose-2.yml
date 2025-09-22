@@ -1,11 +1,11 @@
-#                      Scope: part 2 of Compose.yml
+#                      Scope: Part 2 of Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
 #     Syntactic highlighting: YAML
-#               Installation: Please do not use this file but the all-in-one file XCompose.yml.
+#               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #
 #   START_LATIN_BY_DEAD_KEYS
@@ -7213,12 +7213,22 @@
 #   See # # Primes
 #   See # # Quadruple prime
 #
+#
+#   Symbols for documentation
+#
 #   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
 #   dead_acute by "/" and "\" or "·" U00B7 periodcentered additionally to their
 #   support in dead_grave and dead_tilde by "[" and "]", to work around the
 #   special formatting triggered by some ASCII-bracketed strings in Markdown,
 #   when the actual intent is to mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
+#
+#   "▾" U25BE BLACK DOWN-POINTING SMALL TRIANGLE representing the no-break thin
+#   space U202F, by at sign, is by courtesy of the Draw Spaces plugin of Gedit.
+#   See # # Symbols for no-break thin space NBTSP
+#
+#
+#   Acute accent below
 #
 #   The acute accent below virtual dead key is removed as designed to foster
 #   a better quotation mark input method, the more as there are no precomposed
@@ -7244,6 +7254,8 @@
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_acute>                                                                                  <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
@@ -13848,7 +13860,6 @@
 #   Followed by comma, dead_circumflex provides an additional input method for
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #   See # # B06 grave
-#   See #*# CIRCUMFLEX
 #
 #   As "B" has not been encoded with circumflex, and French doesn’t have any
 #   word with "êb", <dead_circumflex><B> and <dead_circumflex><b> may be used
@@ -13858,6 +13869,10 @@
 #   since U has not been encoded with circumflex and grave, as opposed to A (by
 #   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
 #   feature Ograve).
+#
+#   The shouldered open box "⍽" U237D, by the at sign, is a convenience for
+#   documentation.
+#   See # # Symbols for NO-BREAK SPACE
 #
 #
 #   Diacritics
@@ -13897,6 +13912,8 @@
 #   Multikey conflicts with "Ấ" U1EA4, "ấ" U1EA5, "Ế" U1EBE, "ế" U1EBF, "Ố" U1ED0, […]<apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
+#   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
@@ -17171,6 +17188,10 @@
 #   partial support in dead_circumflex, lacking the multikey equivalents.
 #   See #*# CIRCUMFLEX
 #
+#   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
+#   but also "Ø" U00D8, "ø" U00F8 for convenience.
+#   See # # Oslash for Danish, Norwegian and other languages
+#
 #   For intuitivity, with asterisk as a base character, dead_diaeresis yields
 #   "⁑" U2051, consistently with dead_circumflex and *dead_superscript for
 #   "⁂" U2042 ASTERISM. "⁑" U2051, "⁂" U2042 and "⁎" U204E are also in
@@ -17178,6 +17199,9 @@
 #   See #*# RING_ABOVE
 #   See #*# CIRCUMFLEX
 #   See #*# SUPERSCRIPT
+#
+#
+#   Symbols for documentation
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
 #   and "¦" U00A6 BROKEN BAR repurposed as multikey symbol, have quick access
@@ -17190,15 +17214,15 @@
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
 #
+#   "▿" U25BF WHITE DOWN-POINTING SMALL TRIANGLE representing the no-break
+#   space U00A0, by at, is by courtesy of the Draw Spaces plugin of Gedit.
+#   See # # Symbols for NO-BREAK SPACE
+#
 #   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
 #   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
 #   the dead key and the base characters.
 #   See # # Long dashes
 #   See #   Input method for hyphens and dashes
-#
-#   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
-#   but also "Ø" U00D8, "ø" U00F8 for convenience.
-#   See # # Oslash for Danish, Norwegian and other languages
 #
 <dead_diaeresis>                                                                           <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
@@ -17222,6 +17246,8 @@
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                  <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<dead_diaeresis>                                                                              <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#   Multikey conflicts with "¨" U00A8, "̈" U0308, "̈́" U0344, "΅" U0385, "ΐ" U0390, […]          <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_diaeresis>                                                                           <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE

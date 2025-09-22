@@ -1,4 +1,4 @@
-#                      Scope: part 3 of Compose.yml
+#                      Scope: Part 3 of Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -6,8 +6,6 @@
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
 #     Syntactic highlighting: YAML
 #               Installation: Please do not use this file but the all-in-one file Compose.yml.
-#
-#
 #
 #
 #   START_LETTER_SYMBOL_GROUPS
