@@ -1,4 +1,4 @@
-//                       Date: 2025-09-20T0743+0200
+//                       Date: 2025-09-22T0233+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -21,12 +21,12 @@
 //
 //                                    /usr/share/X11/xkb/symbols/dispocla_perso
 //
-//                             2. Add this file in
+//                             2. Add this file dispocla.cpp in
 //
 //                                    /usr/share/X11/xkb/symbols/dispocla
 //
 //                             3. In /usr/share/X11/xkb/rules/evdev
-//                                comment out the rule:
+//                                add a double slash "//" in front of the rule:
 //
 //                                    *		*		=	+%l[2]%(v[2]):2
 //
@@ -1034,7 +1034,7 @@ xkb_symbols "kbfrFRs" {
 	// ## Version number and variant descriptor
 	//
 	// The version number as the most looked-after information is output at level
-	// AltFr on the escape key consistently with what is feasible on Windows, for
+	// AltGr on the escape key consistently with what is feasible on Windows, for
 	// cross-platform consistency.
 	//
 	// The variant descriptor is output when adding the Shift modifier to this.
@@ -1044,8 +1044,8 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[              Escape,              Escape,              Escape,              Escape,               UEFA0,               UEFA1 ],
-		[              Escape,              Escape,              Escape,              Escape,               UEFA0,               UEFA1 ]
+		[              Escape,              Escape,               UEFA0,               UEFA1 ],
+		[              Escape,              Escape,               UEFA0,               UEFA1 ]
 	}; // UEFA0 version number; UEFA1 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_SUPERSCRIPT_SUBSCRIPT_LEVEL3_CONTROL";
@@ -1707,8 +1707,8 @@ xkb_symbols "kbbrFRs" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA2 ]
 	}; // UEFA2 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
@@ -1744,8 +1744,8 @@ xkb_symbols "kbbrFRsr" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAA ]
 	}; // UEFAA variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_TITLECASE_LEVEL3_CONTROL";
@@ -1798,8 +1798,8 @@ xkb_symbols "kbfrPFs" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA3 ]
 	}; // UEFA3 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1835,8 +1835,8 @@ xkb_symbols "kbfrPFsr" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAB ]
 	}; // UEFAB variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -1884,8 +1884,8 @@ xkb_symbols "kbfrAFs" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA4 ]
 	}; // UEFA4 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
@@ -1921,8 +1921,8 @@ xkb_symbols "kbfrAFsr" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFAC ]
 	}; // UEFAC variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_AE01_FIRSTALPHABETIC_LEVEL3_CONTROL";
@@ -1974,8 +1974,8 @@ xkb_symbols "kbfrBEs" {
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA5 ]
 	}; // UEFA5 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL3_CONTROL";
@@ -2018,16 +2018,17 @@ xkb_symbols "kbfrFRsr" {
 	// Hybrid variants were also included until 2023-08-18 but were dropped as
 	// pointless since keys W, X, C, V, B and even Z, Y, S are unremapped, for
 	// the sake of frequent keyboard shortcuts, without substantially cutting
-	// back on letter ergonomy. Moreover, the hybrid variants were truncated,
-	// since the layout uses the full set of 8 indices, and shortcut remapping
-	// requires one out of them.
+	// back on letter ergonomy except for the "ce", "ec" digraphs.
+	//
+	// Moreover, the hybrid variants were truncated, because the layout uses the
+	// full set of 8 indices, and shortcut remapping requires one out of them.
 
 	key.type[Group1]= "EIGHT_LEVELS_BASIC";
 	key.type[Group2]= "EIGHT_LEVELS_BASIC";
 	key <ESC> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
-		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ],
+		[            NoSymbol,            NoSymbol,            NoSymbol,               UEFA9 ]
 	}; // UEFA9 variant descriptor
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC_LEVEL3_CONTROL";
