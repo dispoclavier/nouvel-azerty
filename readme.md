@@ -47,7 +47,7 @@ Le numéro de version est sur AltGr + Échappement.
 
 Le troisième numéro n’est pas toujours une version de maintenance, car des fonctionnalités peuvent être ajoutées ou modifiées sans que cela justifie d’incrémenter le numéro de version mineure.
 
-Un quatrième numéro peut être ajouté pour numéroter les builds. Ce numéro est incrémenté chaque fois que les pilotes de disposition sont compilés, ce qui n’a lieu que sous Windows
+Le quatrième numéro est ajouté pour numéroter les builds, aussi pour Linux parce que le fichier Compose.yml sert de code source pour le contenu transpilé de touches mortes pour Windows. Ce numéro est incrémenté chaque fois que les pilotes de disposition sont compilés.
 
 ### Variante
 
