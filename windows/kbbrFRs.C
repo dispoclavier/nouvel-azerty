@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Move variant ID to UX level 4          6.0.7.03.00 Sun 2025-09-21T1332+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0311+0200
 * Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2006+0200
 * Udpdate to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2007+0200
@@ -32,12 +33,12 @@
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,5      ,' '      ,'b'      ,'r'      ,'_'      ,'F'      ,'R'      ,'_'      ,'s'      ,'e'      ,'m'      ,'i'      ,'_'      ,'a'      ,'u'      ,'t'      ,'o'      },
+  {VK_ESCAPE ,3 ,' ' ,'b' ,'r' ,'_' ,'F' ,'R' ,'_' ,'s' ,'e' ,'m' ,'i' ,'_' ,'a' ,'u' ,'t' ,'o' },
 
   #include "kbligazerty.c"
   #include "kbligatures.c"
 
-  {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
+  {0         ,0 ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   }
 };
 
 /*****************************************************************************\

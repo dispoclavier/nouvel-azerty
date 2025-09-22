@@ -7,13 +7,14 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move MCUs to kbligatures.c & others    6.0.3.00.00 Wed 2025-08-20T1930+0200
-*
+* Move AZERTY MCUs to kbligazerty.c      6.0.3.00.00 Wed 2025-08-20T1930+0200
+* Add partial file kbligazerty.c         6.0.3.00.00 Wed 2025-08-20T1930+0200
 *
 * This file only contains ligatures particular to AZERTY. Keys that do not
 * change across layouts are commented out, and only one sample is provided.
 *
 * Ligatures that do not change across layouts are configured in kbligatures.c.
+*
 \*****************************************************************************/
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {

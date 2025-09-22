@@ -9,12 +9,14 @@
 * History:
 *
 * Rename from kbligqzjfgy.c to kbligredispo.c        Sat 2025-08-23T1637+0200
-* Move MCUs to kbligatures.c and other files         Wed 2025-08-20T1930+0200
+* Move remapped MCUs to kbligqzjfgy.c                Wed 2025-08-20T1930+0200
+* Add partial file kbligqzjfgy.c                     Wed 2025-08-20T1930+0200
 *
 * This file only contains ligatures particular to QZJFGY. Keys that do not
 * change across layouts are commented out, and only one sample is provided.
 *
 * Ligatures that do not change across layouts are configured in kbligatures.c.
+*
 \*****************************************************************************/
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {

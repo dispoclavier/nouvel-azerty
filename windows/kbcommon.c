@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Move metadata to UX levels 3 and 4     6.0.7.03.00 Sun 2025-09-21T1349+0200
 * Correct and update annotations         6.0.7.02.01 Sun 2025-09-21T0143+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
 * Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2106+0200
@@ -26,6 +27,7 @@
 *
 * This file includes the file containing the dead key content.
 * See #include "kbdeadtrans.c"
+*
 \*****************************************************************************/
 
 /*****************************************************************************\
@@ -637,8 +639,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS9 aVkToWch9[] = {
   // UX Level           |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  Ctrl   |
   //                    |=========|=========|=========|=========|=========|=========|=========|=========|=========|
   {VK_BACK      ,0      ,'\b'     ,'\b'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x007f   },
-  // The escape key yields the version # at level 5, and a short variant descriptor at level 6.
-  {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_NONE ,WCH_NONE ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,0x001b   },
+  // The escape key yields the version # at level 3, and a short variant descriptor at level 4.
+  {VK_ESCAPE    ,0      ,0x001b   ,0x001b   ,WCH_LGTR ,WCH_LGTR ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x001b   },
   {VK_RETURN    ,0      ,'\r'     ,'\r'     ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,'\n'     },
   {VK_CANCEL    ,0      ,0x0003   ,0x0003   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,0x0003   },
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }

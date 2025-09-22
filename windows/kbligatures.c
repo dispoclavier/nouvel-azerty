@@ -7,7 +7,8 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Permutate version # and variant ID     6.0.4.02.00 Tue 2025-09-16T0319+0200
+* Move version number to UX level 3      6.0.7.03.00 Sun 2025-09-21T1348+0200
+* Permutate version # and variant ID     6.0.7.02.00 Tue 2025-09-16T0319+0200
 * Add okay emoji for broken key combos   6.0.4.01.00 Wed 2025-08-27T1840+0200
 * Duplicate Breton trigraph on VK_1      6.0.3.03.00 Thu 2025-08-21T1958+0200
 * Move MCUs to kbligatures.c & others    6.0.3.00.00 Wed 2025-08-20T1930+0200
@@ -16,11 +17,12 @@
 * This file only contains ligatures that do not change across layouts.
 * Ligatures particular to AZERTY are configured in kbligazerty.c.
 * Ligatures particular to QZJFGY are configured in kbligredispo.c.
+*
 \*****************************************************************************/
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE    ,4      ,' '      ,'v'      ,'6'      ,'.'      ,'0'      ,'.'      ,'7'      ,'.'      ,'0'      ,'2'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_ESCAPE, 2, ' ', 'v', '_', '6', '.', '0', '.', '7', '.', '0', '3', WCH_NONE,WCH_NONE,WCH_NONE,WCH_NONE,WCH_NONE},
 
   /*****************************************************************************\
   * Ligature array.

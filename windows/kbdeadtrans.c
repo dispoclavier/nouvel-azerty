@@ -6,6 +6,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update transpiled dead key data        6.0.7.03.00 Mon 2025-09-22T0640+0200
 * Update after correcting sortability    6.0.7.02.01 Sun 2025-09-21T0447+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
 * Outline brackets U27E6.. in !acute     6.0.7.01.02 Sun 2025-09-14T1926+0200
@@ -57,6 +58,7 @@
 * As a result, any DEADTRANS macro call can be overridden by a similar call,
 * with the same input and the same dead character, but another output, provided
 * that the valid call precedes anyhow in the source code.
+*
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
@@ -366,6 +368,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L'&'	,0x00E1	,0x0317	,0x0000	), // "̗" COMBINING ACUTE ACCENT BELOW
 /*<!acute>                                                         */ DEADTRANS( L'\''	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x2019	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+/*<!acute>                                                         */ DEADTRANS( L'@'	,0x00E1	,0x25BE	,0x0000	), // "▾" BLACK DOWN-POINTING SMALL TRIANGLE
 /*<!acute>                                                         */ DEADTRANS( L'\\'	,0x00E1	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!acute>                                                         */ DEADTRANS( L'"'	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x20AC	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
@@ -403,6 +406,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L'o'	,0x00E1	,0x00F3	,0x0000	), // "ó" LATIN SMALL LETTER O WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'P'	,0x00E1	,0x1E54	,0x0000	), // "Ṕ" LATIN CAPITAL LETTER P WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'p'	,0x00E1	,0x1E55	,0x0000	), // "ṕ" LATIN SMALL LETTER P WITH ACUTE
+/*<!acute>                                                         */ DEADTRANS( 0x00B7	,0x00E1	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!acute>                                                         */ DEADTRANS( L'R'	,0x00E1	,0x0154	,0x0000	), // "Ŕ" LATIN CAPITAL LETTER R WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'r'	,0x00E1	,0x0155	,0x0000	), // "ŕ" LATIN SMALL LETTER R WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'S'	,0x00E1	,0x015A	,0x0000	), // "Ś" LATIN CAPITAL LETTER S WITH ACUTE
@@ -667,6 +671,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!circumflex>                                                    */ DEADTRANS( 0x2019	,0x00EA	,0x2018	,0x0000	), // "‘" LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( L'~'	,0x00EA	,0x2A6F	,0x0000	), // "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex>                                                    */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000	), // "⁂" ASTERISM
+/*<!circumflex>                                                    */ DEADTRANS( L'@'	,0x00EA	,0x237D	,0x0000	), // "⍽" SHOULDERED OPEN BOX
 /*<!circumflex>                                                    */ DEADTRANS( L'|'	,0x00EA	,0x2E36	,0x0000	), // "⸶" DAGGER WITH LEFT GUARD
 /*<!circumflex>                                                    */ DEADTRANS( L','	,0x00EA	,0x02BB	,0x0000	), // "ʻ" MODIFIER LETTER TURNED COMMA
 /*<!circumflex>                                                    */ DEADTRANS( L'$'	,0x00EA	,0x1DCD	,0x0000	), // "᷍" COMBINING DOUBLE CIRCUMFLEX ABOVE
@@ -804,6 +809,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000	), // "᫜" COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'*'	,0x00EB	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
+/*<!diaeresis>                                                     */ DEADTRANS( L'@'	,0x00EB	,0x25BF	,0x0000	), // "▿" WHITE DOWN-POINTING SMALL TRIANGLE
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000	), // "¦" BROKEN BAR repurposed as multikey symbol
 /*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000	), // "⹀" DOUBLE HYPHEN
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
@@ -833,6 +839,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( L'i'	,0x00EB	,0x00EF	,0x0000	), // "ï" LATIN SMALL LETTER I WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'O'	,0x00EB	,0x00D6	,0x0000	), // "Ö" LATIN CAPITAL LETTER O WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'o'	,0x00EB	,0x00F6	,0x0000	), // "ö" LATIN SMALL LETTER O WITH DIAERESIS
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00B7	,0x00EB	,0x00A6	,0x0000	), // "¦" BROKEN BAR repurposed as multikey symbol
 /*<!diaeresis>                                                     */ DEADTRANS( L't'	,0x00EB	,0x1E97	,0x0000	), // "ẗ" LATIN SMALL LETTER T WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'U'	,0x00EB	,0x00DC	,0x0000	), // "Ü" LATIN CAPITAL LETTER U WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'u'	,0x00EB	,0x00FC	,0x0000	), // "ü" LATIN SMALL LETTER U WITH DIAERESIS
