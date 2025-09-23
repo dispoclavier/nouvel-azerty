@@ -781,7 +781,7 @@
 #   This fallback works everywhere U2009 THIN SPACE and UFEFF ZERO WIDTH
 #   NO-BREAK SPACE are supported.
 #
-#   The Draw Spaces plugin of Gedit consistently represents THIN SPACE like
+#   The Draw Spaces plugin of GEdit consistently represents THIN SPACE like
 #   normal SPACE, given that U2009 THIN SPACE is breaking.
 #   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
@@ -4080,7 +4080,7 @@
 #
 # # Symbols for NO-BREAK SPACE
 #
-#   The down-pointing triangle conforms to Gedit’s Draw Spaces plugin.
+#   The down-pointing triangle conforms to GEdit’s Draw Spaces plugin.
 #   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
 #   The shouldered open box is also in group 2 of dollar.
@@ -4092,7 +4092,7 @@
 #
 # # Symbols for no-break thin space NBTSP
 #
-#   The down-pointing triangle conforms to Gedit’s Draw Spaces plugin.
+#   The down-pointing triangle conforms to GEdit’s Draw Spaces plugin.
 #   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
 #   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
