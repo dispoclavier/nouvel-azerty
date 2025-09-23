@@ -3,12 +3,13 @@
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
 # 2024-10-28T1417+0100
+# 2025-09-23T1319+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
 # Compose.yml.
 #
-# The input requires the `START_MATH` start tag, and the `END_MATH` end tag.
+# The input requires the "START_MATH" start tag, and the "END_MATH" end tag.
 #
 # Alias sequences with no-break space or with numpad digits are skipped.
 #
@@ -16,17 +17,17 @@
 # a light-blue baseline for the purpose of delimiting whitespace characters and
 # clarifying advance width and vertical alignment.
 #
-# Localized tooltips require the Unicode NamesList.txt or equivalents in the
+# Localized tooltips require the Unicode NamesList.txt and equivalents in the
 # target locale as configured under ## Character names localization.
 # ListeNoms.txt is used for characters missing from Udescripteurs.txt.
 # Characters missing from both are counted and listed with their line number
-# in Compose.yml.
+# in Compose.yml, and documented in English.
 #
 # In print, Unicode character names may be replaced with descriptors in the
 # last column.
 #
-# The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
-# be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
+# The output is designed for use in WordPress, where "{{{anrghg-classes}}}" can
+# be replaced with additional CSS classes, as well as "{{{anrghg-value}}}" with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 #
 # Emoji style display should be deactivated on the page that this math table
@@ -46,14 +47,13 @@ use open ":std", ":encoding(UTF-8)";
 use DateTime;
 
 ## Character names localization
-# my $names_file_path       = 'names/NamesList.txt';
-my $names_file_path       = 'names/ListeNoms.txt';
-# my $descriptors_file_path = '';
+my $names_file_path       = 'names/NamesList.txt';
+my $fr_names_file_path    = 'names/ListeNoms.txt';
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
 my $missing_count         = 0;
-my $missing_cp            = '';
+my $missing_log           = '';
 
 my $input_path = 'Compose.yml';
 open( INPUT, '<', $input_path ) or die $!;
@@ -181,8 +181,8 @@ while ( my $line = <INPUT> ) {
 					close( DESCRIP );
 				}
 				unless ( $descrip ) {
-					open( NAMES, '<', $names_file_path ) or die $!;
-					while ( my $name_line = <NAMES> ) {
+					open( FRENCH, '<', $fr_names_file_path ) or die $!;
+					while ( my $name_line = <FRENCH> ) {
 						if ( $name_line =~ /^$cp\t/ ) {
 							chomp( $name_line );
 							$name_line =~ s/^.+\t(.+)$/$1/;
@@ -191,11 +191,21 @@ while ( my $line = <INPUT> ) {
 							last;
 						}
 					}
-					close( NAMES );
+					close( FRENCH );
 				}
 				unless ( $descrip ) {
 					++$missing_count;
-					$missing_cp .= $cp . ' (:' . $line_nb . ")\n";
+					$missing_log .= $cp . ' (:' . $line_nb . ")\n";
+					open( NAMES, '<', $names_file_path ) or die $!;
+					while ( my $name_line = <NAMES> ) {
+						if ( $name_line =~ /^$cp\t/ ) {
+							chomp( $name_line );
+							$name_line =~ s/^.+\t(.+)$/$1/;
+							$descrip = $name_line;
+							last;
+						}
+					}
+					close( NAMES );
 				}
 				$tooltip = $descrip . " U+$cp";
 				$anchor  = 'U+' . $cp;
@@ -215,7 +225,7 @@ while ( my $line = <INPUT> ) {
 				# Diacritics.
 				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
 				# Spacing symbols.
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
 				print OUTPUT "$line";
 			}
 		}
@@ -227,14 +237,14 @@ print( "Closed file $input_path.\n" );
 close( OUTPUT );
 print( "Closed file $output_path.\n" );
 print( "Math table generated in $output_directory/.\n" );
-print( "Used $names_count times $names_file_path.\n" );
+print( "Used $names_count times $fr_names_file_path.\n" );
 print( "Used $descriptors_count times $descriptors_file_path.\n" );
 if ( $missing_count == 1 ) {
 	print( "Not localized: $missing_count name.\n" );
-	print( "Affected code point (at line number): $missing_cp" );
+	print( "Affected code point (at line number): $missing_log" );
 } elsif ( $missing_count > 1 ) {
 	print( "Not localized: $missing_count names.\n" );
-	print( "Affected code points (at line numbers): $missing_cp" );
+	print( "Affected code points (at line numbers):\n$missing_log" );
 } else {
 	print( "All names localized.\n" );
 }
