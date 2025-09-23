@@ -22,6 +22,8 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Documentation : Corriger et mettre à jour le tableau des symboles mathématiques. compose-1.yml [4918828](https://github.com/dispoclavier/nouvel-azerty/commit/4918828f7c5561395eff70574214f178a59c1a7d), generate-math-table.pl [3e7a66b](https://github.com/dispoclavier/nouvel-azerty/commit/3e7a66b0bd107a875c2e9bbdb434fa00df888401)
+
 ## 6.0.7 (2025-09-23)
 
 Mise à niveau des symboles mathématiques vers [Unicode 17.0](https://www.unicode.org/versions/Unicode17.0.0/).
