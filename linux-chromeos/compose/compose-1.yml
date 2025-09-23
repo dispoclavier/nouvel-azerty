@@ -9175,37 +9175,37 @@
 #   These are new to Unicode 17.0.
 #   https://www.unicode.org/charts/PDF/Unicode-17.0/U170-1F800.pdf
 #
-#Multi_key><minus><minus><greater><less><minus><minus>                (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><greater><less>                                                           : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW;Sm;0;ON;;;;;N;;;;;
-#Multi_key><minus><minus><minus><greater><less><minus><minus><minus>  (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><minus><greater><less>                                                    : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><grave><grave><minus><minus>                                              : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>                                : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><grave><grave><minus>                                             <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><grave><grave><minus>                                      <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><minus><grave><grave><minus>                                      <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><minus><minus><grave><grave><minus>                               <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><grave><grave><minus><minus>                                                     : "🣓" U1F8D3 # SHORT RIGHTWARDS HARPOON ABOVE LONG LEFTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-#Multi_key><apostrophe><minus><minus><0><minus><apostrophe>           (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><apostrophe><minus><minus><0>                                                           : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><apostrophe><minus><minus><KP_0>                                                        : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-#Multi_key><apostrophe><minus><minus><minus><0><minus><apostrophe>    (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><apostrophe><minus><minus><minus>                                                       : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><rightsinglequotemark><minus><minus><0>                                                 : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><rightsinglequotemark><minus><minus><KP_0>                                              : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><rightsinglequotemark><minus><minus><minus>                                             : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-#Multi_key><apostrophe><minus><0><minus><minus><apostrophe>           (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><apostrophe><minus><0>                                                                  : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><apostrophe><minus><KP_0>                                                               : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-#Multi_key><apostrophe><minus><0><minus><minus><minus><apostrophe>    (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><rightsinglequotemark><minus><0>                                                        : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-<Multi_key><rightsinglequotemark><minus><KP_0>                                                     : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON;Sm;0;ON;;;;;N;;;;;
-#Multi_key><minus><x><minus><greater>                                 (literal removed for syntax color) U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><x>                                                                              : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X;Sm;0;ON;;;;;N;;;;;
-#Multi_key><minus><slash><slash><minus><greater>                      (literal removed for syntax color) U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH;Sm;0;ON;;;;;N;;;;;
-<Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH;Sm;0;ON;;;;;N;;;;;
-#Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE;Sm;0;ON;;;;;N;;;;;
-<Multi_key><less><minus><O><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE;Sm;0;ON;;;;;N;;;;;
+#Multi_key><minus><minus><greater><less><minus><minus>                (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+<Multi_key><minus><minus><greater><less>                                                           : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+#Multi_key><minus><minus><minus><greater><less><minus><minus><minus>  (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+<Multi_key><minus><minus><minus><greater><less>                                                    : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
+<Multi_key><minus><minus><grave><grave><minus><minus>                                              : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+<Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>                                : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+<Multi_key><minus><minus><grave><grave><minus>                                             <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+<Multi_key><minus><minus><grave><grave><minus>                                      <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+<Multi_key><minus><minus><minus><grave><grave><minus>                                      <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+<Multi_key><minus><minus><minus><grave><grave><minus>                               <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
+<Multi_key><minus><grave><grave><minus><minus>                                                     : "🣓" U1F8D3 # SHORT RIGHTWARDS HARPOON ABOVE LONG LEFTWARDS HARPOON
+#Multi_key><apostrophe><minus><minus><0><minus><apostrophe>           (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><minus><0>                                                           : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><minus><KP_0>                                                        : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+#Multi_key><apostrophe><minus><minus><minus><0><minus><apostrophe>    (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><minus><minus>                                                       : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><minus><0>                                                 : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><minus><KP_0>                                              : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><minus><minus>                                             : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+#Multi_key><apostrophe><minus><0><minus><minus><apostrophe>           (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><0>                                                                  : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><KP_0>                                                               : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+#Multi_key><apostrophe><minus><0><minus><minus><minus><apostrophe>    (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><0>                                                        : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><KP_0>                                                     : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+#Multi_key><minus><x><minus><greater>                                 (literal removed for syntax color) U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
+<Multi_key><minus><x>                                                                              : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
+#Multi_key><minus><slash><slash><minus><greater>                      (literal removed for syntax color) U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
+<Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
+#Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><O><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 #
 #
 # # LaTeX codes
