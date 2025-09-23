@@ -62,23 +62,25 @@ Pour tout annuler :
 
 a) Si l’étape 0 n’a pas été faite :
 
-     Suivre les étapes 2 à 8 en utilisant le fichier annulation.reg.
+  1. Suivre les étapes 2 à 8 en utilisant le fichier annulation.reg ;
+
+  2. Redémarrer l’ordinateur.
 
 b) Si l’étape 0 a été faite :
 
 b.a) Si la clé "Keyboard Layout" a été exportée :
 
-       1. Importer la clé préalablement exportée ;
+  1. Importer la clé préalablement exportée ;
 
-       2. Redémarrer l’ordinateur.
+  2. Redémarrer l’ordinateur.
 
 b.b) Si la valeur "Scancode Map" a été renommée :
 
-       1. Supprimer la valeur "Scancode Map" existante ;
+  1. Supprimer la valeur "Scancode Map" existante ;
 
-       2. Renommer l’autre valeur en "Scancode Map" ;
+  2. Renommer l’autre valeur en "Scancode Map" ;
 
-       3. Redémarrer l’ordinateur.
+  3. Redémarrer l’ordinateur.
 
 
 
@@ -377,6 +379,6 @@ Entre parenthèses figure le code hexadécimal petit-boutien.
 
 ## À propos
 
-Ce fichier est distribué dans le dossier redipositions/ sous le nom de _Scancode_Map.txt,
+Ce fichier est distribué dans le dossier redipositions/ sous le nom de _Scancode_Map.md, aussi en PDF (_Scancode_Map.pdf),
 tandis que sur GitHub il sert de readme.md dans windows/redispositions/. Il est basé sur
 une version précédente datant de 2018-08-10T1041+0200.
