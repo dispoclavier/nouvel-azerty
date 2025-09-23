@@ -6,8 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.6
-                      Date : 2025-09-02T1936+0200
+                   Version : 6.0.7
+    Version et nᵒ de build : 6.0.7.03
+                      Date : 2025-09-23T0428+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -28,15 +29,15 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
 * Les fichiers dont les noms commencent par "nouvel-azerty" contiennent la disposition de base de ce nouvel AZERTY. Ils sont rangés à la racine du dossier activer/, et ils sont identiques aux fichiers dont les noms commencent par "kbfrFRs", qui sont rangés dans un dossier du même nom à l’intérieur du dossier Variantes/.
 
-* Les fichiers dans le dossier kbbrFRs/, dont les noms commencent par "kbbrFRs", contiennent une disposition optimisée pour la langue bretonne, avec le cʼh sur le 1, et le ñ sur le 8.
+* Les fichiers dans le dossier kbbrFRs/, dont les noms commencent par "kbbrFRs", contiennent la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
 
-* Les fichiers dans le dossier kbfrPFs/, dont les noms commencent par "kbfrPFs", contiennent une disposition optimisée pour les langues de Polynésie française, avec une touche morte macron sur le 8, et le ʻeta sur Maj + 8.
+* Les fichiers dans le dossier kbfrPFs/, dont les noms commencent par "kbfrPFs", contiennent la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
 
-* Les fichiers dans le dossier kbfrAFs/, dont les noms commencent par "kbfrAFs", contiennent une disposition optimisée pour les langues d’Afrique, pour le bambara en particulier, avec le ɛ sur le 1, et le ɔ sur le 8.
+* Les fichiers dans le dossier kbfrAFs/, dont les noms commencent par "kbfrAFs", contiennent la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
 
-* Les fichiers dans le dossier kbfrBEs/, dont les noms commencent par "kbfrBEs", contiennent une disposition optimisée pour la Belgique, avec le § sur le 6, le tiret du 6 sur le 8, et le tiret du 8 sur Maj + 8. Cette disposition représente un compromis entre l’AZERTY belge et les fonctionnalités de ce nouvel AZERTY français.
+* Les fichiers dans le dossier kbfrBEs/, dont les noms commencent par "kbfrBEs", contiennent une disposition optimisée pour la Belgique, avec le "§" sur le ⟦6⟧, le tiret trait d’union sur le ⟦8⟧, et le tiret bas sur Maj + ⟦8⟧. Cette disposition représente un compromis entre l’AZERTY belge et les fonctionnalités de ce nouvel AZERTY.
 
-* Les fichiers dont le nom – ou la première partie du nom pour les sous-variantes – se termine en "r" contiennent des dispositions optimisées pour une saisie un peu plus ergonomique de l’alphabet de base et des lettres diacritées, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+* Les fichiers dont la première partie du nom se termine en "r" contiennent des variantes redisposées de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
 La variante belge ne se décline pas en variante belge redisposée, parce que l’intérêt d’une variante belge est une plus grande rétrocompatibilité avec l’AZERTY belge, et la redisposition va à l’encontre de cet objectif.
 
