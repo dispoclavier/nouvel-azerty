@@ -3,7 +3,7 @@
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
 # 2024-10-28T1417+0100
-# 2025-09-23T1319+0200
+# 2025-09-25T0143+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -72,10 +72,12 @@ print( "Opened file $output_path.\n" );
 print( "Processing math symbols from $input_path to $output_path.\n" );
 my $parse_on              = !1;
 my $date_legend           = 'Tableau mis à jour le ';
+
 # Courtesy https://stackoverflow.com/a/43881027
 my $nowDate               = DateTime->now(time_zone => 'local');
 my ($month, $day, $year)  = ($nowDate->month, $nowDate->day, $nowDate->year);
 my $date                  = "$day/$month/$year";
+
 my $table_id              = 'tableau-math';
 my $table_header_1        = 'Caractère';
 my $table_header_2        = 'Séquence de composition';
@@ -85,6 +87,7 @@ my $checkbox_label        = 'Imprimer les descripteurs, non les identifiants';
 my $checkbox_checked      = '☑&nbsp;';
 my $checkbox_not_checked  = '☐&nbsp;';
 my $table_header_4        = 'Descripteur';
+
 print OUTPUT "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
 print OUTPUT "<figure class=\"wp-block-table alignwide multikey math {{{anrghg-classes}}} {{{anrghg-value}}}\">\n";
 print OUTPUT "<table id=\"$table_id\"><caption><a href=\"#$table_id\">$date_legend$date</a></caption>";
@@ -94,7 +97,8 @@ print OUTPUT "<span class=\"en\">$table_header_3</span><span class=\"fr\">$table
 print OUTPUT "<label for=\"print\"><div class=\"status\" title=\"$table_header_title\">";
 print OUTPUT "<span class=\"fr\">$checkbox_checked</span><span class=\"en\">$checkbox_not_checked</span>$checkbox_label</div></label>\n";
 print OUTPUT "</th></tr></thead><tbody>\n";
-print OUTPUT "<!-- Symboles-mathématiques -->\n";
+print OUTPUT "<!-- Symboles mathématiques -->\n";
+
 my ( @anchors, $anchor, $cp, $descrip, $index, $line_nb, $regex, $str, $test, $tooltip );
 
 while ( my $line = <INPUT> ) {
@@ -109,15 +113,15 @@ while ( my $line = <INPUT> ) {
 		if ( $line =~ /^</ ) {
 			unless ( $line =~ /<nobreakspace>/ || $line =~ /<KP_/ ) {
 
-				# Remove spaces.
+				# Collapse spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 
 				# Add tooltips.
-				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + += ou AltGr\/Option + £\$ en mode ASCII">¦<\/span>/g;
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧ ou, en mode ASCII, AltGr\/Option + ⟦£\$¤⟧">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
-				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche 4&#x27;">’<\/span>/g;
-				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche 5( en mode français, ou touche %ù en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
+				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche ⟦4&#x27;{⟧">’<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦5([⟧ en mode français, ou touche ⟦%ù⟧ en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
@@ -161,15 +165,15 @@ while ( my $line = <INPUT> ) {
 				# Add anchors and localized tooltips.
 				$line    =~ m/^.+ : +"(.+?)"/u;
 				$str     = $1;
-				$cp      = ord( $str );
+				$cp      = ord( $str ); # Code point.
 				$cp      = sprintf( "%X", $cp ); # To hex.
 				$cp      =~ s/^(.)$/000$1/;
 				$cp      =~ s/^(..)$/00$1/;
 				$cp      =~ s/^(...)$/0$1/;
 				$descrip = '';
 				if ( $descriptors_file_path ) {
-					open( DESCRIP, '<', $descriptors_file_path ) or die $!;
-					while ( my $des_line = <DESCRIP> ) {
+					open( LIST, '<', $descriptors_file_path ) or die $!;
+					while ( my $des_line = <LIST> ) {
 						if ( $des_line =~ /U$cp;/ ) {
 							chomp( $des_line );
 							$des_line =~ s/^.+; (.+)$/$1/;
@@ -178,11 +182,11 @@ while ( my $line = <INPUT> ) {
 							last;
 						}
 					}
-					close( DESCRIP );
+					close( LIST );
 				}
 				unless ( $descrip ) {
-					open( FRENCH, '<', $fr_names_file_path ) or die $!;
-					while ( my $name_line = <FRENCH> ) {
+					open( LIST, '<', $fr_names_file_path ) or die $!;
+					while ( my $name_line = <LIST> ) {
 						if ( $name_line =~ /^$cp\t/ ) {
 							chomp( $name_line );
 							$name_line =~ s/^.+\t(.+)$/$1/;
@@ -191,13 +195,13 @@ while ( my $line = <INPUT> ) {
 							last;
 						}
 					}
-					close( FRENCH );
+					close( LIST );
 				}
 				unless ( $descrip ) {
 					++$missing_count;
 					$missing_log .= $cp . ' (:' . $line_nb . ")\n";
-					open( NAMES, '<', $names_file_path ) or die $!;
-					while ( my $name_line = <NAMES> ) {
+					open( LIST, '<', $names_file_path ) or die $!;
+					while ( my $name_line = <LIST> ) {
 						if ( $name_line =~ /^$cp\t/ ) {
 							chomp( $name_line );
 							$name_line =~ s/^.+\t(.+)$/$1/;
@@ -205,7 +209,7 @@ while ( my $line = <INPUT> ) {
 							last;
 						}
 					}
-					close( NAMES );
+					close( LIST );
 				}
 				$tooltip = $descrip . " U+$cp";
 				$anchor  = 'U+' . $cp;
@@ -221,11 +225,15 @@ while ( my $line = <INPUT> ) {
 				}
 				push( @anchors, $anchor );
 
-				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
+				# Anchor end tags are spaced out so as to not match the regex adding a tooltip to anchor elements.
+				# (For this to be effective, KSES needs to be turned off when this is loaded into the web page.)
+				
 				# Diacritics.
 				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				
 				# Spacing symbols.
 				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+				
 				print OUTPUT "$line";
 			}
 		}
