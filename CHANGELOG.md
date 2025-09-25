@@ -22,7 +22,9 @@ Réimplémentation de la touche de composition sous Windows sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-* Documentation : Corriger et mettre à jour le tableau des symboles mathématiques. compose-1.yml [4918828](https://github.com/dispoclavier/nouvel-azerty/commit/4918828f7c5561395eff70574214f178a59c1a7d), generate-math-table.pl [3e7a66b](https://github.com/dispoclavier/nouvel-azerty/commit/3e7a66b0bd107a875c2e9bbdb434fa00df888401)
+* Documentation :
+	* Corriger et mettre à jour le tableau des symboles mathématiques. compose-1.yml [4918828](https://github.com/dispoclavier/nouvel-azerty/commit/4918828f7c5561395eff70574214f178a59c1a7d), generate-math-table.pl [3e7a66b](https://github.com/dispoclavier/nouvel-azerty/commit/3e7a66b0bd107a875c2e9bbdb434fa00df888401), [b666539](https://github.com/dispoclavier/nouvel-azerty/commit/b666539125003ae72efe050c0247e1b5157fa8a1)
+	* Mettre à jour les bogues connus, section Bogue des touches mortes. kbcommon.c [9fd4717](https://github.com/dispoclavier/nouvel-azerty/commit/9fd47172e75fbbb140d6201bde2c47660a53a22e)
 
 ## 6.0.7 (2025-09-23)
 
