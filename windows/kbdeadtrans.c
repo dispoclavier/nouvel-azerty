@@ -6,6 +6,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update transpiled dead key data        6.0.8.00.00 Thu 2025-09-25T1145+0200
 * Update transpiled dead key data        6.0.7.03.00 Mon 2025-09-22T0640+0200
 * Update after correcting sortability    6.0.7.02.01 Sun 2025-09-21T0447+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
@@ -21,7 +22,7 @@
 * By courtesy of respondents to:
 * https://stackoverflow.com/questions/11334371/cant-we-include-c-file
 *
-* This file is included in kbcommon.c.
+* This file is included in kbcommon-2.c.
 *
 * Dead key array.
 *
@@ -65,6 +66,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 /*****************************************************************************\
 * High surrogates.
+*
 \*****************************************************************************/
 
 /*<!dead_abovedot>*/      DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
@@ -118,6 +120,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * letters output the start of the full sequence.
 *
 * A "ç" key is also emulated, for Canadian French.
+*
 \*****************************************************************************/
 
 /*<!dead_circumflex>*/ DEADTRANS(	L'K'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
@@ -148,6 +151,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * the system is unable to output more than a single code unit (as opposed to
 * Linux and macOS, where the single-press output fits the needs of writing in
 * letter emoji, by appending a word joiner U2060 WJ).
+*
 \*****************************************************************************/
 
 /*<!dead_flag>*/	DEADTRANS(	L'a'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
@@ -219,6 +223,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * keysyms and proposed extensions, while the purpose of the leading exclam is
 * to get these sorted at the top, and padding accounts for the longest IDs of
 * chained dead keys.
+*
 \*****************************************************************************/
 
 /*<!abovedot>                                                      */ DEADTRANS( L'\''	,0x1E57	,0x2AC3	,0x0000	), // "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
@@ -368,7 +373,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L'&'	,0x00E1	,0x0317	,0x0000	), // "̗" COMBINING ACUTE ACCENT BELOW
 /*<!acute>                                                         */ DEADTRANS( L'\''	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x2019	,0x00E1	,0x2019	,0x0000	), // "’" RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-/*<!acute>                                                         */ DEADTRANS( L'@'	,0x00E1	,0x25BE	,0x0000	), // "▾" BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!acute>                                                         */ DEADTRANS( L'@'	,0x00E1	,0x25BF	,0x0000	), // "▿" WHITE DOWN-POINTING SMALL TRIANGLE
 /*<!acute>                                                         */ DEADTRANS( L'\\'	,0x00E1	,0x27E7	,0x0000	), // "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!acute>                                                         */ DEADTRANS( L'"'	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 /*<!acute>                                                         */ DEADTRANS( 0x20AC	,0x00E1	,0x201D	,0x0000	), // "”" RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
@@ -809,7 +814,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000	), // "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000	), // "᫜" COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'*'	,0x00EB	,0x2051	,0x0000	), // "⁑" TWO ASTERISKS ALIGNED VERTICALLY
-/*<!diaeresis>                                                     */ DEADTRANS( L'@'	,0x00EB	,0x25BF	,0x0000	), // "▿" WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!diaeresis>                                                     */ DEADTRANS( L'@'	,0x00EB	,0x25BE	,0x0000	), // "▾" BLACK DOWN-POINTING SMALL TRIANGLE
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000	), // "¦" BROKEN BAR repurposed as multikey symbol
 /*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000	), // "⹀" DOUBLE HYPHEN
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000	), // "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
@@ -1854,6 +1859,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * Legacy dead key content.
 *
 * This is partly overridden by the transpilation above.
+*
 \*****************************************************************************/
 
 /*ACUTE&DOT_ABOVE    */	DEADTRANS(	L'S'	,0x1e65	,0x1e64	,0x0000	), // LATIN CAPITAL LETTER S WITH ACUTE AND DOT ABOVE
@@ -8347,5 +8353,3 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
     0, 0
 };
-
-// EOF
