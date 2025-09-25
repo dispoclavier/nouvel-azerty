@@ -8,7 +8,7 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
                    Version : 6.0.8
     Version et nᵒ de build : 6.0.8.00
-                      Date : 2025-09-23T0428+0200
+                      Date : 2025-09-25T2129+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
