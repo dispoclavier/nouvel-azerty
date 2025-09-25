@@ -7,7 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move KbdTables and return here         6.0.8.00.02 Thu 2025-09-25T1133+0200
+* Move KbdTables and return here         6.0.8.00.03 Thu 2025-09-25T1133+0200
 * Add partial file kbcommon-3.c          6.0.8.00.01 Thu 2025-09-25T0613+0200
 *
 * This file needs to be included last because it contains the return statement.
@@ -62,6 +62,11 @@ static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
     sizeof(aLigature[0]),
     (PLIGATURE1)aLigature
 };
+
+/*****************************************************************************\
+* Return statement.
+*
+\*****************************************************************************/
 
 PKBDTABLES KbdLayerDescriptor(VOID)
 {

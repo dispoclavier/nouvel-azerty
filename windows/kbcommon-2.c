@@ -7,8 +7,8 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move KbdTables to kbcommon-3.c         6.0.8.00.02 Thu 2025-09-25T1127+0200
-* Move here the code from numpad on      6.0.8.00.01 Thu 2025-09-25T1121+0200
+* Move KbdTables to kbcommon-3.c         6.0.8.00.03 Thu 2025-09-25T1127+0200
+* Move here the code from numpad on      6.0.8.00.02 Thu 2025-09-25T1121+0200
 * Add partial file kbcommon-2.c          6.0.8.00.01 Thu 2025-09-25T0613+0200
 *
 * This file needs to be included after all the allocation tables, due to the
