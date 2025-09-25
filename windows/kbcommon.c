@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update ### Dead key bug                6.0.8.00.00 Wed 2025-09-25T0230+0200
 * Move metadata to UX levels 3 and 4     6.0.7.03.00 Sun 2025-09-21T1349+0200
 * Correct and update annotations         6.0.7.02.01 Sun 2025-09-21T0143+0200
 * Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
@@ -624,6 +625,16 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * conveniently located in the C source at this point, because it contains the
 * variant identifier string output.
 * https://github.com/dispoclavier/nouvel-azerty/blob/c3f0eaad69f3e9682c8d78267e589bdca4b822b4/windows/kbcommon.c#L839
+*
+* But build 6.0.7.03, tested since 2025-09-23T0120+0200, and released as 6.0.7
+* on 2025-09-23T0453+0200, exposed this hideous bug on 2025-09-24T2041+0200.
+* While pressing the comma key:
+*
+*     ḙ,ḙ,ḙ,ḙ,ȟ,ȟ,ḙ,ȟ,ḙ,ȟ,ḙ,ḙ,ȟ,ȟ,ȟ,ȟ,ḙ,ȟ,ȟ,ḙ,ḙ,ḙ,ḙ,ḙ,ȟ,ȟ,ḙ,ȟ,ȟ,ȟ,ȟ,ḙ,ḙ,ȟ,ḙ,ḙ,ḙ,ḙ,ȟ,ȟ,ḙ,ḙ,ȟ,ȟ,ḙ,2025-09-24T2041+0200
+*
+* (Again.) Switching to another variant stopped the bug, but after switching
+* back, the bug resumed immediately, until Windows was rebooted.
+*
 \*****************************************************************************/
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
