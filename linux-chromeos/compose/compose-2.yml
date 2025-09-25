@@ -7223,9 +7223,9 @@
 #   when the actual intent is to mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
-#   "▾" U25BE BLACK DOWN-POINTING SMALL TRIANGLE representing the no-break thin
-#   space U202F, by at sign, is by courtesy of the Draw Spaces plugin of GEdit.
-#   See # # Symbols for no-break thin space NBTSP
+#   "▿" U25BF WHITE DOWN-POINTING SMALL TRIANGLE representing the no-break
+#   space U00A0, by at, is by courtesy of the Draw Spaces plugin of GEdit.
+#   See # # Symbols for NO-BREAK SPACE
 #
 #
 #   Acute accent below
@@ -7254,8 +7254,8 @@
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-<dead_acute>                                                                                  <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-#   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<dead_acute>                                                                                  <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
@@ -17214,9 +17214,9 @@
 #   See # # DIAERESIS&MACRON
 #   See # # MACRON&DIAERESIS
 #
-#   "▿" U25BF WHITE DOWN-POINTING SMALL TRIANGLE representing the no-break
-#   space U00A0, by at, is by courtesy of the Draw Spaces plugin of GEdit.
-#   See # # Symbols for NO-BREAK SPACE
+#   "▾" U25BE BLACK DOWN-POINTING SMALL TRIANGLE representing the no-break thin
+#   space U202F, by at sign, is by courtesy of the Draw Spaces plugin of GEdit.
+#   See # # Symbols for no-break thin space NBTSP
 #
 #   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
 #   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
@@ -17246,8 +17246,8 @@
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                  <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-<dead_diaeresis>                                                                              <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-#   Multikey conflicts with "¨" U00A8, "̈" U0308, "̈́" U0344, "΅" U0385, "ΐ" U0390, […]          <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<dead_diaeresis>                                                                              <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#   Multikey conflicts with "¨" U00A8, "̈" U0308, "̈́" U0344, "΅" U0385, "ΐ" U0390, […]          <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <dead_diaeresis>                                                                           <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
