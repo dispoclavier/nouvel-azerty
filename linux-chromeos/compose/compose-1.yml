@@ -6390,15 +6390,13 @@
 <Multi_key><space><space><asterisk>                                                                : "⋆" U22C6 # STAR OPERATOR
 <Multi_key><nobreakspace><space><asterisk>                                                         : "⋆" U22C6 # STAR OPERATOR
 <Multi_key><nobreakspace><nobreakspace><asterisk>                                                  : "⋆" U22C6 # STAR OPERATOR
-#@
-<Multi_key><colon><minus><x>                                                               <space> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><colon><minus><x>                                                        <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><x><colon><minus>                                                               <space> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><x><colon><minus>                                                        <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><x><period><minus><period>                                                      <space> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><x><period><minus><period>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><period><minus><period><x>                                                      <space> : "⋇" U22C7 # DIVISION TIMES
-<Multi_key><period><minus><period><x>                                               <nobreakspace> : "⋇" U22C7 # DIVISION TIMES
+<Multi_key><minus><x><colon>                                                                       : "⋇" U22C7 # DIVISION TIMES
+<Multi_key><colon><minus><x>                                                                       : "⋇" U22C7 # DIVISION TIMES
+#Multi_key><x><colon><minus>                                                                       : "⋇" U22C7 # DIVISION TIMES
+<Multi_key><x><colon>                                                                              : "⋇" U22C7 # DIVISION TIMES
+#Multi_key><x><period><minus><period>                                                              : "⋇" U22C7 # DIVISION TIMES
+<Multi_key><x><period>                                                                             : "⋇" U22C7 # DIVISION TIMES
+<Multi_key><period><minus><period><x>                                                              : "⋇" U22C7 # DIVISION TIMES
 #
 #   For "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN, slash and backslash can be hit in
 #   any order. This enables pressing them simultaneously and prevents screwing
@@ -6407,6 +6405,7 @@
 #   the upper left corner.
 #   See #   Parsing order
 #
+#@
 <Multi_key><bar><backslash><slash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
@@ -9201,7 +9200,7 @@
 <Multi_key><rightsinglequotemark><minus><0>                                                        : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><KP_0>                                                     : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 #Multi_key><minus><x><minus><greater>                                 (literal removed for syntax color) U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
-<Multi_key><minus><x>                                                                              : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
+<Multi_key><minus><x><minus>                                                                       : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
 #Multi_key><minus><slash><slash><minus><greater>                      (literal removed for syntax color) U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 <Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 #Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
