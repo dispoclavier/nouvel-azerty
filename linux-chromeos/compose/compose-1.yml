@@ -6401,8 +6401,8 @@
 <Multi_key><multiply><division>                                                                    : "⋇" U22C7 # DIVISION TIMES
 #
 #   For "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN, slash and backslash can be hit in
-#   any order. This enables pressing them simultaneously and prevents screwing
-#   up these symbols, as opposed to making slash-backslash a shortcut for JOIN,
+#   any order. This allows to press them simultaneously, and prevents screwing
+#   these symbols up, as opposed to making slash-backslash a shortcut for JOIN,
 #   reserving backslash-slash for BOWTIE, under the rule that parsing starts in
 #   the upper left corner.
 #   See #   Parsing order
@@ -6416,10 +6416,8 @@
 <Multi_key><bar><slash><backslash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><backslash><slash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
-<Multi_key><backslash><backslash><slash>                                                   <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
-<Multi_key><backslash><backslash><slash>                                            <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
-<Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
-<Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><backslash><slash><backslash>                                                           : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><slash><backslash><slash>                                                               : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><v><parenright><parenleft>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenright><parenleft>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
