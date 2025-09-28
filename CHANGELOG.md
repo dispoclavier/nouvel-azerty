@@ -14,16 +14,16 @@ Prise en charge par touches mortes sous Linux et macOS, des émojis additionnels
 
 ## 6.1.0 (projet)
 
-Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
+Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles sous Windows sur le modèle finalisé pour Linux.
 
-Réimplémentation de la touche de composition sous Windows sur le modèle finalisé sous Linux.
+Réimplémentation de la touche de composition sous Windows sur le modèle finalisé pour Linux.
 
 ## 6.0.9 (projet)
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
 * Composition :
-	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b)
+	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b), [105f4d7](https://github.com/dispoclavier/nouvel-azerty/commit/105f4d7b68211409cdf6b24d9918f15b2f8216d6)
 	* Adapter la séquence de "🣖" U+1F8D6. ibidem
 
 ## 6.0.8 (2025-09-25)
