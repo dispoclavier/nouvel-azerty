@@ -6,17 +6,17 @@ Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe
 
 ## 6.2.0 (projet)
 
-Mise à jour sous macOS des dispositions émulées selon Linux.
+Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
 
 Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
-Prise en charge par touches mortes sous Linux et macOS, des émojis additionnels selon Windows.
+Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
 
 ## 6.1.0 (projet)
 
-Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles sous Windows sur le modèle finalisé pour Linux.
+Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles pour Windows sur le modèle finalisé pour Linux.
 
-Réimplémentation de la touche de composition sous Windows sur le modèle finalisé pour Linux.
+Réimplémentation pour Windows de la touche de composition sur le modèle finalisé pour Linux.
 
 ## 6.0.9 (projet)
 
@@ -25,6 +25,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 * Composition :
 	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b), [105f4d7](https://github.com/dispoclavier/nouvel-azerty/commit/105f4d7b68211409cdf6b24d9918f15b2f8216d6)
 	* Adapter la séquence de "🣖" U+1F8D6. ibidem
+	* Corriger les séquences de "⋋" U+22CB, "⋌" U+22CC. compose-1.yml [a6e4f3e](https://github.com/dispoclavier/nouvel-azerty/commit/a6e4f3e56621cd22ae04ac6fd2b18ca11cdd0ca9)
 
 ## 6.0.8 (2025-09-25)
 
@@ -43,7 +44,7 @@ Débogage des pilotes de disposition pour Windows, phase 1.
 
 Mise à niveau des symboles mathématiques vers [Unicode 17.0](https://www.unicode.org/versions/Unicode17.0.0/).
 
-Complétion de touches mortes sous Linux et Windows.
+Complétion de touches mortes pour Linux et Windows.
 
 Rectification et simplification de séquences de composition.
 
@@ -279,13 +280,13 @@ Prise en charge des drapeaux et des émojis lettres sur touches vives sous Windo
 
 Prise en charge par touche morte sous Linux, des 3 drapeaux régionaux sur touche vive sous Windows.
 
-Mise à niveau du pavé numérique sous Windows selon le pavé numérique complet sous Linux.
+Mise à niveau du pavé numérique sous Windows selon le pavé numérique complet pour Linux.
 
 Rectification de la disposition du pavé numérique en vue d’une utilité accrue.
 
 Prise en charge de 5 alphabets mathématiques préformatés sur touches vives sous Windows.
 
-Prise en charge sous Windows des redispositions basées sur les sous-variantes sous Linux.
+Prise en charge sous Windows des redispositions basées sur les sous-variantes configurables sous Linux.
 
 Aide à la production autonome de pilotes personnalisés et d’installateurs sous Windows.
 
@@ -302,7 +303,7 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 			* En AltGr, ne pas permuter "!" U+0021 et ";" U+003B, pour la cohérence avec le mode français et la stabilité du point d’exclamation en AltGr.
 		* En Maj + AltGr, ne pas permuter les touches mortes point souscrit et virgule souscrite, pour la cohérence avec "!" U+0021 et ";" U+003B (ou "§" U+00A7) en AltGr, et parce que le point souscrit est plus fréquent que la virgule souscrite.
 	* Pavé numérique :
-		* Mettre à niveau sous Windows selon le pavé numérique pour Linux. kbcommon.H [eda6c76](https://github.com/dispoclavier/nouvel-azerty/commit/eda6c7662762cf75a58c5c6cd1db3762485b0305), kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
+		* Mettre à niveau pour Windows selon le pavé numérique pour Linux. kbcommon.H [eda6c76](https://github.com/dispoclavier/nouvel-azerty/commit/eda6c7662762cf75a58c5c6cd1db3762485b0305), kbfrFRs.C [1363945](https://github.com/dispoclavier/nouvel-azerty/commit/136394566f4e27d3f29b3673c125ea38856af442), [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5bc3ad8](https://github.com/dispoclavier/nouvel-azerty/commit/5bc3ad89888cd0dd9c3be10230597447a7b902ec)
 		* Remplir les positions vides. dispocla.cpp [4517a6d](https://github.com/dispoclavier/nouvel-azerty/commit/4517a6db7a9f8be2511b0b0f5d9402bebeda7296), kbfrFRs.C [f14901b](https://github.com/dispoclavier/nouvel-azerty/commit/f14901b7302bcd8cc61c55ca832c53633fcbcb03), kbfredis.C [5ea4c28](https://github.com/dispoclavier/nouvel-azerty/commit/5ea4c28f2ef48eb2315c231564cad4403b9d50aa)
 		* Redonder l’espace fine insécable " " U+202F en mode français sur Maj + "+" à la place du deux-points, qui va sur Maj + 4. dispocla.cpp [8a381c7](https://github.com/dispoclavier/nouvel-azerty/commit/8a381c707a4043b4c97355ebd726cda773edf40a), [f7a1e59i](https://github.com/dispoclavier/nouvel-azerty/commit/f7a1e599507e7a7d948562caf5d366b8209b11a1), kbfrFRs.C [0008e74](https://github.com/dispoclavier/nouvel-azerty/commit/0008e74b1fa005633ec603a3e259c527ccbc6654), [dde79a6](https://github.com/dispoclavier/nouvel-azerty/commit/dde79a66ffffc60adfcd136258910bbb871be8e9), [d7cf63c](https://github.com/dispoclavier/nouvel-azerty/commit/d7cf63cad55f8449c60d146d62af92b43fcde6bd), kbfrFRsr.C [39a3cb3](https://github.com/dispoclavier/nouvel-azerty/commit/39a3cb3dd75c2a5c32930442059205d502fede0a), [d04ae53](https://github.com/dispoclavier/nouvel-azerty/commit/d04ae532045964667b78a214702bb9424cdd53eb), [16e4885](https://github.com/dispoclavier/nouvel-azerty/commit/16e4885ae88c568da860cbb1ecfb5d01085ee0e5)
 		* Redonder ":" U+003A sur Maj + 4 à la place de "U+", qui est sur AltGr + AltFr + U, en mode français, et en mode ASCII, à la place de "#" U+0023, qui va sur Maj + "+". ibidem
@@ -432,11 +433,11 @@ Aide à la production autonome de pilotes personnalisés et d’installateurs so
 
 ## 5.2.0 (2025-06-15)
 
-Réimplémentation des touches mortes simples diacritiques ou transformationnelles sous Windows sur le modèle finalisé sous Linux.
+Réimplémentation pour Windows des touches mortes simples diacritiques ou transformationnelles sur le modèle finalisé pour Linux.
 
 Meilleure prise en charge des demi-codets hauts.
 
-Simplification et complétion des touches mortes sous Linux.
+Simplification et complétion des touches mortes pour Linux.
 
 Prise en charge d’un émoji supplémentaire sur touche vive.
 
