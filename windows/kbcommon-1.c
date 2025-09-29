@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Further document the dead key bug      6.0.9.00.00 Mon 2025-09-29T1419+0200
 * Move part of the code to kbcommon-2.c  6.0.8.00.02 Thu 2025-09-25T1113+0200
 * Rename from kbcommon.c to kbcommon-1.c 6.0.8.00.01 Thu 2025-09-25T0613+0200
 * Update ### Dead key bug                6.0.8.00.00 Thu 2025-09-25T0230+0200
@@ -575,6 +576,12 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * ### Dead key bug
 *
+* The fix is to activate a spare clone of the keyboard layout, or to reboot the
+* computer if that is not too troublesome, or the spare drivers are used up.
+*
+*
+* Description
+*
 * Dead keys may get buggy in that they are turned off, or the circumflex dead
 * key randomly adds its diacritic without being pressed, like so:
 *
@@ -584,6 +591,9 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *     buĝ̂  2025-08-27T1133+0200 cîrĉumflêê̂ deâ᪰̂̂̂ ̂ key rân᪰᪰ômly âctîvâtêd̂̂ŵîtĥoût presŝinǧît
 *
 * (bug […] circumflex dead key randomly activated without pressing it)
+*
+*
+* History
 *
 * This bug occurred in builds 6.0.3.03 and 6.0.3.04, where windows.h was
 * included in a header instead of being included in the main C source, and so
@@ -634,8 +644,17 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * Subsequently, starting with build 6.0.8.00, the source code is additionally
 * divided into even more snippets, included in a way exactly reproducing the
 * transpilation order of KbdUTool, even if the definite order is determined in
-* KbdTables.
+* KbdTables. This is phase 1 of keyboard driver debugging.
 * See kbcommon-3.c
+*
+* Build 6.0.8.00 (2025-09-25T1858+0200 was readily released as version 6.0.8
+* (2025-09-25T2143+0200) but experienced a dead key blackout as its first bug
+* as soon as on 2025-09-29T1004+0200 (and the Windows key too broke down a few
+* minutes later (2025-09-29T1032+0200)). A reboot fixed it all.
+*
+* As a consequence, phase 2 was ramped up, with a clone of the main layout and
+* its remapped variant: kbfrFRs is duplicated as kbfrFRs2, and kbfrFRsr, as
+* kbfrFRr2 (so as not to exceed the maximum length of 8), in version 6.0.9.
 *
 \*****************************************************************************/
 

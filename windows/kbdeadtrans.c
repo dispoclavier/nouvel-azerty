@@ -24,7 +24,8 @@
 *
 * This file is included in kbcommon-2.c.
 *
-* Dead key array.
+*
+* DEADTRANS macro calls.
 *
 * On Windows, the dead key output is restricted to the low surrogate. An input
 * method for the high surrogates is provided separately at the root of related
@@ -51,14 +52,14 @@
 * The array of DEADTRANS macro calls makes for a flat layout of dead key data,
 * while in KLC format, the data is grouped under DEADKEY headers. Transpiling
 * KbdUTool strips comments. Anyway, KLC only supports EOL comments, while extra
-* leading block comments are most human readable, and with long lists are more
-* readable than the grouped layout. Additionally, the transpiler in KbdUTool is
-* broken and unable to support the Kana Lock levels, so using the KLC format is
-* pointless and would be wasteful.
+* leading block comments are more convenient for readability.
 *
-* As a result, any DEADTRANS macro call can be overridden by a similar call,
-* with the same input and the same dead character, but another output, provided
-* that the valid call precedes anyhow in the source code.
+* Also, the transpiler in KbdUTool is broken in that it is unable to transpile
+* dead characters above 0x0fff (and the Kana Lock levels).
+*
+* As a result of developing dead key data in C, any DEADTRANS macro call can be
+* overridden by a similar call, with the same input and the same dead character
+* but another output, provided that the valid call precedes in the source code.
 *
 \*****************************************************************************/
 
@@ -69,39 +70,39 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 *
 \*****************************************************************************/
 
-/*<!dead_abovedot>*/      DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_abovehook>*/     DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_abovering>*/     DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_acute>*/         DEADTRANS( 0x200B ,0x00E1 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_bar>*/           DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_belowcomma>*/    DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_belowdot>*/      DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_breve>*/         DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_caron>*/         DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_cedilla>*/       DEADTRANS( 0x200B ,0x00E7 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_circumflex>*/    DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_currency>*/      DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_diaeresis>*/     DEADTRANS( 0x200B ,0x00EB ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_doubleacute>*/   DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_flag>*/          DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
-/*<!dead_grave>*/         DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_greek>*/         DEADTRANS( 0x200B ,0x03B5 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
-/*<!dead_group>*/         DEADTRANS( 0x200B ,0x2460 ,0xD835 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols.
-/*<!dead_hook>*/          DEADTRANS( 0x200B ,0x0192 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_horn>*/          DEADTRANS( 0x200B ,0x01A1 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_abovedot>     */ DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_abovehook>    */ DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_abovering>    */ DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_acute>        */ DEADTRANS( 0x200B ,0x00E1 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_bar>          */ DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_belowcomma>   */ DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_belowdot>     */ DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_breve>        */ DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_caron>        */ DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_cedilla>      */ DEADTRANS( 0x200B ,0x00E7 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_circumflex>   */ DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_currency>     */ DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_diaeresis>    */ DEADTRANS( 0x200B ,0x00EB ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_doubleacute>  */ DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
+/*<!dead_flag>         */ DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
+/*<!dead_grave>        */ DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_greek>        */ DEADTRANS( 0x200B ,0x03B5 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
+/*<!dead_group>        */ DEADTRANS( 0x200B ,0x2460 ,0xD835 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols.
+/*<!dead_hook>         */ DEADTRANS( 0x200B ,0x0192 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_horn>         */ DEADTRANS( 0x200B ,0x01A1 ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_invertedbreve>*/ DEADTRANS( 0x200B ,0x0213 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_macron>*/        DEADTRANS( 0x200B ,0x0101 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_ogonek>*/        DEADTRANS( 0x200B ,0x01EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_macron>       */ DEADTRANS( 0x200B ,0x0101 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_ogonek>       */ DEADTRANS( 0x200B ,0x01EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
 /*<!dead_retroflexhook>*/ DEADTRANS( 0x200B ,0x0273 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_reversed>*/      DEADTRANS( 0x200B ,0x1D19 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_stroke>*/        DEADTRANS( 0x200B ,0x00F8 ,0xD83E ,0x0000 ), // High surrogate for wide-headed arrows.
-/*<!dead_subscript>*/     DEADTRANS( 0x200B ,L'_'   ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_superscript>*/   DEADTRANS( 0x200B ,L'^'   ,0xD801 ,0x0000 ), // High surrogate for modifier letters.
-/*<!dead_tilde>*/         DEADTRANS( 0x200B ,0x00F5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_turned>*/        DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
+/*<!dead_reversed>     */ DEADTRANS( 0x200B ,0x1D19 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_stroke>       */ DEADTRANS( 0x200B ,0x00F8 ,0xD83E ,0x0000 ), // High surrogate for wide-headed arrows.
+/*<!dead_subscript>    */ DEADTRANS( 0x200B ,L'_'   ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_superscript>  */ DEADTRANS( 0x200B ,L'^'   ,0xD801 ,0x0000 ), // High surrogate for modifier letters.
+/*<!dead_tilde>        */ DEADTRANS( 0x200B ,0x00F5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
+/*<!dead_turned>       */ DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
 
 /*****************************************************************************\
-* Diacriticized key emulations.
+* Diacriticized letter key emulations.
 *
 * On Windows, the dead key output is restricted to a single code unit, due to a
 * bad design decision, based on a misconception of Unicode as a 16-bit charset,
@@ -114,29 +115,29 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * precompiled Linux layouts) should be mitigated as far as possible.
 *
 * On Linux and macOS, the "ê" key emulation supports uppercase, "êq" expands to
-* "êqu", and "x" yields the "êch" trigraph. On Windows, lowercase works as
-* intended due to default handling of the dead character, while uppercase would
-* be mixed with lowercase "ê". To mitigate this UX disruption, unsupported
-* letters output the start of the full sequence.
+* "êqu", and "x" yields the "êch" trigraph. On Windows, lowercase digraphs work
+* as intended due to default handling of the dead character. As uppercase would
+* be mixed with lowercase "ê", this UX disruption is mitigated, in that the set
+* of unsupported base letters output "Ê"/"ê" as the start of the full sequence.
 *
 * A "ç" key is also emulated, for Canadian French.
 *
 \*****************************************************************************/
 
-/*<!dead_circumflex>*/ DEADTRANS(	L'K'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'L'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'M'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'N'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'P'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'Q'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'R'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'T'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'V'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'X'	,0x00EA	,0x00CA	,0x0000	), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
-/*<!dead_circumflex>*/ DEADTRANS(	L'x'	,0x00EA	,0x00EA	,0x0000	), // "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX
-/*<!dead_cedilla>*/    DEADTRANS(	L'A'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
-/*<!dead_cedilla>*/    DEADTRANS(	L'O'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
-/*<!dead_cedilla>*/    DEADTRANS(	L'U'	,0x00E7	,0x00C7	,0x0000	), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_circumflex>*/ DEADTRANS( L'K' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'L' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'M' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'N' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'P' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'Q' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'R' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'T' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'V' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'X' ,0x00EA ,0x00CA ,0x0000 ), // "Ê" LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+/*<!dead_circumflex>*/ DEADTRANS( L'x' ,0x00EA ,0x00EA ,0x0000 ), // "ê" LATIN SMALL LETTER E WITH CIRCUMFLEX
+/*<!dead_cedilla>   */ DEADTRANS( L'A' ,0x00E7 ,0x00C7 ,0x0000 ), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_cedilla>   */ DEADTRANS( L'O' ,0x00E7 ,0x00C7 ,0x0000 ), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
+/*<!dead_cedilla>   */ DEADTRANS( L'U' ,0x00E7 ,0x00C7 ,0x0000 ), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 
 /*****************************************************************************\
 * Flag letters.
@@ -154,58 +155,58 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 *
 \*****************************************************************************/
 
-/*<!dead_flag>*/	DEADTRANS(	L'a'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
-/*<!dead_flag>*/	DEADTRANS(	L'A'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
-/*<!dead_flag>*/	DEADTRANS(	L'b'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
-/*<!dead_flag>*/	DEADTRANS(	L'B'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
-/*<!dead_flag>*/	DEADTRANS(	L'c'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
-/*<!dead_flag>*/	DEADTRANS(	L'C'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
-/*<!dead_flag>*/	DEADTRANS(	L'd'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
-/*<!dead_flag>*/	DEADTRANS(	L'D'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
-/*<!dead_flag>*/	DEADTRANS(	L'e'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
-/*<!dead_flag>*/	DEADTRANS(	L'E'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
-/*<!dead_flag>*/	DEADTRANS(	L'f'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
-/*<!dead_flag>*/	DEADTRANS(	L'F'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
-/*<!dead_flag>*/	DEADTRANS(	L'g'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
-/*<!dead_flag>*/	DEADTRANS(	L'G'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
-/*<!dead_flag>*/	DEADTRANS(	L'h'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
-/*<!dead_flag>*/	DEADTRANS(	L'H'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
-/*<!dead_flag>*/	DEADTRANS(	L'i'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
-/*<!dead_flag>*/	DEADTRANS(	L'I'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
-/*<!dead_flag>*/	DEADTRANS(	L'j'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
-/*<!dead_flag>*/	DEADTRANS(	L'J'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
-/*<!dead_flag>*/	DEADTRANS(	L'k'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
-/*<!dead_flag>*/	DEADTRANS(	L'K'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
-/*<!dead_flag>*/	DEADTRANS(	L'l'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
-/*<!dead_flag>*/	DEADTRANS(	L'L'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
-/*<!dead_flag>*/	DEADTRANS(	L'm'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
-/*<!dead_flag>*/	DEADTRANS(	L'M'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
-/*<!dead_flag>*/	DEADTRANS(	L'n'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
-/*<!dead_flag>*/	DEADTRANS(	L'N'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
-/*<!dead_flag>*/	DEADTRANS(	L'o'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
-/*<!dead_flag>*/	DEADTRANS(	L'O'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
-/*<!dead_flag>*/	DEADTRANS(	L'p'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
-/*<!dead_flag>*/	DEADTRANS(	L'P'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
-/*<!dead_flag>*/	DEADTRANS(	L'q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
-/*<!dead_flag>*/	DEADTRANS(	L'Q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
-/*<!dead_flag>*/	DEADTRANS(	L'r'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
-/*<!dead_flag>*/	DEADTRANS(	L'R'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
-/*<!dead_flag>*/	DEADTRANS(	L's'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
-/*<!dead_flag>*/	DEADTRANS(	L'S'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
-/*<!dead_flag>*/	DEADTRANS(	L't'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
-/*<!dead_flag>*/	DEADTRANS(	L'T'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
-/*<!dead_flag>*/	DEADTRANS(	L'u'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
-/*<!dead_flag>*/	DEADTRANS(	L'U'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
-/*<!dead_flag>*/	DEADTRANS(	L'v'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
-/*<!dead_flag>*/	DEADTRANS(	L'V'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
-/*<!dead_flag>*/	DEADTRANS(	L'w'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
-/*<!dead_flag>*/	DEADTRANS(	L'W'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
-/*<!dead_flag>*/	DEADTRANS(	L'x'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
-/*<!dead_flag>*/	DEADTRANS(	L'X'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
-/*<!dead_flag>*/	DEADTRANS(	L'y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
-/*<!dead_flag>*/	DEADTRANS(	L'Y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
-/*<!dead_flag>*/	DEADTRANS(	L'z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
-/*<!dead_flag>*/	DEADTRANS(	L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
+/*<!dead_flag>*/ DEADTRANS( L'a'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
+/*<!dead_flag>*/ DEADTRANS( L'A'	,0x2690	,0xDDE6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E6 "🇦" REGIONAL INDICATOR SYMBOL LETTER A
+/*<!dead_flag>*/ DEADTRANS( L'b'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
+/*<!dead_flag>*/ DEADTRANS( L'B'	,0x2690	,0xDDE7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E7 "🇧" REGIONAL INDICATOR SYMBOL LETTER B
+/*<!dead_flag>*/ DEADTRANS( L'c'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
+/*<!dead_flag>*/ DEADTRANS( L'C'	,0x2690	,0xDDE8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E8 "🇨" REGIONAL INDICATOR SYMBOL LETTER C
+/*<!dead_flag>*/ DEADTRANS( L'd'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
+/*<!dead_flag>*/ DEADTRANS( L'D'	,0x2690	,0xDDE9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1E9 "🇩" REGIONAL INDICATOR SYMBOL LETTER D
+/*<!dead_flag>*/ DEADTRANS( L'e'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
+/*<!dead_flag>*/ DEADTRANS( L'E'	,0x2690	,0xDDEA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EA "🇪" REGIONAL INDICATOR SYMBOL LETTER E
+/*<!dead_flag>*/ DEADTRANS( L'f'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
+/*<!dead_flag>*/ DEADTRANS( L'F'	,0x2690	,0xDDEB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EB "🇫" REGIONAL INDICATOR SYMBOL LETTER F
+/*<!dead_flag>*/ DEADTRANS( L'g'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
+/*<!dead_flag>*/ DEADTRANS( L'G'	,0x2690	,0xDDEC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EC "🇬" REGIONAL INDICATOR SYMBOL LETTER G
+/*<!dead_flag>*/ DEADTRANS( L'h'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
+/*<!dead_flag>*/ DEADTRANS( L'H'	,0x2690	,0xDDED	,0x0000	), // High surrogate: D83C; Unicode: U+1F1ED "🇭" REGIONAL INDICATOR SYMBOL LETTER H
+/*<!dead_flag>*/ DEADTRANS( L'i'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
+/*<!dead_flag>*/ DEADTRANS( L'I'	,0x2690	,0xDDEE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EE "🇮" REGIONAL INDICATOR SYMBOL LETTER I
+/*<!dead_flag>*/ DEADTRANS( L'j'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
+/*<!dead_flag>*/ DEADTRANS( L'J'	,0x2690	,0xDDEF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1EF "🇯" REGIONAL INDICATOR SYMBOL LETTER J
+/*<!dead_flag>*/ DEADTRANS( L'k'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
+/*<!dead_flag>*/ DEADTRANS( L'K'	,0x2690	,0xDDF0	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F0 "🇰" REGIONAL INDICATOR SYMBOL LETTER K
+/*<!dead_flag>*/ DEADTRANS( L'l'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
+/*<!dead_flag>*/ DEADTRANS( L'L'	,0x2690	,0xDDF1	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F1 "🇱" REGIONAL INDICATOR SYMBOL LETTER L
+/*<!dead_flag>*/ DEADTRANS( L'm'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
+/*<!dead_flag>*/ DEADTRANS( L'M'	,0x2690	,0xDDF2	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F2 "🇲" REGIONAL INDICATOR SYMBOL LETTER M
+/*<!dead_flag>*/ DEADTRANS( L'n'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
+/*<!dead_flag>*/ DEADTRANS( L'N'	,0x2690	,0xDDF3	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F3 "🇳" REGIONAL INDICATOR SYMBOL LETTER N
+/*<!dead_flag>*/ DEADTRANS( L'o'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
+/*<!dead_flag>*/ DEADTRANS( L'O'	,0x2690	,0xDDF4	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F4 "🇴" REGIONAL INDICATOR SYMBOL LETTER O
+/*<!dead_flag>*/ DEADTRANS( L'p'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
+/*<!dead_flag>*/ DEADTRANS( L'P'	,0x2690	,0xDDF5	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F5 "🇵" REGIONAL INDICATOR SYMBOL LETTER P
+/*<!dead_flag>*/ DEADTRANS( L'q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
+/*<!dead_flag>*/ DEADTRANS( L'Q'	,0x2690	,0xDDF6	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F6 "🇶" REGIONAL INDICATOR SYMBOL LETTER Q
+/*<!dead_flag>*/ DEADTRANS( L'r'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
+/*<!dead_flag>*/ DEADTRANS( L'R'	,0x2690	,0xDDF7	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F7 "🇷" REGIONAL INDICATOR SYMBOL LETTER R
+/*<!dead_flag>*/ DEADTRANS( L's'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
+/*<!dead_flag>*/ DEADTRANS( L'S'	,0x2690	,0xDDF8	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F8 "🇸" REGIONAL INDICATOR SYMBOL LETTER S
+/*<!dead_flag>*/ DEADTRANS( L't'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
+/*<!dead_flag>*/ DEADTRANS( L'T'	,0x2690	,0xDDF9	,0x0000	), // High surrogate: D83C; Unicode: U+1F1F9 "🇹" REGIONAL INDICATOR SYMBOL LETTER T
+/*<!dead_flag>*/ DEADTRANS( L'u'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
+/*<!dead_flag>*/ DEADTRANS( L'U'	,0x2690	,0xDDFA	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FA "🇺" REGIONAL INDICATOR SYMBOL LETTER U
+/*<!dead_flag>*/ DEADTRANS( L'v'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
+/*<!dead_flag>*/ DEADTRANS( L'V'	,0x2690	,0xDDFB	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FB "🇻" REGIONAL INDICATOR SYMBOL LETTER V
+/*<!dead_flag>*/ DEADTRANS( L'w'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
+/*<!dead_flag>*/ DEADTRANS( L'W'	,0x2690	,0xDDFC	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FC "🇼" REGIONAL INDICATOR SYMBOL LETTER W
+/*<!dead_flag>*/ DEADTRANS( L'x'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
+/*<!dead_flag>*/ DEADTRANS( L'X'	,0x2690	,0xDDFD	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FD "🇽" REGIONAL INDICATOR SYMBOL LETTER X
+/*<!dead_flag>*/ DEADTRANS( L'y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
+/*<!dead_flag>*/ DEADTRANS( L'Y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
+/*<!dead_flag>*/ DEADTRANS( L'z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
+/*<!dead_flag>*/ DEADTRANS( L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
 
 /*****************************************************************************\
 * Single-press dead key content.
