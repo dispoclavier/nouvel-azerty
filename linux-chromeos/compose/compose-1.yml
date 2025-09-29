@@ -6416,8 +6416,17 @@
 <Multi_key><bar><slash><backslash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><backslash><slash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+#
+#   While for "⋈" U22C8, "⋉" U22C9, "⋊" U22CA, slash and backslash stand for a
+#   full diagonal, "⋋" U22CB and "⋌" U22CC change the deal, and a full diagonal
+#   requires two slashes or two backslashes instead.
+#
 <Multi_key><backslash><slash><backslash>                                                           : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><backslash><backslash><slash>                                                   <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><backslash><backslash><slash>                                            <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><slash>                                                               : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><v><parenright><parenleft>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenright><parenleft>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
