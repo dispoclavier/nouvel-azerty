@@ -654,7 +654,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * As a consequence, phase 2 was ramped up, with a clone of the main layout and
 * its remapped variant: kbfrFRs is duplicated as kbfrFRs2, and kbfrFRsr, as
-* kbfrFRr2 (so as not to exceed the maximum length of 8), in version 6.0.9.
+* kbfrFRr2 (so as to not exceed the maximum length of 8), in version 6.0.9.
 *
 \*****************************************************************************/
 

@@ -7,7 +7,6 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Debug version ## in VERSIONINFO *.RC   6.0.9.02.00 Tue 2025-09-30T0753+0200
 * Duplicate leading space in version #   6.0.9.00.00 Mon 2025-09-29T1457+0200
 * Annotate leading space in version #    6.0.8.00.00 Thu 2025-09-25T1150+0200
 * Move version number to UX level 3      6.0.7.03.00 Sun 2025-09-21T1348+0200
@@ -25,7 +24,7 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '0', '.', '9', '.', '0', '2', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '0', '.', '9', '.', '0', '5', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
