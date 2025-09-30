@@ -20,16 +20,22 @@ Réimplémentation pour Windows de la touche de composition sur le modèle final
 
 ## 6.0.9 (projet)
 
+Dépannage des pilotes de disposition pour Windows, phase 2.
+
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Disposition : Fournir des clones de dépannage. kbfrFRs2.C, kbfrFRr2.C [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310), [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
 * Composition :
 	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b), [105f4d7](https://github.com/dispoclavier/nouvel-azerty/commit/105f4d7b68211409cdf6b24d9918f15b2f8216d6)
 	* Adapter la séquence de "🣖" U+1F8D6. ibidem
 	* Compléter les séquences de "⋋" U+22CB, "⋌" U+22CC. compose-1.yml [a6e4f3e](https://github.com/dispoclavier/nouvel-azerty/commit/a6e4f3e56621cd22ae04ac6fd2b18ca11cdd0ca9), [248c997](https://github.com/dispoclavier/nouvel-azerty/commit/248c997805184ff64a8979987c40e0aefa547191)
+* Builds :
+	* 6.0.9.00 [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310)
+	* 6.0.9.01 [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
 
 ## 6.0.8 (2025-09-25)
 
-Débogage des pilotes de disposition pour Windows, phase 1.
+Dépannage des pilotes de disposition pour Windows, phase 1.
 
 * Disposition : Déboguer les pilotes de disposition. kbcommon-1.c [5b92ff9](https://github.com/dispoclavier/nouvel-azerty/commit/5b92ff973eb61eb4f057e47067788ac9af16e4c5), kbcommon-2.c, kbcommon-3.c, kbfrFRs-allo.c, kbbrFRs-allo.c, kbfrAFs-allo.c, kbfrPFs-allo.c, kbfrFRsr-allo.c [d66813e](https://github.com/dispoclavier/nouvel-azerty/commit/d66813e13e185a062389f6cc41d7a837b999ba4b), kbcommon-2.c, kbcommon-3.c [f077167](https://github.com/dispoclavier/nouvel-azerty/commit/f0771674b25954f226f6daaa225dc6c88d5e6800)
 * Transformations :
