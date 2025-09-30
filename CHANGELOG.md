@@ -24,7 +24,9 @@ Dépannage des pilotes de disposition pour Windows, phase 2.
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-* Disposition : Fournir des clones de dépannage. kbfrFRs2.C, kbfrFRr2.C [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310), [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
+* Pilotes de disposition :
+	* Fournir des clones de dépannage. kbfrFRs2.C, kbfrFRr2.C [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310), [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
+	* Déboguer les numéros de version dans les métadonnées. kbbrFRs.RC, kbfrAFs.RC, kbfrFRr2.RC, kbfrFRs2.RC, kbfrFRs.RC, kbfrFRsr.RC, kbfrPFs.RC [1ec3bda](https://github.com/dispoclavier/nouvel-azerty/commit/1ec3bda65e4e885f0dc5aebf725c25b200f5c619)
 * Composition :
 	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b), [105f4d7](https://github.com/dispoclavier/nouvel-azerty/commit/105f4d7b68211409cdf6b24d9918f15b2f8216d6)
 	* Adapter la séquence de "🣖" U+1F8D6. ibidem
@@ -32,6 +34,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 * Builds :
 	* 6.0.9.00 [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310)
 	* 6.0.9.01 [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
+	* 6.0.9.02 [1ec3bda](https://github.com/dispoclavier/nouvel-azerty/commit/1ec3bda65e4e885f0dc5aebf725c25b200f5c619)
 
 ## 6.0.8 (2025-09-25)
 
