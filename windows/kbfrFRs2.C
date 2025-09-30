@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Debug descriptor in the switch         6.0.9.01.00 Mon 2025-09-29T1738+0200
 * Clone from kbfrFRs.C                   6.0.9.00.00 Mon 2025-09-29T1502+0200
 *
 \*****************************************************************************/
