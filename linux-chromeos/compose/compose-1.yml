@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.0.8.00" # See #   End of line comments
+<UEFA0>                     : "version 6.0.9.7" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -6407,7 +6407,6 @@
 #   the upper left corner.
 #   See #   Parsing order
 #
-#@
 <Multi_key><bar><backslash><slash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                            : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
@@ -6428,6 +6427,7 @@
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
+#@
 <Multi_key><v><parenright><parenleft>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenright><parenleft>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenleft><parenright>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
