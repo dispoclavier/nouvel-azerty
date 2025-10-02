@@ -1,0 +1,28 @@
+/*****************************************************************************\
+* Module Name: kbversion-str.rc
+*
+* Version-information resource partial for strings.
+*
+* Copyright (c) 1985-2001, Microsoft Corporation
+* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+*
+* History:
+* Remove padding zeros in version numbers  6.0.9.6.0 Wed 2025-10-01T1533+0200
+* Move common StringFileInfo here          6.0.9.5.0 Tue 2025-09-30T1232+0200
+* Add partial file kbversion-str.RC        6.0.9.5.0 Tue 2025-09-30T1205+0200
+*
+* This file is encoded in UTF-16 LE as KbdUTool generates resource files.
+* It cannot be encoded in UTF-8 because without byte order mark, the Windows
+* File Explorer displays mojibake, and with BOM, it cannot be compiled,
+* because the Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+* cannot read it.
+*
+\*****************************************************************************/
+
+VALUE "FileVersion",        "6.0.9.7\0"
+VALUE "ProductVersion",     "6.0.9.7\0"
+
+VALUE "CompanyName",        "Dispoclavier\0"
+VALUE "ProductName",        "Un nouvel AZERTY\0"
+VALUE "Release Information","Compilation managed by KbdUTool 3.40\0"
+VALUE "LegalCopyright",     "(c) 2014-2025 Marcel Schneider dev[arobase]dispoclavier.com\0"
