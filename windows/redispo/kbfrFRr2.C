@@ -7,8 +7,8 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Debug the descriptor in the switch       6.0.9.1.0 Mon 2025-09-29T1738+0200
-* Clone from kbfrFRsr.C                    6.0.9.0.0 Mon 2025-09-29T1503+0200
+* Update variant descriptor string output  6.0.9.0.1 Mon 2025-09-29T1503+0200
+* Copy from kbfrFRsr.C                     6.0.9.0.0 Mon 2025-09-29T1429+0200
 *
 \*****************************************************************************/
 

@@ -1,8 +1,7 @@
 /*****************************************************************************\
 * Module Name: kbazerty.h
 *
-* Generic locale keyboard layout header.
-* Various defines for use by keyboard input on French AZERTY.
+* Virtual key defines for AZERTY keyboard layouts.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com

@@ -1,7 +1,7 @@
 /*****************************************************************************\
 * Module Name: kbligredispo.c
 *
-* Ligatures made of multiple code units.
+* Remapped subset of ligatures.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
