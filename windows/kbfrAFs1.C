@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbfrAFs.C
+* Module Name: kbfrAFs1.C
 *
 * Keyboard layout C source.
 *
@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Rename kbfrAFs.C to kbfrAFs1.C           6.0.9.8.0 Thu 2025-10-02T1456+0200
 * Move alloc table to kbfrAFs-allo.c       6.0.8.0.0 Thu 2025-09-25T1836+0200
 * Move variant ID to UX level 4            6.0.7.3.0 Sun 2025-09-21T1332+0200
 * Move kbdeadtrans.c #inc to kbcommon.c    6.0.7.2.0 Tue 2025-09-16T0311+0200
@@ -49,16 +50,16 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 #include "kbcommon-3.c"
 
 /*****************************************************************************\
-* Note on kbfrAFs.DEF
+* Note on kbfrAFs1.DEF
 *
 * The .DEF file is not provided. The Keyboard Table Generation Tool (Unicode)
-* generates a .DEF file on the fly while transpiling kbfrAFs.klc right before
+* generates a .DEF file on the fly while transpiling kbfrAFs1.klc right before
 * giving the sources to the compiler. So, no need to support the .DEF file as
 * a part of the source code.
 *
-* For reference, this is the content of kbfrAFs.DEF:
+* For reference, this is the content of kbfrAFs1.DEF:
 
-LIBRARY kbfrAFs
+LIBRARY kbfrAFs1
  
  EXPORTS 
     KbdLayerDescriptor @1
