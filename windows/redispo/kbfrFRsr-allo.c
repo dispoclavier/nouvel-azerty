@@ -1,14 +1,14 @@
 /*****************************************************************************\
 * Module Name: kbfrFRsr-allo.c
 *
-* Row E of keyboard layout
+* Row E of keyboard layout.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move main allocation table here        6.0.8.00.02 Thu 2025-09-25T1216+0200
-* Add partial file kbfrFRsr-allo.c       6.0.8.00.00 Thu 2025-09-25T0548+0200
+* Move main allocation table here          6.0.8.0.2 Thu 2025-09-25T1216+0200
+* Add partial file kbfrFRsr-allo.c         6.0.8.0.0 Thu 2025-09-25T0548+0200
 *
 \*****************************************************************************/
 

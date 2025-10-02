@@ -1,16 +1,16 @@
 /*****************************************************************************\
 * Module Name: kbfrAFs.C
 *
-* Keyboard layout C source
+* Keyboard layout C source.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move alloc table to kbfrAFs-allo.c     6.0.8.00.00 Thu 2025-09-25T1836+0200
-* Move variant ID to UX level 4          6.0.7.03.00 Sun 2025-09-21T1332+0200
-* Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0311+0200
-* Support Francophone African variant    6.0.5.01.00 Sat 2025-08-30T2309+0200
+* Move alloc table to kbfrAFs-allo.c       6.0.8.0.0 Thu 2025-09-25T1836+0200
+* Move variant ID to UX level 4            6.0.7.3.0 Sun 2025-09-21T1332+0200
+* Move kbdeadtrans.c #inc to kbcommon.c    6.0.7.2.0 Tue 2025-09-16T0311+0200
+* Support Francophone African variant      6.0.5.1.0 Sat 2025-08-30T2309+0200
 *
 \*****************************************************************************/
 

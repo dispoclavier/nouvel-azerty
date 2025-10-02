@@ -1,15 +1,13 @@
 /*****************************************************************************\
 * Module Name: kbazerty.h
 *
-* Generic locale keyboard layout header
+* Generic locale keyboard layout header.
+* Various defines for use by keyboard input on French AZERTY.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Various defines for use by keyboard input on French AZERTY.
-*
 * History:
-*
 * Move #include <windows.h> back to C sources        Wed 2025-08-27T1300+0200
 * Rename from kbfrFRs.H to kbazerty.h                Fri 2025-08-22T1127+0200
 * Fix non-transpilation of KANA                      Sun 2025-07-20T0354+0200

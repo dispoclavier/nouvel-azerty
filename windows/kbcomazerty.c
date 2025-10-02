@@ -1,16 +1,16 @@
 /*****************************************************************************\
-* Module Name: kbcomazerty.C
+* Module Name: kbcomazerty.c
 *
-* Rows A..D of keyboard layout
+* Rows A..D of keyboard layout.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2006+0200
-* Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
-* Move rows A..D to kbcomazerty.c        6.0.3.02.00 Thu 2025-08-21T1652+0200
-* Add partial file kbcomazerty.c         6.0.3.02.00 Thu 2025-08-21T1652+0200
+* Add 6 spare modification numbers         6.0.5.0.0 Sat 2025-08-30T2006+0200
+* Add mod# 33 in main allocation table     6.0.4.1.0 Wed 2025-08-27T1834+0200
+* Move rows A..D to kbcomazerty.c          6.0.3.2.0 Thu 2025-08-21T1652+0200
+* Add partial file kbcomazerty.c           6.0.3.2.0 Thu 2025-08-21T1652+0200
 *
 \*****************************************************************************/
 

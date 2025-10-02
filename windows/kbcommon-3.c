@@ -1,14 +1,14 @@
 /*****************************************************************************\
 * Module Name: kbcommon-3.c
 *
-* Common keyboard layout data
+* Common keyboard layout data, part 3.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move KbdTables and return here         6.0.8.00.03 Thu 2025-09-25T1133+0200
-* Add partial file kbcommon-3.c          6.0.8.00.01 Thu 2025-09-25T0613+0200
+* Move KbdTables and return here           6.0.8.0.3 Thu 2025-09-25T1133+0200
+* Add partial file kbcommon-3.c            6.0.8.0.1 Thu 2025-09-25T0613+0200
 *
 * This file needs to be included last because it contains the return statement.
 *

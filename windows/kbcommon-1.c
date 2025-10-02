@@ -1,26 +1,26 @@
 /*****************************************************************************\
 * Module Name: kbcommon-1.c
 *
-* Common keyboard layout data
+* Common keyboard layout data, part 1.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Further document the dead key bug      6.0.9.00.00 Mon 2025-09-29T1419+0200
-* Move part of the code to kbcommon-2.c  6.0.8.00.02 Thu 2025-09-25T1113+0200
-* Rename from kbcommon.c to kbcommon-1.c 6.0.8.00.01 Thu 2025-09-25T0613+0200
-* Update ### Dead key bug                6.0.8.00.00 Thu 2025-09-25T0230+0200
-* Move metadata to UX levels 3 and 4     6.0.7.03.00 Sun 2025-09-21T1349+0200
-* Correct and update annotations         6.0.7.02.01 Sun 2025-09-21T0143+0200
-* Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
-* Add 6 spare modification numbers       6.0.5.00.00 Sat 2025-08-30T2106+0200
-* Add mod# 33 in main allocation table   6.0.4.01.00 Wed 2025-08-27T1834+0200
-* Redocument circumflex dead key bug     6.0.4.00.00 Wed 2025-08-27T1827+0200
-* Document disordered table dead key bug 6.0.3.04.00 Sun 2025-08-24T1334+0200
-* Edit annotations                       6.0.3.01.01 Thu 2025-08-21T0325+0200
-* Move common remainder to kbcommon.c    6.0.3.01.00 Wed 2025-08-20T2203+0200
-* Add partial file kbcommon.c            6.0.3.01.00 Wed 2025-08-20T2113+0200
+* Further document the dead key bug        6.0.9.0.0 Mon 2025-09-29T1419+0200
+* Move part of the code to kbcommon-2.c    6.0.8.0.2 Thu 2025-09-25T1113+0200
+* Rename from kbcommon.c to kbcommon-1.c   6.0.8.0.1 Thu 2025-09-25T0613+0200
+* Update ### Dead key bug                  6.0.8.0.0 Thu 2025-09-25T0230+0200
+* Move metadata to UX levels 3 and 4       6.0.7.3.0 Sun 2025-09-21T1349+0200
+* Correct and update annotations           6.0.7.2.1 Sun 2025-09-21T0143+0200
+* Move kbdeadtrans.c #inc to kbcommon.c    6.0.7.2.0 Tue 2025-09-16T0315+0200
+* Add 6 spare modification numbers         6.0.5.0.0 Sat 2025-08-30T2106+0200
+* Add mod# 33 in main allocation table     6.0.4.1.0 Wed 2025-08-27T1834+0200
+* Redocument circumflex dead key bug       6.0.4.0.0 Wed 2025-08-27T1827+0200
+* Document disordered table dead key bug   6.0.3.4.0 Sun 2025-08-24T1334+0200
+* Edit annotations                         6.0.3.1.1 Thu 2025-08-21T0325+0200
+* Move common remainder to kbcommon.c      6.0.3.1.0 Wed 2025-08-20T2203+0200
+* Add partial file kbcommon.c              6.0.3.1.0 Wed 2025-08-20T2113+0200
 *
 * Known bugs are documented in this file.
 * See ## Known bugs

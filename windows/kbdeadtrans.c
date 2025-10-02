@@ -1,4 +1,6 @@
 /*****************************************************************************\
+* Module name: kbdeadtrans.c
+*
 * Dead key content.
 *
 * Copyright:
@@ -6,18 +8,18 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Update transpiled dead key data        6.0.8.00.00 Thu 2025-09-25T1145+0200
-* Update transpiled dead key data        6.0.7.03.00 Mon 2025-09-22T0640+0200
-* Update after correcting sortability    6.0.7.02.01 Sun 2025-09-21T0447+0200
-* Move kbdeadtrans.c #inc to kbcommon.c  6.0.7.02.00 Tue 2025-09-16T0315+0200
-* Outline brackets U27E6.. in !acute     6.0.7.01.02 Sun 2025-09-14T1926+0200
-* Outline brackets U27E6.. in !tilde     6.0.7.01.01 Sun 2025-09-14T1911+0200
-* "°" U00B0 2 ➔ "⋆" U22C6 in !abovering  6.0.7.01.00 Fri 2025-09-12T0441+0200
-* Outline brackets U27E6.. in !grave     6.0.7.00.00 Wed 2025-09-03T0803+0200
-* Improve Polynesian French variant      6.0.6.00.00 Tue 2025-09-02T1459+0200
-* Upgrade to Unicode 17.0                6.0.4.02.00 Wed 2025-08-27T2006+0200
-* Move DEADTRANS calls to kbdeadtrans.c  6.0.2.01.00 Tue 2025-08-19T1952+0200
-* Add partial file kbdeadtrans.c         6.0.2.01.00 Tue 2025-08-19T1952+0200
+* Update transpiled dead key data          6.0.8.0.0 Thu 2025-09-25T1145+0200
+* Update transpiled dead key data          6.0.7.3.0 Mon 2025-09-22T0640+0200
+* Update after correcting sortability      6.0.7.2.1 Sun 2025-09-21T0447+0200
+* Move kbdeadtrans.c #inc to kbcommon.c    6.0.7.2.0 Tue 2025-09-16T0315+0200
+* Outline brackets U27E6.. in !acute       6.0.7.1.2 Sun 2025-09-14T1926+0200
+* Outline brackets U27E6.. in !tilde       6.0.7.1.1 Sun 2025-09-14T1911+0200
+* "°" U00B0 2 ➔ "⋆" U22C6 in !abovering    6.0.7.1.0 Fri 2025-09-12T0441+0200
+* Outline brackets U27E6.. in !grave       6.0.7.0.0 Wed 2025-09-03T0803+0200
+* Improve Polynesian French variant        6.0.6.0.0 Tue 2025-09-02T1459+0200
+* Upgrade to Unicode 17.0                  6.0.4.2.0 Wed 2025-08-27T2006+0200
+* Move DEADTRANS calls to kbdeadtrans.c    6.0.2.1.0 Tue 2025-08-19T1952+0200
+* Add partial file kbdeadtrans.c           6.0.2.1.0 Tue 2025-08-19T1952+0200
 *
 * By courtesy of respondents to:
 * https://stackoverflow.com/questions/11334371/cant-we-include-c-file

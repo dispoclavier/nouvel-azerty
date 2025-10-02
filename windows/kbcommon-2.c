@@ -1,15 +1,15 @@
 /*****************************************************************************\
 * Module Name: kbcommon-2.c
 *
-* Common keyboard layout data
+* Common keyboard layout data, part 2.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move KbdTables to kbcommon-3.c         6.0.8.00.03 Thu 2025-09-25T1127+0200
-* Move here the code from numpad on      6.0.8.00.02 Thu 2025-09-25T1121+0200
-* Add partial file kbcommon-2.c          6.0.8.00.01 Thu 2025-09-25T0613+0200
+* Move KbdTables to kbcommon-3.c           6.0.8.0.3 Thu 2025-09-25T1127+0200
+* Move here the code from numpad on        6.0.8.0.2 Thu 2025-09-25T1121+0200
+* Add partial file kbcommon-2.c            6.0.8.0.1 Thu 2025-09-25T0613+0200
 *
 * This file needs to be included after all the allocation tables, due to the
 * static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[].

@@ -1,15 +1,13 @@
 /*****************************************************************************\
 * Module Name: kbredispo.h
 *
-* Generic locale keyboard layout header
+* Generic locale keyboard layout header.
+* Various defines for use by keyboard input on French QZJFGY.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Various defines for use by keyboard input on French QZJFGY.
-*
 * History:
-*
 * Move #include <windows.h> back to C sources        Wed 2025-08-27T1259+0200
 * Rename from kbqzjfgy.h to kbredispo.h              Sat 2025-08-23T1633+0200
 * Rename from kbfrFRsr.H to kbqzjfgy.h               Fri 2025-08-22T1135+0200

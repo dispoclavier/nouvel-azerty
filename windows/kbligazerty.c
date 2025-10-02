@@ -1,18 +1,17 @@
 /*****************************************************************************\
 * Module Name: kbligazerty.c
 *
-* Multiple code units, called ligatures
+* Ligatures made of multiple code units.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move AZERTY MCUs to kbligazerty.c      6.0.3.00.00 Wed 2025-08-20T1930+0200
-* Add partial file kbligazerty.c         6.0.3.00.00 Wed 2025-08-20T1930+0200
+* Move AZERTY MCUs to kbligazerty.c        6.0.3.0.0 Wed 2025-08-20T1930+0200
+* Add partial file kbligazerty.c           6.0.3.0.0 Wed 2025-08-20T1718+0200
 *
 * This file only contains ligatures particular to AZERTY. Keys that do not
 * change across layouts are commented out, and only one sample is provided.
-*
 * Ligatures that do not change across layouts are configured in kbligatures.c.
 *
 \*****************************************************************************/
