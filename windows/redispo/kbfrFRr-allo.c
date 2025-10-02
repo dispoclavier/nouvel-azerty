@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbfrFRsr-allo.c
+* Module Name: kbfrFRr-allo.c
 *
 * Row E of keyboard layout variant.
 *
@@ -7,6 +7,7 @@
 * Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Rename kbfrFRsr-allo.c to kbfrFRr-allo.c 6.0.9.8.0 Thu 2025-10-02T1439+0200
 * Move main allocation table here          6.0.8.0.2 Thu 2025-09-25T1216+0200
 * Add partial file kbfrFRsr-allo.c         6.0.8.0.0 Thu 2025-09-25T0548+0200
 *
