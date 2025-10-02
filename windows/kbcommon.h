@@ -1,21 +1,21 @@
-/****************************** H Module Header ***********************************\
-* Module Name=kbcommon.H
+/**********************************************************************************\
+* Module Name: kbcommon.h
 *
-* Keyboard layout header: Various defines for use in keyboard layout configurations.
+* Various defines for use in keyboard layout configurations.
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
-* Define TYPEDEF_VK_TO_WCHARS up to 56   6.0.5.00.00 Sat 2025-08-30T2048+0200
-* Fix misspelling                        6.0.0.00.00 Tue 2025-07-29T0457+0200
-* Fix misspelling of mistranspilation    5.3.0.27.00 Sun 2025-07-20T0406+0200
-* Uncomment numpad defines               5.3.0.20.00 Tue 2025-07-01T1712+0200
+* Define TYPEDEF_VK_TO_WCHARS up to 56     6.0.5.0.0 Sat 2025-08-30T2048+0200
+* Fix misspelling                          6.0.0.0.0 Tue 2025-07-29T0457+0200
+* Fix misspelling of mistranspilation     5.3.0.27.0 Sun 2025-07-20T0406+0200
+* Uncomment numpad defines                5.3.0.20.0 Tue 2025-07-01T1712+0200
 * Ditch pointless editing DEADTRANS       5.2.0.3.12 Thu 2025-06-12T2133+0200
 * Debug DEADTRANS macro                   5.2.0.3.11 Thu 2025-06-12T0556+0200
 * Debug DEADTRANS macro                   5.2.0.3.10 Thu 2025-06-12T0515+0200
-* Debug DEADTRANS macro                   5.2.0.3.09 Thu 2025-06-12T0428+0200
-* Update typedefs of DEADTRANS macro      5.2.0.3.08 Thu 2025-06-12T0043+0200
+* Debug DEADTRANS macro                    5.2.0.3.9 Thu 2025-06-12T0428+0200
+* Update typedefs of DEADTRANS macro       5.2.0.3.8 Thu 2025-06-12T0043+0200
 * Extend DEADTRANS macro.                            Wed Jun 11, 2025
 * Update some annotations.                           Sun Apr 13, 2025
 * Wed Dec 04, 2024  commented out unused ligature typedefs.
