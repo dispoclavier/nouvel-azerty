@@ -1,7 +1,7 @@
 # 6.0.9 (2025-10-02)
 
-|-|
 | Mise à jour du 2025-10-04 |
+|-|
 
 Dépannage des pilotes de disposition pour Windows, phase 2.
 
