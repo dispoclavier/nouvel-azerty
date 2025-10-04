@@ -1,4 +1,7 @@
-# 6.0.9 (2025-10-02) mise à jour
+# 6.0.9 (2025-10-02)
+
+| Mise à jour du 2025-10-04 |
+|--|
 
 Dépannage des pilotes de disposition pour Windows, phase 2.
 
@@ -11,7 +14,7 @@ Complétion et simplification de séquences de composition.
 	* Renommer les dispositions en kb****(s|r)1. [711d66f](https://github.com/dispoclavier/nouvel-azerty/commit/711d66f119a20f0c34410b7331355619871d0edb)
 		* kbbrFRs.C devient kbbrFRs1.C [9ce57ca](https://github.com/dispoclavier/nouvel-azerty/commit/9ce57caa34e4a5f42f42a6f3c2b50daeefb23487)
 		* kbbrFRs.klc devient kbbrFRs1.klc [190881e](https://github.com/dispoclavier/nouvel-azerty/commit/190881e9c8d7afa8d9a1046a6d029a93dedb846c)
-		* kbbrFRs.RC devient kbbrFRs1.RC [6491d6e](https://github.com/dispoclavier/nouvel-azerty/commit/6491d6e4e91a095f6c65a3cf48d5d1d84998c1d4)
+		* kbbrFRs.RC devient kbbrFRs1.RC [6491d6e](https://github.com/dispoclavier/nouvel-azerty/commit/6491d6e4e91a095f6c65a3cf48d5d1d84998c1d4)|
 		* kbfrAFs.C devient kbfrAFs1.C [586c1fe](https://github.com/dispoclavier/nouvel-azerty/commit/586c1fed4efa4ade7d0ca7d3d1271fd1b98ec5db)
 		* kbfrAFs.klc devient kbfrAFs1.klc [f709f58](https://github.com/dispoclavier/nouvel-azerty/commit/f709f58b9cf77ad0be0fd9f281a6519ca1e71407)
 		* kbfrAFs.RC devient kbfrAFs1.RC [cfe535c](https://github.com/dispoclavier/nouvel-azerty/commit/cfe535cce332e6deff0bb3ed936c6f10f1c406ce)
