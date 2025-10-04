@@ -1,4 +1,4 @@
-# 6.0.9 (2025-10-02)
+# 6.0.9 (2025-10-02) mise à jour
 
 Dépannage des pilotes de disposition pour Windows, phase 2.
 
@@ -78,3 +78,7 @@ Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.8.zip](https://github.
 La version pour macOS est en instance de réimplémentation.
 
 À ce jour, seule une [précédente mise en œuvre](https://dispoclavier.com/doc/kbfrintu/#macos) est disponible, encore sans fichiers de configuration pour [Karabiner-Elements](https://karabiner-elements.pqrs.org).
+
+## Statistiques de téléchargement
+
+Contrairement à [SourceForge](https://sourceforge.net/projects/nouvel-azerty/), GitHub n’affiche pas de statistiques de téléchargement, mais celles de ce dépôt sont affichées par [Somsubhra](https://somsubhra.github.io/github-release-stats/?username=dispoclavier&repository=nouvel-azerty&page=1&per_page=100) sur plusieurs pages, et par [GREV](https://hanadigital.github.io/grev/?user=dispoclavier&repo=nouvel-azerty) sur une page. [Qwertycube](https://qwertycube.com/github-release-stats/) les affiche après saisie de "dispoclavier" et "nouvel-azerty". Soustraire du total les téléchargements effectués par SourceForge pour la synchronisation (156 jusqu’à 6.0.9).
