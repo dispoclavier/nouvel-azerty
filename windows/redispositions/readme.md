@@ -1,4 +1,4 @@
-﻿# Redisposition de codes matériels de touches de clavier
+# Redisposition de codes matériels de touches de clavier
 
 La partie logicielle nécessaire à la redisposition de codes matériels
 de touches, le Redisposeur de codes matériels pour claviers, est
@@ -212,6 +212,10 @@ https://learn.microsoft.com/fr-fr/previous-versions/windows/hardware/hid/keyboar
 https://stackoverflow.com/questions/27632612/comment-in-reg-file
 
 
+
+## Pour en savoir plus
+
+
 ### Article « Scancode » sur Wikipedia anglophone
 
 https://en.wikipedia.org/wiki/Scancode#PC_compatibles
@@ -247,8 +251,6 @@ https://fr.wikipedia.org/wiki/Boutisme
 
 ## Syntaxe des fichiers d’inscription au Registre
 
-Ces fichiers sont écrits en utilisant une syntaxe particulière.
-
 Les deux chiffres hexadécimaux des octets se lisent de gauche à droite, mais
 les groupes de quatre octets appelés « DWORD » se lisent de droite à gauche,
 car leur ordre est petit-boutiste ou petit-boutien.
@@ -274,7 +276,7 @@ le début est un point-virgule.
 
 
 
-## Codes matériels de quelques touches
+## Liste de codes matériels de touches
 
 Cette liste n’est pas exhaustive.
 
