@@ -23,6 +23,7 @@ Réimplémentation pour Windows de la touche de composition sur le modèle final
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
 * Composition : Redonder les coups de glotte "ƾ" U+01BE, "Ɂ" U+0241, "ɂ" U+0242, "ʔ" U+0294, "ʕ" U+0295, "ʖ" U+0296, "ʡ" U+02A1, "ʢ" U+02A2, "ˀ" U+02C0, "ˁ" U+02C1, "ˤ" U+02E4, "𐞳" U+107B3, "𐞴" U+107B4, "𝼎" U+1DF0E. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723)
+* Sous-variantes : Mettre à jour et compléter les fichiers d’inscription au Registre et leur mode d’emploi. windows/redispositions/readme.md alias _Scancode_Map.txt [680a5b5](https://github.com/dispoclavier/nouvel-azerty/commit/680a5b5feff04b7baa0c21c25244ec43bb85ce6f), [25de410](https://github.com/dispoclavier/nouvel-azerty/commit/25de410b41e51c6732e63214dbc41992cab6b1a1)
 
 ## 6.0.9 (2025-10-02)
 
