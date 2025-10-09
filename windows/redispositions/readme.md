@@ -237,6 +237,15 @@ Here is a table of keyboard scan codes
 http://www.quadibloc.com/comp/scan.htm
 
 
+### Disposition d’Effacement arrière
+
+Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas. Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement de la main.
+
+“Le Clavier bureautique et informatique”, Cedic/Nathan, 1975, ISBN 2-7124-1705-4, dessins page 51 et pages 61–65.
+
+https://web.archive.org/web/20171024164749/http://accentuez.mon.nom.free.fr/Clavier-AZERTY.php
+
+
 ### Tour d’horizon des agencements de clavier
 
 https://superuser.com/questions/837448/what-do-you-call-a-keyboard-with-a-bar-shaped-enter-key
