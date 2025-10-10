@@ -1828,14 +1828,7 @@
 #   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
 #   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
 #
-#   In the sequences for "᷐" U1DD0 and "𐞉" U10789, the trailing "s" or "z" is
-#   skipped as non-critical, for efficiency, at the expense of intuitivity.
-#   See ### Multikey sequences
-#
-#   The letter EZH is represented by digit 3 as a shortcut, in "𐞊" U1078A and
-#   "𐞞" U1079E as opposed to "𐞚" U1079A, while for "𐞟" U1079F it is skipped as
-#   non-critical.
-#   See ### Multikey sequences
+#   The letter EZH is represented by digit 3 as a shortcut, in "ɮ" U026E.
 #
 #   Sequences conflicting with ISO currency codes or others are fixed by space
 #   termination along the lines of what is done for math symbols. But this only
@@ -1922,6 +1915,8 @@
 <Multi_key><j><a>                                                                                  : "ꭠ" UAB60 # LATIN SMALL LETTER SAKHA YAT
 <Multi_key><L><period>                                                                             : "Ŀ" U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <Multi_key><l><period>                                                                             : "ŀ" U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<Multi_key><l><3>                                                                                  : "ɮ" U026E # LATIN SMALL LETTER LEZH
+<Multi_key><l><KP_3>                                                                               : "ɮ" U026E # LATIN SMALL LETTER LEZH
 <Multi_key><l><e><z><h>                                                                            : "ɮ" U026E # LATIN SMALL LETTER LEZH
 <Multi_key><L><J>                                                                                  : "Ǉ" U01C7 # LATIN CAPITAL LETTER LJ
 <Multi_key><L><j>                                                                                  : "ǈ" U01C8 # LATIN CAPITAL LETTER L WITH SMALL LETTER J
@@ -2025,21 +2020,33 @@
 #   polygraph semantic.
 #   See # # Notes on Unicode support
 #
+#   The letter EZH is represented by digit 3 as a shortcut, in "𐞊" U1078A and
+#   "𐞞" U1079E as opposed to "𐞚" U1079A, while for "𐞟" U1079F it is skipped as
+#   non-critical.
+#
+#   In the sequence for "𐞉" U10789, the trailing "z" is skipped, too, as
+#   non-critical, for efficiency and an improved user experience.
+#   See ### Multikey sequences
+#
 <Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
 <Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
 <Multi_key><asciicircum><ampersand><braceright><d>                                                 : "𐞈" U10788 # MODIFIER LETTER SMALL DZ DIGRAPH WITH RETROFLEX HOOK
-<Multi_key><asciicircum><ampersand><braceleft><braceleft><d>                                       : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+#Multi_key><asciicircum><ampersand><braceleft><d><z>                                               : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><braceleft><d>                                                  : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><d>                                       : "𐞉" U10789 # MODIFIER LETTER SMALL DZ DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><d><3>                                                          : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
+<Multi_key><asciicircum><ampersand><d><KP_3>                                                       : "𐞊" U1078A # MODIFIER LETTER SMALL DEZH DIGRAPH
 <Multi_key><asciicircum><ampersand><f><g>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><ampersand><f><n>                                                          : "𐞐" U10790 # MODIFIER LETTER SMALL FENG DIGRAPH
 <Multi_key><asciicircum><ampersand><l><s>                                                          : "𐞙" U10799 # MODIFIER LETTER SMALL LS DIGRAPH
 <Multi_key><asciicircum><ampersand><l><z>                                                          : "𐞚" U1079A # MODIFIER LETTER SMALL LZ DIGRAPH
 <Multi_key><asciicircum><ampersand><l><3>                                                          : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
+<Multi_key><asciicircum><ampersand><l><KP_3>                                                       : "𐞞" U1079E # MODIFIER LETTER SMALL LEZH
+#Multi_key><asciicircum><ampersand><braceright><l><3>                                              : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><braceright><l>                                                 : "𐞟" U1079F # MODIFIER LETTER SMALL LEZH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><c>                                                          : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
-<Multi_key><asciicircum><ampersand><braceleft><braceleft><t>                                       : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><braceleft><t>                                                  : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
+<Multi_key><asciicircum><ampersand><braceleft><braceleft><t>                                       : "𐞫" U107AB # MODIFIER LETTER SMALL TC DIGRAPH WITH CURL
 <Multi_key><asciicircum><ampersand><t><s>                                                          : "𐞬" U107AC # MODIFIER LETTER SMALL TS DIGRAPH
 <Multi_key><asciicircum><ampersand><braceright><t>                                                 : "𐞭" U107AD # MODIFIER LETTER SMALL TS DIGRAPH WITH RETROFLEX HOOK
 <Multi_key><asciicircum><ampersand><t><S>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
@@ -2054,10 +2061,15 @@
 #   equivalent of any dead key.
 #   See # # Combining Diacritical Marks for Symbols used in mathematics
 #
+#   In the sequence for "᷐" U1DD0, the trailing "s" is skipped as non-critical,
+#   for efficiency and an improved user experience.
+#   See ### Multikey sequences
+#
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
 <Multi_key><ampersand><a><o>                                                                       : "ᷕ" U1DD5 # COMBINING LATIN SMALL LETTER AO
 <Multi_key><ampersand><a><v>                                                                       : "ᷖ" U1DD6 # COMBINING LATIN SMALL LETTER AV
 <Multi_key><ampersand><a><w>                                                                       : "ᷓ" U1DD3 # COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE
+#Multi_key><ampersand><i><s>                                                                       : "᷐" U1DD0 # COMBINING IS BELOW
 <Multi_key><ampersand><i>                                                                          : "᷐" U1DD0 # COMBINING IS BELOW
 <Multi_key><ampersand><u><r>                                                                       : "᷑" U1DD1 # COMBINING UR ABOVE
 <Multi_key><ampersand><u><s>                                                                       : "᷒" U1DD2 # COMBINING US ABOVE
@@ -4225,8 +4237,8 @@
 <Multi_key><N><2>                                                                                  : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 <Multi_key><N><KP_2>                                                                               : "⇧" U21E7 # UPWARDS WHITE ARROW, shift
 #   Level 3.
-<Multi_key><l><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
-<Multi_key><l><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+#Multi_key><l><3>    conflicts with "ɮ" U026E.                                                     : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
+#Multi_key><l><KP_3> conflicts with "ɮ" U026E.                                                     : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
 <Multi_key><L><3>                                                                                  : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
 <Multi_key><L><KP_3>                                                                               : "⇮" U21EE # UPWARDS WHITE DOUBLE ARROW, level-3 select
 #   Niveau 3.
