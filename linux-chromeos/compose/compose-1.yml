@@ -5096,7 +5096,7 @@
 #   equal.
 #
 #   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB,
-#   "⟰" U27F0, "⟱" U27F1, "⤊" U290A, "⤋" U290B. In this role, digits are
+#   "⤊" U290A, "⤋" U290B, "⟰" U27F0, "⟱" U27F1. In this role, digits are
 #   appended like those denoting size as for "◻" U25FB, while multiplying
 #   digits are prepended as for "⇇" U21C7, "⇶" U21F6, "∬" U222C, "⋐" U22D0.
 #
