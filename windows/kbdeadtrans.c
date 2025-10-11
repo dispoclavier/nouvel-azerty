@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Add annotation about U+107A2            6.0.10.0.1 Sat 2025-10-11T2334+0200
 * Improve readability, add progressmark   6.0.10.0.0 Sat 2025-10-11T2247+0200
 * Update transpiled dead key data          6.0.8.0.0 Thu 2025-09-25T1145+0200
 * Update transpiled dead key data          6.0.7.3.0 Mon 2025-09-22T0640+0200
@@ -227,6 +228,13 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * keysyms and proposed extensions, while the purpose of the leading exclam is
 * to get these sorted at the top, and padding accounts for the longest IDs of
 * chained dead keys.
+*
+* This line requires an extra comment due to the stroke dead key acting as
+* a base character. Small o with stroke is the dead character, and the base
+* character in the base alphabet is skipped as non-critical. As a result,
+* the input is "superscript dead key, zero width space, superscript dead key,
+* stroke dead key", all at level 4 (Shift + AltGr).
+* <!superscript> DEADTRANS( 0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "ø" ➔ "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 *
 \*****************************************************************************/
 
