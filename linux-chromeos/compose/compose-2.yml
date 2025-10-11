@@ -7465,7 +7465,7 @@
 #   In the triple dead key press scheme <dead_acute><dead_grave><dead_acute>,
 #   the base space characters are skipped for efficiency, as there is nothing
 #   else to support.
-#   See ### Multikey sequences
+#   See # # Design of multikey sequences
 #
 <dead_acute><dead_grave><dead_acute>                                                               : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <Multi_key><apostrophe><grave><apostrophe>                                                         : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE

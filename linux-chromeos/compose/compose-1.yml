@@ -965,6 +965,9 @@
 #   The maximum number of keysyms is nine. Any longer sequences are going to be
 #   ignored by the compiler.
 #
+#
+# # Design of multikey sequences
+#
 #   Anyway, brevity is key, to that extent that non-critical elements are cut
 #   off, resulting in truncated sequences that may be counter-intuitive but are
 #   better for a streamlined user experience.
@@ -1191,7 +1194,7 @@
 #   This facilitates reviews for redundancies to be redacted for a streamlined
 #   user experience.
 #   See #   Streamlining
-#   See ### Multikey sequences
+#   See # # Design of multikey sequences
 #
 #
 # # Notes about documentation
@@ -1803,8 +1806,8 @@
 #   https://en.wikipedia.org/wiki/Numerals_in_Unicode#Roman_numerals
 #   See #*# REVERSED
 #
-#   To prevent conflicts with some mathematical symbols, the sequences of all
-#   Roman numerals start with an R for mnemonic and UX consistency.
+#   To prevent conflicts with some mathematical symbols, the sequences for
+#   Roman numerals start consistently with a mnemonic capital R.
 #
 <Multi_key><R><C><D>                                                                               : "ↀ" U2180 # ROMAN NUMERAL ONE THOUSAND C D
 <Multi_key><R><D><D><space>                                                                        : "ↁ" U2181 # ROMAN NUMERAL FIVE THOUSAND
@@ -2026,7 +2029,7 @@
 #
 #   In the sequence for "𐞉" U10789, the trailing "z" is skipped, too, as
 #   non-critical, for efficiency and an improved user experience.
-#   See ### Multikey sequences
+#   See # # Design of multikey sequences
 #
 <Multi_key><asciicircum><ampersand><A><A>                                                          : "𐞀" U10780 # MODIFIER LETTER SMALL CAPITAL AA
 <Multi_key><asciicircum><ampersand><d><z>                                                          : "𐞇" U10787 # MODIFIER LETTER SMALL DZ DIGRAPH
@@ -2063,7 +2066,7 @@
 #
 #   In the sequence for "᷐" U1DD0, the trailing "s" is skipped as non-critical,
 #   for efficiency and an improved user experience.
-#   See ### Multikey sequences
+#   See # # Design of multikey sequences
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
 <Multi_key><ampersand><a><o>                                                                       : "ᷕ" U1DD5 # COMBINING LATIN SMALL LETTER AO
@@ -3311,7 +3314,7 @@
 #   the Zodiacal signs and Math symbol sections.
 #   See #^# Western Zodiacal Signs
 #   See # # Design of math sequences
-#   See ### Multikey sequences
+#   See # # Design of multikey sequences
 #
 <Multi_key><a><e><d>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
 <Multi_key><A><E><D>                                                                               : "د.إ" # U062F U002E U0625 UAE Dirham THE UNITED ARAB EMIRATES
@@ -4180,20 +4183,21 @@
 #
 # # Symbols for cursor keys
 #
-#   The sequences of the home key are streamlined by truncation.
+#   The sequences for the home key are streamlined by truncation.
 #
-#   The symbol of the end key "⇲" U21F2 is uncommon and is not included in the
-#   TeX math package referred to here.
-#   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf
+#   The symbol of the home key "⇱" U21F1 is more common than the one of the end
+#   key "⇲" U21F2.
 #
 #   This is not a comprehensive set, as arrow keys are supported otherwise.
 #   See # # Arrows in block U2190 used in mathematics
 #   See # # Arrows as on the numpad
 #   See #*# HORN
 #
-#Multi_key><h><o><m><e>                                                                            : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
-<Multi_key><h><o><m>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
-<Multi_key><H><O><M>                                                                               : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+#Multi_key><h><o><m><e>                                                                            : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><h><o><m>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><H><O><M>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><e><n><d>                                                                               : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
+<Multi_key><E><N><D>                                                                               : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
 #
 #
 # # Symbols for deletion keys
@@ -4931,7 +4935,7 @@
 #
 #   Order sensitivity
 #
-#   As far as possible, descriptive sequences of symmetric symbols such as
+#   As far as possible, descriptive sequences for symmetric symbols such as
 #   "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN are fully or partly symmetric for the
 #   purpose of enhancing UX. The same holds true for sequences with attributes,
 #   with this section supporting trailing attributes, while related dead keys
@@ -5060,7 +5064,7 @@
 #
 #   Underscore and overscore
 #
-#   While sequences of double-line-equal symbols are built with the equal sign,
+#   While sequences for double-line-equal symbols are made with the equal sign,
 #   single-line equal translates to underscore throughout, at any position in
 #   the symbol: bottom, center, and top, This scheme also enhances sideways
 #   compatibility with en_US.UTF-8/Compose, that does not support any slanted
@@ -5070,6 +5074,9 @@
 #   leading underscore in the sequence, while for "⊻" U22BB, the underscore is
 #   in trailing position, as vertically stacked symbols are parsed from top to
 #   bottom.
+#
+#
+#   Underscore in arrows and harpoons
 #
 #   However, for intuitivity, underscore is used in alternative sequences for
 #   combining arrows and harpoons below "⃬" U20EC.."⃯" U20EF, as opposed to the
@@ -5130,7 +5137,7 @@
 #   while translating a horizontal angle leg to minus, like a horizontal arrow
 #   stem, not underscore, because we have "⦤" U29A4 and "⦥" U29A5 including an
 #   actual underscore, and also to prevent too many conflicts with subscript
-#   parentheses "₍" U208D, "₎" U208E in the sequences of "⦨" U29A8.."⦯" U29AF.
+#   parentheses "₍" U208D, "₎" U208E in the sequences for "⦨" U29A8.."⦯" U29AF.
 #
 #   By contrast, vertical angle legs are bar, as in "⟀" U27C0, not exclam like
 #   vertical arrow stems.
@@ -6471,19 +6478,12 @@
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
-#@
-<Multi_key><v><parenright><parenleft>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
-<Multi_key><v><parenright><parenleft>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
-<Multi_key><v><parenleft><parenright>                                                      <space> : "⋎" U22CE # CURLY LOGICAL OR
-<Multi_key><v><parenleft><parenright>                                               <nobreakspace> : "⋎" U22CE # CURLY LOGICAL OR
-<Multi_key><a><parenright><parenleft>                                                      <space> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><a><parenright><parenleft>                                               <nobreakspace> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><a><parenleft><parenright>                                                      <space> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><a><parenleft><parenright>                                               <nobreakspace> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><v><backslash><parenright><parenleft>                                           <space> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><v><backslash><parenright><parenleft>                                    <nobreakspace> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><v><backslash><parenleft><parenright>                                           <space> : "⋏" U22CF # CURLY LOGICAL AND
-<Multi_key><v><backslash><parenleft><parenright>                                    <nobreakspace> : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><parenright><parenleft>                                                              : "⋎" U22CE # CURLY LOGICAL OR
+<Multi_key><v><parenleft><parenright>                                                              : "⋎" U22CE # CURLY LOGICAL OR
+<Multi_key><a><parenright><parenleft>                                                              : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><a><parenleft><parenright>                                                              : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><backslash><parenright><parenleft>                                                   : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><backslash><parenleft><parenright>                                                   : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><2><c>                                                                          <space> : "⋐" U22D0 # DOUBLE SUBSET
 <Multi_key><2><c>                                                                   <nobreakspace> : "⋐" U22D0 # DOUBLE SUBSET
 <Multi_key><KP_2><c>                                                                       <space> : "⋐" U22D0 # DOUBLE SUBSET
@@ -6502,29 +6502,24 @@
 <Multi_key><2><u>                                                                   <nobreakspace> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><KP_2><u>                                                                       <space> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><KP_2><u>                                                                <nobreakspace> : "⋓" U22D3 # DOUBLE UNION
-<Multi_key><n><bar>                                                                        <space> : "⋔" U22D4 # PITCHFORK
-<Multi_key><n><bar>                                                                 <nobreakspace> : "⋔" U22D4 # PITCHFORK
-<Multi_key><space><equal><bar><bar>                                                        <space> : "⋕" U22D5 # EQUAL AND PARALLEL TO
-<Multi_key><space><equal><bar><bar>                                                 <nobreakspace> : "⋕" U22D5 # EQUAL AND PARALLEL TO
-<Multi_key><nobreakspace><equal><bar><bar>                                                 <space> : "⋕" U22D5 # EQUAL AND PARALLEL TO
-<Multi_key><nobreakspace><equal><bar><bar>                                          <nobreakspace> : "⋕" U22D5 # EQUAL AND PARALLEL TO
+<Multi_key><n><bar>                                                                                : "⋔" U22D4 # PITCHFORK
+#Multi_key><space><equal><bar><bar>                                                                : "⋕" U22D5 # EQUAL AND PARALLEL TO
+<Multi_key><space><equal><bar>                                                                     : "⋕" U22D5 # EQUAL AND PARALLEL TO
+<Multi_key><nobreakspace><equal><bar>                                                              : "⋕" U22D5 # EQUAL AND PARALLEL TO
 <Multi_key><less><period>                                                                  <space> : "⋖" U22D6 # LESS-THAN WITH DOT
 <Multi_key><less><period>                                                           <nobreakspace> : "⋖" U22D6 # LESS-THAN WITH DOT
 <Multi_key><period><greater>                                                               <space> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><period><greater>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                               <space> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
-<Multi_key><space><less><less><less>                                                       <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><space><less><less><less>                                                <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><nobreakspace><less><less><less>                                                <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><nobreakspace><less><less><less>                                         <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><space><greater><greater><greater>                                              <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
-<Multi_key><space><greater><greater><greater>                                       <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
-<Multi_key><nobreakspace><greater><greater><greater>                                       <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
-<Multi_key><nobreakspace><greater><greater><greater>                                <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><space><less><less><less>                                                               : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><nobreakspace><less><less><less>                                                        : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><space><greater><greater><greater>                                                      : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><nobreakspace><greater><greater><greater>                                               : "⋙" U22D9 # VERY MUCH GREATER-THAN
 #
 #   Consistently with "≤" U2264, "≥" U2265, underscore is used in sequences for
 #   single-line equal in middle position too, and even in overscore position.
+#   See #   Underscore and overscore
 #
 <Multi_key><less><underscore><greater>                                                     <space> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
 <Multi_key><less><underscore><greater>                                              <nobreakspace> : "⋚" U22DA # LESS-THAN EQUAL TO OR GREATER-THAN
@@ -6534,26 +6529,23 @@
 <Multi_key><underscore><less>                                                       <nobreakspace> : "⋜" U22DC # EQUAL TO OR LESS-THAN
 <Multi_key><underscore><greater>                                                           <space> : "⋝" U22DD # EQUAL TO OR GREATER-THAN
 <Multi_key><underscore><greater>                                                    <nobreakspace> : "⋝" U22DD # EQUAL TO OR GREATER-THAN
-<Multi_key><underscore><less><parenright><parenleft>                                       <space> : "⋞" U22DE # EQUAL TO OR PRECEDES
-<Multi_key><underscore><less><parenright><parenleft>                                <nobreakspace> : "⋞" U22DE # EQUAL TO OR PRECEDES
-<Multi_key><underscore><less><parenleft><parenright>                                       <space> : "⋞" U22DE # EQUAL TO OR PRECEDES
-<Multi_key><underscore><less><parenleft><parenright>                                <nobreakspace> : "⋞" U22DE # EQUAL TO OR PRECEDES
-<Multi_key><underscore><greater><parenright><parenleft>                                    <space> : "⋟" U22DF # EQUAL TO OR SUCCEEDS
-<Multi_key><underscore><greater><parenright><parenleft>                             <nobreakspace> : "⋟" U22DF # EQUAL TO OR SUCCEEDS
-<Multi_key><underscore><greater><parenleft><parenright>                                    <space> : "⋟" U22DF # EQUAL TO OR SUCCEEDS
-<Multi_key><underscore><greater><parenleft><parenright>                             <nobreakspace> : "⋟" U22DF # EQUAL TO OR SUCCEEDS
-<Multi_key><less><underscore><parenright><parenleft><slash>                                <space> : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
-<Multi_key><less><underscore><parenright><parenleft><slash>                         <nobreakspace> : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
-<Multi_key><less><underscore><parenleft><parenright><slash>                                <space> : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
-<Multi_key><less><underscore><parenleft><parenright><slash>                         <nobreakspace> : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
-<Multi_key><greater><underscore><parenright><parenleft><slash>                             <space> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
-<Multi_key><greater><underscore><parenright><parenleft><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
-<Multi_key><greater><underscore><parenleft><parenright><slash>                             <space> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
-<Multi_key><greater><underscore><parenleft><parenright><slash>                      <nobreakspace> : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 #
-#   The sequences for "⋢" U22E2, "⋣" U22E3 are based on the character names,
-#   while the glyphs may be lacking the single-line equal below in some fonts.
+#   In the sequences for "⋞" U22DE, "⋟" U22DF, the second parenthesis is not
+#   cropped, so as to prevent an excess parenthesis when both are pressed.
 #
+<Multi_key><underscore><less><parenright><parenleft>                                               : "⋞" U22DE # EQUAL TO OR PRECEDES
+<Multi_key><underscore><less><parenleft><parenright>                                               : "⋞" U22DE # EQUAL TO OR PRECEDES
+<Multi_key><underscore><greater><parenright><parenleft>                                            : "⋟" U22DF # EQUAL TO OR SUCCEEDS
+<Multi_key><underscore><greater><parenleft><parenright>                                            : "⋟" U22DF # EQUAL TO OR SUCCEEDS
+<Multi_key><less><underscore><parenright><parenleft><slash>                                        : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
+<Multi_key><less><underscore><parenleft><parenright><slash>                                        : "⋠" U22E0 # DOES NOT PRECEDE OR EQUAL
+<Multi_key><greater><underscore><parenright><parenleft><slash>                                     : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
+<Multi_key><greater><underscore><parenleft><parenright><slash>                                     : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
+#
+#   (The sequences for "⋢" U22E2, "⋣" U22E3 are based on the character names,
+#   while the glyphs may be lacking the single-line equal below in some fonts.)
+#
+#@
 <Multi_key><c><bracketleft><slash><underscore>                                             <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketleft><slash><underscore>                                      <nobreakspace> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketright><slash><underscore>                                            <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
@@ -7091,12 +7083,14 @@
 <Multi_key><S><braceright>                                                          <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
 <Multi_key><v><period>                                                                     <space> : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><v><period>                                                              <nobreakspace> : "⟇" U27C7 # OR WITH DOT INSIDE
-#   Some fonts feature a slash instead of a backslash in
-#   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
 <Multi_key><space><backslash><c>                                                           <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><space><backslash><c>                                                    <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><backslash><c>                                                    <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><backslash><c>                                             <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+#
+#   Some fonts feature a slash instead of a backslash in
+#   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
+#
 <Multi_key><space><slash><c>                                                               <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><space><slash><c>                                                        <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><slash><c>                                                        <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
@@ -7378,10 +7372,10 @@
 <Multi_key><less><equal><bar>                                                       <nobreakspace> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><greater>                                                                   : "⤇" U2907 # RIGHTWARDS DOUBLE ARROW FROM BAR
 #
-#   Unlike the sequences of "⇷" U21F7, "⇸" U21F8, those of "⤈" U2908, "⤉" U2909
-#   are streamlined. But intuitive, consistent sequences containing exclam
-#   twice are also provided alongside. The one of "⤈" U2908 is truncated for
-#   efficiency, due to the trailing greater being non-critical.
+#   Unlike the sequences for "⇷" U21F7, "⇸" U21F8, those for "⤈" U2908,
+#   "⤉" U2909 are streamlined. But intuitive, consistent sequences
+#   containing exclam twice are also provided alongside. The one for "⤈" U2908
+#   is truncated for efficiency, as the trailing greater is non-critical.
 #   See #   Streamlining
 #
 <Multi_key><exclam><bar><greater>                                                                  : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
@@ -7809,7 +7803,7 @@
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                                      <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                               <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 #
-#   The sequences of "⦨" U29A8.."⦯" U29AF are composed parsing the symbols in
+#   The sequences for "⦨" U29A8.."⦯" U29AF are composed parsing the symbols in
 #   the positive direction, counter-clockwise, and the arrowed angle leg like
 #   an arrow stem and head. With respect to "⦤" U29A4, "⦥" U29A5 and to prevent
 #   conflicts with "₍" U208D and "₎" U208E, a horizontal leg is minus, like a
