@@ -6567,19 +6567,13 @@
 <Multi_key><c><c><bracketleft><underscore><slash>                                                  : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore><slash>                                         : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketleft><underscore><slash>                                          : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><less><asciitilde><slash>                                                               : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
+<Multi_key><greater><asciitilde><slash>                                                            : "⋧" U22E7 # GREATER-THAN BUT NOT EQUIVALENT TO
+<Multi_key><less><parenright><parenleft><asciitilde><slash>                                        : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
+<Multi_key><less><parenleft><parenright><asciitilde><slash>                                        : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
+<Multi_key><greater><parenright><parenleft><asciitilde><slash>                                     : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
+<Multi_key><greater><parenleft><parenright><asciitilde><slash>                                     : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
 #@
-<Multi_key><less><asciitilde><slash>                                                       <space> : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
-<Multi_key><less><asciitilde><slash>                                                <nobreakspace> : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
-<Multi_key><greater><asciitilde><slash>                                                    <space> : "⋧" U22E7 # GREATER-THAN BUT NOT EQUIVALENT TO
-<Multi_key><greater><asciitilde><slash>                                             <nobreakspace> : "⋧" U22E7 # GREATER-THAN BUT NOT EQUIVALENT TO
-<Multi_key><less><parenright><parenleft><asciitilde><slash>                                <space> : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
-<Multi_key><less><parenright><parenleft><asciitilde><slash>                         <nobreakspace> : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
-<Multi_key><less><parenleft><parenright><asciitilde><slash>                                <space> : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
-<Multi_key><less><parenleft><parenright><asciitilde><slash>                         <nobreakspace> : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
-<Multi_key><greater><parenright><parenleft><asciitilde><slash>                             <space> : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
-<Multi_key><greater><parenright><parenleft><asciitilde><slash>                      <nobreakspace> : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
-<Multi_key><greater><parenleft><parenright><asciitilde><slash>                             <space> : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
-<Multi_key><greater><parenleft><parenright><asciitilde><slash>                      <nobreakspace> : "⋩" U22E9 # SUCCEEDS BUT NOT EQUIVALENT TO
 <Multi_key><less><bar><slash>                                                              <space> : "⋪" U22EA # NOT NORMAL SUBGROUP OF
 <Multi_key><less><bar><slash>                                                       <nobreakspace> : "⋪" U22EA # NOT NORMAL SUBGROUP OF
 <Multi_key><bar><greater><slash>                                                           <space> : "⋫" U22EB # DOES NOT CONTAIN AS NORMAL SUBGROUP
