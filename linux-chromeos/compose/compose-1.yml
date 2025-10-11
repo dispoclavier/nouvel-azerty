@@ -6542,28 +6542,32 @@
 <Multi_key><greater><underscore><parenright><parenleft><slash>                                     : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 <Multi_key><greater><underscore><parenleft><parenright><slash>                                     : "⋡" U22E1 # DOES NOT SUCCEED OR EQUAL
 #
-#   (The sequences for "⋢" U22E2, "⋣" U22E3 are based on the character names,
-#   while the glyphs may be lacking the single-line equal below in some fonts.)
+#   The underscore accounting for the character names of "⋢" U22E2, "⋣" U22E3
+#   is streamlined as non-critical, consistently with the glyphs in some fonts
+#   lacking the single-line equal below.
 #
+#   The bracket accounting for the square semantics is supported both ways, the
+#   one consistent with the symbol’s shape and also the other one the other way
+#   around, for lenience, in an effort to streamline the user experience.
+#   See #   Streamlining
+#
+#Multi_key><c><bracketleft><slash><underscore>                                                     : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
+<Multi_key><c><bracketleft><slash>                                                                 : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
+<Multi_key><c><bracketright><slash>                                                                : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
+#Multi_key><b><bracketright><slash><underscore>                                                    : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><b><bracketright><slash>                                                                : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><b><bracketleft><slash>                                                                 : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><backslash><bracketright><slash>                                                     : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><backslash><bracketleft><slash>                                                      : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><bracketleft><underscore><slash>                                                     : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
+<Multi_key><c><bracketright><underscore><slash>                                                    : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
+<Multi_key><b><bracketright><underscore><slash>                                                    : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><b><bracketleft><underscore><slash>                                                     : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><c><bracketright><underscore><slash>                                                 : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><c><bracketleft><underscore><slash>                                                  : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><backslash><bracketright><underscore><slash>                                         : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><backslash><bracketleft><underscore><slash>                                          : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 #@
-<Multi_key><c><bracketleft><slash><underscore>                                             <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
-<Multi_key><c><bracketleft><slash><underscore>                                      <nobreakspace> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
-<Multi_key><c><bracketright><slash><underscore>                                            <space> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
-<Multi_key><c><bracketright><slash><underscore>                                     <nobreakspace> : "⋢" U22E2 # NOT SQUARE IMAGE OF OR EQUAL TO
-<Multi_key><b><bracketright><slash><underscore>                                            <space> : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
-<Multi_key><b><bracketright><slash><underscore>                                     <nobreakspace> : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
-<Multi_key><c><backslash><bracketright><slash><underscore>                                 <space> : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
-<Multi_key><c><backslash><bracketright><slash><underscore>                          <nobreakspace> : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
-<Multi_key><c><bracketleft><underscore><slash>                                             <space> : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
-<Multi_key><c><bracketleft><underscore><slash>                                      <nobreakspace> : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
-<Multi_key><c><bracketright><underscore><slash>                                            <space> : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
-<Multi_key><c><bracketright><underscore><slash>                                     <nobreakspace> : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
-<Multi_key><b><bracketright><underscore><slash>                                            <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
-<Multi_key><b><bracketright><underscore><slash>                                     <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
-<Multi_key><c><c><bracketright><underscore><slash>                                         <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
-<Multi_key><c><c><bracketright><underscore><slash>                                  <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
-<Multi_key><c><backslash><bracketright><underscore><slash>                                 <space> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
-<Multi_key><c><backslash><bracketright><underscore><slash>                          <nobreakspace> : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><less><asciitilde><slash>                                                       <space> : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
 <Multi_key><less><asciitilde><slash>                                                <nobreakspace> : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
 <Multi_key><greater><asciitilde><slash>                                                    <space> : "⋧" U22E7 # GREATER-THAN BUT NOT EQUIVALENT TO
