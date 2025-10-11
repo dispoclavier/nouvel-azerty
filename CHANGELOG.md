@@ -18,9 +18,15 @@ Réimplémentation des touches mortes enchaînées diacritiques ou transformatio
 
 Réimplémentation pour Windows de la touche de composition sur le modèle finalisé pour Linux.
 
-## 6.0.10 (projet)
+## 6.0.11 (projet)
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
+## 6.0.10 (projet)
+
+Complétion du mode d’emploi des fichiers d’inscription au Registre.
+
+Complétion et simplification de séquences de composition.
 
 * Composition :
 	* Redonder les coups de glotte "ƾ" U+01BE, "Ɂ" U+0241, "ɂ" U+0242, "ʔ" U+0294, "ʕ" U+0295, "ʖ" U+0296, "ʡ" U+02A1, "ʢ" U+02A2, "ˀ" U+02C0, "ˁ" U+02C1, "ˤ" U+02E4, "𐞳" U+107B3, "𐞴" U+107B4, "𝼎" U+1DF0E. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723)
@@ -33,7 +39,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 	* Simplifier et compléter les séquences de "⋢" U+22E2, "⋣" U+22E3, "⋤" U+22E4, "⋥" U+22E5. compose-1.yml [0236e61](https://github.com/dispoclavier/nouvel-azerty/commit/0236e61769521aa4aa1eadf7b2e6cc170cb3c6a4)
 	* Simplifier les séquences de "⋦" U+22E6, "⋧" U+22E7, "⋨" U+22E8, "⋩" U+22E9. compose-1.yml [f5a5061](https://github.com/dispoclavier/nouvel-azerty/commit/f5a5061797ce1d51f665d337c2415295bd54b3ee)
 * Sous-variantes : Mettre à jour, corriger et compléter les fichiers d’inscription au Registre et leur mode d’emploi. windows/redispositions/readme.md alias _Scancode_Map.md [680a5b5](https://github.com/dispoclavier/nouvel-azerty/commit/680a5b5feff04b7baa0c21c25244ec43bb85ce6f), [25de410](https://github.com/dispoclavier/nouvel-azerty/commit/25de410b41e51c6732e63214dbc41992cab6b1a1), [135574f](https://github.com/dispoclavier/nouvel-azerty/commit/135574fd8e0ebbd460cd86a42359bd03dc844dec)
-* Documentation : Corriger des annotations. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723), [55d9730](https://github.com/dispoclavier/nouvel-azerty/commit/55d9730f97708f0748792ff365a403b8345bb482), [874f34c](https://github.com/dispoclavier/nouvel-azerty/commit/874f34ca27fb1fa5bc712d65a5e8176a7db21e52) ; [b2ace6c](https://github.com/dispoclavier/nouvel-azerty/commit/b2ace6cff8d2ee232f2fcf900b2cd76caab26129), compose-2.yml ibidem
+* Documentation : Corriger ou mettre à jour des annotations. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723), [55d9730](https://github.com/dispoclavier/nouvel-azerty/commit/55d9730f97708f0748792ff365a403b8345bb482), [874f34c](https://github.com/dispoclavier/nouvel-azerty/commit/874f34ca27fb1fa5bc712d65a5e8176a7db21e52) ; [b2ace6c](https://github.com/dispoclavier/nouvel-azerty/commit/b2ace6cff8d2ee232f2fcf900b2cd76caab26129), compose-2.yml ibidem ; kbdeadtrans.c [31c3ca4](https://github.com/dispoclavier/nouvel-azerty/commit/31c3ca4327013ff9f846ea05ec7e52348070ddef), [e3c2cda](https://github.com/dispoclavier/nouvel-azerty/commit/e3c2cda9c0b6dc70aed5b4450f4db744b9bcca23), dead-key-convert.pl [a2cecf8](https://github.com/dispoclavier/nouvel-azerty/commit/a2cecf8a2ba2c070bd30b6dc5a696723b7cf572f)
 
 ## 6.0.9 (2025-10-02)
 
