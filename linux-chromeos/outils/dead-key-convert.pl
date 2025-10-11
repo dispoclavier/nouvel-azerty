@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-09-21T1739+0200
+# 2025-10-11T2302+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -117,7 +117,7 @@ my @dead_key_out      = ();
 my @chained_dead_keys = ();
 my @high_surrogates   = ();
 my @bad_format        = ();
-my ( $deadkey, $input, $output_string, $output_code, $comment, $deadchar, $print,
+my ( $deadkey, $input, $input_string, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
 my $multichar = 0;
 my $half      = 0;
@@ -340,6 +340,13 @@ foreach my $line ( @dead_key_out ) {
 			$input =~ s/oopen/0254/;
 			$input =~ s/Oopen/0186/;
 
+			if ( $input =~ /[0-9A-F]{4}/ ) {
+				$input_string = chr( hex( $input ) );
+			} else {
+				$input_string = $input;
+				$input_string =~ s/\\?(.)/$1/;
+			}
+				
 			if ( $output_code =~ /[0-9A-F]{5}/ ) {
 				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
 				unless ( grep( /^$high_su$/, @high_surrogates ) ) {
@@ -355,7 +362,7 @@ foreach my $line ( @dead_key_out ) {
 				++$full;
 			}
 
-			$print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) . "*/ DEADTRANS( " . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $output_string . '" ' . $comment . "\n";
+			$print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) . "*/ DEADTRANS( " . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $input_string . '" ➔ "' . $output_string . '" ' . $comment . "\n";
 		}
 	} else {
 		++$multichar;
