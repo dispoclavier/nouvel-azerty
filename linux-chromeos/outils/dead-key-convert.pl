@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-10-11T2302+0200
+# 2025-10-12T1255+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -19,7 +19,7 @@
 # are commented out due to conflicts.
 #
 # The sequences ending in dead_greek are required because dead_greek is
-# duplicated on the position of the at sign in the ASCII symbol map.
+# duplicated on the position of the at sign on the ASCII symbol map.
 #
 # Not all chained dead keys are symmetric.
 # See Compose.yml # # MACRON&DIAERESIS
@@ -35,19 +35,20 @@
 # The issue is also documented.
 # See Compose.yml # # Order of mixed dead keys
 #
-# On 2025-06-22, 1 091 sequences have multicharacter output. Most are letters
+# On 2025-10-12, 1 097 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. But Windows is unable to output any of them
-# by dead keys. As a consequence, the sequences are skipped throughout in order
-# to not compromise the "ê" key and "ç" key emulations. Windows users are aware
-# that composed letters are input the other way around.
+# by dead keys due to an improperly designed DEADTRANS macro. As a consequence,
+# the sequences are skipped throughout in order to not compromise the "ê" key
+# and "ç" key emulations. Windows users are aware that composed letters are to
+# be input the other way around.
 #
-# 2 013 dead key sequences yield Latin letters or mathematical symbols encoded
+# 2 232 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
 # workaround, the dead key output is restricted to the low surrogate. An input
 # method for the high surrogates is provided separately at the root of related
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
-# most dead keys, on level 4 of the space bar in French mode.
+# most dead keys, at level 4 of the space bar in French mode.
 #
 # The number of required high surrogates amounts to eight:
 #
@@ -55,7 +56,7 @@
 #     D835, D837, D83C, D83D, D83E,
 #     DB40.
 #
-# These can be dispatched among dead keys most straightforwardly as follows:
+# These are dispatched among dead keys:
 #
 #     D801 dead_superscript (modifier letters)
 #     D807 dead_turned (U+11FB0 "𑾰" LISU LETTER YHA)
@@ -78,9 +79,10 @@
 # block comments (in addition to EOL comments) are best for human readability,
 # and with long lists are more readable than the grouped layout.
 #
-# As a result, any DEADTRANS macro call can be overridden by a similar call,
-# with the same input and the same dead character, but another output, provided
-# that the valid call precedes anyhow in the source code.
+# Another upside of writing dead key data in C is that any DEADTRANS macro call
+# can be overridden by a similar call, with the same input and the same dead
+# character, but another output, provided that the valid call precedes in the
+# source code.
 #
 # XKB keysyms are converted as needed, without directly using keysymdef.h.
 #
@@ -119,6 +121,7 @@ my @high_surrogates   = ();
 my @bad_format        = ();
 my ( $deadkey, $input, $input_string, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
+my $delim     = '"';
 my $multichar = 0;
 my $half      = 0;
 my $full      = 0;
@@ -345,6 +348,9 @@ foreach my $line ( @dead_key_out ) {
 			} else {
 				$input_string = $input;
 				$input_string =~ s/\\?(.)/$1/;
+				if ( $input_string =~ /^"$/ ) {
+					$delim = "'";
+				}
 			}
 				
 			if ( $output_code =~ /[0-9A-F]{5}/ ) {
@@ -362,7 +368,7 @@ foreach my $line ( @dead_key_out ) {
 				++$full;
 			}
 
-			$print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) . "*/ DEADTRANS( " . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . '"' . $input_string . '" ➔ "' . $output_string . '" ' . $comment . "\n";
+			$print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) . "*/ DEADTRANS( " . formatCharacter( $input ) . "\t," . formatCharacter( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . $delim . $input_string . $delim . ' ➔ "' . $output_string . '" ' . $comment . "\n";
 		}
 	} else {
 		++$multichar;
