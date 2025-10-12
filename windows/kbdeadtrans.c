@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update transpiled dead key data         6.0.10.0.3 Sun 2025-10-12T0108+0200
 * Add annotations about backporting       6.0.10.0.2 Sun 2025-10-12T0025+0200
 * Add annotation about U+107A2            6.0.10.0.1 Sat 2025-10-11T2334+0200
 * Improve readability, add progressmark   6.0.10.0.0 Sat 2025-10-11T2247+0200
@@ -413,6 +414,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L'e'	,0x00E1	,0x00E9	,0x0000	), // 'e' ➔ "é" LATIN SMALL LETTER E WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( 0x00C9	,0x00E1	,0x00C3	,0x0000	), // 'É' ➔ "Ã" LATIN CAPITAL LETTER A WITH TILDE
 /*<!acute>                                                         */ DEADTRANS( 0x00E9	,0x00E1	,0x00E3	,0x0000	), // 'é' ➔ "ã" LATIN SMALL LETTER A WITH TILDE
+/*<!acute>                                                         */ DEADTRANS( 0x00C8	,0x00E1	,0x00D1	,0x0000	), // 'È' ➔ "Ñ" LATIN CAPITAL LETTER N WITH TILDE
+/*<!acute>                                                         */ DEADTRANS( 0x00E8	,0x00E1	,0x00F1	,0x0000	), // 'è' ➔ "ñ" LATIN SMALL LETTER N WITH TILDE
 /*<!acute>                                                         */ DEADTRANS( L'G'	,0x00E1	,0x01F4	,0x0000	), // 'G' ➔ "Ǵ" LATIN CAPITAL LETTER G WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'g'	,0x00E1	,0x01F5	,0x0000	), // 'g' ➔ "ǵ" LATIN SMALL LETTER G WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'I'	,0x00E1	,0x00CD	,0x0000	), // 'I' ➔ "Í" LATIN CAPITAL LETTER I WITH ACUTE
@@ -436,6 +439,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!acute>                                                         */ DEADTRANS( L's'	,0x00E1	,0x015B	,0x0000	), // 's' ➔ "ś" LATIN SMALL LETTER S WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'U'	,0x00E1	,0x00DA	,0x0000	), // 'U' ➔ "Ú" LATIN CAPITAL LETTER U WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'u'	,0x00E1	,0x00FA	,0x0000	), // 'u' ➔ "ú" LATIN SMALL LETTER U WITH ACUTE
+/*<!acute>                                                         */ DEADTRANS( 0x00D9	,0x00E1	,0x0294	,0x0000	), // 'Ù' ➔ "ʔ" LATIN LETTER GLOTTAL STOP
+/*<!acute>                                                         */ DEADTRANS( 0x00F9	,0x00E1	,0x0294	,0x0000	), // 'ù' ➔ "ʔ" LATIN LETTER GLOTTAL STOP
 /*<!acute>                                                         */ DEADTRANS( L'W'	,0x00E1	,0x1E82	,0x0000	), // 'W' ➔ "Ẃ" LATIN CAPITAL LETTER W WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'w'	,0x00E1	,0x1E83	,0x0000	), // 'w' ➔ "ẃ" LATIN SMALL LETTER W WITH ACUTE
 /*<!acute>                                                         */ DEADTRANS( L'Y'	,0x00E1	,0x00DD	,0x0000	), // 'Y' ➔ "Ý" LATIN CAPITAL LETTER Y WITH ACUTE
