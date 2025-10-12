@@ -19,7 +19,7 @@ Ce nouvel AZERTY en mode français :
 Ce nouvel AZERTY en mode français à capitales verrouillées :
 ![Ce nouvel AZERTY en mode français à capitales verrouillées](https://dispoclavier.com/img/nouvel-azerty-verrcap.png)
 Ce nouvel AZERTY en mode ASCII :
-![Ce nouvel AZERTY en mode ASCII)](https://dispoclavier.com/img/nouvel-azerty-verrmod.png)
+![Ce nouvel AZERTY en mode ASCII](https://dispoclavier.com/img/nouvel-azerty-verrmod.png)
 Ce nouvel AZERTY en mode ASCII à capitales verrouillées :
 ![Ce nouvel AZERTY en mode ASCII à capitales verrouillées](https://dispoclavier.com/img/nouvel-azerty-verrmod-verrcap.png)
 
@@ -86,18 +86,18 @@ Enfin, Majuscule donne accès à trois tirets, deux traits d’union, et l’exp
 * Tiret demi-cadratin "–" U+2013 sur ⟦3"#⟧ ;
 * Tiret trois quarts de cadratin ou barre de dialogue ou de citation "―" U+2015 sur ⟦8_\\⟧.
 
-• Les deux traits d’union :
+• Deux traits d’union spécialisés :
 
 * Trait d’union insécable "‑" U+2011 sur ⟦6-|⟧ ;
 * Trait d’union virtuel "­" U+00AD sur ⟦5([⟧.
 
-Le trait d’union qu’il n’y a pas (et ce n’est pas un oubli) :
+Le trait d’union qu’il n’y a pas (ce n’est pas un oubli) :
 
 * Contrairement au trait d’union insécable, jamais en fin de ligne, et
 * contrairement au trait d’union virtuel, cette césure conditionnelle avec trait d’union,
 * le « trait d’union » "‐" U+2010 n’est pas sur touche vive.
 
-Non faute de place, mais parce qu’il est un doublon du tiret du 6, un doublon du trait d’union ASCII (sauf dans Lucida Sans Unicode), mais un doublon qui dans une partie des cas ne fonctionne pas.
+Non pas faute de place, mais parce qu’il est un doublon du tiret du 6, un doublon du trait d’union ASCII (sauf dans Lucida Sans Unicode), mais un doublon qui dans une partie des cas ne fonctionne pas.
 
 La disposition de clavier avec deux traits d’union sécables, dont un faux en mode français uniquement (aux dépens du point médian en Minuscule), est du domaine de la personnalisation, car elle intéresse uniquement les personnes utilisant Lucida Sans Unicode, police de caractères inutilisée en pratique, car inutilisable sans disposition de clavier avec deux traits d’union sécables en Minuscule.
 
