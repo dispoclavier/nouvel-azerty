@@ -1,55 +1,31 @@
-# 6.0.9 (2025-10-02)
+# 6.0.10 (2025-10-12)
 
-Dépannage des pilotes de disposition pour Windows, phase 2.
+Complétion du mode d’emploi des fichiers d’inscription au Registre.
 
-Complétion et simplification de séquences de composition.
+Correction, complétion et simplification de séquences de composition.
+
+Complétion de la touche morte accent aigu.
 
 ## Modifications
 
-* Pilotes de disposition :
-	* Fournir des clones de dépannage. kbfrFRs2.C, kbfrFRr2.C [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310), [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19), kbbrFRs2.C, kbfrAFs2.C, kbfrPFs2.C [71edaea](https://github.com/dispoclavier/nouvel-azerty/commit/71edaea623bb75946c19cbef29408d5195d702c3)
-	* Renommer les dispositions en kb****(s|r)1. [711d66f](https://github.com/dispoclavier/nouvel-azerty/commit/711d66f119a20f0c34410b7331355619871d0edb)
-		* kbbrFRs.C devient kbbrFRs1.C [9ce57ca](https://github.com/dispoclavier/nouvel-azerty/commit/9ce57caa34e4a5f42f42a6f3c2b50daeefb23487)
-		* kbbrFRs.klc devient kbbrFRs1.klc [190881e](https://github.com/dispoclavier/nouvel-azerty/commit/190881e9c8d7afa8d9a1046a6d029a93dedb846c)
-		* kbbrFRs.RC devient kbbrFRs1.RC [6491d6e](https://github.com/dispoclavier/nouvel-azerty/commit/6491d6e4e91a095f6c65a3cf48d5d1d84998c1d4)
-		* kbfrAFs.C devient kbfrAFs1.C [586c1fe](https://github.com/dispoclavier/nouvel-azerty/commit/586c1fed4efa4ade7d0ca7d3d1271fd1b98ec5db)
-		* kbfrAFs.klc devient kbfrAFs1.klc [f709f58](https://github.com/dispoclavier/nouvel-azerty/commit/f709f58b9cf77ad0be0fd9f281a6519ca1e71407)
-		* kbfrAFs.RC devient kbfrAFs1.RC [cfe535c](https://github.com/dispoclavier/nouvel-azerty/commit/cfe535cce332e6deff0bb3ed936c6f10f1c406ce)
-		* kbfrFRs.C devient kbfrFRs1.C [77379ea](https://github.com/dispoclavier/nouvel-azerty/commit/77379ea358e03b9a9fb5ac3a86c8e3749bbd7a27)
-		* kbfrFRs.klc devient kbfrFRs1.klc [7179f4a](https://github.com/dispoclavier/nouvel-azerty/commit/7179f4a4f121cf2068fb95580a6446c0485f0138)
-		* kbfrFRs.RC devient kbfrFRs1.RC [ccfe777](https://github.com/dispoclavier/nouvel-azerty/commit/ccfe77790c74df267d1110806045421fed0329b8)
-		* kbfrPFs.C devient kbfrPFs1.C [5c0f878](https://github.com/dispoclavier/nouvel-azerty/commit/5c0f8783cdd1d061b3eac89fef481ebae8559b8f)
-		* kbfrPFs.klc devient kbfrPFs1.klc [f19b70b](https://github.com/dispoclavier/nouvel-azerty/commit/f19b70bf23681136ae707a3533aab188e5ae5668)
-		* kbfrPFs.RC devient kbfrPFs1.RC [851306a](https://github.com/dispoclavier/nouvel-azerty/commit/851306ac953df549bcbe8f69a14c111487b67bb2)
-		* redispo/kbfrFRsr.C devient redispo/kbfrFRr1.C [79c40ba](https://github.com/dispoclavier/nouvel-azerty/commit/79c40bad0737b1a1b1104ec52c484650bb5d9d8c)
-		* redispo/kbfrFRsr.klc devient redispo/kbfrFRr1.klc [b64c48a](https://github.com/dispoclavier/nouvel-azerty/commit/b64c48ad923ccec292432f4177f7c90e3e2a971e)
-		* redispo/kbfrFRsr.RC devient redispo/kbfrFRr1.RC [dc8ae9e](https://github.com/dispoclavier/nouvel-azerty/commit/dc8ae9e9d0d0953542297aa8ff625f920f5d1f1f)
-		* redispo/kbfrFRsr-allo.c devient redispo/kbfrFRr-allo.c [a6c7d0e](https://github.com/dispoclavier/nouvel-azerty/commit/a6c7d0e49a2f0ac8d103b5382e1c61e711c36c2a)
-		* kbcommon.H devient kbcommon.h [6dc70f2](https://github.com/dispoclavier/nouvel-azerty/commit/6dc70f26f58364e9e93a01edc54f7cded04bb1da)
-	* Déboguer les numéros de version dans les métadonnées. kbbrFRs.RC, kbfrAFs.RC, kbfrFRr2.RC, kbfrFRs2.RC, kbfrFRs.RC, kbfrFRsr.RC, kbfrPFs.RC [1ec3bda](https://github.com/dispoclavier/nouvel-azerty/commit/1ec3bda65e4e885f0dc5aebf725c25b200f5c619)
-	* Centraliser le versionnage. kbversion-int.RC, kbversion-str.RC, kbbrFRs.RC, kbfrAFs.RC, kbfrFRr2.RC, kbfrFRs2.RC, kbfrFRs.RC, kbfrFRsr.RC, kbfrPFs.RC [756a357](https://github.com/dispoclavier/nouvel-azerty/commit/756a357dab635d1ed7649514644c43c033373c0b)
-	* Corriger le versionnage.
-		* kbversion-int.rc [47e62a5](https://github.com/dispoclavier/nouvel-azerty/commit/47e62a5d7d3a1c654742870a63c93f9a27dd67d3)
-		* kbversion-str.rc [a6e7acc](https://github.com/dispoclavier/nouvel-azerty/commit/a6e7acc3bfae74aeba61ad3f458153fab1408d38)
-		* kbligatures.c [ddd6cb2](https://github.com/dispoclavier/nouvel-azerty/commit/ddd6cb2f894aedd4d9334059abceec3906d37793)
 * Composition :
-	* Simplifier et compléter les séquences de "⋇" U+22C7. compose-1.yml [cbb719d](https://github.com/dispoclavier/nouvel-azerty/commit/cbb719dcb4e26e1427c91c560f03d1b1060f305b), [105f4d7](https://github.com/dispoclavier/nouvel-azerty/commit/105f4d7b68211409cdf6b24d9918f15b2f8216d6)
-	* Adapter la séquence de "🣖" U+1F8D6. ibidem
-	* Compléter les séquences de "⋋" U+22CB, "⋌" U+22CC. compose-1.yml [a6e4f3e](https://github.com/dispoclavier/nouvel-azerty/commit/a6e4f3e56621cd22ae04ac6fd2b18ca11cdd0ca9), [248c997](https://github.com/dispoclavier/nouvel-azerty/commit/248c997805184ff64a8979987c40e0aefa547191)
+	* Redonder les coups de glotte "ƾ" U+01BE, "Ɂ" U+0241, "ɂ" U+0242, "ʔ" U+0294, "ʕ" U+0295, "ʖ" U+0296, "ʡ" U+02A1, "ʢ" U+02A2, "ˀ" U+02C0, "ˁ" U+02C1, "ˤ" U+02E4, "𐞳" U+107B3, "𐞴" U+107B4, "𝼎" U+1DF0E. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723)
+	* Redonder "ŉ" U+0149 par « ¦&n ». ibidem
+	* Compléter les séquences de "ɮ" U+026E, "𐞊" U+1078A, "𐞞" U+1079E. compose-1.yml [55d9730](https://github.com/dispoclavier/nouvel-azerty/commit/55d9730f97708f0748792ff365a403b8345bb482)
+	* Ajouter "⇱" U+21F1 à la place de "↸" U+21B8. compose-1.yml [b2ace6c](https://github.com/dispoclavier/nouvel-azerty/commit/b2ace6cff8d2ee232f2fcf900b2cd76caab26129)
+	* Ajouter "⇲" U+21F2. ibidem
+	* Simplifier les séquences de "⋎" U+22CE, "⋏" U+22CF, "⋔" U+22D4, "⋕" U+22D5, "⋘" U+22D8, "⋙" U+22D9, "⋞" U+22DE, "⋟" U+22DF, "⋠" U+22E0, "⋡" U+22E1. ibidem
+	* Compléter les séquences de "⋐" U+22D0. ibidem
+	* Simplifier et compléter les séquences de "⋢" U+22E2, "⋣" U+22E3, "⋤" U+22E4, "⋥" U+22E5. compose-1.yml [0236e61](https://github.com/dispoclavier/nouvel-azerty/commit/0236e61769521aa4aa1eadf7b2e6cc170cb3c6a4)
+	* Simplifier les séquences de "⋦" U+22E6, "⋧" U+22E7, "⋨" U+22E8, "⋩" U+22E9. compose-1.yml [f5a5061](https://github.com/dispoclavier/nouvel-azerty/commit/f5a5061797ce1d51f665d337c2415295bd54b3ee)
+* Transformations : Accent aigu :
+	* Redonder "Ñ" U+00D1, "ñ" U+00F1 par "È" U+00C8, "è" U+00E8. compose-2.yml [](), kbdeadtrans.c [8101eb6](https://github.com/dispoclavier/nouvel-azerty/commit/8101eb63e73531313ccbf1fd94a85bfbbea71f71)
+	* Redonder "ʔ" U+0294 par "ù" U+00F9, "Ù" U+00D9. ibidem
+* Sous-variantes : Mettre à jour, corriger et compléter les fichiers d’inscription au Registre et leur mode d’emploi. windows/redispositions/readme.md alias _Scancode_Map.md [680a5b5](https://github.com/dispoclavier/nouvel-azerty/commit/680a5b5feff04b7baa0c21c25244ec43bb85ce6f), [25de410](https://github.com/dispoclavier/nouvel-azerty/commit/25de410b41e51c6732e63214dbc41992cab6b1a1), [135574f](https://github.com/dispoclavier/nouvel-azerty/commit/135574fd8e0ebbd460cd86a42359bd03dc844dec)
 * Documentation :
-	* Mettre à jour le mode d’emploi condensé sous Windows. Lisez-moi-svp.md [059b202](https://github.com/dispoclavier/nouvel-azerty/commit/059b2023d70a48616e63f64d9133f2ad549c8992)
-	* Corriger et mettre à jour des annotations dans les fichiers KLC. kbbrFRs.klc, kbfrAFs.klc, kbfrFRr2.klc, kbfrFRs2.klc, kbfrFRs.klc, kbfrFRsr.klc, kbfrPFs.klc [9e041f8](https://github.com/dispoclavier/nouvel-azerty/commit/9e041f8cbe829073c0793254509cdc02a3c06de1), [ddd6cb2](https://github.com/dispoclavier/nouvel-azerty/commit/ddd6cb2f894aedd4d9334059abceec3906d37793)
-* Builds :
-	* 6.0.9.00 [41512f2](https://github.com/dispoclavier/nouvel-azerty/commit/41512f2dbaad6c0b4263902214f486682053b310)
-	* 6.0.9.01 [a361b04](https://github.com/dispoclavier/nouvel-azerty/commit/a361b04af93c721b97bf1c7214a1fc960b92ad19)
-	* 6.0.9.02 [1ec3bda](https://github.com/dispoclavier/nouvel-azerty/commit/1ec3bda65e4e885f0dc5aebf725c25b200f5c619)
-	* 6.0.9.03 mojibake.
-	* 6.0.9.04 échec.
-	* 6.0.9.05 [756a357](https://github.com/dispoclavier/nouvel-azerty/commit/756a357dab635d1ed7649514644c43c033373c0b)
-	* 6.0.9.6 [9e041f8](https://github.com/dispoclavier/nouvel-azerty/commit/9e041f8cbe829073c0793254509cdc02a3c06de1)
-	* 6.0.9.7 [ddd6cb2](https://github.com/dispoclavier/nouvel-azerty/commit/ddd6cb2f894aedd4d9334059abceec3906d37793)
-	* 6.0.9.8 [711d66f](https://github.com/dispoclavier/nouvel-azerty/commit/711d66f119a20f0c34410b7331355619871d0edb)
-	* 6.0.9.9 [71edaea](https://github.com/dispoclavier/nouvel-azerty/commit/71edaea623bb75946c19cbef29408d5195d702c3)
+	* Corriger les modes d’emploi. readme.md alias Mode-d-emploi-commun.md [0ce9a9a](https://github.com/dispoclavier/nouvel-azerty/commit/0ce9a9ab5813c366fb7fffd3592bdbe6dc9095d7), linux-chromeos/Lisez-moi-svp.md, windows/Lisez-moi-svp.md [a25897e](https://github.com/dispoclavier/nouvel-azerty/commit/a25897e82e8e097f55ab01d9f54b77baf7135b5c)
+	* Corriger ou mettre à jour des annotations. compose-1.yml [71360f5](https://github.com/dispoclavier/nouvel-azerty/commit/71360f5560e4b129e9e7fbd71e89c07423fdb723), [55d9730](https://github.com/dispoclavier/nouvel-azerty/commit/55d9730f97708f0748792ff365a403b8345bb482), [874f34c](https://github.com/dispoclavier/nouvel-azerty/commit/874f34ca27fb1fa5bc712d65a5e8176a7db21e52) ; [b2ace6c](https://github.com/dispoclavier/nouvel-azerty/commit/b2ace6cff8d2ee232f2fcf900b2cd76caab26129), compose-2.yml ibidem ; kbdeadtrans.c [31c3ca4](https://github.com/dispoclavier/nouvel-azerty/commit/31c3ca4327013ff9f846ea05ec7e52348070ddef), [e3c2cda](https://github.com/dispoclavier/nouvel-azerty/commit/e3c2cda9c0b6dc70aed5b4450f4db744b9bcca23), [eddf873](https://github.com/dispoclavier/nouvel-azerty/commit/eddf873970063a0346791ed86c31810d0c65603e), dead-key-convert.pl [a2cecf8](https://github.com/dispoclavier/nouvel-azerty/commit/a2cecf8a2ba2c070bd30b6dc5a696723b7cf572f), [80b0bce](https://github.com/dispoclavier/nouvel-azerty/commit/80b0bce7e6a828a6557fde1c867fcd1429aee0a6)
+* Build : 6.0.10.0 [7667a1b](https://github.com/dispoclavier/nouvel-azerty/commit/7667a1b35afe593a226d9a8e4311d5df4409b32e)
 
 ## Pour Windows
 
@@ -61,7 +37,7 @@ La variante AZERTY pour la langue bretonne, celle pour la Polynésie française,
 
 ### Installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Windows-6.0.8.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.8/Un-nouvel-AZERTY-Windows-6.0.8.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Windows-6.0.10.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.10/Un-nouvel-AZERTY-Windows-6.0.10.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
 ## Pour Linux
 
@@ -71,7 +47,7 @@ Toutes les variantes AZERTY ou redisposées sont incluses (installation) ou four
 
 ### Activation ou installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.8.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.8/Un-nouvel-AZERTY-Linux-6.0.8.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.0.10.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.0.10/Un-nouvel-AZERTY-Linux-6.0.10.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
 
 ## Pour macOS
 
@@ -81,11 +57,11 @@ La version pour macOS est en instance de réimplémentation.
 
 ## Statistiques de téléchargement
 
-Contrairement à [SourceForge](https://medium.com/@carlspring/the-rise-fall-and-resurgence-of-sourceforge-what-happened-to-the-open-source-pioneer-527e9288f9bb), où [ce nouvel AZERTY a un miroir des versions](https://sourceforge.net/projects/nouvel-azerty/) (depuis le 4/10/2025), GitHub n’affiche pas de statistiques de téléchargement, mais celles de ce dépôt sont affichées par [Somsubhra](https://somsubhra.github.io/github-release-stats/?username=dispoclavier&repository=nouvel-azerty&page=1&per_page=100) sur plusieurs pages, et par [GREV](https://hanadigital.github.io/grev/?user=dispoclavier&repo=nouvel-azerty) sur une page. [Qwertycube](https://qwertycube.com/github-release-stats/) les affiche après saisie. Du total il faut soustraire les téléchargements effectués par SourceForge (156 jusqu’à la version 6.0.9).
+Contrairement à [SourceForge](https://medium.com/@carlspring/the-rise-fall-and-resurgence-of-sourceforge-what-happened-to-the-open-source-pioneer-527e9288f9bb), où [ce nouvel AZERTY a un miroir des versions](https://sourceforge.net/projects/nouvel-azerty/) (depuis le 4/10/2025), GitHub n’affiche pas de statistiques de téléchargement, mais celles de ce dépôt sont affichées par [Somsubhra](https://somsubhra.github.io/github-release-stats/?username=dispoclavier&repository=nouvel-azerty&page=1&per_page=100) sur plusieurs pages, et par [GREV](https://hanadigital.github.io/grev/?user=dispoclavier&repo=nouvel-azerty) sur une page. [Qwertycube](https://qwertycube.com/github-release-stats/) les affiche après saisie. Du total il faut soustraire les téléchargements effectués par SourceForge (156 jusqu’à la version 6.0.10).
 
 ## À propos
 
 Cette note est [versionnée](https://github.com/dispoclavier/nouvel-azerty/blob/main/Note-de-version.md).
 
-| Dernière mise à jour : 2025-10-09 |
+| Dernière mise à jour : 2025-10-12 |
 |-|
