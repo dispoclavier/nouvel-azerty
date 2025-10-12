@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.9
-    Version et nᵒ de build : 6.0.9.9
-                      Date : 2025-10-02T2114+0200
+                   Version : 6.0.10
+    Version et nᵒ de build : 6.0.10.0
+                      Date : 2025-10-12T1912+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -45,7 +45,7 @@ La variante belge ne se décline pas en variante belge redisposée, parce que l�
 
 Outre la disposition standard et ses variantes, des optimisations optionnelles sont disponibles.
 
-* Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche [><] prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique. Ce sont les sous-variantes avec les suffixes "-ansi", "-ansi-menu", "-ansi-menu-sans".
+* Pour les claviers de portable sans la touche ISO entre Maj gauche et W, où la touche ⟦><⟧ prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales sont permutées afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique. Ce sont les sous-variantes avec les suffixes "-ansi", "-ansi-menu", "-ansi-menu-sans".
 
 * Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas. Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Effacement arrière sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, celle-ci est optionnellement désactivée.
 

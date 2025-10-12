@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.0.9
-    Version et nᵒ de build : 6.0.9.9
-                      Date : 2025-10-02T2125+0200
+                   Version : 6.0.10
+    Version et nᵒ de build : 6.0.10.0
+                      Date : 2025-10-12T1836+0200
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -21,21 +21,23 @@ Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs
 
 Chaque jeu de pilotes de disposition est fourni en double et numéroté 1 et 2, parce que sous Windows, les pilotes de disposition tombent parfois en panne, et avoir un deuxième sous la main évite de redémarrer l’ordinateur tout de suite.
 
+Pour essayer ce nouvel AZERTY, un seul jeu de pilotes suffit, mais pour une utilisation prolongée, installer aussi le deuxième permet de parer à toute éventualité. Cela dit, ces pannes sont quand même assez rares.
+
 ## Dossiers et fichiers
 
-* Ce nouvel AZERTY se trouve dans le dossier « installer », dans les sous-dossiers « kbfrFRs1 » et « kbfrFRs2 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
+* Ce nouvel AZERTY se trouve dans le dossier « installer », dans les sous-dossiers « kbfrFRs1-6.0.10.0 » et « kbfrFRs2-6.0.10.0 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
 
 * Dans le dossier « installer », le sous-dossier « Variantes » contient le reste de la gamme disponible sous Windows :
 
-  * Le dossier « kbbrFRs1-6.0.9.9 » qui contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
+  * Le dossier « kbbrFRs1-6.0.10.0 » qui contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
 
-  * Le dossier « kbfrPFs1-6.0.9.9 » qui contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
+  * Le dossier « kbfrPFs1-6.0.10.0 » qui contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
 
-  * Le dossier « kbfrAFs1-6.0.9.9 » qui contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
+  * Le dossier « kbfrAFs1-6.0.10.0 » qui contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
 
-  * Le dossier « kbfrFRr1-6.0.9.9 » qui contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+  * Le dossier « kbfrFRr1-6.0.10.0 » qui contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
-* Dans le dossier « redispositions » se trouvent des fichiers d’inscription au Registre avec leur mode d’emploi « _Scancode_Map.pdf » (fourni aussi comme fichier texte au format Markdown pour faciliter l’utilisation), pour des redispositions similaires aux sous-variantes sous Linux.
+* Dans le dossier « redispositions » se trouvent des fichiers d’inscription au Registre avec leur mode d’emploi « _Scancode_Map.pdf », fourni aussi comme fichier texte au format Markdown « _Scancode_Map.md » pour faciliter l’utilisation. Ces fichiers peuvent être utilisés pour mettre en place des redispositions similaires aux sous-variantes sous Linux.
 
 ## Installer
 
@@ -136,25 +138,25 @@ La variante belge ne se décline pas en variante redisposée, parce que l’int�
 
 ## Options de disposition
 
-Des optimisations optionnelles par redisposition de touches sont possibles indépendamment des pilotes de disposition. Elles font appel au Redisposeur de codes matériels pour claviers, un logiciel de Windows, et elles sont documentées dans le fichier « _Scancode_Map.txt » dans le dossier « redispositions ».
+Des optimisations optionnelles par redisposition de touches sont possibles indépendamment des pilotes de disposition. Elles font appel au Redisposeur de codes matériels pour claviers, un logiciel de Windows, et elles sont documentées dans le fichier « _Scancode_Map.pdf » dans le dossier « redispositions ».
 
-* Sur les claviers de portable sans la touche ISO entre Maj gauche et W, mais avec un clavier disposé en AZERTY, où la touche [><] prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales doivent être permutées, afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique. Ce sont les fichiers d’inscription au Registre dont les noms commencent par "ansi-iso".
+* Sur les claviers de portable sans la touche ISO entre Maj gauche et W, mais avec un clavier disposé en AZERTY, où la touche ⟦><⟧ prend la place de Contrôle droite, les touches ISO et Verrouillage Capitales doivent être permutées, afin que la touche ISO, qui est la nouvelle modificatrice AltFr, reste située à gauche pour la saisie des grandes ponctuations espacées et l’utilisation du pavé numérique graphique. Ce sont les fichiers d’inscription au Registre dont les noms commencent par "ansi-iso".
 
 * Selon une idée originale du Pʳ Yves Neuville, la touche Effacement arrière est mieux en bas. Avec Effacement arrière à droite d’AltGr, un petit geste du pouce remplace un grand mouvement de la main. Sur les claviers de bureau, cet effet est obtenu en plaçant Effacement arrière sur la touche Windows droite. Afin d’éviter d’actionner la touche Menu par erreur, celle-ci devient optionnellement une troisième touche d’Effacement arrière.
 
-    * Les fichiers d’inscription au Registre dont les noms commencent par "win-dr=" redondent     Effacement arrière sur Windows droite.
+    * Les fichiers d’inscription au Registre dont les noms commencent par "win-dr=" redondent Effacement arrière sur Windows droite.
 
-    * Le fichier d’inscription au Registre "win-dr=ret-arr_sans-menu.reg" redonde Effacement arrière     aussi bien sur Windows droite que sur la touche Menu, afin d'éviter l’ouverture intempestive du     menu contextuel.
+    * Le fichier d’inscription au Registre "win-dr=ret-arr_sans-menu.reg" redonde Effacement arrière aussi bien sur Windows droite que sur la touche Menu, afin d’éviter l’ouverture intempestive du menu contextuel.
 
-    * Les fichiers d’inscription au Registre dont les noms contiennent "menu" mettent Effacement arrière     sur Menu, et Menu sur Effacement arrière sauf si le nom se termine en "_sans-menu".
+    * Les fichiers d’inscription au Registre dont les noms contiennent "menu" mettent Effacement arrière sur Menu, et Menu sur Effacement arrière sauf si le nom se termine en "_sans-menu".
 
-    * Le fichier d’inscription au Registre "ctrl-dr=x=ret-arr.reg" permute les touches Effacement arrière     et Contrôle droite.
+    * Le fichier d’inscription au Registre "ctrl-dr=x=ret-arr.reg" permute les touches Effacement arrière et Contrôle droite.
 
 ## Témoin lumineux
 
 Le témoin lumineux d’Arrêt Défilement devrait pouvoir servir de témoin du verrouillage en mode ASCII par la bascule VerrMod sur la touche E00 au-dessus de Tab à gauche du 1, mais à ce jour, cela fonctionne sous Linux uniquement, sans compter que de nombreux ordinateurs portables sont dépourvus de ce témoin.
 
-Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible aussi lors de la saisie de mots de passe, à condition de commencer la saisie par le chiffre 5, car en mode français, la touche [5] de ce nouvel AZERTY est la touche morte tréma, de sorte que l’absence de retour visuel indique tout de suite que le clavier est en mode français.
+Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible aussi lors de la saisie de mots de passe, à condition de commencer la saisie par le chiffre 5, car en mode français, la touche ⟦5⟧ de ce nouvel AZERTY est la touche morte tréma, de sorte que l’absence de retour visuel indique tout de suite que le clavier est en mode français.
 
 ## Personnalisation
 
@@ -176,7 +178,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 4. Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre « Récemment ajoutées ».
 
-5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.9.zip).
+5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.0.10.zip).
 
 6. Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
