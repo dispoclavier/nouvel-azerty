@@ -7208,6 +7208,13 @@
 #   Followed by Àà, dead_acute is a shortcut to Õõ for Portuguese, with spatial
 #   mnemonic on AZERTY, where "O" (D09) is close to "À" (E10).
 #
+#   Followed by Èè, dead_acute is a shortcut to Ññ for Breton and Spanish, with
+#   spatial mnemonic on AZERTY, where "N" (B06) is below "È" (E07).
+#
+#   Followed by Ùù, dead_acute is a shortcut to unicase glottal stop "ʔ" U0294,
+#   with alphabetic mnemonic and accounting for the lack of level-2 uppercase,
+#   while casing glottal stop is in group 1 of Qq.
+#
 #   The primes by digits sequences add to the support of "′" U2032, "″" U2033,
 #   "‴" U2034, "⁗" U2057 by multikey.
 #   See # # Primes
@@ -7398,6 +7405,14 @@
 <Multi_key><apostrophe>                                                                   <Agrave> : "Õ" U00D5 # LATIN CAPITAL LETTER O WITH TILDE
 <dead_acute>                                                                              <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE
 <Multi_key><apostrophe>                                                                   <agrave> : "õ" U00F5 # LATIN SMALL LETTER O WITH TILDE
+<dead_acute>                                                                              <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
+<Multi_key><apostrophe>                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
+<dead_acute>                                                                              <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
+<Multi_key><apostrophe>                                                                   <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
+<dead_acute>                                                                              <Ugrave> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><apostrophe>                                                                   <Ugrave> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<dead_acute>                                                                              <ugrave> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><apostrophe>                                                                   <ugrave> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
 #
 #
 # # ACUTE&GROUP_1
