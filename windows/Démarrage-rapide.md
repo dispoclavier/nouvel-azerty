@@ -1,5 +1,7 @@
 # Un nouvel AZERTY
 
+Le meilleur mode d’emploi [coule de source sûre dans CCM](https://www.commentcamarche.net/informatique/windows/33353-majuscules-accentuees-windows-quad/) pour une autre disposition de clavier. Il est facilement transposable au cas où.
+
 ## Installation sous Windows
 
 1. Ce nouvel AZERTY est dans le dossier installer\\Un-nouvel-AZERTY.

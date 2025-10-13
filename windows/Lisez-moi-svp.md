@@ -41,6 +41,8 @@ Pour essayer ce nouvel AZERTY, un seul jeu de pilotes suffit, mais pour une util
 
 ## Installer
 
+Le meilleur mode d’emploi [coule de source sûre dans CCM](https://www.commentcamarche.net/informatique/windows/33353-majuscules-accentuees-windows-quad/) pour une autre disposition de clavier. Il est facilement transposable au cas où.
+
 En cliquant tout de suite sur le setup.exe, on ouvre une fenêtre bleue qui dit :
 
         Windows a protégé votre ordinateur
