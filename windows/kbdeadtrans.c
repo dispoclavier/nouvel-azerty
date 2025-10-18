@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Test generated dead key chain            6.1.0.0.0 Sat 2025-10-18T2208+0200
 * Update transpiled dead key data         6.0.10.0.3 Sun 2025-10-12T0108+0200
 * Add annotations about backporting       6.0.10.0.2 Sun 2025-10-12T0025+0200
 * Add annotation about U+107A2            6.0.10.0.1 Sat 2025-10-11T2334+0200
@@ -236,15 +237,23 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * to get these sorted at the top, and padding accounts for the longest IDs of
 * chained dead keys.
 *
+* <!superscript> DEADTRANS( 0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "ø" ➔ "𐞢" MODIFIER LETTER SMALL O WITH STROKE
 * This line requires an extra comment due to the stroke dead key acting as
 * a base character. Small o with stroke is the dead character, and the base
 * character in the base alphabet is skipped as non-critical. As a result,
-* the input is "superscript dead key, zero width space, superscript dead key,
-* stroke dead key", all at level 4 (Shift + AltGr).
-* <!superscript> DEADTRANS( 0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "ø" ➔ "𐞢" MODIFIER LETTER SMALL O WITH STROKE
+* with the required high surrogate input first, the input is:
+* "superscript dead key, zero width space, superscript dead key, stroke dead key",
+* all at level 4 (Shift + AltGr).
 *
 \*****************************************************************************/
 
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x1E57	,0x1E57	,0x02C8	,0x0001), // Dead key chain.
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( L'"'	,0x02C8	,0x030E	,0x0000	), // '"' ➔ "̎" COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x20AC	,0x02C8	,0x030E	,0x0000	), // '€' ➔ "̎" COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x00A0	,0x02C8	,0x02C8	,0x0000	), // ' ' ➔ "ˈ" MODIFIER LETTER VERTICAL LINE
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x202F	,0x02C8	,0x02C8	,0x0000	), // ' ' ➔ "ˈ" MODIFIER LETTER VERTICAL LINE
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( L' '	,0x02C8	,0x030D	,0x0000	), // ' ' ➔ "̍" COMBINING VERTICAL LINE ABOVE: Marshallese
+/*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x200B	,0x02C8	,0x030D	,0x0000	), // '​' ➔ "̍" COMBINING VERTICAL LINE ABOVE: Marshallese
 /*<!abovedot>                                                      */ DEADTRANS( L'\''	,0x1E57	,0x2AC3	,0x0000	), // ''' ➔ "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( 0x2019	,0x1E57	,0x2AC3	,0x0000	), // '’' ➔ "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'~'	,0x1E57	,0x2A6A	,0x0000	), // '~' ➔ "⩪" TILDE OPERATOR WITH DOT ABOVE
@@ -1883,16 +1892,17 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 *
 * This is partly overridden by the transpilation above.
 *
-* Many of the never overridden DEADTRANS calls are to be backported to the
+* Many of the never overridden DEADTRANS calls are yet to be ported to the
 * dead key source Compose.yml, because these are valuable complements with
-* respect to the enhanced user experience design goal.
+* respect to the enhanced user experience design goal, and were skipped to
+* streamline and speed up the initial support on Linux.
 *
-* However, many cannot be backported, such as a shortcut for "n" with tilde in
+* However, many cannot be ported, such as a shortcut for "n" with tilde in
 * the acute accent dead key with "b" as a base character due to its use in
 * Breton, as they are particular to Windows, while regular support includes
 * composed letters, "b́" for instance.
 *
-* Other shortcuts are not backported because they have been redesigned, and the
+* Other shortcuts are not ported because they have been redesigned, and the
 * current option is better, such as "a" with tilde in the acute accent dead key
 * by "é" mnemonically near "a", instead of former "à", that is now used for "o"
 * with tilde, as it is close to the "o" key.

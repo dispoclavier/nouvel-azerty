@@ -20,12 +20,13 @@
 * This file only contains ligatures that do not change across layouts.
 * Ligatures particular to AZERTY are configured in kbligazerty.c.
 * Ligatures particular to QZJFGY are configured in kbligredispo.c.
+* The actual ligature array is in the C sources of the keyboard layouts.
 *
 \*****************************************************************************/
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '0', '.', '1', '0', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '1', '.', '0', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
