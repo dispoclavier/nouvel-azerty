@@ -4,7 +4,7 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: », « ¦¦ ».
 
-## 6.2.0 (projet)
+## 6.3.0 (projet)
 
 Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
 
@@ -12,15 +12,22 @@ Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
 Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
 
+## 6.2.0 (projet)
+
+Réimplémentation pour Windows de la touche de composition sur le modèle finalisé pour Linux.
+
+## 6.1.1 (projet)
+
+Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
 ## 6.1.0 (projet)
 
 Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles pour Windows sur le modèle finalisé pour Linux.
 
-Réimplémentation pour Windows de la touche de composition sur le modèle finalisé pour Linux.
-
-## 6.0.11 (projet)
-
-Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+* Transformations : Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
+* Documentation : Windows : Installation : Citer CCM. Note-de-version.md [ec1d6fa](https://github.com/dispoclavier/nouvel-azerty/commit/ec1d6fa61f3d03a16161db1ec6f205cf3367b315), Démarrage-rapide.md, windows/Lisez-moi-svp.md [81ac4da](https://github.com/dispoclavier/nouvel-azerty/commit/81ac4dad8d8b02f7c537a4174e0fb73c0dbd897d)
+* Builds :
+	* 6.1.0.0 [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
 
 ## 6.0.10 (2025-10-12)
 
