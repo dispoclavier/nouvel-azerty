@@ -938,7 +938,16 @@
 #   <dead_doubleacute>                                  "ű" U0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #   <dead_grave>                                        "ò" U00F2 LATIN SMALL LETTER O WITH GRAVE
 #   <dead_grave><dead_grave>                            "ȕ" U0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE
-#   <dead_greek>                                        "α" U03B1 GREEK SMALL LETTER ALPHA
+#   <dead_greek>                                        "ε" U03B5 # GREEK SMALL LETTER EPSILON
+#
+#       The Greek letter dead key is required by the French keyboard standard,
+#       for scientific notation, but on this keyboard layout it is the circled
+#       dead key alongside and could thus have a related dead character such as
+#       <dead_greek>                                    "⚪" U26AA MEDIUM WHITE CIRCLE (an emoji)
+#       But for diplomatic reasons it is advisable to stick with a Greek letter
+#       at the expense of user-friendliness with respect to persons not reading
+#       Greek, and bothered by the presence of Greek letters on French keymaps.
+#
 #   <dead_hook>                                         "ɱ" U0271 LATIN SMALL LETTER M WITH HOOK
 #   <dead_horn>                                         "ơ" U01A1 LATIN SMALL LETTER O WITH HORN
 #   <dead_invertedbreve>                                "ȏ" U020F LATIN SMALL LETTER O WITH INVERTED BREVE
