@@ -5536,18 +5536,18 @@
 #
 # # Letterlike symbols in block U2100 used in mathematics
 #
-#   Sequences for double-struck or outlined symbols use duplication, script is
-#   a trailing asciitilde, blackletter is numbersign, Hebrew gets a trailing
-#   backslash based on the shape of aleph (for instance the symbol "ℵ" U2135)
-#   although backslash is also the ASCII equivalent of reversed, Greek gets a
-#   trailing at sign, and italic translates to a trailing slash although this
-#   is used to denote negation in other instances: "∄" U2204, "∅" U2205.
-#
 #   Many of these are included in groups 6 to 10, where the complete sets of
 #   alphanumeric mathematical symbols are supported. Not so the liter symbol
 #   "ℓ" U2113, as "𝓁" U1D4C1 is encoded separately.
 #   See # # Mathematical Latin alphabets and digits
 #   See # # Mathematical Greek alphabets and symbols
+#
+#   Sequences for double-struck or outlined symbols use duplication, script is
+#   a trailing asciitilde, blackletter is numbersign, Hebrew gets a trailing
+#   backslash based on the shape of aleph (for instance the symbol "ℵ" U2135)
+#   although backslash is also the ASCII equivalent of reversed, Greek gets a
+#   trailing at sign, and italic translates to a trailing slash, although in
+#   other instances, this is used to denote negation: "∄" U2204, "∅" U2205.
 #
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Letterlike_Symbols_block
 #   https://en.wikipedia.org/wiki/Letterlike_Symbols
