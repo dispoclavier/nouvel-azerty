@@ -938,7 +938,7 @@
 #   <dead_doubleacute>                                  "ű" U0171 LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #   <dead_grave>                                        "ò" U00F2 LATIN SMALL LETTER O WITH GRAVE
 #   <dead_grave><dead_grave>                            "ȕ" U0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE
-#   <dead_greek>                                        "ε" U03B5 # GREEK SMALL LETTER EPSILON
+#   <dead_greek>                                        "ε" U03B5 GREEK SMALL LETTER EPSILON
 #
 #       The "Greek letter" dead key is required by the French keyboard standard
 #       (NF Z71-300:2019, page 17, section 6.2.5; page 7, introduction, bottom;
