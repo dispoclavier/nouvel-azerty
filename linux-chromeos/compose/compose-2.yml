@@ -940,8 +940,10 @@
 #   <dead_grave><dead_grave>                            "ȕ" U0215 LATIN SMALL LETTER U WITH DOUBLE GRAVE
 #   <dead_greek>                                        "ε" U03B5 # GREEK SMALL LETTER EPSILON
 #
-#       The Greek letter dead key is required by the French keyboard standard,
-#       for scientific notation, but on this keyboard layout it is the circled
+#       The "Greek letter" dead key is required by the French keyboard standard
+#       (NF Z71-300:2019, page 17, section 6.2.5; page 7, introduction, bottom;
+#       the dead character specified page 28, row C05, is "µ" U00B5 (“U+014B”))
+#       for scientific notation, but on this keyboard layout, it is the circled
 #       dead key alongside and could thus have a related dead character such as
 #       <dead_greek>                                    "⚪" U26AA MEDIUM WHITE CIRCLE (an emoji)
 #       But for diplomatic reasons it is advisable to stick with a Greek letter
