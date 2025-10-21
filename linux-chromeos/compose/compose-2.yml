@@ -7957,12 +7957,13 @@
 #
 #
 #*# RETROFLEX_HOOK
-#   retroflex hook, hook tail, tail, right hook, squirrel tail
+#   retroflex hook, right hook, hook tail, tail, squirrel tail
 #   *dead_retroflexhook UEFD4
 #   Multi_key: ¦}
 #   Dchar: "ɖ" U0256
 #
-#   A retroflex hook may be referred to as a tail, a hook tail, a right hook.
+#   A retroflex hook may be referred to as a right hook, and based on animal
+#   anatomy, as a tail or a hook tail.
 #
 #   A shortcut for "Ꝕ" UA754, "ꝕ" UA755 P WITH SQUIRREL TAIL is provided for
 #   convenience and ease of input, thanks to the availability of the "P", "p"
@@ -7973,6 +7974,10 @@
 #   "ɖ" U0256, "ᶒ" U1D92, "ᶖ" U1D96, "ɭ" U026D, "ɳ" U0273, "𝼛" U1DF1B,
 #   "Ꝕ" UA754, "ꝕ" UA755, "Ɋ" U024A, "ɋ" U024B, "Ɽ" U2C64, "ɽ" U027D,
 #   "ʂ" U0282, "Ʈ" U01AE, "ʈ" U0288, "ᶙ" U1D99, "ⱱ" U2C71, "ʐ" U0290.
+#
+#   By contrast, the dead key of the similar-in-shape but backward-pointing
+#   palatal hook is virtualized by *dead_retroflexhook double press.
+#   See #^# PALATAL_HOOK
 #
 #   The full set of 10 recycling symbols is supported with digits as base chars
 #   consistently with the paper symbols in dead_abovedot, with graphic mnemonic
@@ -10301,6 +10306,8 @@
 <Multi_key><parenleft>                                                                         <E> : "Ȇ" U0206 # LATIN CAPITAL LETTER E WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <e> : "ȇ" U0207 # LATIN SMALL LETTER E WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <e> : "ȇ" U0207 # LATIN SMALL LETTER E WITH INVERTED BREVE
+<dead_invertedbreve>                                                                           <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft>                                                                         <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve>                                                                           <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft>                                                                         <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve>                                                                           <G> : "⁐" U2050 # CLOSE UP
@@ -10331,6 +10338,8 @@
 #
 <dead_invertedbreve><UEFD0>                                                                    <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign>                                                             <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0>                                                                    <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign>                                                             <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP_2
@@ -10338,6 +10347,8 @@
 #
 <dead_invertedbreve><UEFD0><UEFD0>                                                             <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><numbersign>                                                 <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><UEFD0>                                                             <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><numbersign>                                                 <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP_3
@@ -10349,6 +10360,12 @@
 <Multi_key><parenleft><numbersign><KP_3>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><UEFD0><UEFD0>                                                      <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><numbersign><numbersign>                                     <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><3>                                                                 <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><3>                                                          <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><KP_3>                                                              <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><KP_3>                                                       <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><UEFD0><UEFD0>                                                      <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><numbersign><numbersign>                                     <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP_4
@@ -10360,6 +10377,12 @@
 <Multi_key><parenleft><numbersign><KP_4>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><UEFD0><UEFD0><UEFD0>                                               <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><numbersign><numbersign><numbersign>                         <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><4>                                                                 <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><4>                                                          <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><KP_4>                                                              <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><KP_4>                                                       <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><UEFD0><UEFD0><UEFD0>                                               <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><numbersign><numbersign><numbersign>                         <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 # # INVERTED_BREVE&GROUP_5
@@ -10369,6 +10392,23 @@
 <Multi_key><parenleft><numbersign><5>                                                          <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <dead_invertedbreve><UEFD0><KP_5>                                                              <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 <Multi_key><parenleft><numbersign><KP_5>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><5>                                                                 <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><5>                                                          <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><KP_5>                                                              <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><KP_5>                                                       <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+#
+#
+# # INVERTED_BREVE&GROUP_11
+#   Dchar: 
+#
+<dead_invertedbreve><UEFD0><1>                                                                 <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><1>                                                          <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><KP_1>                                                              <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><KP_1>                                                       <F> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><1>                                                                 <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><1>                                                          <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<dead_invertedbreve><UEFD0><KP_1>                                                              <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
+<Multi_key><parenleft><numbersign><KP_1>                                                       <f> : "𝼀" U1DF00 # LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 #
 #
 #^# INVERTED_BREVE_BELOW
@@ -12368,22 +12408,23 @@
 #
 #
 #*# MACRON
-#   macron, topbar, long leg
+#   macron, long leg, topbar
 #   dead_macron
 #   Multi_key: ¦|
 #   Dchar: "ō" U014D
 #
-#   Cedi "₵" U20B5 and Cent "¢" U00A2 signs are supported by lack of C with
-#   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
-#   equivalents.
+#   Long leg is merged with macron thanks to an empty intersection and with a
+#   mnemonic based on the macron multikey equivalent pipe "|". (As of small r
+#   with long leg "ɼ" U027C, it has been obsoleted by IPA in 1989. But the
+#   long-leg diacritic as such is still in use.)
 #
 #   The historic letters with topbar "Ƃ" U0182, "ƃ" U0183, "Ƌ" U018B, "ƌ" U018C
 #   are supported alongside thanks to an empty intersection, with a rationale
 #   based on the straightforward mnemonic.
 #
-#   Long leg is merged with macron thanks to an empty intersection and with a
-#   mnemonic based on the macron multikey equivalent pipe "|". However, small
-#   r with long leg "ɼ" U027C has been obsoleted by IPA in 1989.
+#   Cedi "₵" U20B5 and Cent "¢" U00A2 signs are supported by lack of C with
+#   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
+#   equivalents.
 #
 #   Digits yield the full collection of simple and multiple vertical bars — but
 #   not the broken one "¦" U00A6 — for convenience, since input methods using
