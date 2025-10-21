@@ -22,17 +22,19 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 
 ## 6.1.0 (projet)
 
-Réimplémentation des touches mortes enchaînées diacritiques ou transformationnelles pour Windows sur le modèle finalisé pour Linux.
+Transpilation pour Windows des enchaînements de touches mortes finalisés pour Linux.
 
 * Transformations :
-	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
+	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), [f8086f7](https://github.com/dispoclavier/nouvel-azerty/commit/f8086f736fe1a37ae772b9123e06daa215ee5f41), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431), [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
+	* Brève inversée : Compléter les séquences de "𝼀" U+1DF00. compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af)
 	* Drapeau > Étiquettes : Limiter la prise en charge aux séquences des drapeaux de l’Angleterre, de l’Écosse et du Pays de Galles, prises en charge depuis la version 6.0.0. compose-2.yml [abb51a8](https://github.com/dispoclavier/nouvel-azerty/commit/abb51a8d14e3e4ef0c4540e099050c2ef1bcd7fb)
 * Documentation :
 	* Windows : Installation : Citer CCM. Note-de-version.md [ec1d6fa](https://github.com/dispoclavier/nouvel-azerty/commit/ec1d6fa61f3d03a16161db1ec6f205cf3367b315), Démarrage-rapide.md, windows/Lisez-moi-svp.md [81ac4da](https://github.com/dispoclavier/nouvel-azerty/commit/81ac4dad8d8b02f7c537a4174e0fb73c0dbd897d)
 	* Corriger et annoter le caractère mort de la touche morte « grec ou cerclé ». compose-2.yml [03faaa3](https://github.com/dispoclavier/nouvel-azerty/commit/03faaa3d29c707dcaa40df32d70e55bbfcd46243), [d869a5a](https://github.com/dispoclavier/nouvel-azerty/commit/d869a5a517dae2973dd96675804a968cb14f3bf4), [d57348f](https://github.com/dispoclavier/nouvel-azerty/commit/d57348f827eb920658a9407694b001ce137e947b)
-	* Corriger ou compléter des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e)
+	* Corriger ou compléter des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e), compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af)
 * Builds :
 	* 6.1.0.0 [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
+	* 6.1.0.1 [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
 
 ## 6.0.10 (2025-10-12)
 
