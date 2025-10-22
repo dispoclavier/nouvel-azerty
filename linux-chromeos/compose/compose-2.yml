@@ -4757,6 +4757,8 @@
 #
 <UEFD5><UEFD5><dead_stroke>                                                                    <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
 <Multi_key><percent><percent><slash>                                                           <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
+<UEFD5><dead_stroke><UEFD5>                                                                    <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
+<Multi_key><percent><slash><percent>                                                           <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
 <dead_stroke><UEFD5><UEFD5>                                                                    <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
 <Multi_key><slash><percent><percent>                                                           <o> : "ᴓ" U1D13 # LATIN SMALL LETTER SIDEWAYS O WITH STROKE
 #
@@ -4766,6 +4768,8 @@
 #
 <UEFD5><UEFD5><dead_diaeresis>                                                                 <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 <Multi_key><percent><percent><colon>                                                           <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
+<UEFD5><dead_diaeresis><UEFD5>                                                                 <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
+<Multi_key><percent><colon><percent>                                                           <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 <dead_diaeresis><UEFD5><UEFD5>                                                                 <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 <Multi_key><colon><percent><percent>                                                           <u> : "ᴞ" U1D1E # LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 #
@@ -5293,10 +5297,6 @@
 #   by dead_tilde followed by asterisk, like "⁂" U2042 ASTERISM is in
 #   *dead_circumflex, as both have easy mappings on the same key D11.
 #
-#   The tilde dead key supports the "”" U201D quotation mark, reduntantly
-#   with acute accent, for more resilient keyboard layouts.
-#   See # # Quotation mark input method
-#
 #
 #   Daggers
 #
@@ -5352,6 +5352,32 @@
 #   documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
+#
+#   Format controls
+#
+#   The level-3 tilde dead key was the straightforward pick to jump in when the
+#   format controls in symbol group 10 were replaced with visible symbols for a
+#   consistent user experience across the symbol groups (not sooner than v6.1.0
+#   when the dead key data was transpiled, and the need for visible symbols was
+#   unnegotiatable).
+#
+#   EuroSign and quotedbl yield the emoji style variation selector UFE0F, and
+#   so does asciitilde for text style UFE0E, with alphabetic mnemonics, while
+#   the backslash in-between yields the most common variation selector #1 for
+#   completeness.
+#
+#   The combining grapheme joiner U034F is called “diacritique invisible
+#   bloquant” in French, and so keeps benefitting from alphabetic mnemonics as
+#   it is yielded by parenleft on the "D" key.
+#
+#   The mnemonic is still French for the word joiner U2060, called “gluon”, on
+#   key "G" by the minus hyphen, while its legacy equivalent ZWNBSP is again
+#   in-between on key "F" by parenright.
+#
+#   The plain-text page break FORM FEED U000C is also supported, by grave on
+#   the "N" key with alphabetic mnemonics based on “nouvelle page”. (Here like
+#   elsewhere, the multikey equivalent cannot be supported.)
+#
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
@@ -5360,12 +5386,22 @@
 <Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
 <dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
-<dead_tilde>                                                                            <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<Multi_key><asciitilde>                                                                 <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<dead_tilde>                                                                            <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-<Multi_key><asciitilde>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+<dead_tilde>                                                                            <quotedbl> : "️" UFE0F # VARIATION SELECTOR-16, emoji style
+<Multi_key><asciitilde>                                                                 <quotedbl> : "️" UFE0F # VARIATION SELECTOR-16, emoji style
+<dead_tilde>                                                                            <EuroSign> : "️" UFE0F # VARIATION SELECTOR-16, emoji style
+<Multi_key><asciitilde>                                                                 <EuroSign> : "️" UFE0F # VARIATION SELECTOR-16, emoji style
+<dead_tilde>                                                                           <backslash> : "︀" UFE00 # VARIATION SELECTOR-1
+#   Multikey conflicts with "∽" U223D, "≌" U224C, "⋍" U22CD, "⪝" U2A9D, "⪞" U2A9E, […] <backslash> : "︀" UFE00 # VARIATION SELECTOR-1
+<dead_tilde>                                                                          <asciitilde> : "︎" UFE0E # VARIATION SELECTOR-15, text style
+#   Multikey conflicts with "~" U007E, "Ɵ" U019F, "ɫ" U026B, "ɵ" U0275, "˷" U02F7, […]<asciitilde> : "︎" UFE0E # VARIATION SELECTOR-15, text style
 <dead_tilde>                                                                          <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 #   Multikey conflicts with composed "Ɔ̃", "Ǝ̃", "Ɛ̃", "ǝ̃", "ɔ̃", "ɛ̃".                    <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<dead_tilde>                                                                           <parenleft> : "͏" U034F # COMBINING GRAPHEME JOINER
+<Multi_key><asciitilde>                                                                <parenleft> : "͏" U034F # COMBINING GRAPHEME JOINER
+<dead_tilde>                                                                          <parenright> : "﻿" UFEFF # BYTE ORDER MARK, in legacy usage ZERO WIDTH NO-BREAK SPACE
+#   Multikey conflicts with "Ẵ" U1EB4, "ẵ" U1EB5.                                     <parenright> : "﻿" UFEFF # BYTE ORDER MARK, in legacy usage ZERO WIDTH NO-BREAK SPACE
+<dead_tilde>                                                                               <minus> : "⁠" U2060 # WORD JOINER
+#   Multikey conflicts with "≃" U2243, "≄" U2244, "⤳" U2933, "⩬" U2A6C.                    <minus> : "⁠" U2060 # WORD JOINER
 <dead_tilde>                                                                                <plus> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 #   Multikey conflicts with "Ỡ" U1EE0, "ỡ" U1EE1, "Ữ" U1EEE, "ữ" U1EEF.                     <plus> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <dead_tilde>                                                                          <underscore> : "⁓" U2053 # SWUNG DASH
@@ -5382,6 +5418,8 @@
 <Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+<dead_tilde>                                                                               <grave> : "" U000C # FORM FEED, page break in plain text
+#   Multikey conflicts with composed "Ã̀", "Ẽ̀", "Ĩ̀", "Õ̀", "Ɔ̃̀", "Ɛ̃̀", "ɔ̃̀", "ɛ̃̀", "Ũ̀", "Ɛ̃̀", […] <grave> : "" U000C # FORM FEED, page break in plain text
 <dead_tilde>                                                                              <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
 <Multi_key><asciitilde>                                                                   <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
@@ -13201,8 +13239,9 @@
 #   Lenient group selection
 #   Dchar: 
 #
-#   The capital Latin lambda with stroke "Ƛ" UA7DC is new to Unicode.
-#   See #   Latin lambda
+#   The capital Latin lambda with stroke "Ƛ" UA7DC is new to Unicode as of
+#   v16.0.0 (2024).
+#   See #+# GROUP_3
 #
 <dead_stroke><UEFD0>                                                                    <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><slash><numbersign>                                                          <quotedbl> : "∌" U220C # DOES NOT CONTAIN AS MEMBER
