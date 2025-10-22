@@ -1,4 +1,4 @@
-//                       Date: 2025-09-22T0233+0200
+//                       Date: 2025-10-23T0053+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -884,13 +884,18 @@ xkb_symbols "kbfrFRs" {
 	// is most appropriately mapped at level 7 of B07, the key of the comma U002C
 	// at the base level (as opposed to the level-5 comma on C10).
 	//
-	// U200C ZERO WIDTH NON-JOINER is the cursive non-joiner, extensively used to
-	// prevent wrong ligatures, and therefore at level 7 of the AZERTY "W" key
-	// B01, next to the "AltFr" level-5 modifier B00.
+	// U200C ZERO WIDTH NON-JOINER, the cursive non-joiner, is extensively used
+	// to prevent wrong ligatures, and is therefore at level 7 of the AZERTY
+	// "W" key B01, next to the "AltFr" level-5 modifier B00.
+	//
+	// In Unicode CLDR, "‌" U200C ZERO WIDTH NON-JOINER is the cursive non-joiner.
+	// Consistently, "‍" U200D ZERO WIDTH JOINER is the cursive joiner.
+	// The new names are intended to improve familiarity, as opposed to the legacy
+	// names based on “ZERO WIDTH”.
 	// https://github.com/unicode-org/cldr/blob/f7cb2b5ca09cdaf651912695f93903cc35cab69c/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 	// https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L45
 	//
-	// U200D ZERO WIDTH JOINER is the cursive joiner at level 7 of AZERTY key
+	// U200D ZERO WIDTH JOINER, the cursive joiner, is at level 7 of AZERTY key
 	// "Q", ISO C01, right above the cursive non-joiner.
 	//
 	// By contrast, U2060 WORD JOINER is not used in Latin script, except to work
