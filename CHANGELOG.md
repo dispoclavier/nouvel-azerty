@@ -26,12 +26,34 @@ Transpilation pour Windows des enchaînements de touches mortes finalisés pour 
 
 * Transformations :
 	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), [f8086f7](https://github.com/dispoclavier/nouvel-azerty/commit/f8086f736fe1a37ae772b9123e06daa215ee5f41), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431), [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
+	* Groupes des symboles :
+		* Groupe 10 de "^" : Redonder "⎋" U+238B à la place de l’antiliant "‌" U+200C, qui est sur touche vive B01. compose-2.yml, compose-3.yml [8475d51](https://github.com/dispoclavier/nouvel-azerty/commit/8475d51a63622a40ac32b611a802d2317fb8406d)
+		* Groupe 10 de "%" : Ajouter "�" U+FFFD à la place du liant "‍" U+200D, qui est sur touche vive C01. ibidem
+		* Groupe 10 de "€" : Redonder "⌦" U+2326 à la place du sélecteur de variante style émoji "️" U+FE0F, qui va dans tilde. ibidem
+		* Groupe 10 de "\\" : Redonder "⌫" U+232B à la place du sélecteur de variante nᵒ 1 "︀" U+FE00, qui va dans tilde. ibidem
+		* Groupe 10 de "~" : Redonder "☧" U+2627 à la place du sélecteur de variante style texte "︎" U+FE0E, qui va dans tilde. ibidem
+		* Groupe 10 de "(" : Ajouter "⚚" U+269A à la place du diacritique invisible bloquant "͏" U+034F, qui va dans tilde. ibidem
+		* Groupe 10 de ")" : Redonder "⎍" U+238D à la place de l’espace nulle insécable "﻿" U+FEFF, qui va dans tilde. ibidem
+		* Groupe 3 de "-" : Ajouter "☻" U+263B à la place du signe moins "−" U+2212, qui est sur touche vive D05 et qui va dans le groupe 10 à la place du gluon "⁠" U+2060, qui va dans tilde. ibidem
+		* Groupe 10 de "`" :
+			* Redonder "⛎" U+26CE à la place du saut de page "" U+000C, qui va dans tilde. ibidem
+			* Corriger le décompte des émojis suite à la prise en charge de "⛎" U+26CE dans les groupes des symboles. ibidem
+		* Groupe 7 de "@" : Ajouter "❂" U+2742 à la place de "⚬" U+26AC, qui va dans le groupe 7 de "{" à la place de "⚮" U+26AE, qui prend la place de "⚯" U+26AF dans le groupe 7 de "%". ibidem
+	* Tourné > Inversé : Compléter les séquences de "ᴓ" U+1D13, "ᴞ" U+1D1E. ibidem
+	* Tilde :
+		* Ajouter le sélecteur de variante style émoji "️" U+FE0F par "€" à la place du guillemet "”" U+201D, qui est dans accent aigu. ibidem
+		* Ajouter le sélecteur de variante nᵒ 1 "︀" U+FE00 par "\\" sur "R". ibidem
+		* Ajouter le sélecteur de variante style texte "︎" U+FE0E par "~" sur "T". ibidem
+		* Ajouter le diacritique invisible bloquant "͏" U+034F par "(" sur "D". ibidem
+		* Ajouter l’espace nulle insécable "﻿" U+FEFF par ")" sur "F". ibidem
+		* Ajouter le gluon "⁠" U+2060 par "-" sur "G". ibidem
+		* Ajouter le saut de page "" U+000C par "`" sur "N". ibidem
 	* Brève inversée : Compléter les séquences de "𝼀" U+1DF00. compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af)
 	* Drapeau > Étiquettes : Limiter la prise en charge aux séquences des drapeaux de l’Angleterre, de l’Écosse et du Pays de Galles, prises en charge depuis la version 6.0.0. compose-2.yml [abb51a8](https://github.com/dispoclavier/nouvel-azerty/commit/abb51a8d14e3e4ef0c4540e099050c2ef1bcd7fb)
 * Documentation :
 	* Windows : Installation : Citer CCM. Note-de-version.md [ec1d6fa](https://github.com/dispoclavier/nouvel-azerty/commit/ec1d6fa61f3d03a16161db1ec6f205cf3367b315), Démarrage-rapide.md, windows/Lisez-moi-svp.md [81ac4da](https://github.com/dispoclavier/nouvel-azerty/commit/81ac4dad8d8b02f7c537a4174e0fb73c0dbd897d)
 	* Corriger et annoter le caractère mort de la touche morte « grec ou cerclé ». compose-2.yml [03faaa3](https://github.com/dispoclavier/nouvel-azerty/commit/03faaa3d29c707dcaa40df32d70e55bbfcd46243), [d869a5a](https://github.com/dispoclavier/nouvel-azerty/commit/d869a5a517dae2973dd96675804a968cb14f3bf4), [d57348f](https://github.com/dispoclavier/nouvel-azerty/commit/d57348f827eb920658a9407694b001ce137e947b)
-	* Corriger ou compléter des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e), compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af)
+	* Corriger, compléter ou mettre à jour des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e), compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af), dispocla.cpp [4e6171f](https://github.com/dispoclavier/nouvel-azerty/commit/4e6171ff1af18f160e747642219515fbf5d4ef03)
 * Builds :
 	* 6.1.0.0 [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
 	* 6.1.0.1 [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
