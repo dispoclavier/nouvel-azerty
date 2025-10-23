@@ -1509,7 +1509,7 @@
 #   by supporting the non-numeric symbols "♲" U2672, "♻" U267B, and "♺" U267A
 #   associated with digit 8 after 7, rather than 0 that is used for "♲" U2672,
 #   consistently with the way the same recycling symbols are supported in the
-#   retroflex hook dead key (with alphabetic mnemonic based on R).
+#   retroflex hook dead key.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
 #   See #*# RETROFLEX_HOOK
 #

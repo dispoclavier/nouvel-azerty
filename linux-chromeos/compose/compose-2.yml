@@ -978,7 +978,14 @@
 #   <UEFD5>                  <*dead_turned>             "ɐ" U0250 LATIN SMALL LETTER TURNED A
 #   <UEFD6>                  <*dead_reversed>           "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
 #   <UEFD7>                  <*dead_flag>               "⚐" U2690 WHITE FLAG
-#   <UEFD8>                  <*dead_bar>                "ħ" U0127 LATIN SMALL LETTER H WITH STROKE
+#   <UEFD8>                  <*dead_bar>                "ɍ" U024D LATIN SMALL LETTER R WITH STROKE
+#
+#       The bar dead key has "ɍ" U024D as a base character for French mnemonics
+#       based on “raie”, the French word for “bar”, and “rayé”, French for the
+#       English word “barred” and the English term “with bar”, despite this is
+#       often mistranslated by “barré” meaning “struck”, or “with stroke”.
+#       See #*# BAR
+#
 #   <UEFD8><UEFD8>           <*dead_bar><*dead_bar>     "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR
 #   <UEFD9>                  <*dead_legacytilde>        "~" U007E TILDE
 #   <UEFDA>                  <*dead_legacygrave>        "`" U0060 GRAVE ACCENT
@@ -1865,7 +1872,7 @@
 <UEFD1>                                                                                   <exclam> : "ꜝ" UA71D # MODIFIER LETTER RAISED EXCLAMATION MARK
 <Multi_key><asciicircum>                                                                  <exclam> : "ꜝ" UA71D # MODIFIER LETTER RAISED EXCLAMATION MARK
 <UEFD1>                                                                                    <colon> : "˸" U02F8 # MODIFIER LETTER RAISED COLON
-<Multi_key><asciicircum>                                                                   <colon> : "˸" U02F8 # MODIFIER LETTER RAISED COLON
+#   Multikey conflicts with "ᷲ" U1DF2, "ᷳ" U1DF3, "ᷴ" U1DF4.                                  <colon> : "˸" U02F8 # MODIFIER LETTER RAISED COLON
 <UEFD1>                                                                                        <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <Multi_key><asciicircum>                                                                       <0> : "⁰" U2070 # SUPERSCRIPT ZERO
 <UEFD1>                                                                                     <KP_0> : "⁰" U2070 # SUPERSCRIPT ZERO
@@ -4008,24 +4015,33 @@
 #   Dchar: 
 #
 <UEFD1><dead_diaeresis>                                                                        <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><asciicircum><colon>                                                                <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <dead_diaeresis><UEFD1>                                                                        <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <Multi_key><colon><asciicircum>                                                                <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<UEFD1><dead_diaeresis><UEFD1>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key><asciicircum><colon><asciicircum>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <Multi_key><colon><asciicircum><asciicircum>                                                   <a> : "ᷲ" U1DF2 # COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 <UEFD1><dead_diaeresis>                                                                        <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><asciicircum><colon>                                                                <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <dead_diaeresis><UEFD1>                                                                        <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><colon><asciicircum>                                                                <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<UEFD1><dead_diaeresis><UEFD1>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key><asciicircum><colon><asciicircum>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><colon><asciicircum><asciicircum>                                                   <o> : "ᷳ" U1DF3 # COMBINING LATIN SMALL LETTER O WITH DIAERESIS
 <UEFD1><dead_diaeresis>                                                                        <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><asciicircum><colon>                                                                <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <dead_diaeresis><UEFD1>                                                                        <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><colon><asciicircum>                                                                <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <UEFD1><UEFD1><dead_diaeresis>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><asciicircum><asciicircum><colon>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<UEFD1><dead_diaeresis><UEFD1>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
+<Multi_key><asciicircum><colon><asciicircum>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <dead_diaeresis><UEFD1><UEFD1>                                                                 <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 <Multi_key><colon><asciicircum><asciicircum>                                                   <u> : "ᷴ" U1DF4 # COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 #
@@ -4038,10 +4054,11 @@
 #
 #   The rotation angle may be 180° as for TURNED, or 90° as for SIDEWAYS.
 #
-#   "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE being “typographically a
-#   turned f, but better thought of as a form of j” (Unicode Code Charts), for
-#   consistency, it is supported as such, but for convenience also as a turned
-#   f. Since the Claudian letter "Ⅎ" U2132 also has a lowercase form "ⅎ" U214E,
+#   As "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE is “typographically a
+#   turned f, but better thought of as a form of j” (Unicode Code Charts), it
+#   is supported as such, but for convenience, also as a turned f.
+#
+#   Since the Claudian letter "Ⅎ" U2132 also has a lowercase form "ⅎ" U214E,
 #   that is intended to meet Unicode casing requirements, the uppercase slot is
 #   used for the related Lisu letter, and the set of Claudian letters is moved
 #   to the double press dead key used for inverted, sideways and other turned.
@@ -8017,6 +8034,12 @@
 #   palatal hook is virtualized by *dead_retroflexhook double press.
 #   See #^# PALATAL_HOOK
 #
+#   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
+#   SHELF, by lack of anything more to the point.
+#
+#
+#   Recycling symbols
+#
 #   The full set of 10 recycling symbols is supported with digits as base chars
 #   consistently with the paper symbols in dead_abovedot, with graphic mnemonic
 #   based on the cycle-shaped letter "O" (D09) this dead key is on, by lack of
@@ -8028,9 +8051,6 @@
 #   See #*# REVERSED
 #   See # # D04 backslash
 #   See # # Recycling symbols
-#
-#   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
-#   SHELF, by lack of anything more to the point.
 #
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
@@ -8950,6 +8970,9 @@
 # # VERTICAL_LINE_ABOVE&ACUTE
 #   Dchar: 
 #
+#   Starting from here until MACRON&VERTICAL_LINE_ABOVE, the dead key chains
+#   are intrinsically asymmetric and must not be symmetrized.
+#
 <dead_abovedot><dead_abovedot><dead_acute>                                                 <space> : "᫐" U1AD0 # COMBINING VERTICAL-LINE-ACUTE
 <Multi_key><period><period><apostrophe>                                                    <space> : "᫐" U1AD0 # COMBINING VERTICAL-LINE-ACUTE
 <dead_abovedot><dead_abovedot><dead_acute>                                                 <U200B> : "᫐" U1AD0 # COMBINING VERTICAL-LINE-ACUTE
@@ -9051,7 +9074,7 @@
 #
 #   A group dead key double press activates group 2, not group 3, consistently
 #   with the number of group dead key presses. Triple press is also supported,
-#   and so is quadruple press as the upper limit for a sustainable UX.
+#   and so is quadruple press as the upper limit of a sustainable UX.
 #
 #   Group 1 of every digit activates the corresponding group from 3 through 12.
 #   As a consequence, group 1 of digits is not available for mapping.
