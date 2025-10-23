@@ -3382,7 +3382,7 @@
 #
 # # SUPERSCRIPT&PALATAL_HOOK
 #
-#   Due to "ᶩ" U1DA9, lenient dead key press would conflict.
+#   Lenient dead key press would conflict with "ᶩ" U1DA9.
 #
 <UEFD1><UEFD4><UEFD4>                                                                          <l> : "ᶪ" U1DAA # MODIFIER LETTER SMALL L WITH PALATAL HOOK
 <Multi_key><asciicircum><braceright><braceright>                                               <l> : "ᶪ" U1DAA # MODIFIER LETTER SMALL L WITH PALATAL HOOK
@@ -3449,10 +3449,10 @@
 #
 # # SUPERSCRIPT&BAR&GROUP_1
 #
-<UEFD1><UEFD8>                                                                          <UEFD0><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><asciicircum><minus>                                                    <numbersign><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<UEFD8><UEFD1>                                                                          <UEFD0><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus><asciicircum>                                                    <numbersign><q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+<UEFD1><UEFD8><UEFD0>                                                                          <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><asciicircum><minus><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+<UEFD8><UEFD1><UEFD0>                                                                          <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><minus><asciicircum><numbersign>                                                    <q> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 #
 #
 # # SUPERSCRIPT&SUBSCRIPT
@@ -5490,6 +5490,8 @@
 #
 #
 # # TILDE&MACRON
+#
+#   See # # MACRON&TILDE
 #
 <dead_tilde><dead_macron>                                                                      <O> : "Ȭ" U022C # LATIN CAPITAL LETTER O WITH TILDE AND MACRON
 <Multi_key><asciitilde><bar>                                                                   <O> : "Ȭ" U022C # LATIN CAPITAL LETTER O WITH TILDE AND MACRON
@@ -12445,6 +12447,8 @@
 #
 #
 # # MACRON&TILDE
+#
+#   See # # TILDE&MACRON
 #
 <dead_macron><dead_tilde>                                                                      <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
 <Multi_key><bar><asciitilde>                                                                   <U> : "Ū̃" # U016A U0303 LATIN CAPITAL LETTER U WITH MACRON AND TILDE: Lithuanian
