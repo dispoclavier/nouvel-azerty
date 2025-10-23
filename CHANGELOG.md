@@ -20,7 +20,7 @@ Réimplémentation pour Windows de la touche de composition sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-## 6.1.0 (projet)
+## 6.1.0 (2025-10-23)
 
 Rectification des groupes des symboles.
 
@@ -29,7 +29,7 @@ Correction des enchaînements de touches mortes.
 Transpilation pour Windows des enchaînements de touches mortes.
 
 * Transformations :
-	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), [f8086f7](https://github.com/dispoclavier/nouvel-azerty/commit/f8086f736fe1a37ae772b9123e06daa215ee5f41), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431), [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
+	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), [f8086f7](https://github.com/dispoclavier/nouvel-azerty/commit/f8086f736fe1a37ae772b9123e06daa215ee5f41), [4a32f70](https://github.com/dispoclavier/nouvel-azerty/commit/4a32f7017c7d38ba9913fca7c3e8df5f5c264cbd), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431), [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276), [98ed3b1](https://github.com/dispoclavier/nouvel-azerty/commit/98ed3b14ca26120eb24a34c8e907d59497580bf9)
 	* Groupes des symboles :
 		* Groupe 10 de "^" : Redonder "⎋" U+238B à la place de l’antiliant "‌" U+200C, qui est sur touche vive B01. compose-2.yml, compose-3.yml [8475d51](https://github.com/dispoclavier/nouvel-azerty/commit/8475d51a63622a40ac32b611a802d2317fb8406d)
 		* Groupe 10 de "%" : Ajouter "�" U+FFFD à la place du liant "‍" U+200D, qui est sur touche vive C01. ibidem
@@ -52,17 +52,23 @@ Transpilation pour Windows des enchaînements de touches mortes.
 		* Ajouter l’espace nulle insécable "﻿" U+FEFF par ")" sur "F". ibidem
 		* Ajouter le gluon "⁠" U+2060 par "-" sur "G". ibidem
 		* Ajouter le saut de page "" U+000C par "`" sur "N". ibidem
-	* Suscrit et tréma : Compléter les séquences de "ᷲ" U+1DF2, "ᷳ" U+1DF3, "ᷴ" U+1DF4. compose-2.yml [468f279](https://github.com/dispoclavier/nouvel-azerty/commit/468f2796c02050550e8559457d7c1335238df271)
-	* Brève inversée : Compléter les séquences de "𝼀" U+1DF00. compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af)
+	* Suscrit et tréma : Compléter les séquences de "ᷲ" U+1DF2, "ᷳ" U+1DF3, "ᷴ" U+1DF4. compose-2.yml [468f279](https://github.com/dispoclavier/nouvel-azerty/commit/468f2796c02050550e8559457d7c1335238df271), dead-key-convert.pl [b87cdcb](https://github.com/dispoclavier/nouvel-azerty/commit/b87cdcb4411a841a03c06d4de46faa6741d0dbf5)
+	* Brève inversée : Compléter les séquences de "𝼀" U+1DF00. compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af), ibidem
+	* Souscrit et tourné : Compléter les séquences de "ᫀ" U+1AC0. compose-2.yml [9cf94ec](https://github.com/dispoclavier/nouvel-azerty/commit/9cf94ec01bb853b17748bde717c2029d8cf81f68), ibidem
+	* Souscrit et inversé : Compléter les séquences de "ʁ" U+0281, "ꜟ" U+A71F. ibidem
+	* Barré groupe 2 : Redonder "≇" U+2247. ibidem
+	* Barré > barré oblique groupes : Supprimer. ibidem
+	* Barré > barré et drapeau : Supprimer. ibidem
 	* Drapeau > Étiquettes : Limiter la prise en charge aux séquences des drapeaux de l’Angleterre, de l’Écosse et du Pays de Galles, prises en charge depuis la version 6.0.0. compose-2.yml [abb51a8](https://github.com/dispoclavier/nouvel-azerty/commit/abb51a8d14e3e4ef0c4540e099050c2ef1bcd7fb)
 * Documentation :
 	* Windows : Installation : Citer CCM. Note-de-version.md [ec1d6fa](https://github.com/dispoclavier/nouvel-azerty/commit/ec1d6fa61f3d03a16161db1ec6f205cf3367b315), Démarrage-rapide.md, windows/Lisez-moi-svp.md [81ac4da](https://github.com/dispoclavier/nouvel-azerty/commit/81ac4dad8d8b02f7c537a4174e0fb73c0dbd897d)
 	* Corriger et annoter le caractère mort de la touche morte « grec ou cerclé ». compose-2.yml [03faaa3](https://github.com/dispoclavier/nouvel-azerty/commit/03faaa3d29c707dcaa40df32d70e55bbfcd46243), [d869a5a](https://github.com/dispoclavier/nouvel-azerty/commit/d869a5a517dae2973dd96675804a968cb14f3bf4), [d57348f](https://github.com/dispoclavier/nouvel-azerty/commit/d57348f827eb920658a9407694b001ce137e947b)
 	* Corriger et annoter le caractère mort de la touche morte « rayé ». compose-2.yml [468f279](https://github.com/dispoclavier/nouvel-azerty/commit/468f2796c02050550e8559457d7c1335238df271)
-	* Corriger, compléter ou mettre à jour des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e), compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af), [59e4cf2](https://github.com/dispoclavier/nouvel-azerty/commit/59e4cf29c9d10d9b6524def6470c2dc3b5f76a7a), dispocla.cpp [4e6171f](https://github.com/dispoclavier/nouvel-azerty/commit/4e6171ff1af18f160e747642219515fbf5d4ef03)
+	* Corriger, compléter ou mettre à jour des annotations. compose-1.yml [b1a7dca](https://github.com/dispoclavier/nouvel-azerty/commit/b1a7dca94108e021c148d9ec50d3cd7c64be7b7e), compose-2.yml [5fb7ac4](https://github.com/dispoclavier/nouvel-azerty/commit/5fb7ac46c6293796359390927c36b008851891af), [59e4cf2](https://github.com/dispoclavier/nouvel-azerty/commit/59e4cf29c9d10d9b6524def6470c2dc3b5f76a7a), [e8c1cf6](https://github.com/dispoclavier/nouvel-azerty/commit/e8c1cf679bfcc27e94bdde8f9e60f7fad7fbda91), dispocla.cpp [4e6171f](https://github.com/dispoclavier/nouvel-azerty/commit/4e6171ff1af18f160e747642219515fbf5d4ef03)
 * Builds :
 	* 6.1.0.0 [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431)
 	* 6.1.0.1 [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276)
+	* 6.1.0.2 [98ed3b1](https://github.com/dispoclavier/nouvel-azerty/commit/98ed3b14ca26120eb24a34c8e907d59497580bf9)
 
 ## 6.0.10 (2025-10-12)
 
