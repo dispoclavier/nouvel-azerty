@@ -11728,10 +11728,14 @@
 #
 <UEFD2><UEFD5><UEFD5>                                                                     <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
 <Multi_key><underscore><percent><percent>                                                 <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
+<UEFD5><UEFD2><UEFD5>                                                                     <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
+<Multi_key><percent><underscore><percent>                                                 <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
 <UEFD5><UEFD5><UEFD2>                                                                     <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
 <Multi_key><percent><percent><underscore>                                                 <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
 <UEFD2><UEFD5><UEFD5>                                                                          <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 <Multi_key><underscore><percent><percent>                                                      <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
+<UEFD5><UEFD2><UEFD5>                                                                          <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
+<Multi_key><percent><underscore><percent>                                                      <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 <UEFD5><UEFD5><UEFD2>                                                                          <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 <Multi_key><percent><percent><underscore>                                                      <R> : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 #
@@ -11888,6 +11892,8 @@
 #
 <UEFD2><UEFD2><UEFD5>                                                                          <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
 <Multi_key><underscore><underscore><percent>                                                   <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
+<UEFD2><UEFD5><UEFD2>                                                                          <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
+<Multi_key><underscore><percent><underscore>                                                   <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
 <UEFD5><UEFD2><UEFD2>                                                                          <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
 <Multi_key><percent><underscore><underscore>                                                   <w> : "ᫀ" U1AC0 # COMBINING LATIN SMALL LETTER TURNED W BELOW
 #
@@ -13026,6 +13032,8 @@
 <Multi_key><slash><numbersign><numbersign>                                              <quotedbl> : "∉" U2209 # NOT AN ELEMENT OF
 <dead_stroke><UEFD0><UEFD0>                                                             <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
 <Multi_key><slash><numbersign><numbersign>                                              <EuroSign> : "∉" U2209 # NOT AN ELEMENT OF
+<dead_stroke><UEFD0><UEFD0>                                                           <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
+<Multi_key><slash><numbersign><numbersign>                                            <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 <dead_stroke><UEFD0><UEFD0>                                                           <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><slash><numbersign><numbersign>                                            <apostrophe> : "⊄" U2284 # NOT A SUBSET OF
 <dead_stroke><UEFD0><UEFD0>                                                                 <less> : "≰" U2270 # NEITHER LESS-THAN NOR EQUAL TO
@@ -13210,57 +13218,6 @@
 <Multi_key><slash><slash>                                                                      <S> : "Ꞩ" UA7A8 # LATIN CAPITAL LETTER S WITH OBLIQUE STROKE
 <dead_stroke><dead_stroke>                                                                     <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
 <Multi_key><slash><slash>                                                                      <s> : "ꞩ" UA7A9 # LATIN SMALL LETTER S WITH OBLIQUE STROKE
-#
-#
-# # OBLIQUE_STROKE&GROUP_1
-#   Lenient group selection
-#
-<dead_stroke><dead_stroke><UEFD0>                                                     <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign>                                                 <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&GROUP_2
-#
-<dead_stroke><dead_stroke><UEFD0><UEFD0>                                              <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign><numbersign>                                     <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&GROUP_3
-#
-<dead_stroke><dead_stroke><UEFD0><3>                                                  <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign><3>                                              <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<dead_stroke><dead_stroke><UEFD0><KP_3>                                               <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign><KP_3>                                           <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<dead_stroke><dead_stroke><UEFD0><UEFD0><UEFD0>                                       <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><slash><slash><numbersign><numbersign><numbersign>                         <asciitilde> : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&FLAG
-#
-<dead_stroke><dead_stroke><UEFD7>                                                     <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal>                                                      <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&FLAG&GROUP_1
-#
-<dead_stroke><dead_stroke><UEFD7><UEFD0>                                              <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign>                                          <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&FLAG&GROUP_2
-#
-<dead_stroke><dead_stroke><UEFD7><UEFD0><UEFD0>                                       <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><numbersign>                              <apostrophe> : "⊈" U2288 # NEITHER A SUBSET OF NOR EQUAL TO
-#
-#
-# # OBLIQUE_STROKE&FLAG&GROUP_3
-#
-<dead_stroke><dead_stroke><UEFD7><UEFD0><3>                                           <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><3>                                       <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<dead_stroke><dead_stroke><UEFD7><UEFD0><KP_3>                                        <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><KP_3>                                    <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<dead_stroke><dead_stroke><UEFD7><UEFD0><UEFD0><UEFD0>                                <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
-<Multi_key><slash><slash><equal><numbersign><numbersign><numbersign>                  <apostrophe> : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 #
 #
 #^# TRIPLE_STROKE
