@@ -2,7 +2,7 @@
 # 2024-10-10T0617+0200
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
-# 2025-10-21T1906+0200
+# 2025-10-23T1528+0200
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -58,11 +58,10 @@
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 # most dead keys, at level 4 of the space bar in French mode.
 #
-# The number of required high surrogates amounts to eight:
+# The 7 required high surrogates are:
 #
 #     D801, D807,
-#     D835, D837, D83C, D83D, D83E,
-#     DB40.
+#     D835, D837, D83C, D83D, D83E.
 #
 # These are dispatched among dead keys:
 #
@@ -73,7 +72,6 @@
 #     D83C dead_flag; dead_greek (flag letters, squared letters)
 #     D83D dead_doubleacute; dead_acute; others (ornamental quotation marks)
 #     D83E dead_stroke; dead_group 11 and 12 as built-in (wide-headed arrows)
-#     DB40 dead_flag as built-in (tag characters)
 #
 # The output is directly in C, where an array of DEADTRANS macro calls makes
 # for a flat layout of dead key data, while in KLC format, the data is grouped
@@ -266,7 +264,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!legacygrave>$/`/;
 	$deadkey =~ s/^<!legacytilde>$/~/;
 
-	# Dead key chains (571).
+	# Dead key chains (561).
 	$deadkey =~ s/^<!abovedot><!abovedot>$/02C8/;#<dead_abovedot><dead_abovedot> 
 	$deadkey =~ s/^<!abovedot><!abovedot><!acute>$/02C7/;#<dead_abovedot><dead_abovedot><dead_acute> 
 	$deadkey =~ s/^<!abovedot><!abovedot><!acute><!grave>$/02B7/;#<dead_abovedot><dead_abovedot><dead_acute><dead_grave> 
@@ -317,7 +315,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!acute><!horn>$/1EDA/;#<dead_acute><dead_horn> 
 	$deadkey =~ s/^<!acute><!macron>$/1E16/;#<dead_acute><dead_macron> 
 	$deadkey =~ s/^<!acute><!macron><!grave>$/02C9/;#<dead_acute><dead_macron><dead_grave> 
-	$deadkey =~ s/^<!acute><!stroke>$/01FF/;#<dead_acute><dead_stroke> 
+	$deadkey =~ s/^<!acute><!stroke>$/01FE/;#<dead_acute><dead_stroke> 
 	$deadkey =~ s/^<!acute><!tilde>$/00E3/;#<dead_acute><dead_tilde> 
 	$deadkey =~ s/^<!bar><!abovedot>$/0284/;#<UEFD8><dead_abovedot> 
 	$deadkey =~ s/^<!bar><!bar>$/A78A/;#<UEFD8><UEFD8> 
@@ -338,13 +336,13 @@ sub get_dead_char {
 	$deadkey =~ s/^<!bar><!hook><!hook><!bar>$/0287/;#<UEFD8><dead_hook><dead_hook><UEFD8> 
 	$deadkey =~ s/^<!bar><!hook><!hook><!bar><!group>$/0288/;#<UEFD8><dead_hook><dead_hook><UEFD8><UEFD0> 
 	$deadkey =~ s/^<!bar><!retroflexhook>$/0268/;#<UEFD8><UEFD4> 
-	$deadkey =~ s/^<!bar><!reversed>$/02A2/;#<UEFD8><UEFD6> 
+	$deadkey =~ s/^<!bar><!reversed>$/029E/;#<UEFD8><UEFD6> 
 	$deadkey =~ s/^<!bar><!stroke>$/A745/;#<UEFD8><dead_stroke> 
 	$deadkey =~ s/^<!bar><!subscript>$/1D03/;#<UEFD8><UEFD2> 
 	$deadkey =~ s/^<!bar><!superscript>$/02A1/;#<UEFD8><UEFD1> 
 	$deadkey =~ s/^<!bar><!superscript><!group>$/1D2F/;#<UEFD8><UEFD1><UEFD0> 
 	$deadkey =~ s/^<!bar><!turned>$/AB42/;#<UEFD8><UEFD5> 
-	$deadkey =~ s/^<!bar><!turned><!group>$/AB41/;#<UEFD8><UEFD5><UEFD0> 
+	$deadkey =~ s/^<!bar><!turned><!group>$/0153/;#<UEFD8><UEFD5><UEFD0> 
 	$deadkey =~ s/^<!belowcomma><!belowcomma>$/02BC/;#<dead_belowcomma><dead_belowcomma> 
 	$deadkey =~ s/^<!belowcomma><!group>$/A72F/;#<dead_belowcomma><UEFD0> 
 	$deadkey =~ s/^<!belowcomma><!group><!group>$/A72E/;#<dead_belowcomma><UEFD0><UEFD0> 
@@ -555,7 +553,6 @@ sub get_dead_char {
 	$deadkey =~ s/^<!invertedbreve><!group><!group>$/0238/;#<dead_invertedbreve><UEFD0><UEFD0> 
 	$deadkey =~ s/^<!invertedbreve><!group><!group><!group>$/0239/;#<dead_invertedbreve><UEFD0><UEFD0><UEFD0> 
 	$deadkey =~ s/^<!invertedbreve><!group><!group><!group><!group>$/023A/;#<dead_invertedbreve><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!invertedbreve><!group><1>$/023C/;#<dead_invertedbreve><UEFD0><1> 
 	$deadkey =~ s/^<!invertedbreve><!group><3>$/0239/;#<dead_invertedbreve><UEFD0><3> 
 	$deadkey =~ s/^<!invertedbreve><!group><4>$/023A/;#<dead_invertedbreve><UEFD0><4> 
 	$deadkey =~ s/^<!invertedbreve><!group><5>$/023B/;#<dead_invertedbreve><UEFD0><5> 
@@ -602,90 +599,81 @@ sub get_dead_char {
 	$deadkey =~ s/^<!retroflexhook><!macron><!superscript>$/02B4/;#<UEFD4><dead_macron><UEFD1> 
 	$deadkey =~ s/^<!retroflexhook><!macron><!turned>$/2A1B/;#<UEFD4><dead_macron><UEFD5> 
 	$deadkey =~ s/^<!retroflexhook><!retroflexhook>$/1D80/;#<UEFD4><UEFD4> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!breve>$/dead/;#<UEFD4><UEFD4><dead_breve> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!breve><!breve>$/dead/;#<UEFD4><UEFD4><dead_breve><dead_breve> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group>$/dead/;#<UEFD4><UEFD4><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group>$/dead/;#<UEFD4><UEFD4><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group><!group>$/dead/;#<UEFD4><UEFD4><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group><!group><!group>$/dead/;#<UEFD4><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><3>$/dead/;#<UEFD4><UEFD4><UEFD0><3> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><4>$/dead/;#<UEFD4><UEFD4><UEFD0><4> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><5>$/dead/;#<UEFD4><UEFD4><UEFD0><5> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!hook>$/dead/;#<UEFD4><UEFD4><dead_hook> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!retroflexhook>$/dead/;#<UEFD4><UEFD4><UEFD4> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!superscript>$/dead/;#<UEFD4><UEFD4><UEFD1> 
-	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!turned>$/dead/;#<UEFD4><UEFD4><UEFD5> 
-	$deadkey =~ s/^<!retroflexhook><!reversed>$/dead/;#<UEFD4><UEFD6> 
-	$deadkey =~ s/^<!retroflexhook><!reversed><!group>$/dead/;#<UEFD4><UEFD6><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!reversed><!group><!group>$/dead/;#<UEFD4><UEFD6><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!superscript>$/dead/;#<UEFD4><UEFD1> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group>$/dead/;#<UEFD4><UEFD1><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group>$/dead/;#<UEFD4><UEFD1><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group><!group>$/dead/;#<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group><!group><!group>$/dead/;#<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><3>$/dead/;#<UEFD4><UEFD1><UEFD0><3> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><4>$/dead/;#<UEFD4><UEFD1><UEFD0><4> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!group><5>$/dead/;#<UEFD4><UEFD1><UEFD0><5> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!macron>$/dead/;#<UEFD4><UEFD1><dead_macron> 
-	$deadkey =~ s/^<!retroflexhook><!superscript><!retroflexhook>$/dead/;#<UEFD4><UEFD1><UEFD4> 
-	$deadkey =~ s/^<!retroflexhook><!turned>$/dead/;#<UEFD4><UEFD5> 
-	$deadkey =~ s/^<!retroflexhook><!turned><!hook>$/dead/;#<UEFD4><UEFD5><dead_hook> 
-	$deadkey =~ s/^<!retroflexhook><!turned><!macron>$/dead/;#<UEFD4><UEFD5><dead_macron> 
-	$deadkey =~ s/^<!retroflexhook><!turned><!retroflexhook>$/dead/;#<UEFD4><UEFD5><UEFD4> 
-	$deadkey =~ s/^<!reversed><!bar>$/dead/;#<UEFD6><UEFD8> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!breve>$/A791/;#<UEFD4><UEFD4><dead_breve> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!breve><!breve>$/A790/;#<UEFD4><UEFD4><dead_breve><dead_breve> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group>$/1D8C/;#<UEFD4><UEFD4><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group>$/025A/;#<UEFD4><UEFD4><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group><!group>$/02A6/;#<UEFD4><UEFD4><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><!group><!group><!group>$/02AA/;#<UEFD4><UEFD4><UEFD0><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><3>$/02A6/;#<UEFD4><UEFD4><UEFD0><3> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><4>$/02AA/;#<UEFD4><UEFD4><UEFD0><4> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!group><5>$/02AB/;#<UEFD4><UEFD4><UEFD0><5> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!hook>$/0276/;#<UEFD4><UEFD4><dead_hook> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!retroflexhook>$/023F/;#<UEFD4><UEFD4><UEFD4> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!superscript>$/1DB5/;#<UEFD4><UEFD4><UEFD1> 
+	$deadkey =~ s/^<!retroflexhook><!retroflexhook><!turned>$/2C79/;#<UEFD4><UEFD4><UEFD5> 
+	$deadkey =~ s/^<!retroflexhook><!reversed>$/1D92/;#<UEFD4><UEFD6> 
+	$deadkey =~ s/^<!retroflexhook><!reversed><!group>$/1D8A/;#<UEFD4><UEFD6><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!reversed><!group><!group>$/1D9F/;#<UEFD4><UEFD6><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!superscript>$/1DBB/;#<UEFD4><UEFD1> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group>$/1DAF/;#<UEFD4><UEFD1><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group>$/1DB8/;#<UEFD4><UEFD1><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group><!group>$/AB66/;#<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><!group><!group><!group>$/01C3/;#<UEFD4><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><3>$/AB66/;#<UEFD4><UEFD1><UEFD0><3> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><4>$/01C3/;#<UEFD4><UEFD1><UEFD0><4> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!group><5>$/01C2/;#<UEFD4><UEFD1><UEFD0><5> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!macron>$/AB64/;#<UEFD4><UEFD1><dead_macron> 
+	$deadkey =~ s/^<!retroflexhook><!superscript><!retroflexhook>$/1DAE/;#<UEFD4><UEFD1><UEFD4> 
+	$deadkey =~ s/^<!retroflexhook><!turned>$/2C7B/;#<UEFD4><UEFD5> 
+	$deadkey =~ s/^<!retroflexhook><!turned><!hook>$/02B6/;#<UEFD4><UEFD5><dead_hook> 
+	$deadkey =~ s/^<!retroflexhook><!turned><!macron>$/0272/;#<UEFD4><UEFD5><dead_macron> 
+	$deadkey =~ s/^<!retroflexhook><!turned><!retroflexhook>$/2C7A/;#<UEFD4><UEFD5><UEFD4> 
+	$deadkey =~ s/^<!reversed><!bar>$/02A2/;#<UEFD6><UEFD8> 
 	$deadkey =~ s/^<!reversed><!doubleacute>$/263A/;#<UEFD6><dead_doubleacute> 
-	$deadkey =~ s/^<!reversed><!group>$/dead/;#<UEFD6><UEFD0> 
-	$deadkey =~ s/^<!reversed><!group><!group>$/dead/;#<UEFD6><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!group><!group><!group>$/dead/;#<UEFD6><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!group><!group><!group><!group>$/dead/;#<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!group><2>$/dead/;#<UEFD6><UEFD0><2> 
-	$deadkey =~ s/^<!reversed><!group><3>$/dead/;#<UEFD6><UEFD0><3> 
-	$deadkey =~ s/^<!reversed><!group><4>$/dead/;#<UEFD6><UEFD0><4> 
-	$deadkey =~ s/^<!reversed><!group><5>$/dead/;#<UEFD6><UEFD0><5> 
-	$deadkey =~ s/^<!reversed><!hook>$/dead/;#<UEFD6><dead_hook> 
-	$deadkey =~ s/^<!reversed><!hook><!group>$/dead/;#<UEFD6><dead_hook><UEFD0> 
-	$deadkey =~ s/^<!reversed><!hook><!group><!group>$/dead/;#<UEFD6><dead_hook><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!retroflexhook>$/dead/;#<UEFD6><UEFD4> 
-	$deadkey =~ s/^<!reversed><!retroflexhook><!group>$/dead/;#<UEFD6><UEFD4><UEFD0> 
-	$deadkey =~ s/^<!reversed><!retroflexhook><!group><!group>$/dead/;#<UEFD6><UEFD4><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!subscript>$/dead/;#<UEFD6><UEFD2> 
-	$deadkey =~ s/^<!reversed><!superscript>$/dead/;#<UEFD6><UEFD1> 
-	$deadkey =~ s/^<!reversed><!superscript><!group>$/dead/;#<UEFD6><UEFD1><UEFD0> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><!group>$/dead/;#<UEFD6><UEFD1><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><!group><!group>$/dead/;#<UEFD6><UEFD1><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><!group><!group><!group>$/dead/;#<UEFD6><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><3>$/dead/;#<UEFD6><UEFD1><UEFD0><3> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><4>$/dead/;#<UEFD6><UEFD1><UEFD0><4> 
-	$deadkey =~ s/^<!reversed><!superscript><!group><5>$/dead/;#<UEFD6><UEFD1><UEFD0><5> 
-	$deadkey =~ s/^<!stroke><!acute>$/dead/;#<dead_stroke><dead_acute> 
-	$deadkey =~ s/^<!stroke><!bar>$/dead/;#<dead_stroke><UEFD8> 
-	$deadkey =~ s/^<!stroke><!group>$/dead/;#<dead_stroke><UEFD0> 
-	$deadkey =~ s/^<!stroke><!group><!group>$/dead/;#<dead_stroke><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!group><!group><!group>$/dead/;#<dead_stroke><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!group><!group><!group><!group>$/dead/;#<dead_stroke><UEFD0><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!group><1>$/dead/;#<dead_stroke><UEFD0><1> 
-	$deadkey =~ s/^<!stroke><!group><2>$/dead/;#<dead_stroke><UEFD0><2> 
-	$deadkey =~ s/^<!stroke><!group><3>$/dead/;#<dead_stroke><UEFD0><3> 
-	$deadkey =~ s/^<!stroke><!group><4>$/dead/;#<dead_stroke><UEFD0><4> 
-	$deadkey =~ s/^<!stroke><!group><5>$/dead/;#<dead_stroke><UEFD0><5> 
-	$deadkey =~ s/^<!stroke><!stroke>$/dead/;#<dead_stroke><dead_stroke> 
-	$deadkey =~ s/^<!stroke><!stroke><!flag>$/dead/;#<dead_stroke><dead_stroke><UEFD7> 
-	$deadkey =~ s/^<!stroke><!stroke><!flag><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD7><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!flag><!group><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD7><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!flag><!group><!group><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD7><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!flag><!group><3>$/dead/;#<dead_stroke><dead_stroke><UEFD7><UEFD0><3> 
-	$deadkey =~ s/^<!stroke><!stroke><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!group><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!group><!group><!group>$/dead/;#<dead_stroke><dead_stroke><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!stroke><!group><3>$/dead/;#<dead_stroke><dead_stroke><UEFD0><3> 
-	$deadkey =~ s/^<!stroke><!stroke><!stroke>$/dead/;#<dead_stroke><dead_stroke><dead_stroke> 
-	$deadkey =~ s/^<!stroke><!subscript>$/dead/;#<dead_stroke><UEFD2> 
-	$deadkey =~ s/^<!stroke><!tilde>$/dead/;#<dead_stroke><dead_tilde> 
-	$deadkey =~ s/^<!stroke><!turned>$/dead/;#<dead_stroke><UEFD5> 
-	$deadkey =~ s/^<!stroke><!turned><!group>$/dead/;#<dead_stroke><UEFD5><UEFD0> 
-	$deadkey =~ s/^<!stroke><!turned><!group><!group>$/dead/;#<dead_stroke><UEFD5><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!turned><!group><!group><!group>$/dead/;#<dead_stroke><UEFD5><UEFD0><UEFD0><UEFD0> 
-	$deadkey =~ s/^<!stroke><!turned><!group><3>$/dead/;#<dead_stroke><UEFD5><UEFD0><3> 
+	$deadkey =~ s/^<!reversed><!group>$/2B88/;#<UEFD6><UEFD0> 
+	$deadkey =~ s/^<!reversed><!group><!group>$/A7AB/;#<UEFD6><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!group><!group><!group>$/A7F6/;#<UEFD6><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!group><!group><!group><!group>$/A7F5/;#<UEFD6><UEFD0><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!group><2>$/01B8/;#<UEFD6><UEFD0><2> 
+	$deadkey =~ s/^<!reversed><!group><3>$/A7F6/;#<UEFD6><UEFD0><3> 
+	$deadkey =~ s/^<!reversed><!group><4>$/A7F5/;#<UEFD6><UEFD0><4> 
+	$deadkey =~ s/^<!reversed><!group><5>$/01B9/;#<UEFD6><UEFD0><5> 
+	$deadkey =~ s/^<!reversed><!hook>$/0259/;#<UEFD6><dead_hook> 
+	$deadkey =~ s/^<!reversed><!hook><!group>$/0258/;#<UEFD6><dead_hook><UEFD0> 
+	$deadkey =~ s/^<!reversed><!hook><!group><!group>$/0252/;#<UEFD6><dead_hook><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!retroflexhook>$/028B/;#<UEFD6><UEFD4> 
+	$deadkey =~ s/^<!reversed><!retroflexhook><!group>$/0290/;#<UEFD6><UEFD4><UEFD0> 
+	$deadkey =~ s/^<!reversed><!retroflexhook><!group><!group>$/0291/;#<UEFD6><UEFD4><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!subscript>$/1D0E/;#<UEFD6><UEFD2> 
+	$deadkey =~ s/^<!reversed><!superscript>$/02BD/;#<UEFD6><UEFD1> 
+	$deadkey =~ s/^<!reversed><!superscript><!group>$/1D32/;#<UEFD6><UEFD1><UEFD0> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><!group>$/1D9E/;#<UEFD6><UEFD1><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><!group><!group>$/1D9C/;#<UEFD6><UEFD1><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><!group><!group><!group>$/1D9B/;#<UEFD6><UEFD1><UEFD0><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><3>$/1D9C/;#<UEFD6><UEFD1><UEFD0><3> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><4>$/1D9B/;#<UEFD6><UEFD1><UEFD0><4> 
+	$deadkey =~ s/^<!reversed><!superscript><!group><5>$/1D9A/;#<UEFD6><UEFD1><UEFD0><5> 
+	$deadkey =~ s/^<!stroke><!acute>$/01FF/;#<dead_stroke><dead_acute> 
+	$deadkey =~ s/^<!stroke><!bar>$/A744/;#<dead_stroke><UEFD8> 
+	$deadkey =~ s/^<!stroke><!group>$/019B/;#<dead_stroke><UEFD0> 
+	$deadkey =~ s/^<!stroke><!group><!group>$/AB3F/;#<dead_stroke><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!stroke><!group><!group><!group>$/1E9C/;#<dead_stroke><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!stroke><!group><!group><!group><!group>$/A7DC/;#<dead_stroke><UEFD0><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!stroke><!group><1>$/2270/;#<dead_stroke><UEFD0><1> 
+	$deadkey =~ s/^<!stroke><!group><2>$/2271/;#<dead_stroke><UEFD0><2> 
+	$deadkey =~ s/^<!stroke><!group><3>$/1E9C/;#<dead_stroke><UEFD0><3> 
+	$deadkey =~ s/^<!stroke><!group><4>$/A7DC/;#<dead_stroke><UEFD0><4> 
+	$deadkey =~ s/^<!stroke><!group><5>$/2262/;#<dead_stroke><UEFD0><5> 
+	$deadkey =~ s/^<!stroke><!stroke>$/A7A1/;#<dead_stroke><dead_stroke> 
+	$deadkey =~ s/^<!stroke><!stroke><!stroke>$/2425/;#<dead_stroke><dead_stroke><dead_stroke> 
+	$deadkey =~ s/^<!stroke><!subscript>$/1D7E/;#<dead_stroke><UEFD2> 
+	$deadkey =~ s/^<!stroke><!tilde>$/2241/;#<dead_stroke><dead_tilde> 
+	$deadkey =~ s/^<!stroke><!turned>$/0152/;#<dead_stroke><UEFD5> 
+	$deadkey =~ s/^<!stroke><!turned><!group>$/00E6/;#<dead_stroke><UEFD5><UEFD0> 
+	$deadkey =~ s/^<!stroke><!turned><!group><!group>$/00C6/;#<dead_stroke><UEFD5><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!stroke><!turned><!group><!group><!group>$/A7F9/;#<dead_stroke><UEFD5><UEFD0><UEFD0><UEFD0> 
+	$deadkey =~ s/^<!stroke><!turned><!group><3>$/A7F9/;#<dead_stroke><UEFD5><UEFD0><3> 
 	$deadkey =~ s/^<!stroke><!turned><!turned>$/dead/;#<dead_stroke><UEFD5><UEFD5> 
 	$deadkey =~ s/^<!subscript><!bar>$/dead/;#<UEFD2><UEFD8> 
 	$deadkey =~ s/^<!subscript><!breve>$/dead/;#<UEFD2><dead_breve> 
@@ -700,7 +688,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!subscript><!group><6>$/dead/;#<UEFD2><UEFD0><6> 
 	$deadkey =~ s/^<!subscript><!hook>$/dead/;#<UEFD2><dead_hook> 
 	$deadkey =~ s/^<!subscript><!reversed>$/dead/;#<UEFD2><UEFD6> 
-	$deadkey =~ s/^<!subscript><!stroke>$/dead/;#<UEFD2><dead_stroke> 
+	$deadkey =~ s/^<!subscript><!stroke>$/1D0C/;#<UEFD2><dead_stroke> 
 	$deadkey =~ s/^<!subscript><!subscript>$/dead/;#<UEFD2><UEFD2> 
 	$deadkey =~ s/^<!subscript><!subscript><!turned>$/dead/;#<UEFD2><UEFD2><UEFD5> 
 	$deadkey =~ s/^<!subscript><!superscript>$/dead/;#<UEFD2><UEFD1> 
@@ -810,7 +798,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!retroflexhook><!hook>$/dead/;#<UEFD5><UEFD4><dead_hook> 
 	$deadkey =~ s/^<!turned><!retroflexhook><!macron>$/dead/;#<UEFD5><UEFD4><dead_macron> 
 	$deadkey =~ s/^<!turned><!retroflexhook><!retroflexhook>$/dead/;#<UEFD5><UEFD4><UEFD4> 
-	$deadkey =~ s/^<!turned><!stroke>$/dead/;#<UEFD5><dead_stroke> 
+	$deadkey =~ s/^<!turned><!stroke>$/AB41/;#<UEFD5><dead_stroke> 
 	$deadkey =~ s/^<!turned><!stroke><!group>$/dead/;#<UEFD5><dead_stroke><UEFD0> 
 	$deadkey =~ s/^<!turned><!stroke><!group><!group>$/dead/;#<UEFD5><dead_stroke><UEFD0><UEFD0> 
 	$deadkey =~ s/^<!turned><!stroke><!group><!group><!group>$/dead/;#<UEFD5><dead_stroke><UEFD0><UEFD0><UEFD0> 
@@ -835,16 +823,22 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!turned><!group><3>$/dead/;#<UEFD5><UEFD5><UEFD0><3> 
 	$deadkey =~ s/^<!turned><!turned><!hook>$/dead/;#<UEFD5><UEFD5><dead_hook> 
 	$deadkey =~ s/^<!turned><!turned><!hook><!hook>$/dead/;#<UEFD5><UEFD5><dead_hook><dead_hook> 
-	$deadkey =~ s/^<!turned><!turned><!stroke>$/dead/;#<UEFD5><UEFD5><dead_stroke> 
+	$deadkey =~ s/^<!turned><!turned><!stroke>$/1D13/;#<UEFD5><UEFD5><dead_stroke> 
 	$deadkey =~ s/^<!turned><!turned><!subscript>$/dead/;#<UEFD5><UEFD5><UEFD2> 
 	$deadkey =~ s/^<!turned><!turned><!superscript>$/dead/;#<UEFD5><UEFD5><UEFD1> 
 
-	# Additional dead key chains (5).
+	# Additional dead key chains (11).
 	$deadkey =~ s/^<!grave><!acute>$/dead/;#<dead_grave><dead_acute> 
 	$deadkey =~ s/^<!macron><!retroflexhook>$/dead/;#<dead_macron><UEFD4> 
 	$deadkey =~ s/^<!macron><!superscript>$/dead/;#<dead_macron><UEFD1> 
 	$deadkey =~ s/^<!retroflexhook><!macron>$/dead/;#<UEFD4><dead_macron> 
 	$deadkey =~ s/^<!superscript><!macron>$/dead/;#<UEFD1><dead_macron> 
+	$deadkey =~ s/^<!invertedbreve><!group><1>$/023C/;#<dead_invertedbreve><UEFD0><1> 
+	$deadkey =~ s/^<!turned><!stroke><!turned>$/dead/;#<UEFD5><dead_stroke><UEFD5> 
+	$deadkey =~ s/^<!turned><!diaeresis><!turned>$/dead/;#<UEFD5><dead_diaeresis><UEFD5> 
+	$deadkey =~ s/^<!superscript><!diaeresis><!superscript>$/dead/;#<UEFD1><dead_diaeresis><UEFD1> 
+	$deadkey =~ s/^<!turned><!subscript><!turned>$/dead/;#<UEFD5><UEFD2><UEFD5> 
+	$deadkey =~ s/^<!subscript><!turned><!subscript>$/dead/;#<UEFD2><UEFD5><UEFD2> 
 
 	# When adding dead key chains, please make sure to add them in @chained, too.
 
@@ -854,14 +848,20 @@ sub get_dead_char {
 # Used to generate the required chained dead keys.
 my @chained = (
 
-	# Additional 5.
+	# Additional 11.
 	'<!grave><!acute>',
 	'<!macron><!retroflexhook>',
 	'<!macron><!superscript>',
 	'<!retroflexhook><!macron>',
 	'<!superscript><!macron>',
+	'<!invertedbreve><!group><1>',
+	'<!turned><!stroke><!turned>',
+	'<!turned><!diaeresis><!turned>',
+	'<!superscript><!diaeresis><!superscript>',
+	'<!turned><!subscript><!turned>',
+	'<!subscript><!turned><!subscript>',
 
-	# Main set, 571.
+	# Main set, 561.
 	'<!abovedot><!abovedot>',
 	'<!abovedot><!abovedot><!acute>',
 	'<!abovedot><!abovedot><!acute><!grave>',
@@ -1150,7 +1150,6 @@ my @chained = (
 	'<!invertedbreve><!group><!group>',
 	'<!invertedbreve><!group><!group><!group>',
 	'<!invertedbreve><!group><!group><!group><!group>',
-	'<!invertedbreve><!group><1>',
 	'<!invertedbreve><!group><3>',
 	'<!invertedbreve><!group><4>',
 	'<!invertedbreve><!group><5>',
@@ -1264,15 +1263,6 @@ my @chained = (
 	'<!stroke><!group><4>',
 	'<!stroke><!group><5>',
 	'<!stroke><!stroke>',
-	'<!stroke><!stroke><!flag>',
-	'<!stroke><!stroke><!flag><!group>',
-	'<!stroke><!stroke><!flag><!group><!group>',
-	'<!stroke><!stroke><!flag><!group><!group><!group>',
-	'<!stroke><!stroke><!flag><!group><3>',
-	'<!stroke><!stroke><!group>',
-	'<!stroke><!stroke><!group><!group>',
-	'<!stroke><!stroke><!group><!group><!group>',
-	'<!stroke><!stroke><!group><3>',
 	'<!stroke><!stroke><!stroke>',
 	'<!stroke><!subscript>',
 	'<!stroke><!tilde>',
