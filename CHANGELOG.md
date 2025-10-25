@@ -20,6 +20,8 @@ Réimplémentation pour Windows de la touche de composition sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Documentation : Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
+
 ## 6.1.0 (2025-10-23)
 
 Rectification des groupes des symboles.
@@ -32,7 +34,7 @@ Transpilation pour Windows des enchaînements de touches mortes.
 	* Enchaînements de touches mortes : Porter sous Windows. dead-key-convert.pl [767b448](https://github.com/dispoclavier/nouvel-azerty/commit/767b448206fc157b9481c873526865fcc7a363b4), [f8086f7](https://github.com/dispoclavier/nouvel-azerty/commit/f8086f736fe1a37ae772b9123e06daa215ee5f41), [4a32f70](https://github.com/dispoclavier/nouvel-azerty/commit/4a32f7017c7d38ba9913fca7c3e8df5f5c264cbd), kbdeadtrans.c [3879914](https://github.com/dispoclavier/nouvel-azerty/commit/3879914249c6c09deea33655c043a85494fee431), [286020b](https://github.com/dispoclavier/nouvel-azerty/commit/286020b83706fe10348a6f07f7d76bd9f0a29276), [98ed3b1](https://github.com/dispoclavier/nouvel-azerty/commit/98ed3b14ca26120eb24a34c8e907d59497580bf9)
 	* Groupes des symboles :
 		* Groupe 10 de "^" : Redonder "⎋" U+238B à la place de l’antiliant "‌" U+200C, qui est sur touche vive B01. compose-2.yml, compose-3.yml [8475d51](https://github.com/dispoclavier/nouvel-azerty/commit/8475d51a63622a40ac32b611a802d2317fb8406d)
-		* Groupe 10 de "%" : Ajouter "�" U+FFFD à la place du liant "‍" U+200D, qui est sur touche vive C01. ibidem
+		* Groupe 10 de "%" : Ajouter le point d’interrogation dans un losange "�" U+FFFD à la place du liant "‍" U+200D, qui est sur touche vive C01. ibidem
 		* Groupe 10 de "€" : Redonder "⌦" U+2326 à la place du sélecteur de variante style émoji "️" U+FE0F, qui va dans tilde. ibidem
 		* Groupe 10 de "\\" : Redonder "⌫" U+232B à la place du sélecteur de variante nᵒ 1 "︀" U+FE00, qui va dans tilde. ibidem
 		* Groupe 10 de "~" : Redonder "☧" U+2627 à la place du sélecteur de variante style texte "︎" U+FE0E, qui va dans tilde. ibidem
