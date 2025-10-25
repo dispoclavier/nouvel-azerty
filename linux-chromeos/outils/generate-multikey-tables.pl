@@ -4,14 +4,14 @@
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
 # 2024-10-28T1415+0100
-# 2025-10-25T2137+0200
+# 2025-10-25T2205+0200
 # = last modified.
 #
 # Generates HTML tables of dedicated non-math multikey sequences found in
 # Compose.yml.
 #
-# In the input file, parsing starts at `START_MULTIKEY`, and parsing stops at
-# `START_MATH`.
+# In the input file, parsing starts at "START_MULTIKEY", and parsing stops at
+# "START_MATH".
 #
 # Section headings with a caret between the two leading hashes switch files.
 #
@@ -25,13 +25,13 @@
 # Characters missing from both are counted and listed with their line number
 # in Compose.yml.
 #
-# The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
-# be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
+# The output is designed for use in WordPress, where "{{{anrghg-classes}}}" can
+# be replaced with additional CSS classes, as well as "{{{anrghg-value}}}" with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 #
 # The all-in-one table generated alongside can only be included in web pages in
 # WordPress when using the “Include partial” block provided by this plugin, as
-# posts with too much code in HTML blocks are not saved in WordPress.
+# posts with too much code in HTML blocks are not saved.
 #
 #
 # Using old-style file handles.

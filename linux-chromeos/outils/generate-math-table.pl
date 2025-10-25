@@ -4,6 +4,7 @@
 # 2024-05-16T1520+0200
 # 2024-10-28T1417+0100
 # 2025-09-25T0143+0200
+# 2025-10-25T2202+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -31,7 +32,7 @@
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 #
 # Emoji style display should be deactivated on the page that this math table
-# is included in as a partial.
+# is a partial of.
 #
 #
 # Using old-style file handles.

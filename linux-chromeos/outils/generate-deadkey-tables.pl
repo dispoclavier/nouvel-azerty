@@ -7,15 +7,15 @@
 # 2025-05-26T2331+0200
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
-# 2025-10-25T2137+0200
+# 2025-10-25T2204+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
 #
-# The input requires `START_LATIN_BY_DEAD_KEYS` as a start tag.
+# The input requires "START_LATIN_BY_DEAD_KEYS" as a start tag.
 #
-# Section headings with a leading `#*#` and the following headings switch files
+# Section headings with a leading "#*#" and the following headings switch files
 # of partial tables:
 #
 #     # # Composed letters for languages in Togo
@@ -23,9 +23,9 @@
 #     # # EMOJI_READY
 #     ### Letter groups
 #
-# Parsing `START_LETTER_SYMBOL_GROUPS` as the end tag is commented out, so that
+# Parsing "START_LETTER_SYMBOL_GROUPS" as the end tag is commented out, so that
 # space and symbol group tables and letter group tables are generated too.
-# Other options may be configured after `/START_LETTER_SYMBOL_GROUPS/`.
+# Other options may be configured after "/START_LETTER_SYMBOL_GROUPS/".
 #
 # The keyboard output is marked up for display with a white background and with
 # a light-blue baseline for the purpose of delimiting whitespace characters and
@@ -45,13 +45,13 @@
 # Characters missing from both are counted and listed with their line number
 # in Compose.yml.
 #
-# The output is designed for use in WordPress, where `{{{anrghg-classes}}}` can
-# be replaced with additional CSS classes, as well as `{{{anrghg-value}}}` with
+# The output is designed for use in WordPress, where "{{{anrghg-classes}}}" can
+# be replaced with additional CSS classes, as well as "{{{anrghg-value}}}" with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 #
 # The all-in-one table generated alongside can only be included in web pages in
 # WordPress when using the “Include partial” block provided by this plugin, as
-# posts with too much code in HTML blocks are not saved to the database.
+# posts with too much code in HTML blocks are not saved.
 #
 #
 # Using old-style file handles.
