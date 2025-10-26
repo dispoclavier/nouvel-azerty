@@ -20,7 +20,13 @@ Réimplémentation pour Windows de la touche de composition sur le modèle final
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-* Documentation : Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
+* Composition :
+	* Compléter les séquences de "⋻" U+22FB (et supprimer "¶" U+00B6 par « ¦P| » et « ¦p| » qui ne sont pas dans en_US.UTF-8/Compose). compose-1.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
+	* Simplifier les séquences de "⋬" U+22EC, "⋲" U+22F2, "⋵" U+22F5, "⋸" U+22F8, "⋹" U+22F9, "⋺" U+22FA, "⋼" U+22FC, "⋿" U+22FF, "⌈" U+2308, "⌋" U+230B. ibidem
+	* Compléter et simplifier les séquences de "⍼" U+237C, "⏢" U+23E2. ibidem
+* Documentation :
+	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
+	* Corriger une annotation. compose-3.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
 
 ## 6.1.0 (2025-10-23)
 
