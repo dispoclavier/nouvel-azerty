@@ -2629,7 +2629,6 @@
 #
 # # EMOJI_READY
 #   dead_doubleacute *dead_reversed
-#   Dchar: 
 #
 #   This virtual dead key was added when live key support for a set of emoji
 #   was added on Windows in the wake of implementing one more extra modifier
@@ -10612,7 +10611,7 @@
 <Multi_key><numbersign><KP_0><period><comma>                                                   <z> : "𝙯" U1D66F # MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL Z
 #
 #
-#+# Groups 11 and 12 for Latin letters follow group 5.
+# # Groups 11 and 12 for Latin letters are located after group 5 for consistency.
 #   See #+# GROUP_11
 #   See #+# GROUP_12
 #
