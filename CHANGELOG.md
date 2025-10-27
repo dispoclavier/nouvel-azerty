@@ -28,6 +28,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 	* Compléter et simplifier les séquences de "⍼" U+237C, "⏢" U+23E2. ibidem
 	* Corriger les séquences de "▮" U+25AE. compose-1.yml [f76816b](https://github.com/dispoclavier/nouvel-azerty/commit/f76816bb88bb66fea8acb5a1da3ac35334309cb6)
 	* Simplifier les séquences de "▯" U+25AF, "▰" U+25B0, "▱" U+25B1, "▲" U+25B2, "▶" U+25B6, "▾" U+25BE, "▿" U+25BF. ibidem
+	* Simplifier les séquences de "◀" U+25C0, "◁" U+25C1. compose-1.yml [e18f928](https://github.com/dispoclavier/nouvel-azerty/commit/e18f9288c5314d38f3e7d67cae1fd59a87eb04c6)
 * Documentation :
 	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
 	* Ajouter une note juridique. compose-1.yml [73efbca](https://github.com/dispoclavier/nouvel-azerty/commit/73efbca712887774d7fd1bab1f5b313f962b00f2)
