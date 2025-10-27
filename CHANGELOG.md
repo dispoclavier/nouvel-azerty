@@ -4,7 +4,7 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: », « ¦¦ ».
 
-## 6.4.0 (projet)
+## 6..0 (projet)
 
 Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
@@ -30,6 +30,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 	* Simplifier les séquences de "▯" U+25AF, "▰" U+25B0, "▱" U+25B1, "▲" U+25B2, "▶" U+25B6, "▾" U+25BE, "▿" U+25BF. ibidem
 * Documentation :
 	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
+	* Ajouter une note juridique. compose-1.yml [73efbca](https://github.com/dispoclavier/nouvel-azerty/commit/73efbca712887774d7fd1bab1f5b313f962b00f2)
 	* Corriger une annotation. compose-3.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
 
 ## 6.1.0 (2025-10-23)
