@@ -3084,8 +3084,8 @@
 <Multi_key><P><A><R><C>                                                                            : "▭" U25AD # WHITE RECTANGLE
 #
 #   En filled rectangular bullet, *enfilledrectbullet, openrectbullet, not U25AD WHITE RECTANGLE
-<Multi_key><e><f><r><b>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
-<Multi_key><E><F><R><B>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+<Multi_key><e><n><f><r>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+<Multi_key><E><N><F><R>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
 #   Puce pleine rectangulaire demi-cadratine
 <Multi_key><p><p><r><d>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
 <Multi_key><P><P><R><D>                                                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
@@ -6764,25 +6764,18 @@
 #   https://www.unicode.org/charts/PDF/U25A0.pdf
 #   https://www.unicode.org/charts/nameslist/n_25A0.html
 #
-#@
 <Multi_key><bracketleft><numbersign><bracketright>                                         <space> : "■" U25A0 # BLACK SQUARE
 <Multi_key><bracketleft><numbersign><bracketright>                                  <nobreakspace> : "■" U25A0 # BLACK SQUARE
 <Multi_key><bracketleft><bracketright>                                                     <space> : "□" U25A1 # WHITE SQUARE
 <Multi_key><bracketleft><bracketright>                                              <nobreakspace> : "□" U25A1 # WHITE SQUARE
 <Multi_key><bracketright><bracketleft>                                                     <space> : "□" U25A1 # WHITE SQUARE
 <Multi_key><bracketright><bracketleft>                                              <nobreakspace> : "□" U25A1 # WHITE SQUARE
-<Multi_key><bracketleft><numbersign><bracketright><bar>                                    <space> : "▮" U25AE # BLACK VERTICAL RECTANGLE
-<Multi_key><bracketleft><numbersign><bracketright><bar>                             <nobreakspace> : "▮" U25AE # BLACK VERTICAL RECTANGLE
-<Multi_key><bracketleft><bracketright><bar>                                                <space> : "▯" U25AF # WHITE VERTICAL RECTANGLE
-<Multi_key><bracketleft><bracketright><bar>                                         <nobreakspace> : "▯" U25AF # WHITE VERTICAL RECTANGLE
-<Multi_key><bracketright><bracketleft><bar>                                                <space> : "▯" U25AF # WHITE VERTICAL RECTANGLE
-<Multi_key><bracketright><bracketleft><bar>                                         <nobreakspace> : "▯" U25AF # WHITE VERTICAL RECTANGLE
-<Multi_key><slash><numbersign><underscore><slash>                                          <space> : "▰" U25B0 # BLACK PARALLELOGRAM
-<Multi_key><slash><numbersign><underscore><slash>                                   <nobreakspace> : "▰" U25B0 # BLACK PARALLELOGRAM
-<Multi_key><slash><underscore><slash>                                                      <space> : "▱" U25B1 # WHITE PARALLELOGRAM
-<Multi_key><slash><underscore><slash>                                               <nobreakspace> : "▱" U25B1 # WHITE PARALLELOGRAM
-<Multi_key><slash><numbersign><underscore><backslash>                                      <space> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
-<Multi_key><slash><numbersign><underscore><backslash>                               <nobreakspace> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
+<Multi_key><bracketleft><numbersign><bracketright><bar>                                            : "▮" U25AE # BLACK VERTICAL RECTANGLE
+<Multi_key><bracketleft><bracketright><bar>                                                        : "▯" U25AF # WHITE VERTICAL RECTANGLE
+<Multi_key><bracketright><bracketleft><bar>                                                        : "▯" U25AF # WHITE VERTICAL RECTANGLE
+<Multi_key><slash><numbersign><underscore><slash>                                                  : "▰" U25B0 # BLACK PARALLELOGRAM
+<Multi_key><slash><underscore><slash>                                                              : "▱" U25B1 # WHITE PARALLELOGRAM
+<Multi_key><slash><numbersign><underscore><backslash>                                              : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                           <nobreakspace> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 #
@@ -6797,14 +6790,10 @@
 <Multi_key><nobreakspace><asciicircum><underscore>                                                 : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><space><slash><underscore><backslash>                                                   : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><underscore><backslash>                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
-<Multi_key><space><bar><numbersign><backslash><slash>                                      <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><space><bar><numbersign><backslash><slash>                               <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><nobreakspace><bar><numbersign><backslash><slash>                               <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><nobreakspace><bar><numbersign><backslash><slash>                        <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><space><bar><numbersign><slash><backslash>                                      <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><space><bar><numbersign><slash><backslash>                               <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><nobreakspace><bar><numbersign><slash><backslash>                               <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><nobreakspace><bar><numbersign><slash><backslash>                        <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+#Multi_key><space><bar><numbersign><backslash><slash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+#Multi_key><space><bar><numbersign><slash><backslash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><space><bar><numbersign>                                                                : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><nobreakspace><bar><numbersign>                                                         : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                                  <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><backslash><slash>                                           <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
@@ -6821,38 +6810,25 @@
 <Multi_key><underscore><backslash><slash>                                           <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 <Multi_key><underscore><slash><backslash>                                                  <space> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 <Multi_key><underscore><slash><backslash>                                           <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
-<Multi_key><space><underscore><numbersign><backslash><slash>                               <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><numbersign><backslash><slash>                        <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><numbersign><backslash><slash>                        <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><numbersign><backslash><slash>                 <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><numbersign><slash><backslash>                               <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><numbersign><slash><backslash>                        <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><numbersign><slash><backslash>                        <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><numbersign><slash><backslash>                 <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><backslash><slash><0>                                   <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><backslash><slash><0>                            <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><backslash><slash><KP_0>                                <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><backslash><slash><KP_0>                         <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><slash><backslash><0>                                   <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><slash><backslash><0>                            <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><slash><backslash><KP_0>                                <space> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><numbersign><slash><backslash><KP_0>                         <nobreakspace> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><backslash><slash>                                           <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><backslash><slash>                                    <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><backslash><slash>                                    <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><backslash><slash>                             <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><slash><backslash>                                           <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><space><underscore><slash><backslash>                                    <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><slash><backslash>                                    <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><underscore><slash><backslash>                             <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><backslash><slash><0>                                               <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><backslash><slash><0>                                        <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><backslash><slash><KP_0>                                            <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><backslash><slash><KP_0>                                     <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><slash><backslash><0>                                               <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><slash><backslash><0>                                        <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><slash><backslash><KP_0>                                            <space> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><underscore><slash><backslash><KP_0>                                     <nobreakspace> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#Multi_key><space><underscore><numbersign><backslash><slash>                                       : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#Multi_key><space><underscore><numbersign><slash><backslash>                                       : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><space><underscore><numbersign>                                                         : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><underscore><numbersign>                                                  : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><backslash><slash><0>                                           : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><backslash><slash><KP_0>                                        : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><slash><backslash><0>                                           : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><slash><backslash><KP_0>                                        : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#Multi_key><space><underscore><backslash><slash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><space><underscore><backslash>                                                          : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><underscore><backslash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#Multi_key><space><underscore><slash><backslash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><space><underscore><slash>                                                              : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><underscore><slash>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><backslash><slash><0>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><backslash><slash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><slash><backslash><0>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><slash><backslash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#@
 <Multi_key><space><slash><backslash><numbersign><bar>                                      <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><slash><backslash><numbersign><bar>                               <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><slash><backslash><numbersign><bar>                               <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
