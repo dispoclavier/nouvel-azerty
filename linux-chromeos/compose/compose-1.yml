@@ -6837,26 +6837,26 @@
 <Multi_key><underscore><backslash><slash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><0>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-#@
-<Multi_key><space><slash><backslash><numbersign><bar>                                      <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><space><slash><backslash><numbersign><bar>                               <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><slash><backslash><numbersign><bar>                               <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><slash><backslash><numbersign><bar>                        <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><space><backslash><slash><numbersign><bar>                                      <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><space><backslash><slash><numbersign><bar>                               <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><backslash><slash><numbersign><bar>                               <space> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><backslash><slash><numbersign><bar>                        <nobreakspace> : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
-<Multi_key><space><space><slash><backslash><bar>                                           <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><space><space><slash><backslash><bar>                                    <nobreakspace> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><space><slash><backslash><bar>                                    <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><space><slash><backslash><bar>                             <nobreakspace> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><nobreakspace><slash><backslash><bar>                             <space> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
-<Multi_key><nobreakspace><nobreakspace><slash><backslash><bar>                      <nobreakspace> : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+#Multi_key><space><slash><backslash><numbersign><bar>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><space><slash><backslash><numbersign>                                                   : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><slash><backslash><numbersign>                                            : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+#Multi_key><space><backslash><slash><numbersign><bar>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><space><backslash><slash><numbersign>                                                   : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><backslash><slash><numbersign>                                            : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+#Multi_key><space><space><slash><backslash><bar>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><space><space><slash><backslash>                                                        : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><space><slash><backslash>                                                 : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><nobreakspace><slash><backslash>                                          : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+#Multi_key><space><space><backslash><slash><bar>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><space><space><backslash><slash>                                                        : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><space><backslash><slash>                                                 : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><nobreakspace><backslash><slash>                                          : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><less><numbersign><greater>                                                     <space> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><less><numbersign><greater>                                              <nobreakspace> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><space><space><less><greater>                                                           : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><nobreakspace><space><less><greater>                                                    : "◇" U25C7 # WHITE DIAMOND
 <Multi_key><nobreakspace><nobreakspace><less><greater>                                             : "◇" U25C7 # WHITE DIAMOND
+#@
 <Multi_key><space><a><v>                                                                   <space> : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                            <nobreakspace> : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                            <space> : "◊" U25CA # LOZENGE
