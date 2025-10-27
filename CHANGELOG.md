@@ -4,17 +4,19 @@ Pour assurer l’affichage d’un maximum de caractères, il est nécessaire d�
 
 Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: », « ¦¦ ».
 
-## 6.3.0 (projet)
-
-Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
+## 6.4.0 (projet)
 
 Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
 Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
 
+## 6.3.0 (projet)
+
+Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
+
 ## 6.2.0 (projet)
 
-Réimplémentation pour Windows de la touche de composition sur le modèle finalisé pour Linux.
+Transpilation pour Windows des séquences de composition.
 
 ## 6.1.1 (projet)
 
