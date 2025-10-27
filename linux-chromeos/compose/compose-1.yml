@@ -19,21 +19,21 @@
 #     Description française : Dispositions de clavier adaptées aux langues nationales, régionales et voisines de la Francophonie.
 #              Target public: General public and developers, editors, journalists, programmers, publishers, scientists, secretaries, translators, typographers, writers.
 #             Destinataires : Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
-#              Regular names: kb(brFR(s|sr)|fr(AF(s|sr)|BEs|CA(ms|s)|CHs|FR(s|sr)|PF(s|sr)))
+#              Regular names: kb(brFR(s|r)|fr(AF(s|r)|BEs|CA(ms|s)|CHs|FR(s|r)|PF(s|r)))
 #   Full names, descriptions: kbbrFRs  Breton and French semiautomatic keyboard layout
-#                             kbbrFRsr Breton and French remapped semiautomatic keyboard layout
+#                             kbbrFRr  Breton and French remapped semiautomatic keyboard layout
 #                             kbfrAFs  Francophone Africa semiautomatic keyboard layout
-#                             kbfrAFsr Francophone Africa remapped semiautomatic keyboard layout
+#                             kbfrAFr  Francophone Africa remapped semiautomatic keyboard layout
 #                             kbfrBEs  French Belgium semiautomatic keyboard layout
 #                             kbfrFRs  French France semiautomatic keyboard layout
-#                             kbfrFRsr French France remapped semiautomatic keyboard layout
+#                             kbfrFRr  French France remapped semiautomatic keyboard layout
 #                             kbfrPFs  French Polynesia semiautomatic keyboard layout
-#                             kbfrPFsr French Polynesia remapped semiautomatic keyboard layout
+#                             kbfrPFr  French Polynesia remapped semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAms French Canada multilingual semiautomatic keyboard layout
 #                 (oncoming)  kbfrCAs  French Canada semiautomatic keyboard layout
-#                 (oncoming)  kbfrCAsr French Canada remapped semiautomatic keyboard layout
+#                 (oncoming)  kbfrCAr  French Canada remapped semiautomatic keyboard layout
 #                 (oncoming)  kbfrCHs  French Switzerland semiautomatic keyboard layout
-#                 (oncoming)  kbfrCHsr French Switzerland remapped semiautomatic keyboard layout
+#                 (oncoming)  kbfrCHr  French Switzerland remapped semiautomatic keyboard layout
 #               Code licence: Apache 2.0
 #           Code licence URL: https://www.apache.org/licenses/LICENSE-2.0
 #           Non-code licence: CC-BY 4.0
@@ -108,6 +108,15 @@
 #
 #             Uninstallation: A, B: Restore the previously backed-up original XCompose file.
 #                             C:    Delete or rename the added file $HOME/.XCompose.
+#
+#                 Legal note: Despite its name, this file has been developed from scratch
+#                             based on the C code of a keyboard layout developed for and on
+#                             Windows, and it is not derived from en_US.UTF-8/Compose, nor
+#                             from any of the Compose files shipped with Linux. As a result,
+#                             it can be released under the Apache 2.0 license, and it can be
+#                             transpiled back to C and used as source code for layout drivers
+#                             shipped with Windows, without running into legal issues related
+#                             to the GNU General Public Licenses.
 #
 #           Acknowledgements: • Our Lord God and Jesus Christ, for ideas, help and direction.
 #                               Consistently with the Cistercian “Soli Deo Gloria”, picked up
