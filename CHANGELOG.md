@@ -25,7 +25,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 	* Simplifier les séquences de "⋬" U+22EC, "⋲" U+22F2, "⋵" U+22F5, "⋸" U+22F8, "⋹" U+22F9, "⋺" U+22FA, "⋼" U+22FC, "⋿" U+22FF, "⌈" U+2308, "⌋" U+230B. ibidem
 	* Compléter et simplifier les séquences de "⍼" U+237C, "⏢" U+23E2. ibidem
 	* Corriger les séquences de "▮" U+25AE. compose-1.yml [f76816b](https://github.com/dispoclavier/nouvel-azerty/commit/f76816bb88bb66fea8acb5a1da3ac35334309cb6)
-	* Simplifier les séquences de "▮" U+25AE, "▯" U+25AF, "▰" U+25B0, "▱" U+25B1, "▲" U+25B2, "▶" U+25B6, "▾" U+25BE, "▿" U+25BF. ibidem
+	* Simplifier les séquences de "▯" U+25AF, "▰" U+25B0, "▱" U+25B1, "▲" U+25B2, "▶" U+25B6, "▾" U+25BE, "▿" U+25BF. ibidem
 * Documentation :
 	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
 	* Corriger une annotation. compose-3.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
