@@ -41,6 +41,7 @@ Correction, complétion et simplification de séquences de composition.
 * Transformations : Enchaînements de touches mortes grecs polytoniques et monotoniques : Porter sous Windows. dead-key-convert.pl [8c31ce0](https://github.com/dispoclavier/nouvel-azerty/commit/8c31ce0f94b27ffa54793e9972cd19aa77906a80), kbdeadtrans.c [aff9a9c](https://github.com/dispoclavier/nouvel-azerty/commit/aff9a9c06dc835525af7e0fef085c912dcee193b)
 * Documentation :
 	* Ajouter le tableau des lettres grecques diacritées. generate-deadkey-tables.pl [f8d8da2(https://github.com/dispoclavier/nouvel-azerty/commit/f8d8da248c717e8cfe6c6f140aee5feeacdb0744)
+	* Mettre à jour le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [c957d08](https://github.com/dispoclavier/nouvel-azerty/commit/c957d08efbfff17a9faaa42354e37d27c0a9bd5d)
 	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
 	* Ajouter une note juridique. compose-1.yml [73efbca](https://github.com/dispoclavier/nouvel-azerty/commit/73efbca712887774d7fd1bab1f5b313f962b00f2)
 	* Corriger des annotations. compose-1.yml [d4d59bf](https://github.com/dispoclavier/nouvel-azerty/commit/d4d59bf271b1fa27ad9e51a8742ee014c7dbfbcd), compose-3.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
