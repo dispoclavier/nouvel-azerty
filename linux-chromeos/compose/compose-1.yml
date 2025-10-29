@@ -9289,6 +9289,8 @@
 #
 #       dead_doubleacute        tonos
 #
+#   See # # End note about polytonic Greek
+#
 #
 # # GREEK_OR_CIRCLED&DOUBLEACUTE
 #   Greek tonos
@@ -13302,10 +13304,13 @@
 # # End note about polytonic Greek
 #
 #   Here ends the section dedicated to polytonic Greek (that also supports
-#   monotonic Greek alongside). The Greek base alphabet for technical use is
-#   in the Latin dead key section, Greek dead key, that also supports circled,
-#   consistently with its multikey equivalent "@".
-#   See #*# GREEK
+#   monotonic Greek alongside).
+#   See ### Greek with diacritics
+#
+#   The Greek base alphabet for technical use is in the Latin dead key section,
+#   where the Greek letter dead key also supports circled, consistently with
+#   its multikey equivalent "@".
+#   See #*# GREEK_OR_CIRCLED
 #
 #   As this file is part of a Latin keyboard layout, the polytonic Greek part
 #   is not included in the multikey tables and dead key tables documenting its
