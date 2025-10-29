@@ -7,21 +7,24 @@
 # 2025-05-26T2331+0200
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
-# 2025-10-25T2204+0200
+# 2025-10-29T0554+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
 #
-# The input requires "START_LATIN_BY_DEAD_KEYS" as a start tag.
+# The input requires "START_GREEK" as a start tag.
 #
 # Section headings with a leading "#*#" and the following headings switch files
 # of partial tables:
 #
 #     # # Composed letters for languages in Togo
 #     ### Space and symbol groups
-#     # # EMOJI_READY
 #     ### Letter groups
+#     ### Greek with diacritics
+#     #.# DEAD_LEGACYTILDE
+#     #.# DEAD_LEGACYGRAVE
+#     # # EMOJI_READY
 #
 # Parsing "START_LETTER_SYMBOL_GROUPS" as the end tag is commented out, so that
 # space and symbol group tables and letter group tables are generated too.
@@ -49,9 +52,9 @@
 # be replaced with additional CSS classes, as well as "{{{anrghg-value}}}" with
 # anything, classes too in this file, using the A.N.R.GHG Publishing Toolkit.
 #
-# The all-in-one table generated alongside can only be included in web pages in
-# WordPress when using the “Include partial” block provided by this plugin, as
-# posts with too much code in HTML blocks are not saved.
+# The partials are included in pages in WordPress using the “Include partial”
+# block provided by this plugin. Posts with too much code in HTML blocks cannot
+# be saved.
 #
 #
 # Using old-style file handles.
@@ -88,7 +91,7 @@ unless ( -d $output_directory ) {
 }
 my $output_file_name_template = 'deadkey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
-my $output_file_index         = 0;
+my $output_file_index         = -3;
 my $output_file_extension     = '.html';
 my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
@@ -121,7 +124,7 @@ my ( @anchors, $anchor, $cp, $descrip, $index, $line_nb, $math, $regex, $str, $t
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
-	if ( $line =~ /START_LATIN_BY_DEAD_KEYS/ ) {
+	if ( $line =~ /START_GREEK/ ) {
 		$parse_on = !0;
 	}
 	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
@@ -142,8 +145,11 @@ while ( my $line = <INPUT> ) {
 		if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
 			|| $line =~ /^### Space and symbol groups/
-			|| $line =~ /^# # EMOJI_READY/
 			|| $line =~ /^### Letter groups/
+			|| $line =~ /^### Greek with diacritics/
+			|| $line =~ /^#\.# DEAD_LEGACYTILDE/
+			|| $line =~ /^#\.# DEAD_LEGACYGRAVE/
+			|| $line =~ /^# # EMOJI_READY/
 		) {
 			print OUTPUT $end_tags;
 			close( OUTPUT );
@@ -208,7 +214,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + ⟦+=}⟧ ou AltGr\/Option + ⟦£\$¤⟧ (en mode ASCII uniquement)">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + ⟦P⟧">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + ⟦X⟧">rond en chef<\/kbd>/g;
-				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$¤ ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
+				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche ⟦£\$¤⟧ ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
 				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + ⟦§!⟧">virgule souscrite<\/kbd>/g;
 				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + ⟦.;⟧">point souscrit<\/kbd>/g;
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + ⟦F⟧">brève<\/kbd>/g;
