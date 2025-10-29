@@ -2,7 +2,7 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.1.0" # See #   End of line comments
+<UEFA0>                     : "version 6.1.2.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1218,9 +1218,8 @@
 #   See ### Group dead key introduction
 #   https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/outils
 #
-#   Polytonic Greek, however, is not documented in tables, as it is supported
-#   mainly to meet eventual preexisting user expectations, without any intent
-#   to raise such expectations.
+#   Polytonic Greek is documented in an extra table since it is transpiled to C
+#   starting with version 6.1.1.
 #   See ### Greek with diacritics
 #   See # # End note about polytonic Greek
 #
@@ -9293,7 +9292,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DOUBLEACUTE
-#   Greek tonos
+#   Tonos
 #
 <dead_greek><dead_doubleacute>                                                             <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><at><quotedbl>                                                                  <space> : "́" U0301 # COMBINING ACUTE ACCENT
@@ -9406,7 +9405,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&ACUTE
-#   Greek oxia
+#   Oxia
 #
 <dead_greek><dead_acute>                                                                   <space> : "́" U0301 # COMBINING ACUTE ACCENT
 <Multi_key><at><apostrophe>                                                                <space> : "́" U0301 # COMBINING ACUTE ACCENT
@@ -9483,7 +9482,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&ACUTE&DOT_BELOW
-#   Greek oxia ypogegrammeni
+#   Oxia ypogegrammeni
 #
 <dead_greek><dead_acute><dead_belowdot>                                                        <a> : "ᾴ" U1FB4 # GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
 <Multi_key><at><apostrophe><exclam>                                                            <a> : "ᾴ" U1FB4 # GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
@@ -9524,7 +9523,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE
-#   Greek dasia
+#   Dasia
 #
 <dead_greek><dead_invertedbreve>                                                    <nobreakspace> : "῾" U1FFE # GREEK DASIA
 <Multi_key><at><parenleft>                                                          <nobreakspace> : "῾" U1FFE # GREEK DASIA
@@ -9601,7 +9600,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&ACUTE
-#   Greek dasia oxia
+#   Dasia oxia
 #
 <dead_greek><dead_invertedbreve><dead_acute>                                        <nobreakspace> : "῞" U1FDE # GREEK DASIA AND OXIA
 <Multi_key><at><parenleft><apostrophe>                                              <nobreakspace> : "῞" U1FDE # GREEK DASIA AND OXIA
@@ -9798,7 +9797,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&ACUTE&DOT_BELOW
-#   Greek dasia oxia ypogegrammeni
+#   Dasia oxia ypogegrammeni
 #
 <dead_greek><dead_invertedbreve><dead_acute><dead_belowdot>                                    <A> : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
 <Multi_key><at><parenleft><apostrophe><exclam>                                                 <A> : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
@@ -10091,7 +10090,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&CIRCUMFLEX
-#   Greek dasia perispomeni
+#   Dasia perispomeni
 #
 <dead_greek><dead_invertedbreve><dead_circumflex>                                   <nobreakspace> : "῟" U1FDF # GREEK DASIA AND PERISPOMENI
 <Multi_key><at><parenleft><less>                                                    <nobreakspace> : "῟" U1FDF # GREEK DASIA AND PERISPOMENI
@@ -10240,7 +10239,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&CIRCUMFLEX&DOT_BELOW
-#   Greek dasia perispomeni ypogegrammeni
+#   Dasia perispomeni ypogegrammeni
 #
 <dead_greek><dead_invertedbreve><dead_circumflex><dead_belowdot>                               <A> : "ᾏ" U1F8F # GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
 <Multi_key><at><parenleft><less><exclam>                                                       <A> : "ᾏ" U1F8F # GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
@@ -10533,7 +10532,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&GRAVE
-#   Greek dasia varia
+#   Dasia varia
 #
 <dead_greek><dead_invertedbreve><dead_grave>                                        <nobreakspace> : "῝" U1FDD # GREEK DASIA AND VARIA
 <Multi_key><at><parenleft><grave>                                                   <nobreakspace> : "῝" U1FDD # GREEK DASIA AND VARIA
@@ -10730,7 +10729,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&GRAVE&DOT_BELOW
-#   Greek dasia varia ypogegrammeni
+#   Dasia varia ypogegrammeni
 #
 <dead_greek><dead_invertedbreve><dead_grave><dead_belowdot>                                    <A> : "ᾋ" U1F8B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
 <Multi_key><at><parenleft><grave><exclam>                                                      <A> : "ᾋ" U1F8B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
@@ -11023,7 +11022,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&INVERTED_BREVE&DOT_BELOW
-#   Greek dasia ypogegrammeni
+#   Dasia ypogegrammeni
 #
 <dead_greek><dead_invertedbreve><dead_belowdot>                                                <A> : "ᾉ" U1F89 # GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
 <Multi_key><at><parenleft><exclam>                                                             <A> : "ᾉ" U1F89 # GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
@@ -11100,7 +11099,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE
-#   Greek psili
+#   Psili
 #
 <dead_greek><dead_breve>                                                            <nobreakspace> : "᾿" U1FBF # GREEK PSILI
 <Multi_key><at><parenright>                                                         <nobreakspace> : "᾿" U1FBF # GREEK PSILI
@@ -11169,7 +11168,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&ACUTE
-#   Greek psili oxia
+#   Psili oxia
 #
 <dead_greek><dead_breve><dead_acute>                                                <nobreakspace> : "῎" U1FCE # GREEK PSILI AND OXIA
 <Multi_key><at><parenright><apostrophe>                                             <nobreakspace> : "῎" U1FCE # GREEK PSILI AND OXIA
@@ -11354,7 +11353,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&ACUTE&DOT_BELOW
-#   Greek psili ypogegrammeni
+#   Psili ypogegrammeni
 #
 <dead_greek><dead_breve><dead_acute><dead_belowdot>                                            <A> : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
 <Multi_key><at><parenright><apostrophe><exclam>                                                <A> : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
@@ -11647,7 +11646,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&CIRCUMFLEX
-#   Greek psili perispomeni
+#   Psili perispomeni
 #
 <dead_greek><dead_breve><dead_circumflex>                                           <nobreakspace> : "῏" U1FCF # GREEK PSILI AND PERISPOMENI
 <Multi_key><at><parenright><less>                                                   <nobreakspace> : "῏" U1FCF # GREEK PSILI AND PERISPOMENI
@@ -11784,7 +11783,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&CIRCUMFLEX&DOT_BELOW
-#   Greek psili perispomeni ypogegrammeni
+#   Psili perispomeni ypogegrammeni
 #
 <dead_greek><dead_breve><dead_circumflex><dead_belowdot>                                       <A> : "ᾎ" U1F8E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
 <Multi_key><at><parenright><less><exclam>                                                      <A> : "ᾎ" U1F8E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
@@ -12077,7 +12076,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&GRAVE
-#   Greek psili varia
+#   Psili varia
 #
 <dead_greek><dead_breve><dead_grave>                                                <nobreakspace> : "῍" U1FCD # GREEK PSILI AND VARIA
 <Multi_key><at><parenright><grave>                                                  <nobreakspace> : "῍" U1FCD # GREEK PSILI AND VARIA
@@ -12262,7 +12261,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&GRAVE&DOT_BELOW
-#   Greek psili varia ypogegrammeni
+#   Psili varia ypogegrammeni
 #
 <dead_greek><dead_breve><dead_grave><dead_belowdot>                                            <A> : "ᾊ" U1F8A # GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
 <Multi_key><at><parenright><grave><exclam>                                                     <A> : "ᾊ" U1F8A # GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
@@ -12555,7 +12554,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&BREVE&DOT_BELOW
-#   Greek psili ypogegrammeni
+#   Psili ypogegrammeni
 #
 <dead_greek><dead_breve><dead_belowdot>                                                        <A> : "ᾈ" U1F88 # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
 <Multi_key><at><parenright><exclam>                                                            <A> : "ᾈ" U1F88 # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
@@ -12632,7 +12631,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&HOOK_ABOVE
-#   Greek koronis
+#   Koronis
 #
 <dead_greek><UEFD3>                                                                        <space> : "̓" U0343 # COMBINING GREEK KORONIS
 <Multi_key><at><bracketright>                                                              <space> : "̓" U0343 # COMBINING GREEK KORONIS
@@ -12653,7 +12652,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&MACRON
-#   Greek makron
+#   Makron
 #
 <dead_greek><dead_macron>                                                                  <space> : "̄" U0304 # COMBINING MACRON
 <Multi_key><at><bar>                                                                       <space> : "̄" U0304 # COMBINING MACRON
@@ -12698,7 +12697,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&CIRCUMFLEX
-#   Greek perispomeni
+#   Perispomeni
 #
 <dead_greek><dead_circumflex>                                                              <space> : "͂" U0342 # COMBINING GREEK PERISPOMENI
 <Multi_key><at><less>                                                                      <space> : "͂" U0342 # COMBINING GREEK PERISPOMENI
@@ -12739,7 +12738,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&CIRCUMFLEX&DOT_BELOW
-#   Greek perispomeni ypogegrammeni
+#   Perispomeni ypogegrammeni
 #
 <dead_greek><dead_circumflex><dead_belowdot>                                                   <a> : "ᾷ" U1FB7 # GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
 <Multi_key><at><less><exclam>                                                                  <a> : "ᾷ" U1FB7 # GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
@@ -12780,7 +12779,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&HACEK
-#   Greek vrachy
+#   Vrachy
 #
 <dead_greek><dead_caron>                                                                   <space> : "̆" U0306 # COMBINING BREVE
 <Multi_key><at><greater>                                                                   <space> : "̆" U0306 # COMBINING BREVE
@@ -12825,7 +12824,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&GRAVE
-#   Greek varia
+#   Varia
 #
 <dead_greek><dead_grave>                                                                   <space> : "̀" U0300 # COMBINING GRAVE ACCENT
 <Multi_key><at><grave>                                                                     <space> : "̀" U0300 # COMBINING GRAVE ACCENT
@@ -12902,7 +12901,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&GRAVE&DOT_BELOW
-#   Greek varia ypogegrammeni
+#   Varia ypogegrammeni
 #
 <dead_greek><dead_grave><dead_belowdot>                                                        <a> : "ᾲ" U1FB2 # GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
 <Multi_key><at><grave><exclam>                                                                 <a> : "ᾲ" U1FB2 # GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
@@ -12943,7 +12942,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DOT_BELOW
-#   Greek ypogegrammeni
+#   Ypogegrammeni
 #
 <dead_greek><dead_belowdot>                                                                <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
 <Multi_key><at><exclam>                                                                    <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
@@ -12988,7 +12987,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DIAERESIS
-#   Greek dialytika
+#   Dialytika
 #
 <dead_greek><dead_diaeresis>                                                               <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><at><colon>                                                                     <space> : "̈" U0308 # COMBINING DIAERESIS
@@ -13025,7 +13024,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DIAERESIS&DOUBLEACUTE
-#   Greek dialytika tonos
+#   Dialytika tonos
 #
 #   Multikey does not work the way dead_diaeresis-dead_doubleacute-dead_greek,
 #   so as to prevent a conflict with "„" U201E DOUBLE LOW-9 QUOTATION MARK.
@@ -13143,7 +13142,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DIAERESIS&ACUTE
-#   Greek dialytika oxia
+#   Dialytika oxia
 #
 <dead_greek><dead_diaeresis><dead_acute>                                            <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
 <Multi_key><at><colon><apostrophe>                                                  <nobreakspace> : "΅" U1FEE # GREEK DIALYTIKA AND OXIA
@@ -13196,7 +13195,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DIAERESIS&CIRCUMFLEX
-#   Greek dialytika perispomeni
+#   Dialytika perispomeni
 #
 <dead_greek><dead_diaeresis><dead_circumflex>                                       <nobreakspace> : "῁" U1FC1 # GREEK DIALYTIKA AND PERISPOMENI
 <Multi_key><at><colon><less>                                                        <nobreakspace> : "῁" U1FC1 # GREEK DIALYTIKA AND PERISPOMENI
@@ -13249,7 +13248,7 @@
 #
 #
 # # GREEK_OR_CIRCLED&DIAERESIS&GRAVE
-#   Greek dialytika varia
+#   Dialytika varia
 #
 <dead_greek><dead_diaeresis><dead_grave>                                            <nobreakspace> : "῭" U1FED # GREEK DIALYTIKA AND VARIA
 <Multi_key><at><colon><grave>                                                       <nobreakspace> : "῭" U1FED # GREEK DIALYTIKA AND VARIA
@@ -13313,14 +13312,15 @@
 #   See #*# GREEK_OR_CIRCLED
 #
 #   As this file is part of a Latin keyboard layout, the polytonic Greek part
-#   is not included in the multikey tables and dead key tables documenting its
-#   dead key content. Indeed, polytonic Greek is supported only in an attempt
-#   to meet eventual user expectations raised by the comprehensive dead key set
-#   supported for completeness with respect to the Latin script. In the context
-#   of a 100% comprehensive support for Latin script, and given that polytonic
-#   Greek is extensively used in Latin culture, unsupporting polytonic Greek is
-#   not an option.
-#   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Abbreviations/faq0097.html
+#   is documented in an extra table rather than in the regular table dedicated
+#   to the Greek or circled dead key. Indeed, polytonic Greek is supported only
+#   in an attempt to meet eventual user expectations raised by the extensive
+#   dead key coverage, for completeness, for diplomatic reasons fostering an
+#   undiscriminatory support policy, and with respect to the work ethos banning
+#   half measures and lazy excuses for not doing the job. In the context of a
+#   fully comprehensive coverage of Latin script, and given the fact that
+#   polytonic Greek is part of our Western civilisation, unsupporting polytonic
+#   Greek is not an option.
 #   See # # Notes about documentation
 #
 #
