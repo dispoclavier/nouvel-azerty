@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.1.0
-    Version et nᵒ de build : 6.1.0.2
-                      Date : 2025-10-23T2309+0200
+                   Version : 6.1.1
+    Version et nᵒ de build : 6.1.1.0
+                      Date : 2025-10-29T0821+0100
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
