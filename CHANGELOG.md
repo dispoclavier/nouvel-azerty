@@ -10,6 +10,8 @@ Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
 Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
 
+[Mise à jour pour Linux et macOS des touches mortes complétées sous Windows.]
+
 ## 6.3.0 (projet)
 
 Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
@@ -22,7 +24,7 @@ Transpilation pour Windows des séquences de composition.
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
-## 6.1.1 (projet)
+## 6.1.1 (2025-10-29)
 
 Transpilation pour Windows des enchaînements de touches mortes grecs polytoniques et monotoniques.
 
@@ -38,7 +40,7 @@ Correction, complétion et simplification de séquences de composition.
 	* Simplifier les séquences de "◊" U+25CA, "◐" U+25D0, "◢" U+25E2, "◣" U+25E3, "◤" U+25E4, "◧" U+25E7, "◨" U+25E8, "◩" U+25E9, "◪" U+25EA, "◫" U+25EB, "◬" U+25EC, "◸" U+25F8, "◻" U+25FB, "◼" U+25FC, "◾" U+25FE, "◿" U+25FF. compose-1.yml [1e9877d](https://github.com/dispoclavier/nouvel-azerty/commit/1e9877de5f466580266c5ae832daa224ffdbf68c)
 * Transformations : Enchaînements de touches mortes grecs polytoniques et monotoniques : Porter sous Windows. dead-key-convert.pl [8c31ce0](https://github.com/dispoclavier/nouvel-azerty/commit/8c31ce0f94b27ffa54793e9972cd19aa77906a80), kbdeadtrans.c [aff9a9c](https://github.com/dispoclavier/nouvel-azerty/commit/aff9a9c06dc835525af7e0fef085c912dcee193b)
 * Documentation :
-	* Ajouter le tableau des lettres grecques diacritées. generate-deadkey-tables.pl [f8d8da2](https://github.com/dispoclavier/nouvel-azerty/commit/f8d8da248c717e8cfe6c6f140aee5feeacdb0744)
+	* Ajouter le tableau des lettres grecques diacritées. generate-deadkey-tables.pl [f8d8da2(https://github.com/dispoclavier/nouvel-azerty/commit/f8d8da248c717e8cfe6c6f140aee5feeacdb0744)
 	* Mettre à jour les infobulles des tableaux. generate-math-table.pl, generate-multikey-tables.pl, generate-deadkey-tables.pl [1071cc4](https://github.com/dispoclavier/nouvel-azerty/commit/1071cc4445b523f5f4d0142f310db9902e9b9efd), [a1458e8](https://github.com/dispoclavier/nouvel-azerty/commit/a1458e83cdd4c9789f0fb157cb7aaba30f8873dc)
 	* Ajouter une note juridique. compose-1.yml [73efbca](https://github.com/dispoclavier/nouvel-azerty/commit/73efbca712887774d7fd1bab1f5b313f962b00f2)
 	* Corriger des annotations. compose-1.yml [d4d59bf](https://github.com/dispoclavier/nouvel-azerty/commit/d4d59bf271b1fa27ad9e51a8742ee014c7dbfbcd), compose-3.yml [0a8980e](https://github.com/dispoclavier/nouvel-azerty/commit/0a8980ef1bb08bbcb867e1ec00cdcc978d938889)
