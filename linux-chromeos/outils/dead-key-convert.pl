@@ -3,20 +3,20 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-10-29T1717+0100
+# 2025-10-29T2215+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
-# Compose.yml, due to having the two replacerulesets documented there under the
-# heading "# # Notes for maintenance" built in, and thanks to improved sorting.
+# Compose.yml, due to having the two replacerulesets documented there built in.
+# See Compose.yml # # Notes for maintenance
+# And thanks to improved sorting.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 #
 # Chained dead keys started being supported on 2025-10-18. New dead key chains
 # require a dedicated dead character in get_dead_char, and need to be added in
 # @chained for a virtual dead key to be generated. Chains need to be supported
 # incrementally, even when there is no output for a given intermediate chain.
-# See # # Lenient dead key press
-# in Compose.yml
+# See Compose.yml # # Lenient dead key press
 #
 # Not all chained dead keys are symmetric. As the symmetricity of chained dead
 # keys cannot be assumed and so, cannot be relied upon, dead key chains have a
@@ -34,7 +34,7 @@
 # See Compose.yml # # SUBSCRIPT&BAR
 #
 # The sequences ending in dead_greek are required because dead_greek is
-# duplicated on the position of the at sign on the ASCII symbol map.
+# duplicated on the position of the at sign on the ASCII symbol map, key D06.
 #
 # Polytonic Greek was first skipped as off-topic, to alleviate development of
 # premium user experience on Windows. That saved 256 chained dead keys (as well
@@ -45,7 +45,7 @@
 # or not congruent with, the dead key output, as about 100 multikey equivalents
 # are commented out due to conflicts. Multikey is not yet supported.
 #
-# On 2025-10-12, 1 097 sequences have multicharacter output. Most are letters
+# On 2025-10-29, 1 097 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. But Windows is unable to output any of them
 # by dead keys due to an improperly designed DEADTRANS macro. As a consequence,
@@ -53,7 +53,7 @@
 # and "ç" key emulations. Windows users are aware that composed letters are to
 # be input the other way around.
 #
-# 2 232 dead key sequences yield Latin letters or mathematical symbols encoded
+# 2 145 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
 # workaround, the dead key output is restricted to the low surrogate. An input
 # method for the high surrogates is provided separately at the root of related
