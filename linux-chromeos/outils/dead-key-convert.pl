@@ -3,6 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
+# 2025-10-29T0152+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -10,9 +11,10 @@
 # heading "# # Notes for maintenance" built in, and thanks to improved sorting.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 #
-# Polytonic Greek is skipped as off-topic, to alleviate development of premium
-# user experience on Windows. This saves 1,886 dead key sequences and, above
-# all, 256 chained dead keys.
+# Polytonic Greek was first skipped as off-topic, to alleviate development of
+# premium user experience on Windows. That saved 256 chained dead keys (as well
+# as 1,886 dead key sequences). But support was unlocked on 2025-10-28.
+# See Compose.yml # # End note about polytonic Greek
 #
 # Chained dead keys started being supported on 2025-10-18. New dead key chains
 # require a dedicated dead character in get_dead_char, and need to be added in
@@ -840,6 +842,320 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!subscript><!turned>$/02BE/;#<UEFD5><UEFD2><UEFD5> 
 	$deadkey =~ s/^<!subscript><!turned><!subscript>$/02CF/;#<UEFD2><UEFD5><UEFD2> 
 
+	# Polytonic and monotonic Greek (256).
+	$deadkey =~ s/^<!abovehook><!greek>$/1FBD/;#<UEFD3><dead_greek> 
+	$deadkey =~ s/^<!acute><!belowdot><!breve><!greek>$/1F84/;#<dead_acute><dead_belowdot><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!acute><!belowdot><!greek>$/1FB4/;#<dead_acute><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!acute><!belowdot><!greek><!breve>$/1F8C/;#<dead_acute><dead_belowdot><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!acute><!belowdot><!greek><!invertedbreve>$/1F8D/;#<dead_acute><dead_belowdot><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!acute><!belowdot><!invertedbreve><!greek>$/1F85/;#<dead_acute><dead_belowdot><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!acute><!breve><!belowdot><!greek>$/1F9C/;#<dead_acute><dead_breve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!acute><!breve><!greek>$/1FCE/;#<dead_acute><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!acute><!breve><!greek><!belowdot>$/1F94/;#<dead_acute><dead_breve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!acute><!diaeresis><!greek>$/1FEE/;#<dead_acute><dead_diaeresis><dead_greek> 
+	$deadkey =~ s/^<!acute><!greek>$/1FFD/;#<dead_acute><dead_greek> 
+	$deadkey =~ s/^<!acute><!greek><!belowdot>$/1FC4/;#<dead_acute><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!acute><!greek><!belowdot><!breve>$/1FAC/;#<dead_acute><dead_greek><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!acute><!greek><!belowdot><!invertedbreve>$/1F9D/;#<dead_acute><dead_greek><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!acute><!greek><!breve>$/1F0C/;#<dead_acute><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!acute><!greek><!breve><!belowdot>$/1FA4/;#<dead_acute><dead_greek><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!acute><!greek><!diaeresis>$/1FD3/;#<dead_acute><dead_greek><dead_diaeresis> 
+	$deadkey =~ s/^<!acute><!greek><!invertedbreve>$/1FDE/;#<dead_acute><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!acute><!greek><!invertedbreve><!belowdot>$/1F95/;#<dead_acute><dead_greek><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!acute><!invertedbreve><!belowdot><!greek>$/1FAD/;#<dead_acute><dead_invertedbreve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!acute><!invertedbreve><!greek>$/1F0D/;#<dead_acute><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!acute><!invertedbreve><!greek><!belowdot>$/1FA5/;#<dead_acute><dead_invertedbreve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!belowdot><!acute><!breve><!greek>$/1FCF/;#<dead_belowdot><dead_acute><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!acute><!greek>$/1FF4/;#<dead_belowdot><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!acute><!greek><!breve>$/1F0E/;#<dead_belowdot><dead_acute><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!acute><!greek><!invertedbreve>$/1FDF/;#<dead_belowdot><dead_acute><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!acute><!invertedbreve><!greek>$/1F0F/;#<dead_belowdot><dead_acute><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!breve><!acute><!greek>$/1F06/;#<dead_belowdot><dead_breve><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!breve><!circumflex><!greek>$/1F8E/;#<dead_belowdot><dead_breve><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!breve><!grave><!greek>$/1F8A/;#<dead_belowdot><dead_breve><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!breve><!greek>$/1F88/;#<dead_belowdot><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!breve><!greek><!acute>$/1F2E/;#<dead_belowdot><dead_breve><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!belowdot><!breve><!greek><!circumflex>$/1F86/;#<dead_belowdot><dead_breve><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!belowdot><!breve><!greek><!grave>$/1F82/;#<dead_belowdot><dead_breve><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!belowdot><!circumflex><!breve><!greek>$/1F9E/;#<dead_belowdot><dead_circumflex><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!circumflex><!greek>$/1FB7/;#<dead_belowdot><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!circumflex><!greek><!breve>$/1F96/;#<dead_belowdot><dead_circumflex><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!circumflex><!greek><!invertedbreve>$/1F8F/;#<dead_belowdot><dead_circumflex><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!circumflex><!invertedbreve><!greek>$/1F87/;#<dead_belowdot><dead_circumflex><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!grave><!breve><!greek>$/1F9A/;#<dead_belowdot><dead_grave><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!grave><!greek>$/1FB2/;#<dead_belowdot><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!grave><!greek><!breve>$/1F92/;#<dead_belowdot><dead_grave><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!grave><!greek><!invertedbreve>$/1F8B/;#<dead_belowdot><dead_grave><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!grave><!invertedbreve><!greek>$/1F83/;#<dead_belowdot><dead_grave><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!greek>$/037A/;#<dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!greek><!acute>$/1FFE/;#<dead_belowdot><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!belowdot><!greek><!acute><!breve>$/1F26/;#<dead_belowdot><dead_greek><dead_acute><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!greek><!acute><!invertedbreve>$/1F07/;#<dead_belowdot><dead_greek><dead_acute><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!greek><!breve>$/1F80/;#<dead_belowdot><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!greek><!breve><!acute>$/1F3E/;#<dead_belowdot><dead_greek><dead_breve><dead_acute> 
+	$deadkey =~ s/^<!belowdot><!greek><!breve><!circumflex>$/1FAE/;#<dead_belowdot><dead_greek><dead_breve><dead_circumflex> 
+	$deadkey =~ s/^<!belowdot><!greek><!breve><!grave>$/1FAA/;#<dead_belowdot><dead_greek><dead_breve><dead_grave> 
+	$deadkey =~ s/^<!belowdot><!greek><!circumflex>$/1FC7/;#<dead_belowdot><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!belowdot><!greek><!circumflex><!breve>$/1FA6/;#<dead_belowdot><dead_greek><dead_circumflex><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!greek><!circumflex><!invertedbreve>$/1F9F/;#<dead_belowdot><dead_greek><dead_circumflex><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!greek><!grave>$/1FC2/;#<dead_belowdot><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!belowdot><!greek><!grave><!breve>$/1FA2/;#<dead_belowdot><dead_greek><dead_grave><dead_breve> 
+	$deadkey =~ s/^<!belowdot><!greek><!grave><!invertedbreve>$/1F9B/;#<dead_belowdot><dead_greek><dead_grave><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!greek><!invertedbreve>$/1F89/;#<dead_belowdot><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!belowdot><!greek><!invertedbreve><!acute>$/1F2F/;#<dead_belowdot><dead_greek><dead_invertedbreve><dead_acute> 
+	$deadkey =~ s/^<!belowdot><!greek><!invertedbreve><!circumflex>$/1F97/;#<dead_belowdot><dead_greek><dead_invertedbreve><dead_circumflex> 
+	$deadkey =~ s/^<!belowdot><!greek><!invertedbreve><!grave>$/1F93/;#<dead_belowdot><dead_greek><dead_invertedbreve><dead_grave> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!acute><!greek>$/1F27/;#<dead_belowdot><dead_invertedbreve><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!circumflex><!greek>$/1FAF/;#<dead_belowdot><dead_invertedbreve><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!grave><!greek>$/1FAB/;#<dead_belowdot><dead_invertedbreve><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!greek>$/1F81/;#<dead_belowdot><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!greek><!acute>$/1F3F/;#<dead_belowdot><dead_invertedbreve><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!greek><!circumflex>$/1FA7/;#<dead_belowdot><dead_invertedbreve><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!greek><!grave>$/1FA3/;#<dead_belowdot><dead_invertedbreve><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!breve><!acute><!belowdot><!greek>$/1F36/;#<dead_breve><dead_acute><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!breve><!acute><!greek>$/1F04/;#<dead_breve><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!breve><!acute><!greek><!belowdot>$/1F6E/;#<dead_breve><dead_acute><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!belowdot><!acute><!greek>$/1F66/;#<dead_breve><dead_belowdot><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!breve><!belowdot><!circumflex><!greek>$/1FCD/;#<dead_breve><dead_belowdot><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!breve><!belowdot><!grave><!greek>$/1F98/;#<dead_breve><dead_belowdot><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!breve><!belowdot><!greek>$/1F90/;#<dead_breve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!breve><!belowdot><!greek><!acute>$/1F56/;#<dead_breve><dead_belowdot><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!breve><!belowdot><!greek><!circumflex>$/1F0A/;#<dead_breve><dead_belowdot><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!breve><!belowdot><!greek><!grave>$/1FA8/;#<dead_breve><dead_belowdot><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!breve><!circumflex><!belowdot><!greek>$/1F02/;#<dead_breve><dead_circumflex><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!breve><!circumflex><!greek>$/1F1A/;#<dead_breve><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!breve><!circumflex><!greek><!belowdot>$/1F12/;#<dead_breve><dead_circumflex><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!grave><!belowdot><!greek>$/1FA0/;#<dead_breve><dead_grave><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!breve><!grave><!greek>$/1F2A/;#<dead_breve><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!breve><!grave><!greek><!belowdot>$/00AF/;#<dead_breve><dead_grave><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!greek>$/1FBF/;#<dead_breve><dead_greek> 
+	$deadkey =~ s/^<!breve><!greek><!acute>$/1F1C/;#<dead_breve><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!breve><!greek><!acute><!belowdot>$/1F22/;#<dead_breve><dead_greek><dead_acute><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!greek><!belowdot>$/1F43/;#<dead_breve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!greek><!belowdot><!acute>$/1F3A/;#<dead_breve><dead_greek><dead_belowdot><dead_acute> 
+	$deadkey =~ s/^<!breve><!greek><!belowdot><!circumflex>$/1F32/;#<dead_breve><dead_greek><dead_belowdot><dead_circumflex> 
+	$deadkey =~ s/^<!breve><!greek><!belowdot><!grave>$/1FB1/;#<dead_breve><dead_greek><dead_belowdot><dead_grave> 
+	$deadkey =~ s/^<!breve><!greek><!circumflex>$/1F4A/;#<dead_breve><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!breve><!greek><!circumflex><!belowdot>$/1F42/;#<dead_breve><dead_greek><dead_circumflex><dead_belowdot> 
+	$deadkey =~ s/^<!breve><!greek><!grave>$/1F6A/;#<dead_breve><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!breve><!greek><!grave><!belowdot>$/1FD9/;#<dead_breve><dead_greek><dead_grave><dead_belowdot> 
+	$deadkey =~ s/^<!caron><!greek>$/1FB8/;#<dead_caron><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!belowdot><!breve><!greek>$/1FB0/;#<dead_circumflex><dead_belowdot><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!belowdot><!greek>$/1FF7/;#<dead_circumflex><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!belowdot><!greek><!breve>$/1FD8/;#<dead_circumflex><dead_belowdot><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!circumflex><!belowdot><!greek><!invertedbreve>$/1FD0/;#<dead_circumflex><dead_belowdot><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!circumflex><!belowdot><!invertedbreve><!greek>$/1FE8/;#<dead_circumflex><dead_belowdot><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!breve><!belowdot><!greek>$/1FE0/;#<dead_circumflex><dead_breve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!breve><!greek>$/1FFC/;#<dead_circumflex><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!breve><!greek><!belowdot>$/1FFB/;#<dead_circumflex><dead_breve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!circumflex><!diaeresis><!greek>$/1FC1/;#<dead_circumflex><dead_diaeresis><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!greek>$/1FC0/;#<dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!greek><!belowdot>$/1FFA/;#<dead_circumflex><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!circumflex><!greek><!belowdot><!breve>$/1FF9/;#<dead_circumflex><dead_greek><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!circumflex><!greek><!belowdot><!invertedbreve>$/1FF8/;#<dead_circumflex><dead_greek><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!circumflex><!greek><!breve>$/1FF6/;#<dead_circumflex><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!circumflex><!greek><!breve><!belowdot>$/1FF3/;#<dead_circumflex><dead_greek><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!circumflex><!greek><!diaeresis>$/1FD7/;#<dead_circumflex><dead_greek><dead_diaeresis> 
+	$deadkey =~ s/^<!circumflex><!greek><!invertedbreve>$/1F37/;#<dead_circumflex><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!circumflex><!greek><!invertedbreve><!belowdot>$/1FF2/;#<dead_circumflex><dead_greek><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!circumflex><!invertedbreve><!belowdot><!greek>$/1FEF/;#<dead_circumflex><dead_invertedbreve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!invertedbreve><!greek>$/1F6F/;#<dead_circumflex><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!circumflex><!invertedbreve><!greek><!belowdot>$/1FED/;#<dead_circumflex><dead_invertedbreve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!diaeresis><!acute><!greek>$/1FE3/;#<dead_diaeresis><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!diaeresis><!circumflex><!greek>$/1FE7/;#<dead_diaeresis><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!diaeresis><!doubleacute><!greek>$/0344/;#<dead_diaeresis><dead_doubleacute><dead_greek> 
+	$deadkey =~ s/^<!diaeresis><!grave><!greek>$/1FD2/;#<dead_diaeresis><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!diaeresis><!greek>$/03AA/;#<dead_diaeresis><dead_greek> 
+	$deadkey =~ s/^<!diaeresis><!greek><!acute>$/1FEC/;#<dead_diaeresis><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!diaeresis><!greek><!circumflex>$/1FEB/;#<dead_diaeresis><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!diaeresis><!greek><!doubleacute>$/0385/;#<dead_diaeresis><dead_greek><dead_doubleacute> 
+	$deadkey =~ s/^<!diaeresis><!greek><!grave>$/1FE2/;#<dead_diaeresis><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!doubleacute><!diaeresis><!greek>$/0390/;#<dead_doubleacute><dead_diaeresis><dead_greek> 
+	$deadkey =~ s/^<!doubleacute><!greek>$/0384/;#<dead_doubleacute><dead_greek> 
+	$deadkey =~ s/^<!doubleacute><!greek><!diaeresis>$/03B0/;#<dead_doubleacute><dead_greek><dead_diaeresis> 
+	$deadkey =~ s/^<!grave><!belowdot><!breve><!greek>$/1FEA/;#<dead_grave><dead_belowdot><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!grave><!belowdot><!greek>$/1FE9/;#<dead_grave><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!grave><!belowdot><!greek><!breve>$/1FE6/;#<dead_grave><dead_belowdot><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!grave><!belowdot><!greek><!invertedbreve>$/1FE5/;#<dead_grave><dead_belowdot><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!grave><!belowdot><!invertedbreve><!greek>$/1FE4/;#<dead_grave><dead_belowdot><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!grave><!breve><!belowdot><!greek>$/1FE1/;#<dead_grave><dead_breve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!grave><!breve><!greek>$/1F62/;#<dead_grave><dead_breve><dead_greek> 
+	$deadkey =~ s/^<!grave><!breve><!greek><!belowdot>$/1FDD/;#<dead_grave><dead_breve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!grave><!diaeresis><!greek>$/1FDB/;#<dead_grave><dead_diaeresis><dead_greek> 
+	$deadkey =~ s/^<!grave><!greek>$/1FBA/;#<dead_grave><dead_greek> 
+	$deadkey =~ s/^<!grave><!greek><!belowdot>$/1F5B/;#<dead_grave><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!grave><!greek><!belowdot><!breve>$/1F72/;#<dead_grave><dead_greek><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!grave><!greek><!belowdot><!invertedbreve>$/1F74/;#<dead_grave><dead_greek><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!grave><!greek><!breve>$/1F52/;#<dead_grave><dead_greek><dead_breve> 
+	$deadkey =~ s/^<!grave><!greek><!breve><!belowdot>$/1F76/;#<dead_grave><dead_greek><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!grave><!greek><!diaeresis>$/1F78/;#<dead_grave><dead_greek><dead_diaeresis> 
+	$deadkey =~ s/^<!grave><!greek><!invertedbreve>$/1F0B/;#<dead_grave><dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!grave><!greek><!invertedbreve><!belowdot>$/1F7A/;#<dead_grave><dead_greek><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!grave><!invertedbreve><!belowdot><!greek>$/1F7C/;#<dead_grave><dead_invertedbreve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!grave><!invertedbreve><!greek>$/1F03/;#<dead_grave><dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!grave><!invertedbreve><!greek><!belowdot>$/1FC8/;#<dead_grave><dead_invertedbreve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!abovehook>$/1FDA/;#<dead_greek><UEFD3> 
+	$deadkey =~ s/^<!greek><!acute>$/1FBB/;#<dead_greek><dead_acute> 
+	$deadkey =~ s/^<!greek><!acute><!belowdot>$/1F71/;#<dead_greek><dead_acute><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!acute><!belowdot><!breve>$/1F73/;#<dead_greek><dead_acute><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!greek><!acute><!belowdot><!invertedbreve>$/1F75/;#<dead_greek><dead_acute><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!acute><!breve>$/1F14/;#<dead_greek><dead_acute><dead_breve> 
+	$deadkey =~ s/^<!greek><!acute><!breve><!belowdot>$/1F2C/;#<dead_greek><dead_acute><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!acute><!diaeresis>$/1F77/;#<dead_greek><dead_acute><dead_diaeresis> 
+	$deadkey =~ s/^<!greek><!acute><!invertedbreve>$/1F05/;#<dead_greek><dead_acute><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!acute><!invertedbreve><!belowdot>$/1F15/;#<dead_greek><dead_acute><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!belowdot>$/1FBE/;#<dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!belowdot><!acute>$/1F79/;#<dead_greek><dead_belowdot><dead_acute> 
+	$deadkey =~ s/^<!greek><!belowdot><!acute><!breve>$/1F7B/;#<dead_greek><dead_belowdot><dead_acute><dead_breve> 
+	$deadkey =~ s/^<!greek><!belowdot><!acute><!invertedbreve>$/1F7D/;#<dead_greek><dead_belowdot><dead_acute><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!belowdot><!breve>$/1FC3/;#<dead_greek><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!greek><!belowdot><!breve><!acute>$/1FC9/;#<dead_greek><dead_belowdot><dead_breve><dead_acute> 
+	$deadkey =~ s/^<!greek><!belowdot><!breve><!circumflex>$/1FD6/;#<dead_greek><dead_belowdot><dead_breve><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!belowdot><!breve><!grave>$/1FCA/;#<dead_greek><dead_belowdot><dead_breve><dead_grave> 
+	$deadkey =~ s/^<!greek><!belowdot><!circumflex>$/1F1D/;#<dead_greek><dead_belowdot><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!belowdot><!circumflex><!breve>$/1F25/;#<dead_greek><dead_belowdot><dead_circumflex><dead_breve> 
+	$deadkey =~ s/^<!greek><!belowdot><!circumflex><!invertedbreve>$/1F65/;#<dead_greek><dead_belowdot><dead_circumflex><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!belowdot><!grave>$/1F53/;#<dead_greek><dead_belowdot><dead_grave> 
+	$deadkey =~ s/^<!greek><!belowdot><!grave><!breve>$/1F6D/;#<dead_greek><dead_belowdot><dead_grave><dead_breve> 
+	$deadkey =~ s/^<!greek><!belowdot><!grave><!invertedbreve>$/1FD1/;#<dead_greek><dead_belowdot><dead_grave><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!belowdot><!invertedbreve>$/1F99/;#<dead_greek><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!belowdot><!invertedbreve><!acute>$/1FCC/;#<dead_greek><dead_belowdot><dead_invertedbreve><dead_acute> 
+	$deadkey =~ s/^<!greek><!belowdot><!invertedbreve><!circumflex>$/1FCB/;#<dead_greek><dead_belowdot><dead_invertedbreve><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!belowdot><!invertedbreve><!grave>$/1FC6/;#<dead_greek><dead_belowdot><dead_invertedbreve><dead_grave> 
+	$deadkey =~ s/^<!greek><!breve>$/1F08/;#<dead_greek><dead_breve> 
+	$deadkey =~ s/^<!greek><!breve><!acute>$/1F24/;#<dead_greek><dead_breve><dead_acute> 
+	$deadkey =~ s/^<!greek><!breve><!acute><!belowdot>$/1F34/;#<dead_greek><dead_breve><dead_acute><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!breve><!belowdot>$/1F00/;#<dead_greek><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!breve><!belowdot><!acute>$/1F3C/;#<dead_greek><dead_breve><dead_belowdot><dead_acute> 
+	$deadkey =~ s/^<!greek><!breve><!belowdot><!circumflex>$/1F10/;#<dead_greek><dead_breve><dead_belowdot><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!breve><!belowdot><!grave>$/1F18/;#<dead_greek><dead_breve><dead_belowdot><dead_grave> 
+	$deadkey =~ s/^<!greek><!breve><!circumflex>$/03CE/;#<dead_greek><dead_breve><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!breve><!circumflex><!belowdot>$/1F20/;#<dead_greek><dead_breve><dead_circumflex><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!breve><!grave>$/1F28/;#<dead_greek><dead_breve><dead_grave> 
+	$deadkey =~ s/^<!greek><!breve><!grave><!belowdot>$/1F30/;#<dead_greek><dead_breve><dead_grave><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!caron>$/1F50/;#<dead_greek><dead_caron> 
+	$deadkey =~ s/^<!greek><!circumflex>$/1FB6/;#<dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!circumflex><!belowdot>$/1F60/;#<dead_greek><dead_circumflex><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!circumflex><!belowdot><!breve>$/1F38/;#<dead_greek><dead_circumflex><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!greek><!circumflex><!belowdot><!invertedbreve>$/1FBC/;#<dead_greek><dead_circumflex><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!circumflex><!breve>$/1F40/;#<dead_greek><dead_circumflex><dead_breve> 
+	$deadkey =~ s/^<!greek><!circumflex><!breve><!belowdot>$/1F48/;#<dead_greek><dead_circumflex><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!circumflex><!diaeresis>$/03AB/;#<dead_greek><dead_circumflex><dead_diaeresis> 
+	$deadkey =~ s/^<!greek><!circumflex><!invertedbreve>$/1F67/;#<dead_greek><dead_circumflex><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!circumflex><!invertedbreve><!belowdot>$/1FB3/;#<dead_greek><dead_circumflex><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!diaeresis>$/03CA/;#<dead_greek><dead_diaeresis> 
+	$deadkey =~ s/^<!greek><!diaeresis><!acute>$/03CB/;#<dead_greek><dead_diaeresis><dead_acute> 
+	$deadkey =~ s/^<!greek><!diaeresis><!circumflex>$/1F44/;#<dead_greek><dead_diaeresis><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!diaeresis><!doubleacute>$/1F4C/;#<dead_greek><dead_diaeresis><dead_doubleacute> 
+	$deadkey =~ s/^<!greek><!diaeresis><!grave>$/1F54/;#<dead_greek><dead_diaeresis><dead_grave> 
+	$deadkey =~ s/^<!greek><!doubleacute>$/0386/;#<dead_greek><dead_doubleacute> 
+	$deadkey =~ s/^<!greek><!doubleacute><!diaeresis>$/0388/;#<dead_greek><dead_doubleacute><dead_diaeresis> 
+	$deadkey =~ s/^<!greek><!grave>$/1F70/;#<dead_greek><dead_grave> 
+	$deadkey =~ s/^<!greek><!grave><!belowdot>$/1FA9/;#<dead_greek><dead_grave><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!grave><!belowdot><!breve>$/1F68/;#<dead_greek><dead_grave><dead_belowdot><dead_breve> 
+	$deadkey =~ s/^<!greek><!grave><!belowdot><!invertedbreve>$/1FA1/;#<dead_greek><dead_grave><dead_belowdot><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!grave><!breve>$/1F91/;#<dead_greek><dead_grave><dead_breve> 
+	$deadkey =~ s/^<!greek><!grave><!breve><!belowdot>$/1F6C/;#<dead_greek><dead_grave><dead_breve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!grave><!diaeresis>$/1F6B/;#<dead_greek><dead_grave><dead_diaeresis> 
+	$deadkey =~ s/^<!greek><!grave><!invertedbreve>$/1F69/;#<dead_greek><dead_grave><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!grave><!invertedbreve><!belowdot>$/1F64/;#<dead_greek><dead_grave><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!invertedbreve>$/1F09/;#<dead_greek><dead_invertedbreve> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!acute>$/03AF/;#<dead_greek><dead_invertedbreve><dead_acute> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!acute><!belowdot>$/03CC/;#<dead_greek><dead_invertedbreve><dead_acute><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!belowdot>$/1F35/;#<dead_greek><dead_invertedbreve><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!belowdot><!acute>$/03CD/;#<dead_greek><dead_invertedbreve><dead_belowdot><dead_acute> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!belowdot><!circumflex>$/1F11/;#<dead_greek><dead_invertedbreve><dead_belowdot><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!belowdot><!grave>$/1F19/;#<dead_greek><dead_invertedbreve><dead_belowdot><dead_grave> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!circumflex>$/1F5F/;#<dead_greek><dead_invertedbreve><dead_circumflex> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!circumflex><!belowdot>$/1F57/;#<dead_greek><dead_invertedbreve><dead_circumflex><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!grave>$/1F21/;#<dead_greek><dead_invertedbreve><dead_grave> 
+	$deadkey =~ s/^<!greek><!invertedbreve><!grave><!belowdot>$/1F29/;#<dead_greek><dead_invertedbreve><dead_grave><dead_belowdot> 
+	$deadkey =~ s/^<!greek><!macron>$/1FB9/;#<dead_greek><dead_macron> 
+	$deadkey =~ s/^<!invertedbreve><!acute><!belowdot><!greek>$/0389/;#<dead_invertedbreve><dead_acute><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!acute><!greek>$/038A/;#<dead_invertedbreve><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!acute><!greek><!belowdot>$/038C/;#<dead_invertedbreve><dead_acute><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!acute><!greek>$/038E/;#<dead_invertedbreve><dead_belowdot><dead_acute><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!circumflex><!greek>$/1F31/;#<dead_invertedbreve><dead_belowdot><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!grave><!greek>$/1F39/;#<dead_invertedbreve><dead_belowdot><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!greek>$/1F41/;#<dead_invertedbreve><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!greek><!acute>$/038F/;#<dead_invertedbreve><dead_belowdot><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!greek><!circumflex>$/1F49/;#<dead_invertedbreve><dead_belowdot><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!greek><!grave>$/1F51/;#<dead_invertedbreve><dead_belowdot><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!invertedbreve><!circumflex><!belowdot><!greek>$/1F59/;#<dead_invertedbreve><dead_circumflex><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!circumflex><!greek>$/1F61/;#<dead_invertedbreve><dead_circumflex><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!circumflex><!greek><!belowdot>$/1F4D/;#<dead_invertedbreve><dead_circumflex><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!grave><!belowdot><!greek>$/1F4B/;#<dead_invertedbreve><dead_grave><dead_belowdot><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!grave><!greek>$/1F45/;#<dead_invertedbreve><dead_grave><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!grave><!greek><!belowdot>$/1F63/;#<dead_invertedbreve><dead_grave><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!greek>$/1F01/;#<dead_invertedbreve><dead_greek> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!acute>$/03AE/;#<dead_invertedbreve><dead_greek><dead_acute> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!acute><!belowdot>$/03AC/;#<dead_invertedbreve><dead_greek><dead_acute><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!belowdot>$/1F13/;#<dead_invertedbreve><dead_greek><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!belowdot><!acute>$/03AD/;#<dead_invertedbreve><dead_greek><dead_belowdot><dead_acute> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!belowdot><!circumflex>$/1F23/;#<dead_invertedbreve><dead_greek><dead_belowdot><dead_circumflex> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!belowdot><!grave>$/1F2D/;#<dead_invertedbreve><dead_greek><dead_belowdot><dead_grave> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!circumflex>$/1F2B/;#<dead_invertedbreve><dead_greek><dead_circumflex> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!circumflex><!belowdot>$/1F33/;#<dead_invertedbreve><dead_greek><dead_circumflex><dead_belowdot> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!grave>$/1F1B/;#<dead_invertedbreve><dead_greek><dead_grave> 
+	$deadkey =~ s/^<!invertedbreve><!greek><!grave><!belowdot>$/1F3B/;#<dead_invertedbreve><dead_greek><dead_grave><dead_belowdot> 
+	$deadkey =~ s/^<!macron><!greek>$/1F3D/;#<dead_macron><dead_greek> 
+
+	# Latin dead key chains for Greek (54).
+	$deadkey =~ s/^<!acute><!belowdot><!breve>$/2500/;
+	$deadkey =~ s/^<!acute><!belowdot>$/2501/;
+	$deadkey =~ s/^<!acute><!belowdot><!invertedbreve>$/2502/;
+	$deadkey =~ s/^<!acute><!breve><!belowdot>$/2503/;
+	$deadkey =~ s/^<!acute><!invertedbreve><!belowdot>$/2504/;
+	$deadkey =~ s/^<!acute><!invertedbreve>$/2505/;
+	$deadkey =~ s/^<!belowdot><!acute><!breve>$/2506/;
+	$deadkey =~ s/^<!belowdot><!acute>$/2507/;
+	$deadkey =~ s/^<!belowdot><!acute><!invertedbreve>$/2508/;
+	$deadkey =~ s/^<!belowdot><!breve><!acute>$/2509/;
+	$deadkey =~ s/^<!belowdot><!breve><!circumflex>$/250A/;
+	$deadkey =~ s/^<!belowdot><!breve><!grave>$/250B/;
+	$deadkey =~ s/^<!belowdot><!circumflex><!breve>$/250C/;
+	$deadkey =~ s/^<!belowdot><!circumflex><!invertedbreve>$/250D/;
+	$deadkey =~ s/^<!belowdot><!grave><!breve>$/250E/;
+	$deadkey =~ s/^<!belowdot><!grave>$/250F/;
+	$deadkey =~ s/^<!belowdot><!grave><!invertedbreve>$/2510/;
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!acute>$/2511/;
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!circumflex>$/2512/;
+	$deadkey =~ s/^<!belowdot><!invertedbreve><!grave>$/2513/;
+	$deadkey =~ s/^<!belowdot><!invertedbreve>$/2514/;
+	$deadkey =~ s/^<!breve><!acute><!belowdot>$/2515/;
+	$deadkey =~ s/^<!breve><!belowdot><!acute>$/2516/;
+	$deadkey =~ s/^<!breve><!belowdot><!circumflex>$/2517/;
+	$deadkey =~ s/^<!breve><!belowdot><!grave>$/2518/;
+	$deadkey =~ s/^<!breve><!circumflex><!belowdot>$/2519/;
+	$deadkey =~ s/^<!breve><!circumflex>$/251A/;
+	$deadkey =~ s/^<!breve><!grave><!belowdot>$/251B/;
+	$deadkey =~ s/^<!circumflex><!belowdot><!breve>$/251C/;
+	$deadkey =~ s/^<!circumflex><!belowdot><!invertedbreve>$/251D/;
+	$deadkey =~ s/^<!circumflex><!breve><!belowdot>$/251E/;
+	$deadkey =~ s/^<!circumflex><!breve>$/251F/;
+	$deadkey =~ s/^<!circumflex><!diaeresis>$/2520/;
+	$deadkey =~ s/^<!circumflex><!invertedbreve><!belowdot>$/2521/;
+	$deadkey =~ s/^<!circumflex><!invertedbreve>$/2522/;
+	$deadkey =~ s/^<!diaeresis><!circumflex>$/2523/;
+	$deadkey =~ s/^<!diaeresis><!doubleacute>$/2524/;
+	$deadkey =~ s/^<!doubleacute><!diaeresis>$/2525/;
+	$deadkey =~ s/^<!grave><!belowdot><!breve>$/2526/;
+	$deadkey =~ s/^<!grave><!belowdot>$/2527/;
+	$deadkey =~ s/^<!grave><!belowdot><!invertedbreve>$/2528/;
+	$deadkey =~ s/^<!grave><!breve><!belowdot>$/2529/;
+	$deadkey =~ s/^<!grave><!invertedbreve><!belowdot>$/252A/;
+	$deadkey =~ s/^<!grave><!invertedbreve>$/252B/;
+	$deadkey =~ s/^<!invertedbreve><!acute><!belowdot>$/252C/;
+	$deadkey =~ s/^<!invertedbreve><!acute>$/252D/;
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!acute>$/252E/;
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!circumflex>$/252F/;
+	$deadkey =~ s/^<!invertedbreve><!belowdot><!grave>$/2530/;
+	$deadkey =~ s/^<!invertedbreve><!belowdot>$/2531/;
+	$deadkey =~ s/^<!invertedbreve><!circumflex><!belowdot>$/2532/;
+	$deadkey =~ s/^<!invertedbreve><!circumflex>$/2533/;
+	$deadkey =~ s/^<!invertedbreve><!grave><!belowdot>$/2534/;
+	$deadkey =~ s/^<!invertedbreve><!grave>$/2535/;
+
 	# When adding dead key chains, please make sure to add them in @chained, too.
 
 	return $deadkey;
@@ -1423,6 +1739,321 @@ my @chained = (
 	'<!turned><!turned><!stroke>',
 	'<!turned><!turned><!subscript>',
 	'<!turned><!turned><!superscript>',
+	
+	# Polytonic and monotonic Greek (256).
+	'<!abovehook><!greek>',
+	'<!acute><!belowdot><!breve><!greek>',
+	'<!acute><!belowdot><!greek>',
+	'<!acute><!belowdot><!greek><!breve>',
+	'<!acute><!belowdot><!greek><!invertedbreve>',
+	'<!acute><!belowdot><!invertedbreve><!greek>',
+	'<!acute><!breve><!belowdot><!greek>',
+	'<!acute><!breve><!greek>',
+	'<!acute><!breve><!greek><!belowdot>',
+	'<!acute><!diaeresis><!greek>',
+	'<!acute><!greek>',
+	'<!acute><!greek><!belowdot>',
+	'<!acute><!greek><!belowdot><!breve>',
+	'<!acute><!greek><!belowdot><!invertedbreve>',
+	'<!acute><!greek><!breve>',
+	'<!acute><!greek><!breve><!belowdot>',
+	'<!acute><!greek><!diaeresis>',
+	'<!acute><!greek><!invertedbreve>',
+	'<!acute><!greek><!invertedbreve><!belowdot>',
+	'<!acute><!invertedbreve><!belowdot><!greek>',
+	'<!acute><!invertedbreve><!greek>',
+	'<!acute><!invertedbreve><!greek><!belowdot>',
+	'<!belowdot><!acute><!breve><!greek>',
+	'<!belowdot><!acute><!greek>',
+	'<!belowdot><!acute><!greek><!breve>',
+	'<!belowdot><!acute><!greek><!invertedbreve>',
+	'<!belowdot><!acute><!invertedbreve><!greek>',
+	'<!belowdot><!breve><!acute><!greek>',
+	'<!belowdot><!breve><!circumflex><!greek>',
+	'<!belowdot><!breve><!grave><!greek>',
+	'<!belowdot><!breve><!greek>',
+	'<!belowdot><!breve><!greek><!acute>',
+	'<!belowdot><!breve><!greek><!circumflex>',
+	'<!belowdot><!breve><!greek><!grave>',
+	'<!belowdot><!circumflex><!breve><!greek>',
+	'<!belowdot><!circumflex><!greek>',
+	'<!belowdot><!circumflex><!greek><!breve>',
+	'<!belowdot><!circumflex><!greek><!invertedbreve>',
+	'<!belowdot><!circumflex><!invertedbreve><!greek>',
+	'<!belowdot><!grave><!breve><!greek>',
+	'<!belowdot><!grave><!greek>',
+	'<!belowdot><!grave><!greek><!breve>',
+	'<!belowdot><!grave><!greek><!invertedbreve>',
+	'<!belowdot><!grave><!invertedbreve><!greek>',
+	'<!belowdot><!greek>',
+	'<!belowdot><!greek><!acute>',
+	'<!belowdot><!greek><!acute><!breve>',
+	'<!belowdot><!greek><!acute><!invertedbreve>',
+	'<!belowdot><!greek><!breve>',
+	'<!belowdot><!greek><!breve><!acute>',
+	'<!belowdot><!greek><!breve><!circumflex>',
+	'<!belowdot><!greek><!breve><!grave>',
+	'<!belowdot><!greek><!circumflex>',
+	'<!belowdot><!greek><!circumflex><!breve>',
+	'<!belowdot><!greek><!circumflex><!invertedbreve>',
+	'<!belowdot><!greek><!grave>',
+	'<!belowdot><!greek><!grave><!breve>',
+	'<!belowdot><!greek><!grave><!invertedbreve>',
+	'<!belowdot><!greek><!invertedbreve>',
+	'<!belowdot><!greek><!invertedbreve><!acute>',
+	'<!belowdot><!greek><!invertedbreve><!circumflex>',
+	'<!belowdot><!greek><!invertedbreve><!grave>',
+	'<!belowdot><!invertedbreve><!acute><!greek>',
+	'<!belowdot><!invertedbreve><!circumflex><!greek>',
+	'<!belowdot><!invertedbreve><!grave><!greek>',
+	'<!belowdot><!invertedbreve><!greek>',
+	'<!belowdot><!invertedbreve><!greek><!acute>',
+	'<!belowdot><!invertedbreve><!greek><!circumflex>',
+	'<!belowdot><!invertedbreve><!greek><!grave>',
+	'<!breve><!acute><!belowdot><!greek>',
+	'<!breve><!acute><!greek>',
+	'<!breve><!acute><!greek><!belowdot>',
+	'<!breve><!belowdot><!acute><!greek>',
+	'<!breve><!belowdot><!circumflex><!greek>',
+	'<!breve><!belowdot><!grave><!greek>',
+	'<!breve><!belowdot><!greek>',
+	'<!breve><!belowdot><!greek><!acute>',
+	'<!breve><!belowdot><!greek><!circumflex>',
+	'<!breve><!belowdot><!greek><!grave>',
+	'<!breve><!circumflex><!belowdot><!greek>',
+	'<!breve><!circumflex><!greek>',
+	'<!breve><!circumflex><!greek><!belowdot>',
+	'<!breve><!grave><!belowdot><!greek>',
+	'<!breve><!grave><!greek>',
+	'<!breve><!grave><!greek><!belowdot>',
+	'<!breve><!greek>',
+	'<!breve><!greek><!acute>',
+	'<!breve><!greek><!acute><!belowdot>',
+	'<!breve><!greek><!belowdot>',
+	'<!breve><!greek><!belowdot><!acute>',
+	'<!breve><!greek><!belowdot><!circumflex>',
+	'<!breve><!greek><!belowdot><!grave>',
+	'<!breve><!greek><!circumflex>',
+	'<!breve><!greek><!circumflex><!belowdot>',
+	'<!breve><!greek><!grave>',
+	'<!breve><!greek><!grave><!belowdot>',
+	'<!caron><!greek>',
+	'<!circumflex><!belowdot><!breve><!greek>',
+	'<!circumflex><!belowdot><!greek>',
+	'<!circumflex><!belowdot><!greek><!breve>',
+	'<!circumflex><!belowdot><!greek><!invertedbreve>',
+	'<!circumflex><!belowdot><!invertedbreve><!greek>',
+	'<!circumflex><!breve><!belowdot><!greek>',
+	'<!circumflex><!breve><!greek>',
+	'<!circumflex><!breve><!greek><!belowdot>',
+	'<!circumflex><!diaeresis><!greek>',
+	'<!circumflex><!greek>',
+	'<!circumflex><!greek><!belowdot>',
+	'<!circumflex><!greek><!belowdot><!breve>',
+	'<!circumflex><!greek><!belowdot><!invertedbreve>',
+	'<!circumflex><!greek><!breve>',
+	'<!circumflex><!greek><!breve><!belowdot>',
+	'<!circumflex><!greek><!diaeresis>',
+	'<!circumflex><!greek><!invertedbreve>',
+	'<!circumflex><!greek><!invertedbreve><!belowdot>',
+	'<!circumflex><!invertedbreve><!belowdot><!greek>',
+	'<!circumflex><!invertedbreve><!greek>',
+	'<!circumflex><!invertedbreve><!greek><!belowdot>',
+	'<!diaeresis><!acute><!greek>',
+	'<!diaeresis><!circumflex><!greek>',
+	'<!diaeresis><!doubleacute><!greek>',
+	'<!diaeresis><!grave><!greek>',
+	'<!diaeresis><!greek>',
+	'<!diaeresis><!greek><!acute>',
+	'<!diaeresis><!greek><!circumflex>',
+	'<!diaeresis><!greek><!doubleacute>',
+	'<!diaeresis><!greek><!grave>',
+	'<!doubleacute><!diaeresis><!greek>',
+	'<!doubleacute><!greek>',
+	'<!doubleacute><!greek><!diaeresis>',
+	'<!grave><!belowdot><!breve><!greek>',
+	'<!grave><!belowdot><!greek>',
+	'<!grave><!belowdot><!greek><!breve>',
+	'<!grave><!belowdot><!greek><!invertedbreve>',
+	'<!grave><!belowdot><!invertedbreve><!greek>',
+	'<!grave><!breve><!belowdot><!greek>',
+	'<!grave><!breve><!greek>',
+	'<!grave><!breve><!greek><!belowdot>',
+	'<!grave><!diaeresis><!greek>',
+	'<!grave><!greek>',
+	'<!grave><!greek><!belowdot>',
+	'<!grave><!greek><!belowdot><!breve>',
+	'<!grave><!greek><!belowdot><!invertedbreve>',
+	'<!grave><!greek><!breve>',
+	'<!grave><!greek><!breve><!belowdot>',
+	'<!grave><!greek><!diaeresis>',
+	'<!grave><!greek><!invertedbreve>',
+	'<!grave><!greek><!invertedbreve><!belowdot>',
+	'<!grave><!invertedbreve><!belowdot><!greek>',
+	'<!grave><!invertedbreve><!greek>',
+	'<!grave><!invertedbreve><!greek><!belowdot>',
+	'<!greek><!abovehook>',
+	'<!greek><!acute>',
+	'<!greek><!acute><!belowdot>',
+	'<!greek><!acute><!belowdot><!breve>',
+	'<!greek><!acute><!belowdot><!invertedbreve>',
+	'<!greek><!acute><!breve>',
+	'<!greek><!acute><!breve><!belowdot>',
+	'<!greek><!acute><!diaeresis>',
+	'<!greek><!acute><!invertedbreve>',
+	'<!greek><!acute><!invertedbreve><!belowdot>',
+	'<!greek><!belowdot>',
+	'<!greek><!belowdot><!acute>',
+	'<!greek><!belowdot><!acute><!breve>',
+	'<!greek><!belowdot><!acute><!invertedbreve>',
+	'<!greek><!belowdot><!breve>',
+	'<!greek><!belowdot><!breve><!acute>',
+	'<!greek><!belowdot><!breve><!circumflex>',
+	'<!greek><!belowdot><!breve><!grave>',
+	'<!greek><!belowdot><!circumflex>',
+	'<!greek><!belowdot><!circumflex><!breve>',
+	'<!greek><!belowdot><!circumflex><!invertedbreve>',
+	'<!greek><!belowdot><!grave>',
+	'<!greek><!belowdot><!grave><!breve>',
+	'<!greek><!belowdot><!grave><!invertedbreve>',
+	'<!greek><!belowdot><!invertedbreve>',
+	'<!greek><!belowdot><!invertedbreve><!acute>',
+	'<!greek><!belowdot><!invertedbreve><!circumflex>',
+	'<!greek><!belowdot><!invertedbreve><!grave>',
+	'<!greek><!breve>',
+	'<!greek><!breve><!acute>',
+	'<!greek><!breve><!acute><!belowdot>',
+	'<!greek><!breve><!belowdot>',
+	'<!greek><!breve><!belowdot><!acute>',
+	'<!greek><!breve><!belowdot><!circumflex>',
+	'<!greek><!breve><!belowdot><!grave>',
+	'<!greek><!breve><!circumflex>',
+	'<!greek><!breve><!circumflex><!belowdot>',
+	'<!greek><!breve><!grave>',
+	'<!greek><!breve><!grave><!belowdot>',
+	'<!greek><!caron>',
+	'<!greek><!circumflex>',
+	'<!greek><!circumflex><!belowdot>',
+	'<!greek><!circumflex><!belowdot><!breve>',
+	'<!greek><!circumflex><!belowdot><!invertedbreve>',
+	'<!greek><!circumflex><!breve>',
+	'<!greek><!circumflex><!breve><!belowdot>',
+	'<!greek><!circumflex><!diaeresis>',
+	'<!greek><!circumflex><!invertedbreve>',
+	'<!greek><!circumflex><!invertedbreve><!belowdot>',
+	'<!greek><!diaeresis>',
+	'<!greek><!diaeresis><!acute>',
+	'<!greek><!diaeresis><!circumflex>',
+	'<!greek><!diaeresis><!doubleacute>',
+	'<!greek><!diaeresis><!grave>',
+	'<!greek><!doubleacute>',
+	'<!greek><!doubleacute><!diaeresis>',
+	'<!greek><!grave>',
+	'<!greek><!grave><!belowdot>',
+	'<!greek><!grave><!belowdot><!breve>',
+	'<!greek><!grave><!belowdot><!invertedbreve>',
+	'<!greek><!grave><!breve>',
+	'<!greek><!grave><!breve><!belowdot>',
+	'<!greek><!grave><!diaeresis>',
+	'<!greek><!grave><!invertedbreve>',
+	'<!greek><!grave><!invertedbreve><!belowdot>',
+	'<!greek><!invertedbreve>',
+	'<!greek><!invertedbreve><!acute>',
+	'<!greek><!invertedbreve><!acute><!belowdot>',
+	'<!greek><!invertedbreve><!belowdot>',
+	'<!greek><!invertedbreve><!belowdot><!acute>',
+	'<!greek><!invertedbreve><!belowdot><!circumflex>',
+	'<!greek><!invertedbreve><!belowdot><!grave>',
+	'<!greek><!invertedbreve><!circumflex>',
+	'<!greek><!invertedbreve><!circumflex><!belowdot>',
+	'<!greek><!invertedbreve><!grave>',
+	'<!greek><!invertedbreve><!grave><!belowdot>',
+	'<!greek><!macron>',
+	'<!invertedbreve><!acute><!belowdot><!greek>',
+	'<!invertedbreve><!acute><!greek>',
+	'<!invertedbreve><!acute><!greek><!belowdot>',
+	'<!invertedbreve><!belowdot><!acute><!greek>',
+	'<!invertedbreve><!belowdot><!circumflex><!greek>',
+	'<!invertedbreve><!belowdot><!grave><!greek>',
+	'<!invertedbreve><!belowdot><!greek>',
+	'<!invertedbreve><!belowdot><!greek><!acute>',
+	'<!invertedbreve><!belowdot><!greek><!circumflex>',
+	'<!invertedbreve><!belowdot><!greek><!grave>',
+	'<!invertedbreve><!circumflex><!belowdot><!greek>',
+	'<!invertedbreve><!circumflex><!greek>',
+	'<!invertedbreve><!circumflex><!greek><!belowdot>',
+	'<!invertedbreve><!grave><!belowdot><!greek>',
+	'<!invertedbreve><!grave><!greek>',
+	'<!invertedbreve><!grave><!greek><!belowdot>',
+	'<!invertedbreve><!greek>',
+	'<!invertedbreve><!greek><!acute>',
+	'<!invertedbreve><!greek><!acute><!belowdot>',
+	'<!invertedbreve><!greek><!belowdot>',
+	'<!invertedbreve><!greek><!belowdot><!acute>',
+	'<!invertedbreve><!greek><!belowdot><!circumflex>',
+	'<!invertedbreve><!greek><!belowdot><!grave>',
+	'<!invertedbreve><!greek><!circumflex>',
+	'<!invertedbreve><!greek><!circumflex><!belowdot>',
+	'<!invertedbreve><!greek><!grave>',
+	'<!invertedbreve><!greek><!grave><!belowdot>',
+	'<!macron><!greek>',
+
+	# Latin dead key chains for Greek (54).
+	'<!acute><!belowdot><!breve>',
+	'<!acute><!belowdot>',
+	'<!acute><!belowdot><!invertedbreve>',
+	'<!acute><!breve><!belowdot>',
+	'<!acute><!invertedbreve><!belowdot>',
+	'<!acute><!invertedbreve>',
+	'<!belowdot><!acute><!breve>',
+	'<!belowdot><!acute>',
+	'<!belowdot><!acute><!invertedbreve>',
+	'<!belowdot><!breve><!acute>',
+	'<!belowdot><!breve><!circumflex>',
+	'<!belowdot><!breve><!grave>',
+	'<!belowdot><!circumflex><!breve>',
+	'<!belowdot><!circumflex><!invertedbreve>',
+	'<!belowdot><!grave><!breve>',
+	'<!belowdot><!grave>',
+	'<!belowdot><!grave><!invertedbreve>',
+	'<!belowdot><!invertedbreve><!acute>',
+	'<!belowdot><!invertedbreve><!circumflex>',
+	'<!belowdot><!invertedbreve><!grave>',
+	'<!belowdot><!invertedbreve>',
+	'<!breve><!acute><!belowdot>',
+	'<!breve><!belowdot><!acute>',
+	'<!breve><!belowdot><!circumflex>',
+	'<!breve><!belowdot><!grave>',
+	'<!breve><!circumflex><!belowdot>',
+	'<!breve><!circumflex>',
+	'<!breve><!grave><!belowdot>',
+	'<!circumflex><!belowdot><!breve>',
+	'<!circumflex><!belowdot><!invertedbreve>',
+	'<!circumflex><!breve><!belowdot>',
+	'<!circumflex><!breve>',
+	'<!circumflex><!diaeresis>',
+	'<!circumflex><!invertedbreve><!belowdot>',
+	'<!circumflex><!invertedbreve>',
+	'<!diaeresis><!circumflex>',
+	'<!diaeresis><!doubleacute>',
+	'<!doubleacute><!diaeresis>',
+	'<!grave><!belowdot><!breve>',
+	'<!grave><!belowdot>',
+	'<!grave><!belowdot><!invertedbreve>',
+	'<!grave><!breve><!belowdot>',
+	'<!grave><!invertedbreve><!belowdot>',
+	'<!grave><!invertedbreve>',
+	'<!invertedbreve><!acute><!belowdot>',
+	'<!invertedbreve><!acute>',
+	'<!invertedbreve><!belowdot><!acute>',
+	'<!invertedbreve><!belowdot><!circumflex>',
+	'<!invertedbreve><!belowdot><!grave>',
+	'<!invertedbreve><!belowdot>',
+	'<!invertedbreve><!circumflex><!belowdot>',
+	'<!invertedbreve><!circumflex>',
+	'<!invertedbreve><!grave><!belowdot>',
+	'<!invertedbreve><!grave>',
+
 );
 # Generates the required chained dead keys.
 foreach my $deadkey ( @chained ) {
@@ -1438,7 +2069,7 @@ while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_GREEK/ ) {
 
 		# If polytonic Greek should be included, comment this out.
-		$parse_on = !1;
+		# $parse_on = !1;
 
 	}
 	if ( $line =~ /START_LATIN_BY_DEAD_KEYS/ ) {
