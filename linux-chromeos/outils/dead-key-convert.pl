@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-10-29T2215+0100
+# 2025-10-29T2303+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -2201,6 +2201,12 @@ foreach my $line ( @unsupported ) {
 	print LIST $line . "\n";
 }
 
+@bad_format = sort( @bad_format );
+print LIST ( "\n\n\nThis is the full list of " . @bad_format . " characters in a bad format.\n\n" );
+foreach my $line ( @bad_format ) {
+	print LIST $line . "\n";
+}
+
 close( INPUT );
 print( "Closed file $input_path.\n" );
 close( OUTPUT );
@@ -2211,10 +2217,11 @@ close( LIST );
 print( "Closed file $list_path.\n\n" );
 unless ( @bad_format == 0 ) {
 	if ( @bad_format == 1 ) {
-		print( '  ' . @bad_format . " character is in a bad format: @bad_format.\n\n" );
+		print( '  ' . @bad_format . " character is in a bad format: @bad_format.\n" );
 	} else {
-		print( '  ' . @bad_format . " characters are in a bad format: @bad_format.\n\n" );
+		print( '  ' . @bad_format . " characters are in a bad format: @bad_format.\n" );
 	}
+	print( "  This enumeration is appended as a list in $list_path.\n\n" );
 }
 @high_surrogates = sort( @high_surrogates );
 print( "  $full potentially functional dead key sequences in $output_path.\n" );
