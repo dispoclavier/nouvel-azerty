@@ -10,7 +10,6 @@ Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
 Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
 
-[Mise à jour pour Linux et macOS des touches mortes complétées sous Windows.]
 
 ## 6.3.0 (projet)
 
@@ -20,9 +19,15 @@ Mise à jour pour macOS des dispositions émulées selon ce qui a été dévelop
 
 Transpilation pour Windows des séquences de composition.
 
+## 6.1.3 (projet)
+
+Portage sous Linux de raccourcis de touche morte ajoutés sous Windows avant 2018.
+
 ## 6.1.2 (projet)
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
+
+* Documentation : Corriger et mettre à jour des annotations. compose-1.yml [08f84cf](https://github.com/dispoclavier/nouvel-azerty/commit/08f84cfa4a48673e53ce0e1927c344c5daf6e582)
 
 ## 6.1.1 (2025-10-29)
 
