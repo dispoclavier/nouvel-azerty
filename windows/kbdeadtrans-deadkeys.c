@@ -8,7 +8,8 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Move dead key data as of 6.1.0.2 here    6.1.2.0.0 Thu 2025-10-30T0022+0100
+* Add all dead key data as of 6.1.1 here   6.1.2.0.0 Thu 2025-10-30T0103+0100
+* Move dead key data as of 6.1.0.2 here    6.1.2.0.0 Thu 2025-10-30T0054+0100
 * Add partial kbdeadtrans-deadkeys.c       6.1.2.0.0 Wed 2025-10-29T2349+0100
 *
 * This file is included in kbdeadtrans.c.
@@ -613,6 +614,316 @@
 /*<!turned><!turned><!stroke>                                      */ DEADTRANS( 0x00F8	,0xA7FD	,0x1D13	,0x0001), // Dead key chain.
 /*<!turned><!turned><!subscript>                                   */ DEADTRANS( L'_'	,0xA7FD	,0x0298	,0x0001), // Dead key chain.
 /*<!turned><!turned><!superscript>                                 */ DEADTRANS( L'^'	,0xA7FD	,0x0297	,0x0001), // Dead key chain.
+/*<!abovehook><!greek>                                             */ DEADTRANS( 0x03B5	,0x1EBB	,0x1FBD	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( 0x03B5	,0x2500	,0x1F84	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!greek>                                      */ DEADTRANS( 0x03B5	,0x2501	,0x1FB4	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( 0x0115	,0x1FB4	,0x1F8C	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FB4	,0x1F8D	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( 0x03B5	,0x2502	,0x1F85	,0x0001), // Dead key chain.
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( 0x03B5	,0x2503	,0x1F9C	,0x0001), // Dead key chain.
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( 0x03B5	,0x1EAE	,0x1FCE	,0x0001), // Dead key chain.
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1FCE	,0x1F94	,0x0001), // Dead key chain.
+/*<!acute><!diaeresis><!greek>                                     */ DEADTRANS( 0x03B5	,0x1E2E	,0x1FEE	,0x0001), // Dead key chain.
+/*<!acute><!greek>                                                 */ DEADTRANS( 0x03B5	,0x00E1	,0x1FFD	,0x0001), // Dead key chain.
+/*<!acute><!greek><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1FFD	,0x1FC4	,0x0001), // Dead key chain.
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( 0x0115	,0x1FC4	,0x1FAC	,0x0001), // Dead key chain.
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FC4	,0x1F9D	,0x0001), // Dead key chain.
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( 0x0115	,0x1FFD	,0x1F0C	,0x0001), // Dead key chain.
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F0C	,0x1FA4	,0x0001), // Dead key chain.
+/*<!acute><!greek><!diaeresis>                                     */ DEADTRANS( 0x00EB	,0x1FFD	,0x1FD3	,0x0001), // Dead key chain.
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( 0x0213	,0x1FFD	,0x1FDE	,0x0001), // Dead key chain.
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1FDE	,0x1F95	,0x0001), // Dead key chain.
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( 0x03B5	,0x2504	,0x1FAD	,0x0001), // Dead key chain.
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( 0x03B5	,0x2505	,0x1F0D	,0x0001), // Dead key chain.
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F0D	,0x1FA5	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( 0x03B5	,0x2506	,0x1FCF	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!greek>                                      */ DEADTRANS( 0x03B5	,0x2507	,0x1FF4	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( 0x0115	,0x1FF4	,0x1F0E	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FF4	,0x1FDF	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( 0x03B5	,0x2508	,0x1F0F	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( 0x03B5	,0x2509	,0x1F06	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( 0x03B5	,0x250A	,0x1F8E	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( 0x03B5	,0x250B	,0x1F8A	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( 0x03B5	,0x1EB6	,0x1F88	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( 0x00E1	,0x1F88	,0x1F2E	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1F88	,0x1F86	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( 0x00F2	,0x1F88	,0x1F82	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( 0x03B5	,0x250C	,0x1F9E	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!greek>                                 */ DEADTRANS( 0x03B5	,0x1EAD	,0x1FB7	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( 0x0115	,0x1FB7	,0x1F96	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1FB7	,0x1F8F	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( 0x03B5	,0x250D	,0x1F87	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( 0x03B5	,0x250E	,0x1F9A	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!greek>                                      */ DEADTRANS( 0x03B5	,0x250F	,0x1FB2	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( 0x0115	,0x1FB2	,0x1F92	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FB2	,0x1F8B	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( 0x03B5	,0x2510	,0x1F83	,0x0001), // Dead key chain.
+/*<!belowdot><!greek>                                              */ DEADTRANS( 0x03B5	,0x1E05	,0x037A	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!acute>                                      */ DEADTRANS( 0x00E1	,0x037A	,0x1FFE	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( 0x0115	,0x1FFE	,0x1F26	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FFE	,0x1F07	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( 0x0115	,0x037A	,0x1F80	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( 0x00E1	,0x1F80	,0x1F3E	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1F80	,0x1FAE	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( 0x00F2	,0x1F80	,0x1FAA	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!circumflex>                                 */ DEADTRANS( 0x00EA	,0x037A	,0x1FC7	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( 0x0115	,0x1FC7	,0x1FA6	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1FC7	,0x1F9F	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!grave>                                      */ DEADTRANS( 0x00F2	,0x037A	,0x1FC2	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( 0x0115	,0x1FC2	,0x1FA2	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FC2	,0x1F9B	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x037A	,0x1F89	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( 0x00E1	,0x1F89	,0x1F2F	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F89	,0x1F97	,0x0001), // Dead key chain.
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( 0x00F2	,0x1F89	,0x1F93	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( 0x03B5	,0x2511	,0x1F27	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( 0x03B5	,0x2512	,0x1FAF	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( 0x03B5	,0x2513	,0x1FAB	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( 0x03B5	,0x2514	,0x1F81	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( 0x00E1	,0x1F81	,0x1F3F	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F81	,0x1FA7	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( 0x00F2	,0x1F81	,0x1FA3	,0x0001), // Dead key chain.
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( 0x03B5	,0x2515	,0x1F36	,0x0001), // Dead key chain.
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( 0x03B5	,0x1EAF	,0x1F04	,0x0001), // Dead key chain.
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F04	,0x1F6E	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( 0x03B5	,0x2516	,0x1F66	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( 0x03B5	,0x2517	,0x1FCD	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( 0x03B5	,0x2518	,0x1F98	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( 0x03B5	,0x1EB7	,0x1F90	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( 0x00E1	,0x1F90	,0x1F56	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1F90	,0x1F0A	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( 0x00F2	,0x1F90	,0x1FA8	,0x0001), // Dead key chain.
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( 0x03B5	,0x2519	,0x1F02	,0x0001), // Dead key chain.
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( 0x03B5	,0x251A	,0x1F1A	,0x0001), // Dead key chain.
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( 0x1E05	,0x1F1A	,0x1F12	,0x0001), // Dead key chain.
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( 0x03B5	,0x251B	,0x1FA0	,0x0001), // Dead key chain.
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( 0x03B5	,0x1EB1	,0x1F2A	,0x0001), // Dead key chain.
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F2A	,0x00AF	,0x0001), // Dead key chain.
+/*<!breve><!greek>                                                 */ DEADTRANS( 0x03B5	,0x0115	,0x1FBF	,0x0001), // Dead key chain.
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( 0x00E1	,0x1FBF	,0x1F1C	,0x0001), // Dead key chain.
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F1C	,0x1F22	,0x0001), // Dead key chain.
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1FBF	,0x1F43	,0x0001), // Dead key chain.
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( 0x00E1	,0x1F43	,0x1F3A	,0x0001), // Dead key chain.
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1F43	,0x1F32	,0x0001), // Dead key chain.
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( 0x00F2	,0x1F43	,0x1FB1	,0x0001), // Dead key chain.
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( 0x00EA	,0x1FBF	,0x1F4A	,0x0001), // Dead key chain.
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( 0x1E05	,0x1F4A	,0x1F42	,0x0001), // Dead key chain.
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( 0x00F2	,0x1FBF	,0x1F6A	,0x0001), // Dead key chain.
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F6A	,0x1FD9	,0x0001), // Dead key chain.
+/*<!caron><!greek>                                                 */ DEADTRANS( 0x03B5	,0x021F	,0x1FB8	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( 0x03B5	,0x251C	,0x1FB0	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!greek>                                 */ DEADTRANS( 0x03B5	,0x1EAC	,0x1FF7	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( 0x0115	,0x1FF7	,0x1FD8	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1FF7	,0x1FD0	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( 0x03B5	,0x251D	,0x1FE8	,0x0001), // Dead key chain.
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( 0x03B5	,0x251E	,0x1FE0	,0x0001), // Dead key chain.
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( 0x03B5	,0x251F	,0x1FFC	,0x0001), // Dead key chain.
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( 0x1E05	,0x1FFC	,0x1FFB	,0x0001), // Dead key chain.
+/*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( 0x03B5	,0x2520	,0x1FC1	,0x0001), // Dead key chain.
+/*<!circumflex><!greek>                                            */ DEADTRANS( 0x03B5	,0x00EA	,0x1FC0	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!belowdot>                                 */ DEADTRANS( 0x1E05	,0x1FC0	,0x1FFA	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( 0x0115	,0x1FFA	,0x1FF9	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1FFA	,0x1FF8	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( 0x0115	,0x1FC0	,0x1FF6	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( 0x1E05	,0x1FF6	,0x1FF3	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!diaeresis>                                */ DEADTRANS( 0x00EB	,0x1FC0	,0x1FD7	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( 0x0213	,0x1FC0	,0x1F37	,0x0001), // Dead key chain.
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F37	,0x1FF2	,0x0001), // Dead key chain.
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( 0x03B5	,0x2521	,0x1FEF	,0x0001), // Dead key chain.
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( 0x03B5	,0x2522	,0x1F6F	,0x0001), // Dead key chain.
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F6F	,0x1FED	,0x0001), // Dead key chain.
+/*<!diaeresis><!acute><!greek>                                     */ DEADTRANS( 0x03B5	,0x1E2F	,0x1FE3	,0x0001), // Dead key chain.
+/*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( 0x03B5	,0x2523	,0x1FE7	,0x0001), // Dead key chain.
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( 0x03B5	,0x2524	,0x0344	,0x0001), // Dead key chain.
+/*<!diaeresis><!grave><!greek>                                     */ DEADTRANS( 0x03B5	,0x01DC	,0x1FD2	,0x0001), // Dead key chain.
+/*<!diaeresis><!greek>                                             */ DEADTRANS( 0x03B5	,0x00EB	,0x03AA	,0x0001), // Dead key chain.
+/*<!diaeresis><!greek><!acute>                                     */ DEADTRANS( 0x00E1	,0x03AA	,0x1FEC	,0x0001), // Dead key chain.
+/*<!diaeresis><!greek><!circumflex>                                */ DEADTRANS( 0x00EA	,0x03AA	,0x1FEB	,0x0001), // Dead key chain.
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( 0x0151	,0x03AA	,0x0385	,0x0001), // Dead key chain.
+/*<!diaeresis><!greek><!grave>                                     */ DEADTRANS( 0x00F2	,0x03AA	,0x1FE2	,0x0001), // Dead key chain.
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x03B5	,0x2525	,0x0390	,0x0001), // Dead key chain.
+/*<!doubleacute><!greek>                                           */ DEADTRANS( 0x03B5	,0x0151	,0x0384	,0x0001), // Dead key chain.
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( 0x00EB	,0x0384	,0x03B0	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( 0x03B5	,0x2526	,0x1FEA	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!greek>                                      */ DEADTRANS( 0x03B5	,0x2527	,0x1FE9	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( 0x0115	,0x1FE9	,0x1FE6	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FE9	,0x1FE5	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( 0x03B5	,0x2528	,0x1FE4	,0x0001), // Dead key chain.
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( 0x03B5	,0x2529	,0x1FE1	,0x0001), // Dead key chain.
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( 0x03B5	,0x1EB0	,0x1F62	,0x0001), // Dead key chain.
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F62	,0x1FDD	,0x0001), // Dead key chain.
+/*<!grave><!diaeresis><!greek>                                     */ DEADTRANS( 0x03B5	,0x01DB	,0x1FDB	,0x0001), // Dead key chain.
+/*<!grave><!greek>                                                 */ DEADTRANS( 0x03B5	,0x00F2	,0x1FBA	,0x0001), // Dead key chain.
+/*<!grave><!greek><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1FBA	,0x1F5B	,0x0001), // Dead key chain.
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( 0x0115	,0x1F5B	,0x1F72	,0x0001), // Dead key chain.
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1F5B	,0x1F74	,0x0001), // Dead key chain.
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( 0x0115	,0x1FBA	,0x1F52	,0x0001), // Dead key chain.
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F52	,0x1F76	,0x0001), // Dead key chain.
+/*<!grave><!greek><!diaeresis>                                     */ DEADTRANS( 0x00EB	,0x1FBA	,0x1F78	,0x0001), // Dead key chain.
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( 0x0213	,0x1FBA	,0x1F0B	,0x0001), // Dead key chain.
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F0B	,0x1F7A	,0x0001), // Dead key chain.
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( 0x03B5	,0x252A	,0x1F7C	,0x0001), // Dead key chain.
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( 0x03B5	,0x252B	,0x1F03	,0x0001), // Dead key chain.
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F03	,0x1FC8	,0x0001), // Dead key chain.
+/*<!greek><!abovehook>                                             */ DEADTRANS( 0x1EBB	,0x03B5	,0x1FDA	,0x0001), // Dead key chain.
+/*<!greek><!acute>                                                 */ DEADTRANS( 0x00E1	,0x03B5	,0x1FBB	,0x0001), // Dead key chain.
+/*<!greek><!acute><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1FBB	,0x1F71	,0x0001), // Dead key chain.
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( 0x0115	,0x1F71	,0x1F73	,0x0001), // Dead key chain.
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1F71	,0x1F75	,0x0001), // Dead key chain.
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( 0x0115	,0x1FBB	,0x1F14	,0x0001), // Dead key chain.
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F14	,0x1F2C	,0x0001), // Dead key chain.
+/*<!greek><!acute><!diaeresis>                                     */ DEADTRANS( 0x00EB	,0x1FBB	,0x1F77	,0x0001), // Dead key chain.
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( 0x0213	,0x1FBB	,0x1F05	,0x0001), // Dead key chain.
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F05	,0x1F15	,0x0001), // Dead key chain.
+/*<!greek><!belowdot>                                              */ DEADTRANS( 0x1E05	,0x03B5	,0x1FBE	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!acute>                                      */ DEADTRANS( 0x00E1	,0x1FBE	,0x1F79	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( 0x0115	,0x1F79	,0x1F7B	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1F79	,0x1F7D	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( 0x0115	,0x1FBE	,0x1FC3	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( 0x00E1	,0x1FC3	,0x1FC9	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1FC3	,0x1FD6	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( 0x00F2	,0x1FC3	,0x1FCA	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!circumflex>                                 */ DEADTRANS( 0x00EA	,0x1FBE	,0x1F1D	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( 0x0115	,0x1F1D	,0x1F25	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1F1D	,0x1F65	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!grave>                                      */ DEADTRANS( 0x00F2	,0x1FBE	,0x1F53	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( 0x0115	,0x1F53	,0x1F6D	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1F53	,0x1FD1	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x1FBE	,0x1F99	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( 0x00E1	,0x1F99	,0x1FCC	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F99	,0x1FCB	,0x0001), // Dead key chain.
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( 0x00F2	,0x1F99	,0x1FC6	,0x0001), // Dead key chain.
+/*<!greek><!breve>                                                 */ DEADTRANS( 0x0115	,0x03B5	,0x1F08	,0x0001), // Dead key chain.
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( 0x00E1	,0x1F08	,0x1F24	,0x0001), // Dead key chain.
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F24	,0x1F34	,0x0001), // Dead key chain.
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1F08	,0x1F00	,0x0001), // Dead key chain.
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( 0x00E1	,0x1F00	,0x1F3C	,0x0001), // Dead key chain.
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( 0x00EA	,0x1F00	,0x1F10	,0x0001), // Dead key chain.
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( 0x00F2	,0x1F00	,0x1F18	,0x0001), // Dead key chain.
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( 0x00EA	,0x1F08	,0x03CE	,0x0001), // Dead key chain.
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( 0x1E05	,0x03CE	,0x1F20	,0x0001), // Dead key chain.
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( 0x00F2	,0x1F08	,0x1F28	,0x0001), // Dead key chain.
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F28	,0x1F30	,0x0001), // Dead key chain.
+/*<!greek><!caron>                                                 */ DEADTRANS( 0x021F	,0x03B5	,0x1F50	,0x0001), // Dead key chain.
+/*<!greek><!circumflex>                                            */ DEADTRANS( 0x00EA	,0x03B5	,0x1FB6	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!belowdot>                                 */ DEADTRANS( 0x1E05	,0x1FB6	,0x1F60	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( 0x0115	,0x1F60	,0x1F38	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( 0x0213	,0x1F60	,0x1FBC	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( 0x0115	,0x1FB6	,0x1F40	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( 0x1E05	,0x1F40	,0x1F48	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!diaeresis>                                */ DEADTRANS( 0x00EB	,0x1FB6	,0x03AB	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( 0x0213	,0x1FB6	,0x1F67	,0x0001), // Dead key chain.
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F67	,0x1FB3	,0x0001), // Dead key chain.
+/*<!greek><!diaeresis>                                             */ DEADTRANS( 0x00EB	,0x03B5	,0x03CA	,0x0001), // Dead key chain.
+/*<!greek><!diaeresis><!acute>                                     */ DEADTRANS( 0x00E1	,0x03CA	,0x03CB	,0x0001), // Dead key chain.
+/*<!greek><!diaeresis><!circumflex>                                */ DEADTRANS( 0x00EA	,0x03CA	,0x1F44	,0x0001), // Dead key chain.
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( 0x0151	,0x03CA	,0x1F4C	,0x0001), // Dead key chain.
+/*<!greek><!diaeresis><!grave>                                     */ DEADTRANS( 0x00F2	,0x03CA	,0x1F54	,0x0001), // Dead key chain.
+/*<!greek><!doubleacute>                                           */ DEADTRANS( 0x0151	,0x03B5	,0x0386	,0x0001), // Dead key chain.
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( 0x00EB	,0x0386	,0x0388	,0x0001), // Dead key chain.
+/*<!greek><!grave>                                                 */ DEADTRANS( 0x00F2	,0x03B5	,0x1F70	,0x0001), // Dead key chain.
+/*<!greek><!grave><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1F70	,0x1FA9	,0x0001), // Dead key chain.
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( 0x0115	,0x1FA9	,0x1F68	,0x0001), // Dead key chain.
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( 0x0213	,0x1FA9	,0x1FA1	,0x0001), // Dead key chain.
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( 0x0115	,0x1F70	,0x1F91	,0x0001), // Dead key chain.
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F91	,0x1F6C	,0x0001), // Dead key chain.
+/*<!greek><!grave><!diaeresis>                                     */ DEADTRANS( 0x00EB	,0x1F70	,0x1F6B	,0x0001), // Dead key chain.
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( 0x0213	,0x1F70	,0x1F69	,0x0001), // Dead key chain.
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F69	,0x1F64	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( 0x0213	,0x03B5	,0x1F09	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( 0x00E1	,0x1F09	,0x03AF	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( 0x1E05	,0x03AF	,0x03CC	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F09	,0x1F35	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( 0x00E1	,0x1F35	,0x03CD	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F35	,0x1F11	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( 0x00F2	,0x1F35	,0x1F19	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( 0x00EA	,0x1F09	,0x1F5F	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F5F	,0x1F57	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( 0x00F2	,0x1F09	,0x1F21	,0x0001), // Dead key chain.
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F21	,0x1F29	,0x0001), // Dead key chain.
+/*<!greek><!macron>                                                */ DEADTRANS( 0x0101	,0x03B5	,0x1FB9	,0x0001), // Dead key chain.
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( 0x03B5	,0x252C	,0x0389	,0x0001), // Dead key chain.
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( 0x03B5	,0x252D	,0x038A	,0x0001), // Dead key chain.
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( 0x1E05	,0x038A	,0x038C	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( 0x03B5	,0x252E	,0x038E	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( 0x03B5	,0x252F	,0x1F31	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( 0x03B5	,0x2530	,0x1F39	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( 0x03B5	,0x2531	,0x1F41	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( 0x00E1	,0x1F41	,0x038F	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F41	,0x1F49	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( 0x00F2	,0x1F41	,0x1F51	,0x0001), // Dead key chain.
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( 0x03B5	,0x2532	,0x1F59	,0x0001), // Dead key chain.
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( 0x03B5	,0x2533	,0x1F61	,0x0001), // Dead key chain.
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F61	,0x1F4D	,0x0001), // Dead key chain.
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( 0x03B5	,0x2534	,0x1F4B	,0x0001), // Dead key chain.
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( 0x03B5	,0x2535	,0x1F45	,0x0001), // Dead key chain.
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F45	,0x1F63	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( 0x03B5	,0x0213	,0x1F01	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( 0x00E1	,0x1F01	,0x03AE	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( 0x1E05	,0x03AE	,0x03AC	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( 0x1E05	,0x1F01	,0x1F13	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( 0x00E1	,0x1F13	,0x03AD	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( 0x00EA	,0x1F13	,0x1F23	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( 0x00F2	,0x1F13	,0x1F2D	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( 0x00EA	,0x1F01	,0x1F2B	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( 0x1E05	,0x1F2B	,0x1F33	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( 0x00F2	,0x1F01	,0x1F1B	,0x0001), // Dead key chain.
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( 0x1E05	,0x1F1B	,0x1F3B	,0x0001), // Dead key chain.
+/*<!macron><!greek>                                                */ DEADTRANS( 0x03B5	,0x0101	,0x1F3D	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!breve>                                      */ DEADTRANS( 0x0115	,0x2501	,0x2500	,0x0001), // Dead key chain.
+/*<!acute><!belowdot>                                              */ DEADTRANS( 0x1E05	,0x00E1	,0x2501	,0x0001), // Dead key chain.
+/*<!acute><!belowdot><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x2501	,0x2502	,0x0001), // Dead key chain.
+/*<!acute><!breve><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1EAE	,0x2503	,0x0001), // Dead key chain.
+/*<!acute><!invertedbreve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x2505	,0x2504	,0x0001), // Dead key chain.
+/*<!acute><!invertedbreve>                                         */ DEADTRANS( 0x0213	,0x00E1	,0x2505	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!breve>                                      */ DEADTRANS( 0x0115	,0x2507	,0x2506	,0x0001), // Dead key chain.
+/*<!belowdot><!acute>                                              */ DEADTRANS( 0x00E1	,0x1E05	,0x2507	,0x0001), // Dead key chain.
+/*<!belowdot><!acute><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x2507	,0x2508	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!acute>                                      */ DEADTRANS( 0x00E1	,0x1EB6	,0x2509	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!circumflex>                                 */ DEADTRANS( 0x00EA	,0x1EB6	,0x250A	,0x0001), // Dead key chain.
+/*<!belowdot><!breve><!grave>                                      */ DEADTRANS( 0x00F2	,0x1EB6	,0x250B	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!breve>                                 */ DEADTRANS( 0x0115	,0x1EAD	,0x250C	,0x0001), // Dead key chain.
+/*<!belowdot><!circumflex><!invertedbreve>                         */ DEADTRANS( 0x0213	,0x1EAD	,0x250D	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!breve>                                      */ DEADTRANS( 0x0115	,0x250F	,0x250E	,0x0001), // Dead key chain.
+/*<!belowdot><!grave>                                              */ DEADTRANS( 0x00F2	,0x1E05	,0x250F	,0x0001), // Dead key chain.
+/*<!belowdot><!grave><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x250F	,0x2510	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!acute>                              */ DEADTRANS( 0x00E1	,0x2514	,0x2511	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!circumflex>                         */ DEADTRANS( 0x00EA	,0x2514	,0x2512	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve><!grave>                              */ DEADTRANS( 0x00F2	,0x2514	,0x2513	,0x0001), // Dead key chain.
+/*<!belowdot><!invertedbreve>                                      */ DEADTRANS( 0x0213	,0x1E05	,0x2514	,0x0001), // Dead key chain.
+/*<!breve><!acute><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1EAF	,0x2515	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!acute>                                      */ DEADTRANS( 0x00E1	,0x1EB7	,0x2516	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!circumflex>                                 */ DEADTRANS( 0x00EA	,0x1EB7	,0x2517	,0x0001), // Dead key chain.
+/*<!breve><!belowdot><!grave>                                      */ DEADTRANS( 0x00F2	,0x1EB7	,0x2518	,0x0001), // Dead key chain.
+/*<!breve><!circumflex><!belowdot>                                 */ DEADTRANS( 0x1E05	,0x251A	,0x2519	,0x0001), // Dead key chain.
+/*<!breve><!circumflex>                                            */ DEADTRANS( 0x00EA	,0x0115	,0x251A	,0x0001), // Dead key chain.
+/*<!breve><!grave><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1EB1	,0x251B	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!breve>                                 */ DEADTRANS( 0x0115	,0x1EAC	,0x251C	,0x0001), // Dead key chain.
+/*<!circumflex><!belowdot><!invertedbreve>                         */ DEADTRANS( 0x0213	,0x1EAC	,0x251D	,0x0001), // Dead key chain.
+/*<!circumflex><!breve><!belowdot>                                 */ DEADTRANS( 0x1E05	,0x251F	,0x251E	,0x0001), // Dead key chain.
+/*<!circumflex><!breve>                                            */ DEADTRANS( 0x0115	,0x00EA	,0x251F	,0x0001), // Dead key chain.
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( 0x00EB	,0x00EA	,0x2520	,0x0001), // Dead key chain.
+/*<!circumflex><!invertedbreve><!belowdot>                         */ DEADTRANS( 0x1E05	,0x2522	,0x2521	,0x0001), // Dead key chain.
+/*<!circumflex><!invertedbreve>                                    */ DEADTRANS( 0x0213	,0x00EA	,0x2522	,0x0001), // Dead key chain.
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( 0x00EA	,0x00EB	,0x2523	,0x0001), // Dead key chain.
+/*<!diaeresis><!doubleacute>                                       */ DEADTRANS( 0x0151	,0x00EB	,0x2524	,0x0001), // Dead key chain.
+/*<!doubleacute><!diaeresis>                                       */ DEADTRANS( 0x00EB	,0x0151	,0x2525	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!breve>                                      */ DEADTRANS( 0x0115	,0x2527	,0x2526	,0x0001), // Dead key chain.
+/*<!grave><!belowdot>                                              */ DEADTRANS( 0x1E05	,0x00F2	,0x2527	,0x0001), // Dead key chain.
+/*<!grave><!belowdot><!invertedbreve>                              */ DEADTRANS( 0x0213	,0x2527	,0x2528	,0x0001), // Dead key chain.
+/*<!grave><!breve><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x1EB0	,0x2529	,0x0001), // Dead key chain.
+/*<!grave><!invertedbreve><!belowdot>                              */ DEADTRANS( 0x1E05	,0x252B	,0x252A	,0x0001), // Dead key chain.
+/*<!grave><!invertedbreve>                                         */ DEADTRANS( 0x0213	,0x00F2	,0x252B	,0x0001), // Dead key chain.
+/*<!invertedbreve><!acute><!belowdot>                              */ DEADTRANS( 0x1E05	,0x252D	,0x252C	,0x0001), // Dead key chain.
+/*<!invertedbreve><!acute>                                         */ DEADTRANS( 0x00E1	,0x0213	,0x252D	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!acute>                              */ DEADTRANS( 0x00E1	,0x2531	,0x252E	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!circumflex>                         */ DEADTRANS( 0x00EA	,0x2531	,0x252F	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot><!grave>                              */ DEADTRANS( 0x00F2	,0x2531	,0x2530	,0x0001), // Dead key chain.
+/*<!invertedbreve><!belowdot>                                      */ DEADTRANS( 0x1E05	,0x0213	,0x2531	,0x0001), // Dead key chain.
+/*<!invertedbreve><!circumflex><!belowdot>                         */ DEADTRANS( 0x1E05	,0x2533	,0x2532	,0x0001), // Dead key chain.
+/*<!invertedbreve><!circumflex>                                    */ DEADTRANS( 0x00EA	,0x0213	,0x2533	,0x0001), // Dead key chain.
+/*<!invertedbreve><!grave><!belowdot>                              */ DEADTRANS( 0x1E05	,0x2535	,0x2534	,0x0001), // Dead key chain.
+/*<!invertedbreve><!grave>                                         */ DEADTRANS( 0x00F2	,0x0213	,0x2535	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot><!acute><!grave>                           */ DEADTRANS( L' '	,0x02B7	,0x1AD6	,0x0000	), // " " ➔ "᫖" COMBINING VERTICAL-LINE-ACUTE-GRAVE
 /*<!abovedot><!abovedot><!acute><!grave>                           */ DEADTRANS( 0x200B	,0x02B7	,0x1AD6	,0x0000	), // "​" ➔ "᫖" COMBINING VERTICAL-LINE-ACUTE-GRAVE
 /*<!abovedot><!abovedot><!acute>                                   */ DEADTRANS( L' '	,0x02C7	,0x1AD0	,0x0000	), // " " ➔ "᫐" COMBINING VERTICAL-LINE-ACUTE
@@ -761,6 +1072,10 @@
 /*<!abovehook><!circumflex>                                        */ DEADTRANS( L'e'	,0x1EA9	,0x1EC3	,0x0000	), // 'e' ➔ "ể" LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
 /*<!abovehook><!circumflex>                                        */ DEADTRANS( L'O'	,0x1EA9	,0x1ED4	,0x0000	), // 'O' ➔ "Ổ" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
 /*<!abovehook><!circumflex>                                        */ DEADTRANS( L'o'	,0x1EA9	,0x1ED5	,0x0000	), // 'o' ➔ "ổ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
+/*<!abovehook><!greek>                                             */ DEADTRANS( 0x00A0	,0x1FBD	,0x1FBD	,0x0000	), // ' ' ➔ "᾽" GREEK KORONIS
+/*<!abovehook><!greek>                                             */ DEADTRANS( 0x202F	,0x1FBD	,0x1FBD	,0x0000	), // ' ' ➔ "᾽" GREEK KORONIS
+/*<!abovehook><!greek>                                             */ DEADTRANS( L' '	,0x1FBD	,0x0343	,0x0000	), // ' ' ➔ "̓" COMBINING GREEK KORONIS
+/*<!abovehook><!greek>                                             */ DEADTRANS( 0x200B	,0x1FBD	,0x0343	,0x0000	), // '​' ➔ "̓" COMBINING GREEK KORONIS
 /*<!abovehook><!horn>                                              */ DEADTRANS( L'O'	,0x1EDF	,0x1EDE	,0x0000	), // 'O' ➔ "Ở" LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE
 /*<!abovehook><!horn>                                              */ DEADTRANS( L'o'	,0x1EDF	,0x1EDF	,0x0000	), // 'o' ➔ "ở" LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE
 /*<!abovehook><!horn>                                              */ DEADTRANS( L'U'	,0x1EDF	,0x1EEC	,0x0000	), // 'U' ➔ "Ử" LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE
@@ -872,6 +1187,60 @@
 /*<!acute><!abovedot>                                              */ DEADTRANS( 0x200B	,0x1E65	,0x1DC1	,0x0000	), // '​' ➔ "᷁" COMBINING DOTTED ACUTE ACCENT
 /*<!acute><!abovering>                                             */ DEADTRANS( L'A'	,0x01FA	,0x01FA	,0x0000	), // 'A' ➔ "Ǻ" LATIN CAPITAL LETTER A WITH RING ABOVE AND ACUTE
 /*<!acute><!abovering>                                             */ DEADTRANS( L'a'	,0x01FA	,0x01FB	,0x0000	), // 'a' ➔ "ǻ" LATIN SMALL LETTER A WITH RING ABOVE AND ACUTE
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'a'	,0x1F84	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'A'	,0x1F84	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'h'	,0x1F84	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'H'	,0x1F84	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'v'	,0x1F84	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'V'	,0x1F84	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'a'	,0x1F8C	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'A'	,0x1F8C	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'h'	,0x1F8C	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'H'	,0x1F8C	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'v'	,0x1F8C	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!breve>                              */ DEADTRANS( L'V'	,0x1F8C	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F8D	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F8D	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F8D	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F8D	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F8D	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F8D	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!greek>                                      */ DEADTRANS( L'a'	,0x1FB4	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek>                                      */ DEADTRANS( L'h'	,0x1FB4	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!greek>                                      */ DEADTRANS( L'v'	,0x1FB4	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'a'	,0x1F85	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'A'	,0x1F85	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'h'	,0x1F85	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'H'	,0x1F85	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'v'	,0x1F85	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'V'	,0x1F85	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'a'	,0x1F9C	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'A'	,0x1F9C	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'h'	,0x1F9C	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'H'	,0x1F9C	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'v'	,0x1F9C	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!belowdot><!greek>                              */ DEADTRANS( L'V'	,0x1F9C	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'a'	,0x1F94	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'A'	,0x1F94	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'h'	,0x1F94	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'H'	,0x1F94	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'v'	,0x1F94	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!breve><!greek><!belowdot>                              */ DEADTRANS( L'V'	,0x1F94	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'a'	,0x1FCE	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'A'	,0x1FCE	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'e'	,0x1FCE	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'E'	,0x1FCE	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'h'	,0x1FCE	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'H'	,0x1FCE	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'i'	,0x1FCE	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'I'	,0x1FCE	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'o'	,0x1FCE	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'O'	,0x1FCE	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'v'	,0x1FCE	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'V'	,0x1FCE	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( L'y'	,0x1FCE	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( 0x00A0	,0x1FCE	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!acute><!breve><!greek>                                         */ DEADTRANS( 0x202F	,0x1FCE	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
 /*<!acute><!breve>                                                 */ DEADTRANS( L'A'	,0x1EAE	,0x1EAE	,0x0000	), // 'A' ➔ "Ắ" LATIN CAPITAL LETTER A WITH BREVE AND ACUTE
 /*<!acute><!breve>                                                 */ DEADTRANS( L'a'	,0x1EAE	,0x1EAF	,0x0000	), // 'a' ➔ "ắ" LATIN SMALL LETTER A WITH BREVE AND ACUTE
 /*<!acute><!cedilla>                                               */ DEADTRANS( L'C'	,0x1E09	,0x1E08	,0x0000	), // 'C' ➔ "Ḉ" LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE
@@ -882,6 +1251,10 @@
 /*<!acute><!circumflex>                                            */ DEADTRANS( L'e'	,0x1EA5	,0x1EBF	,0x0000	), // 'e' ➔ "ế" LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
 /*<!acute><!circumflex>                                            */ DEADTRANS( L'O'	,0x1EA5	,0x1ED0	,0x0000	), // 'O' ➔ "Ố" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
 /*<!acute><!circumflex>                                            */ DEADTRANS( L'o'	,0x1EA5	,0x1ED1	,0x0000	), // 'o' ➔ "ố" LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
+/*<!acute><!diaeresis><!greek>                                     */ DEADTRANS( L'i'	,0x1FEE	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!acute><!diaeresis><!greek>                                     */ DEADTRANS( L'y'	,0x1FEE	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!acute><!diaeresis><!greek>                                     */ DEADTRANS( 0x00A0	,0x1FEE	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!acute><!diaeresis><!greek>                                     */ DEADTRANS( 0x202F	,0x1FEE	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
 /*<!acute><!diaeresis>                                             */ DEADTRANS( L'I'	,0x1E2E	,0x1E2E	,0x0000	), // 'I' ➔ "Ḯ" LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
 /*<!acute><!diaeresis>                                             */ DEADTRANS( L'i'	,0x1E2E	,0x1E2F	,0x0000	), // 'i' ➔ "ḯ" LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
 /*<!acute><!diaeresis>                                             */ DEADTRANS( L'U'	,0x1E2E	,0x01D7	,0x0000	), // 'U' ➔ "Ǘ" LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
@@ -891,6 +1264,86 @@
 /*<!acute><!grave><!macron>                                        */ DEADTRANS( 0x200B	,0x02DF	,0x1AD8	,0x0000	), // '​' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!acute><!grave>                                                 */ DEADTRANS( L' '	,0x02C4	,0x1DC8	,0x0000	), // ' ' ➔ "᷈" COMBINING GRAVE-ACUTE-GRAVE
 /*<!acute><!grave>                                                 */ DEADTRANS( 0x200B	,0x02C4	,0x1DC8	,0x0000	), // '​' ➔ "᷈" COMBINING GRAVE-ACUTE-GRAVE
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'a'	,0x1FAC	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'A'	,0x1FAC	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'h'	,0x1FAC	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'H'	,0x1FAC	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'v'	,0x1FAC	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!breve>                              */ DEADTRANS( L'V'	,0x1FAC	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F9D	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F9D	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F9D	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F9D	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F9D	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F9D	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!belowdot>                                      */ DEADTRANS( L'a'	,0x1FC4	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot>                                      */ DEADTRANS( L'h'	,0x1FC4	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!belowdot>                                      */ DEADTRANS( L'v'	,0x1FC4	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'a'	,0x1FA4	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'A'	,0x1FA4	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'h'	,0x1FA4	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'H'	,0x1FA4	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'v'	,0x1FA4	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!breve><!belowdot>                              */ DEADTRANS( L'V'	,0x1FA4	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'a'	,0x1F0C	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'A'	,0x1F0C	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'e'	,0x1F0C	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'E'	,0x1F0C	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'h'	,0x1F0C	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'H'	,0x1F0C	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'i'	,0x1F0C	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'I'	,0x1F0C	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'o'	,0x1F0C	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'O'	,0x1F0C	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'v'	,0x1F0C	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'V'	,0x1F0C	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( L'y'	,0x1F0C	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( 0x00A0	,0x1F0C	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!acute><!greek><!breve>                                         */ DEADTRANS( 0x202F	,0x1F0C	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!acute><!greek><!diaeresis>                                     */ DEADTRANS( L'i'	,0x1FD3	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!acute><!greek><!diaeresis>                                     */ DEADTRANS( L'y'	,0x1FD3	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!acute><!greek><!diaeresis>                                     */ DEADTRANS( 0x00A0	,0x1FD3	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!acute><!greek><!diaeresis>                                     */ DEADTRANS( 0x202F	,0x1FD3	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'a'	,0x1F95	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'A'	,0x1F95	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'h'	,0x1F95	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'H'	,0x1F95	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'v'	,0x1F95	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'V'	,0x1F95	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'a'	,0x1FDE	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'A'	,0x1FDE	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'e'	,0x1FDE	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'E'	,0x1FDE	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'h'	,0x1FDE	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'H'	,0x1FDE	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'i'	,0x1FDE	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'I'	,0x1FDE	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'o'	,0x1FDE	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'O'	,0x1FDE	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'v'	,0x1FDE	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'V'	,0x1FDE	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'y'	,0x1FDE	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( L'Y'	,0x1FDE	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( 0x00A0	,0x1FDE	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!acute><!greek><!invertedbreve>                                 */ DEADTRANS( 0x202F	,0x1FDE	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'a'	,0x1FFD	,0x1F71	,0x0000	), // 'a' ➔ "ά" GREEK SMALL LETTER ALPHA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'A'	,0x1FFD	,0x1FBB	,0x0000	), // 'A' ➔ "Ά" GREEK CAPITAL LETTER ALPHA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'e'	,0x1FFD	,0x1F73	,0x0000	), // 'e' ➔ "έ" GREEK SMALL LETTER EPSILON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'E'	,0x1FFD	,0x1FC9	,0x0000	), // 'E' ➔ "Έ" GREEK CAPITAL LETTER EPSILON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'h'	,0x1FFD	,0x1F75	,0x0000	), // 'h' ➔ "ή" GREEK SMALL LETTER ETA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'H'	,0x1FFD	,0x1FCB	,0x0000	), // 'H' ➔ "Ή" GREEK CAPITAL LETTER ETA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'i'	,0x1FFD	,0x1F77	,0x0000	), // 'i' ➔ "ί" GREEK SMALL LETTER IOTA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'I'	,0x1FFD	,0x1FDB	,0x0000	), // 'I' ➔ "Ί" GREEK CAPITAL LETTER IOTA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'o'	,0x1FFD	,0x1F79	,0x0000	), // 'o' ➔ "ό" GREEK SMALL LETTER OMICRON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'O'	,0x1FFD	,0x1FF9	,0x0000	), // 'O' ➔ "Ό" GREEK CAPITAL LETTER OMICRON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'v'	,0x1FFD	,0x1F7D	,0x0000	), // 'v' ➔ "ώ" GREEK SMALL LETTER OMEGA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'V'	,0x1FFD	,0x1FFB	,0x0000	), // 'V' ➔ "Ώ" GREEK CAPITAL LETTER OMEGA WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'y'	,0x1FFD	,0x1F7B	,0x0000	), // 'y' ➔ "ύ" GREEK SMALL LETTER UPSILON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L'Y'	,0x1FFD	,0x1FEB	,0x0000	), // 'Y' ➔ "Ύ" GREEK CAPITAL LETTER UPSILON WITH OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( 0x00A0	,0x1FFD	,0x1FFD	,0x0000	), // ' ' ➔ "´" GREEK OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( 0x202F	,0x1FFD	,0x1FFD	,0x0000	), // ' ' ➔ "´" GREEK OXIA
+/*<!acute><!greek>                                                 */ DEADTRANS( L' '	,0x1FFD	,0x0301	,0x0000	), // ' ' ➔ "́" COMBINING ACUTE ACCENT
+/*<!acute><!greek>                                                 */ DEADTRANS( 0x200B	,0x1FFD	,0x0301	,0x0000	), // '​' ➔ "́" COMBINING ACUTE ACCENT
 /*<!acute><!group><!group>                                         */ DEADTRANS( L'"'	,0x275E	,0xDE77	,0x0000	), // High surrogate: D83D; U+1F677 '"' ➔ "🙷" SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 /*<!acute><!group><!group>                                         */ DEADTRANS( 0x20AC	,0x275E	,0xDE77	,0x0000	), // High surrogate: D83D; U+1F677 '€' ➔ "🙷" SANS-SERIF HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT
 /*<!acute><!group>                                                 */ DEADTRANS( L'\''	,0x01FD	,0x275C	,0x0000	), // ''' ➔ "❜" HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -903,6 +1356,34 @@
 /*<!acute><!horn>                                                  */ DEADTRANS( L'o'	,0x1EDA	,0x1EDB	,0x0000	), // 'o' ➔ "ớ" LATIN SMALL LETTER O WITH HORN AND ACUTE
 /*<!acute><!horn>                                                  */ DEADTRANS( L'U'	,0x1EDA	,0x1EE8	,0x0000	), // 'U' ➔ "Ứ" LATIN CAPITAL LETTER U WITH HORN AND ACUTE
 /*<!acute><!horn>                                                  */ DEADTRANS( L'u'	,0x1EDA	,0x1EE9	,0x0000	), // 'u' ➔ "ứ" LATIN SMALL LETTER U WITH HORN AND ACUTE
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'a'	,0x1FAD	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'A'	,0x1FAD	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'h'	,0x1FAD	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'H'	,0x1FAD	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'v'	,0x1FAD	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'V'	,0x1FAD	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'a'	,0x1FA5	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'A'	,0x1FA5	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'h'	,0x1FA5	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'H'	,0x1FA5	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'v'	,0x1FA5	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!acute><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'V'	,0x1FA5	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'a'	,0x1F0D	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'A'	,0x1F0D	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'e'	,0x1F0D	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'E'	,0x1F0D	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'h'	,0x1F0D	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'H'	,0x1F0D	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'i'	,0x1F0D	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'I'	,0x1F0D	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'o'	,0x1F0D	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'O'	,0x1F0D	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'v'	,0x1F0D	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'V'	,0x1F0D	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'y'	,0x1F0D	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( L'Y'	,0x1F0D	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( 0x00A0	,0x1F0D	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!acute><!invertedbreve><!greek>                                 */ DEADTRANS( 0x202F	,0x1F0D	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
 /*<!acute><!macron><!grave>                                        */ DEADTRANS( L' '	,0x02C9	,0x1AD8	,0x0000	), // ' ' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!acute><!macron><!grave>                                        */ DEADTRANS( 0x200B	,0x02C9	,0x1AD8	,0x0000	), // '​' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!acute><!macron>                                                */ DEADTRANS( L'E'	,0x1E16	,0x1E16	,0x0000	), // 'E' ➔ "Ḗ" LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
@@ -1183,6 +1664,33 @@
 /*<!belowdot><!abovedot>                                           */ DEADTRANS( L'='	,0x1E69	,0x2251	,0x0000	), // '=' ➔ "≑" GEOMETRICALLY EQUAL TO
 /*<!belowdot><!abovedot>                                           */ DEADTRANS( L'S'	,0x1E69	,0x1E68	,0x0000	), // 'S' ➔ "Ṩ" LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
 /*<!belowdot><!abovedot>                                           */ DEADTRANS( L's'	,0x1E69	,0x1E69	,0x0000	), // 's' ➔ "ṩ" LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'a'	,0x1FCF	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'A'	,0x1FCF	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'h'	,0x1FCF	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'H'	,0x1FCF	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'v'	,0x1FCF	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!breve><!greek>                              */ DEADTRANS( L'V'	,0x1FCF	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'a'	,0x1F0E	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'A'	,0x1F0E	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'h'	,0x1F0E	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'H'	,0x1F0E	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'v'	,0x1F0E	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!breve>                              */ DEADTRANS( L'V'	,0x1F0E	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1FDF	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1FDF	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1FDF	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1FDF	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1FDF	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1FDF	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!greek>                                      */ DEADTRANS( L'a'	,0x1FF4	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek>                                      */ DEADTRANS( L'h'	,0x1FF4	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!greek>                                      */ DEADTRANS( L'v'	,0x1FF4	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'a'	,0x1F0F	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'A'	,0x1F0F	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'h'	,0x1F0F	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'H'	,0x1F0F	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'v'	,0x1F0F	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!acute><!invertedbreve><!greek>                      */ DEADTRANS( L'V'	,0x1F0F	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( L'\''	,0x02CC	,0x030D	,0x0000	), // ''' ➔ "̍" COMBINING VERTICAL LINE ABOVE: Marshallese
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( 0x2019	,0x02CC	,0x030D	,0x0000	), // '’' ➔ "̍" COMBINING VERTICAL LINE ABOVE: Marshallese
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( L','	,0x02CC	,0x0329	,0x0000	), // ',' ➔ "̩" COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
@@ -1193,18 +1701,259 @@
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( 0x202F	,0x02CC	,0x02CC	,0x0000	), // ' ' ➔ "ˌ" MODIFIER LETTER LOW VERTICAL LINE
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( L' '	,0x02CC	,0x0329	,0x0000	), // ' ' ➔ "̩" COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 /*<!belowdot><!belowdot>                                           */ DEADTRANS( 0x200B	,0x02CC	,0x0329	,0x0000	), // '​' ➔ "̩" COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'a'	,0x1F06	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'A'	,0x1F06	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'h'	,0x1F06	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'H'	,0x1F06	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'v'	,0x1F06	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!acute><!greek>                              */ DEADTRANS( L'V'	,0x1F06	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'a'	,0x1F8E	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'A'	,0x1F8E	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'h'	,0x1F8E	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'H'	,0x1F8E	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'v'	,0x1F8E	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!circumflex><!greek>                         */ DEADTRANS( L'V'	,0x1F8E	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'a'	,0x1F8A	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'A'	,0x1F8A	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'h'	,0x1F8A	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'H'	,0x1F8A	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'v'	,0x1F8A	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!grave><!greek>                              */ DEADTRANS( L'V'	,0x1F8A	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'a'	,0x1F2E	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'A'	,0x1F2E	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'h'	,0x1F2E	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'H'	,0x1F2E	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'v'	,0x1F2E	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!acute>                              */ DEADTRANS( L'V'	,0x1F2E	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'a'	,0x1F86	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'A'	,0x1F86	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'h'	,0x1F86	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'H'	,0x1F86	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'v'	,0x1F86	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!circumflex>                         */ DEADTRANS( L'V'	,0x1F86	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'a'	,0x1F82	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'A'	,0x1F82	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'h'	,0x1F82	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'H'	,0x1F82	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'v'	,0x1F82	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek><!grave>                              */ DEADTRANS( L'V'	,0x1F82	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'a'	,0x1F88	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'A'	,0x1F88	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'h'	,0x1F88	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'H'	,0x1F88	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'v'	,0x1F88	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!breve><!greek>                                      */ DEADTRANS( L'V'	,0x1F88	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
 /*<!belowdot><!breve>                                              */ DEADTRANS( L'A'	,0x1EB6	,0x1EB6	,0x0000	), // 'A' ➔ "Ặ" LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 /*<!belowdot><!breve>                                              */ DEADTRANS( L'a'	,0x1EB6	,0x1EB7	,0x0000	), // 'a' ➔ "ặ" LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'a'	,0x1F9E	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'A'	,0x1F9E	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'h'	,0x1F9E	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'H'	,0x1F9E	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'v'	,0x1F9E	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!breve><!greek>                         */ DEADTRANS( L'V'	,0x1F9E	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'a'	,0x1F96	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'A'	,0x1F96	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'h'	,0x1F96	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'H'	,0x1F96	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'v'	,0x1F96	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!breve>                         */ DEADTRANS( L'V'	,0x1F96	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1F8F	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1F8F	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1F8F	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1F8F	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1F8F	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1F8F	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!greek>                                 */ DEADTRANS( L'a'	,0x1FB7	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek>                                 */ DEADTRANS( L'h'	,0x1FB7	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!greek>                                 */ DEADTRANS( L'v'	,0x1FB7	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'a'	,0x1F87	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'A'	,0x1F87	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'h'	,0x1F87	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'H'	,0x1F87	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'v'	,0x1F87	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!circumflex><!invertedbreve><!greek>                 */ DEADTRANS( L'V'	,0x1F87	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'A'	,0x1EAD	,0x1EAC	,0x0000	), // 'A' ➔ "Ậ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'a'	,0x1EAD	,0x1EAD	,0x0000	), // 'a' ➔ "ậ" LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'E'	,0x1EAD	,0x1EC6	,0x0000	), // 'E' ➔ "Ệ" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'e'	,0x1EAD	,0x1EC7	,0x0000	), // 'e' ➔ "ệ" LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'O'	,0x1EAD	,0x1ED8	,0x0000	), // 'O' ➔ "Ộ" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 /*<!belowdot><!circumflex>                                         */ DEADTRANS( L'o'	,0x1EAD	,0x1ED9	,0x0000	), // 'o' ➔ "ộ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'a'	,0x1F9A	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'A'	,0x1F9A	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'h'	,0x1F9A	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'H'	,0x1F9A	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'v'	,0x1F9A	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!breve><!greek>                              */ DEADTRANS( L'V'	,0x1F9A	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'a'	,0x1F92	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'A'	,0x1F92	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'h'	,0x1F92	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'H'	,0x1F92	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'v'	,0x1F92	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!breve>                              */ DEADTRANS( L'V'	,0x1F92	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F8B	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F8B	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F8B	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F8B	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F8B	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F8B	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!greek>                                      */ DEADTRANS( L'a'	,0x1FB2	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek>                                      */ DEADTRANS( L'h'	,0x1FB2	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!greek>                                      */ DEADTRANS( L'v'	,0x1FB2	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'a'	,0x1F83	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'A'	,0x1F83	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'h'	,0x1F83	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'H'	,0x1F83	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'v'	,0x1F83	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!grave><!invertedbreve><!greek>                      */ DEADTRANS( L'V'	,0x1F83	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'a'	,0x1F26	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'A'	,0x1F26	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'h'	,0x1F26	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'H'	,0x1F26	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'v'	,0x1F26	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!breve>                              */ DEADTRANS( L'V'	,0x1F26	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F07	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F07	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F07	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F07	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F07	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F07	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!acute>                                      */ DEADTRANS( L'a'	,0x1FFE	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute>                                      */ DEADTRANS( L'h'	,0x1FFE	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!acute>                                      */ DEADTRANS( L'v'	,0x1FFE	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'a'	,0x1F3E	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'A'	,0x1F3E	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'h'	,0x1F3E	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'H'	,0x1F3E	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'v'	,0x1F3E	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!acute>                              */ DEADTRANS( L'V'	,0x1F3E	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'a'	,0x1FAE	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'A'	,0x1FAE	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'h'	,0x1FAE	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'H'	,0x1FAE	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'v'	,0x1FAE	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!circumflex>                         */ DEADTRANS( L'V'	,0x1FAE	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'a'	,0x1FAA	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'A'	,0x1FAA	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'h'	,0x1FAA	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'H'	,0x1FAA	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'v'	,0x1FAA	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve><!grave>                              */ DEADTRANS( L'V'	,0x1FAA	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'a'	,0x1F80	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'A'	,0x1F80	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'h'	,0x1F80	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'H'	,0x1F80	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'v'	,0x1F80	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!breve>                                      */ DEADTRANS( L'V'	,0x1F80	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'a'	,0x1FA6	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'A'	,0x1FA6	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'h'	,0x1FA6	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'H'	,0x1FA6	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'v'	,0x1FA6	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!breve>                         */ DEADTRANS( L'V'	,0x1FA6	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1F9F	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1F9F	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1F9F	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1F9F	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1F9F	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1F9F	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!circumflex>                                 */ DEADTRANS( L'a'	,0x1FC7	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex>                                 */ DEADTRANS( L'h'	,0x1FC7	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!circumflex>                                 */ DEADTRANS( L'v'	,0x1FC7	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'a'	,0x1FA2	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'A'	,0x1FA2	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'h'	,0x1FA2	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'H'	,0x1FA2	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'v'	,0x1FA2	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!breve>                              */ DEADTRANS( L'V'	,0x1FA2	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F9B	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F9B	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F9B	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F9B	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F9B	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F9B	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!grave>                                      */ DEADTRANS( L'a'	,0x1FC2	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave>                                      */ DEADTRANS( L'h'	,0x1FC2	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!grave>                                      */ DEADTRANS( L'v'	,0x1FC2	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'a'	,0x1F2F	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'A'	,0x1F2F	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'h'	,0x1F2F	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'H'	,0x1F2F	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'v'	,0x1F2F	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!acute>                      */ DEADTRANS( L'V'	,0x1F2F	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'a'	,0x1F97	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'A'	,0x1F97	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'h'	,0x1F97	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'H'	,0x1F97	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'v'	,0x1F97	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!circumflex>                 */ DEADTRANS( L'V'	,0x1F97	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'a'	,0x1F93	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'A'	,0x1F93	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'h'	,0x1F93	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'H'	,0x1F93	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'v'	,0x1F93	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve><!grave>                      */ DEADTRANS( L'V'	,0x1F93	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'a'	,0x1F89	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'A'	,0x1F89	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'h'	,0x1F89	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'H'	,0x1F89	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'v'	,0x1F89	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!greek><!invertedbreve>                              */ DEADTRANS( L'V'	,0x1F89	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'a'	,0x037A	,0x1FB3	,0x0000	), // 'a' ➔ "ᾳ" GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'A'	,0x037A	,0x1FBC	,0x0000	), // 'A' ➔ "ᾼ" GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'h'	,0x037A	,0x1FC3	,0x0000	), // 'h' ➔ "ῃ" GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'H'	,0x037A	,0x1FCC	,0x0000	), // 'H' ➔ "ῌ" GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'v'	,0x037A	,0x1FF3	,0x0000	), // 'v' ➔ "ῳ" GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L'V'	,0x037A	,0x1FFC	,0x0000	), // 'V' ➔ "ῼ" GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( 0x00A0	,0x037A	,0x037A	,0x0000	), // ' ' ➔ "ͺ" GREEK YPOGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( 0x202F	,0x037A	,0x1FBE	,0x0000	), // ' ' ➔ "ι" GREEK PROSGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( L' '	,0x037A	,0x0345	,0x0000	), // ' ' ➔ "ͅ" COMBINING GREEK YPOGEGRAMMENI
+/*<!belowdot><!greek>                                              */ DEADTRANS( 0x200B	,0x037A	,0x0345	,0x0000	), // '​' ➔ "ͅ" COMBINING GREEK YPOGEGRAMMENI
 /*<!belowdot><!horn>                                               */ DEADTRANS( L'O'	,0x1EE2	,0x1EE2	,0x0000	), // 'O' ➔ "Ợ" LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
 /*<!belowdot><!horn>                                               */ DEADTRANS( L'o'	,0x1EE2	,0x1EE3	,0x0000	), // 'o' ➔ "ợ" LATIN SMALL LETTER O WITH HORN AND DOT BELOW
 /*<!belowdot><!horn>                                               */ DEADTRANS( L'U'	,0x1EE2	,0x1EF0	,0x0000	), // 'U' ➔ "Ự" LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 /*<!belowdot><!horn>                                               */ DEADTRANS( L'u'	,0x1EE2	,0x1EF1	,0x0000	), // 'u' ➔ "ự" LATIN SMALL LETTER U WITH HORN AND DOT BELOW
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'a'	,0x1F27	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'A'	,0x1F27	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'h'	,0x1F27	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'H'	,0x1F27	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'v'	,0x1F27	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!acute><!greek>                      */ DEADTRANS( L'V'	,0x1F27	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'a'	,0x1FAF	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'A'	,0x1FAF	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'h'	,0x1FAF	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'H'	,0x1FAF	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'v'	,0x1FAF	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!circumflex><!greek>                 */ DEADTRANS( L'V'	,0x1FAF	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'a'	,0x1FAB	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'A'	,0x1FAB	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'h'	,0x1FAB	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'H'	,0x1FAB	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'v'	,0x1FAB	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!grave><!greek>                      */ DEADTRANS( L'V'	,0x1FAB	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'a'	,0x1F3F	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'A'	,0x1F3F	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'h'	,0x1F3F	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'H'	,0x1F3F	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'v'	,0x1F3F	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!acute>                      */ DEADTRANS( L'V'	,0x1F3F	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'a'	,0x1FA7	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'A'	,0x1FA7	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'h'	,0x1FA7	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'H'	,0x1FA7	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'v'	,0x1FA7	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!circumflex>                 */ DEADTRANS( L'V'	,0x1FA7	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'a'	,0x1FA3	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'A'	,0x1FA3	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'h'	,0x1FA3	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'H'	,0x1FA3	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'v'	,0x1FA3	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek><!grave>                      */ DEADTRANS( L'V'	,0x1FA3	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'a'	,0x1F81	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'A'	,0x1F81	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'h'	,0x1F81	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'H'	,0x1F81	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'v'	,0x1F81	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!belowdot><!invertedbreve><!greek>                              */ DEADTRANS( L'V'	,0x1F81	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
 /*<!belowdot><!macron>                                             */ DEADTRANS( L'L'	,0x1E39	,0x1E38	,0x0000	), // 'L' ➔ "Ḹ" LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
 /*<!belowdot><!macron>                                             */ DEADTRANS( L'l'	,0x1E39	,0x1E39	,0x0000	), // 'l' ➔ "ḹ" LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
 /*<!belowdot><!macron>                                             */ DEADTRANS( L'R'	,0x1E39	,0x1E5C	,0x0000	), // 'R' ➔ "Ṝ" LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
@@ -1269,8 +2018,77 @@
 /*<!breve><!abovedot>                                              */ DEADTRANS( 0x200B	,0xA8F3	,0x0310	,0x0000	), // '​' ➔ "̐" COMBINING CANDRABINDU
 /*<!breve><!abovehook>                                             */ DEADTRANS( L'A'	,0x1EB3	,0x1EB2	,0x0000	), // 'A' ➔ "Ẳ" LATIN CAPITAL LETTER A WITH BREVE AND HOOK ABOVE
 /*<!breve><!abovehook>                                             */ DEADTRANS( L'a'	,0x1EB3	,0x1EB3	,0x0000	), // 'a' ➔ "ẳ" LATIN SMALL LETTER A WITH BREVE AND HOOK ABOVE
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'a'	,0x1F36	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'A'	,0x1F36	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'h'	,0x1F36	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'H'	,0x1F36	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'v'	,0x1F36	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!belowdot><!greek>                              */ DEADTRANS( L'V'	,0x1F36	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'a'	,0x1F6E	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'A'	,0x1F6E	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'h'	,0x1F6E	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'H'	,0x1F6E	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'v'	,0x1F6E	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!acute><!greek><!belowdot>                              */ DEADTRANS( L'V'	,0x1F6E	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'a'	,0x1F04	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'A'	,0x1F04	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'e'	,0x1F04	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'E'	,0x1F04	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'h'	,0x1F04	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'H'	,0x1F04	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'i'	,0x1F04	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'I'	,0x1F04	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'o'	,0x1F04	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'O'	,0x1F04	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'v'	,0x1F04	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'V'	,0x1F04	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( L'y'	,0x1F04	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( 0x00A0	,0x1F04	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!breve><!acute><!greek>                                         */ DEADTRANS( 0x202F	,0x1F04	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
 /*<!breve><!acute>                                                 */ DEADTRANS( L'A'	,0x1EAF	,0x1EAE	,0x0000	), // 'A' ➔ "Ắ" LATIN CAPITAL LETTER A WITH BREVE AND ACUTE
 /*<!breve><!acute>                                                 */ DEADTRANS( L'a'	,0x1EAF	,0x1EAF	,0x0000	), // 'a' ➔ "ắ" LATIN SMALL LETTER A WITH BREVE AND ACUTE
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'a'	,0x1F66	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'A'	,0x1F66	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'h'	,0x1F66	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'H'	,0x1F66	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'v'	,0x1F66	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!acute><!greek>                              */ DEADTRANS( L'V'	,0x1F66	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'a'	,0x1FCD	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'A'	,0x1FCD	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'h'	,0x1FCD	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'H'	,0x1FCD	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'v'	,0x1FCD	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!circumflex><!greek>                         */ DEADTRANS( L'V'	,0x1FCD	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'a'	,0x1F98	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'A'	,0x1F98	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'h'	,0x1F98	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'H'	,0x1F98	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'v'	,0x1F98	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!grave><!greek>                              */ DEADTRANS( L'V'	,0x1F98	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'a'	,0x1F56	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'A'	,0x1F56	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'h'	,0x1F56	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'H'	,0x1F56	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'v'	,0x1F56	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!acute>                              */ DEADTRANS( L'V'	,0x1F56	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'a'	,0x1F0A	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'A'	,0x1F0A	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'h'	,0x1F0A	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'H'	,0x1F0A	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'v'	,0x1F0A	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!circumflex>                         */ DEADTRANS( L'V'	,0x1F0A	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'a'	,0x1FA8	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'A'	,0x1FA8	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'h'	,0x1FA8	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'H'	,0x1FA8	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'v'	,0x1FA8	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek><!grave>                              */ DEADTRANS( L'V'	,0x1FA8	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'a'	,0x1F90	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'A'	,0x1F90	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'h'	,0x1F90	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'H'	,0x1F90	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'v'	,0x1F90	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!belowdot><!greek>                                      */ DEADTRANS( L'V'	,0x1F90	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
 /*<!breve><!belowdot>                                              */ DEADTRANS( L'A'	,0x1EB7	,0x1EB6	,0x0000	), // 'A' ➔ "Ặ" LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 /*<!breve><!belowdot>                                              */ DEADTRANS( L'a'	,0x1EB7	,0x1EB7	,0x0000	), // 'a' ➔ "ặ" LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
 /*<!breve><!breve><!retroflexhook><!retroflexhook>                 */ DEADTRANS( L'l'	,0x026C	,0xDF13	,0x0000	), // High surrogate: D837; U+1DF13 'l' ➔ "𝼓" LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
@@ -1293,8 +2111,157 @@
 /*<!breve><!breve>                                                 */ DEADTRANS( 0x200B	,0x1E2B	,0x032E	,0x0000	), // '​' ➔ "̮" COMBINING BREVE BELOW
 /*<!breve><!cedilla>                                               */ DEADTRANS( L'E'	,0x1E1D	,0x1E1C	,0x0000	), // 'E' ➔ "Ḝ" LATIN CAPITAL LETTER E WITH CEDILLA AND BREVE
 /*<!breve><!cedilla>                                               */ DEADTRANS( L'e'	,0x1E1D	,0x1E1D	,0x0000	), // 'e' ➔ "ḝ" LATIN SMALL LETTER E WITH CEDILLA AND BREVE
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'a'	,0x1F02	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'A'	,0x1F02	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'h'	,0x1F02	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'H'	,0x1F02	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'v'	,0x1F02	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!belowdot><!greek>                         */ DEADTRANS( L'V'	,0x1F02	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'a'	,0x1F12	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'A'	,0x1F12	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'h'	,0x1F12	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'H'	,0x1F12	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'v'	,0x1F12	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!circumflex><!greek><!belowdot>                         */ DEADTRANS( L'V'	,0x1F12	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'a'	,0x1F1A	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'A'	,0x1F1A	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'h'	,0x1F1A	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'H'	,0x1F1A	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'i'	,0x1F1A	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'I'	,0x1F1A	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'v'	,0x1F1A	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'V'	,0x1F1A	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( L'y'	,0x1F1A	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( 0x00A0	,0x1F1A	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!breve><!circumflex><!greek>                                    */ DEADTRANS( 0x202F	,0x1F1A	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'a'	,0x1FA0	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'A'	,0x1FA0	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'h'	,0x1FA0	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'H'	,0x1FA0	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'v'	,0x1FA0	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!belowdot><!greek>                              */ DEADTRANS( L'V'	,0x1FA0	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'a'	,0x00AF	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'A'	,0x00AF	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'h'	,0x00AF	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'H'	,0x00AF	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'v'	,0x00AF	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!grave><!greek><!belowdot>                              */ DEADTRANS( L'V'	,0x00AF	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'a'	,0x1F2A	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'A'	,0x1F2A	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'e'	,0x1F2A	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'E'	,0x1F2A	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'h'	,0x1F2A	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'H'	,0x1F2A	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'i'	,0x1F2A	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'I'	,0x1F2A	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'o'	,0x1F2A	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'O'	,0x1F2A	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'v'	,0x1F2A	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'V'	,0x1F2A	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( L'y'	,0x1F2A	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( 0x00A0	,0x1F2A	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!breve><!grave><!greek>                                         */ DEADTRANS( 0x202F	,0x1F2A	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
 /*<!breve><!grave>                                                 */ DEADTRANS( L'A'	,0x1EB1	,0x1EB0	,0x0000	), // 'A' ➔ "Ằ" LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
 /*<!breve><!grave>                                                 */ DEADTRANS( L'a'	,0x1EB1	,0x1EB1	,0x0000	), // 'a' ➔ "ằ" LATIN SMALL LETTER A WITH BREVE AND GRAVE
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'a'	,0x1F22	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'A'	,0x1F22	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'h'	,0x1F22	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'H'	,0x1F22	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'v'	,0x1F22	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!acute><!belowdot>                              */ DEADTRANS( L'V'	,0x1F22	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'a'	,0x1F1C	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'A'	,0x1F1C	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'e'	,0x1F1C	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'E'	,0x1F1C	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'h'	,0x1F1C	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'H'	,0x1F1C	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'i'	,0x1F1C	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'I'	,0x1F1C	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'o'	,0x1F1C	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'O'	,0x1F1C	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'v'	,0x1F1C	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'V'	,0x1F1C	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( L'y'	,0x1F1C	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( 0x00A0	,0x1F1C	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!breve><!greek><!acute>                                         */ DEADTRANS( 0x202F	,0x1F1C	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'a'	,0x1F3A	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'A'	,0x1F3A	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'h'	,0x1F3A	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'H'	,0x1F3A	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'v'	,0x1F3A	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!acute>                              */ DEADTRANS( L'V'	,0x1F3A	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'a'	,0x1F32	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'A'	,0x1F32	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'h'	,0x1F32	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'H'	,0x1F32	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'v'	,0x1F32	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!circumflex>                         */ DEADTRANS( L'V'	,0x1F32	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'a'	,0x1FB1	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'A'	,0x1FB1	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'h'	,0x1FB1	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'H'	,0x1FB1	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'v'	,0x1FB1	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot><!grave>                              */ DEADTRANS( L'V'	,0x1FB1	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'a'	,0x1F43	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'A'	,0x1F43	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'h'	,0x1F43	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'H'	,0x1F43	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'v'	,0x1F43	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!breve><!greek><!belowdot>                                      */ DEADTRANS( L'V'	,0x1F43	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'a'	,0x1F42	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'A'	,0x1F42	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'h'	,0x1F42	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'H'	,0x1F42	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'v'	,0x1F42	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!breve><!greek><!circumflex><!belowdot>                         */ DEADTRANS( L'V'	,0x1F42	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'a'	,0x1F4A	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'A'	,0x1F4A	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'h'	,0x1F4A	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'H'	,0x1F4A	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'i'	,0x1F4A	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'I'	,0x1F4A	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'v'	,0x1F4A	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'V'	,0x1F4A	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( L'y'	,0x1F4A	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( 0x00A0	,0x1F4A	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!breve><!greek><!circumflex>                                    */ DEADTRANS( 0x202F	,0x1F4A	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'a'	,0x1FD9	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'A'	,0x1FD9	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'h'	,0x1FD9	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'H'	,0x1FD9	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'v'	,0x1FD9	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!breve><!greek><!grave><!belowdot>                              */ DEADTRANS( L'V'	,0x1FD9	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'a'	,0x1F6A	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'A'	,0x1F6A	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'e'	,0x1F6A	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'E'	,0x1F6A	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'h'	,0x1F6A	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'H'	,0x1F6A	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'i'	,0x1F6A	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'I'	,0x1F6A	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'o'	,0x1F6A	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'O'	,0x1F6A	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'v'	,0x1F6A	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'V'	,0x1F6A	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( L'y'	,0x1F6A	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( 0x00A0	,0x1F6A	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!breve><!greek><!grave>                                         */ DEADTRANS( 0x202F	,0x1F6A	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!breve><!greek>                                                 */ DEADTRANS( L'a'	,0x1FBF	,0x1F00	,0x0000	), // 'a' ➔ "ἀ" GREEK SMALL LETTER ALPHA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'A'	,0x1FBF	,0x1F08	,0x0000	), // 'A' ➔ "Ἀ" GREEK CAPITAL LETTER ALPHA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'e'	,0x1FBF	,0x1F10	,0x0000	), // 'e' ➔ "ἐ" GREEK SMALL LETTER EPSILON WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'E'	,0x1FBF	,0x1F18	,0x0000	), // 'E' ➔ "Ἐ" GREEK CAPITAL LETTER EPSILON WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'h'	,0x1FBF	,0x1F20	,0x0000	), // 'h' ➔ "ἠ" GREEK SMALL LETTER ETA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'H'	,0x1FBF	,0x1F28	,0x0000	), // 'H' ➔ "Ἠ" GREEK CAPITAL LETTER ETA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'i'	,0x1FBF	,0x1F30	,0x0000	), // 'i' ➔ "ἰ" GREEK SMALL LETTER IOTA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'I'	,0x1FBF	,0x1F38	,0x0000	), // 'I' ➔ "Ἰ" GREEK CAPITAL LETTER IOTA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'o'	,0x1FBF	,0x1F40	,0x0000	), // 'o' ➔ "ὀ" GREEK SMALL LETTER OMICRON WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'O'	,0x1FBF	,0x1F48	,0x0000	), // 'O' ➔ "Ὀ" GREEK CAPITAL LETTER OMICRON WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'r'	,0x1FBF	,0x1FE4	,0x0000	), // 'r' ➔ "ῤ" GREEK SMALL LETTER RHO WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'v'	,0x1FBF	,0x1F60	,0x0000	), // 'v' ➔ "ὠ" GREEK SMALL LETTER OMEGA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'V'	,0x1FBF	,0x1F68	,0x0000	), // 'V' ➔ "Ὠ" GREEK CAPITAL LETTER OMEGA WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( L'y'	,0x1FBF	,0x1F50	,0x0000	), // 'y' ➔ "ὐ" GREEK SMALL LETTER UPSILON WITH PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( 0x00A0	,0x1FBF	,0x1FBF	,0x0000	), // ' ' ➔ "᾿" GREEK PSILI
+/*<!breve><!greek>                                                 */ DEADTRANS( 0x202F	,0x1FBF	,0x1FBF	,0x0000	), // ' ' ➔ "᾿" GREEK PSILI
 /*<!breve><!macron>                                                */ DEADTRANS( L' '	,0x02D8	,0x1DCB	,0x0000	), // ' ' ➔ "᷋" COMBINING BREVE-MACRON
 /*<!breve><!macron>                                                */ DEADTRANS( 0x200B	,0x02D8	,0x1DCB	,0x0000	), // '​' ➔ "᷋" COMBINING BREVE-MACRON
 /*<!breve><!retroflexhook><!breve><!retroflexhook>                 */ DEADTRANS( L'l'	,0x026E	,0xDF13	,0x0000	), // High surrogate: D837; U+1DF13 'l' ➔ "𝼓" LATIN SMALL LETTER L WITH BELT AND PALATAL HOOK
@@ -1373,6 +2340,16 @@
 /*<!caron><!caron>                                                 */ DEADTRANS( 0x200B	,0x02EC	,0x032C	,0x0000	), // '​' ➔ "̬" COMBINING CARON BELOW
 /*<!caron><!diaeresis>                                             */ DEADTRANS( L'U'	,0x01D9	,0x01D9	,0x0000	), // 'U' ➔ "Ǚ" LATIN CAPITAL LETTER U WITH DIAERESIS AND CARON
 /*<!caron><!diaeresis>                                             */ DEADTRANS( L'u'	,0x01D9	,0x01DA	,0x0000	), // 'u' ➔ "ǚ" LATIN SMALL LETTER U WITH DIAERESIS AND CARON
+/*<!caron><!greek>                                                 */ DEADTRANS( L'a'	,0x1FB8	,0x1FB0	,0x0000	), // 'a' ➔ "ᾰ" GREEK SMALL LETTER ALPHA WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( L'A'	,0x1FB8	,0x1FB8	,0x0000	), // 'A' ➔ "Ᾰ" GREEK CAPITAL LETTER ALPHA WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( L'i'	,0x1FB8	,0x1FD0	,0x0000	), // 'i' ➔ "ῐ" GREEK SMALL LETTER IOTA WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( L'I'	,0x1FB8	,0x1FD8	,0x0000	), // 'I' ➔ "Ῐ" GREEK CAPITAL LETTER IOTA WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( L'y'	,0x1FB8	,0x1FE0	,0x0000	), // 'y' ➔ "ῠ" GREEK SMALL LETTER UPSILON WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( L'Y'	,0x1FB8	,0x1FE8	,0x0000	), // 'Y' ➔ "Ῠ" GREEK CAPITAL LETTER UPSILON WITH VRACHY
+/*<!caron><!greek>                                                 */ DEADTRANS( 0x00A0	,0x1FB8	,0x02D8	,0x0000	), // ' ' ➔ "˘" BREVE
+/*<!caron><!greek>                                                 */ DEADTRANS( 0x202F	,0x1FB8	,0x02D8	,0x0000	), // ' ' ➔ "˘" BREVE
+/*<!caron><!greek>                                                 */ DEADTRANS( L' '	,0x1FB8	,0x0306	,0x0000	), // ' ' ➔ "̆" COMBINING BREVE
+/*<!caron><!greek>                                                 */ DEADTRANS( 0x200B	,0x1FB8	,0x0306	,0x0000	), // '​' ➔ "̆" COMBINING BREVE
 /*<!caron><!group>                                                 */ DEADTRANS( L'|'	,0x01EF	,0x2E37	,0x0000	), // '|' ➔ "⸷" DAGGER WITH RIGHT GUARD
 /*<!caron><!group>                                                 */ DEADTRANS( L'Z'	,0x01EF	,0x01EE	,0x0000	), // 'Z' ➔ "Ǯ" LATIN CAPITAL LETTER EZH WITH CARON
 /*<!caron><!group>                                                 */ DEADTRANS( L'z'	,0x01EF	,0x01EF	,0x0000	), // 'z' ➔ "ǯ" LATIN SMALL LETTER EZH WITH CARON
@@ -1483,12 +2460,62 @@
 /*<!circumflex><!acute>                                            */ DEADTRANS( L'e'	,0x1EA4	,0x1EBF	,0x0000	), // 'e' ➔ "ế" LATIN SMALL LETTER E WITH CIRCUMFLEX AND ACUTE
 /*<!circumflex><!acute>                                            */ DEADTRANS( L'O'	,0x1EA4	,0x1ED0	,0x0000	), // 'O' ➔ "Ố" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND ACUTE
 /*<!circumflex><!acute>                                            */ DEADTRANS( L'o'	,0x1EA4	,0x1ED1	,0x0000	), // 'o' ➔ "ố" LATIN SMALL LETTER O WITH CIRCUMFLEX AND ACUTE
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'a'	,0x1FB0	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'A'	,0x1FB0	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'h'	,0x1FB0	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'H'	,0x1FB0	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'v'	,0x1FB0	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!breve><!greek>                         */ DEADTRANS( L'V'	,0x1FB0	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'a'	,0x1FD8	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'A'	,0x1FD8	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'h'	,0x1FD8	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'H'	,0x1FD8	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'v'	,0x1FD8	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!breve>                         */ DEADTRANS( L'V'	,0x1FD8	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1FD0	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1FD0	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1FD0	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1FD0	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1FD0	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1FD0	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!greek>                                 */ DEADTRANS( L'a'	,0x1FF7	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek>                                 */ DEADTRANS( L'h'	,0x1FF7	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!greek>                                 */ DEADTRANS( L'v'	,0x1FF7	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'a'	,0x1FE8	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'A'	,0x1FE8	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'h'	,0x1FE8	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'H'	,0x1FE8	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'v'	,0x1FE8	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!belowdot><!invertedbreve><!greek>                 */ DEADTRANS( L'V'	,0x1FE8	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'A'	,0x1EAC	,0x1EAC	,0x0000	), // 'A' ➔ "Ậ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'a'	,0x1EAC	,0x1EAD	,0x0000	), // 'a' ➔ "ậ" LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'E'	,0x1EAC	,0x1EC6	,0x0000	), // 'E' ➔ "Ệ" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'e'	,0x1EAC	,0x1EC7	,0x0000	), // 'e' ➔ "ệ" LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'O'	,0x1EAC	,0x1ED8	,0x0000	), // 'O' ➔ "Ộ" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 /*<!circumflex><!belowdot>                                         */ DEADTRANS( L'o'	,0x1EAC	,0x1ED9	,0x0000	), // 'o' ➔ "ộ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'a'	,0x1FE0	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'A'	,0x1FE0	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'h'	,0x1FE0	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'H'	,0x1FE0	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'v'	,0x1FE0	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!belowdot><!greek>                         */ DEADTRANS( L'V'	,0x1FE0	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'a'	,0x1FFB	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'A'	,0x1FFB	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'h'	,0x1FFB	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'H'	,0x1FFB	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'v'	,0x1FFB	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!breve><!greek><!belowdot>                         */ DEADTRANS( L'V'	,0x1FFB	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'a'	,0x1FFC	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'A'	,0x1FFC	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'h'	,0x1FFC	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'H'	,0x1FFC	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'i'	,0x1FFC	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'I'	,0x1FFC	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'v'	,0x1FFC	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'V'	,0x1FFC	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( L'y'	,0x1FFC	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( 0x00A0	,0x1FFC	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!circumflex><!breve><!greek>                                    */ DEADTRANS( 0x202F	,0x1FFC	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( L'"'	,0x1E19	,0x02FF	,0x0000	), // '"' ➔ "˿" MODIFIER LETTER LOW LEFT ARROW
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( 0x20AC	,0x1E19	,0x02FF	,0x0000	), // '€' ➔ "˿" MODIFIER LETTER LOW LEFT ARROW
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( L'D'	,0x1E19	,0x1E12	,0x0000	), // 'D' ➔ "Ḓ" LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
@@ -1554,12 +2581,79 @@
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( 0x202F	,0x01CD	,0x02C7	,0x0000	), // ' ' ➔ "ˇ" CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L' '	,0x01CD	,0x030C	,0x0000	), // ' ' ➔ "̌" COMBINING CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( 0x200B	,0x01CD	,0x030C	,0x0000	), // '​' ➔ "̌" COMBINING CARON
+/*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( L'i'	,0x1FC1	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( L'y'	,0x1FC1	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( 0x00A0	,0x1FC1	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( 0x202F	,0x1FC1	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'A'	,0x1EA7	,0x1EA6	,0x0000	), // 'A' ➔ "Ầ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'a'	,0x1EA7	,0x1EA7	,0x0000	), // 'a' ➔ "ầ" LATIN SMALL LETTER A WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'E'	,0x1EA7	,0x1EC0	,0x0000	), // 'E' ➔ "Ề" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'e'	,0x1EA7	,0x1EC1	,0x0000	), // 'e' ➔ "ề" LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'O'	,0x1EA7	,0x1ED2	,0x0000	), // 'O' ➔ "Ồ" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'o'	,0x1EA7	,0x1ED3	,0x0000	), // 'o' ➔ "ồ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND GRAVE
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'a'	,0x1FF9	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'A'	,0x1FF9	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'h'	,0x1FF9	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'H'	,0x1FF9	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'v'	,0x1FF9	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!breve>                         */ DEADTRANS( L'V'	,0x1FF9	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1FF8	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1FF8	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1FF8	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1FF8	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1FF8	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1FF8	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!belowdot>                                 */ DEADTRANS( L'a'	,0x1FFA	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot>                                 */ DEADTRANS( L'h'	,0x1FFA	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!belowdot>                                 */ DEADTRANS( L'v'	,0x1FFA	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'a'	,0x1FF3	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'A'	,0x1FF3	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'h'	,0x1FF3	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'H'	,0x1FF3	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'v'	,0x1FF3	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!breve><!belowdot>                         */ DEADTRANS( L'V'	,0x1FF3	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'a'	,0x1FF6	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'A'	,0x1FF6	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'h'	,0x1FF6	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'H'	,0x1FF6	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'i'	,0x1FF6	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'I'	,0x1FF6	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'v'	,0x1FF6	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'V'	,0x1FF6	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( L'y'	,0x1FF6	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( 0x00A0	,0x1FF6	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!breve>                                    */ DEADTRANS( 0x202F	,0x1FF6	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!circumflex><!greek><!diaeresis>                                */ DEADTRANS( L'i'	,0x1FD7	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!greek><!diaeresis>                                */ DEADTRANS( L'y'	,0x1FD7	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!greek><!diaeresis>                                */ DEADTRANS( 0x00A0	,0x1FD7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!greek><!diaeresis>                                */ DEADTRANS( 0x202F	,0x1FD7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'a'	,0x1FF2	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'A'	,0x1FF2	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'h'	,0x1FF2	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'H'	,0x1FF2	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'v'	,0x1FF2	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve><!belowdot>                 */ DEADTRANS( L'V'	,0x1FF2	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'a'	,0x1F37	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'A'	,0x1F37	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'h'	,0x1F37	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'H'	,0x1F37	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'i'	,0x1F37	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'I'	,0x1F37	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'v'	,0x1F37	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'V'	,0x1F37	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'y'	,0x1F37	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( L'Y'	,0x1F37	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( 0x00A0	,0x1F37	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!circumflex><!greek><!invertedbreve>                            */ DEADTRANS( 0x202F	,0x1F37	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'a'	,0x1FC0	,0x1FB6	,0x0000	), // 'a' ➔ "ᾶ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'h'	,0x1FC0	,0x1FC6	,0x0000	), // 'h' ➔ "ῆ" GREEK SMALL LETTER ETA WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'i'	,0x1FC0	,0x1FD6	,0x0000	), // 'i' ➔ "ῖ" GREEK SMALL LETTER IOTA WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'v'	,0x1FC0	,0x1FF6	,0x0000	), // 'v' ➔ "ῶ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'y'	,0x1FC0	,0x1FE6	,0x0000	), // 'y' ➔ "ῦ" GREEK SMALL LETTER UPSILON WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( 0x00A0	,0x1FC0	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( 0x202F	,0x1FC0	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L' '	,0x1FC0	,0x0342	,0x0000	), // ' ' ➔ "͂" COMBINING GREEK PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( 0x200B	,0x1FC0	,0x0342	,0x0000	), // '​' ➔ "͂" COMBINING GREEK PERISPOMENI
 /*<!circumflex><!group><!group><!group><!group>                    */ DEADTRANS( L','	,0x2662	,0x2662	,0x0000	), // ',' ➔ "♢" WHITE DIAMOND SUIT
 /*<!circumflex><!group><!group><!group>                            */ DEADTRANS( L','	,0x2667	,0x2667	,0x0000	), // ',' ➔ "♧" WHITE CLUB SUIT
 /*<!circumflex><!group><!group>                                    */ DEADTRANS( L'~'	,0x2661	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
@@ -1575,6 +2669,30 @@
 /*<!circumflex><!group><3>                                         */ DEADTRANS( L','	,0x2667	,0x2667	,0x0000	), // ',' ➔ "♧" WHITE CLUB SUIT
 /*<!circumflex><!group><4>                                         */ DEADTRANS( L','	,0x2662	,0x2662	,0x0000	), // ',' ➔ "♢" WHITE DIAMOND SUIT
 /*<!circumflex><!group><5>                                         */ DEADTRANS( L','	,0x2663	,0x2664	,0x0000	), // ',' ➔ "♤" WHITE SPADE SUIT
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'a'	,0x1FEF	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'A'	,0x1FEF	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'h'	,0x1FEF	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'H'	,0x1FEF	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'v'	,0x1FEF	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!belowdot><!greek>                 */ DEADTRANS( L'V'	,0x1FEF	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'a'	,0x1FED	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'A'	,0x1FED	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'h'	,0x1FED	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'H'	,0x1FED	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'v'	,0x1FED	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek><!belowdot>                 */ DEADTRANS( L'V'	,0x1FED	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'a'	,0x1F6F	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'A'	,0x1F6F	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'h'	,0x1F6F	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'H'	,0x1F6F	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'i'	,0x1F6F	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'I'	,0x1F6F	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'v'	,0x1F6F	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'V'	,0x1F6F	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'y'	,0x1F6F	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( L'Y'	,0x1F6F	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( 0x00A0	,0x1F6F	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!circumflex><!invertedbreve><!greek>                            */ DEADTRANS( 0x202F	,0x1F6F	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
 /*<!circumflex><!tilde>                                            */ DEADTRANS( L'A'	,0x1EAB	,0x1EAA	,0x0000	), // 'A' ➔ "Ẫ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND TILDE
 /*<!circumflex><!tilde>                                            */ DEADTRANS( L'a'	,0x1EAB	,0x1EAB	,0x0000	), // 'a' ➔ "ẫ" LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE
 /*<!circumflex><!tilde>                                            */ DEADTRANS( L'E'	,0x1EAB	,0x1EC4	,0x0000	), // 'E' ➔ "Ễ" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND TILDE
@@ -1750,12 +2868,20 @@
 /*<!currency>                                                      */ DEADTRANS( 0x200B	,0x00A4	,0x00A4	,0x0000	), // '​' ➔ "¤" CURRENCY SIGN
 /*<!diaeresis><!abovering>                                         */ DEADTRANS( L' '	,0x00A8	,0x1AB1	,0x0000	), // ' ' ➔ "᪱" COMBINING DIAERESIS-RING
 /*<!diaeresis><!abovering>                                         */ DEADTRANS( 0x200B	,0x00A8	,0x1AB1	,0x0000	), // '​' ➔ "᪱" COMBINING DIAERESIS-RING
+/*<!diaeresis><!acute><!greek>                                     */ DEADTRANS( L'i'	,0x1FE3	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!diaeresis><!acute><!greek>                                     */ DEADTRANS( L'y'	,0x1FE3	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!diaeresis><!acute><!greek>                                     */ DEADTRANS( 0x00A0	,0x1FE3	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!diaeresis><!acute><!greek>                                     */ DEADTRANS( 0x202F	,0x1FE3	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
 /*<!diaeresis><!acute>                                             */ DEADTRANS( L'I'	,0x1E2F	,0x1E2E	,0x0000	), // 'I' ➔ "Ḯ" LATIN CAPITAL LETTER I WITH DIAERESIS AND ACUTE
 /*<!diaeresis><!acute>                                             */ DEADTRANS( L'i'	,0x1E2F	,0x1E2F	,0x0000	), // 'i' ➔ "ḯ" LATIN SMALL LETTER I WITH DIAERESIS AND ACUTE
 /*<!diaeresis><!acute>                                             */ DEADTRANS( L'U'	,0x1E2F	,0x01D7	,0x0000	), // 'U' ➔ "Ǘ" LATIN CAPITAL LETTER U WITH DIAERESIS AND ACUTE
 /*<!diaeresis><!acute>                                             */ DEADTRANS( L'u'	,0x1E2F	,0x01D8	,0x0000	), // 'u' ➔ "ǘ" LATIN SMALL LETTER U WITH DIAERESIS AND ACUTE
 /*<!diaeresis><!caron>                                             */ DEADTRANS( L'U'	,0x01DA	,0x01D9	,0x0000	), // 'U' ➔ "Ǚ" LATIN CAPITAL LETTER U WITH DIAERESIS AND CARON
 /*<!diaeresis><!caron>                                             */ DEADTRANS( L'u'	,0x01DA	,0x01DA	,0x0000	), // 'u' ➔ "ǚ" LATIN SMALL LETTER U WITH DIAERESIS AND CARON
+/*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( L'i'	,0x1FE7	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( L'y'	,0x1FE7	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( 0x00A0	,0x1FE7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( 0x202F	,0x1FE7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'*'	,0x1E73	,0x1ADD	,0x0000	), // '*' ➔ "᫝" COMBINING DOT-AND-RING BELOW
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'U'	,0x1E73	,0x1E72	,0x0000	), // 'U' ➔ "Ṳ" LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'u'	,0x1E73	,0x1E73	,0x0000	), // 'u' ➔ "ṳ" LATIN SMALL LETTER U WITH DIAERESIS BELOW
@@ -1763,10 +2889,46 @@
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x202F	,0x1E73	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L' '	,0x1E73	,0x0324	,0x0000	), // ' ' ➔ "̤" COMBINING DIAERESIS BELOW
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x200B	,0x1E73	,0x0324	,0x0000	), // '​' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( L'i'	,0x0344	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( L'y'	,0x0344	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( 0x00A0	,0x0344	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( 0x202F	,0x0344	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( L' '	,0x0344	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( 0x200B	,0x0344	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!diaeresis><!grave><!greek>                                     */ DEADTRANS( L'i'	,0x1FD2	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!diaeresis><!grave><!greek>                                     */ DEADTRANS( L'y'	,0x1FD2	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!diaeresis><!grave><!greek>                                     */ DEADTRANS( 0x00A0	,0x1FD2	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!diaeresis><!grave><!greek>                                     */ DEADTRANS( 0x202F	,0x1FD2	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
 /*<!diaeresis><!grave>                                             */ DEADTRANS( L'"'	,0x01DC	,0x2E42	,0x0000	), // '"' ➔ "⹂" DOUBLE LOW-REVERSED-9 QUOTATION MARK
 /*<!diaeresis><!grave>                                             */ DEADTRANS( 0x20AC	,0x01DC	,0x2E42	,0x0000	), // '€' ➔ "⹂" DOUBLE LOW-REVERSED-9 QUOTATION MARK
 /*<!diaeresis><!grave>                                             */ DEADTRANS( L'U'	,0x01DC	,0x01DB	,0x0000	), // 'U' ➔ "Ǜ" LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 /*<!diaeresis><!grave>                                             */ DEADTRANS( L'u'	,0x01DC	,0x01DC	,0x0000	), // 'u' ➔ "ǜ" LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
+/*<!diaeresis><!greek><!acute>                                     */ DEADTRANS( L'i'	,0x1FEC	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!diaeresis><!greek><!acute>                                     */ DEADTRANS( L'y'	,0x1FEC	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!diaeresis><!greek><!acute>                                     */ DEADTRANS( 0x00A0	,0x1FEC	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!diaeresis><!greek><!acute>                                     */ DEADTRANS( 0x202F	,0x1FEC	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!diaeresis><!greek><!circumflex>                                */ DEADTRANS( L'i'	,0x1FEB	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!greek><!circumflex>                                */ DEADTRANS( L'y'	,0x1FEB	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!greek><!circumflex>                                */ DEADTRANS( 0x00A0	,0x1FEB	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!greek><!circumflex>                                */ DEADTRANS( 0x202F	,0x1FEB	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( L'i'	,0x0385	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( L'y'	,0x0385	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( 0x00A0	,0x0385	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( 0x202F	,0x0385	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( L' '	,0x0385	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!diaeresis><!greek><!doubleacute>                               */ DEADTRANS( 0x200B	,0x0385	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!diaeresis><!greek><!grave>                                     */ DEADTRANS( L'i'	,0x1FE2	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!diaeresis><!greek><!grave>                                     */ DEADTRANS( L'y'	,0x1FE2	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!diaeresis><!greek><!grave>                                     */ DEADTRANS( 0x00A0	,0x1FE2	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!diaeresis><!greek><!grave>                                     */ DEADTRANS( 0x202F	,0x1FE2	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!diaeresis><!greek>                                             */ DEADTRANS( L'I'	,0x03AA	,0x03AA	,0x0000	), // 'I' ➔ "Ϊ" GREEK CAPITAL LETTER IOTA WITH DIALYTIKA
+/*<!diaeresis><!greek>                                             */ DEADTRANS( L'i'	,0x03AA	,0x03CA	,0x0000	), // 'i' ➔ "ϊ" GREEK SMALL LETTER IOTA WITH DIALYTIKA
+/*<!diaeresis><!greek>                                             */ DEADTRANS( L'Y'	,0x03AA	,0x03AB	,0x0000	), // 'Y' ➔ "Ϋ" GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
+/*<!diaeresis><!greek>                                             */ DEADTRANS( L'y'	,0x03AA	,0x03CB	,0x0000	), // 'y' ➔ "ϋ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA
+/*<!diaeresis><!greek>                                             */ DEADTRANS( 0x00A0	,0x03AA	,0x00A8	,0x0000	), // ' ' ➔ "¨" DIAERESIS
+/*<!diaeresis><!greek>                                             */ DEADTRANS( 0x202F	,0x03AA	,0x00A8	,0x0000	), // ' ' ➔ "¨" DIAERESIS
+/*<!diaeresis><!greek>                                             */ DEADTRANS( L' '	,0x03AA	,0x0308	,0x0000	), // ' ' ➔ "̈" COMBINING DIAERESIS
+/*<!diaeresis><!greek>                                             */ DEADTRANS( 0x200B	,0x03AA	,0x0308	,0x0000	), // '​' ➔ "̈" COMBINING DIAERESIS
 /*<!diaeresis><!group><!group>                                     */ DEADTRANS( L'"'	,0x2760	,0xDE78	,0x0000	), // High surrogate: D83D; U+1F678 '"' ➔ "🙸" SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 /*<!diaeresis><!group><!group>                                     */ DEADTRANS( 0x20AC	,0x2760	,0xDE78	,0x0000	), // High surrogate: D83D; U+1F678 '€' ➔ "🙸" SANS-SERIF HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT
 /*<!diaeresis><!group>                                             */ DEADTRANS( L'\''	,0x275F	,0x275F	,0x0000	), // ''' ➔ "❟" HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT
@@ -1841,8 +3003,38 @@
 /*<!diaeresis>                                                     */ DEADTRANS( 0x202F	,0x00EB	,0x00A8	,0x0000	), // ' ' ➔ "¨" DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L' '	,0x00EB	,0x0308	,0x0000	), // ' ' ➔ "̈" COMBINING DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( 0x200B	,0x00EB	,0x0308	,0x0000	), // '​' ➔ "̈" COMBINING DIAERESIS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( L'i'	,0x0390	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( L'y'	,0x0390	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x00A0	,0x0390	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x202F	,0x0390	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( L' '	,0x0390	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x200B	,0x0390	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
 /*<!doubleacute><!doubleacute>                                     */ DEADTRANS( L' '	,0x2034	,0x1ACB	,0x0000	), // ' ' ➔ "᫋" COMBINING TRIPLE ACUTE ACCENT
 /*<!doubleacute><!doubleacute>                                     */ DEADTRANS( 0x200B	,0x2034	,0x1ACB	,0x0000	), // '​' ➔ "᫋" COMBINING TRIPLE ACUTE ACCENT
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( L'i'	,0x03B0	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( L'y'	,0x03B0	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( 0x00A0	,0x03B0	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( 0x202F	,0x03B0	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( L' '	,0x03B0	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( 0x200B	,0x03B0	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'A'	,0x0384	,0x0386	,0x0000	), // 'A' ➔ "Ά" GREEK CAPITAL LETTER ALPHA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'a'	,0x0384	,0x03AC	,0x0000	), // 'a' ➔ "ά" GREEK SMALL LETTER ALPHA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'E'	,0x0384	,0x0388	,0x0000	), // 'E' ➔ "Έ" GREEK CAPITAL LETTER EPSILON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'e'	,0x0384	,0x03AD	,0x0000	), // 'e' ➔ "έ" GREEK SMALL LETTER EPSILON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'H'	,0x0384	,0x0389	,0x0000	), // 'H' ➔ "Ή" GREEK CAPITAL LETTER ETA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'h'	,0x0384	,0x03AE	,0x0000	), // 'h' ➔ "ή" GREEK SMALL LETTER ETA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'I'	,0x0384	,0x038A	,0x0000	), // 'I' ➔ "Ί" GREEK CAPITAL LETTER IOTA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'i'	,0x0384	,0x03AF	,0x0000	), // 'i' ➔ "ί" GREEK SMALL LETTER IOTA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'O'	,0x0384	,0x038C	,0x0000	), // 'O' ➔ "Ό" GREEK CAPITAL LETTER OMICRON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'o'	,0x0384	,0x03CC	,0x0000	), // 'o' ➔ "ό" GREEK SMALL LETTER OMICRON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'V'	,0x0384	,0x038F	,0x0000	), // 'V' ➔ "Ώ" GREEK CAPITAL LETTER OMEGA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'v'	,0x0384	,0x03CE	,0x0000	), // 'v' ➔ "ώ" GREEK SMALL LETTER OMEGA WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'Y'	,0x0384	,0x038E	,0x0000	), // 'Y' ➔ "Ύ" GREEK CAPITAL LETTER UPSILON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L'y'	,0x0384	,0x03CD	,0x0000	), // 'y' ➔ "ύ" GREEK SMALL LETTER UPSILON WITH TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( 0x00A0	,0x0384	,0x0384	,0x0000	), // ' ' ➔ "΄" GREEK TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( 0x202F	,0x0384	,0x0384	,0x0000	), // ' ' ➔ "΄" GREEK TONOS
+/*<!doubleacute><!greek>                                           */ DEADTRANS( L' '	,0x0384	,0x0301	,0x0000	), // ' ' ➔ "́" COMBINING ACUTE ACCENT
+/*<!doubleacute><!greek>                                           */ DEADTRANS( 0x200B	,0x0384	,0x0301	,0x0000	), // '​' ➔ "́" COMBINING ACUTE ACCENT
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'&'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '&' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'\''	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ''' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( 0x2019	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '’' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -2052,6 +3244,60 @@
 /*<!grave><!abovedot>                                              */ DEADTRANS( 0x200B	,0xA717	,0x1DC0	,0x0000	), // '​' ➔ "᷀" COMBINING DOTTED GRAVE ACCENT
 /*<!grave><!acute><!macron>                                        */ DEADTRANS( L' '	,0x2305	,0x1AD8	,0x0000	), // ' ' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!grave><!acute><!macron>                                        */ DEADTRANS( 0x200B	,0x2305	,0x1AD8	,0x0000	), // '​' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'a'	,0x1FEA	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'A'	,0x1FEA	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'h'	,0x1FEA	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'H'	,0x1FEA	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'v'	,0x1FEA	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!breve><!greek>                              */ DEADTRANS( L'V'	,0x1FEA	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'a'	,0x1FE6	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'A'	,0x1FE6	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'h'	,0x1FE6	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'H'	,0x1FE6	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'v'	,0x1FE6	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!breve>                              */ DEADTRANS( L'V'	,0x1FE6	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1FE5	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1FE5	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1FE5	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1FE5	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1FE5	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1FE5	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!greek>                                      */ DEADTRANS( L'a'	,0x1FE9	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek>                                      */ DEADTRANS( L'h'	,0x1FE9	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!greek>                                      */ DEADTRANS( L'v'	,0x1FE9	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'a'	,0x1FE4	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'A'	,0x1FE4	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'h'	,0x1FE4	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'H'	,0x1FE4	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'v'	,0x1FE4	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!belowdot><!invertedbreve><!greek>                      */ DEADTRANS( L'V'	,0x1FE4	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'a'	,0x1FE1	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'A'	,0x1FE1	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'h'	,0x1FE1	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'H'	,0x1FE1	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'v'	,0x1FE1	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!belowdot><!greek>                              */ DEADTRANS( L'V'	,0x1FE1	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'a'	,0x1FDD	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'A'	,0x1FDD	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'h'	,0x1FDD	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'H'	,0x1FDD	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'v'	,0x1FDD	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!breve><!greek><!belowdot>                              */ DEADTRANS( L'V'	,0x1FDD	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'a'	,0x1F62	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'A'	,0x1F62	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'e'	,0x1F62	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'E'	,0x1F62	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'h'	,0x1F62	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'H'	,0x1F62	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'i'	,0x1F62	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'I'	,0x1F62	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'o'	,0x1F62	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'O'	,0x1F62	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'v'	,0x1F62	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'V'	,0x1F62	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( L'y'	,0x1F62	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( 0x00A0	,0x1F62	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!grave><!breve><!greek>                                         */ DEADTRANS( 0x202F	,0x1F62	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
 /*<!grave><!breve>                                                 */ DEADTRANS( L'A'	,0x1EB0	,0x1EB0	,0x0000	), // 'A' ➔ "Ằ" LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
 /*<!grave><!breve>                                                 */ DEADTRANS( L'a'	,0x1EB0	,0x1EB1	,0x0000	), // 'a' ➔ "ằ" LATIN SMALL LETTER A WITH BREVE AND GRAVE
 /*<!grave><!circumflex>                                            */ DEADTRANS( L'A'	,0x1EA6	,0x1EA6	,0x0000	), // 'A' ➔ "Ầ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND GRAVE
@@ -2060,6 +3306,10 @@
 /*<!grave><!circumflex>                                            */ DEADTRANS( L'e'	,0x1EA6	,0x1EC1	,0x0000	), // 'e' ➔ "ề" LATIN SMALL LETTER E WITH CIRCUMFLEX AND GRAVE
 /*<!grave><!circumflex>                                            */ DEADTRANS( L'O'	,0x1EA6	,0x1ED2	,0x0000	), // 'O' ➔ "Ồ" LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND GRAVE
 /*<!grave><!circumflex>                                            */ DEADTRANS( L'o'	,0x1EA6	,0x1ED3	,0x0000	), // 'o' ➔ "ồ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND GRAVE
+/*<!grave><!diaeresis><!greek>                                     */ DEADTRANS( L'i'	,0x1FDB	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!grave><!diaeresis><!greek>                                     */ DEADTRANS( L'y'	,0x1FDB	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!grave><!diaeresis><!greek>                                     */ DEADTRANS( 0x00A0	,0x1FDB	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!grave><!diaeresis><!greek>                                     */ DEADTRANS( 0x202F	,0x1FDB	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
 /*<!grave><!diaeresis>                                             */ DEADTRANS( L'"'	,0x01DB	,0x2E42	,0x0000	), // '"' ➔ "⹂" DOUBLE LOW-REVERSED-9 QUOTATION MARK
 /*<!grave><!diaeresis>                                             */ DEADTRANS( 0x20AC	,0x01DB	,0x2E42	,0x0000	), // '€' ➔ "⹂" DOUBLE LOW-REVERSED-9 QUOTATION MARK
 /*<!grave><!diaeresis>                                             */ DEADTRANS( L'U'	,0x01DB	,0x01DB	,0x0000	), // 'U' ➔ "Ǜ" LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
@@ -2083,10 +3333,118 @@
 /*<!grave><!grave>                                                 */ DEADTRANS( 0x202F	,0x0201	,0x02F5	,0x0000	), // ' ' ➔ "˵" MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 /*<!grave><!grave>                                                 */ DEADTRANS( L' '	,0x0201	,0x030F	,0x0000	), // ' ' ➔ "̏" COMBINING DOUBLE GRAVE ACCENT
 /*<!grave><!grave>                                                 */ DEADTRANS( 0x200B	,0x0201	,0x030F	,0x0000	), // '​' ➔ "̏" COMBINING DOUBLE GRAVE ACCENT
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'a'	,0x1F72	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'A'	,0x1F72	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'h'	,0x1F72	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'H'	,0x1F72	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'v'	,0x1F72	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!breve>                              */ DEADTRANS( L'V'	,0x1F72	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F74	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F74	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F74	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F74	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F74	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F74	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!belowdot>                                      */ DEADTRANS( L'a'	,0x1F5B	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot>                                      */ DEADTRANS( L'h'	,0x1F5B	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!belowdot>                                      */ DEADTRANS( L'v'	,0x1F5B	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'a'	,0x1F76	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'A'	,0x1F76	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'h'	,0x1F76	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'H'	,0x1F76	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'v'	,0x1F76	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!breve><!belowdot>                              */ DEADTRANS( L'V'	,0x1F76	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'a'	,0x1F52	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'A'	,0x1F52	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'e'	,0x1F52	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'E'	,0x1F52	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'h'	,0x1F52	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'H'	,0x1F52	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'i'	,0x1F52	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'I'	,0x1F52	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'o'	,0x1F52	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'O'	,0x1F52	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'v'	,0x1F52	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'V'	,0x1F52	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( L'y'	,0x1F52	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( 0x00A0	,0x1F52	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!grave><!greek><!breve>                                         */ DEADTRANS( 0x202F	,0x1F52	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!grave><!greek><!diaeresis>                                     */ DEADTRANS( L'i'	,0x1F78	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!grave><!greek><!diaeresis>                                     */ DEADTRANS( L'y'	,0x1F78	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!grave><!greek><!diaeresis>                                     */ DEADTRANS( 0x00A0	,0x1F78	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!grave><!greek><!diaeresis>                                     */ DEADTRANS( 0x202F	,0x1F78	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'a'	,0x1F7A	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'A'	,0x1F7A	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'h'	,0x1F7A	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'H'	,0x1F7A	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'v'	,0x1F7A	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!greek><!invertedbreve><!belowdot>                      */ DEADTRANS( L'V'	,0x1F7A	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'a'	,0x1F0B	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'A'	,0x1F0B	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'e'	,0x1F0B	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'E'	,0x1F0B	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'h'	,0x1F0B	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'H'	,0x1F0B	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'i'	,0x1F0B	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'I'	,0x1F0B	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'o'	,0x1F0B	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'O'	,0x1F0B	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'v'	,0x1F0B	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'V'	,0x1F0B	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'y'	,0x1F0B	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( L'Y'	,0x1F0B	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( 0x00A0	,0x1F0B	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!grave><!greek><!invertedbreve>                                 */ DEADTRANS( 0x202F	,0x1F0B	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'a'	,0x1FBA	,0x1F70	,0x0000	), // 'a' ➔ "ὰ" GREEK SMALL LETTER ALPHA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'A'	,0x1FBA	,0x1FBA	,0x0000	), // 'A' ➔ "Ὰ" GREEK CAPITAL LETTER ALPHA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'e'	,0x1FBA	,0x1F72	,0x0000	), // 'e' ➔ "ὲ" GREEK SMALL LETTER EPSILON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'E'	,0x1FBA	,0x1FC8	,0x0000	), // 'E' ➔ "Ὲ" GREEK CAPITAL LETTER EPSILON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'h'	,0x1FBA	,0x1F74	,0x0000	), // 'h' ➔ "ὴ" GREEK SMALL LETTER ETA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'H'	,0x1FBA	,0x1FCA	,0x0000	), // 'H' ➔ "Ὴ" GREEK CAPITAL LETTER ETA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'i'	,0x1FBA	,0x1F76	,0x0000	), // 'i' ➔ "ὶ" GREEK SMALL LETTER IOTA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'I'	,0x1FBA	,0x1FDA	,0x0000	), // 'I' ➔ "Ὶ" GREEK CAPITAL LETTER IOTA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'o'	,0x1FBA	,0x1F78	,0x0000	), // 'o' ➔ "ὸ" GREEK SMALL LETTER OMICRON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'O'	,0x1FBA	,0x1FF8	,0x0000	), // 'O' ➔ "Ὸ" GREEK CAPITAL LETTER OMICRON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'v'	,0x1FBA	,0x1F7C	,0x0000	), // 'v' ➔ "ὼ" GREEK SMALL LETTER OMEGA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'V'	,0x1FBA	,0x1FFA	,0x0000	), // 'V' ➔ "Ὼ" GREEK CAPITAL LETTER OMEGA WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'y'	,0x1FBA	,0x1F7A	,0x0000	), // 'y' ➔ "ὺ" GREEK SMALL LETTER UPSILON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L'Y'	,0x1FBA	,0x1FEA	,0x0000	), // 'Y' ➔ "Ὺ" GREEK CAPITAL LETTER UPSILON WITH VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( 0x00A0	,0x1FBA	,0x1FEF	,0x0000	), // ' ' ➔ "`" GREEK VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( 0x202F	,0x1FBA	,0x1FEF	,0x0000	), // ' ' ➔ "`" GREEK VARIA
+/*<!grave><!greek>                                                 */ DEADTRANS( L' '	,0x1FBA	,0x0300	,0x0000	), // ' ' ➔ "̀" COMBINING GRAVE ACCENT
+/*<!grave><!greek>                                                 */ DEADTRANS( 0x200B	,0x1FBA	,0x0300	,0x0000	), // '​' ➔ "̀" COMBINING GRAVE ACCENT
 /*<!grave><!horn>                                                  */ DEADTRANS( L'O'	,0x1EDC	,0x1EDC	,0x0000	), // 'O' ➔ "Ờ" LATIN CAPITAL LETTER O WITH HORN AND GRAVE
 /*<!grave><!horn>                                                  */ DEADTRANS( L'o'	,0x1EDC	,0x1EDD	,0x0000	), // 'o' ➔ "ờ" LATIN SMALL LETTER O WITH HORN AND GRAVE
 /*<!grave><!horn>                                                  */ DEADTRANS( L'U'	,0x1EDC	,0x1EEA	,0x0000	), // 'U' ➔ "Ừ" LATIN CAPITAL LETTER U WITH HORN AND GRAVE
 /*<!grave><!horn>                                                  */ DEADTRANS( L'u'	,0x1EDC	,0x1EEB	,0x0000	), // 'u' ➔ "ừ" LATIN SMALL LETTER U WITH HORN AND GRAVE
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'a'	,0x1F7C	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'A'	,0x1F7C	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'h'	,0x1F7C	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'H'	,0x1F7C	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'v'	,0x1F7C	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!belowdot><!greek>                      */ DEADTRANS( L'V'	,0x1F7C	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'a'	,0x1FC8	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'A'	,0x1FC8	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'h'	,0x1FC8	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'H'	,0x1FC8	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'v'	,0x1FC8	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!grave><!invertedbreve><!greek><!belowdot>                      */ DEADTRANS( L'V'	,0x1FC8	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'a'	,0x1F03	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'A'	,0x1F03	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'e'	,0x1F03	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'E'	,0x1F03	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'h'	,0x1F03	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'H'	,0x1F03	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'i'	,0x1F03	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'I'	,0x1F03	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'o'	,0x1F03	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'O'	,0x1F03	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'v'	,0x1F03	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'V'	,0x1F03	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'y'	,0x1F03	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( L'Y'	,0x1F03	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( 0x00A0	,0x1F03	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!grave><!invertedbreve><!greek>                                 */ DEADTRANS( 0x202F	,0x1F03	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
 /*<!grave><!macron><!acute>                                        */ DEADTRANS( L' '	,0x2306	,0x1AD8	,0x0000	), // ' ' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!grave><!macron><!acute>                                        */ DEADTRANS( 0x200B	,0x2306	,0x1AD8	,0x0000	), // '​' ➔ "᫘" COMBINING MACRON-ACUTE-GRAVE
 /*<!grave><!macron>                                                */ DEADTRANS( L'E'	,0x1E14	,0x1E14	,0x0000	), // 'E' ➔ "Ḕ" LATIN CAPITAL LETTER E WITH MACRON AND GRAVE
@@ -2128,6 +3486,495 @@
 /*<!grave>                                                         */ DEADTRANS( 0x202F	,0x00F2	,0x02CB	,0x0000	), // ' ' ➔ "ˋ" MODIFIER LETTER GRAVE ACCENT
 /*<!grave>                                                         */ DEADTRANS( L' '	,0x00F2	,0x0300	,0x0000	), // ' ' ➔ "̀" COMBINING GRAVE ACCENT
 /*<!grave>                                                         */ DEADTRANS( 0x200B	,0x00F2	,0x0300	,0x0000	), // '​' ➔ "̀" COMBINING GRAVE ACCENT
+/*<!greek><!abovehook>                                             */ DEADTRANS( 0x00A0	,0x1FDA	,0x1FBD	,0x0000	), // ' ' ➔ "᾽" GREEK KORONIS
+/*<!greek><!abovehook>                                             */ DEADTRANS( 0x202F	,0x1FDA	,0x1FBD	,0x0000	), // ' ' ➔ "᾽" GREEK KORONIS
+/*<!greek><!abovehook>                                             */ DEADTRANS( L' '	,0x1FDA	,0x0343	,0x0000	), // ' ' ➔ "̓" COMBINING GREEK KORONIS
+/*<!greek><!abovehook>                                             */ DEADTRANS( 0x200B	,0x1FDA	,0x0343	,0x0000	), // '​' ➔ "̓" COMBINING GREEK KORONIS
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'a'	,0x1F73	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'A'	,0x1F73	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'h'	,0x1F73	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'H'	,0x1F73	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'v'	,0x1F73	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!breve>                              */ DEADTRANS( L'V'	,0x1F73	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F75	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F75	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F75	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F75	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F75	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F75	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!belowdot>                                      */ DEADTRANS( L'a'	,0x1F71	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot>                                      */ DEADTRANS( L'h'	,0x1F71	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!belowdot>                                      */ DEADTRANS( L'v'	,0x1F71	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'a'	,0x1F2C	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'A'	,0x1F2C	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'h'	,0x1F2C	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'H'	,0x1F2C	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'v'	,0x1F2C	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!breve><!belowdot>                              */ DEADTRANS( L'V'	,0x1F2C	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'a'	,0x1F14	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'A'	,0x1F14	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'e'	,0x1F14	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'E'	,0x1F14	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'h'	,0x1F14	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'H'	,0x1F14	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'i'	,0x1F14	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'I'	,0x1F14	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'o'	,0x1F14	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'O'	,0x1F14	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'v'	,0x1F14	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'V'	,0x1F14	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( L'y'	,0x1F14	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( 0x00A0	,0x1F14	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!greek><!acute><!breve>                                         */ DEADTRANS( 0x202F	,0x1F14	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!greek><!acute><!diaeresis>                                     */ DEADTRANS( L'i'	,0x1F77	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!greek><!acute><!diaeresis>                                     */ DEADTRANS( L'y'	,0x1F77	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!greek><!acute><!diaeresis>                                     */ DEADTRANS( 0x00A0	,0x1F77	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!greek><!acute><!diaeresis>                                     */ DEADTRANS( 0x202F	,0x1F77	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'a'	,0x1F15	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'A'	,0x1F15	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'h'	,0x1F15	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'H'	,0x1F15	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'v'	,0x1F15	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!acute><!invertedbreve><!belowdot>                      */ DEADTRANS( L'V'	,0x1F15	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'a'	,0x1F05	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'A'	,0x1F05	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'e'	,0x1F05	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'E'	,0x1F05	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'h'	,0x1F05	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'H'	,0x1F05	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'i'	,0x1F05	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'I'	,0x1F05	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'o'	,0x1F05	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'O'	,0x1F05	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'v'	,0x1F05	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'V'	,0x1F05	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'y'	,0x1F05	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( L'Y'	,0x1F05	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( 0x00A0	,0x1F05	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!greek><!acute><!invertedbreve>                                 */ DEADTRANS( 0x202F	,0x1F05	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'a'	,0x1FBB	,0x1F71	,0x0000	), // 'a' ➔ "ά" GREEK SMALL LETTER ALPHA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'A'	,0x1FBB	,0x1FBB	,0x0000	), // 'A' ➔ "Ά" GREEK CAPITAL LETTER ALPHA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'e'	,0x1FBB	,0x1F73	,0x0000	), // 'e' ➔ "έ" GREEK SMALL LETTER EPSILON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'E'	,0x1FBB	,0x1FC9	,0x0000	), // 'E' ➔ "Έ" GREEK CAPITAL LETTER EPSILON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'h'	,0x1FBB	,0x1F75	,0x0000	), // 'h' ➔ "ή" GREEK SMALL LETTER ETA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'H'	,0x1FBB	,0x1FCB	,0x0000	), // 'H' ➔ "Ή" GREEK CAPITAL LETTER ETA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'i'	,0x1FBB	,0x1F77	,0x0000	), // 'i' ➔ "ί" GREEK SMALL LETTER IOTA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'I'	,0x1FBB	,0x1FDB	,0x0000	), // 'I' ➔ "Ί" GREEK CAPITAL LETTER IOTA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'o'	,0x1FBB	,0x1F79	,0x0000	), // 'o' ➔ "ό" GREEK SMALL LETTER OMICRON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'O'	,0x1FBB	,0x1FF9	,0x0000	), // 'O' ➔ "Ό" GREEK CAPITAL LETTER OMICRON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'v'	,0x1FBB	,0x1F7D	,0x0000	), // 'v' ➔ "ώ" GREEK SMALL LETTER OMEGA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'V'	,0x1FBB	,0x1FFB	,0x0000	), // 'V' ➔ "Ώ" GREEK CAPITAL LETTER OMEGA WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'y'	,0x1FBB	,0x1F7B	,0x0000	), // 'y' ➔ "ύ" GREEK SMALL LETTER UPSILON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L'Y'	,0x1FBB	,0x1FEB	,0x0000	), // 'Y' ➔ "Ύ" GREEK CAPITAL LETTER UPSILON WITH OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( 0x00A0	,0x1FBB	,0x1FFD	,0x0000	), // ' ' ➔ "´" GREEK OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( 0x202F	,0x1FBB	,0x1FFD	,0x0000	), // ' ' ➔ "´" GREEK OXIA
+/*<!greek><!acute>                                                 */ DEADTRANS( L' '	,0x1FBB	,0x0301	,0x0000	), // ' ' ➔ "́" COMBINING ACUTE ACCENT
+/*<!greek><!acute>                                                 */ DEADTRANS( 0x200B	,0x1FBB	,0x0301	,0x0000	), // '​' ➔ "́" COMBINING ACUTE ACCENT
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'a'	,0x1F7B	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'A'	,0x1F7B	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'h'	,0x1F7B	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'H'	,0x1F7B	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'v'	,0x1F7B	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!breve>                              */ DEADTRANS( L'V'	,0x1F7B	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1F7D	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1F7D	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1F7D	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1F7D	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1F7D	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1F7D	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!acute>                                      */ DEADTRANS( L'a'	,0x1F79	,0x1FB4	,0x0000	), // 'a' ➔ "ᾴ" GREEK SMALL LETTER ALPHA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute>                                      */ DEADTRANS( L'h'	,0x1F79	,0x1FC4	,0x0000	), // 'h' ➔ "ῄ" GREEK SMALL LETTER ETA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!acute>                                      */ DEADTRANS( L'v'	,0x1F79	,0x1FF4	,0x0000	), // 'v' ➔ "ῴ" GREEK SMALL LETTER OMEGA WITH OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'a'	,0x1FC9	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'A'	,0x1FC9	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'h'	,0x1FC9	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'H'	,0x1FC9	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'v'	,0x1FC9	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!acute>                              */ DEADTRANS( L'V'	,0x1FC9	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'a'	,0x1FD6	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'A'	,0x1FD6	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'h'	,0x1FD6	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'H'	,0x1FD6	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'v'	,0x1FD6	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!circumflex>                         */ DEADTRANS( L'V'	,0x1FD6	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'a'	,0x1FCA	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'A'	,0x1FCA	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'h'	,0x1FCA	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'H'	,0x1FCA	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'v'	,0x1FCA	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve><!grave>                              */ DEADTRANS( L'V'	,0x1FCA	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'a'	,0x1FC3	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'A'	,0x1FC3	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'h'	,0x1FC3	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'H'	,0x1FC3	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'v'	,0x1FC3	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!breve>                                      */ DEADTRANS( L'V'	,0x1FC3	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'a'	,0x1F25	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'A'	,0x1F25	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'h'	,0x1F25	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'H'	,0x1F25	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'v'	,0x1F25	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!breve>                         */ DEADTRANS( L'V'	,0x1F25	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1F65	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1F65	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1F65	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1F65	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1F65	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1F65	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!circumflex>                                 */ DEADTRANS( L'a'	,0x1F1D	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex>                                 */ DEADTRANS( L'h'	,0x1F1D	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!circumflex>                                 */ DEADTRANS( L'v'	,0x1F1D	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'a'	,0x1F6D	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'A'	,0x1F6D	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'h'	,0x1F6D	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'H'	,0x1F6D	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'v'	,0x1F6D	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!breve>                              */ DEADTRANS( L'V'	,0x1F6D	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1FD1	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1FD1	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1FD1	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1FD1	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1FD1	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1FD1	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!grave>                                      */ DEADTRANS( L'a'	,0x1F53	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave>                                      */ DEADTRANS( L'h'	,0x1F53	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!grave>                                      */ DEADTRANS( L'v'	,0x1F53	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'a'	,0x1FCC	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'A'	,0x1FCC	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'h'	,0x1FCC	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'H'	,0x1FCC	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'v'	,0x1FCC	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!acute>                      */ DEADTRANS( L'V'	,0x1FCC	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'a'	,0x1FCB	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'A'	,0x1FCB	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'h'	,0x1FCB	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'H'	,0x1FCB	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'v'	,0x1FCB	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!circumflex>                 */ DEADTRANS( L'V'	,0x1FCB	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'a'	,0x1FC6	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'A'	,0x1FC6	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'h'	,0x1FC6	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'H'	,0x1FC6	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'v'	,0x1FC6	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve><!grave>                      */ DEADTRANS( L'V'	,0x1FC6	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'a'	,0x1F99	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'A'	,0x1F99	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'h'	,0x1F99	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'H'	,0x1F99	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'v'	,0x1F99	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!belowdot><!invertedbreve>                              */ DEADTRANS( L'V'	,0x1F99	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'a'	,0x1FBE	,0x1FB3	,0x0000	), // 'a' ➔ "ᾳ" GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'A'	,0x1FBE	,0x1FBC	,0x0000	), // 'A' ➔ "ᾼ" GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'h'	,0x1FBE	,0x1FC3	,0x0000	), // 'h' ➔ "ῃ" GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'H'	,0x1FBE	,0x1FCC	,0x0000	), // 'H' ➔ "ῌ" GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'v'	,0x1FBE	,0x1FF3	,0x0000	), // 'v' ➔ "ῳ" GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L'V'	,0x1FBE	,0x1FFC	,0x0000	), // 'V' ➔ "ῼ" GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( 0x00A0	,0x1FBE	,0x037A	,0x0000	), // ' ' ➔ "ͺ" GREEK YPOGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( 0x202F	,0x1FBE	,0x1FBE	,0x0000	), // ' ' ➔ "ι" GREEK PROSGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( L' '	,0x1FBE	,0x0345	,0x0000	), // ' ' ➔ "ͅ" COMBINING GREEK YPOGEGRAMMENI
+/*<!greek><!belowdot>                                              */ DEADTRANS( 0x200B	,0x1FBE	,0x0345	,0x0000	), // '​' ➔ "ͅ" COMBINING GREEK YPOGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'a'	,0x1F34	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'A'	,0x1F34	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'h'	,0x1F34	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'H'	,0x1F34	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'v'	,0x1F34	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!acute><!belowdot>                              */ DEADTRANS( L'V'	,0x1F34	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'a'	,0x1F24	,0x1F04	,0x0000	), // 'a' ➔ "ἄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'A'	,0x1F24	,0x1F0C	,0x0000	), // 'A' ➔ "Ἄ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'e'	,0x1F24	,0x1F14	,0x0000	), // 'e' ➔ "ἔ" GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'E'	,0x1F24	,0x1F1C	,0x0000	), // 'E' ➔ "Ἔ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'h'	,0x1F24	,0x1F24	,0x0000	), // 'h' ➔ "ἤ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'H'	,0x1F24	,0x1F2C	,0x0000	), // 'H' ➔ "Ἤ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'i'	,0x1F24	,0x1F34	,0x0000	), // 'i' ➔ "ἴ" GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'I'	,0x1F24	,0x1F3C	,0x0000	), // 'I' ➔ "Ἴ" GREEK CAPITAL LETTER IOTA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'o'	,0x1F24	,0x1F44	,0x0000	), // 'o' ➔ "ὄ" GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'O'	,0x1F24	,0x1F4C	,0x0000	), // 'O' ➔ "Ὄ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'v'	,0x1F24	,0x1F64	,0x0000	), // 'v' ➔ "ὤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'V'	,0x1F24	,0x1F6C	,0x0000	), // 'V' ➔ "Ὤ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( L'y'	,0x1F24	,0x1F54	,0x0000	), // 'y' ➔ "ὔ" GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( 0x00A0	,0x1F24	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!greek><!breve><!acute>                                         */ DEADTRANS( 0x202F	,0x1F24	,0x1FCE	,0x0000	), // ' ' ➔ "῎" GREEK PSILI AND OXIA
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'a'	,0x1F3C	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'A'	,0x1F3C	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'h'	,0x1F3C	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'H'	,0x1F3C	,0x1F9C	,0x0000	), // 'H' ➔ "ᾜ" GREEK CAPITAL LETTER ETA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'v'	,0x1F3C	,0x1FA4	,0x0000	), // 'v' ➔ "ᾤ" GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!acute>                              */ DEADTRANS( L'V'	,0x1F3C	,0x1FAC	,0x0000	), // 'V' ➔ "ᾬ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'a'	,0x1F10	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'A'	,0x1F10	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'h'	,0x1F10	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'H'	,0x1F10	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'v'	,0x1F10	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!circumflex>                         */ DEADTRANS( L'V'	,0x1F10	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'a'	,0x1F18	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'A'	,0x1F18	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'h'	,0x1F18	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'H'	,0x1F18	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'v'	,0x1F18	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot><!grave>                              */ DEADTRANS( L'V'	,0x1F18	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'a'	,0x1F00	,0x1F80	,0x0000	), // 'a' ➔ "ᾀ" GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'A'	,0x1F00	,0x1F88	,0x0000	), // 'A' ➔ "ᾈ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'h'	,0x1F00	,0x1F90	,0x0000	), // 'h' ➔ "ᾐ" GREEK SMALL LETTER ETA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'H'	,0x1F00	,0x1F98	,0x0000	), // 'H' ➔ "ᾘ" GREEK CAPITAL LETTER ETA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'v'	,0x1F00	,0x1FA0	,0x0000	), // 'v' ➔ "ᾠ" GREEK SMALL LETTER OMEGA WITH PSILI AND YPOGEGRAMMENI
+/*<!greek><!breve><!belowdot>                                      */ DEADTRANS( L'V'	,0x1F00	,0x1FA8	,0x0000	), // 'V' ➔ "ᾨ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PROSGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'a'	,0x1F20	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'A'	,0x1F20	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'h'	,0x1F20	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'H'	,0x1F20	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'v'	,0x1F20	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!breve><!circumflex><!belowdot>                         */ DEADTRANS( L'V'	,0x1F20	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'a'	,0x03CE	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'A'	,0x03CE	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'h'	,0x03CE	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'H'	,0x03CE	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'i'	,0x03CE	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'I'	,0x03CE	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'v'	,0x03CE	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'V'	,0x03CE	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( L'y'	,0x03CE	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( 0x00A0	,0x03CE	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!greek><!breve><!circumflex>                                    */ DEADTRANS( 0x202F	,0x03CE	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'a'	,0x1F30	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'A'	,0x1F30	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'h'	,0x1F30	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'H'	,0x1F30	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'v'	,0x1F30	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!breve><!grave><!belowdot>                              */ DEADTRANS( L'V'	,0x1F30	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'a'	,0x1F28	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'A'	,0x1F28	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'e'	,0x1F28	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'E'	,0x1F28	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'h'	,0x1F28	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'H'	,0x1F28	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'i'	,0x1F28	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'I'	,0x1F28	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'o'	,0x1F28	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'O'	,0x1F28	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'v'	,0x1F28	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'V'	,0x1F28	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( L'y'	,0x1F28	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( 0x00A0	,0x1F28	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!greek><!breve><!grave>                                         */ DEADTRANS( 0x202F	,0x1F28	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!greek><!breve>                                                 */ DEADTRANS( L'a'	,0x1F08	,0x1F00	,0x0000	), // 'a' ➔ "ἀ" GREEK SMALL LETTER ALPHA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'A'	,0x1F08	,0x1F08	,0x0000	), // 'A' ➔ "Ἀ" GREEK CAPITAL LETTER ALPHA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'e'	,0x1F08	,0x1F10	,0x0000	), // 'e' ➔ "ἐ" GREEK SMALL LETTER EPSILON WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'E'	,0x1F08	,0x1F18	,0x0000	), // 'E' ➔ "Ἐ" GREEK CAPITAL LETTER EPSILON WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'h'	,0x1F08	,0x1F20	,0x0000	), // 'h' ➔ "ἠ" GREEK SMALL LETTER ETA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'H'	,0x1F08	,0x1F28	,0x0000	), // 'H' ➔ "Ἠ" GREEK CAPITAL LETTER ETA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'i'	,0x1F08	,0x1F30	,0x0000	), // 'i' ➔ "ἰ" GREEK SMALL LETTER IOTA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'I'	,0x1F08	,0x1F38	,0x0000	), // 'I' ➔ "Ἰ" GREEK CAPITAL LETTER IOTA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'o'	,0x1F08	,0x1F40	,0x0000	), // 'o' ➔ "ὀ" GREEK SMALL LETTER OMICRON WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'O'	,0x1F08	,0x1F48	,0x0000	), // 'O' ➔ "Ὀ" GREEK CAPITAL LETTER OMICRON WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'r'	,0x1F08	,0x1FE4	,0x0000	), // 'r' ➔ "ῤ" GREEK SMALL LETTER RHO WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'v'	,0x1F08	,0x1F60	,0x0000	), // 'v' ➔ "ὠ" GREEK SMALL LETTER OMEGA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'V'	,0x1F08	,0x1F68	,0x0000	), // 'V' ➔ "Ὠ" GREEK CAPITAL LETTER OMEGA WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( L'y'	,0x1F08	,0x1F50	,0x0000	), // 'y' ➔ "ὐ" GREEK SMALL LETTER UPSILON WITH PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( 0x00A0	,0x1F08	,0x1FBF	,0x0000	), // ' ' ➔ "᾿" GREEK PSILI
+/*<!greek><!breve>                                                 */ DEADTRANS( 0x202F	,0x1F08	,0x1FBF	,0x0000	), // ' ' ➔ "᾿" GREEK PSILI
+/*<!greek><!caron>                                                 */ DEADTRANS( L'a'	,0x1F50	,0x1FB0	,0x0000	), // 'a' ➔ "ᾰ" GREEK SMALL LETTER ALPHA WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( L'A'	,0x1F50	,0x1FB8	,0x0000	), // 'A' ➔ "Ᾰ" GREEK CAPITAL LETTER ALPHA WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( L'i'	,0x1F50	,0x1FD0	,0x0000	), // 'i' ➔ "ῐ" GREEK SMALL LETTER IOTA WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( L'I'	,0x1F50	,0x1FD8	,0x0000	), // 'I' ➔ "Ῐ" GREEK CAPITAL LETTER IOTA WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( L'y'	,0x1F50	,0x1FE0	,0x0000	), // 'y' ➔ "ῠ" GREEK SMALL LETTER UPSILON WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( L'Y'	,0x1F50	,0x1FE8	,0x0000	), // 'Y' ➔ "Ῠ" GREEK CAPITAL LETTER UPSILON WITH VRACHY
+/*<!greek><!caron>                                                 */ DEADTRANS( 0x00A0	,0x1F50	,0x02D8	,0x0000	), // ' ' ➔ "˘" BREVE
+/*<!greek><!caron>                                                 */ DEADTRANS( 0x202F	,0x1F50	,0x02D8	,0x0000	), // ' ' ➔ "˘" BREVE
+/*<!greek><!caron>                                                 */ DEADTRANS( L' '	,0x1F50	,0x0306	,0x0000	), // ' ' ➔ "̆" COMBINING BREVE
+/*<!greek><!caron>                                                 */ DEADTRANS( 0x200B	,0x1F50	,0x0306	,0x0000	), // '​' ➔ "̆" COMBINING BREVE
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'a'	,0x1F38	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'A'	,0x1F38	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'h'	,0x1F38	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'H'	,0x1F38	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'v'	,0x1F38	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!breve>                         */ DEADTRANS( L'V'	,0x1F38	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'a'	,0x1FBC	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'A'	,0x1FBC	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'h'	,0x1FBC	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'H'	,0x1FBC	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'v'	,0x1FBC	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot><!invertedbreve>                 */ DEADTRANS( L'V'	,0x1FBC	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!belowdot>                                 */ DEADTRANS( L'a'	,0x1F60	,0x1FB7	,0x0000	), // 'a' ➔ "ᾷ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot>                                 */ DEADTRANS( L'h'	,0x1F60	,0x1FC7	,0x0000	), // 'h' ➔ "ῇ" GREEK SMALL LETTER ETA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!belowdot>                                 */ DEADTRANS( L'v'	,0x1F60	,0x1FF7	,0x0000	), // 'v' ➔ "ῷ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'a'	,0x1F48	,0x1F86	,0x0000	), // 'a' ➔ "ᾆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'A'	,0x1F48	,0x1F8E	,0x0000	), // 'A' ➔ "ᾎ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'h'	,0x1F48	,0x1F96	,0x0000	), // 'h' ➔ "ᾖ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'H'	,0x1F48	,0x1F9E	,0x0000	), // 'H' ➔ "ᾞ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'v'	,0x1F48	,0x1FA6	,0x0000	), // 'v' ➔ "ᾦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!breve><!belowdot>                         */ DEADTRANS( L'V'	,0x1F48	,0x1FAE	,0x0000	), // 'V' ➔ "ᾮ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'a'	,0x1F40	,0x1F06	,0x0000	), // 'a' ➔ "ἆ" GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'A'	,0x1F40	,0x1F0E	,0x0000	), // 'A' ➔ "Ἆ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'h'	,0x1F40	,0x1F26	,0x0000	), // 'h' ➔ "ἦ" GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'H'	,0x1F40	,0x1F2E	,0x0000	), // 'H' ➔ "Ἦ" GREEK CAPITAL LETTER ETA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'i'	,0x1F40	,0x1F36	,0x0000	), // 'i' ➔ "ἶ" GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'I'	,0x1F40	,0x1F3E	,0x0000	), // 'I' ➔ "Ἶ" GREEK CAPITAL LETTER IOTA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'v'	,0x1F40	,0x1F66	,0x0000	), // 'v' ➔ "ὦ" GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'V'	,0x1F40	,0x1F6E	,0x0000	), // 'V' ➔ "Ὦ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( L'y'	,0x1F40	,0x1F56	,0x0000	), // 'y' ➔ "ὖ" GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( 0x00A0	,0x1F40	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!breve>                                    */ DEADTRANS( 0x202F	,0x1F40	,0x1FCF	,0x0000	), // ' ' ➔ "῏" GREEK PSILI AND PERISPOMENI
+/*<!greek><!circumflex><!diaeresis>                                */ DEADTRANS( L'i'	,0x03AB	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!greek><!circumflex><!diaeresis>                                */ DEADTRANS( L'y'	,0x03AB	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!greek><!circumflex><!diaeresis>                                */ DEADTRANS( 0x00A0	,0x03AB	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!greek><!circumflex><!diaeresis>                                */ DEADTRANS( 0x202F	,0x03AB	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'a'	,0x1FB3	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'A'	,0x1FB3	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'h'	,0x1FB3	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'H'	,0x1FB3	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'v'	,0x1FB3	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve><!belowdot>                 */ DEADTRANS( L'V'	,0x1FB3	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'a'	,0x1F67	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'A'	,0x1F67	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'h'	,0x1F67	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'H'	,0x1F67	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'i'	,0x1F67	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'I'	,0x1F67	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'v'	,0x1F67	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'V'	,0x1F67	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'y'	,0x1F67	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( L'Y'	,0x1F67	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( 0x00A0	,0x1F67	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!greek><!circumflex><!invertedbreve>                            */ DEADTRANS( 0x202F	,0x1F67	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'a'	,0x1FB6	,0x1FB6	,0x0000	), // 'a' ➔ "ᾶ" GREEK SMALL LETTER ALPHA WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'h'	,0x1FB6	,0x1FC6	,0x0000	), // 'h' ➔ "ῆ" GREEK SMALL LETTER ETA WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'i'	,0x1FB6	,0x1FD6	,0x0000	), // 'i' ➔ "ῖ" GREEK SMALL LETTER IOTA WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'v'	,0x1FB6	,0x1FF6	,0x0000	), // 'v' ➔ "ῶ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'y'	,0x1FB6	,0x1FE6	,0x0000	), // 'y' ➔ "ῦ" GREEK SMALL LETTER UPSILON WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( 0x00A0	,0x1FB6	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( 0x202F	,0x1FB6	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L' '	,0x1FB6	,0x0342	,0x0000	), // ' ' ➔ "͂" COMBINING GREEK PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( 0x200B	,0x1FB6	,0x0342	,0x0000	), // '​' ➔ "͂" COMBINING GREEK PERISPOMENI
+/*<!greek><!diaeresis><!acute>                                     */ DEADTRANS( L'i'	,0x03CB	,0x1FD3	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+/*<!greek><!diaeresis><!acute>                                     */ DEADTRANS( L'y'	,0x03CB	,0x1FE3	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+/*<!greek><!diaeresis><!acute>                                     */ DEADTRANS( 0x00A0	,0x03CB	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!greek><!diaeresis><!acute>                                     */ DEADTRANS( 0x202F	,0x03CB	,0x1FEE	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA AND OXIA
+/*<!greek><!diaeresis><!circumflex>                                */ DEADTRANS( L'i'	,0x1F44	,0x1FD7	,0x0000	), // 'i' ➔ "ῗ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+/*<!greek><!diaeresis><!circumflex>                                */ DEADTRANS( L'y'	,0x1F44	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+/*<!greek><!diaeresis><!circumflex>                                */ DEADTRANS( 0x00A0	,0x1F44	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!greek><!diaeresis><!circumflex>                                */ DEADTRANS( 0x202F	,0x1F44	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( L'i'	,0x1F4C	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( L'y'	,0x1F4C	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( 0x00A0	,0x1F4C	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( 0x202F	,0x1F4C	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( L' '	,0x1F4C	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!greek><!diaeresis><!doubleacute>                               */ DEADTRANS( 0x200B	,0x1F4C	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!greek><!diaeresis><!grave>                                     */ DEADTRANS( L'i'	,0x1F54	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!greek><!diaeresis><!grave>                                     */ DEADTRANS( L'y'	,0x1F54	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!greek><!diaeresis><!grave>                                     */ DEADTRANS( 0x00A0	,0x1F54	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!greek><!diaeresis><!grave>                                     */ DEADTRANS( 0x202F	,0x1F54	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!greek><!diaeresis>                                             */ DEADTRANS( L'I'	,0x03CA	,0x03AA	,0x0000	), // 'I' ➔ "Ϊ" GREEK CAPITAL LETTER IOTA WITH DIALYTIKA
+/*<!greek><!diaeresis>                                             */ DEADTRANS( L'i'	,0x03CA	,0x03CA	,0x0000	), // 'i' ➔ "ϊ" GREEK SMALL LETTER IOTA WITH DIALYTIKA
+/*<!greek><!diaeresis>                                             */ DEADTRANS( L'Y'	,0x03CA	,0x03AB	,0x0000	), // 'Y' ➔ "Ϋ" GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
+/*<!greek><!diaeresis>                                             */ DEADTRANS( L'y'	,0x03CA	,0x03CB	,0x0000	), // 'y' ➔ "ϋ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA
+/*<!greek><!diaeresis>                                             */ DEADTRANS( 0x00A0	,0x03CA	,0x00A8	,0x0000	), // ' ' ➔ "¨" DIAERESIS
+/*<!greek><!diaeresis>                                             */ DEADTRANS( 0x202F	,0x03CA	,0x00A8	,0x0000	), // ' ' ➔ "¨" DIAERESIS
+/*<!greek><!diaeresis>                                             */ DEADTRANS( L' '	,0x03CA	,0x0308	,0x0000	), // ' ' ➔ "̈" COMBINING DIAERESIS
+/*<!greek><!diaeresis>                                             */ DEADTRANS( 0x200B	,0x03CA	,0x0308	,0x0000	), // '​' ➔ "̈" COMBINING DIAERESIS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( L'i'	,0x0388	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( L'y'	,0x0388	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( 0x00A0	,0x0388	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( 0x202F	,0x0388	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( L' '	,0x0388	,0x0344	,0x0000	), // ' ' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!greek><!doubleacute><!diaeresis>                               */ DEADTRANS( 0x200B	,0x0388	,0x0344	,0x0000	), // '​' ➔ "̈́" COMBINING GREEK DIALYTIKA TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'A'	,0x0386	,0x0386	,0x0000	), // 'A' ➔ "Ά" GREEK CAPITAL LETTER ALPHA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'a'	,0x0386	,0x03AC	,0x0000	), // 'a' ➔ "ά" GREEK SMALL LETTER ALPHA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'E'	,0x0386	,0x0388	,0x0000	), // 'E' ➔ "Έ" GREEK CAPITAL LETTER EPSILON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'e'	,0x0386	,0x03AD	,0x0000	), // 'e' ➔ "έ" GREEK SMALL LETTER EPSILON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'H'	,0x0386	,0x0389	,0x0000	), // 'H' ➔ "Ή" GREEK CAPITAL LETTER ETA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'h'	,0x0386	,0x03AE	,0x0000	), // 'h' ➔ "ή" GREEK SMALL LETTER ETA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'I'	,0x0386	,0x038A	,0x0000	), // 'I' ➔ "Ί" GREEK CAPITAL LETTER IOTA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'i'	,0x0386	,0x03AF	,0x0000	), // 'i' ➔ "ί" GREEK SMALL LETTER IOTA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'O'	,0x0386	,0x038C	,0x0000	), // 'O' ➔ "Ό" GREEK CAPITAL LETTER OMICRON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'o'	,0x0386	,0x03CC	,0x0000	), // 'o' ➔ "ό" GREEK SMALL LETTER OMICRON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'V'	,0x0386	,0x038F	,0x0000	), // 'V' ➔ "Ώ" GREEK CAPITAL LETTER OMEGA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'v'	,0x0386	,0x03CE	,0x0000	), // 'v' ➔ "ώ" GREEK SMALL LETTER OMEGA WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'Y'	,0x0386	,0x038E	,0x0000	), // 'Y' ➔ "Ύ" GREEK CAPITAL LETTER UPSILON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L'y'	,0x0386	,0x03CD	,0x0000	), // 'y' ➔ "ύ" GREEK SMALL LETTER UPSILON WITH TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( 0x00A0	,0x0386	,0x0384	,0x0000	), // ' ' ➔ "΄" GREEK TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( 0x202F	,0x0386	,0x0384	,0x0000	), // ' ' ➔ "΄" GREEK TONOS
+/*<!greek><!doubleacute>                                           */ DEADTRANS( L' '	,0x0386	,0x0301	,0x0000	), // ' ' ➔ "́" COMBINING ACUTE ACCENT
+/*<!greek><!doubleacute>                                           */ DEADTRANS( 0x200B	,0x0386	,0x0301	,0x0000	), // '​' ➔ "́" COMBINING ACUTE ACCENT
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'a'	,0x1F68	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'A'	,0x1F68	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'h'	,0x1F68	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'H'	,0x1F68	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'v'	,0x1F68	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!breve>                              */ DEADTRANS( L'V'	,0x1F68	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'a'	,0x1FA1	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'A'	,0x1FA1	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'h'	,0x1FA1	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'H'	,0x1FA1	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'v'	,0x1FA1	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot><!invertedbreve>                      */ DEADTRANS( L'V'	,0x1FA1	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!belowdot>                                      */ DEADTRANS( L'a'	,0x1FA9	,0x1FB2	,0x0000	), // 'a' ➔ "ᾲ" GREEK SMALL LETTER ALPHA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot>                                      */ DEADTRANS( L'h'	,0x1FA9	,0x1FC2	,0x0000	), // 'h' ➔ "ῂ" GREEK SMALL LETTER ETA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!belowdot>                                      */ DEADTRANS( L'v'	,0x1FA9	,0x1FF2	,0x0000	), // 'v' ➔ "ῲ" GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'a'	,0x1F6C	,0x1F82	,0x0000	), // 'a' ➔ "ᾂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'A'	,0x1F6C	,0x1F8A	,0x0000	), // 'A' ➔ "ᾊ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'h'	,0x1F6C	,0x1F92	,0x0000	), // 'h' ➔ "ᾒ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'H'	,0x1F6C	,0x1F9A	,0x0000	), // 'H' ➔ "ᾚ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'v'	,0x1F6C	,0x1FA2	,0x0000	), // 'v' ➔ "ᾢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!breve><!belowdot>                              */ DEADTRANS( L'V'	,0x1F6C	,0x1FAA	,0x0000	), // 'V' ➔ "ᾪ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'a'	,0x1F91	,0x1F02	,0x0000	), // 'a' ➔ "ἂ" GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'A'	,0x1F91	,0x1F0A	,0x0000	), // 'A' ➔ "Ἂ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'e'	,0x1F91	,0x1F12	,0x0000	), // 'e' ➔ "ἒ" GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'E'	,0x1F91	,0x1F1A	,0x0000	), // 'E' ➔ "Ἒ" GREEK CAPITAL LETTER EPSILON WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'h'	,0x1F91	,0x1F22	,0x0000	), // 'h' ➔ "ἢ" GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'H'	,0x1F91	,0x1F2A	,0x0000	), // 'H' ➔ "Ἢ" GREEK CAPITAL LETTER ETA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'i'	,0x1F91	,0x1F32	,0x0000	), // 'i' ➔ "ἲ" GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'I'	,0x1F91	,0x1F3A	,0x0000	), // 'I' ➔ "Ἲ" GREEK CAPITAL LETTER IOTA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'o'	,0x1F91	,0x1F42	,0x0000	), // 'o' ➔ "ὂ" GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'O'	,0x1F91	,0x1F4A	,0x0000	), // 'O' ➔ "Ὂ" GREEK CAPITAL LETTER OMICRON WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'v'	,0x1F91	,0x1F62	,0x0000	), // 'v' ➔ "ὢ" GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'V'	,0x1F91	,0x1F6A	,0x0000	), // 'V' ➔ "Ὢ" GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( L'y'	,0x1F91	,0x1F52	,0x0000	), // 'y' ➔ "ὒ" GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( 0x00A0	,0x1F91	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!greek><!grave><!breve>                                         */ DEADTRANS( 0x202F	,0x1F91	,0x1FCD	,0x0000	), // ' ' ➔ "῍" GREEK PSILI AND VARIA
+/*<!greek><!grave><!diaeresis>                                     */ DEADTRANS( L'i'	,0x1F6B	,0x1FD2	,0x0000	), // 'i' ➔ "ῒ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+/*<!greek><!grave><!diaeresis>                                     */ DEADTRANS( L'y'	,0x1F6B	,0x1FE2	,0x0000	), // 'y' ➔ "ῢ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+/*<!greek><!grave><!diaeresis>                                     */ DEADTRANS( 0x00A0	,0x1F6B	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!greek><!grave><!diaeresis>                                     */ DEADTRANS( 0x202F	,0x1F6B	,0x1FED	,0x0000	), // ' ' ➔ "῭" GREEK DIALYTIKA AND VARIA
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'a'	,0x1F64	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'A'	,0x1F64	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'h'	,0x1F64	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'H'	,0x1F64	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'v'	,0x1F64	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!grave><!invertedbreve><!belowdot>                      */ DEADTRANS( L'V'	,0x1F64	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'a'	,0x1F69	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'A'	,0x1F69	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'e'	,0x1F69	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'E'	,0x1F69	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'h'	,0x1F69	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'H'	,0x1F69	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'i'	,0x1F69	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'I'	,0x1F69	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'o'	,0x1F69	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'O'	,0x1F69	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'v'	,0x1F69	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'V'	,0x1F69	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'y'	,0x1F69	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( L'Y'	,0x1F69	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( 0x00A0	,0x1F69	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!greek><!grave><!invertedbreve>                                 */ DEADTRANS( 0x202F	,0x1F69	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'a'	,0x1F70	,0x1F70	,0x0000	), // 'a' ➔ "ὰ" GREEK SMALL LETTER ALPHA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'A'	,0x1F70	,0x1FBA	,0x0000	), // 'A' ➔ "Ὰ" GREEK CAPITAL LETTER ALPHA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'e'	,0x1F70	,0x1F72	,0x0000	), // 'e' ➔ "ὲ" GREEK SMALL LETTER EPSILON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'E'	,0x1F70	,0x1FC8	,0x0000	), // 'E' ➔ "Ὲ" GREEK CAPITAL LETTER EPSILON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'h'	,0x1F70	,0x1F74	,0x0000	), // 'h' ➔ "ὴ" GREEK SMALL LETTER ETA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'H'	,0x1F70	,0x1FCA	,0x0000	), // 'H' ➔ "Ὴ" GREEK CAPITAL LETTER ETA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'i'	,0x1F70	,0x1F76	,0x0000	), // 'i' ➔ "ὶ" GREEK SMALL LETTER IOTA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'I'	,0x1F70	,0x1FDA	,0x0000	), // 'I' ➔ "Ὶ" GREEK CAPITAL LETTER IOTA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'o'	,0x1F70	,0x1F78	,0x0000	), // 'o' ➔ "ὸ" GREEK SMALL LETTER OMICRON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'O'	,0x1F70	,0x1FF8	,0x0000	), // 'O' ➔ "Ὸ" GREEK CAPITAL LETTER OMICRON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'v'	,0x1F70	,0x1F7C	,0x0000	), // 'v' ➔ "ὼ" GREEK SMALL LETTER OMEGA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'V'	,0x1F70	,0x1FFA	,0x0000	), // 'V' ➔ "Ὼ" GREEK CAPITAL LETTER OMEGA WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'y'	,0x1F70	,0x1F7A	,0x0000	), // 'y' ➔ "ὺ" GREEK SMALL LETTER UPSILON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L'Y'	,0x1F70	,0x1FEA	,0x0000	), // 'Y' ➔ "Ὺ" GREEK CAPITAL LETTER UPSILON WITH VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( 0x00A0	,0x1F70	,0x1FEF	,0x0000	), // ' ' ➔ "`" GREEK VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( 0x202F	,0x1F70	,0x1FEF	,0x0000	), // ' ' ➔ "`" GREEK VARIA
+/*<!greek><!grave>                                                 */ DEADTRANS( L' '	,0x1F70	,0x0300	,0x0000	), // ' ' ➔ "̀" COMBINING GRAVE ACCENT
+/*<!greek><!grave>                                                 */ DEADTRANS( 0x200B	,0x1F70	,0x0300	,0x0000	), // '​' ➔ "̀" COMBINING GRAVE ACCENT
 /*<!greek><!greek>                                                 */ DEADTRANS( L'*'	,0x229A	,0x229B	,0x0000	), // '*' ➔ "⊛" CIRCLED ASTERISK OPERATOR
 /*<!greek><!greek>                                                 */ DEADTRANS( L'\\'	,0x229A	,0x29B8	,0x0000	), // '\' ➔ "⦸" CIRCLED REVERSE SOLIDUS
 /*<!greek><!greek>                                                 */ DEADTRANS( L':'	,0x229A	,0x2A38	,0x0000	), // ':' ➔ "⨸" CIRCLED DIVISION SIGN
@@ -2213,6 +4060,120 @@
 /*<!greek><!greek>                                                 */ DEADTRANS( 0x202F	,0x229A	,0x26AA	,0x0000	), // ' ' ➔ "⚪" MEDIUM WHITE CIRCLE emoji
 /*<!greek><!greek>                                                 */ DEADTRANS( L' '	,0x229A	,0x20DD	,0x0000	), // ' ' ➔ "⃝" COMBINING ENCLOSING CIRCLE
 /*<!greek><!greek>                                                 */ DEADTRANS( 0x200B	,0x229A	,0x20DD	,0x0000	), // '​' ➔ "⃝" COMBINING ENCLOSING CIRCLE
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'a'	,0x03CC	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'A'	,0x03CC	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'h'	,0x03CC	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'H'	,0x03CC	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'v'	,0x03CC	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!acute><!belowdot>                      */ DEADTRANS( L'V'	,0x03CC	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'a'	,0x03AF	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'A'	,0x03AF	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'e'	,0x03AF	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'E'	,0x03AF	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'h'	,0x03AF	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'H'	,0x03AF	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'i'	,0x03AF	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'I'	,0x03AF	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'o'	,0x03AF	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'O'	,0x03AF	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'v'	,0x03AF	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'V'	,0x03AF	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'y'	,0x03AF	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( L'Y'	,0x03AF	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( 0x00A0	,0x03AF	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!greek><!invertedbreve><!acute>                                 */ DEADTRANS( 0x202F	,0x03AF	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'a'	,0x03CD	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'A'	,0x03CD	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'h'	,0x03CD	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'H'	,0x03CD	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'v'	,0x03CD	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!acute>                      */ DEADTRANS( L'V'	,0x03CD	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'a'	,0x1F11	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'A'	,0x1F11	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'h'	,0x1F11	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'H'	,0x1F11	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'v'	,0x1F11	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!circumflex>                 */ DEADTRANS( L'V'	,0x1F11	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'a'	,0x1F19	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'A'	,0x1F19	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'h'	,0x1F19	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'H'	,0x1F19	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'v'	,0x1F19	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot><!grave>                      */ DEADTRANS( L'V'	,0x1F19	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'a'	,0x1F35	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'A'	,0x1F35	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'h'	,0x1F35	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'H'	,0x1F35	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'v'	,0x1F35	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!belowdot>                              */ DEADTRANS( L'V'	,0x1F35	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'a'	,0x1F57	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'A'	,0x1F57	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'h'	,0x1F57	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'H'	,0x1F57	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'v'	,0x1F57	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex><!belowdot>                 */ DEADTRANS( L'V'	,0x1F57	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'a'	,0x1F5F	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'A'	,0x1F5F	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'h'	,0x1F5F	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'H'	,0x1F5F	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'i'	,0x1F5F	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'I'	,0x1F5F	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'v'	,0x1F5F	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'V'	,0x1F5F	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'y'	,0x1F5F	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( L'Y'	,0x1F5F	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( 0x00A0	,0x1F5F	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!circumflex>                            */ DEADTRANS( 0x202F	,0x1F5F	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'a'	,0x1F29	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'A'	,0x1F29	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'h'	,0x1F29	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'H'	,0x1F29	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'v'	,0x1F29	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!greek><!invertedbreve><!grave><!belowdot>                      */ DEADTRANS( L'V'	,0x1F29	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'a'	,0x1F21	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'A'	,0x1F21	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'e'	,0x1F21	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'E'	,0x1F21	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'h'	,0x1F21	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'H'	,0x1F21	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'i'	,0x1F21	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'I'	,0x1F21	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'o'	,0x1F21	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'O'	,0x1F21	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'v'	,0x1F21	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'V'	,0x1F21	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'y'	,0x1F21	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( L'Y'	,0x1F21	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( 0x00A0	,0x1F21	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!greek><!invertedbreve><!grave>                                 */ DEADTRANS( 0x202F	,0x1F21	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'a'	,0x1F09	,0x1F01	,0x0000	), // 'a' ➔ "ἁ" GREEK SMALL LETTER ALPHA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'A'	,0x1F09	,0x1F09	,0x0000	), // 'A' ➔ "Ἁ" GREEK CAPITAL LETTER ALPHA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'e'	,0x1F09	,0x1F11	,0x0000	), // 'e' ➔ "ἑ" GREEK SMALL LETTER EPSILON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'E'	,0x1F09	,0x1F19	,0x0000	), // 'E' ➔ "Ἑ" GREEK CAPITAL LETTER EPSILON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'h'	,0x1F09	,0x1F21	,0x0000	), // 'h' ➔ "ἡ" GREEK SMALL LETTER ETA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'H'	,0x1F09	,0x1F29	,0x0000	), // 'H' ➔ "Ἡ" GREEK CAPITAL LETTER ETA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'i'	,0x1F09	,0x1F31	,0x0000	), // 'i' ➔ "ἱ" GREEK SMALL LETTER IOTA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'I'	,0x1F09	,0x1F39	,0x0000	), // 'I' ➔ "Ἱ" GREEK CAPITAL LETTER IOTA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'o'	,0x1F09	,0x1F41	,0x0000	), // 'o' ➔ "ὁ" GREEK SMALL LETTER OMICRON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'O'	,0x1F09	,0x1F49	,0x0000	), // 'O' ➔ "Ὁ" GREEK CAPITAL LETTER OMICRON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'r'	,0x1F09	,0x1FE5	,0x0000	), // 'r' ➔ "ῥ" GREEK SMALL LETTER RHO WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'R'	,0x1F09	,0x1FEC	,0x0000	), // 'R' ➔ "Ῥ" GREEK CAPITAL LETTER RHO WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'v'	,0x1F09	,0x1F61	,0x0000	), // 'v' ➔ "ὡ" GREEK SMALL LETTER OMEGA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'V'	,0x1F09	,0x1F69	,0x0000	), // 'V' ➔ "Ὡ" GREEK CAPITAL LETTER OMEGA WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'y'	,0x1F09	,0x1F51	,0x0000	), // 'y' ➔ "ὑ" GREEK SMALL LETTER UPSILON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( L'Y'	,0x1F09	,0x1F59	,0x0000	), // 'Y' ➔ "Ὑ" GREEK CAPITAL LETTER UPSILON WITH DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( 0x00A0	,0x1F09	,0x1FFE	,0x0000	), // ' ' ➔ "῾" GREEK DASIA
+/*<!greek><!invertedbreve>                                         */ DEADTRANS( 0x202F	,0x1F09	,0x1FFE	,0x0000	), // ' ' ➔ "῾" GREEK DASIA
+/*<!greek><!macron>                                                */ DEADTRANS( L'a'	,0x1FB9	,0x1FB1	,0x0000	), // 'a' ➔ "ᾱ" GREEK SMALL LETTER ALPHA WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L'A'	,0x1FB9	,0x1FB9	,0x0000	), // 'A' ➔ "Ᾱ" GREEK CAPITAL LETTER ALPHA WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L'i'	,0x1FB9	,0x1FD1	,0x0000	), // 'i' ➔ "ῑ" GREEK SMALL LETTER IOTA WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L'I'	,0x1FB9	,0x1FD9	,0x0000	), // 'I' ➔ "Ῑ" GREEK CAPITAL LETTER IOTA WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L'y'	,0x1FB9	,0x1FE1	,0x0000	), // 'y' ➔ "ῡ" GREEK SMALL LETTER UPSILON WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L'Y'	,0x1FB9	,0x1FE9	,0x0000	), // 'Y' ➔ "Ῡ" GREEK CAPITAL LETTER UPSILON WITH MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( 0x00A0	,0x1FB9	,0x00AF	,0x0000	), // ' ' ➔ "¯" MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( 0x202F	,0x1FB9	,0x02C9	,0x0000	), // ' ' ➔ "ˉ" MODIFIER LETTER MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( L' '	,0x1FB9	,0x0304	,0x0000	), // ' ' ➔ "̄" COMBINING MACRON
+/*<!greek><!macron>                                                */ DEADTRANS( 0x200B	,0x1FB9	,0x0304	,0x0000	), // '​' ➔ "̄" COMBINING MACRON
 /*<!greek><!subscript>                                             */ DEADTRANS( L'b'	,0x1D66	,0x1D66	,0x0000	), // 'b' ➔ "ᵦ" GREEK SUBSCRIPT SMALL LETTER BETA
 /*<!greek><!subscript>                                             */ DEADTRANS( L'C'	,0x1D66	,0x1D2A	,0x0000	), // 'C' ➔ "ᴪ" GREEK LETTER SMALL CAPITAL PSI
 /*<!greek><!subscript>                                             */ DEADTRANS( L'f'	,0x1D66	,0x1D69	,0x0000	), // 'f' ➔ "ᵩ" GREEK SUBSCRIPT SMALL LETTER PHI
@@ -5358,6 +7319,232 @@
 /*<!horn>                                                          */ DEADTRANS( 0x202F	,0x01A1	,0xA71A	,0x0000	), // ' ' ➔ "ꜚ" MODIFIER LETTER LOWER RIGHT CORNER ANGLE
 /*<!horn>                                                          */ DEADTRANS( L' '	,0x01A1	,0x031B	,0x0000	), // ' ' ➔ "̛" COMBINING HORN
 /*<!horn>                                                          */ DEADTRANS( 0x200B	,0x01A1	,0x031B	,0x0000	), // '​' ➔ "̛" COMBINING HORN
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'a'	,0x0389	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'A'	,0x0389	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'h'	,0x0389	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'H'	,0x0389	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'v'	,0x0389	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!belowdot><!greek>                      */ DEADTRANS( L'V'	,0x0389	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'a'	,0x038C	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'A'	,0x038C	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'h'	,0x038C	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'H'	,0x038C	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'v'	,0x038C	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!acute><!greek><!belowdot>                      */ DEADTRANS( L'V'	,0x038C	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'a'	,0x038A	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'A'	,0x038A	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'e'	,0x038A	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'E'	,0x038A	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'h'	,0x038A	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'H'	,0x038A	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'i'	,0x038A	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'I'	,0x038A	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'o'	,0x038A	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'O'	,0x038A	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'v'	,0x038A	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'V'	,0x038A	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'y'	,0x038A	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( L'Y'	,0x038A	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( 0x00A0	,0x038A	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!invertedbreve><!acute><!greek>                                 */ DEADTRANS( 0x202F	,0x038A	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'a'	,0x038E	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'A'	,0x038E	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'h'	,0x038E	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'H'	,0x038E	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'v'	,0x038E	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!acute><!greek>                      */ DEADTRANS( L'V'	,0x038E	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'a'	,0x1F31	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'A'	,0x1F31	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'h'	,0x1F31	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'H'	,0x1F31	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'v'	,0x1F31	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!circumflex><!greek>                 */ DEADTRANS( L'V'	,0x1F31	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'a'	,0x1F39	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'A'	,0x1F39	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'h'	,0x1F39	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'H'	,0x1F39	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'v'	,0x1F39	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!grave><!greek>                      */ DEADTRANS( L'V'	,0x1F39	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'a'	,0x038F	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'A'	,0x038F	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'h'	,0x038F	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'H'	,0x038F	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'v'	,0x038F	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!acute>                      */ DEADTRANS( L'V'	,0x038F	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'a'	,0x1F49	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'A'	,0x1F49	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'h'	,0x1F49	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'H'	,0x1F49	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'v'	,0x1F49	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!circumflex>                 */ DEADTRANS( L'V'	,0x1F49	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'a'	,0x1F51	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'A'	,0x1F51	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'h'	,0x1F51	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'H'	,0x1F51	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'v'	,0x1F51	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek><!grave>                      */ DEADTRANS( L'V'	,0x1F51	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'a'	,0x1F41	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'A'	,0x1F41	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'h'	,0x1F41	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'H'	,0x1F41	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'v'	,0x1F41	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!belowdot><!greek>                              */ DEADTRANS( L'V'	,0x1F41	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'a'	,0x1F59	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'A'	,0x1F59	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'h'	,0x1F59	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'H'	,0x1F59	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'v'	,0x1F59	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!belowdot><!greek>                 */ DEADTRANS( L'V'	,0x1F59	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'a'	,0x1F4D	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'A'	,0x1F4D	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'h'	,0x1F4D	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'H'	,0x1F4D	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'v'	,0x1F4D	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek><!belowdot>                 */ DEADTRANS( L'V'	,0x1F4D	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'a'	,0x1F61	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'A'	,0x1F61	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'h'	,0x1F61	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'H'	,0x1F61	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'i'	,0x1F61	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'I'	,0x1F61	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'v'	,0x1F61	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'V'	,0x1F61	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'y'	,0x1F61	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( L'Y'	,0x1F61	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( 0x00A0	,0x1F61	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!invertedbreve><!circumflex><!greek>                            */ DEADTRANS( 0x202F	,0x1F61	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'a'	,0x1F4B	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'A'	,0x1F4B	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'h'	,0x1F4B	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'H'	,0x1F4B	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'v'	,0x1F4B	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!belowdot><!greek>                      */ DEADTRANS( L'V'	,0x1F4B	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'a'	,0x1F63	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'A'	,0x1F63	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'h'	,0x1F63	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'H'	,0x1F63	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'v'	,0x1F63	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!grave><!greek><!belowdot>                      */ DEADTRANS( L'V'	,0x1F63	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'a'	,0x1F45	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'A'	,0x1F45	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'e'	,0x1F45	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'E'	,0x1F45	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'h'	,0x1F45	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'H'	,0x1F45	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'i'	,0x1F45	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'I'	,0x1F45	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'o'	,0x1F45	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'O'	,0x1F45	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'v'	,0x1F45	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'V'	,0x1F45	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'y'	,0x1F45	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( L'Y'	,0x1F45	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( 0x00A0	,0x1F45	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!invertedbreve><!grave><!greek>                                 */ DEADTRANS( 0x202F	,0x1F45	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'a'	,0x03AC	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'A'	,0x03AC	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'h'	,0x03AC	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'H'	,0x03AC	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'v'	,0x03AC	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!acute><!belowdot>                      */ DEADTRANS( L'V'	,0x03AC	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'a'	,0x03AE	,0x1F05	,0x0000	), // 'a' ➔ "ἅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'A'	,0x03AE	,0x1F0D	,0x0000	), // 'A' ➔ "Ἅ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'e'	,0x03AE	,0x1F15	,0x0000	), // 'e' ➔ "ἕ" GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'E'	,0x03AE	,0x1F1D	,0x0000	), // 'E' ➔ "Ἕ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'h'	,0x03AE	,0x1F25	,0x0000	), // 'h' ➔ "ἥ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'H'	,0x03AE	,0x1F2D	,0x0000	), // 'H' ➔ "Ἥ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'i'	,0x03AE	,0x1F35	,0x0000	), // 'i' ➔ "ἵ" GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'I'	,0x03AE	,0x1F3D	,0x0000	), // 'I' ➔ "Ἵ" GREEK CAPITAL LETTER IOTA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'o'	,0x03AE	,0x1F45	,0x0000	), // 'o' ➔ "ὅ" GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'O'	,0x03AE	,0x1F4D	,0x0000	), // 'O' ➔ "Ὅ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'v'	,0x03AE	,0x1F65	,0x0000	), // 'v' ➔ "ὥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'V'	,0x03AE	,0x1F6D	,0x0000	), // 'V' ➔ "Ὥ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'y'	,0x03AE	,0x1F55	,0x0000	), // 'y' ➔ "ὕ" GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( L'Y'	,0x03AE	,0x1F5D	,0x0000	), // 'Y' ➔ "Ὕ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( 0x00A0	,0x03AE	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!invertedbreve><!greek><!acute>                                 */ DEADTRANS( 0x202F	,0x03AE	,0x1FDE	,0x0000	), // ' ' ➔ "῞" GREEK DASIA AND OXIA
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'a'	,0x03AD	,0x1F85	,0x0000	), // 'a' ➔ "ᾅ" GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'A'	,0x03AD	,0x1F8D	,0x0000	), // 'A' ➔ "ᾍ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'h'	,0x03AD	,0x1F95	,0x0000	), // 'h' ➔ "ᾕ" GREEK SMALL LETTER ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'H'	,0x03AD	,0x1F9D	,0x0000	), // 'H' ➔ "ᾝ" GREEK CAPITAL LETTER ETA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'v'	,0x03AD	,0x1FA5	,0x0000	), // 'v' ➔ "ᾥ" GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!acute>                      */ DEADTRANS( L'V'	,0x03AD	,0x1FAD	,0x0000	), // 'V' ➔ "ᾭ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'a'	,0x1F23	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'A'	,0x1F23	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'h'	,0x1F23	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'H'	,0x1F23	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'v'	,0x1F23	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!circumflex>                 */ DEADTRANS( L'V'	,0x1F23	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'a'	,0x1F2D	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'A'	,0x1F2D	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'h'	,0x1F2D	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'H'	,0x1F2D	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'v'	,0x1F2D	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot><!grave>                      */ DEADTRANS( L'V'	,0x1F2D	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'a'	,0x1F13	,0x1F81	,0x0000	), // 'a' ➔ "ᾁ" GREEK SMALL LETTER ALPHA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'A'	,0x1F13	,0x1F89	,0x0000	), // 'A' ➔ "ᾉ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'h'	,0x1F13	,0x1F91	,0x0000	), // 'h' ➔ "ᾑ" GREEK SMALL LETTER ETA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'H'	,0x1F13	,0x1F99	,0x0000	), // 'H' ➔ "ᾙ" GREEK CAPITAL LETTER ETA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'v'	,0x1F13	,0x1FA1	,0x0000	), // 'v' ➔ "ᾡ" GREEK SMALL LETTER OMEGA WITH DASIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!belowdot>                              */ DEADTRANS( L'V'	,0x1F13	,0x1FA9	,0x0000	), // 'V' ➔ "ᾩ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'a'	,0x1F33	,0x1F87	,0x0000	), // 'a' ➔ "ᾇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'A'	,0x1F33	,0x1F8F	,0x0000	), // 'A' ➔ "ᾏ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'h'	,0x1F33	,0x1F97	,0x0000	), // 'h' ➔ "ᾗ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'H'	,0x1F33	,0x1F9F	,0x0000	), // 'H' ➔ "ᾟ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'v'	,0x1F33	,0x1FA7	,0x0000	), // 'v' ➔ "ᾧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex><!belowdot>                 */ DEADTRANS( L'V'	,0x1F33	,0x1FAF	,0x0000	), // 'V' ➔ "ᾯ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'a'	,0x1F2B	,0x1F07	,0x0000	), // 'a' ➔ "ἇ" GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'A'	,0x1F2B	,0x1F0F	,0x0000	), // 'A' ➔ "Ἇ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'h'	,0x1F2B	,0x1F27	,0x0000	), // 'h' ➔ "ἧ" GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'H'	,0x1F2B	,0x1F2F	,0x0000	), // 'H' ➔ "Ἧ" GREEK CAPITAL LETTER ETA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'i'	,0x1F2B	,0x1F37	,0x0000	), // 'i' ➔ "ἷ" GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'I'	,0x1F2B	,0x1F3F	,0x0000	), // 'I' ➔ "Ἷ" GREEK CAPITAL LETTER IOTA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'v'	,0x1F2B	,0x1F67	,0x0000	), // 'v' ➔ "ὧ" GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'V'	,0x1F2B	,0x1F6F	,0x0000	), // 'V' ➔ "Ὧ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'y'	,0x1F2B	,0x1F57	,0x0000	), // 'y' ➔ "ὗ" GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( L'Y'	,0x1F2B	,0x1F5F	,0x0000	), // 'Y' ➔ "Ὗ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( 0x00A0	,0x1F2B	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!circumflex>                            */ DEADTRANS( 0x202F	,0x1F2B	,0x1FDF	,0x0000	), // ' ' ➔ "῟" GREEK DASIA AND PERISPOMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'a'	,0x1F3B	,0x1F83	,0x0000	), // 'a' ➔ "ᾃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'A'	,0x1F3B	,0x1F8B	,0x0000	), // 'A' ➔ "ᾋ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'h'	,0x1F3B	,0x1F93	,0x0000	), // 'h' ➔ "ᾓ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'H'	,0x1F3B	,0x1F9B	,0x0000	), // 'H' ➔ "ᾛ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'v'	,0x1F3B	,0x1FA3	,0x0000	), // 'v' ➔ "ᾣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI
+/*<!invertedbreve><!greek><!grave><!belowdot>                      */ DEADTRANS( L'V'	,0x1F3B	,0x1FAB	,0x0000	), // 'V' ➔ "ᾫ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA AND PROSGEGRAMMENI
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'a'	,0x1F1B	,0x1F03	,0x0000	), // 'a' ➔ "ἃ" GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'A'	,0x1F1B	,0x1F0B	,0x0000	), // 'A' ➔ "Ἃ" GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'e'	,0x1F1B	,0x1F13	,0x0000	), // 'e' ➔ "ἓ" GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'E'	,0x1F1B	,0x1F1B	,0x0000	), // 'E' ➔ "Ἓ" GREEK CAPITAL LETTER EPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'h'	,0x1F1B	,0x1F23	,0x0000	), // 'h' ➔ "ἣ" GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'H'	,0x1F1B	,0x1F2B	,0x0000	), // 'H' ➔ "Ἣ" GREEK CAPITAL LETTER ETA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'i'	,0x1F1B	,0x1F33	,0x0000	), // 'i' ➔ "ἳ" GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'I'	,0x1F1B	,0x1F3B	,0x0000	), // 'I' ➔ "Ἳ" GREEK CAPITAL LETTER IOTA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'o'	,0x1F1B	,0x1F43	,0x0000	), // 'o' ➔ "ὃ" GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'O'	,0x1F1B	,0x1F4B	,0x0000	), // 'O' ➔ "Ὃ" GREEK CAPITAL LETTER OMICRON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'v'	,0x1F1B	,0x1F63	,0x0000	), // 'v' ➔ "ὣ" GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'V'	,0x1F1B	,0x1F6B	,0x0000	), // 'V' ➔ "Ὣ" GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'y'	,0x1F1B	,0x1F53	,0x0000	), // 'y' ➔ "ὓ" GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( L'Y'	,0x1F1B	,0x1F5B	,0x0000	), // 'Y' ➔ "Ὓ" GREEK CAPITAL LETTER UPSILON WITH DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( 0x00A0	,0x1F1B	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!invertedbreve><!greek><!grave>                                 */ DEADTRANS( 0x202F	,0x1F1B	,0x1FDD	,0x0000	), // ' ' ➔ "῝" GREEK DASIA AND VARIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'a'	,0x1F01	,0x1F01	,0x0000	), // 'a' ➔ "ἁ" GREEK SMALL LETTER ALPHA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'A'	,0x1F01	,0x1F09	,0x0000	), // 'A' ➔ "Ἁ" GREEK CAPITAL LETTER ALPHA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'e'	,0x1F01	,0x1F11	,0x0000	), // 'e' ➔ "ἑ" GREEK SMALL LETTER EPSILON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'E'	,0x1F01	,0x1F19	,0x0000	), // 'E' ➔ "Ἑ" GREEK CAPITAL LETTER EPSILON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'h'	,0x1F01	,0x1F21	,0x0000	), // 'h' ➔ "ἡ" GREEK SMALL LETTER ETA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'H'	,0x1F01	,0x1F29	,0x0000	), // 'H' ➔ "Ἡ" GREEK CAPITAL LETTER ETA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'i'	,0x1F01	,0x1F31	,0x0000	), // 'i' ➔ "ἱ" GREEK SMALL LETTER IOTA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'I'	,0x1F01	,0x1F39	,0x0000	), // 'I' ➔ "Ἱ" GREEK CAPITAL LETTER IOTA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'o'	,0x1F01	,0x1F41	,0x0000	), // 'o' ➔ "ὁ" GREEK SMALL LETTER OMICRON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'O'	,0x1F01	,0x1F49	,0x0000	), // 'O' ➔ "Ὁ" GREEK CAPITAL LETTER OMICRON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'r'	,0x1F01	,0x1FE5	,0x0000	), // 'r' ➔ "ῥ" GREEK SMALL LETTER RHO WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'R'	,0x1F01	,0x1FEC	,0x0000	), // 'R' ➔ "Ῥ" GREEK CAPITAL LETTER RHO WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'v'	,0x1F01	,0x1F61	,0x0000	), // 'v' ➔ "ὡ" GREEK SMALL LETTER OMEGA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'V'	,0x1F01	,0x1F69	,0x0000	), // 'V' ➔ "Ὡ" GREEK CAPITAL LETTER OMEGA WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'y'	,0x1F01	,0x1F51	,0x0000	), // 'y' ➔ "ὑ" GREEK SMALL LETTER UPSILON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( L'Y'	,0x1F01	,0x1F59	,0x0000	), // 'Y' ➔ "Ὑ" GREEK CAPITAL LETTER UPSILON WITH DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( 0x00A0	,0x1F01	,0x1FFE	,0x0000	), // ' ' ➔ "῾" GREEK DASIA
+/*<!invertedbreve><!greek>                                         */ DEADTRANS( 0x202F	,0x1F01	,0x1FFE	,0x0000	), // ' ' ➔ "῾" GREEK DASIA
 /*<!invertedbreve><!group><!group><!group><!group>                 */ DEADTRANS( L'F'	,0x023A	,0xDF00	,0x0000	), // High surrogate: D837; U+1DF00 'F' ➔ "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 /*<!invertedbreve><!group><!group><!group><!group>                 */ DEADTRANS( L'f'	,0x023A	,0xDF00	,0x0000	), // High surrogate: D837; U+1DF00 'f' ➔ "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
 /*<!invertedbreve><!group><!group><!group>                         */ DEADTRANS( L'F'	,0x0239	,0xDF00	,0x0000	), // High surrogate: D837; U+1DF00 'F' ➔ "𝼀" LATIN SMALL LETTER FENG DIGRAPH WITH TRILL
@@ -5474,6 +7661,16 @@
 /*<!macron><!grave>                                                */ DEADTRANS( L'o'	,0x1E15	,0x1E51	,0x0000	), // 'o' ➔ "ṑ" LATIN SMALL LETTER O WITH MACRON AND GRAVE
 /*<!macron><!grave>                                                */ DEADTRANS( L' '	,0x1E15	,0x1DC6	,0x0000	), // ' ' ➔ "᷆" COMBINING MACRON-GRAVE
 /*<!macron><!grave>                                                */ DEADTRANS( 0x200B	,0x1E15	,0x1DC6	,0x0000	), // '​' ➔ "᷆" COMBINING MACRON-GRAVE
+/*<!macron><!greek>                                                */ DEADTRANS( L'a'	,0x1F3D	,0x1FB1	,0x0000	), // 'a' ➔ "ᾱ" GREEK SMALL LETTER ALPHA WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L'A'	,0x1F3D	,0x1FB9	,0x0000	), // 'A' ➔ "Ᾱ" GREEK CAPITAL LETTER ALPHA WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L'i'	,0x1F3D	,0x1FD1	,0x0000	), // 'i' ➔ "ῑ" GREEK SMALL LETTER IOTA WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L'I'	,0x1F3D	,0x1FD9	,0x0000	), // 'I' ➔ "Ῑ" GREEK CAPITAL LETTER IOTA WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L'y'	,0x1F3D	,0x1FE1	,0x0000	), // 'y' ➔ "ῡ" GREEK SMALL LETTER UPSILON WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L'Y'	,0x1F3D	,0x1FE9	,0x0000	), // 'Y' ➔ "Ῡ" GREEK CAPITAL LETTER UPSILON WITH MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( 0x00A0	,0x1F3D	,0x00AF	,0x0000	), // ' ' ➔ "¯" MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( 0x202F	,0x1F3D	,0x02C9	,0x0000	), // ' ' ➔ "ˉ" MODIFIER LETTER MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( L' '	,0x1F3D	,0x0304	,0x0000	), // ' ' ➔ "̄" COMBINING MACRON
+/*<!macron><!greek>                                                */ DEADTRANS( 0x200B	,0x1F3D	,0x0304	,0x0000	), // '​' ➔ "̄" COMBINING MACRON
 /*<!macron><!group>                                                */ DEADTRANS( L'A'	,0x01E3	,0x01E2	,0x0000	), // 'A' ➔ "Ǣ" LATIN CAPITAL LETTER AE WITH MACRON
 /*<!macron><!group>                                                */ DEADTRANS( L'a'	,0x01E3	,0x01E3	,0x0000	), // 'a' ➔ "ǣ" LATIN SMALL LETTER AE WITH MACRON
 /*<!macron><!macron><!macron>                                      */ DEADTRANS( L'`'	,0x2A60	,0x2A60	,0x0000	), // '`' ➔ "⩠" LOGICAL AND WITH DOUBLE UNDERBAR
