@@ -6929,7 +6929,6 @@
 <Multi_key><nobreakspace><nobreakspace><bracketleft><numbersign>                                   : "◾" U25FE # BLACK MEDIUM SMALL SQUARE
 <Multi_key><slash><underscore><bar>                                                                : "◿" U25FF # LOWER RIGHT TRIANGLE
 <Multi_key><underscore><slash><bar>                                                                : "◿" U25FF # LOWER RIGHT TRIANGLE
-#@
 #
 #
 # # Miscellaneous Symbols in block U2600 used in mathematics
@@ -6951,11 +6950,10 @@
 <Multi_key><nobreakspace><nobreakspace><space><asterisk>                            <nobreakspace> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                            <space> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                     <nobreakspace> : "☆" U2606 # WHITE STAR
-<Multi_key><space><o><plus>                                                                <space> : "♀" U2640 # FEMALE SIGN
-<Multi_key><space><o><plus>                                                         <nobreakspace> : "♀" U2640 # FEMALE SIGN
-<Multi_key><nobreakspace><o><plus>                                                         <space> : "♀" U2640 # FEMALE SIGN
-<Multi_key><nobreakspace><o><plus>                                                  <nobreakspace> : "♀" U2640 # FEMALE SIGN
+<Multi_key><space><o><plus>                                                                        : "♀" U2640 # FEMALE SIGN
+<Multi_key><nobreakspace><o><plus>                                                                 : "♀" U2640 # FEMALE SIGN
 <Multi_key><o><slash><greater>                                                                     : "♂" U2642 # MALE SIGN
+#@
 <Multi_key><space><less><3><numbersign>                                                            : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><nobreakspace><less><3><numbersign>                                                     : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><8><greater>                                                                    <space> : "♡" U2661 # WHITE HEART SUIT
