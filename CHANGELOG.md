@@ -27,6 +27,7 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows avant
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+* Transformations : Maintenir l’accessibilité du contenu des touches mortes. kbdeadtrans.c [b1cba2e](https://github.com/dispoclavier/nouvel-azerty/commit/b1cba2e714ca8758c33dc76cb5404729baa492f1), kbdeadtrans-deadkeys.c [56cc563](https://github.com/dispoclavier/nouvel-azerty/commit/56cc563267a4e479437ffaa8d0d726225693c3f5), [691dde1](https://github.com/dispoclavier/nouvel-azerty/commit/691dde19ea66bae2771914f4df047f599aa794c7)
 * Documentation : Corriger et mettre à jour des annotations, améliorer la lisibilité. compose-1.yml [08f84cf](https://github.com/dispoclavier/nouvel-azerty/commit/08f84cfa4a48673e53ce0e1927c344c5daf6e582), dead-key-convert.pl [010deb6](https://github.com/dispoclavier/nouvel-azerty/commit/010deb61677c1f510c5d0330626f9dd6b558dd52), [83debb3](https://github.com/dispoclavier/nouvel-azerty/commit/83debb3c0cc40cd659311b89cdb16e1bd3c49a90), [79f3232](https://github.com/dispoclavier/nouvel-azerty/commit/79f32325676404acf2e6be8adef8940fa49ce547)
 
 ## 6.1.1 (2025-10-29)
