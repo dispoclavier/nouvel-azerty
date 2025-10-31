@@ -6953,24 +6953,25 @@
 <Multi_key><space><o><plus>                                                                        : "♀" U2640 # FEMALE SIGN
 <Multi_key><nobreakspace><o><plus>                                                                 : "♀" U2640 # FEMALE SIGN
 <Multi_key><o><slash><greater>                                                                     : "♂" U2642 # MALE SIGN
-#@
-<Multi_key><space><less><3><numbersign>                                                            : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><nobreakspace><less><3><numbersign>                                                     : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><8><greater>                                                                    <space> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><8><greater>                                                             <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><KP_8><greater>                                                                 <space> : "♡" U2661 # WHITE HEART SUIT
-<Multi_key><KP_8><greater>                                                          <nobreakspace> : "♡" U2661 # WHITE HEART SUIT
+#Multi_key><space><less><3><numbersign><minus>                                                     : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><space><less><3>                                                                        : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><nobreakspace><less><3>                                                                 : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><space><less><KP_3>                                                                     : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><nobreakspace><less><KP_3>                                                              : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><8><greater>                                                                            : "♡" U2661 # WHITE HEART SUIT
+<Multi_key><KP_8><greater>                                                                         : "♡" U2661 # WHITE HEART SUIT
 #Multi_key><space><space><space><less><greater>                                                    : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><space><space><space><less>                                                             : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><nobreakspace><space><space><less>                                                      : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><nobreakspace><nobreakspace><space><less>                                               : "♢" U2662 # WHITE DIAMOND SUIT
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><less>                                        : "♢" U2662 # WHITE DIAMOND SUIT
-<Multi_key><space><o><8><numbersign>                                                               : "♣" U2663 # BLACK CLUB SUIT
-<Multi_key><space><o><KP_8><numbersign>                                                            : "♣" U2663 # BLACK CLUB SUIT
-<Multi_key><nobreakspace><o><8><numbersign>                                                        : "♣" U2663 # BLACK CLUB SUIT
-<Multi_key><nobreakspace><o><KP_8><numbersign>                                                     : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><space><o><8>                                                                           : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><space><o><KP_8>                                                                        : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><nobreakspace><o><8>                                                                    : "♣" U2663 # BLACK CLUB SUIT
+<Multi_key><nobreakspace><o><KP_8>                                                                 : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><space><b>                                                                      <space> : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                               <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
+#@
 #
 #   The "h" was reportedly used as a fallback to print "♮" named "b quadratum",
 #   hence it is picked as a presumably intuitive multikey sequence constituent.
