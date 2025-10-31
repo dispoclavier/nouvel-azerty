@@ -1,5 +1,5 @@
 #                      Scope: Part 1 of Compose.yml
-# START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
+#               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
 <UEFA0>                     : "version 6.1.2.0" # See #   End of line comments
@@ -9,7 +9,6 @@
 #                Description: Multicharacter and multikey configuration
 #                   Platform: Linux using XKB with XCompose**
 #     Syntactic highlighting: YAML
-#               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
@@ -6859,6 +6858,10 @@
 <Multi_key><nobreakspace><A><V>                                                                    : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                                           : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                                    : "◊" U25CA # LOZENGE
+#Multi_key><bracketleft><less><bracketright><greater>                                              : "◊" U25CA # LOZENGE
+<Multi_key><bracketleft><less><bracketright>                                                       : "◊" U25CA # LOZENGE
+#Multi_key><bracketleft><less><greater><bracketright>                                              : "◊" U25CA # LOZENGE
+<Multi_key><bracketleft><less><greater>                                                            : "◊" U25CA # LOZENGE
 <Multi_key><O>                                                                             <space> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O>                                                                      <nobreakspace> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O><numbersign>                                                                 <space> : "●" U25CF # BLACK CIRCLE
