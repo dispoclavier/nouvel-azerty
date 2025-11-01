@@ -5220,6 +5220,15 @@
 #      0    "˕" U02D5 MODIFIER LETTER DOWN TACK
 #
 #
+#   Angle brackets
+#
+#   Heavy angle bracket ornaments "❰" U2770, "❱" U2771 are supported in
+#   dead_tilde by "[" and "]" with respect to their use as escape delimiters in
+#   Unicode CLDR.
+#   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
+#   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
+#
+#
 #   Diacritics
 #
 #   The double diacritic "͠" U0360 has emdash as a mnemonic base character, and
@@ -5241,13 +5250,6 @@
 #   support.
 #   See # # Supplemental Mathematical Operators of block U2A00
 #   See # # Miscellaneous Mathematical Symbols-B of block U2980
-#
-#   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
-#   dead_tilde by "[" and "]" additionally to their support in dead_grave, to
-#   work around the special formatting triggered by some ASCII-bracketed
-#   strings in Markdown while the actual intent is to mark up keycaps in
-#   documentation.
-#   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
 #
 #   Format controls
@@ -5307,10 +5309,10 @@
 <Multi_key><asciitilde>                                                                   <endash> : "⁓" U2053 # SWUNG DASH
 <dead_tilde>                                                                      <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
 <Multi_key><asciitilde>                                                           <Greek_horizbar> : "⁓" U2053 # SWUNG DASH
-<dead_tilde>                                                                         <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-#   Multikey conflicts with composed "Ą̃", "Ę̃", "Į̃", "Ų̃", "ą̃", "ę̃", "į̇́", "ų̃".         <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<dead_tilde>                                                                        <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><asciitilde>                                                             <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<dead_tilde>                                                                         <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with composed "Ą̃", "Ę̃", "Į̃", "Ų̃", "ą̃", "ę̃", "į̇́", "ų̃".         <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<dead_tilde>                                                                        <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><asciitilde>                                                             <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
@@ -7155,9 +7157,9 @@
 #
 #   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
 #   dead_acute by "/" and "\" or "·" U00B7 periodcentered additionally to their
-#   support in dead_grave and dead_tilde by "[" and "]", to work around the
-#   special formatting triggered by some ASCII-bracketed strings in Markdown,
-#   when the actual intent is to mark up keycaps in documentation.
+#   support in dead_grave by "[" and "]", to work around the special formatting
+#   triggered by some ASCII-bracketed strings in Markdown, when the actual
+#   intent is to mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
 #   "▿" U25BF WHITE DOWN-POINTING SMALL TRIANGLE representing the no-break

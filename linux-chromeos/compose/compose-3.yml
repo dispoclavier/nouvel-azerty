@@ -261,10 +261,10 @@
 #	  4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☼	∆	♀	♨	⊎	⬝	⟦	⟧	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	❗	⁞	⁛	4/MSP	4/MSP	
 #	  5	∠	☇	⚕	☢	☥	○	⤵	⯀	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♚	♔	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⁉	⋯	⸪	MMSP	MMSP	
 #	  6	✈	☈	✍	♼	☎	❍	⤴	▢	⛔	☂	◼	⛷	✡	⚽	☪	☝	♛	♕	⦜	Ⓜ	◻	❇	▲	▼	⚾	☃		☿		⚠	⋰	⋱	6/MSP	6/MSP	
-#	  7	⚓	⚮	✉	♽	☏	❂	⚭	⚬	⚘	⛸	⬛	⛵	〽	⛴	⛳	⛫	♜	♖	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		❣	⌚	⏳	FSP	FSP	
+#	  7	⚓	⚮	✉	♽	☏	⚬	⚭	⚯	❂	⛸	⬛	⛵	〽	⛴	⛳	⛫	♜	♖	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		❣	⌚	⏳	FSP	FSP	
 #	  8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⮽	⛩	☸	✊	⛼	⛬	♝	♗	✝	✋	⛆	✴	⚰	✌	⛓	⛅		♃		❢	⏱	⌛	PSP	PSP	
 #	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♞	♘	⚜	⛰	〰	✳	☄	➸	☕	☁		♄		∴	⏰	⧗	TSP	TSP	
-#	10	⎋	�	⌦	⌫	☧	⏺	⏫	∝	⏬	⸿	⏹	§	⚚	⎍	−	✙	♟	♙	◊	⏸	➿	❎	⏪	⏩	♮	⛎		♅		∵	⏲	⧖	WNJ	WJ	
+#	10	⎋	�	⌦	⌫	☧	⏺	⏫	∝	⏬	⸿	⏹	§	⚚	⎍	−	✙	♟	♙	◊	⏸	➿	❎	⏪	⏩	⚘	⛎		♅		∵	⏲	⧖	WNJ	WJ	
 #	11	‸	‰	⏏	®	™	⁁	ˈ	∞	⚒	¶ 	♯	☉	☾	☽	⁒	⁜	➲	❐	❒	∣	➰	※	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP	 
 #	12	ª	‱	〃	∖	☘	❖	ˌ	♾	º	⛏	⚧	✒	⁀	‿	‐	﬩	⮊	❑	❏	∥	∕	∗	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP	
 #
@@ -703,14 +703,14 @@
 <Multi_key><numbersign><KP_6>                                                                 <at> : "❍" U274D # SHADOWED WHITE CIRCLE
 <UEFD0><KP_6>                                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
 <Multi_key><numbersign><KP_6>                                                         <dead_greek> : "❍" U274D # SHADOWED WHITE CIRCLE
-<UEFD0><7>                                                                                    <at> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<Multi_key><numbersign><7>                                                                    <at> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<UEFD0><7>                                                                            <dead_greek> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<Multi_key><numbersign><7>                                                            <dead_greek> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<UEFD0><KP_7>                                                                                 <at> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<Multi_key><numbersign><KP_7>                                                                 <at> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<UEFD0><KP_7>                                                                         <dead_greek> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
-<Multi_key><numbersign><KP_7>                                                         <dead_greek> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
+<UEFD0><7>                                                                                    <at> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<Multi_key><numbersign><7>                                                                    <at> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<UEFD0><7>                                                                            <dead_greek> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<Multi_key><numbersign><7>                                                            <dead_greek> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<UEFD0><KP_7>                                                                                 <at> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<Multi_key><numbersign><KP_7>                                                                 <at> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<UEFD0><KP_7>                                                                         <dead_greek> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<Multi_key><numbersign><KP_7>                                                         <dead_greek> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
 <UEFD0><8>                                                                                    <at> : "☯" U262F # YIN YANG emoji
 <Multi_key><numbersign><8>                                                                    <at> : "☯" U262F # YIN YANG emoji
 <UEFD0><8>                                                                            <dead_greek> : "☯" U262F # YIN YANG emoji
@@ -891,10 +891,10 @@
 <Multi_key><numbersign><6>                                                             <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <UEFD0><KP_6>                                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
 <Multi_key><numbersign><KP_6>                                                          <braceleft> : "▢" U25A2 # WHITE SQUARE WITH ROUNDED CORNERS
-<UEFD0><7>                                                                             <braceleft> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
-<Multi_key><numbersign><7>                                                             <braceleft> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
-<UEFD0><KP_7>                                                                          <braceleft> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
-<Multi_key><numbersign><KP_7>                                                          <braceleft> : "⚬" U26AC # MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
+<UEFD0><7>                                                                             <braceleft> : "⚯" U26AF # UNMARRIED PARTNERSHIP SYMBOL
+<Multi_key><numbersign><7>                                                             <braceleft> : "⚯" U26AF # UNMARRIED PARTNERSHIP SYMBOL
+<UEFD0><KP_7>                                                                          <braceleft> : "⚯" U26AF # UNMARRIED PARTNERSHIP SYMBOL
+<Multi_key><numbersign><KP_7>                                                          <braceleft> : "⚯" U26AF # UNMARRIED PARTNERSHIP SYMBOL
 <UEFD0><8>                                                                             <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <Multi_key><numbersign><8>                                                             <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
 <UEFD0><KP_8>                                                                          <braceleft> : "ℹ" U2139 # INFORMATION SOURCE emoji
@@ -962,10 +962,10 @@
 <Multi_key><numbersign><6>                                                            <braceright> : "⛔" U26D4 # NO ENTRY emoji
 <UEFD0><KP_6>                                                                         <braceright> : "⛔" U26D4 # NO ENTRY emoji
 <Multi_key><numbersign><KP_6>                                                         <braceright> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><7>                                                                            <braceright> : "⚘" U2698 # FLOWER
-<Multi_key><numbersign><7>                                                            <braceright> : "⚘" U2698 # FLOWER
-<UEFD0><KP_7>                                                                         <braceright> : "⚘" U2698 # FLOWER
-<Multi_key><numbersign><KP_7>                                                         <braceright> : "⚘" U2698 # FLOWER
+<UEFD0><7>                                                                            <braceright> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
+<Multi_key><numbersign><7>                                                            <braceright> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
+<UEFD0><KP_7>                                                                         <braceright> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
+<Multi_key><numbersign><KP_7>                                                         <braceright> : "❂" U2742 # CIRCLED OPEN CENTRE EIGHT POINTED STAR
 <UEFD0><8>                                                                            <braceright> : "☦" U2626 # ORTHODOX CROSS emoji
 <Multi_key><numbersign><8>                                                            <braceright> : "☦" U2626 # ORTHODOX CROSS emoji
 <UEFD0><KP_8>                                                                         <braceright> : "☦" U2626 # ORTHODOX CROSS emoji
@@ -1972,10 +1972,10 @@
 <Multi_key><numbersign><9>                                                                 <equal> : "☕" U2615 # HOT BEVERAGE emoji
 <UEFD0><KP_9>                                                                              <equal> : "☕" U2615 # HOT BEVERAGE emoji
 <Multi_key><numbersign><KP_9>                                                              <equal> : "☕" U2615 # HOT BEVERAGE emoji
-<UEFD0><0>                                                                                 <equal> : "♮" U266E # MUSIC NATURAL SIGN math
-<Multi_key><numbersign><0>                                                                 <equal> : "♮" U266E # MUSIC NATURAL SIGN math
-<UEFD0><KP_0>                                                                              <equal> : "♮" U266E # MUSIC NATURAL SIGN math
-<Multi_key><numbersign><KP_0>                                                              <equal> : "♮" U266E # MUSIC NATURAL SIGN math
+<UEFD0><0>                                                                                 <equal> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><0>                                                                 <equal> : "⚘" U2698 # FLOWER
+<UEFD0><KP_0>                                                                              <equal> : "⚘" U2698 # FLOWER
+<Multi_key><numbersign><KP_0>                                                              <equal> : "⚘" U2698 # FLOWER
 <UEFD0><1>                                                                                 <equal> : "♭" U266D # MUSIC FLAT SIGN math
 <Multi_key><numbersign><1>                                                                 <equal> : "♭" U266D # MUSIC FLAT SIGN math
 <UEFD0><KP_1>                                                                              <equal> : "♭" U266D # MUSIC FLAT SIGN math

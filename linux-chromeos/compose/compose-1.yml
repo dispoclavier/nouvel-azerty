@@ -5065,6 +5065,18 @@
 #   "∏" U220F  P    |  "∐" U2210  CP                    P%
 #
 #
+#   Brackets and lozenges
+#
+#   The rule about trailing transforms also holds true when the transform ia a
+#   bracket, as for "⟨" U27E8, "⟩" U27E9 and other angle brackets and flattened
+#   parentheses, as well as for the angle-bracket composition of lozenges for
+#   "◊" U25CA, "⟠" U27E0, "⧫" U29EB, additionally to the and-or composition.
+#
+#   This scheme is also the most efficient, since the bracket has a terminator
+#   status after the appropriate number of less or greater as for "⟨" U27E8,
+#   "⟩" U27E9 and "⟪" U27EA, "⟫" U27EB.
+#
+#
 #   Slanted symbols
 #
 #   Some slanted math symbols are glyph variants selected by VS1 UFE00.
@@ -6879,10 +6891,8 @@
 <Multi_key><nobreakspace><A><V>                                                                    : "◊" U25CA # LOZENGE
 <Multi_key><space><a><v>                                                                           : "◊" U25CA # LOZENGE
 <Multi_key><nobreakspace><a><v>                                                                    : "◊" U25CA # LOZENGE
-#Multi_key><bracketleft><less><bracketright><greater>                                              : "◊" U25CA # LOZENGE
-<Multi_key><bracketleft><less><bracketright>                                                       : "◊" U25CA # LOZENGE
-#Multi_key><bracketleft><less><greater><bracketright>                                              : "◊" U25CA # LOZENGE
-<Multi_key><bracketleft><less><greater>                                                            : "◊" U25CA # LOZENGE
+#Multi_key><less><bracketleft><greater><bracketright>                                              : "◊" U25CA # LOZENGE
+<Multi_key><less><bracketleft><greater>                                                            : "◊" U25CA # LOZENGE
 <Multi_key><O>                                                                             <space> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O>                                                                      <nobreakspace> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O><numbersign>                                                                 <space> : "●" U25CF # BLACK CIRCLE
@@ -7093,29 +7103,18 @@
 <Multi_key><bracketleft><v><bracketright>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><v><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><less><period><greater>                                                                 : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
-#@
-<Multi_key><a><period>                                                                     <space> : "⟑" U27D1 # AND WITH DOT
-<Multi_key><a><period>                                                              <nobreakspace> : "⟑" U27D1 # AND WITH DOT
-<Multi_key><v><percent><period>                                                            <space> : "⟑" U27D1 # AND WITH DOT
-<Multi_key><v><percent><period>                                                     <nobreakspace> : "⟑" U27D1 # AND WITH DOT
-<Multi_key><e><percent>                                                                    <space> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
-<Multi_key><e><percent>                                                             <nobreakspace> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
-<Multi_key><L><backslash><period>                                                          <space> : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
-<Multi_key><L><backslash><period>                                                   <nobreakspace> : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
-<Multi_key><L><percent><period>                                                            <space> : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
-<Multi_key><L><percent><period>                                                     <nobreakspace> : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
-<Multi_key><L><percent><percent><period>                                                   <space> : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
-<Multi_key><L><percent><percent><period>                                            <nobreakspace> : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
-<Multi_key><bracketright><slash><backslash><bar>                                           <space> : "⟕" U27D5 # LEFT OUTER JOIN
-<Multi_key><bracketright><slash><backslash><bar>                                    <nobreakspace> : "⟕" U27D5 # LEFT OUTER JOIN
-<Multi_key><bracketright><backslash><slash><bar>                                           <space> : "⟕" U27D5 # LEFT OUTER JOIN
-<Multi_key><bracketright><backslash><slash><bar>                                    <nobreakspace> : "⟕" U27D5 # LEFT OUTER JOIN
+<Multi_key><a><period>                                                                             : "⟑" U27D1 # AND WITH DOT
+<Multi_key><v><percent><period>                                                                    : "⟑" U27D1 # AND WITH DOT
+<Multi_key><e><percent>                                                                            : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
+<Multi_key><L><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
+<Multi_key><L><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
+<Multi_key><L><percent><percent><period>                                                           : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
+<Multi_key><bracketright><slash><backslash><bar>                                                   : "⟕" U27D5 # LEFT OUTER JOIN
+<Multi_key><bracketright><backslash><slash><bar>                                                   : "⟕" U27D5 # LEFT OUTER JOIN
 <Multi_key><bar><slash><backslash><bracketleft>                                                    : "⟖" U27D6 # RIGHT OUTER JOIN
 <Multi_key><bar><backslash><slash><bracketleft>                                                    : "⟖" U27D6 # RIGHT OUTER JOIN
-<Multi_key><bracketright><slash><backslash><bracketleft>                                   <space> : "⟗" U27D7 # FULL OUTER JOIN
-<Multi_key><bracketright><slash><backslash><bracketleft>                            <nobreakspace> : "⟗" U27D7 # FULL OUTER JOIN
-<Multi_key><bracketright><backslash><slash><bracketleft>                                   <space> : "⟗" U27D7 # FULL OUTER JOIN
-<Multi_key><bracketright><backslash><slash><bracketleft>                            <nobreakspace> : "⟗" U27D7 # FULL OUTER JOIN
+<Multi_key><bracketright><slash><backslash><bracketleft>                                           : "⟗" U27D7 # FULL OUTER JOIN
+<Multi_key><bracketright><backslash><slash><bracketleft>                                           : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><T><T><bar>                                                                             : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><T><percent><bar>                                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T><T>                                                                    : "⟘" U27D8 # LARGE UP TACK
@@ -7145,12 +7144,9 @@
 <Multi_key><T><greater><less>                                                                      : "⟛" U27DB # LEFT AND RIGHT TACK
 <Multi_key><minus><bar><bar><minus>                                                        <space> : "⟛" U27DB # LEFT AND RIGHT TACK
 <Multi_key><minus><bar><bar><minus>                                                 <nobreakspace> : "⟛" U27DB # LEFT AND RIGHT TACK
-<Multi_key><space><space><o><minus>                                                        <space> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><space><space><o><minus>                                                 <nobreakspace> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><nobreakspace><space><o><minus>                                                 <space> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><nobreakspace><space><o><minus>                                          <nobreakspace> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><nobreakspace><nobreakspace><o><minus>                                          <space> : "⟜" U27DC # LEFT MULTIMAP
-<Multi_key><nobreakspace><nobreakspace><o><minus>                                   <nobreakspace> : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><space><space><o><minus>                                                                : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><nobreakspace><space><o><minus>                                                         : "⟜" U27DC # LEFT MULTIMAP
+<Multi_key><nobreakspace><nobreakspace><o><minus>                                                  : "⟜" U27DC # LEFT MULTIMAP
 <Multi_key><T><greater><bar>                                                                       : "⟝" U27DD # LONG RIGHT TACK
 <Multi_key><bar><minus><minus><minus>                                                      <space> : "⟝" U27DD # LONG RIGHT TACK
 <Multi_key><bar><minus><minus><minus>                                               <nobreakspace> : "⟝" U27DD # LONG RIGHT TACK
@@ -7159,8 +7155,11 @@
 <Multi_key><o><T><T>                                                                               : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><T><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><bar><underscore>                                                                    : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+#Multi_key><a><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><a><minus>                                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><V>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><less><bracketleft><minus>                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><greater><parenright><parenleft>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><less><greater><parenright><parenleft>                                   <nobreakspace> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><less><greater><parenleft><parenright>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
@@ -7169,62 +7168,38 @@
 <Multi_key><greater><less><parenright><parenleft>                                   <nobreakspace> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><greater><less><parenleft><parenright>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><greater><less><parenleft><parenright>                                   <nobreakspace> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
-<Multi_key><minus><less><greater><parenright><parenleft>                                   <space> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><less><greater><parenright><parenleft>                            <nobreakspace> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><less><greater><parenleft><parenright>                                   <space> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><less><greater><parenleft><parenright>                            <nobreakspace> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><greater><less><parenright><parenleft>                                   <space> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><greater><less><parenright><parenleft>                            <nobreakspace> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><greater><less><parenleft><parenright>                                   <space> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><minus><greater><less><parenleft><parenright>                            <nobreakspace> : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
-<Multi_key><less><greater><parenright><parenleft><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><less><greater><parenright><parenleft><minus>                            <nobreakspace> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><less><greater><parenleft><parenright><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><less><greater><parenleft><parenright><minus>                            <nobreakspace> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><greater><less><parenright><parenleft><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><greater><less><parenright><parenleft><minus>                            <nobreakspace> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><greater><less><parenleft><parenright><minus>                                   <space> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><greater><less><parenleft><parenright><minus>                            <nobreakspace> : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
-<Multi_key><space><minus><bracketleft><bracketright>                                       <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><space><minus><bracketleft><bracketright>                                <nobreakspace> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><nobreakspace><minus><bracketleft><bracketright>                                <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><nobreakspace><minus><bracketleft><bracketright>                         <nobreakspace> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><space><minus><bracketright><bracketleft>                                       <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><space><minus><bracketright><bracketleft>                                <nobreakspace> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><nobreakspace><minus><bracketright><bracketleft>                                <space> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><nobreakspace><minus><bracketright><bracketleft>                         <nobreakspace> : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
-<Multi_key><bracketleft><bracketright><minus>                                              <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
-<Multi_key><bracketleft><bracketright><minus>                                       <nobreakspace> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
-<Multi_key><bracketright><bracketleft><minus>                                              <space> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
-<Multi_key><bracketright><bracketleft><minus>                                       <nobreakspace> : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
-<Multi_key><space><bracketleft><bracketleft>                                               <space> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><space><bracketleft><bracketleft>                                        <nobreakspace> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketleft><bracketleft>                                        <space> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketleft><bracketleft>                                 <nobreakspace> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><space><bracketright><bracketright>                                             <space> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><space><bracketright><bracketright>                                      <nobreakspace> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketright><bracketright>                                      <space> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketright><bracketright>                               <nobreakspace> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><bracketleft><less>                                                             <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
-<Multi_key><bracketleft><less>                                                      <nobreakspace> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
-<Multi_key><bracketright><greater>                                                         <space> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
-<Multi_key><bracketright><greater>                                                  <nobreakspace> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
-<Multi_key><bracketleft><less><less>                                                       <space> : "⟪" U27EA # MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
-<Multi_key><bracketleft><less><less>                                                <nobreakspace> : "⟪" U27EA # MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
-<Multi_key><bracketright><greater><greater>                                                <space> : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
-<Multi_key><bracketright><greater><greater>                                         <nobreakspace> : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
-<Multi_key><bracketleft><parenleft><parenleft>                                             <space> : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
-<Multi_key><bracketleft><parenleft><parenleft>                                      <nobreakspace> : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
-<Multi_key><bracketright><parenright><parenright>                                          <space> : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
-<Multi_key><bracketright><parenright><parenright>                                   <nobreakspace> : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
-<Multi_key><space><bracketleft><parenleft>                                                 <space> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
-<Multi_key><space><bracketleft><parenleft>                                          <nobreakspace> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
-<Multi_key><nobreakspace><bracketleft><parenleft>                                          <space> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
-<Multi_key><nobreakspace><bracketleft><parenleft>                                   <nobreakspace> : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
-<Multi_key><space><bracketright><parenright>                                               <space> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-<Multi_key><space><bracketright><parenright>                                        <nobreakspace> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-<Multi_key><nobreakspace><bracketright><parenright>                                        <space> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-<Multi_key><nobreakspace><bracketright><parenright>                                 <nobreakspace> : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+#Multi_key><minus><less><greater><parenright><parenleft>                                           : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
+<Multi_key><minus><less><greater>                                                                  : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
+#Multi_key><minus><greater><less><parenright><parenleft>                                           : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
+<Multi_key><minus><greater><less><parenright>                                                      : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
+<Multi_key><minus><greater><less><parenleft>                                                       : "⟢" U27E2 # WHITE CONCAVE-SIDED DIAMOND WITH LEFTWARDS TICK
+<Multi_key><less><greater><parenright><parenleft><minus>                                           : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
+<Multi_key><less><greater><parenleft><parenright><minus>                                           : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
+<Multi_key><greater><less><parenright><parenleft><minus>                                           : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
+<Multi_key><greater><less><parenleft><parenright><minus>                                           : "⟣" U27E3 # WHITE CONCAVE-SIDED DIAMOND WITH RIGHTWARDS TICK
+#Multi_key><space><minus><bracketleft><bracketright>                                               : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><space><minus><bracketleft>                                                             : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><nobreakspace><minus><bracketleft>                                                      : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><space><minus><bracketright><bracketleft>                                               : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><nobreakspace><minus><bracketright><bracketleft>                                        : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
+<Multi_key><bracketleft><bracketright><minus>                                                      : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
+<Multi_key><bracketright><bracketleft><minus>                                                      : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
+<Multi_key><space><bracketleft><bracketleft>                                                       : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><nobreakspace><bracketleft><bracketleft>                                                : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><space><bracketright><bracketright>                                                     : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><nobreakspace><bracketright><bracketright>                                              : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><less><bracketleft>                                                             <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<Multi_key><less><bracketleft>                                                      <nobreakspace> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<Multi_key><greater><bracketright>                                                                 : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
+<Multi_key><less><less><bracketleft>                                                               : "⟪" U27EA # MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
+<Multi_key><greater><greater><bracketright>                                                        : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
+<Multi_key><parenleft><parenleft><bracketleft>                                                     : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
+<Multi_key><parenright><parenright><bracketright>                                                  : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
+<Multi_key><space><parenleft><bracketleft>                                                         : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><parenleft><bracketleft>                                                  : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><space><parenright><bracketright>                                                       : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><parenright><bracketright>                                                : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+#@
 #
 #
 # # Supplemental Arrows-A of block U27F0
@@ -7953,8 +7928,10 @@
 <Multi_key><backslash><bar><numbersign>                                                            : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
 #Multi_key><less><numbersign><greater><exclam><greater>                                            : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><less><numbersign><greater><exclam>                                                     : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
-<Multi_key><a><numbersign><v>                                                              <space> : "⧫" U29EB # BLACK LOZENGE
-<Multi_key><a><numbersign><v>                                                       <nobreakspace> : "⧫" U29EB # BLACK LOZENGE
+#Multi_key><a><numbersign><v>                                                                      : "⧫" U29EB # BLACK LOZENGE
+<Multi_key><a><numbersign>                                                                         : "⧫" U29EB # BLACK LOZENGE
+#Multi_key><less><bracketleft><numbersign><greater><bracketright>                                  : "⧫" U29EB # BLACK LOZENGE
+<Multi_key><less><bracketleft><numbersign>                                                         : "⧫" U29EB # BLACK LOZENGE
 #Multi_key><O><exclam><greater>                                                                    : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
 <Multi_key><O><exclam>                                                                             : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
 #Multi_key><O><numbersign><exclam><greater>                                                        : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
