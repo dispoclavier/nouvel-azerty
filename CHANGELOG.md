@@ -29,7 +29,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 
 Rectification des groupes des symboles.
 
-Retouche de la touche morte tilde.
+Amélioration de la touche morte tilde.
 
 * Composition :
 	* Simplifier les séquences de "♀" U+2640. compose-1.yml [4b4dcbd](https://github.com/dispoclavier/nouvel-azerty/commit/4b4dcbd8b13e01dd75df21843d6b34d3fc4262a7)
