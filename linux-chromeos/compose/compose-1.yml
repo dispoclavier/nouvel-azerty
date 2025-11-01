@@ -4229,7 +4229,7 @@
 #
 #   Backspace.
 #Multi_key><b><k><s><p>                                                                            : "⟵" U27F5 # LONG LEFTWARDS ARROW
-<Multi_key><b><k><s>                                                                               : "⟵" U27F5 # LONG LEFTWARDS ARROW
+<Multi_key><b><k>                                                                                  : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><B><K>                                                                                  : "⟵" U27F5 # LONG LEFTWARDS ARROW
 #   Delete to the left.
 <Multi_key><x><t><l>                                                                               : "⌫" U232B # ERASE TO THE LEFT
@@ -7199,7 +7199,6 @@
 <Multi_key><nobreakspace><parenleft><bracketleft>                                                  : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
 <Multi_key><space><parenright><bracketright>                                                       : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
 <Multi_key><nobreakspace><parenright><bracketright>                                                : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-#@
 #
 #
 # # Supplemental Arrows-A of block U27F0
@@ -7210,16 +7209,13 @@
 #   https://www.unicode.org/charts/nameslist/n_27F0.html
 #
 #   Horizontals are U2B45, U2B46.
-<Multi_key><less><exclam><4>                                                               <space> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
-<Multi_key><less><exclam><4>                                                        <nobreakspace> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
-<Multi_key><less><exclam><KP_4>                                                            <space> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
-<Multi_key><less><exclam><KP_4>                                                     <nobreakspace> : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><less><exclam><4>                                                                       : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
+<Multi_key><less><exclam><KP_4>                                                                    : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><exclam><greater><4>                                                                    : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
 <Multi_key><exclam><greater><KP_4>                                                                 : "⟱" U27F1 # DOWNWARDS QUADRUPLE ARROW
-<Multi_key><space><G><backslash>                                                           <space> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
-<Multi_key><space><G><backslash>                                                    <nobreakspace> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
-<Multi_key><nobreakspace><G><backslash>                                                    <space> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
-<Multi_key><nobreakspace><G><backslash>                                             <nobreakspace> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
+#Multi_key><space><G><backslash>                                                                   : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
+<Multi_key><space><G>                                                                              : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
+<Multi_key><nobreakspace><G>                                                                       : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                             <space> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><G>                                                                      <nobreakspace> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 #Multi_key><o><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
@@ -7238,6 +7234,7 @@
 <Multi_key><minus><minus><greater>                                                  <nobreakspace> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
 <Multi_key><minus><minus><minus><greater>                                                  <space> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
 <Multi_key><minus><minus><minus><greater>                                           <nobreakspace> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
+#@
 #Multi_key><space><less><minus><minus><greater>                                                    : "⟷" U27F7 # LONG LEFT RIGHT ARROW
 <Multi_key><space><less><minus><minus>                                                             : "⟷" U27F7 # LONG LEFT RIGHT ARROW
 <Multi_key><nobreakspace><less><minus><minus>                                                      : "⟷" U27F7 # LONG LEFT RIGHT ARROW
