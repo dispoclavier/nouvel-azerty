@@ -27,6 +27,10 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows avant
 
 Rectification et simplification des séquences de composition. [compose-1.yml [b0e5711](https://github.com/dispoclavier/nouvel-azerty/commit/b0e57112d96f30bdeb5bea8cbcb9258955106059)]
 
+Rectification des groupes des symboles.
+
+Retouche de la touche morte tilde.
+
 * Composition :
 	* Simplifier les séquences de "♀" U+2640. compose-1.yml [4b4dcbd](https://github.com/dispoclavier/nouvel-azerty/commit/4b4dcbd8b13e01dd75df21843d6b34d3fc4262a7)
 	* Simplifier et compléter les séquences de "♠" U+2660, "♡" U+2661, "♣" U+2663. compose-1.yml [1db4318](https://github.com/dispoclavier/nouvel-azerty/commit/1db43185458749dc211eb51d20cd1abbbfe60053)
