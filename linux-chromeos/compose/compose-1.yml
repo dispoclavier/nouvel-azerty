@@ -2856,86 +2856,107 @@
 <Multi_key><KP_1><KP_4>                                                                            : "¼" U00BC # VULGAR FRACTION ONE QUARTER
 <Multi_key><1><slash><4>                                                                           : "¼" U00BC # VULGAR FRACTION ONE QUARTER
 <Multi_key><KP_1><slash><KP_4>                                                                     : "¼" U00BC # VULGAR FRACTION ONE QUARTER
+<Multi_key><KP_1><KP_Divide><KP_4>                                                                 : "¼" U00BC # VULGAR FRACTION ONE QUARTER
 <Multi_key><1><2>                                                                                  : "½" U00BD # VULGAR FRACTION ONE HALF
 <Multi_key><KP_1><KP_2>                                                                            : "½" U00BD # VULGAR FRACTION ONE HALF
 <Multi_key><1><slash><2>                                                                           : "½" U00BD # VULGAR FRACTION ONE HALF
 <Multi_key><KP_1><slash><KP_2>                                                                     : "½" U00BD # VULGAR FRACTION ONE HALF
+<Multi_key><KP_1><KP_Divide><KP_2>                                                                 : "½" U00BD # VULGAR FRACTION ONE HALF
 <Multi_key><3><4>                                                                                  : "¾" U00BE # VULGAR FRACTION THREE QUARTERS
 <Multi_key><KP_3><KP_4>                                                                            : "¾" U00BE # VULGAR FRACTION THREE QUARTERS
 <Multi_key><3><slash><4>                                                                           : "¾" U00BE # VULGAR FRACTION THREE QUARTERS
 <Multi_key><KP_3><slash><KP_4>                                                                     : "¾" U00BE # VULGAR FRACTION THREE QUARTERS
+<Multi_key><KP_3><KP_Divide><KP_4>                                                                 : "¾" U00BE # VULGAR FRACTION THREE QUARTERS
 <Multi_key><1><7>                                                                                  : "⅐" U2150 # VULGAR FRACTION ONE SEVENTH
 <Multi_key><KP_1><KP_7>                                                                            : "⅐" U2150 # VULGAR FRACTION ONE SEVENTH
 <Multi_key><1><slash><7>                                                                           : "⅐" U2150 # VULGAR FRACTION ONE SEVENTH
 <Multi_key><KP_1><slash><KP_7>                                                                     : "⅐" U2150 # VULGAR FRACTION ONE SEVENTH
+<Multi_key><KP_1><KP_Divide><KP_7>                                                                 : "⅐" U2150 # VULGAR FRACTION ONE SEVENTH
 <Multi_key><1><9>                                                                                  : "⅑" U2151 # VULGAR FRACTION ONE NINTH
 <Multi_key><KP_1><KP_9>                                                                            : "⅑" U2151 # VULGAR FRACTION ONE NINTH
 <Multi_key><1><slash><9>                                                                           : "⅑" U2151 # VULGAR FRACTION ONE NINTH
 <Multi_key><KP_1><slash><KP_9>                                                                     : "⅑" U2151 # VULGAR FRACTION ONE NINTH
+<Multi_key><KP_1><KP_Divide><KP_9>                                                                 : "⅑" U2151 # VULGAR FRACTION ONE NINTH
 <Multi_key><1><1>                                                                                  : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><KP_1><KP_1>                                                                            : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><1><slash><1>                                                                           : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><KP_1><slash><KP_1>                                                                     : "⅒" U2152 # VULGAR FRACTION ONE TENTH
+<Multi_key><KP_1><KP_Divide><KP_1>                                                                 : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><1><0>                                                                                  : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><KP_1><KP_0>                                                                            : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><1><slash><0>                                                                           : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><KP_1><slash><KP_0>                                                                     : "⅒" U2152 # VULGAR FRACTION ONE TENTH
+<Multi_key><KP_1><KP_Divide><KP_0>                                                                 : "⅒" U2152 # VULGAR FRACTION ONE TENTH
 <Multi_key><1><3>                                                                                  : "⅓" U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key><KP_1><KP_3>                                                                            : "⅓" U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key><1><slash><3>                                                                           : "⅓" U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key><KP_1><slash><KP_3>                                                                     : "⅓" U2153 # VULGAR FRACTION ONE THIRD
+<Multi_key><KP_1><KP_Divide><KP_3>                                                                 : "⅓" U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key><2><3>                                                                                  : "⅔" U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key><KP_2><KP_3>                                                                            : "⅔" U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key><2><slash><3>                                                                           : "⅔" U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key><KP_2><slash><KP_3>                                                                     : "⅔" U2154 # VULGAR FRACTION TWO THIRDS
+<Multi_key><KP_2><KP_Divide><KP_3>                                                                 : "⅔" U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key><1><5>                                                                                  : "⅕" U2155 # VULGAR FRACTION ONE FIFTH
 <Multi_key><KP_1><KP_5>                                                                            : "⅕" U2155 # VULGAR FRACTION ONE FIFTH
 <Multi_key><1><slash><5>                                                                           : "⅕" U2155 # VULGAR FRACTION ONE FIFTH
 <Multi_key><KP_1><slash><KP_5>                                                                     : "⅕" U2155 # VULGAR FRACTION ONE FIFTH
+<Multi_key><KP_1><KP_Divide><KP_5>                                                                 : "⅕" U2155 # VULGAR FRACTION ONE FIFTH
 <Multi_key><2><5>                                                                                  : "⅖" U2156 # VULGAR FRACTION TWO FIFTHS
 <Multi_key><KP_2><KP_5>                                                                            : "⅖" U2156 # VULGAR FRACTION TWO FIFTHS
 <Multi_key><2><slash><5>                                                                           : "⅖" U2156 # VULGAR FRACTION TWO FIFTHS
 <Multi_key><KP_2><slash><KP_5>                                                                     : "⅖" U2156 # VULGAR FRACTION TWO FIFTHS
+<Multi_key><KP_2><KP_Divide><KP_5>                                                                 : "⅖" U2156 # VULGAR FRACTION TWO FIFTHS
 <Multi_key><3><5>                                                                                  : "⅗" U2157 # VULGAR FRACTION THREE FIFTHS
 <Multi_key><KP_3><KP_5>                                                                            : "⅗" U2157 # VULGAR FRACTION THREE FIFTHS
 <Multi_key><3><slash><5>                                                                           : "⅗" U2157 # VULGAR FRACTION THREE FIFTHS
 <Multi_key><KP_3><slash><KP_5>                                                                     : "⅗" U2157 # VULGAR FRACTION THREE FIFTHS
+<Multi_key><KP_3><KP_Divide><KP_5>                                                                 : "⅗" U2157 # VULGAR FRACTION THREE FIFTHS
 <Multi_key><4><5>                                                                                  : "⅘" U2158 # VULGAR FRACTION FOUR FIFTHS
 <Multi_key><KP_4><KP_5>                                                                            : "⅘" U2158 # VULGAR FRACTION FOUR FIFTHS
 <Multi_key><4><slash><5>                                                                           : "⅘" U2158 # VULGAR FRACTION FOUR FIFTHS
 <Multi_key><KP_4><slash><KP_5>                                                                     : "⅘" U2158 # VULGAR FRACTION FOUR FIFTHS
+<Multi_key><KP_4><KP_Divide><KP_5>                                                                 : "⅘" U2158 # VULGAR FRACTION FOUR FIFTHS
 <Multi_key><1><6>                                                                                  : "⅙" U2159 # VULGAR FRACTION ONE SIXTH
 <Multi_key><KP_1><KP_6>                                                                            : "⅙" U2159 # VULGAR FRACTION ONE SIXTH
 <Multi_key><1><slash><6>                                                                           : "⅙" U2159 # VULGAR FRACTION ONE SIXTH
 <Multi_key><KP_1><slash><KP_6>                                                                     : "⅙" U2159 # VULGAR FRACTION ONE SIXTH
+<Multi_key><KP_1><KP_Divide><KP_6>                                                                 : "⅙" U2159 # VULGAR FRACTION ONE SIXTH
 <Multi_key><5><6>                                                                                  : "⅚" U215A # VULGAR FRACTION FIVE SIXTHS
 <Multi_key><KP_5><KP_6>                                                                            : "⅚" U215A # VULGAR FRACTION FIVE SIXTHS
 <Multi_key><5><slash><6>                                                                           : "⅚" U215A # VULGAR FRACTION FIVE SIXTHS
 <Multi_key><KP_5><slash><KP_6>                                                                     : "⅚" U215A # VULGAR FRACTION FIVE SIXTHS
+<Multi_key><KP_5><KP_Divide><KP_6>                                                                 : "⅚" U215A # VULGAR FRACTION FIVE SIXTHS
 <Multi_key><1><8>                                                                                  : "⅛" U215B # VULGAR FRACTION ONE EIGHTH
 <Multi_key><KP_1><KP_8>                                                                            : "⅛" U215B # VULGAR FRACTION ONE EIGHTH
 <Multi_key><1><slash><8>                                                                           : "⅛" U215B # VULGAR FRACTION ONE EIGHTH
 <Multi_key><KP_1><slash><KP_8>                                                                     : "⅛" U215B # VULGAR FRACTION ONE EIGHTH
+<Multi_key><KP_1><KP_Divide><KP_8>                                                                 : "⅛" U215B # VULGAR FRACTION ONE EIGHTH
 <Multi_key><3><8>                                                                                  : "⅜" U215C # VULGAR FRACTION THREE EIGHTHS
 <Multi_key><KP_3><KP_8>                                                                            : "⅜" U215C # VULGAR FRACTION THREE EIGHTHS
 <Multi_key><3><slash><8>                                                                           : "⅜" U215C # VULGAR FRACTION THREE EIGHTHS
 <Multi_key><KP_3><slash><KP_8>                                                                     : "⅜" U215C # VULGAR FRACTION THREE EIGHTHS
+<Multi_key><KP_3><KP_Divide><KP_8>                                                                 : "⅜" U215C # VULGAR FRACTION THREE EIGHTHS
 <Multi_key><5><8>                                                                                  : "⅝" U215D # VULGAR FRACTION FIVE EIGHTHS
 <Multi_key><KP_5><KP_8>                                                                            : "⅝" U215D # VULGAR FRACTION FIVE EIGHTHS
 <Multi_key><5><slash><8>                                                                           : "⅝" U215D # VULGAR FRACTION FIVE EIGHTHS
 <Multi_key><KP_5><slash><KP_8>                                                                     : "⅝" U215D # VULGAR FRACTION FIVE EIGHTHS
+<Multi_key><KP_5><KP_Divide><KP_8>                                                                 : "⅝" U215D # VULGAR FRACTION FIVE EIGHTHS
 <Multi_key><7><8>                                                                                  : "⅞" U215E # VULGAR FRACTION SEVEN EIGHTHS
 <Multi_key><KP_7><KP_8>                                                                            : "⅞" U215E # VULGAR FRACTION SEVEN EIGHTHS
 <Multi_key><7><slash><8>                                                                           : "⅞" U215E # VULGAR FRACTION SEVEN EIGHTHS
 <Multi_key><KP_7><slash><KP_8>                                                                     : "⅞" U215E # VULGAR FRACTION SEVEN EIGHTHS
+<Multi_key><KP_7><KP_Divide><KP_8>                                                                 : "⅞" U215E # VULGAR FRACTION SEVEN EIGHTHS
 <Multi_key><1><space>                                                                              : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key><KP_1><space>                                                                           : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key><1><slash><space>                                                                       : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key><KP_1><slash><space>                                                                    : "⅟" U215F # FRACTION NUMERATOR ONE
+<Multi_key><KP_1><KP_Divide><space>                                                                : "⅟" U215F # FRACTION NUMERATOR ONE
 <Multi_key><0><3>                                                                                  : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 <Multi_key><KP_0><KP_3>                                                                            : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 <Multi_key><0><slash>                                                                              : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 <Multi_key><KP_0><slash>                                                                           : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
+<Multi_key><KP_0><KP_Divide>                                                                       : "↉" U2189 # VULGAR FRACTION ZERO THIRDS
 #
 #
 #^# Per mille and per myriad
@@ -6979,9 +7000,7 @@
 #   hence it is picked as a presumably intuitive multikey sequence constituent.
 #   https://music.stackexchange.com/questions/10195/why-is-note-b-marked-with-h-in-scandinavia-and-germany
 #
-#@
-<Multi_key><space><h>                                                                      <space> : "♮" U266E # MUSIC NATURAL SIGN
-<Multi_key><space><h>                                                               <nobreakspace> : "♮" U266E # MUSIC NATURAL SIGN
+<Multi_key><space><h>                                                                              : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><numbersign>                                                             <space> : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><space><numbersign>                                                      <nobreakspace> : "♯" U266F # MUSIC SHARP SIGN
 #
@@ -6993,19 +7012,23 @@
 #   https://www.unicode.org/charts/PDF/U27C0.pdf
 #   https://www.unicode.org/charts/nameslist/n_27C0.html
 #
+<Multi_key><L><slash>                                                                              : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 <Multi_key><minus><slash><bar>                                                                     : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
+<Multi_key><bar><slash><underscore>                                                                : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 #Multi_key><2><slash><backslash><underscore>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><slash><backslash>                                                                   : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><slash><backslash>                                                                : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><KP_2><KP_Divide><backslash>                                                            : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+#Multi_key><2><backslash><slash><underscore>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><backslash>                                                                          : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><backslash>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
-<Multi_key><KP_2><KP_Divide>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 #
 #   Some fonts feature a small circle instead of the inner triangle of "⟁" U27C1.
 #
 <Multi_key><slash><backslash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+#@
 <Multi_key><bar><underscore>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><bar><underscore>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><space><c><o>                                                                   <space> : "⟃" U27C3 # OPEN SUBSET
@@ -13305,8 +13328,7 @@
 #
 # # End note about polytonic Greek
 #
-#   Here ends the section dedicated to polytonic Greek (that also supports
-#   monotonic Greek alongside).
+#   Here ends the section dedicated to polytonic and monotonic Greek.
 #   See ### Greek with diacritics
 #
 #   The Greek base alphabet for technical use is in the Latin dead key section,
