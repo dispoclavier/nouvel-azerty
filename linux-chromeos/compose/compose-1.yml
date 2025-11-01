@@ -7023,100 +7023,77 @@
 <Multi_key><2><backslash>                                                                          : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><backslash>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 #
-#   Some fonts feature a small circle instead of the inner triangle of "⟁" U27C1.
+#   Some fonts feature "⟁" U27C1 with a small circle instead of the inner
+#   triangle.
 #
 <Multi_key><slash><backslash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
-#@
 <Multi_key><bar><underscore>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><bar><underscore>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
-<Multi_key><space><c><o>                                                                   <space> : "⟃" U27C3 # OPEN SUBSET
-<Multi_key><space><c><o>                                                            <nobreakspace> : "⟃" U27C3 # OPEN SUBSET
-<Multi_key><nobreakspace><c><o>                                                            <space> : "⟃" U27C3 # OPEN SUBSET
-<Multi_key><nobreakspace><c><o>                                                     <nobreakspace> : "⟃" U27C3 # OPEN SUBSET
+<Multi_key><underscore><bar>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
+<Multi_key><underscore><bar>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
+<Multi_key><space><c><o>                                                                           : "⟃" U27C3 # OPEN SUBSET
+<Multi_key><nobreakspace><c><o>                                                                    : "⟃" U27C3 # OPEN SUBSET
+<Multi_key><b><o>                                                                                  : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><c><o>                                                                               : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><backslash><o>                                                                       : "⟄" U27C4 # OPEN SUPERSET
+#
+#   In "⟄" U27C4, leading space is supported alongside for consistency.
+#
 <Multi_key><space><b><o>                                                                           : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><b><o>                                                                    : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><space><c><c><o>                                                                        : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><c><c><o>                                                                 : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><space><c><backslash><o>                                                                : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><c><backslash><o>                                                         : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><s><braceleft>                                                                  <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
-<Multi_key><s><braceleft>                                                           <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
-<Multi_key><S><braceleft>                                                                  <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
-<Multi_key><S><braceleft>                                                           <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
-<Multi_key><s><braceright>                                                                 <space> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><s><braceright>                                                          <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><S><braceright>                                                                 <space> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><S><braceright>                                                          <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><v><period>                                                                     <space> : "⟇" U27C7 # OR WITH DOT INSIDE
-<Multi_key><v><period>                                                              <nobreakspace> : "⟇" U27C7 # OR WITH DOT INSIDE
-<Multi_key><space><backslash><c>                                                           <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><space><backslash><c>                                                    <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><backslash><c>                                                    <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><backslash><c>                                             <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><s><braceleft>                                                                          : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><s><bracketleft>                                                                <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><s><bracketleft>                                                         <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><S><braceleft>                                                                          : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketleft>                                                                        : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><s><braceright>                                                                         : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><s><bracketright>                                                                       : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><S><braceright>                                                                         : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketright>                                                                       : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><v><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
+<Multi_key><space><backslash><c>                                                                   : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><nobreakspace><backslash><c>                                                            : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 #
 #   Some fonts feature a slash instead of a backslash in
 #   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
 #
-<Multi_key><space><slash><c>                                                               <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><space><slash><c>                                                        <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><slash><c>                                                        <space> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><slash><c>                                                 <nobreakspace> : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><space><slash><c>                                                                       : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><nobreakspace><slash><c>                                                                : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><space><b><slash>                                                                       : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><b><slash>                                                                : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><c><c><slash>                                                                    : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><c><slash>                                                             : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><c><backslash><slash>                                                            : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><space><bar><minus>                                                             <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><space><bar><minus>                                                      <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><nobreakspace><bar><minus>                                                      <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><nobreakspace><bar><minus>                                               <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><space><space><space><slash>                                                    <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><space><space><space><slash>                                             <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><space><space><slash>                                             <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><space><space><slash>                                      <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><slash>                                      <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><slash>                               <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                               <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                        <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-#
-#   The maybe rarely used long division symbol U27CC, made of right parenthesis
-#   and kerning (almost combining) overscore ("⟌"), does not conflict with non-
-#   existing combining superscript breve.
-#   See # # SUPERSCRIPT&BREVE
-#
+<Multi_key><space><bar><minus>                                                                     : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><minus>                                                              : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><space><space><space><slash>                                                            : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><space><space><slash>                                                     : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><space><slash>                                              : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                                       : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
-<Multi_key><space><space><space><backslash>                                                <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><space><space><space><backslash>                                         <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><space><space><backslash>                                         <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><space><space><backslash>                                  <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><backslash>                                  <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><backslash>                           <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                           <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                    <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-#
-#   Sequences for "⟎" U27CE using the "a" slug with a leading bracketleft would
-#   conflict with "ą" U0105.
-#
-<Multi_key><a><bracketright>                                                               <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><a><bracketright>                                                        <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><v><percent>                                                       <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><v><percent>                                                <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><v><percent><bracketright>                                         <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><bracketleft><v><percent><bracketright>                                  <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><v><percent><bracketright>                                                      <space> : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><v><percent><bracketright>                                               <nobreakspace> : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><space><space><space><backslash>                                                        : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><space><backslash>                                                 : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><space><backslash>                                          : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                                   : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><a><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><space><bracketleft><a>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><nobreakspace><bracketleft><a>                                                          : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><bracketleft><v><percent>                                                               : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><v><percent><bracketright>                                                              : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><bracketleft><v>                                                                <space> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><v>                                                         <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><bracketleft><v><bracketright>                                                  <space> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><bracketleft><v><bracketright>                                           <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><v><bracketright>                                                               <space> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><v><bracketright>                                                        <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><less><period><greater>                                                         <space> : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
-<Multi_key><less><period><greater>                                                  <nobreakspace> : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
+<Multi_key><bracketleft><v><bracketright>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><v><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><less><period><greater>                                                                 : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
+#@
 <Multi_key><a><period>                                                                     <space> : "⟑" U27D1 # AND WITH DOT
 <Multi_key><a><period>                                                              <nobreakspace> : "⟑" U27D1 # AND WITH DOT
 <Multi_key><v><percent><period>                                                            <space> : "⟑" U27D1 # AND WITH DOT
@@ -8882,6 +8859,7 @@
 <Multi_key><minus><apostrophe><minus>                                                              : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><minus><rightsinglequotemark><minus>                                                    : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><bar><underscore><s>                                                                    : "⫡" U2AE1 # PERPENDICULAR WITH S
+<Multi_key><underscore><bar><s>                                                                    : "⫡" U2AE1 # PERPENDICULAR WITH S
 <Multi_key><T><3><greater>                                                                         : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><T><KP_3><greater>                                                                      : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
 <Multi_key><bar><minus><equal>                                                                     : "⫢" U2AE2 # VERTICAL BAR TRIPLE RIGHT TURNSTILE
