@@ -6974,11 +6974,12 @@
 <Multi_key><nobreakspace><o><KP_8>                                                                 : "♣" U2663 # BLACK CLUB SUIT
 <Multi_key><space><b>                                                                      <space> : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><space><b>                                                               <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
-#@
 #
 #   The "h" was reportedly used as a fallback to print "♮" named "b quadratum",
 #   hence it is picked as a presumably intuitive multikey sequence constituent.
+#   https://music.stackexchange.com/questions/10195/why-is-note-b-marked-with-h-in-scandinavia-and-germany
 #
+#@
 <Multi_key><space><h>                                                                      <space> : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><h>                                                               <nobreakspace> : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><numbersign>                                                             <space> : "♯" U266F # MUSIC SHARP SIGN
