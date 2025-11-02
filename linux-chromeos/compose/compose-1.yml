@@ -5198,12 +5198,6 @@
 #   appended like those denoting size as for "◻" U25FB, while multiplying
 #   digits are prepended as for "⇇" U21C7, "⇶" U21F6, "∬" U222C, "⋐" U22D0.
 #
-#   Long arrows like "⟶" U27F6, being horizontal throughout, are composed with
-#   double minus or double equal for brevity, as well as triple minus or triple
-#   equal for unconflicting consistency with "⟿" U27FF, "⬳" U2B33, to ensure
-#   a versatile user experience, where it is up to the user to pick consistency
-#   or efficiency as their top priority.
-#
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
 #   long variants is consistent only with triple minus/equal variant sequences
@@ -7275,40 +7269,21 @@
 #Multi_key><o><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><o><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><O><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-#
-#   "⟵" U27F5.."⟾" U27FE have sequences based on both double and triple minus
-#   or equal for consistency and versatility.
-#   See #   Long arrows
-#
 <Multi_key><less><minus><minus>                                                            <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><less><minus><minus>                                                     <nobreakspace> : "⟵" U27F5 # LONG LEFTWARDS ARROW
-<Multi_key><less><minus><minus><minus>                                                     <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
-<Multi_key><less><minus><minus><minus>                                              <nobreakspace> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><greater>                                                         <space> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
 <Multi_key><minus><minus><greater>                                                  <nobreakspace> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
-<Multi_key><minus><minus><minus><greater>                                                  <space> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
-<Multi_key><minus><minus><minus><greater>                                           <nobreakspace> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
-#@
 #Multi_key><space><less><minus><minus><greater>                                                    : "⟷" U27F7 # LONG LEFT RIGHT ARROW
 <Multi_key><space><less><minus><minus>                                                             : "⟷" U27F7 # LONG LEFT RIGHT ARROW
 <Multi_key><nobreakspace><less><minus><minus>                                                      : "⟷" U27F7 # LONG LEFT RIGHT ARROW
-<Multi_key><less><minus><minus><minus><greater>                                                    : "⟷" U27F7 # LONG LEFT RIGHT ARROW
 <Multi_key><less><equal><equal>                                                            <space> : "⟸" U27F8 # LONG LEFTWARDS DOUBLE ARROW
 <Multi_key><less><equal><equal>                                                     <nobreakspace> : "⟸" U27F8 # LONG LEFTWARDS DOUBLE ARROW
-<Multi_key><less><equal><equal><equal>                                                     <space> : "⟸" U27F8 # LONG LEFTWARDS DOUBLE ARROW
-<Multi_key><less><equal><equal><equal>                                              <nobreakspace> : "⟸" U27F8 # LONG LEFTWARDS DOUBLE ARROW
 <Multi_key><equal><equal><greater>                                                                 : "⟹" U27F9 # LONG RIGHTWARDS DOUBLE ARROW
-<Multi_key><equal><equal><equal><greater>                                                          : "⟹" U27F9 # LONG RIGHTWARDS DOUBLE ARROW
 <Multi_key><less><equal><equal><greater>                                                           : "⟺" U27FA # LONG LEFT RIGHT DOUBLE ARROW
-<Multi_key><less><equal><equal><equal><greater>                                                    : "⟺" U27FA # LONG LEFT RIGHT DOUBLE ARROW
 <Multi_key><less><minus><minus><bar>                                                               : "⟻" U27FB # LONG LEFTWARDS ARROW FROM BAR
-<Multi_key><less><minus><minus><minus><bar>                                                        : "⟻" U27FB # LONG LEFTWARDS ARROW FROM BAR
 <Multi_key><bar><minus><minus><greater>                                                            : "⟼" U27FC # LONG RIGHTWARDS ARROW FROM BAR
-<Multi_key><bar><minus><minus><minus><greater>                                                     : "⟼" U27FC # LONG RIGHTWARDS ARROW FROM BAR
 <Multi_key><less><equal><equal><bar>                                                               : "⟽" U27FD # LONG LEFTWARDS DOUBLE ARROW FROM BAR
-<Multi_key><less><equal><equal><equal><bar>                                                        : "⟽" U27FD # LONG LEFTWARDS DOUBLE ARROW FROM BAR
 <Multi_key><bar><equal><equal><greater>                                                            : "⟾" U27FE # LONG RIGHTWARDS DOUBLE ARROW FROM BAR
-<Multi_key><bar><equal><equal><equal><greater>                                                     : "⟾" U27FE # LONG RIGHTWARDS DOUBLE ARROW FROM BAR
 #
 #   "⟿" U27FF and its left-pointing counterpart "⬳" U2B33 have sequences based
 #   on triple asciitilde for intuitivity and consistency.
@@ -7316,6 +7291,7 @@
 #
 <Multi_key><asciitilde><asciitilde><asciitilde><greater>                                           : "⟿" U27FF # LONG RIGHTWARDS SQUIGGLE ARROW
 #
+#@
 #
 # # Supplemental Arrows-B of block U2900
 #
