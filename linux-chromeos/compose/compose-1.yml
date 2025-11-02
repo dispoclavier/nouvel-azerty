@@ -5188,10 +5188,11 @@
 #   as in "⤆" U2906, "⤇" U2907, "↥" U21A5, "↧" U21A7.
 #
 #   Since double arrows also occur in all eight directions, non-horizontal ones
-#   use appended equal in conjunction with \, !, / for the few existing, mainly
+#   use appended equal in conjunction with \, !, / for the few existing, namely
 #   the basic "⇑" U21D1, "⇓" U21D3, "⇕" U21D5, "⇖" U21D6, "⇗" U21D7, "⇘" U21D8
 #   and "⇙" U21D9. As a result, "⇕" U21D5 is input like "↕" U2195 with appended
-#   equal.
+#   equal. For consistency with triple and quadruple arrows, appended digit 2
+#   is also supported.
 #
 #   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB,
 #   "⤊" U290A, "⤋" U290B, "⟰" U27F0, "⟱" U27F1. In this role, digits are
@@ -5862,15 +5863,29 @@
 <Multi_key><less><equal>                                                                   <space> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
 <Multi_key><less><equal>                                                            <nobreakspace> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
 <Multi_key><less><exclam><equal>                                                                   : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><less><exclam><2>                                                                       : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><less><exclam><KP_2>                                                                    : "⇑" U21D1 # UPWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                                <space> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
 <Multi_key><equal><greater>                                                         <nobreakspace> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
 <Multi_key><exclam><greater><equal>                                                                : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><exclam><greater><2>                                                                    : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><exclam><greater><KP_2>                                                                 : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
 <Multi_key><less><equal><greater>                                                                  : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
 <Multi_key><less><exclam><greater><equal>                                                          : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><less><exclam><greater><2>                                                              : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><less><exclam><greater><KP_2>                                                           : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><less><backslash><equal>                                                                : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><less><backslash><2>                                                                    : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><less><backslash><KP_2>                                                                 : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
 <Multi_key><slash><greater><equal>                                                                 : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><slash><greater><2>                                                                     : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><slash><greater><KP_2>                                                                  : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><backslash><greater><equal>                                                             : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><backslash><greater><2>                                                                 : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><backslash><greater><KP_2>                                                              : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
 <Multi_key><less><slash><equal>                                                                    : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><less><slash><2>                                                                        : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><less><slash><KP_2>                                                                     : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
 <Multi_key><less><minus><3>                                                                        : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
 <Multi_key><less><minus><KP_3>                                                                     : "⇚" U21DA # LEFTWARDS TRIPLE ARROW
 <Multi_key><minus><greater><3>                                                                     : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
@@ -7291,7 +7306,6 @@
 #
 <Multi_key><asciitilde><asciitilde><asciitilde><greater>                                           : "⟿" U27FF # LONG RIGHTWARDS SQUIGGLE ARROW
 #
-#@
 #
 # # Supplemental Arrows-B of block U2900
 #
@@ -7312,7 +7326,8 @@
 <Multi_key><less><equal><bar><equal>                                                       <space> : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal>                                                <nobreakspace> : "⤂" U2902 # LEFTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><equal><bar><greater>                                                                   : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
-<Multi_key><equal><bar><equal><greater>                                                            : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
+#Multi_key><equal><bar><equal><greater>                                                            : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
+<Multi_key><equal><bar><equal>                                                                     : "⤃" U2903 # RIGHTWARDS DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><less><equal><bar><equal><greater>                                                      : "⤄" U2904 # LEFT RIGHT DOUBLE ARROW WITH VERTICAL STROKE
 <Multi_key><bar><minus><greater><greater>                                                          : "⤅" U2905 # RIGHTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><less><equal><bar>                                                              <space> : "⤆" U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
@@ -7322,7 +7337,8 @@
 #   Unlike the sequences for "⇷" U21F7, "⇸" U21F8, those for "⤈" U2908,
 #   "⤉" U2909 are streamlined. But intuitive, consistent sequences
 #   containing exclam twice are also provided alongside. The one for "⤈" U2908
-#   is truncated for efficiency, as the trailing greater is non-critical.
+#   is truncated for efficiency, as the trailing greater is non-critical, much
+#   like in the sequence for "⤃" U2903 above.
 #   See #   Streamlining
 #
 <Multi_key><exclam><bar><greater>                                                                  : "⤈" U2908 # DOWNWARDS ARROW WITH HORIZONTAL STROKE
@@ -7334,6 +7350,7 @@
 <Multi_key><less><exclam><KP_3>                                                                    : "⤊" U290A # UPWARDS TRIPLE ARROW
 <Multi_key><exclam><greater><3>                                                                    : "⤋" U290B # DOWNWARDS TRIPLE ARROW
 <Multi_key><exclam><greater><KP_3>                                                                 : "⤋" U290B # DOWNWARDS TRIPLE ARROW
+#@
 <Multi_key><less><minus><0><minus>                                                         <space> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
 <Multi_key><less><minus><0><minus>                                                  <nobreakspace> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
 <Multi_key><less><minus><KP_0><KP_Subtract>                                                <space> : "⤌" U290C # LEFTWARDS DOUBLE DASH ARROW
