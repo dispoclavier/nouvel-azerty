@@ -45,6 +45,9 @@ Amélioration de la touche morte tilde.
 	* Simplifier les séquences de "⟵" U+27F5, "⟶" U+27F6, "⟷" U+27F7, "⟸" U+27F8, "⟹" U+27F9, "⟺" U+27FA, "⟻" U+27FB, "⟼" U+27FC, "⟽" U+27FD, "⟾" U+27FE. compose-1.yml [e43bdb1](https://github.com/dispoclavier/nouvel-azerty/commit/e43bdb18b15dd129e3c8687e9d9b92a9c9cf2730)
 	* Simplifier la séquence de "⤃" U+2903. compose-1.yml [3d5af00](https://github.com/dispoclavier/nouvel-azerty/commit/3d5af0004b9e5820ef53a40d2f332c405f67b703)
 	* Compléter les séquences de "⇑" U+21D1, "⇓" U+21D3, "⇕" U+21D5, "⇖" U+21D6, "⇗" U+21D7, "⇘" U+21D8, "⇙" U+21D9. ibidem
+	* Corriger les séquences de "⤴" U+2934, "⤵" U+2935, "⤶" U+2936, "⤷" U+2937. compose-1.yml [991cbdb](https://github.com/dispoclavier/nouvel-azerty/commit/991cbdbc8916073626b89518da4dbeb6a4ac1797)
+	* Simplifier les séquences de "⤑" U+2911, "⬸" U+2B38. ibidem
+	* Simplifier les séquences de "⤎" U+290E, "⤻" U+293B, "⤼" U+293C, "⤽" U+293D, "⤿" U+293F, "⥀" U+2940, "⥁" U+2941, "⥈" U+2948, "⥊" U+294A, "⥋" U+294B, "⥐" U+2950, "⥚" U+295A, "⥢" U+2962, "⥯" U+296F, "⥰" U+2970, "⥱" U+2971. ibidem
 * Transformations :
 	* Lettres composées pour langues du Togo : Compléter les séquences de "Ʋ̀" U+01B2 U+0300, "Ʋ́" U+01B2 U+0301, "Ʋ̂" U+01B2 U+0302, "Ʋ̄" U+01B2 U+0304, "Ʋ̌" U+01B2 U+030C, "ʋ̀" U+028B U+0300, "ʋ́" U+028B U+0301, "ʋ̂" U+028B U+0302, "ʋ̄" U+028B U+0304, "ʋ̌" U+028B U+030C pour Linux. compose-2.yml [05856c6](https://github.com/dispoclavier/nouvel-azerty/commit/05856c6f49d3da10d5a3bf6341cefbc1a61b2d28)
 	* Tilde :
