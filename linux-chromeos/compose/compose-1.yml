@@ -1524,36 +1524,48 @@
 <Multi_key><p><e><t>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 <Multi_key><P><E><T>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 <Multi_key><p><t><1>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+<Multi_key><p><t><KP_1>                                                                            : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 <Multi_key><P><T><1>                                                                               : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+<Multi_key><P><T><KP_1>                                                                            : "♳" U2673 # RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 #   High density polyethylene
 <Multi_key><h><d><p><e>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><H><D><P><E>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><p><e><h><d>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><P><E><H><D>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><p><t><2>                                                                               : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><p><t><KP_2>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 <Multi_key><P><T><2>                                                                               : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+<Multi_key><P><T><KP_2>                                                                            : "♴" U2674 # RECYCLING SYMBOL FOR TYPE-2 PLASTICS
 #   Polyvinyl chloride
 <Multi_key><p><v><c>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 <Multi_key><P><V><C>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 <Multi_key><p><t><3>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+<Multi_key><p><t><KP_3>                                                                            : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 <Multi_key><P><T><3>                                                                               : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+<Multi_key><P><T><KP_3>                                                                            : "♵" U2675 # RECYCLING SYMBOL FOR TYPE-3 PLASTICS
 #   Low density polyethylene
 <Multi_key><l><d><p><e>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><L><D><P><E>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><p><e><l><d>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><P><E><L><D>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><p><t><4>                                                                               : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><p><t><KP_4>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 <Multi_key><P><T><4>                                                                               : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+<Multi_key><P><T><KP_4>                                                                            : "♶" U2676 # RECYCLING SYMBOL FOR TYPE-4 PLASTICS
 #   Polypropylene plastic; 3 "p"s due to conflicts with "ℙ" U2119, "ℼ" U213C
 <Multi_key><p><p><p>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 <Multi_key><P><P><P>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 <Multi_key><p><t><5>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+<Multi_key><p><t><KP_5>                                                                            : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 <Multi_key><P><T><5>                                                                               : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+<Multi_key><P><T><KP_5>                                                                            : "♷" U2677 # RECYCLING SYMBOL FOR TYPE-5 PLASTICS
 #   Polystyrene
 <Multi_key><p><s>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 <Multi_key><P><S>                                                                                  : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 <Multi_key><p><t><6>                                                                               : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+<Multi_key><p><t><KP_6>                                                                            : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 <Multi_key><P><T><6>                                                                               : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+<Multi_key><P><T><KP_6>                                                                            : "♸" U2678 # RECYCLING SYMBOL FOR TYPE-6 PLASTICS
 #   Other
 <Multi_key><o><t><h>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><O><T><H>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
@@ -1561,12 +1573,16 @@
 <Multi_key><o><t><r>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><O><T><R>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><p><t><7>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><p><t><KP_7>                                                                            : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 <Multi_key><P><T><7>                                                                               : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+<Multi_key><P><T><KP_7>                                                                            : "♹" U2679 # RECYCLING SYMBOL FOR TYPE-7 PLASTICS
 #   Generic materials
 <Multi_key><g><e><n>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 <Multi_key><G><E><N>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 <Multi_key><p><t><8>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+<Multi_key><p><t><KP_8>                                                                            : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 <Multi_key><P><T><8>                                                                               : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
+<Multi_key><P><T><KP_8>                                                                            : "♺" U267A # RECYCLING SYMBOL FOR GENERIC MATERIALS
 #
 #   Universal recycling symbol
 #   - French "ajouré"
@@ -1583,7 +1599,9 @@
 <Multi_key><R><E><C><U>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #   - "plastic type" for completeness
 <Multi_key><p><t><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><p><t><KP_0>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 <Multi_key><P><T><0>                                                                               : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
+<Multi_key><P><T><KP_0>                                                                            : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
 #
 #   Recycling symbol emoji
 #   - filled
@@ -1603,7 +1621,9 @@
 <Multi_key><R><E><C><V>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #   - "plastic type" for completeness
 <Multi_key><p><t><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><p><t><KP_9>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><P><T><9>                                                                               : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><P><T><KP_9>                                                                            : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 #
 #
 #^# Circled numbers
@@ -1875,12 +1895,12 @@
 <Multi_key><A><y>                                                                                  : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><a><y>                                                                                  : "ꜽ" UA73D # LATIN SMALL LETTER AY
 <Multi_key><C><9>                                                                                  : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
-<Multi_key><9><C>                                                                                  : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
 <Multi_key><C><KP_9>                                                                               : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
+<Multi_key><9><C>                                                                                  : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
 <Multi_key><KP_9><C>                                                                               : "Ꝯ" UA76E # LATIN CAPITAL LETTER CON
 <Multi_key><c><9>                                                                                  : "ꝯ" UA76F # LATIN SMALL LETTER CON
-<Multi_key><9><c>                                                                                  : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><c><KP_9>                                                                               : "ꝯ" UA76F # LATIN SMALL LETTER CON
+<Multi_key><9><c>                                                                                  : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><KP_9><c>                                                                               : "ꝯ" UA76F # LATIN SMALL LETTER CON
 <Multi_key><d><b>                                                                                  : "ȸ" U0238 # LATIN SMALL LETTER DB DIGRAPH
 <Multi_key><d><e><z>                                                                               : "ʤ" U02A4 # LATIN SMALL LETTER DEZH DIGRAPH
@@ -2003,23 +2023,41 @@
 #   See #*# SUPERSCRIPT
 #
 <Multi_key><7>                                                                                 <7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                           <KP_7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <C> : "𝼎" U1DF0E # LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
+<Multi_key><KP_7>                                                                              <C> : "𝼎" U1DF0E # LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 <Multi_key><7>                                                                                 <c> : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <c> : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <I> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+<Multi_key><KP_7>                                                                              <I> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
 <Multi_key><7>                                                                                 <i> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <i> : "ʖ" U0296 # LATIN LETTER INVERTED GLOTTAL STOP
 <Multi_key><7>                                                                                 <M> : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <M> : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <m> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <m> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <R> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><KP_7>                                                                              <R> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><7>                                                                                 <r> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><KP_7>                                                                              <r> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <Multi_key><7>                                                                                 <S> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <S> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <s> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <s> : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 <Multi_key><7>                                                                                 <U> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><KP_7>                                                                              <U> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><7>                                                                                 <u> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><KP_7>                                                                              <u> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
 <Multi_key><7><asciicircum>                                                                    <R> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><KP_7><asciicircum>                                                                 <R> : "𐞴" U107B4 # MODIFIER LETTER REVERSED GLOTTAL STOP WITH STROKE
 <Multi_key><7><asciicircum>                                                                    <r> : "ˁ" U02C1 # MODIFIER LETTER REVERSED GLOTTAL STOP
+<Multi_key><KP_7><asciicircum>                                                                 <r> : "ˁ" U02C1 # MODIFIER LETTER REVERSED GLOTTAL STOP
 <Multi_key><7><asciicircum>                                                                    <s> : "ˤ" U02E4 # MODIFIER LETTER SMALL REVERSED GLOTTAL STOP
+<Multi_key><KP_7><asciicircum>                                                                 <s> : "ˤ" U02E4 # MODIFIER LETTER SMALL REVERSED GLOTTAL STOP
 <Multi_key><7><asciicircum>                                                                    <U> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><KP_7><asciicircum>                                                                 <U> : "𐞳" U107B3 # MODIFIER LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><7><asciicircum>                                                                    <u> : "ˀ" U02C0 # MODIFIER LETTER GLOTTAL STOP
+<Multi_key><KP_7><asciicircum>                                                                 <u> : "ˀ" U02C0 # MODIFIER LETTER GLOTTAL STOP
 #
 #
 #   Superscript digraphs ("𐞀" U10780.."ꝰ" UA770) have sequences starting with
@@ -2060,6 +2098,7 @@
 <Multi_key><asciicircum><ampersand><t><e>                                                          : "𐞮" U107AE # MODIFIER LETTER SMALL TESH DIGRAPH
 <Multi_key><asciicircum><ampersand><u>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
 <Multi_key><asciicircum><ampersand><9>                                                             : "ꝰ" UA770 # MODIFIER LETTER US
+<Multi_key><asciicircum><ampersand><KP_9>                                                          : "ꝰ" UA770 # MODIFIER LETTER US
 #
 #
 #   Combining diacritical marks ("ᷔ" U1DD4.."᷏" U1DCF) have sequences starting
@@ -2081,6 +2120,7 @@
 <Multi_key><ampersand><u><r>                                                                       : "᷑" U1DD1 # COMBINING UR ABOVE
 <Multi_key><ampersand><u><s>                                                                       : "᷒" U1DD2 # COMBINING US ABOVE
 <Multi_key><ampersand><9>                                                                          : "᷒" U1DD2 # COMBINING US ABOVE
+<Multi_key><ampersand><KP_9>                                                                       : "᷒" U1DD2 # COMBINING US ABOVE
 <Multi_key><ampersand><z>                                                                          : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 #
 #
@@ -2199,23 +2239,33 @@
 #   6-shaped high quotation marks
 #
 <Multi_key><6>                                                                        <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK
+<Multi_key><KP_6>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK
 <Multi_key><6>                                                              <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK
+<Multi_key><KP_6>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK
 <Multi_key><6>                                                                          <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK
+<Multi_key><KP_6>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK
 <Multi_key><6>                                                                          <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK
+<Multi_key><KP_6>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK
 #
 #
 #   9-shaped high quotation marks
 #
 <Multi_key><9>                                                                        <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK
+<Multi_key><KP_9>                                                                     <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK
 <Multi_key><9>                                                              <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK
+<Multi_key><KP_9>                                                           <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK
 <Multi_key><9>                                                                          <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK
+<Multi_key><KP_9>                                                                       <quotedbl> : "”" U201D # RIGHT DOUBLE QUOTATION MARK
 <Multi_key><9>                                                                          <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK
+<Multi_key><KP_9>                                                                       <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK
 #
 #
 #   9-shaped low quotation marks
 #
 <Multi_key><9>                                                                             <comma> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK
+<Multi_key><KP_9>                                                                          <comma> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK
 <Multi_key><9>                                                                        <underscore> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
+<Multi_key><KP_9>                                                                     <underscore> : "„" U201E # DOUBLE LOW-9 QUOTATION MARK
 #
 #
 # # Angle quotation marks
@@ -2621,96 +2671,96 @@
 #   See #*# HOOK
 #
 <Multi_key><1><t>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><KP_1><t>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><2><t>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-#   <Multi_key><2><T> is used for tacks and turnstiles.
 <Multi_key><KP_2><t>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+#   <Multi_key><2><T> is used for tacks and turnstiles.
 #   <Multi_key><KP_2><T> is used for tacks and turnstiles.
 <Multi_key><3><t>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-#   <Multi_key><3><T> is used for tacks and turnstiles.
 <Multi_key><KP_3><t>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+#   <Multi_key><3><T> is used for tacks and turnstiles.
 #   <Multi_key><KP_3><T> is used for tacks and turnstiles.
 <Multi_key><4><t>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><KP_4><t>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><KP_4><T>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key><5><t>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <Multi_key><KP_5><t>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <Multi_key><KP_5><T>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 #
 #
 # # Left-stem tone bars
 #
 <Multi_key><t><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-<Multi_key><T><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
 <Multi_key><t><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><T><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
 <Multi_key><T><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
 <Multi_key><t><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
-#   <Multi_key><T><2> is used for tacks and turnstiles.
 <Multi_key><t><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+#   <Multi_key><T><2> is used for tacks and turnstiles.
 #   <Multi_key><T><KP_2> is used for tacks and turnstiles.
 <Multi_key><t><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
-#   <Multi_key><T><3> is used for tacks and turnstiles.
 <Multi_key><t><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+#   <Multi_key><T><3> is used for tacks and turnstiles.
 #   <Multi_key><T><KP_3> is used for tacks and turnstiles.
 <Multi_key><t><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-<Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
 <Multi_key><t><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
 <Multi_key><T><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
 <Multi_key><t><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-<Multi_key><T><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
 <Multi_key><t><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><T><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
 <Multi_key><T><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
 #
 #
 # # Dotted tone bars
 #
 <Multi_key><1><i>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
-<Multi_key><1><I>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
 <Multi_key><KP_1><i>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><1><I>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
 <Multi_key><KP_1><I>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
 <Multi_key><2><i>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
-<Multi_key><2><I>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
 <Multi_key><KP_2><i>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><2><I>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
 <Multi_key><KP_2><I>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
 <Multi_key><3><i>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
-<Multi_key><3><I>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
 <Multi_key><KP_3><i>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><3><I>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
 <Multi_key><KP_3><I>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
 <Multi_key><4><i>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
-<Multi_key><4><I>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
 <Multi_key><KP_4><i>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><4><I>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
 <Multi_key><KP_4><I>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
 <Multi_key><5><i>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
-<Multi_key><5><I>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
 <Multi_key><KP_5><i>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><5><I>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
 <Multi_key><KP_5><I>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
 #
 #
 # # Dotted left-stem tone bars
 #
 <Multi_key><i><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><i><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 <Multi_key><I><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
 #
 #
@@ -3684,11 +3734,15 @@
 #   Some sequences are case sensitive.
 #
 <Multi_key><n><4>                                                                                  : "♩" U2669 # QUARTER NOTE
+<Multi_key><n><KP_4>                                                                               : "♩" U2669 # QUARTER NOTE
 <Multi_key><N><4>                                                                                  : "♩" U2669 # QUARTER NOTE
+<Multi_key><N><KP_4>                                                                               : "♩" U2669 # QUARTER NOTE
 <Multi_key><q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
 <Multi_key><Q><numbersign>                                                                         : "♩" U2669 # QUARTER NOTE
 <Multi_key><n><8>                                                                                  : "♪" U266A # EIGHTH NOTE
+<Multi_key><n><KP_8>                                                                               : "♪" U266A # EIGHTH NOTE
 <Multi_key><N><8>                                                                                  : "♪" U266A # EIGHTH NOTE
+<Multi_key><N><KP_8>                                                                               : "♪" U266A # EIGHTH NOTE
 <Multi_key><e><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
 <Multi_key><h><numbersign>                                                                         : "♪" U266A # EIGHTH NOTE
 <Multi_key><h><minus>                                                                              : "♫" U266B # BEAMED EIGHTH NOTES
@@ -5361,16 +5415,16 @@
 #   See # # Quadruple prime
 #
 <Multi_key><1><apostrophe>                                                                         : "′" U2032 # PRIME
-<Multi_key><1><rightsinglequotemark>                                                               : "′" U2032 # PRIME
 <Multi_key><KP_1><apostrophe>                                                                      : "′" U2032 # PRIME
+<Multi_key><1><rightsinglequotemark>                                                               : "′" U2032 # PRIME
 <Multi_key><KP_1><rightsinglequotemark>                                                            : "′" U2032 # PRIME
 <Multi_key><2><apostrophe>                                                                         : "″" U2033 # DOUBLE PRIME
-<Multi_key><2><rightsinglequotemark>                                                               : "″" U2033 # DOUBLE PRIME
 <Multi_key><KP_2><apostrophe>                                                                      : "″" U2033 # DOUBLE PRIME
+<Multi_key><2><rightsinglequotemark>                                                               : "″" U2033 # DOUBLE PRIME
 <Multi_key><KP_2><rightsinglequotemark>                                                            : "″" U2033 # DOUBLE PRIME
 <Multi_key><3><apostrophe>                                                                         : "‴" U2034 # TRIPLE PRIME
-<Multi_key><3><rightsinglequotemark>                                                               : "‴" U2034 # TRIPLE PRIME
 <Multi_key><KP_3><apostrophe>                                                                      : "‴" U2034 # TRIPLE PRIME
+<Multi_key><3><rightsinglequotemark>                                                               : "‴" U2034 # TRIPLE PRIME
 <Multi_key><KP_3><rightsinglequotemark>                                                            : "‴" U2034 # TRIPLE PRIME
 #
 #
@@ -5793,8 +5847,8 @@
 <Multi_key><less><exclam><less><exclam>                                                            : "⇈" U21C8 # UPWARDS PAIRED ARROWS
 #Multi_key><space><2><minus><greater>                                                              : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><space><2><minus>                                                                       : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key><nobreakspace><2><minus>                                                                : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><space><KP_2><KP_Subtract>                                                              : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key><nobreakspace><2><minus>                                                                : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><nobreakspace><KP_2><KP_Subtract>                                                       : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><minus><greater><minus><greater>                                                <space> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
 <Multi_key><minus><greater><minus><greater>                                         <nobreakspace> : "⇉" U21C9 # RIGHTWARDS PAIRED ARROWS
@@ -5842,8 +5896,8 @@
 <Multi_key><exclam><greater><less>                                                                 : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 #Multi_key><space><3><minus><greater>                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><space><3>                                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><3>                                                                       : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><space><KP_3>                                                                           : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><3>                                                                       : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><nobreakspace><KP_3>                                                                    : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 #Multi_key><minus><greater><minus><greater><minus><greater>                                        : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus>                                                 : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
@@ -6989,8 +7043,8 @@
 <Multi_key><o><slash><greater>                                                                     : "♂" U2642 # MALE SIGN
 #Multi_key><space><less><3><numbersign><minus>                                                     : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><space><less><3>                                                                        : "♠" U2660 # BLACK SPADE SUIT
-<Multi_key><nobreakspace><less><3>                                                                 : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><space><less><KP_3>                                                                     : "♠" U2660 # BLACK SPADE SUIT
+<Multi_key><nobreakspace><less><3>                                                                 : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><nobreakspace><less><KP_3>                                                              : "♠" U2660 # BLACK SPADE SUIT
 <Multi_key><8><greater>                                                                            : "♡" U2661 # WHITE HEART SUIT
 <Multi_key><KP_8><greater>                                                                         : "♡" U2661 # WHITE HEART SUIT
@@ -7343,8 +7397,8 @@
 #
 #Multi_key><space><greater><minus><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><space><greater><minus><0>                                                              : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><space><greater><minus><KP_0>                                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><nobreakspace><greater><minus><KP_0>                                                    : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><period><period><period><greater>                                                       : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><bar><less><exclam>                                                                     : "⤒" U2912 # UPWARDS ARROW TO BAR
@@ -8175,8 +8229,8 @@
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                       <nobreakspace> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><space><plus><2>                                                                        : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><nobreakspace><plus><2>                                                                 : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><space><plus><KP_2>                                                                     : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><nobreakspace><plus><2>                                                                 : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><nobreakspace><plus><KP_2>                                                              : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 #
 #   This black triangle overlay in "⨨" U2A28 is often caret shaped.
@@ -8855,8 +8909,8 @@
 <Multi_key><bar><minus><bar><minus>                                                        <space> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
 <Multi_key><bar><minus><bar><minus>                                                 <nobreakspace> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
 <Multi_key><2><T><apostrophe>                                                                      : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
-<Multi_key><2><T><rightsinglequotemark>                                                            : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><KP_2><T><apostrophe>                                                                   : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><2><T><rightsinglequotemark>                                                            : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><KP_2><T><rightsinglequotemark>                                                         : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><apostrophe><equal>                                                              : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><equal><rightsinglequotemark><equal>                                                    : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
