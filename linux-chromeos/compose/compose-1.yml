@@ -7575,7 +7575,6 @@
 <Multi_key><nobreakspace><asciitilde><minus>                                                       : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><space><less><minus><asciitilde>                                                        : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><nobreakspace><less><minus><asciitilde>                                                 : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
-#@
 <Multi_key><minus><greater><asciitilde>                                                    <space> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde>                                             <nobreakspace> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde><asciitilde>                                        <space> : "⥵" U2975 # RIGHTWARDS ARROW ABOVE ALMOST EQUAL TO
@@ -7585,26 +7584,23 @@
 <Multi_key><nobreakspace><less><less><minus>                                               <space> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 <Multi_key><nobreakspace><less><less><minus>                                        <nobreakspace> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 #   Mirror is U2B43.
-<Multi_key><space><less><minus><less>                                                      <space> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
-<Multi_key><space><less><minus><less>                                               <nobreakspace> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
-<Multi_key><nobreakspace><less><minus><less>                                               <space> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
-<Multi_key><nobreakspace><less><minus><less>                                        <nobreakspace> : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
-<Multi_key><space><greater><minus><greater>                                                <space> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
-<Multi_key><space><greater><minus><greater>                                         <nobreakspace> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
-<Multi_key><nobreakspace><greater><minus><greater>                                         <space> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
-<Multi_key><nobreakspace><greater><minus><greater>                                  <nobreakspace> : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
-<Multi_key><c><minus><greater>                                                             <space> : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
-<Multi_key><c><minus><greater>                                                      <nobreakspace> : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
+<Multi_key><space><less><minus><less>                                                              : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+<Multi_key><nobreakspace><less><minus><less>                                                       : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
+<Multi_key><space><greater><minus><greater>                                                        : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
+<Multi_key><nobreakspace><greater><minus><greater>                                                 : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
+<Multi_key><c><minus><greater>                                                                     : "⥹" U2979 # SUBSET ABOVE RIGHTWARDS ARROW
 #   Mirror is "⭄" U2B44.
 <Multi_key><less><minus><c>                                                                        : "⥺" U297A # LEFTWARDS ARROW THROUGH SUBSET
-<Multi_key><b><less><minus>                                                                        : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><c><c><less><minus>                                                                     : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
-<Multi_key><c><backslash><less><minus>                                                             : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+#Multi_key><b><less><minus>                                                                        : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><b><less>                                                                               : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><c><c><less>                                                                            : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><c><backslash><less>                                                                    : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 #
-#   Fishtails "⥼" U297C.."⥿" U297F are supported by two iconic multikey options
-#   in parallel, for everybody to pick their preferred one: case insensitive J,
-#   single for efficiency (although the glyphs suggest duplicating the "j"), or
-#   capital Y, referring mainly to "ϒ" U03D2 GREEK UPSILON WITH HOOK SYMBOL.
+#   Fishtails "⥼" U297C.."⥿" U297F are concurrently supported by two iconic
+#   multikey sequence constituents, for everybody to pick their preferred one:
+#   case insensitive J, single for efficiency (although the glyphs suggest
+#   duplicating the "j"); and capital Y, referring to "ϒ" U03D2 GREEK UPSILON
+#   WITH HOOK SYMBOL.
 #   See # # Greek mathematical BMP symbols
 #
 <Multi_key><j><minus>                                                                              : "⥼" U297C # LEFT FISH TAIL
@@ -7613,10 +7609,8 @@
 <Multi_key><nobreakspace><Y><minus>                                                                : "⥼" U297C # LEFT FISH TAIL
 <Multi_key><space><minus><j>                                                                       : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><nobreakspace><minus><j>                                                                : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><space><minus><J>                                                               <space> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><space><minus><J>                                                        <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><nobreakspace><minus><J>                                                        <space> : "⥽" U297D # RIGHT FISH TAIL
-<Multi_key><nobreakspace><minus><J>                                                 <nobreakspace> : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><space><minus><J>                                                                       : "⥽" U297D # RIGHT FISH TAIL
+<Multi_key><nobreakspace><minus><J>                                                                : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><space><minus><Y>                                                                       : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><nobreakspace><minus><Y>                                                                : "⥽" U297D # RIGHT FISH TAIL
 <Multi_key><j><exclam>                                                                             : "⥾" U297E # UP FISH TAIL
@@ -7624,10 +7618,8 @@
 <Multi_key><Y><exclam>                                                                             : "⥾" U297E # UP FISH TAIL
 <Multi_key><space><exclam><j>                                                                      : "⥿" U297F # DOWN FISH TAIL
 <Multi_key><nobreakspace><exclam><j>                                                               : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><space><exclam><J>                                                              <space> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><space><exclam><J>                                                       <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><nobreakspace><exclam><J>                                                       <space> : "⥿" U297F # DOWN FISH TAIL
-<Multi_key><nobreakspace><exclam><J>                                                <nobreakspace> : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><space><exclam><J>                                                                      : "⥿" U297F # DOWN FISH TAIL
+<Multi_key><nobreakspace><exclam><J>                                                               : "⥿" U297F # DOWN FISH TAIL
 <Multi_key><space><exclam><Y>                                                                      : "⥿" U297F # DOWN FISH TAIL
 <Multi_key><nobreakspace><exclam><Y>                                                               : "⥿" U297F # DOWN FISH TAIL
 #
@@ -7641,70 +7633,52 @@
 #
 <Multi_key><3><bar>                                                                                : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><KP_3><bar>                                                                             : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
-<Multi_key><z><period>                                                                     <space> : "⦁" U2981 # Z NOTATION SPOT
-<Multi_key><z><period>                                                              <nobreakspace> : "⦁" U2981 # Z NOTATION SPOT
-<Multi_key><z><colon>                                                                      <space> : "⦂" U2982 # Z NOTATION TYPE COLON
-<Multi_key><z><colon>                                                               <nobreakspace> : "⦂" U2982 # Z NOTATION TYPE COLON
-<Multi_key><space><braceleft><braceleft>                                                   <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
-<Multi_key><space><braceleft><braceleft>                                            <nobreakspace> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
-<Multi_key><nobreakspace><braceleft><braceleft>                                            <space> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
-<Multi_key><nobreakspace><braceleft><braceleft>                                     <nobreakspace> : "⦃" U2983 # LEFT WHITE CURLY BRACKET
-<Multi_key><space><braceright><braceright>                                                 <space> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
-<Multi_key><space><braceright><braceright>                                          <nobreakspace> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
-<Multi_key><nobreakspace><braceright><braceright>                                          <space> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
-<Multi_key><nobreakspace><braceright><braceright>                                   <nobreakspace> : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
-<Multi_key><space><parenleft><parenleft>                                                   <space> : "⦅" U2985 # LEFT WHITE PARENTHESIS
-<Multi_key><space><parenleft><parenleft>                                            <nobreakspace> : "⦅" U2985 # LEFT WHITE PARENTHESIS
-<Multi_key><nobreakspace><parenleft><parenleft>                                            <space> : "⦅" U2985 # LEFT WHITE PARENTHESIS
-<Multi_key><nobreakspace><parenleft><parenleft>                                     <nobreakspace> : "⦅" U2985 # LEFT WHITE PARENTHESIS
-<Multi_key><space><parenright><parenright>                                                 <space> : "⦆" U2986 # RIGHT WHITE PARENTHESIS
-<Multi_key><space><parenright><parenright>                                          <nobreakspace> : "⦆" U2986 # RIGHT WHITE PARENTHESIS
-<Multi_key><nobreakspace><parenright><parenright>                                          <space> : "⦆" U2986 # RIGHT WHITE PARENTHESIS
-<Multi_key><nobreakspace><parenright><parenright>                                   <nobreakspace> : "⦆" U2986 # RIGHT WHITE PARENTHESIS
-<Multi_key><z><parenleft>                                                                  <space> : "⦇" U2987 # Z NOTATION LEFT IMAGE BRACKET
-<Multi_key><z><parenleft>                                                           <nobreakspace> : "⦇" U2987 # Z NOTATION LEFT IMAGE BRACKET
-<Multi_key><z><parenright>                                                                 <space> : "⦈" U2988 # Z NOTATION RIGHT IMAGE BRACKET
-<Multi_key><z><parenright>                                                          <nobreakspace> : "⦈" U2988 # Z NOTATION RIGHT IMAGE BRACKET
+<Multi_key><z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
+<Multi_key><z><colon>                                                                              : "⦂" U2982 # Z NOTATION TYPE COLON
+#Multi_key><space><braceleft><braceleft>                                                           : "⦃" U2983 # LEFT WHITE CURLY BRACKET
+<Multi_key><space><braceleft>                                                                      : "⦃" U2983 # LEFT WHITE CURLY BRACKET
+<Multi_key><nobreakspace><braceleft>                                                               : "⦃" U2983 # LEFT WHITE CURLY BRACKET
+#Multi_key><space><braceright><braceright>                                                         : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
+<Multi_key><space><braceright>                                                                     : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
+<Multi_key><nobreakspace><braceright>                                                              : "⦄" U2984 # RIGHT WHITE CURLY BRACKET
+<Multi_key><space><parenleft><parenleft>                                                           : "⦅" U2985 # LEFT WHITE PARENTHESIS
+<Multi_key><nobreakspace><parenleft><parenleft>                                                    : "⦅" U2985 # LEFT WHITE PARENTHESIS
+<Multi_key><space><parenright><parenright>                                                         : "⦆" U2986 # RIGHT WHITE PARENTHESIS
+<Multi_key><nobreakspace><parenright><parenright>                                                  : "⦆" U2986 # RIGHT WHITE PARENTHESIS
+<Multi_key><z><parenleft>                                                                          : "⦇" U2987 # Z NOTATION LEFT IMAGE BRACKET
+<Multi_key><z><parenright>                                                                         : "⦈" U2988 # Z NOTATION RIGHT IMAGE BRACKET
 <Multi_key><z><less>                                                                       <space> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
 <Multi_key><z><less>                                                                <nobreakspace> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
 <Multi_key><z><greater>                                                                    <space> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
 <Multi_key><z><greater>                                                             <nobreakspace> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
-<Multi_key><space><bracketleft><underscore>                                                <space> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><space><bracketleft><underscore>                                         <nobreakspace> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><nobreakspace><bracketleft><underscore>                                         <space> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><nobreakspace><bracketleft><underscore>                                  <nobreakspace> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><space><bracketright><underscore>                                               <space> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><space><bracketright><underscore>                                        <nobreakspace> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><nobreakspace><bracketright><underscore>                                        <space> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><nobreakspace><bracketright><underscore>                                 <nobreakspace> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
-<Multi_key><bracketleft><grave>                                                            <space> : "⦍" U298D # LEFT SQUARE BRACKET WITH TICK IN TOP CORNER
-<Multi_key><bracketleft><grave>                                                     <nobreakspace> : "⦍" U298D # LEFT SQUARE BRACKET WITH TICK IN TOP CORNER
-<Multi_key><bracketright><grave><grave>                                                    <space> : "⦎" U298E # RIGHT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
-<Multi_key><bracketright><grave><grave>                                             <nobreakspace> : "⦎" U298E # RIGHT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
-<Multi_key><bracketleft><grave><grave>                                                     <space> : "⦏" U298F # LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
-<Multi_key><bracketleft><grave><grave>                                              <nobreakspace> : "⦏" U298F # LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
-<Multi_key><bracketright><grave>                                                           <space> : "⦐" U2990 # RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER
-<Multi_key><bracketright><grave>                                                    <nobreakspace> : "⦐" U2990 # RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER
-<Multi_key><bracketleft><less><period>                                                     <space> : "⦑" U2991 # LEFT ANGLE BRACKET WITH DOT
-<Multi_key><bracketleft><less><period>                                              <nobreakspace> : "⦑" U2991 # LEFT ANGLE BRACKET WITH DOT
-<Multi_key><bracketright><greater><period>                                                 <space> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
-<Multi_key><bracketright><greater><period>                                          <nobreakspace> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
-<Multi_key><period><bracketright><greater>                                                 <space> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
-<Multi_key><period><bracketright><greater>                                          <nobreakspace> : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
+<Multi_key><space><bracketleft><underscore>                                                        : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
+<Multi_key><nobreakspace><bracketleft><underscore>                                                 : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
+<Multi_key><space><bracketright><underscore>                                                       : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
+<Multi_key><nobreakspace><bracketright><underscore>                                                : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
+<Multi_key><bracketleft><grave>                                                                    : "⦍" U298D # LEFT SQUARE BRACKET WITH TICK IN TOP CORNER
+<Multi_key><bracketright><grave>                                                                   : "⦎" U298E # RIGHT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
+<Multi_key><bracketleft><apostrophe>                                                       <space> : "⦏" U298F # LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
+<Multi_key><bracketleft><apostrophe>                                                <nobreakspace> : "⦏" U298F # LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
+<Multi_key><bracketright><apostrophe>                                                              : "⦐" U2990 # RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER
+<Multi_key><less><bracketleft><period>                                                             : "⦑" U2991 # LEFT ANGLE BRACKET WITH DOT
+<Multi_key><period><greater><bracketright>                                                         : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
 <Multi_key><parenleft><less>                                                               <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
 <Multi_key><parenleft><less>                                                        <nobreakspace> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><space><parenleft><less>                                                        <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><space><parenleft><less>                                                 <nobreakspace> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><nobreakspace><parenleft><less>                                                 <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><nobreakspace><parenleft><less>                                          <nobreakspace> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
-<Multi_key><space><parenright><greater>                                                    <space> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
-<Multi_key><space><parenright><greater>                                             <nobreakspace> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
-<Multi_key><nobreakspace><parenright><greater>                                             <space> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
-<Multi_key><nobreakspace><parenright><greater>                                      <nobreakspace> : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
-<Multi_key><parenleft><parenleft><greater>                                                 <space> : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
-<Multi_key><parenleft><parenleft><greater>                                          <nobreakspace> : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
-<Multi_key><parenright><parenright><less>                                                  <space> : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
-<Multi_key><parenright><parenright><less>                                           <nobreakspace> : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+<Multi_key><space><parenleft><less>                                                                : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><nobreakspace><parenleft><less>                                                         : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><space><less><parenleft>                                                                : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><nobreakspace><less><parenleft>                                                         : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
+<Multi_key><space><parenright><greater>                                                            : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><nobreakspace><parenright><greater>                                                     : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><space><greater><parenright>                                                            : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><nobreakspace><greater><parenright>                                                     : "⦔" U2994 # RIGHT ARC GREATER-THAN BRACKET
+<Multi_key><parenleft><parenleft><greater>                                                         : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
+<Multi_key><parenleft><greater><parenleft>                                                         : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
+<Multi_key><greater><parenleft><parenleft>                                                         : "⦕" U2995 # DOUBLE LEFT ARC GREATER-THAN BRACKET
+<Multi_key><parenright><parenright><less>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+<Multi_key><parenright><less><parenright>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+<Multi_key><less><parenright><parenright>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
+#@
 <Multi_key><bracketleft><parenleft>                                                        <space> : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
 <Multi_key><bracketleft><parenleft>                                                 <nobreakspace> : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
 <Multi_key><bracketright><parenright>                                                      <space> : "⦘" U2998 # RIGHT BLACK TORTOISE SHELL BRACKET
