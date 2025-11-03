@@ -7739,8 +7739,8 @@
 <Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 #Multi_key><less><slash><parenleft><bar>                                                           : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
-<Multi_key><O><backslash>                                                                  <space> : "⦰" U29B0 # REVERSED EMPTY SET
-<Multi_key><O><backslash>                                                           <nobreakspace> : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><space><O><backslash>                                                                   : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><nobreakspace><O><backslash>                                                            : "⦰" U29B0 # REVERSED EMPTY SET
 #Multi_key><space><minus><O><slash>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <Multi_key><space><minus><O>                                                                       : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <Multi_key><nobreakspace><minus><O>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
@@ -7749,53 +7749,46 @@
 #Multi_key><minus><greater><O><slash>                                                              : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
 <Multi_key><minus><greater><O>                                                                     : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
 <Multi_key><less><minus><O><slash>                                                                 : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
-#@
 <Multi_key><O><minus>                                                                      <space> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                               <nobreakspace> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar>                                                                 <nobreakspace> : "⦶" U29B6 # CIRCLED VERTICAL BAR
 <Multi_key><O><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
-<Multi_key><space><O><backslash>                                                           <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
-<Multi_key><space><O><backslash>                                                    <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
-<Multi_key><nobreakspace><O><backslash>                                                    <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
-<Multi_key><nobreakspace><O><backslash>                                             <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
+<Multi_key><O><backslash>                                                                  <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
+<Multi_key><O><backslash>                                                           <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
 <Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
 <Multi_key><O><X>                                                                                  : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
 <Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><space><O><percent>                                                             <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><space><O><percent>                                                      <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><nobreakspace><O><percent>                                                      <space> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-<Multi_key><nobreakspace><O><percent>                                               <nobreakspace> : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><space><O><percent>                                                                     : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><nobreakspace><O><percent>                                                              : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 #
 #   Consistently, "⦽" U29BD is parsed as « ¦O<! » rather than « ¦O^| » that was
 #   an intuitive option by lack of the rules making « ¦O<! » more predictable.
+#   The other way around for intuitivity is prevented from screwing up the
+#   simple up arrow "↑" U2191 and can therefore be streamlined by cropping it
+#   to the same length.
 #   See #   Arrows and harpoons
 #   See #   Parsing order
 #
 <Multi_key><O><less><exclam>                                                                       : "⦽" U29BD # UP ARROW THROUGH CIRCLE
-<Multi_key><space><O><o>                                                                   <space> : "⦾" U29BE # CIRCLED WHITE BULLET
-<Multi_key><space><O><o>                                                            <nobreakspace> : "⦾" U29BE # CIRCLED WHITE BULLET
-<Multi_key><nobreakspace><O><o>                                                            <space> : "⦾" U29BE # CIRCLED WHITE BULLET
-<Multi_key><nobreakspace><O><o>                                                     <nobreakspace> : "⦾" U29BE # CIRCLED WHITE BULLET
-<Multi_key><space><O><period>                                                              <space> : "⦿" U29BF # CIRCLED BULLET
-<Multi_key><space><O><period>                                                       <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
-<Multi_key><nobreakspace><O><period>                                                       <space> : "⦿" U29BF # CIRCLED BULLET
-<Multi_key><nobreakspace><O><period>                                                <nobreakspace> : "⦿" U29BF # CIRCLED BULLET
+#Multi_key><space><less><exclam><O>                                                                : "⦽" U29BD # UP ARROW THROUGH CIRCLE
+<Multi_key><space><less><exclam>                                                                   : "⦽" U29BD # UP ARROW THROUGH CIRCLE
+<Multi_key><nobreakspace><less><exclam>                                                            : "⦽" U29BD # UP ARROW THROUGH CIRCLE
+<Multi_key><space><O><o>                                                                           : "⦾" U29BE # CIRCLED WHITE BULLET
+<Multi_key><nobreakspace><O><o>                                                                    : "⦾" U29BE # CIRCLED WHITE BULLET
+<Multi_key><space><O><period>                                                                      : "⦿" U29BF # CIRCLED BULLET
+<Multi_key><nobreakspace><O><period>                                                               : "⦿" U29BF # CIRCLED BULLET
 <Multi_key><O><less>                                                                       <space> : "⧀" U29C0 # CIRCLED LESS-THAN
 <Multi_key><O><less>                                                                <nobreakspace> : "⧀" U29C0 # CIRCLED LESS-THAN
 <Multi_key><O><greater>                                                                            : "⧁" U29C1 # CIRCLED GREATER-THAN
-<Multi_key><space><space><O><o>                                                            <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><space><space><O><o>                                                     <nobreakspace> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><nobreakspace><space><O><o>                                                     <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><nobreakspace><space><O><o>                                              <nobreakspace> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><nobreakspace><nobreakspace><O><o>                                              <space> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><nobreakspace><nobreakspace><O><o>                                       <nobreakspace> : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-<Multi_key><space><O><equal>                                                               <space> : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
-<Multi_key><space><O><equal>                                                        <nobreakspace> : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
-<Multi_key><nobreakspace><O><equal>                                                        <space> : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
-<Multi_key><nobreakspace><O><equal>                                                 <nobreakspace> : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
+#Multi_key><space><space><O><o>                                                                    : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+<Multi_key><space><space><O>                                                                       : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+<Multi_key><nobreakspace><space><O>                                                                : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+<Multi_key><nobreakspace><nobreakspace><O>                                                         : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+<Multi_key><O><equal>                                                                              : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
+#@
 <Multi_key><bracketleft><slash><bracketright>                                              <space> : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
 <Multi_key><bracketleft><slash><bracketright>                                       <nobreakspace> : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
 <Multi_key><bracketleft><backslash><bracketright>                                          <space> : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
