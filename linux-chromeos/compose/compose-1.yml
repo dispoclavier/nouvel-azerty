@@ -4982,9 +4982,11 @@
 #   for intuitivity.
 #
 #   Sequences streamlined by cropping non-critical input besides trailing space
-#   are duplicated full-length and commented out for the record, in case some
-#   need to be restored to prevent conflicts with new sequences.
-#   See #Multi_key
+#   are duplicated full-length and commented out for the record, right above
+#   the streamlined sequences, in case some of them need to be restored later
+#   to prevent conflicts with new sequences, as there is no better place to
+#   store this information.
+#   See #Multi_key><
 #
 #
 #   Design schemes
@@ -5129,6 +5131,9 @@
 #   This scheme is also the most efficient, since the bracket has a terminator
 #   status after the appropriate number of less or greater as for "⟨" U27E8,
 #   "⟩" U27E9 and "⟪" U27EA, "⟫" U27EB.
+#
+#   However, in the case of "⦗" U2997, "⦘" U2998, it is not sure what should be
+#   the the trailing transform. So, both ways are supported.
 #
 #
 #   Slanted symbols
@@ -7678,20 +7683,18 @@
 <Multi_key><parenright><parenright><less>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
 <Multi_key><parenright><less><parenright>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
 <Multi_key><less><parenright><parenright>                                                          : "⦖" U2996 # DOUBLE RIGHT ARC LESS-THAN BRACKET
-#@
-<Multi_key><bracketleft><parenleft>                                                        <space> : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
-<Multi_key><bracketleft><parenleft>                                                 <nobreakspace> : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
+<Multi_key><parenleft><bracketleft>                                                                : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
+<Multi_key><bracketleft><parenleft>                                                                : "⦗" U2997 # LEFT BLACK TORTOISE SHELL BRACKET
+<Multi_key><parenright><bracketright>                                                      <space> : "⦘" U2998 # RIGHT BLACK TORTOISE SHELL BRACKET
+<Multi_key><parenright><bracketright>                                               <nobreakspace> : "⦘" U2998 # RIGHT BLACK TORTOISE SHELL BRACKET
 <Multi_key><bracketright><parenright>                                                      <space> : "⦘" U2998 # RIGHT BLACK TORTOISE SHELL BRACKET
 <Multi_key><bracketright><parenright>                                               <nobreakspace> : "⦘" U2998 # RIGHT BLACK TORTOISE SHELL BRACKET
 <Multi_key><bar><period>                                                                   <space> : "⦙" U2999 # DOTTED FENCE
 <Multi_key><bar><period>                                                            <nobreakspace> : "⦙" U2999 # DOTTED FENCE
-<Multi_key><bar><w>                                                                        <space> : "⦚" U299A # VERTICAL ZIGZAG LINE
-<Multi_key><bar><w>                                                                 <nobreakspace> : "⦚" U299A # VERTICAL ZIGZAG LINE
+<Multi_key><bar><w>                                                                                : "⦚" U299A # VERTICAL ZIGZAG LINE
 <Multi_key><backslash><parenleft><minus>                                                           : "⦛" U299B # MEASURED ANGLE OPENING LEFT
-<Multi_key><L><bracketright>                                                               <space> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><L><bracketright>                                                        <nobreakspace> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><L><parenright><period>                                                         <space> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<Multi_key><L><parenright><period>                                                  <nobreakspace> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
+<Multi_key><L><bracketright>                                                                       : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><L><parenright><period>                                                                 : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
 <Multi_key><minus><slash><s>                                                                       : "⦞" U299E # ANGLE WITH S INSIDE
 <Multi_key><space><minus><s><slash>                                                                : "⦞" U299E # ANGLE WITH S INSIDE
 <Multi_key><nobreakspace><minus><s><slash>                                                         : "⦞" U299E # ANGLE WITH S INSIDE
@@ -7699,7 +7702,8 @@
 <Multi_key><nobreakspace><space><minus><slash>                                                     : "⦟" U299F # ACUTE ANGLE
 <Multi_key><nobreakspace><nobreakspace><minus><slash>                                              : "⦟" U299F # ACUTE ANGLE
 <Multi_key><backslash><parenleft><slash>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
-<Multi_key><slash><parenleft><backslash>                                                           : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
+#Multi_key><slash><parenleft><backslash>                                                           : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
+<Multi_key><slash><parenleft>                                                                      : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
 <Multi_key><space><minus><slash>                                                                   : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
@@ -7709,12 +7713,9 @@
 <Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
-<Multi_key><space><space><slash><minus>                                                    <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><space><space><slash><minus>                                             <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><space><slash><minus>                                             <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><space><slash><minus>                                      <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><nobreakspace><slash><minus>                                      <space> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
-<Multi_key><nobreakspace><nobreakspace><slash><minus>                               <nobreakspace> : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><space><space><slash><minus>                                                            : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><space><slash><minus>                                                     : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
+<Multi_key><nobreakspace><nobreakspace><slash><minus>                                              : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 #
 #   The sequences for "⦨" U29A8.."⦯" U29AF are composed parsing the symbols in
 #   the positive direction, counter-clockwise, and the arrowed angle leg like
@@ -7740,20 +7741,15 @@
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><O><backslash>                                                                  <space> : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⦰" U29B0 # REVERSED EMPTY SET
-<Multi_key><space><minus><O><slash>                                                        <space> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<Multi_key><space><minus><O><slash>                                                 <nobreakspace> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<Multi_key><nobreakspace><minus><O><slash>                                                 <space> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<Multi_key><nobreakspace><minus><O><slash>                                          <nobreakspace> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<Multi_key><o><O><slash>                                                                   <space> : "⦲" U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
-<Multi_key><o><O><slash>                                                            <nobreakspace> : "⦲" U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
-<Multi_key><space><minus><greater><O><slash>                                               <space> : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
-<Multi_key><space><minus><greater><O><slash>                                        <nobreakspace> : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
-<Multi_key><nobreakspace><minus><greater><O><slash>                                        <space> : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
-<Multi_key><nobreakspace><minus><greater><O><slash>                                 <nobreakspace> : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
-<Multi_key><space><less><minus><O><slash>                                                  <space> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
-<Multi_key><space><less><minus><O><slash>                                           <nobreakspace> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
-<Multi_key><nobreakspace><less><minus><O><slash>                                           <space> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
-<Multi_key><nobreakspace><less><minus><O><slash>                                    <nobreakspace> : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
+#Multi_key><space><minus><O><slash>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<Multi_key><space><minus><O>                                                                       : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<Multi_key><nobreakspace><minus><O>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+#Multi_key><o><O><slash>                                                                           : "⦲" U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
+<Multi_key><o><O>                                                                                  : "⦲" U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
+#Multi_key><minus><greater><O><slash>                                                              : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
+<Multi_key><minus><greater><O>                                                                     : "⦳" U29B3 # EMPTY SET WITH RIGHT ARROW ABOVE
+<Multi_key><less><minus><O><slash>                                                                 : "⦴" U29B4 # EMPTY SET WITH LEFT ARROW ABOVE
+#@
 <Multi_key><O><minus>                                                                      <space> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><minus>                                                               <nobreakspace> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <Multi_key><O><bar>                                                                        <space> : "⦶" U29B6 # CIRCLED VERTICAL BAR
