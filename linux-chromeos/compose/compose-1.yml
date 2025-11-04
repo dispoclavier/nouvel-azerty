@@ -3998,11 +3998,11 @@
 #   (informative Unicode alias), also supported here for a more complete set of
 #   shadowed boxes.
 #
-<Multi_key><bracketleft><slash><bracketright><bracketright>                                        : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><bracketleft><backslash><bracketright><bracketright>                                    : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><bracketleft><slash><minus><bracketright>                                               : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><bracketleft><backslash><minus><bracketright>                                           : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><slash><colon><bracketright>                                               : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><backslash><colon><bracketright>                                           : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><bracketleft><bracketleft><backslash><bracketright>                                     : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
+<Multi_key><bracketleft><minus><backslash><bracketright>                                           : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
 #
 #
 #^# Emoji by multikey
@@ -4011,8 +4011,8 @@
 #
 #   Due to its hijacked character, the sun emoji is not supported in group 4 of
 #   "$", but in an extra group of "$", with a consistent alphabetic mnemonic on
-#   C02 "S", and by two case insensitive, less ambiguous English and French (as
-#   well as Italian, Portuguese and Spanish) multikey sequences.
+#   C02 "S", and by two case insensitive, less ambiguous English and French, as
+#   well as Italian, Portuguese and Spanish multikey sequences.
 #   See # # C02 dollar
 #
 <Multi_key><s><u><n>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
@@ -4984,8 +4984,8 @@
 #   Sequences streamlined by cropping non-critical input besides trailing space
 #   are duplicated full-length and commented out for the record, right above
 #   the streamlined sequences, in case some of them need to be restored later
-#   to prevent conflicts with new sequences, as there is no better place to
-#   store this information.
+#   to prevent conflicts with new sequences, as it happened for "⊟" U229F,
+#   admitting that there is no better place to store this information.
 #   See #Multi_key><
 #
 #
@@ -6401,8 +6401,7 @@
 <Multi_key><nobreakspace><o><minus>                                                 <nobreakspace> : "⊝" U229D # CIRCLED DASH
 #Multi_key><bracketleft><plus><bracketright>                                                       : "⊞" U229E # SQUARED PLUS
 <Multi_key><bracketleft><plus>                                                                     : "⊞" U229E # SQUARED PLUS
-#Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
-<Multi_key><bracketleft><minus>                                                                    : "⊟" U229F # SQUARED MINUS
+<Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
 #Multi_key><bracketleft><x><bracketright>                                                          : "⊠" U22A0 # SQUARED TIMES
 <Multi_key><bracketleft><x>                                                                        : "⊠" U22A0 # SQUARED TIMES
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
@@ -7788,17 +7787,14 @@
 <Multi_key><nobreakspace><space><O>                                                                : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
 <Multi_key><nobreakspace><nobreakspace><O>                                                         : "⧂" U29C2 # CIRCLE WITH SMALL CIRCLE TO THE RIGHT
 <Multi_key><O><equal>                                                                              : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
-#@
-<Multi_key><bracketleft><slash><bracketright>                                              <space> : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
-<Multi_key><bracketleft><slash><bracketright>                                       <nobreakspace> : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
-<Multi_key><bracketleft><backslash><bracketright>                                          <space> : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
-<Multi_key><bracketleft><backslash><bracketright>                                   <nobreakspace> : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
-<Multi_key><bracketleft><asterisk><bracketright>                                           <space> : "⧆" U29C6 # SQUARED ASTERISK
-<Multi_key><bracketleft><asterisk><bracketright>                                    <nobreakspace> : "⧆" U29C6 # SQUARED ASTERISK
-<Multi_key><space><bracketleft><o><bracketright>                                           <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
-<Multi_key><space><bracketleft><o><bracketright>                                    <nobreakspace> : "⧇" U29C7 # SQUARED SMALL CIRCLE
-<Multi_key><nobreakspace><bracketleft><o><bracketright>                                    <space> : "⧇" U29C7 # SQUARED SMALL CIRCLE
-<Multi_key><nobreakspace><bracketleft><o><bracketright>                             <nobreakspace> : "⧇" U29C7 # SQUARED SMALL CIRCLE
+<Multi_key><bracketleft><slash><bracketright>                                                      : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
+<Multi_key><bracketleft><backslash><bracketright>                                                  : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
+#Multi_key><bracketleft><asterisk><bracketright>                                                   : "⧆" U29C6 # SQUARED ASTERISK
+<Multi_key><bracketleft><asterisk>                                                                 : "⧆" U29C6 # SQUARED ASTERISK
+#Multi_key><space><bracketleft><o><bracketright>                                                   : "⧇" U29C7 # SQUARED SMALL CIRCLE
+<Multi_key><space><bracketleft><o>                                                                 : "⧇" U29C7 # SQUARED SMALL CIRCLE
+<Multi_key><nobreakspace><bracketleft><o>                                                          : "⧇" U29C7 # SQUARED SMALL CIRCLE
+#Multi_key><2><bracketleft><bracketright>                                                          : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><2><bracketleft>                                                                        : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><KP_2><bracketleft>                                                                     : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><3><bracketleft>                                                                        : "⧉" U29C9 # TWO JOINED SQUARES
@@ -7807,43 +7803,37 @@
 <Multi_key><2>                                                                      <nobreakspace> : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><KP_2>                                                                          <space> : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><KP_2>                                                                   <nobreakspace> : "⧉" U29C9 # TWO JOINED SQUARES
-<Multi_key><period><slash><backslash><underscore>                                          <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
-<Multi_key><period><slash><backslash><underscore>                                   <nobreakspace> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
-<Multi_key><period><backslash><slash><underscore>                                          <space> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
-<Multi_key><period><backslash><slash><underscore>                                   <nobreakspace> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+#Multi_key><period><slash><backslash><underscore>                                                  : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+<Multi_key><period><slash><backslash>                                                              : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+#Multi_key><period><backslash><slash><underscore>                                                  : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+<Multi_key><period><backslash>                                                                     : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><slash><backslash><underscore><underscore>                                              : "⧋" U29CB # TRIANGLE WITH UNDERBAR
 <Multi_key><backslash><slash><underscore><underscore>                                              : "⧋" U29CB # TRIANGLE WITH UNDERBAR
 <Multi_key><slash><backslash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><backslash><slash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
 #Multi_key><s><slash><backslash><underscore>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><slash><backslash>                                                                   : "⧌" U29CC # S IN TRIANGLE
+#Multi_key><s><backslash><slash><underscore>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><backslash><slash>                                                                   : "⧌" U29CC # S IN TRIANGLE
-<Multi_key><space><slash><backslash><underscore>                                           <space> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><space><slash><backslash><underscore>                                    <nobreakspace> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><nobreakspace><slash><backslash><underscore>                                    <space> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><nobreakspace><slash><backslash><underscore>                             <nobreakspace> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><space><backslash><slash><underscore>                                           <space> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><space><backslash><slash><underscore>                                    <nobreakspace> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><nobreakspace><backslash><slash><underscore>                                    <space> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><nobreakspace><backslash><slash><underscore>                             <nobreakspace> : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
-<Multi_key><space><bar><greater><less><bar>                                                <space> : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
-<Multi_key><space><bar><greater><less><bar>                                         <nobreakspace> : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
-<Multi_key><nobreakspace><bar><greater><less><bar>                                         <space> : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
-<Multi_key><nobreakspace><bar><greater><less><bar>                                  <nobreakspace> : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
+<Multi_key><space><slash><backslash><underscore>                                                   : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><nobreakspace><slash><backslash><underscore>                                            : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><space><backslash><slash><underscore>                                                   : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><nobreakspace><backslash><slash><underscore>                                            : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+#Multi_key><bar><greater><less><bar>                                                               : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
+<Multi_key><bar><greater><less>                                                                    : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
 <Multi_key><less><bar><bar>                                                                <space> : "⧏" U29CF # LEFT TRIANGLE BESIDE VERTICAL BAR
 <Multi_key><less><bar><bar>                                                         <nobreakspace> : "⧏" U29CF # LEFT TRIANGLE BESIDE VERTICAL BAR
 <Multi_key><bar><bar><greater>                                                                     : "⧐" U29D0 # VERTICAL BAR BESIDE RIGHT TRIANGLE
-<Multi_key><bar><numbersign><backslash><slash><bar>                                        <space> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
-<Multi_key><bar><numbersign><backslash><slash><bar>                                 <nobreakspace> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
-<Multi_key><bar><numbersign><slash><backslash><bar>                                        <space> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
-<Multi_key><bar><numbersign><slash><backslash><bar>                                 <nobreakspace> : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><backslash><slash><bar>                                                : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><slash><backslash><bar>                                                : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 #Multi_key><bar><backslash><slash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><backslash><slash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><slash><backslash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
-<Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                            <space> : "⧓" U29D3 # BLACK BOWTIE
-<Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                     <nobreakspace> : "⧓" U29D3 # BLACK BOWTIE
-<Multi_key><bar><numbersign><slash><backslash><numbersign><bar>                            <space> : "⧓" U29D3 # BLACK BOWTIE
-<Multi_key><bar><numbersign><slash><backslash><numbersign><bar>                     <nobreakspace> : "⧓" U29D3 # BLACK BOWTIE
+#Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
+<Multi_key><bar><numbersign><backslash><slash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
+#Multi_key><bar><numbersign><slash><backslash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
+<Multi_key><bar><numbersign><slash><backslash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
+#@
 <Multi_key><bar><numbersign><backslash><slash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><backslash><slash>                                      <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
