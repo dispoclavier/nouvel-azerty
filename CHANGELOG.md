@@ -55,6 +55,9 @@ Amélioration de la touche morte tilde.
 	* Corriger les séquences de "⦰" U+29B0. compose-1.yml [6389206](https://github.com/dispoclavier/nouvel-azerty/commit/63892065a354e6c0e079bcc8a7af5f8c521b001e)
 	* Compléter la séquence de "⦽" U+29BD. ibidem
 	* Simplifier les séquences de "⦸" U+29B8, "⦼" U+29BC, "⦾" U+29BE, "⦿" U+29BF, "⧂" U+29C2, "⧃" U+29C3. ibidem
+	* Corriger les séquences de "❑" U+2751, "❒" U+2752, "⧠" U+29E0. compose-1.yml [6aaafa4](https://github.com/dispoclavier/nouvel-azerty/commit/6aaafa485b42156a6efc66d422105e5ba29a9206)
+	* Adapter la séquence de "⊟" U+229F. ibidem
+	* Simplifier les séquences de "⧄" U+29C4, "⧅" U+29C5, "⧆" U+29C6, "⧇" U+29C7, "⧊" U+29CA, "⧋" U+29CB, "⧍" U+29CD, "⧎" U+29CE, "⧑" U+29D1, "⧓" U+29D3. ibidem
 * Transformations :
 	* Lettres composées pour langues du Togo : Compléter les séquences de "Ʋ̀" U+01B2 U+0300, "Ʋ́" U+01B2 U+0301, "Ʋ̂" U+01B2 U+0302, "Ʋ̄" U+01B2 U+0304, "Ʋ̌" U+01B2 U+030C, "ʋ̀" U+028B U+0300, "ʋ́" U+028B U+0301, "ʋ̂" U+028B U+0302, "ʋ̄" U+028B U+0304, "ʋ̌" U+028B U+030C pour Linux. compose-2.yml [05856c6](https://github.com/dispoclavier/nouvel-azerty/commit/05856c6f49d3da10d5a3bf6341cefbc1a61b2d28)
 	* Tilde :
