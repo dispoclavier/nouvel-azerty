@@ -4984,8 +4984,8 @@
 #   Sequences streamlined by cropping non-critical input besides trailing space
 #   are duplicated full-length and commented out for the record, right above
 #   the streamlined sequences, in case some of them need to be restored later
-#   to prevent conflicts with new sequences, as it happened for "⊟" U229F,
-#   admitting that there is no better place to store this information.
+#   to prevent conflicts with new sequences, as it happened for "⊟" U229F and
+#   "⧈" U29C8, guessing that this is the best place to store this information.
 #   See #Multi_key><
 #
 #
@@ -7794,9 +7794,8 @@
 #Multi_key><space><bracketleft><o><bracketright>                                                   : "⧇" U29C7 # SQUARED SMALL CIRCLE
 <Multi_key><space><bracketleft><o>                                                                 : "⧇" U29C7 # SQUARED SMALL CIRCLE
 <Multi_key><nobreakspace><bracketleft><o>                                                          : "⧇" U29C7 # SQUARED SMALL CIRCLE
-#Multi_key><2><bracketleft><bracketright>                                                          : "⧈" U29C8 # SQUARED SQUARE
-<Multi_key><2><bracketleft>                                                                        : "⧈" U29C8 # SQUARED SQUARE
-<Multi_key><KP_2><bracketleft>                                                                     : "⧈" U29C8 # SQUARED SQUARE
+<Multi_key><2><bracketleft><bracketright>                                                          : "⧈" U29C8 # SQUARED SQUARE
+<Multi_key><KP_2><bracketleft><bracketright>                                                       : "⧈" U29C8 # SQUARED SQUARE
 <Multi_key><3><bracketleft>                                                                        : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><KP_3><bracketleft>                                                                     : "⧉" U29C9 # TWO JOINED SQUARES
 <Multi_key><2>                                                                             <space> : "⧉" U29C9 # TWO JOINED SQUARES
@@ -7828,40 +7827,46 @@
 <Multi_key><bar><numbersign><slash><backslash><bar>                                                : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 #Multi_key><bar><backslash><slash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><backslash><slash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
+#Multi_key><bar><slash><backslash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><slash><backslash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 #Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
 <Multi_key><bar><numbersign><backslash><slash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
 #Multi_key><bar><numbersign><slash><backslash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
 <Multi_key><bar><numbersign><slash><backslash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
-#@
 <Multi_key><bar><numbersign><backslash><slash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><backslash><slash>                                      <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash>                                      <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
-<Multi_key><backslash><slash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
-<Multi_key><slash><backslash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
-<Multi_key><X><underscore><underscore>                                                     <space> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><X><underscore><underscore>                                              <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><space><underscore><X><underscore>                                              <space> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><space><underscore><X><underscore>                                       <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><nobreakspace><underscore><X><underscore>                                       <space> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><nobreakspace><underscore><X><underscore>                                <nobreakspace> : "⧖" U29D6 # WHITE HOURGLASS
-<Multi_key><X><numbersign><underscore>                                                     <space> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><X><numbersign><underscore>                                              <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><X><numbersign><underscore><underscore>                                         <space> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><X><numbersign><underscore><underscore>                                  <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><space><underscore><X><numbersign><underscore>                                  <space> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><space><underscore><X><numbersign><underscore>                           <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><nobreakspace><underscore><X><numbersign><underscore>                           <space> : "⧗" U29D7 # BLACK HOURGLASS
-<Multi_key><nobreakspace><underscore><X><numbersign><underscore>                    <nobreakspace> : "⧗" U29D7 # BLACK HOURGLASS
+#Multi_key><backslash><slash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+<Multi_key><backslash><slash><numbersign>                                                          : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+#Multi_key><slash><backslash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+<Multi_key><slash><backslash><numbersign>                                                          : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+#Multi_key><X><underscore><underscore>                                                             : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><X><underscore>                                                                         : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><space><underscore><X><underscore>                                                      : "⧖" U29D6 # WHITE HOURGLASS
+<Multi_key><nobreakspace><underscore><X><underscore>                                               : "⧖" U29D6 # WHITE HOURGLASS
+#Multi_key><X><numbersign><underscore><underscore>                                                 : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><X><numbersign>                                                                         : "⧗" U29D7 # BLACK HOURGLASS
+#Multi_key><space><underscore><X><numbersign><underscore>                                          : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><space><underscore><X><numbersign>                                                      : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><nobreakspace><underscore><X><numbersign>                                               : "⧗" U29D7 # BLACK HOURGLASS
+<Multi_key><bracketleft><w>                                                                        : "⧘" U29D8 # LEFT WIGGLY FENCE
 <Multi_key><w><bracketleft>                                                                        : "⧘" U29D8 # LEFT WIGGLY FENCE
+<Multi_key><bracketright><w>                                                                       : "⧙" U29D9 # RIGHT WIGGLY FENCE
 <Multi_key><w><bracketright>                                                                       : "⧙" U29D9 # RIGHT WIGGLY FENCE
+<Multi_key><2><bracketleft><w>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><KP_2><bracketleft><w>                                                                  : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
 <Multi_key><2><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
 <Multi_key><KP_2><w><bracketleft>                                                                  : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
 <Multi_key><w><w><bracketleft>                                                                     : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><bracketleft><bracketleft><w>                                                           : "⧚" U29DA # LEFT DOUBLE WIGGLY FENCE
+<Multi_key><2><bracketright><w>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><KP_2><bracketright><w>                                                                 : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
 <Multi_key><2><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
 <Multi_key><KP_2><w><bracketright>                                                                 : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
 <Multi_key><w><w><bracketright>                                                                    : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><bracketright><bracketright><w>                                                         : "⧛" U29DB # RIGHT DOUBLE WIGGLY FENCE
+<Multi_key><o><parenright>                                                                         : "⧜" U29DC # INCOMPLETE INFINITY
 <Multi_key><space><space><8>                                                                       : "⧜" U29DC # INCOMPLETE INFINITY
 <Multi_key><space><space><KP_8>                                                                    : "⧜" U29DC # INCOMPLETE INFINITY
 <Multi_key><nobreakspace><space><8>                                                                : "⧜" U29DC # INCOMPLETE INFINITY
@@ -7874,10 +7879,14 @@
 <Multi_key><nobreakspace><parenleft><KP_8>                                                         : "⧝" U29DD # TIE OVER INFINITY
 <Multi_key><8><bar>                                                                                : "⧞" U29DE # INFINITY NEGATED WITH VERTICAL BAR
 <Multi_key><KP_8><bar>                                                                             : "⧞" U29DE # INFINITY NEGATED WITH VERTICAL BAR
-<Multi_key><o><minus><o>                                                                   <space> : "⧟" U29DF # DOUBLE-ENDED MULTIMAP
-<Multi_key><o><minus><o>                                                            <nobreakspace> : "⧟" U29DF # DOUBLE-ENDED MULTIMAP
-<Multi_key><bracketleft><bracketleft><bracketright>                                        <space> : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
-<Multi_key><bracketleft><bracketleft><bracketright>                                 <nobreakspace> : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
+<Multi_key><o><minus><o>                                                                           : "⧟" U29DF # DOUBLE-ENDED MULTIMAP
+#
+#   Due to its upper left box shadow, the D'Alembertian symbol "⧠" U29E0 is
+#   also supported as part of the end marks.
+#   See # # End marks
+#
+<Multi_key><bracketleft><bracketleft><bracketright>                                                : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
+#@
 <Multi_key><slash><bar><underscore><underscore>                                            <space> : "⧡" U29E1 # INCREASES AS
 <Multi_key><slash><bar><underscore><underscore>                                     <nobreakspace> : "⧡" U29E1 # INCREASES AS
 <Multi_key><m>                                                                             <space> : "⧢" U29E2 # SHUFFLE PRODUCT
