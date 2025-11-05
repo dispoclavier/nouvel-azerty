@@ -4016,9 +4016,9 @@
 #   See # # C02 dollar
 #
 <Multi_key><s><u><n>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
-<Multi_key><S><U>                                                                                  : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><S><U><N>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
 <Multi_key><s><o><l>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
-<Multi_key><S><O>                                                                                  : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><S><O><L>                                                                               : "☀" U2600 # BLACK SUN WITH RAYS emoji
 #
 #
 # # Snowflake emoji
@@ -4030,7 +4030,7 @@
 #   See # # B06 grave
 #
 <Multi_key><s><n><o>                                                                               : "❄" U2744 # SNOWFLAKE emoji
-<Multi_key><S><N>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
+<Multi_key><S><N><O>                                                                               : "❄" U2744 # SNOWFLAKE emoji
 #Multi_key><n><e><i>                                                                               : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><n><e>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
 <Multi_key><N><E>                                                                                  : "❄" U2744 # SNOWFLAKE emoji
@@ -6114,19 +6114,35 @@
 <Multi_key><2><s>                                                                   <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                       <space> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><KP_2><s>                                                                <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><2><S>                                                                          <space> : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><2><S>                                                                   <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><KP_2><S>                                                                       <space> : "∬" U222C # DOUBLE INTEGRAL
+<Multi_key><KP_2><S>                                                                <nobreakspace> : "∬" U222C # DOUBLE INTEGRAL
 <Multi_key><3><s>                                                                          <space> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><3><s>                                                                   <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><KP_3><s>                                                                       <space> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><KP_3><s>                                                                <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><3><S>                                                                          <space> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><3><S>                                                                   <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><KP_3><S>                                                                       <space> : "∭" U222D # TRIPLE INTEGRAL
+<Multi_key><KP_3><S>                                                                <nobreakspace> : "∭" U222D # TRIPLE INTEGRAL
 <Multi_key><s><o>                                                                          <space> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><s><o>                                                                   <nobreakspace> : "∮" U222E # CONTOUR INTEGRAL
 <Multi_key><2><s><o>                                                                               : "∯" U222F # SURFACE INTEGRAL
 <Multi_key><KP_2><s><o>                                                                            : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><2><S><o>                                                                               : "∯" U222F # SURFACE INTEGRAL
+<Multi_key><KP_2><S><o>                                                                            : "∯" U222F # SURFACE INTEGRAL
 <Multi_key><3><s><o>                                                                               : "∰" U2230 # VOLUME INTEGRAL
 <Multi_key><KP_3><s><o>                                                                            : "∰" U2230 # VOLUME INTEGRAL
-<Multi_key><s><greater>                                                                            : "∱" U2231 # CLOCKWISE INTEGRAL
+<Multi_key><3><S><o>                                                                               : "∰" U2230 # VOLUME INTEGRAL
+<Multi_key><KP_3><S><o>                                                                            : "∰" U2230 # VOLUME INTEGRAL
+#Multi_key><s><parenleft><greater>                                                                 : "∱" U2231 # CLOCKWISE INTEGRAL
+<Multi_key><s><parenleft>                                                                          : "∱" U2231 # CLOCKWISE INTEGRAL
+<Multi_key><S><parenleft>                                                                          : "∱" U2231 # CLOCKWISE INTEGRAL
 <Multi_key><s><o><greater>                                                                         : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
+<Multi_key><S><o><greater>                                                                         : "∲" U2232 # CLOCKWISE CONTOUR INTEGRAL
 <Multi_key><s><o><less>                                                                            : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
+<Multi_key><S><o><less>                                                                            : "∳" U2233 # ANTICLOCKWISE CONTOUR INTEGRAL
 <Multi_key><period><period><period><a>                                                             : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><A>                                                             : "∴" U2234 # THEREFORE
 <Multi_key><period><period><period><v>                                                             : "∵" U2235 # BECAUSE
@@ -7133,11 +7149,14 @@
 <Multi_key><s><bracketleft>                                                                <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><s><bracketleft>                                                         <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><S><braceleft>                                                                          : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
-<Multi_key><S><bracketleft>                                                                        : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketleft>                                                                <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketleft>                                                         <nobreakspace> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><s><braceright>                                                                         : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><s><bracketright>                                                                       : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><s><bracketright>                                                               <space> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><s><bracketright>                                                        <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
 <Multi_key><S><braceright>                                                                         : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
-<Multi_key><S><bracketright>                                                                       : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketright>                                                               <space> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
+<Multi_key><S><bracketright>                                                        <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
 <Multi_key><v><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><space><backslash><c>                                                                   : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><backslash><c>                                                            : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
@@ -8058,7 +8077,8 @@
 <Multi_key><nobreakspace><V><V>                                                                    : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
 <Multi_key><X>                                                                             <space> : "⨉" U2A09 # N-ARY TIMES OPERATOR
 <Multi_key><X>                                                                      <nobreakspace> : "⨉" U2A09 # N-ARY TIMES OPERATOR
-<Multi_key><S><o>                                                                                  : "⨊" U2A0A # MODULO TWO SUM
+<Multi_key><S><o>                                                                          <space> : "⨊" U2A0A # MODULO TWO SUM
+<Multi_key><S><o>                                                                   <nobreakspace> : "⨊" U2A0A # MODULO TWO SUM
 <Multi_key><o><S>                                                                                  : "⨊" U2A0A # MODULO TWO SUM
 <Multi_key><space><S><s>                                                                           : "⨋" U2A0B # SUMMATION WITH INTEGRAL
 <Multi_key><nobreakspace><S><s>                                                                    : "⨋" U2A0B # SUMMATION WITH INTEGRAL
@@ -8069,49 +8089,58 @@
 <Multi_key><KP_4><s>                                                                               : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key><4><S>                                                                                  : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key><KP_4><S>                                                                               : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
-#@
-<Multi_key><s><minus>                                                                      <space> : "⨍" U2A0D # FINITE PART INTEGRAL
-<Multi_key><s><minus>                                                               <nobreakspace> : "⨍" U2A0D # FINITE PART INTEGRAL
-<Multi_key><s><equal>                                                                      <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
-<Multi_key><s><equal>                                                               <nobreakspace> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
-<Multi_key><s><minus><minus>                                                               <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
-<Multi_key><s><minus><minus>                                                        <nobreakspace> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
+<Multi_key><s><minus>                                                                              : "⨍" U2A0D # FINITE PART INTEGRAL
+<Multi_key><s><equal>                                                                              : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
 <Multi_key><s><slash>                                                                      <space> : "⨏" U2A0F # INTEGRAL AVERAGE WITH SLASH
 <Multi_key><s><slash>                                                               <nobreakspace> : "⨏" U2A0F # INTEGRAL AVERAGE WITH SLASH
+<Multi_key><S><slash>                                                                              : "⨏" U2A0F # INTEGRAL AVERAGE WITH SLASH
 <Multi_key><s><c>                                                                          <space> : "⨐" U2A10 # CIRCULATION FUNCTION
 <Multi_key><s><c>                                                                   <nobreakspace> : "⨐" U2A10 # CIRCULATION FUNCTION
 <Multi_key><S><c>                                                                          <space> : "⨐" U2A10 # CIRCULATION FUNCTION
 <Multi_key><S><c>                                                                   <nobreakspace> : "⨐" U2A10 # CIRCULATION FUNCTION
 <Multi_key><S><C>                                                                          <space> : "⨐" U2A10 # CIRCULATION FUNCTION
 <Multi_key><S><C>                                                                   <nobreakspace> : "⨐" U2A10 # CIRCULATION FUNCTION
-<Multi_key><s><less>                                                                       <space> : "⨑" U2A11 # ANTICLOCKWISE INTEGRATION
-<Multi_key><s><less>                                                                <nobreakspace> : "⨑" U2A11 # ANTICLOCKWISE INTEGRATION
-<Multi_key><s><period><bracketright>                                                       <space> : "⨒" U2A12 # LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
-<Multi_key><s><period><bracketright>                                                <nobreakspace> : "⨒" U2A12 # LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
-<Multi_key><s><period><parenright>                                                         <space> : "⨓" U2A13 # LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
-<Multi_key><s><period><parenright>                                                  <nobreakspace> : "⨓" U2A13 # LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
-<Multi_key><s><period><o>                                                                  <space> : "⨔" U2A14 # LINE INTEGRATION NOT INCLUDING THE POLE
-<Multi_key><s><period><o>                                                           <nobreakspace> : "⨔" U2A14 # LINE INTEGRATION NOT INCLUDING THE POLE
-<Multi_key><s><o><period>                                                                  <space> : "⨕" U2A15 # INTEGRAL AROUND A POINT OPERATOR
-<Multi_key><s><o><period>                                                           <nobreakspace> : "⨕" U2A15 # INTEGRAL AROUND A POINT OPERATOR
-<Multi_key><s><bracketleft><bracketright>                                                  <space> : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
-<Multi_key><s><bracketleft><bracketright>                                           <nobreakspace> : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
-<Multi_key><s><less><minus><parenright>                                                    <space> : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-<Multi_key><s><less><minus><parenright>                                             <nobreakspace> : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-<Multi_key><s><less><minus>                                                                <space> : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-<Multi_key><s><less><minus>                                                         <nobreakspace> : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-<Multi_key><s><x>                                                                          <space> : "⨘" U2A18 # INTEGRAL WITH TIMES SIGN
-<Multi_key><s><x>                                                                   <nobreakspace> : "⨘" U2A18 # INTEGRAL WITH TIMES SIGN
+#Multi_key><s><parenright><greater>                                                                : "⨑" U2A11 # ANTICLOCKWISE INTEGRATION
+<Multi_key><s><parenright>                                                                         : "⨑" U2A11 # ANTICLOCKWISE INTEGRATION
+<Multi_key><S><parenright>                                                                         : "⨑" U2A11 # ANTICLOCKWISE INTEGRATION
+<Multi_key><s><period><bracketright>                                                               : "⨒" U2A12 # LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
+<Multi_key><S><period><bracketright>                                                               : "⨒" U2A12 # LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
+<Multi_key><s><period><parenright>                                                                 : "⨓" U2A13 # LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
+<Multi_key><S><period><parenright>                                                                 : "⨓" U2A13 # LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
+<Multi_key><s><period><o>                                                                          : "⨔" U2A14 # LINE INTEGRATION NOT INCLUDING THE POLE
+<Multi_key><S><period><o>                                                                          : "⨔" U2A14 # LINE INTEGRATION NOT INCLUDING THE POLE
+<Multi_key><s><o><period>                                                                          : "⨕" U2A15 # INTEGRAL AROUND A POINT OPERATOR
+<Multi_key><S><o><period>                                                                          : "⨕" U2A15 # INTEGRAL AROUND A POINT OPERATOR
+<Multi_key><S><O><period>                                                                          : "⨕" U2A15 # INTEGRAL AROUND A POINT OPERATOR
+<Multi_key><s><bracketleft><bracketright>                                                          : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
+<Multi_key><s><bracketright><bracketleft>                                                          : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
+<Multi_key><S><bracketleft><bracketright>                                                          : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
+<Multi_key><S><bracketright><bracketleft>                                                          : "⨖" U2A16 # QUATERNION INTEGRAL OPERATOR
+#Multi_key><s><less><minus><parenright>                                                            : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
+<Multi_key><s><less><minus>                                                                        : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
+<Multi_key><S><less><minus>                                                                        : "⨗" U2A17 # INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
+<Multi_key><s><x>                                                                                  : "⨘" U2A18 # INTEGRAL WITH TIMES SIGN
+<Multi_key><S><x>                                                                                  : "⨘" U2A18 # INTEGRAL WITH TIMES SIGN
+<Multi_key><S><X>                                                                                  : "⨘" U2A18 # INTEGRAL WITH TIMES SIGN
 <Multi_key><s><n>                                                                          <space> : "⨙" U2A19 # INTEGRAL WITH INTERSECTION
 <Multi_key><s><n>                                                                   <nobreakspace> : "⨙" U2A19 # INTEGRAL WITH INTERSECTION
+<Multi_key><S><n>                                                                                  : "⨙" U2A19 # INTEGRAL WITH INTERSECTION
+<Multi_key><S><N>                                                                          <space> : "⨙" U2A19 # INTEGRAL WITH INTERSECTION
+<Multi_key><S><N>                                                                   <nobreakspace> : "⨙" U2A19 # INTEGRAL WITH INTERSECTION
 <Multi_key><s><u>                                                                          <space> : "⨚" U2A1A # INTEGRAL WITH UNION
 <Multi_key><s><u>                                                                   <nobreakspace> : "⨚" U2A1A # INTEGRAL WITH UNION
+<Multi_key><S><u>                                                                                  : "⨚" U2A1A # INTEGRAL WITH UNION
+<Multi_key><S><U>                                                                          <space> : "⨚" U2A1A # INTEGRAL WITH UNION
+<Multi_key><S><U>                                                                   <nobreakspace> : "⨚" U2A1A # INTEGRAL WITH UNION
 <Multi_key><space><minus><s>                                                               <space> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
 <Multi_key><space><minus><s>                                                        <nobreakspace> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
 <Multi_key><nobreakspace><minus><s>                                                        <space> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
 <Multi_key><nobreakspace><minus><s>                                                 <nobreakspace> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
-<Multi_key><s><underscore>                                                                 <space> : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
-<Multi_key><s><underscore>                                                          <nobreakspace> : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
+<Multi_key><space><minus><S>                                                                       : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<Multi_key><nobreakspace><minus><S>                                                                : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<Multi_key><s><underscore>                                                                         : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
+<Multi_key><S><underscore>                                                                         : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
+#@
 #
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
 #   sequences with a leading space for uniqueness.
