@@ -70,7 +70,7 @@ Amélioration de la touche morte tilde.
 	* Simplifier les séquences de "⨂" U+2A02, "⨃" U+2A03, "⨄" U+2A04, "⨅" U+2A05, "⨆" U+2A06, "⨇" U+2A07, "⨈" U+2A08, "⨊" U+2A0A, "⨋" U+2A0B, "⨌" U+2A0C. compose-1.yml [f3e54fc](https://github.com/dispoclavier/nouvel-azerty/commit/f3e54fc1631e1f97c80af4b0595b0df3463658d3)
 	* Corriger les séquences de "∱" U+2231, "⨑" U+2A11. compose-1.yml [5714735](https://github.com/dispoclavier/nouvel-azerty/commit/5714735230b3bf985395cfb059e37d2b74d510d9)
 	* Simplifier les séquences de "∬" U+222C, "∭" U+222D, "∯" U+222F, "∰" U+2230, "∲" U+2232, "∳" U+2233, "⨌" U+2A0C, "⨍" U+2A0D, "⨎" U+2A0E, "⨏" U+2A0F, "⨒" U+2A12, "⨓" U+2A13, "⨔" U+2A14, "⨕" U+2A15, "⨖" U+2A16, "⨗" U+2A17, "⨘" U+2A18, "⨙" U+2A19, "⨚" U+2A1A. ibidem
-	* Adapter les séquences de "☀" U+2600, "❄" U+2744, "⟅" U+27C5, "⟆" U+27C6, "⨊" U+2A0A. ibidem
+	* Adapter les séquences de "☀" U+2600, "❄" U+2744, "⟅" U+27C5, "⟆" U+27C6, "⨊" U+2A0A. ibidem   
 * Transformations :
 	* Lettres composées pour langues du Togo : Compléter les séquences de "Ʋ̀" U+01B2 U+0300, "Ʋ́" U+01B2 U+0301, "Ʋ̂" U+01B2 U+0302, "Ʋ̄" U+01B2 U+0304, "Ʋ̌" U+01B2 U+030C, "ʋ̀" U+028B U+0300, "ʋ́" U+028B U+0301, "ʋ̂" U+028B U+0302, "ʋ̄" U+028B U+0304, "ʋ̌" U+028B U+030C pour Linux. compose-2.yml [05856c6](https://github.com/dispoclavier/nouvel-azerty/commit/05856c6f49d3da10d5a3bf6341cefbc1a61b2d28)
 	* Tilde :
@@ -83,7 +83,7 @@ Amélioration de la touche morte tilde.
 	* Corriger le journal des modifications. CHANGELOG.md [be5b670](https://github.com/dispoclavier/nouvel-azerty/commit/be5b670d6743fe9aa83bdf085471fa5bb1546659)
 	* Corriger, mettre à jour ou ajouter des annotations, améliorer la lisibilité. compose-1.yml [08f84cf](https://github.com/dispoclavier/nouvel-azerty/commit/08f84cfa4a48673e53ce0e1927c344c5daf6e582), [3066e9b](https://github.com/dispoclavier/nouvel-azerty/commit/3066e9befa7127065b63fed0d82750abdbcf2db5), [e25c089](https://github.com/dispoclavier/nouvel-azerty/commit/e25c0896a7cfaa5c00ddeabe4093dfa1a6c276e3), [c0921cf](https://github.com/dispoclavier/nouvel-azerty/commit/c0921cfebc8b0815f7fecd90540e0c1362cab75e), [6389206](https://github.com/dispoclavier/nouvel-azerty/commit/63892065a354e6c0e079bcc8a7af5f8c521b001e), [d9b614b](https://github.com/dispoclavier/nouvel-azerty/commit/d9b614b5d9f360e814a1dcb1b17e4fa70145021c), [9539dcf](https://github.com/dispoclavier/nouvel-azerty/commit/9539dcf0127d1780d86f53549ff9b386ddee7c0a), dead-key-convert.pl [010deb6](https://github.com/dispoclavier/nouvel-azerty/commit/010deb61677c1f510c5d0330626f9dd6b558dd52), [83debb3](https://github.com/dispoclavier/nouvel-azerty/commit/83debb3c0cc40cd659311b89cdb16e1bd3c49a90), [79f3232](https://github.com/dispoclavier/nouvel-azerty/commit/79f32325676404acf2e6be8adef8940fa49ce547)
 	* Supprimer des annotations. compose-1.yml [ee3f1f6](https://github.com/dispoclavier/nouvel-azerty/commit/ee3f1f6587017dbd0ec853a9d5f1cfcd9a15006b)
-	* Corriger l’en-tête. compose-1.yml [0c1ae95](https://github.com/dispoclavier/nouvel-azerty/commit/0c1ae95efa0dadde6dc2d3e30eec269d2eca352b)
+	* Corriger l’en-tête de compose-1.yml [0c1ae95](https://github.com/dispoclavier/nouvel-azerty/commit/0c1ae95efa0dadde6dc2d3e30eec269d2eca352b)
 
 ## 6.1.1 (2025-10-29)
 
