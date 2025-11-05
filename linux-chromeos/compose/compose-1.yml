@@ -8025,7 +8025,6 @@
 <Multi_key><plus><parenleft><parenright>                                                           : "⧾" U29FE # TINY
 <Multi_key><minus><parenright><parenleft>                                                          : "⧿" U29FF # MINY
 <Multi_key><minus><parenleft><parenright>                                                          : "⧿" U29FF # MINY
-#@
 #
 #
 # # Supplemental Mathematical Operators of block U2A00
@@ -8038,49 +8037,39 @@
 <Multi_key><O><period>                                                                             : "⨀" U2A00 # N-ARY CIRCLED DOT OPERATOR
 <Multi_key><O><plus>                                                                       <space> : "⨁" U2A01 # N-ARY CIRCLED PLUS OPERATOR
 <Multi_key><O><plus>                                                                <nobreakspace> : "⨁" U2A01 # N-ARY CIRCLED PLUS OPERATOR
-<Multi_key><O><x>                                                                          <space> : "⨂" U2A02 # N-ARY CIRCLED TIMES OPERATOR
-<Multi_key><O><x>                                                                   <nobreakspace> : "⨂" U2A02 # N-ARY CIRCLED TIMES OPERATOR
-<Multi_key><U><period>                                                                     <space> : "⨃" U2A03 # N-ARY UNION OPERATOR WITH DOT
-<Multi_key><U><period>                                                              <nobreakspace> : "⨃" U2A03 # N-ARY UNION OPERATOR WITH DOT
-<Multi_key><U><plus>                                                                       <space> : "⨄" U2A04 # N-ARY UNION OPERATOR WITH PLUS
-<Multi_key><U><plus>                                                                <nobreakspace> : "⨄" U2A04 # N-ARY UNION OPERATOR WITH PLUS
-<Multi_key><N><bracketleft>                                                                <space> : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
-<Multi_key><N><bracketleft>                                                         <nobreakspace> : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
-<Multi_key><N><bracketright>                                                               <space> : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
-<Multi_key><N><bracketright>                                                        <nobreakspace> : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
-<Multi_key><U><bracketleft>                                                                <space> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
-<Multi_key><U><bracketleft>                                                         <nobreakspace> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
-<Multi_key><U><bracketright>                                                               <space> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
-<Multi_key><U><bracketright>                                                        <nobreakspace> : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
+<Multi_key><O><x>                                                                                  : "⨂" U2A02 # N-ARY CIRCLED TIMES OPERATOR
+<Multi_key><U><period>                                                                             : "⨃" U2A03 # N-ARY UNION OPERATOR WITH DOT
+<Multi_key><U><plus>                                                                               : "⨄" U2A04 # N-ARY UNION OPERATOR WITH PLUS
+<Multi_key><N><bracketleft>                                                                        : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
+<Multi_key><N><bracketright>                                                                       : "⨅" U2A05 # N-ARY SQUARE INTERSECTION OPERATOR
+<Multi_key><U><bracketleft>                                                                        : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
+<Multi_key><U><bracketright>                                                                       : "⨆" U2A06 # N-ARY SQUARE UNION OPERATOR
 #
 #   This set of intersecting logical operators "⨇" U2A07, "⨈" U2A08 is taller
 #   than "⩕" U2A55 TWO INTERSECTING LOGICAL AND, "⩖" U2A56 TWO INTERSECTING
 #   LOGICAL OR.
 #
-<Multi_key><W><percent>                                                                    <space> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
-<Multi_key><W><percent>                                                             <nobreakspace> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
-<Multi_key><space><A><A>                                                                   <space> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
-<Multi_key><space><A><A>                                                            <nobreakspace> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
-<Multi_key><nobreakspace><A><A>                                                            <space> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
-<Multi_key><nobreakspace><A><A>                                                     <nobreakspace> : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
+<Multi_key><W><percent>                                                                            : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
+<Multi_key><space><A><A>                                                                           : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
+<Multi_key><nobreakspace><A><A>                                                                    : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
 <Multi_key><W>                                                                             <space> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
 <Multi_key><W>                                                                      <nobreakspace> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
-<Multi_key><space><V><V>                                                                   <space> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
-<Multi_key><space><V><V>                                                            <nobreakspace> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
-<Multi_key><nobreakspace><V><V>                                                            <space> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
-<Multi_key><nobreakspace><V><V>                                                     <nobreakspace> : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
+<Multi_key><space><V><V>                                                                           : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
+<Multi_key><nobreakspace><V><V>                                                                    : "⨈" U2A08 # TWO LOGICAL OR OPERATOR
 <Multi_key><X>                                                                             <space> : "⨉" U2A09 # N-ARY TIMES OPERATOR
 <Multi_key><X>                                                                      <nobreakspace> : "⨉" U2A09 # N-ARY TIMES OPERATOR
-<Multi_key><S><o>                                                                          <space> : "⨊" U2A0A # MODULO TWO SUM
-<Multi_key><S><o>                                                                   <nobreakspace> : "⨊" U2A0A # MODULO TWO SUM
-<Multi_key><o><S>                                                                          <space> : "⨊" U2A0A # MODULO TWO SUM
-<Multi_key><o><S>                                                                   <nobreakspace> : "⨊" U2A0A # MODULO TWO SUM
-<Multi_key><space><S><s>                                                                   <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
-<Multi_key><space><S><s>                                                            <nobreakspace> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
-<Multi_key><nobreakspace><S><s>                                                            <space> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
-<Multi_key><nobreakspace><S><s>                                                     <nobreakspace> : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><S><o>                                                                                  : "⨊" U2A0A # MODULO TWO SUM
+<Multi_key><o><S>                                                                                  : "⨊" U2A0A # MODULO TWO SUM
+<Multi_key><space><S><s>                                                                           : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><nobreakspace><S><s>                                                                    : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+#Multi_key><space><s><S>                                                                           : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><space><s>                                                                              : "⨋" U2A0B # SUMMATION WITH INTEGRAL
+<Multi_key><nobreakspace><s>                                                                       : "⨋" U2A0B # SUMMATION WITH INTEGRAL
 <Multi_key><4><s>                                                                                  : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key><KP_4><s>                                                                               : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key><4><S>                                                                                  : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key><KP_4><S>                                                                               : "⨌" U2A0C # QUADRUPLE INTEGRAL OPERATOR
+#@
 <Multi_key><s><minus>                                                                      <space> : "⨍" U2A0D # FINITE PART INTEGRAL
 <Multi_key><s><minus>                                                               <nobreakspace> : "⨍" U2A0D # FINITE PART INTEGRAL
 <Multi_key><s><equal>                                                                      <space> : "⨎" U2A0E # INTEGRAL WITH DOUBLE STROKE
