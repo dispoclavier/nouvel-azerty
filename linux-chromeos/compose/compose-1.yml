@@ -8021,14 +8021,10 @@
 <Multi_key><greater><parenright><parenleft><bracketright>                                          : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
 <Multi_key><greater><parenleft><parenright><bracketleft>                                           : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
 <Multi_key><greater><parenright><parenleft><bracketleft>                                           : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><plus><parenright><parenleft>                                                   <space> : "⧾" U29FE # TINY
-<Multi_key><plus><parenright><parenleft>                                            <nobreakspace> : "⧾" U29FE # TINY
-<Multi_key><plus><parenleft><parenright>                                                   <space> : "⧾" U29FE # TINY
-<Multi_key><plus><parenleft><parenright>                                            <nobreakspace> : "⧾" U29FE # TINY
-<Multi_key><minus><parenright><parenleft>                                                  <space> : "⧿" U29FF # MINY
-<Multi_key><minus><parenright><parenleft>                                           <nobreakspace> : "⧿" U29FF # MINY
-<Multi_key><minus><parenleft><parenright>                                                  <space> : "⧿" U29FF # MINY
-<Multi_key><minus><parenleft><parenright>                                           <nobreakspace> : "⧿" U29FF # MINY
+<Multi_key><plus><parenright><parenleft>                                                           : "⧾" U29FE # TINY
+<Multi_key><plus><parenleft><parenright>                                                           : "⧾" U29FE # TINY
+<Multi_key><minus><parenright><parenleft>                                                          : "⧿" U29FF # MINY
+<Multi_key><minus><parenleft><parenright>                                                          : "⧿" U29FF # MINY
 #@
 #
 #
