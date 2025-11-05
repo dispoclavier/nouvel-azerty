@@ -4984,8 +4984,9 @@
 #   Sequences streamlined by cropping non-critical input besides trailing space
 #   are duplicated full-length and commented out for the record, right above
 #   the streamlined sequences, in case some of them need to be restored later
-#   to prevent conflicts with new sequences, as it happened for "⊟" U229F and
-#   "⧈" U29C8, guessing that this is the best place to store this information.
+#   to prevent conflicts with new sequences (as it happened for "⊟" U229F,
+#   "⋕" U22D5, "⏢" U23E2, "⧈" U29C8), assuming that this is a good place to
+#   store this information.
 #   See #Multi_key><
 #
 #
@@ -5123,10 +5124,15 @@
 #
 #   Brackets and lozenges
 #
-#   The rule about trailing transforms also holds true when the transform ia a
+#   The rule about trailing transforms also holds true when the transform is a
 #   bracket, as for "⟨" U27E8, "⟩" U27E9 and other angle brackets and flattened
 #   parentheses, as well as for the angle-bracket composition of lozenges for
 #   "◊" U25CA, "⟠" U27E0, "⧫" U29EB, additionally to the and-or composition.
+#
+#   The transform bracket is not left-right sensitive, as both the opening and
+#   the closing bracket are supported in this position, given that insisting on
+#   the correct bracket being entered would be pointless and induce a useless
+#   complication contrary to the streamlined user experience design principle.
 #
 #   This scheme is also the most efficient, since the bracket has a terminator
 #   status after the appropriate number of less or greater as for "⟨" U27E8,
@@ -6607,9 +6613,8 @@
 <Multi_key><KP_2><u>                                                                       <space> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><KP_2><u>                                                                <nobreakspace> : "⋓" U22D3 # DOUBLE UNION
 <Multi_key><n><bar>                                                                                : "⋔" U22D4 # PITCHFORK
-#Multi_key><space><equal><bar><bar>                                                                : "⋕" U22D5 # EQUAL AND PARALLEL TO
-<Multi_key><space><equal><bar>                                                                     : "⋕" U22D5 # EQUAL AND PARALLEL TO
-<Multi_key><nobreakspace><equal><bar>                                                              : "⋕" U22D5 # EQUAL AND PARALLEL TO
+<Multi_key><space><equal><bar><bar>                                                                : "⋕" U22D5 # EQUAL AND PARALLEL TO
+<Multi_key><nobreakspace><equal><bar><bar>                                                         : "⋕" U22D5 # EQUAL AND PARALLEL TO
 <Multi_key><less><period>                                                                  <space> : "⋖" U22D6 # LESS-THAN WITH DOT
 <Multi_key><less><period>                                                           <nobreakspace> : "⋖" U22D6 # LESS-THAN WITH DOT
 <Multi_key><period><greater>                                                               <space> : "⋗" U22D7 # GREATER-THAN WITH DOT
@@ -6858,8 +6863,7 @@
 #   <Multi_key>      [vertical]                                                     <nobreakspace> : "⏠" U23E0 # TOP TORTOISE SHELL BRACKET
 #   <Multi_key>      [vertical]                                                            <space> : "⏡" U23E1 # BOTTOM TORTOISE SHELL BRACKET
 #   <Multi_key>      [vertical]                                                     <nobreakspace> : "⏡" U23E1 # BOTTOM TORTOISE SHELL BRACKET
-#Multi_key><slash><underscore><underscore><backslash>                                              : "⏢" U23E2 # WHITE TRAPEZIUM
-<Multi_key><slash><underscore><underscore>                                                         : "⏢" U23E2 # WHITE TRAPEZIUM
+<Multi_key><slash><underscore><underscore><backslash>                                              : "⏢" U23E2 # WHITE TRAPEZIUM
 <Multi_key><bar><underscore><underscore>                                                           : "⏢" U23E2 # WHITE TRAPEZIUM
 <Multi_key><slash><underscore><backslash><underscore>                                              : "⏢" U23E2 # WHITE TRAPEZIUM
 #
@@ -6960,6 +6964,7 @@
 <Multi_key><nobreakspace><a><v>                                                                    : "◊" U25CA # LOZENGE
 #Multi_key><less><bracketleft><greater><bracketright>                                              : "◊" U25CA # LOZENGE
 <Multi_key><less><bracketleft><greater>                                                            : "◊" U25CA # LOZENGE
+<Multi_key><less><bracketright><greater>                                                           : "◊" U25CA # LOZENGE
 <Multi_key><O>                                                                             <space> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O>                                                                      <nobreakspace> : "○" U25CB # WHITE CIRCLE
 <Multi_key><O><numbersign>                                                                 <space> : "●" U25CF # BLACK CIRCLE
@@ -7227,6 +7232,7 @@
 <Multi_key><A><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><V>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><bracketleft><minus>                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><less><bracketright><minus>                                                             : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><greater><parenright><parenleft>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><less><greater><parenright><parenleft>                                   <nobreakspace> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
 <Multi_key><less><greater><parenleft><parenright>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND
@@ -7257,15 +7263,26 @@
 <Multi_key><nobreakspace><bracketright><bracketright>                                              : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <Multi_key><less><bracketleft>                                                             <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
 <Multi_key><less><bracketleft>                                                      <nobreakspace> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<Multi_key><less><bracketright>                                                            <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+<Multi_key><less><bracketright>                                                     <nobreakspace> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
 <Multi_key><greater><bracketright>                                                                 : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
+<Multi_key><greater><bracketleft>                                                                  : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
 <Multi_key><less><less><bracketleft>                                                               : "⟪" U27EA # MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
+<Multi_key><less><less><bracketright>                                                              : "⟪" U27EA # MATHEMATICAL LEFT DOUBLE ANGLE BRACKET
 <Multi_key><greater><greater><bracketright>                                                        : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
+<Multi_key><greater><greater><bracketleft>                                                         : "⟫" U27EB # MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
 <Multi_key><parenleft><parenleft><bracketleft>                                                     : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
+<Multi_key><parenleft><parenleft><bracketright>                                                    : "⟬" U27EC # MATHEMATICAL LEFT WHITE TORTOISE SHELL BRACKET
 <Multi_key><parenright><parenright><bracketright>                                                  : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
+<Multi_key><parenright><parenright><bracketleft>                                                   : "⟭" U27ED # MATHEMATICAL RIGHT WHITE TORTOISE SHELL BRACKET
 <Multi_key><space><parenleft><bracketleft>                                                         : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
 <Multi_key><nobreakspace><parenleft><bracketleft>                                                  : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><space><parenleft><bracketright>                                                        : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><parenleft><bracketright>                                                 : "⟮" U27EE # MATHEMATICAL LEFT FLATTENED PARENTHESIS
 <Multi_key><space><parenright><bracketright>                                                       : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
 <Multi_key><nobreakspace><parenright><bracketright>                                                : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+<Multi_key><space><parenright><bracketleft>                                                        : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+<Multi_key><nobreakspace><parenright><bracketleft>                                                 : "⟯" U27EF # MATHEMATICAL RIGHT FLATTENED PARENTHESIS
 #
 #
 # # Supplemental Arrows-A of block U27F0
@@ -7665,7 +7682,9 @@
 <Multi_key><bracketleft><apostrophe>                                                <nobreakspace> : "⦏" U298F # LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER
 <Multi_key><bracketright><apostrophe>                                                              : "⦐" U2990 # RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER
 <Multi_key><less><bracketleft><period>                                                             : "⦑" U2991 # LEFT ANGLE BRACKET WITH DOT
+<Multi_key><less><bracketright><period>                                                            : "⦑" U2991 # LEFT ANGLE BRACKET WITH DOT
 <Multi_key><period><greater><bracketright>                                                         : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
+<Multi_key><period><greater><bracketleft>                                                          : "⦒" U2992 # RIGHT ANGLE BRACKET WITH DOT
 <Multi_key><parenleft><less>                                                               <space> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
 <Multi_key><parenleft><less>                                                        <nobreakspace> : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
 <Multi_key><space><parenleft><less>                                                                : "⦓" U2993 # LEFT ARC LESS-THAN BRACKET
@@ -7881,28 +7900,36 @@
 <Multi_key><KP_8><bar>                                                                             : "⧞" U29DE # INFINITY NEGATED WITH VERTICAL BAR
 <Multi_key><o><minus><o>                                                                           : "⧟" U29DF # DOUBLE-ENDED MULTIMAP
 #
-#   Due to its upper left box shadow, the D'Alembertian symbol "⧠" U29E0 is
+#   Due to its (upper left) box shadow, the D'Alembertian symbol "⧠" U29E0 is
 #   also supported as part of the end marks.
 #   See # # End marks
 #
 <Multi_key><bracketleft><bracketleft><bracketright>                                                : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
-#@
-<Multi_key><slash><bar><underscore><underscore>                                            <space> : "⧡" U29E1 # INCREASES AS
-<Multi_key><slash><bar><underscore><underscore>                                     <nobreakspace> : "⧡" U29E1 # INCREASES AS
+#Multi_key><slash><bar><underscore><underscore>                                                    : "⧡" U29E1 # INCREASES AS
+<Multi_key><slash><bar>                                                                            : "⧡" U29E1 # INCREASES AS
+<Multi_key><slash><underscore><underscore><bar>                                                    : "⧡" U29E1 # INCREASES AS
 <Multi_key><m>                                                                             <space> : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><m>                                                                      <nobreakspace> : "⧢" U29E2 # SHUFFLE PRODUCT
-<Multi_key><equal><slash><slash>                                                           <space> : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
-<Multi_key><equal><slash><slash>                                                    <nobreakspace> : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
+<Multi_key><m><percent>                                                                            : "⧢" U29E2 # SHUFFLE PRODUCT
+<Multi_key><equal><slash><slash>                                                                   : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
+<Multi_key><space><space><numbersign>                                                              : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
+<Multi_key><nobreakspace><space><numbersign>                                                       : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
+<Multi_key><nobreakspace><nobreakspace><numbersign>                                                : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
+<Multi_key><asciitilde><numbersign>                                                        <space> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<Multi_key><asciitilde><numbersign>                                                 <nobreakspace> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 <Multi_key><space><asciitilde><equal><slash><slash>                                                : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 <Multi_key><nobreakspace><asciitilde><equal><slash><slash>                                         : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 <Multi_key><minus><equal><slash><slash>                                                            : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
+#Multi_key><space><equal><minus><slash><slash>                                                     : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
 <Multi_key><space><equal><minus><slash>                                                            : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
 <Multi_key><nobreakspace><equal><minus><slash>                                                     : "⧥" U29E5 # IDENTICAL TO AND SLANTED PARALLEL
 <Multi_key><bar><equal><bar>                                                                       : "⧦" U29E6 # GLEICH STARK
-<Multi_key><space><bar><equal>                                                             <space> : "⧧" U29E7 # THERMODYNAMIC
-<Multi_key><space><bar><equal>                                                      <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
-<Multi_key><nobreakspace><bar><equal>                                                      <space> : "⧧" U29E7 # THERMODYNAMIC
-<Multi_key><nobreakspace><bar><equal>                                               <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><space><equal><bar>                                                             <space> : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><space><equal><bar>                                                      <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><nobreakspace><equal><bar>                                                      <space> : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><nobreakspace><equal><bar>                                               <nobreakspace> : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><space><bar><equal>                                                                     : "⧧" U29E7 # THERMODYNAMIC
+<Multi_key><nobreakspace><bar><equal>                                                              : "⧧" U29E7 # THERMODYNAMIC
 #Multi_key><backslash><numbersign><bar><slash>                                                     : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
 <Multi_key><backslash><numbersign><bar>                                                            : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
 #Multi_key><backslash><bar><numbersign><slash>                                                     : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
@@ -7913,64 +7940,58 @@
 <Multi_key><a><numbersign>                                                                         : "⧫" U29EB # BLACK LOZENGE
 #Multi_key><less><bracketleft><numbersign><greater><bracketright>                                  : "⧫" U29EB # BLACK LOZENGE
 <Multi_key><less><bracketleft><numbersign>                                                         : "⧫" U29EB # BLACK LOZENGE
+<Multi_key><less><bracketright><numbersign>                                                        : "⧫" U29EB # BLACK LOZENGE
 #Multi_key><O><exclam><greater>                                                                    : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
 <Multi_key><O><exclam>                                                                             : "⧬" U29EC # WHITE CIRCLE WITH DOWN ARROW
 #Multi_key><O><numbersign><exclam><greater>                                                        : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
 <Multi_key><O><numbersign><exclam>                                                                 : "⧭" U29ED # BLACK CIRCLE WITH DOWN ARROW
-<Multi_key><I><bracketleft><bracketright>                                                  <space> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
-<Multi_key><I><bracketleft><bracketright>                                           <nobreakspace> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
-<Multi_key><I><bracketright><bracketleft>                                                  <space> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
-<Multi_key><I><bracketright><bracketleft>                                           <nobreakspace> : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
-<Multi_key><I><bracketleft><numbersign><bracketright>                                      <space> : "⧯" U29EF # ERROR-BARRED BLACK SQUARE
-<Multi_key><I><bracketleft><numbersign><bracketright>                               <nobreakspace> : "⧯" U29EF # ERROR-BARRED BLACK SQUARE
-<Multi_key><I><less><greater>                                                              <space> : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
-<Multi_key><I><less><greater>                                                       <nobreakspace> : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
-<Multi_key><I><greater><less>                                                              <space> : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
-<Multi_key><I><greater><less>                                                       <nobreakspace> : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
-<Multi_key><I><less><numbersign><greater>                                                  <space> : "⧱" U29F1 # ERROR-BARRED BLACK DIAMOND
-<Multi_key><I><less><numbersign><greater>                                           <nobreakspace> : "⧱" U29F1 # ERROR-BARRED BLACK DIAMOND
+<Multi_key><I><bracketleft><bracketright>                                                          : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
+#Multi_key><I><bracketright><bracketleft>                                                          : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
+<Multi_key><I><bracketright>                                                                       : "⧮" U29EE # ERROR-BARRED WHITE SQUARE
+#Multi_key><I><bracketleft><numbersign><bracketright>                                              : "⧯" U29EF # ERROR-BARRED BLACK SQUARE
+<Multi_key><I><bracketleft><numbersign>                                                            : "⧯" U29EF # ERROR-BARRED BLACK SQUARE
+<Multi_key><I><less><greater>                                                                      : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
+#Multi_key><I><greater><less>                                                                      : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
+<Multi_key><I><greater>                                                                            : "⧰" U29F0 # ERROR-BARRED WHITE DIAMOND
+#Multi_key><I><less><numbersign><greater>                                                          : "⧱" U29F1 # ERROR-BARRED BLACK DIAMOND
+<Multi_key><I><less><numbersign>                                                                   : "⧱" U29F1 # ERROR-BARRED BLACK DIAMOND
 <Multi_key><I><O>                                                                          <space> : "⧲" U29F2 # ERROR-BARRED WHITE CIRCLE
 <Multi_key><I><O>                                                                   <nobreakspace> : "⧲" U29F2 # ERROR-BARRED WHITE CIRCLE
-<Multi_key><I><O><numbersign>                                                              <space> : "⧳" U29F3 # ERROR-BARRED BLACK CIRCLE
-<Multi_key><I><O><numbersign>                                                       <nobreakspace> : "⧳" U29F3 # ERROR-BARRED BLACK CIRCLE
-<Multi_key><colon><minus><greater>                                                         <space> : "⧴" U29F4 # RULE-DELAYED
-<Multi_key><colon><minus><greater>                                                  <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
-<Multi_key><colon><minus><minus><greater>                                                  <space> : "⧴" U29F4 # RULE-DELAYED
-<Multi_key><colon><minus><minus><greater>                                           <nobreakspace> : "⧴" U29F4 # RULE-DELAYED
+<Multi_key><I><O><numbersign>                                                                      : "⧳" U29F3 # ERROR-BARRED BLACK CIRCLE
+<Multi_key><colon><minus><greater>                                                                 : "⧴" U29F4 # RULE-DELAYED
 #
-#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR is likely a duplicate of "∖" U2216 SET
-#   MINUS with the potential to fool people into decisions causing issues.
-#   https://github.com/tudace/tuda_latex_templates/issues/409
+#   "⧵" U29F5 REVERSE SOLIDUS OPERATOR and "∖" U2216 SET MINUS are at least
+#   nearly homoglyphs, may be confused and have the potential to cause issues.
 #   “\setminus translated as U29F5 ⧵ REVERSE SOLIDUS OPERATOR causes problems”
+#   https://github.com/tudace/tuda_latex_templates/issues/409
 #
-#   Consistently, "⧵" U29F5 goes unmentioned in TUS, Table 22-5. Mathematical
-#   Operators Disunified from Punctuation, as disunifying this from "\" U005C
-#   was pointless. As a consequence, people are left stranded when attempting
-#   to make sense of this code point.
+#   By contrast, disunifying "⧵" U29F5 from the semantically overloaded
+#   backslash "\" U005C is so straightforward it goes unmentioned in TUS,
+#   Table 22-5. Mathematical Operators Disunified from Punctuation.
+#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-22/#G58950
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
 #   Fonts may give the duplicate a slight difference in slant. One example is
 #   DejaVu Sans Mono Book.
 #
-#   "∕" U2215 DIVISION SLASH, by contrast, does not have any *SOLIDUS OPERATOR
+#   "∕" U2215 DIVISION SLASH, however, does not have any *SOLIDUS OPERATOR
 #   equivalent. Therefore, U29F5 is distinguished by a quadruple leading space.
 #   For convenience, these [back]slash symbols are alternatively distinguished
 #   by a trailing digit, also those with a single leading space for consistency
 #   in the related dead key (without space termination).
 #   See #*# REVERSED
 #
+#   Anyway, "⧵" U29F5 is in the benefit of a short sequence where the small "o"
+#   is exceptionally not used for its graphic, but as the initial of "operator"
+#   with cross-language mnemonics.
+#
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><space><space><space><space><backslash>                                         <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><space><space><space><space><backslash>                                  <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><space><space><space><backslash>                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><space><space><space><backslash>                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><space><space><backslash>                           <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><space><space><backslash>                    <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><backslash>                    <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><backslash>             <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>             <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>      <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><space><space><space><space><backslash>                                                 : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><space><space><space><backslash>                                          : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><space><space><backslash>                                   : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><backslash>                            : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>                     : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><underscore><slash>                                                             <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><underscore><slash>                                                      <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
@@ -7991,20 +8012,15 @@
 <Multi_key><nobreakspace><plus><plus>                                                              : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><3><plus>                                                                               : "⧻" U29FB # TRIPLE PLUS
 <Multi_key><KP_3><KP_Add>                                                                          : "⧻" U29FB # TRIPLE PLUS
-<Multi_key><plus><plus><plus>                                                              <space> : "⧻" U29FB # TRIPLE PLUS
-<Multi_key><plus><plus><plus>                                                       <nobreakspace> : "⧻" U29FB # TRIPLE PLUS
-<Multi_key><bracketleft><less><parenleft>                                                  <space> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketleft><less><parenleft>                                           <nobreakspace> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketleft><less><parenright><parenleft>                                      <space> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketleft><less><parenright><parenleft>                               <nobreakspace> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketleft><less><parenleft><parenright>                                      <space> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketleft><less><parenleft><parenright>                               <nobreakspace> : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenright>                                             <space> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenright>                                      <nobreakspace> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenright><parenleft>                                  <space> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenright><parenleft>                           <nobreakspace> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenleft><parenright>                                  <space> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
-<Multi_key><bracketright><greater><parenleft><parenright>                           <nobreakspace> : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
+<Multi_key><plus><plus><plus>                                                                      : "⧻" U29FB # TRIPLE PLUS
+<Multi_key><less><parenleft><parenright><bracketleft>                                              : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
+<Multi_key><less><parenright><parenleft><bracketleft>                                              : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
+<Multi_key><less><parenleft><parenright><bracketright>                                             : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
+<Multi_key><less><parenright><parenleft><bracketright>                                             : "⧼" U29FC # LEFT-POINTING CURVED ANGLE BRACKET
+<Multi_key><greater><parenleft><parenright><bracketright>                                          : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
+<Multi_key><greater><parenright><parenleft><bracketright>                                          : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
+<Multi_key><greater><parenleft><parenright><bracketleft>                                           : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
+<Multi_key><greater><parenright><parenleft><bracketleft>                                           : "⧽" U29FD # RIGHT-POINTING CURVED ANGLE BRACKET
 <Multi_key><plus><parenright><parenleft>                                                   <space> : "⧾" U29FE # TINY
 <Multi_key><plus><parenright><parenleft>                                            <nobreakspace> : "⧾" U29FE # TINY
 <Multi_key><plus><parenleft><parenright>                                                   <space> : "⧾" U29FE # TINY
@@ -8013,6 +8029,7 @@
 <Multi_key><minus><parenright><parenleft>                                           <nobreakspace> : "⧿" U29FF # MINY
 <Multi_key><minus><parenleft><parenright>                                                  <space> : "⧿" U29FF # MINY
 <Multi_key><minus><parenleft><parenright>                                           <nobreakspace> : "⧿" U29FF # MINY
+#@
 #
 #
 # # Supplemental Mathematical Operators of block U2A00
