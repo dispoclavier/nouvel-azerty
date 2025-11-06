@@ -7674,6 +7674,11 @@
 <Multi_key><3><bar>                                                                                : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><KP_3><bar>                                                                             : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
+<Multi_key><space><space><colon>                                                                   : "⦂" U2982 # Z NOTATION TYPE COLON
+<Multi_key><nobreakspace><space><colon>                                                            : "⦂" U2982 # Z NOTATION TYPE COLON
+<Multi_key><nobreakspace><nobreakspace><colon>                                                     : "⦂" U2982 # Z NOTATION TYPE COLON
+<Multi_key><o><colon>                                                                      <space> : "⦂" U2982 # Z NOTATION TYPE COLON
+<Multi_key><o><colon>                                                               <nobreakspace> : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><z><colon>                                                                              : "⦂" U2982 # Z NOTATION TYPE COLON
 #Multi_key><space><braceleft><braceleft>                                                           : "⦃" U2983 # LEFT WHITE CURLY BRACKET
 <Multi_key><space><braceleft>                                                                      : "⦃" U2983 # LEFT WHITE CURLY BRACKET
@@ -8140,7 +8145,6 @@
 <Multi_key><nobreakspace><minus><S>                                                                : "⨛" U2A1B # INTEGRAL WITH OVERBAR
 <Multi_key><s><underscore>                                                                         : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
 <Multi_key><S><underscore>                                                                         : "⨜" U2A1C # INTEGRAL WITH UNDERBAR
-#@
 #
 #   "⨝" U2A1D is very close in shape to "⋈" U22C8 BOWTIE, so it has the same
 #   sequences with a leading space for uniqueness.
@@ -8151,28 +8155,23 @@
 <Multi_key><nobreakspace><bar><backslash><slash><bar>                                              : "⨝" U2A1D # JOIN
 <Multi_key><space><bar><slash><backslash><bar>                                                     : "⨝" U2A1D # JOIN
 <Multi_key><nobreakspace><bar><slash><backslash><bar>                                              : "⨝" U2A1D # JOIN
-<Multi_key><space><slash><backslash><bar>                                                  <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><space><slash><backslash><bar>                                           <nobreakspace> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><nobreakspace><slash><backslash><bar>                                           <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><nobreakspace><slash><backslash><bar>                                    <nobreakspace> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><space><backslash><slash><bar>                                                  <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><space><backslash><slash><bar>                                           <nobreakspace> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><nobreakspace><backslash><slash><bar>                                           <space> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><nobreakspace><backslash><slash><bar>                                    <nobreakspace> : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
-<Multi_key><o><semicolon>                                                                  <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><o><semicolon>                                                           <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><z><semicolon>                                                                  <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><z><semicolon>                                                           <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><o><section>                                                                    <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><o><section>                                                             <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><z><section>                                                                    <space> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><z><section>                                                             <nobreakspace> : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><z><greater><greater>                                                           <space> : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
-<Multi_key><z><greater><greater>                                                    <nobreakspace> : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
-<Multi_key><z><1>                                                                          <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
-<Multi_key><z><1>                                                                   <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
-<Multi_key><z><KP_1>                                                                       <space> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
-<Multi_key><z><KP_1>                                                                <nobreakspace> : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><space><slash><backslash><bar>                                                          : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><nobreakspace><slash><backslash><bar>                                                   : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><space><backslash><slash><bar>                                                          : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><nobreakspace><backslash><slash><bar>                                                   : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><space><semicolon>                                                                      : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><nobreakspace><semicolon>                                                               : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><space><section>                                                                        : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><nobreakspace><section>                                                                 : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><o><semicolon>                                                                          : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><o><section>                                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><z><semicolon>                                                                          : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><z><section>                                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><z><greater><greater>                                                                   : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
+#Multi_key><z><exclam><grave>                                                                      : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><z><exclam>                                                                             : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><z><1>                                                                                  : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><z><KP_1>                                                                               : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 #Multi_key><asterisk><plus> is in dead_abovering and is symmetrized by this, not in dead_horn.     : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><plus><asterisk>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #Multi_key><o><asciicircum><plus>                                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
@@ -8180,22 +8179,16 @@
 <Multi_key><space><space><o><plus>                                                                 : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><nobreakspace><space><o><plus>                                                          : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><nobreakspace><nobreakspace><o><plus>                                                   : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
-#Multi_key><asciicircum><plus> is here for intuitivity rather than in dead_circumflex.             : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><asciicircum><plus>                                                                     : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
-#Multi_key><plus><asciitilde> is used for "⨦" U2A26.                                               : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                              <space> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><asciitilde><plus>                                                       <nobreakspace> : "⨤" U2A24 # PLUS SIGN WITH TILDE ABOVE
 <Multi_key><plus><period>                                                                          : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
-#Multi_key><asciitilde><asciitilde><plus> is in dead_tilde double press.                           : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                       <nobreakspace> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><space><plus><2>                                                                        : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><space><plus><KP_2>                                                                     : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><nobreakspace><plus><2>                                                                 : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><nobreakspace><plus><KP_2>                                                              : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-#
-#   This black triangle overlay in "⨨" U2A28 is often caret shaped.
-#
 <Multi_key><space><plus><asciicircum>                                                              : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
 <Multi_key><nobreakspace><plus><asciicircum>                                                       : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
 <Multi_key><comma><minus>                                                                          : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
@@ -8207,26 +8200,26 @@
 <Multi_key><plus><parenright>                                                              <space> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 <Multi_key><plus><parenright>                                                       <nobreakspace> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
 #
-#   The vector cross product symbol "⨯" U2A2F is confusable with the Latin-1
-#   multiplication symbol "×" U00D7, while the vector dot product symbol is
-#   the dot operator "⋅" U22C5.
-#
-#   Consistently, TUS does not mention mathematical operators disunified from
-#   Latin-1 operators, along the lines of Table 22-5. Mathematical Operators
-#   Disunified from Punctuation.
+#   While the symbol of the dot product is the dot operator "⋅" U22C5, the
+#   symbol of the cross product "⨯" U2A2F is confusable with the Latin-1
+#   multiplication symbol "×" U00D7, that it seems to have been disunified
+#   from. Yet mathematical operators disunified from Latin-1 operators are
+#   not documented like in Table 22-5. Mathematical Operators Disunified
+#   from Punctuation.
+#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-22/#G58950
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #
-<Multi_key><space><x>                                                                      <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
-<Multi_key><space><x>                                                               <nobreakspace> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
-<Multi_key><nobreakspace><x>                                                               <space> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
-<Multi_key><nobreakspace><x>                                                        <nobreakspace> : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
-<Multi_key><space><period><x>                                                              <space> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
-<Multi_key><space><period><x>                                                       <nobreakspace> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
-<Multi_key><nobreakspace><period><x>                                                       <space> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
-<Multi_key><nobreakspace><period><x>                                                <nobreakspace> : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
-<Multi_key><x><underscore>                                                                 <space> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
-<Multi_key><x><underscore>                                                          <nobreakspace> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
+<Multi_key><space><x>                                                                              : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
+<Multi_key><nobreakspace><x>                                                                       : "⨯" U2A2F # VECTOR OR CROSS PRODUCT
+<Multi_key><space><period><x>                                                                      : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
+<Multi_key><nobreakspace><period><x>                                                               : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
+<Multi_key><x><underscore>                                                                         : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
 <Multi_key><backslash><underscore><slash>                                                          : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><backslash><slash><underscore>                                                  <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><backslash><slash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><slash><backslash><underscore>                                                  <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><slash><backslash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+#@
 <Multi_key><space><numbersign><percent>                                                            : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><nobreakspace><numbersign><percent>                                                     : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><backslash><backslash><slash><slash>                                                    : "⨳" U2A33 # SMASH PRODUCT
