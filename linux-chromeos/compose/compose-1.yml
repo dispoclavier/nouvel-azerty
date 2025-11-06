@@ -7801,10 +7801,12 @@
 <Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
 <Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
 <Multi_key><O><X>                                                                                  : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
-<Multi_key><O><colon><minus>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><o><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><space><O><percent>                                                                     : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 <Multi_key><nobreakspace><O><percent>                                                              : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><space><o><percent>                                                                     : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+<Multi_key><nobreakspace><o><percent>                                                              : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
 #
 #   Consistently, "⦽" U29BD is parsed as « ¦O<! » rather than « ¦O^| » that was
 #   an intuitive option by lack of the rules making « ¦O<! » more predictable.
@@ -8219,23 +8221,22 @@
 <Multi_key><backslash><slash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><slash><backslash><underscore>                                                  <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><slash><backslash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
-#@
 <Multi_key><space><numbersign><percent>                                                            : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><nobreakspace><numbersign><percent>                                                     : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><backslash><backslash><slash><slash>                                                    : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><slash><slash><backslash><backslash>                                                    : "⨳" U2A33 # SMASH PRODUCT
-<Multi_key><parenleft><x>                                                                  <space> : "⨴" U2A34 # MULTIPLICATION SIGN IN LEFT HALF CIRCLE
-<Multi_key><parenleft><x>                                                           <nobreakspace> : "⨴" U2A34 # MULTIPLICATION SIGN IN LEFT HALF CIRCLE
-<Multi_key><x><parenright>                                                                 <space> : "⨵" U2A35 # MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
-<Multi_key><x><parenright>                                                          <nobreakspace> : "⨵" U2A35 # MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
-<Multi_key><space><asciicircum><o><x>                                                      <space> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-<Multi_key><space><asciicircum><o><x>                                               <nobreakspace> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-<Multi_key><nobreakspace><asciicircum><o><x>                                               <space> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-<Multi_key><nobreakspace><asciicircum><o><x>                                        <nobreakspace> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-<Multi_key><O><o><x>                                                                       <space> : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
-<Multi_key><O><o><x>                                                                <nobreakspace> : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
-<Multi_key><o><colon><minus>                                                               <space> : "⨸" U2A38 # CIRCLED DIVISION SIGN
-<Multi_key><o><colon><minus>                                                        <nobreakspace> : "⨸" U2A38 # CIRCLED DIVISION SIGN
+<Multi_key><parenleft><x>                                                                          : "⨴" U2A34 # MULTIPLICATION SIGN IN LEFT HALF CIRCLE
+<Multi_key><x><parenright>                                                                         : "⨵" U2A35 # MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
+#Multi_key><space><asciicircum><o><x>                                                              : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><space><asciicircum><o>                                                                 : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><nobreakspace><asciicircum><o>                                                          : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><space><asciicircum><O>                                                                 : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><nobreakspace><asciicircum><O>                                                          : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><O><o><x>                                                                               : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
+<Multi_key><O><colon><minus>                                                                       : "⨸" U2A38 # CIRCLED DIVISION SIGN
+<Multi_key><O><minus><colon>                                                                       : "⨸" U2A38 # CIRCLED DIVISION SIGN
+<Multi_key><o><colon><minus>                                                                       : "⨸" U2A38 # CIRCLED DIVISION SIGN
+<Multi_key><o><minus><colon>                                                                       : "⨸" U2A38 # CIRCLED DIVISION SIGN
 <Multi_key><A><plus>                                                                               : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><plus>                                                    : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><plus>                                                    : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
@@ -8254,32 +8255,29 @@
 <Multi_key><space><minus><rightsinglequotemark>                                     <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><rightsinglequotemark>                                     <space> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><rightsinglequotemark>                              <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
-<Multi_key><space><apostrophe><minus>                                                      <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><space><apostrophe><minus>                                               <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><nobreakspace><apostrophe><minus>                                               <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><nobreakspace><apostrophe><minus>                                        <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><space><rightsinglequotemark><minus>                                            <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><space><rightsinglequotemark><minus>                                     <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><nobreakspace><rightsinglequotemark><minus>                                     <space> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-<Multi_key><nobreakspace><rightsinglequotemark><minus>                              <nobreakspace> : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
-#   This seems to be a duplicate encoding of "⨟" U2A1F Z NOTATION
-#   SCHEMA COMPOSITION.
-<Multi_key><space><o><semicolon>                                                           <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><o><semicolon>                                                    <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><o><semicolon>                                                    <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><o><semicolon>                                             <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><z><semicolon>                                                           <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><z><semicolon>                                                    <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><z><semicolon>                                                    <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><z><semicolon>                                             <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><o><section>                                                             <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><o><section>                                                      <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><o><section>                                                      <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><o><section>                                               <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><z><section>                                                             <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><space><z><section>                                                      <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><z><section>                                                      <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><z><section>                                               <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><apostrophe><minus>                                                              : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><nobreakspace><apostrophe><minus>                                                       : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><space><rightsinglequotemark><minus>                                                    : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+<Multi_key><nobreakspace><rightsinglequotemark><minus>                                             : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
+#
+#   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
+#   like the glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION. Therefore it
+#   has almost the same sequences with a leading (extra) space.
+#
+<Multi_key><space><space><semicolon>                                                               : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><space><semicolon>                                                        : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><nobreakspace><semicolon>                                                 : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><space><section>                                                                 : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><space><section>                                                          : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><nobreakspace><section>                                                   : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><o><semicolon>                                                                   : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><o><semicolon>                                                            : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><o><section>                                                                     : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><o><section>                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+#Multi_key><space><z><semicolon>                                                                   : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><z>                                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><nobreakspace><z>                                                                       : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+#@
 <Multi_key><space><p><p>                                                                   <space> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><space><p><p>                                                            <nobreakspace> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><nobreakspace><p><p>                                                            <space> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
