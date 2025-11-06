@@ -13996,6 +13996,18 @@
 <Multi_key><asciitilde><less>                                                                  <o> : "ỗ" U1ED7 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND TILDE
 #
 #
+# # CIRCUMFLEX&GREEK_OR_CIRCLED
+#
+<dead_circumflex><dead_greek>                                                                  <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><less><at>                                                                          <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<dead_greek><dead_circumflex>                                                                  <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><at><less>                                                                          <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<dead_circumflex><dead_greek>                                                                  <X> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><less><at>                                                                          <X> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<dead_greek><dead_circumflex>                                                                  <X> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+<Multi_key><at><less>                                                                          <X> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+#
+#
 # # CIRCUMFLEX&ACUTE
 #
 <dead_circumflex><dead_acute>                                                                  <A> : "Ấ" U1EA4 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND ACUTE
