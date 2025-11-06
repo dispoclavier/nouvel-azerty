@@ -5172,10 +5172,13 @@
 #   compatibility with en_US.UTF-8/Compose, that does not support any slanted
 #   form, and uses underscore for single-line equal in "≤" U2264, "≥" U2265.
 #
-#   Consistently, an overscore as in "⊼" U22BC and "⊽" U22BD translates to a
-#   leading underscore in the sequence, while for "⊻" U22BB, the underscore is
-#   in trailing position, as vertically stacked symbols are parsed from top to
-#   bottom.
+#   This also holds true for centered bars without "equal" semantics, as in
+#   "⩈" U2A48, "⩉" U2A49.
+#
+#   Consistently, an overscore as in "⩂" U2A42, "⩃" U2A43, "⊼" U22BC, "⊽" U22BD
+#   translates to a leading underscore in the sequence, while for "⊻" U22BB,
+#   the underscore is in trailing position, as vertically stacked symbols are
+#   parsed from top to bottom.
 #
 #
 #   Underscore in arrows and harpoons
@@ -8261,8 +8264,8 @@
 <Multi_key><nobreakspace><rightsinglequotemark><minus>                                             : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 #
 #   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
-#   like the glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION. Therefore it
-#   has almost the same sequences with a leading (extra) space.
+#   like the glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION. Therefore, it
+#   has almost the same sequences, with a leading (extra) space.
 #
 <Multi_key><space><space><semicolon>                                                               : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><space><semicolon>                                                        : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
@@ -8277,49 +8280,36 @@
 #Multi_key><space><z><semicolon>                                                                   : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><space><z>                                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><z>                                                                       : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-#@
-<Multi_key><space><p><p>                                                                   <space> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
-<Multi_key><space><p><p>                                                            <nobreakspace> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
-<Multi_key><nobreakspace><p><p>                                                            <space> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
-<Multi_key><nobreakspace><p><p>                                                     <nobreakspace> : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
-<Multi_key><n><period>                                                                     <space> : "⩀" U2A40 # INTERSECTION WITH DOT
-<Multi_key><n><period>                                                              <nobreakspace> : "⩀" U2A40 # INTERSECTION WITH DOT
+<Multi_key><p><percent>                                                                            : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
+<Multi_key><c><p>                                                                                  : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
+<Multi_key><n><period>                                                                             : "⩀" U2A40 # INTERSECTION WITH DOT
 <Multi_key><u><minus>                                                                      <space> : "⩁" U2A41 # UNION WITH MINUS SIGN
 <Multi_key><u><minus>                                                               <nobreakspace> : "⩁" U2A41 # UNION WITH MINUS SIGN
-<Multi_key><space><minus><u>                                                               <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><minus><u>                                                        <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><minus><u>                                                        <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><minus><u>                                                 <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><minus><n>                                                               <space> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><space><minus><n>                                                        <nobreakspace> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><nobreakspace><minus><n>                                                        <space> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><nobreakspace><minus><n>                                                 <nobreakspace> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><space><underscore><u>                                                                  : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><nobreakspace><underscore><u>                                                           : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><space><underscore><n>                                                                  : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><nobreakspace><underscore><n>                                                           : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><n><a>                                                                          <space> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
 <Multi_key><n><a>                                                                   <nobreakspace> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
-<Multi_key><n><asciicircum>                                                                <space> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
-<Multi_key><n><asciicircum>                                                         <nobreakspace> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
-<Multi_key><u><v>                                                                          <space> : "⩅" U2A45 # UNION WITH LOGICAL OR
-<Multi_key><u><v>                                                                   <nobreakspace> : "⩅" U2A45 # UNION WITH LOGICAL OR
-<Multi_key><v><u>                                                                          <space> : "⩅" U2A45 # UNION WITH LOGICAL OR
-<Multi_key><v><u>                                                                   <nobreakspace> : "⩅" U2A45 # UNION WITH LOGICAL OR
+<Multi_key><n><asciicircum>                                                                        : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
+<Multi_key><u><v>                                                                                  : "⩅" U2A45 # UNION WITH LOGICAL OR
+<Multi_key><v><u>                                                                                  : "⩅" U2A45 # UNION WITH LOGICAL OR
 <Multi_key><u><n>                                                                          <space> : "⩆" U2A46 # UNION ABOVE INTERSECTION
 <Multi_key><u><n>                                                                   <nobreakspace> : "⩆" U2A46 # UNION ABOVE INTERSECTION
 <Multi_key><n><u>                                                                          <space> : "⩇" U2A47 # INTERSECTION ABOVE UNION
 <Multi_key><n><u>                                                                   <nobreakspace> : "⩇" U2A47 # INTERSECTION ABOVE UNION
-<Multi_key><u><minus><n>                                                                   <space> : "⩈" U2A48 # UNION ABOVE BAR ABOVE INTERSECTION
-<Multi_key><u><minus><n>                                                            <nobreakspace> : "⩈" U2A48 # UNION ABOVE BAR ABOVE INTERSECTION
-<Multi_key><n><minus><u>                                                                   <space> : "⩉" U2A49 # INTERSECTION ABOVE BAR ABOVE UNION
-<Multi_key><n><minus><u>                                                            <nobreakspace> : "⩉" U2A49 # INTERSECTION ABOVE BAR ABOVE UNION
-<Multi_key><u><u>                                                                          <space> : "⩊" U2A4A # UNION BESIDE AND JOINED WITH UNION
-<Multi_key><u><u>                                                                   <nobreakspace> : "⩊" U2A4A # UNION BESIDE AND JOINED WITH UNION
-<Multi_key><n><n>                                                                          <space> : "⩋" U2A4B # INTERSECTION BESIDE AND JOINED WITH INTERSECTION
-<Multi_key><n><n>                                                                   <nobreakspace> : "⩋" U2A4B # INTERSECTION BESIDE AND JOINED WITH INTERSECTION
-<Multi_key><space><minus><minus><u>                                                        <space> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><space><minus><minus><u>                                                 <nobreakspace> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><nobreakspace><minus><minus><u>                                                 <space> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><nobreakspace><minus><minus><u>                                          <nobreakspace> : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><n><minus><minus>                                                               <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
-<Multi_key><n><minus><minus>                                                        <nobreakspace> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
+#Multi_key><u><underscore><n>                                                                      : "⩈" U2A48 # UNION ABOVE BAR ABOVE INTERSECTION
+<Multi_key><u><underscore>                                                                         : "⩈" U2A48 # UNION ABOVE BAR ABOVE INTERSECTION
+<Multi_key><n><underscore><u>                                                                      : "⩉" U2A49 # INTERSECTION ABOVE BAR ABOVE UNION
+<Multi_key><u><u>                                                                                  : "⩊" U2A4A # UNION BESIDE AND JOINED WITH UNION
+<Multi_key><n><n>                                                                                  : "⩋" U2A4B # INTERSECTION BESIDE AND JOINED WITH INTERSECTION
+#Multi_key><space><space><underscore><u>                                                           : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><space><space><underscore>                                                              : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><nobreakspace><space><underscore>                                                       : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><nobreakspace><nobreakspace><underscore>                                                : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><n><underscore>                                                                 <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
+<Multi_key><n><underscore>                                                          <nobreakspace> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
+#@
 <Multi_key><2><n><bracketleft>                                                                     : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
 <Multi_key><KP_2><n><bracketleft>                                                                  : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
 <Multi_key><2><n><bracketright>                                                                    : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
