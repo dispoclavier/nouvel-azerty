@@ -6793,6 +6793,9 @@
 <Multi_key><e><bracketleft>                                                                        : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><e><bracketright>                                                                       : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><z><e>                                                                                  : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
+<Multi_key><Z><e>                                                                                  : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
+<Multi_key><z><E>                                                                                  : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
+<Multi_key><Z><E>                                                                                  : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 #
 #
 # # Mathematical symbols in Miscellaneous Technical block U2300
@@ -7685,12 +7688,14 @@
 <Multi_key><3><bar>                                                                                : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><KP_3><bar>                                                                             : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
+<Multi_key><Z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
 <Multi_key><space><space><colon>                                                                   : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><nobreakspace><space><colon>                                                            : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><nobreakspace><nobreakspace><colon>                                                     : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><o><colon>                                                                      <space> : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><o><colon>                                                               <nobreakspace> : "⦂" U2982 # Z NOTATION TYPE COLON
 <Multi_key><z><colon>                                                                              : "⦂" U2982 # Z NOTATION TYPE COLON
+<Multi_key><Z><colon>                                                                              : "⦂" U2982 # Z NOTATION TYPE COLON
 #Multi_key><space><braceleft><braceleft>                                                           : "⦃" U2983 # LEFT WHITE CURLY BRACKET
 <Multi_key><space><braceleft>                                                                      : "⦃" U2983 # LEFT WHITE CURLY BRACKET
 <Multi_key><nobreakspace><braceleft>                                                               : "⦃" U2983 # LEFT WHITE CURLY BRACKET
@@ -7702,11 +7707,17 @@
 <Multi_key><space><parenright><parenright>                                                         : "⦆" U2986 # RIGHT WHITE PARENTHESIS
 <Multi_key><nobreakspace><parenright><parenright>                                                  : "⦆" U2986 # RIGHT WHITE PARENTHESIS
 <Multi_key><z><parenleft>                                                                          : "⦇" U2987 # Z NOTATION LEFT IMAGE BRACKET
+<Multi_key><Z><parenleft>                                                                          : "⦇" U2987 # Z NOTATION LEFT IMAGE BRACKET
 <Multi_key><z><parenright>                                                                         : "⦈" U2988 # Z NOTATION RIGHT IMAGE BRACKET
+<Multi_key><Z><parenright>                                                                         : "⦈" U2988 # Z NOTATION RIGHT IMAGE BRACKET
 <Multi_key><z><less>                                                                       <space> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
 <Multi_key><z><less>                                                                <nobreakspace> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
+<Multi_key><Z><less>                                                                       <space> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
+<Multi_key><Z><less>                                                                <nobreakspace> : "⦉" U2989 # Z NOTATION LEFT BINDING BRACKET
 <Multi_key><z><greater>                                                                    <space> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
 <Multi_key><z><greater>                                                             <nobreakspace> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
+<Multi_key><Z><greater>                                                                    <space> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
+<Multi_key><Z><greater>                                                             <nobreakspace> : "⦊" U298A # Z NOTATION RIGHT BINDING BRACKET
 <Multi_key><space><bracketleft><underscore>                                                        : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <Multi_key><nobreakspace><bracketleft><underscore>                                                 : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <Multi_key><space><bracketright><underscore>                                                       : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
@@ -8179,12 +8190,18 @@
 <Multi_key><o><semicolon>                                                                          : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><o><section>                                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><semicolon>                                                                          : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><Z><semicolon>                                                                          : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><section>                                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><Z><section>                                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><greater><greater>                                                                   : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
+<Multi_key><Z><greater><greater>                                                                   : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
 #Multi_key><z><exclam><grave>                                                                      : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><exclam>                                                                             : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><Z><exclam>                                                                             : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><1>                                                                                  : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 <Multi_key><z><KP_1>                                                                               : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><Z><1>                                                                                  : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
+<Multi_key><Z><KP_1>                                                                               : "⨡" U2A21 # Z NOTATION SCHEMA PROJECTION
 #Multi_key><asterisk><plus> is in dead_abovering and is symmetrized by this, not in dead_horn.     : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <Multi_key><plus><asterisk>                                                                        : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 #Multi_key><o><asciicircum><plus>                                                                  : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
@@ -8287,6 +8304,7 @@
 <Multi_key><nobreakspace><o><section>                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 #Multi_key><space><z><semicolon>                                                                   : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><space><z>                                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><space><Z>                                                                              : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><nobreakspace><z>                                                                       : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><p><percent>                                                                            : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><c><p>                                                                                  : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
@@ -8437,13 +8455,16 @@
 <Multi_key><minus><minus><V>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><v><underscore><underscore>                                                             : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
+#Multi_key><z><less><minus><bar>                                                                   : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
+<Multi_key><z><less><minus>                                                                        : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
+<Multi_key><Z><less><minus>                                                                        : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
+#Multi_key><z><bar><minus><greater>                                                                : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
+<Multi_key><z><bar>                                                                                : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
+<Multi_key><Z><bar>                                                                                : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
+#Multi_key><z><greater><minus><bar>                                                                : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
+<Multi_key><z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
+<Multi_key><Z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 #@
-<Multi_key><z><less><minus><bar>                                                           <space> : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
-<Multi_key><z><less><minus><bar>                                                    <nobreakspace> : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
-<Multi_key><z><bar><minus><greater>                                                        <space> : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
-<Multi_key><z><bar><minus><greater>                                                 <nobreakspace> : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
-<Multi_key><z><greater><minus><bar>                                                        <space> : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
-<Multi_key><z><greater><minus><bar>                                                 <nobreakspace> : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 <Multi_key><equal><period>                                                                 <space> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <Multi_key><equal><period>                                                          <nobreakspace> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <Multi_key><period><minus><equal>                                                          <space> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
