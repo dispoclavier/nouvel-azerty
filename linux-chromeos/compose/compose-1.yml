@@ -1385,7 +1385,8 @@
 <Multi_key><a><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><C>                                                                                  : "℀" U2100 # ACCOUNT OF
 <Multi_key><A><c>                                                                                  : "℀" U2100 # ACCOUNT OF
-<Multi_key><A><slash><S>                                                                           : "⅍" U214D # AKTIESELSKAB
+#Multi_key><A><slash><S>                                                                           : "⅍" U214D # AKTIESELSKAB
+<Multi_key><A><slash>                                                                              : "⅍" U214D # AKTIESELSKAB
 <Multi_key><A><S>                                                                                  : "⅍" U214D # AKTIESELSKAB
 <Multi_key><a><slash><s>                                                                           : "℁" U2101 # ADDRESSED TO THE SUBJECT
 <Multi_key><a><s>                                                                                  : "℁" U2101 # ADDRESSED TO THE SUBJECT
@@ -1419,9 +1420,10 @@
 <Multi_key><S><C><R>                                                                               : "℈" U2108 # SCRUPLE
 <Multi_key><e><s><t>                                                                               : "℮" U212E # ESTIMATED SYMBOL
 <Multi_key><E><S><T>                                                                               : "℮" U212E # ESTIMATED SYMBOL
-<Multi_key><f><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
-<Multi_key><F><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
-<Multi_key><F><A><X>                                                                               : "℻" U213B # FACSIMILE SIGN
+#Multi_key><f><a><x>                                                                               : "℻" U213B # FACSIMILE SIGN
+<Multi_key><f><a>                                                                                  : "℻" U213B # FACSIMILE SIGN
+<Multi_key><F><a>                                                                                  : "℻" U213B # FACSIMILE SIGN
+<Multi_key><F><A>                                                                                  : "℻" U213B # FACSIMILE SIGN
 <Multi_key><space><K>                                                                              : "K" U212A # KELVIN SIGN
 <Multi_key><nobreakspace><K>                                                                       : "K" U212A # KELVIN SIGN
 <Multi_key><space><k>                                                                              : "K" U212A # KELVIN SIGN
@@ -1439,16 +1441,18 @@
 <Multi_key><M><R>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><r><m>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
 <Multi_key><R><M>                                                                                  : "🅬" U1F16C # RAISED MR SIGN
+#Multi_key><N><o><underscore>                                                                      : "№" U2116 # NUMERO SIGN
+<Multi_key><N><o>                                                                                  : "№" U2116 # NUMERO SIGN
+<Multi_key><n><O>                                                                                  : "№" U2116 # NUMERO SIGN
 <Multi_key><n><o><underscore>                                                                      : "№" U2116 # NUMERO SIGN
-<Multi_key><N><o><underscore>                                                                      : "№" U2116 # NUMERO SIGN
 <Multi_key><N><O><underscore>                                                                      : "№" U2116 # NUMERO SIGN
-<Multi_key><n><O><underscore>                                                                      : "№" U2116 # NUMERO SIGN
 <Multi_key><o><percent>                                                                            : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><O><percent><space>                                                                     : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><O><percent><nobreakspace>                                                              : "℧" U2127 # INVERTED OHM SIGN
-<Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
-<Multi_key><M><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
-<Multi_key><M><H><O>                                                                               : "℧" U2127 # INVERTED OHM SIGN
+#Multi_key><m><h><o>                                                                               : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><m><h>                                                                                  : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><M><h>                                                                                  : "℧" U2127 # INVERTED OHM SIGN
+<Multi_key><M><H>                                                                                  : "℧" U2127 # INVERTED OHM SIGN
 <Multi_key><o><h>                                                                                  : "Ω" U2126 # OHM SIGN
 <Multi_key><O><h>                                                                                  : "Ω" U2126 # OHM SIGN
 <Multi_key><O><H>                                                                                  : "Ω" U2126 # OHM SIGN
@@ -1482,9 +1486,10 @@
 <Multi_key><s><a><m>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
 <Multi_key><S><a><m>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
 <Multi_key><S><A><M>                                                                               : "⅏" U214F # SYMBOL FOR SAMARITAN SOURCE
+#Multi_key><T><E><L>                                                                               : "℡" U2121 # TELEPHONE SIGN
+<Multi_key><T><E>                                                                                  : "℡" U2121 # TELEPHONE SIGN
+<Multi_key><T><e>                                                                                  : "℡" U2121 # TELEPHONE SIGN
 <Multi_key><t><e><l>                                                                               : "℡" U2121 # TELEPHONE SIGN
-<Multi_key><T><e><l>                                                                               : "℡" U2121 # TELEPHONE SIGN
-<Multi_key><T><E><L>                                                                               : "℡" U2121 # TELEPHONE SIGN
 <Multi_key><t><m>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
 <Multi_key><T><M>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
 <Multi_key><m><t>                                                                                  : "™" U2122 # TRADE MARK SIGN emoji
@@ -5180,6 +5185,10 @@
 #   the underscore is in trailing position, as vertically stacked symbols are
 #   parsed from top to bottom.
 #
+#   However, leading underscore is prone to conflicts with the subscript dead
+#   key. Therefore, leading minus may be supported alongside as an alternative
+#   for brevity, making up streamlined shortcuts, as for "⩞" U2A5E.
+#
 #
 #   Underscore in arrows and harpoons
 #
@@ -7249,8 +7258,7 @@
 <Multi_key><o><T><T>                                                                               : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><T><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><bar><underscore>                                                                    : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
-#Multi_key><a><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
-<Multi_key><a><minus>                                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><a><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><A><minus><V>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><bracketleft><minus>                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
@@ -7935,7 +7943,7 @@
 #
 <Multi_key><bracketleft><bracketleft><bracketright>                                                : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
 #Multi_key><slash><bar><underscore><underscore>                                                    : "⧡" U29E1 # INCREASES AS
-<Multi_key><slash><bar>                                                                            : "⧡" U29E1 # INCREASES AS
+<Multi_key><slash><bar><underscore>                                                                : "⧡" U29E1 # INCREASES AS
 <Multi_key><slash><underscore><underscore><bar>                                                    : "⧡" U29E1 # INCREASES AS
 <Multi_key><m>                                                                             <space> : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><m>                                                                      <nobreakspace> : "⧢" U29E2 # SHUFFLE PRODUCT
@@ -8076,7 +8084,7 @@
 #
 #   This set of intersecting logical operators "⨇" U2A07, "⨈" U2A08 is taller
 #   than "⩕" U2A55 TWO INTERSECTING LOGICAL AND, "⩖" U2A56 TWO INTERSECTING
-#   LOGICAL OR.
+#   LOGICAL OR. Therefore, its sequences use uppercase for uniqueness.
 #
 <Multi_key><W><percent>                                                                            : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
 <Multi_key><space><A><A>                                                                           : "⨇" U2A07 # TWO LOGICAL AND OPERATOR
@@ -8285,8 +8293,10 @@
 <Multi_key><n><period>                                                                             : "⩀" U2A40 # INTERSECTION WITH DOT
 <Multi_key><u><minus>                                                                      <space> : "⩁" U2A41 # UNION WITH MINUS SIGN
 <Multi_key><u><minus>                                                               <nobreakspace> : "⩁" U2A41 # UNION WITH MINUS SIGN
-<Multi_key><space><underscore><u>                                                                  : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><u>                                                           : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><space><underscore><u>                                                          <space> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><space><underscore><u>                                                   <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><nobreakspace><underscore><u>                                                   <space> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><nobreakspace><underscore><u>                                            <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><space><underscore><n>                                                                  : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><nobreakspace><underscore><n>                                                           : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><n><a>                                                                          <space> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
@@ -8309,7 +8319,6 @@
 <Multi_key><nobreakspace><nobreakspace><underscore>                                                : "⩌" U2A4C # CLOSED UNION WITH SERIFS
 <Multi_key><n><underscore>                                                                 <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
 <Multi_key><n><underscore>                                                          <nobreakspace> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
-#@
 <Multi_key><2><n><bracketleft>                                                                     : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
 <Multi_key><KP_2><n><bracketleft>                                                                  : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
 <Multi_key><2><n><bracketright>                                                                    : "⩎" U2A4E # DOUBLE SQUARE INTERSECTION
@@ -8318,26 +8327,25 @@
 <Multi_key><KP_2><u><bracketleft>                                                                  : "⩏" U2A4F # DOUBLE SQUARE UNION
 <Multi_key><2><u><bracketright>                                                                    : "⩏" U2A4F # DOUBLE SQUARE UNION
 <Multi_key><KP_2><u><bracketright>                                                                 : "⩏" U2A4F # DOUBLE SQUARE UNION
-<Multi_key><space><minus><minus><u><numbersign>                                            <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><minus><minus><u><numbersign>                                     <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><minus><minus><u><numbersign>                                     <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><minus><minus><u><numbersign>                              <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><minus><minus><u><numbersign><percent>                                   <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><minus><minus><u><numbersign><percent>                            <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><minus><minus><u><numbersign><percent>                            <space> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><minus><minus><u><numbersign><percent>                     <nobreakspace> : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><period><a>                                                              <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><a>                                                       <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><a>                                                       <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><a>                                                <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><v><v>                                                           <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><v><v>                                                    <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><v><v>                                                    <space> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><v><v>                                             <nobreakspace> : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+#Multi_key><space><underscore><u><numbersign><percent>                                             : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><space><underscore><u><numbersign>                                                      : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><nobreakspace><underscore><u><numbersign>                                               : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><space><period><a>                                                                      : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><nobreakspace><period><a>                                                               : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><space><period><A>                                                                      : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><nobreakspace><period><A>                                                               : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><space><period><v><v>                                                                   : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><nobreakspace><period><v><v>                                                            : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><space><period><V><V>                                                                   : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><nobreakspace><period><V><V>                                                            : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
 <Multi_key><space><period><v>                                                              <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><space><period><v>                                                       <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v>                                                       <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><nobreakspace><period><v>                                                <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><space><period><V>                                                              <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><space><period><V>                                                       <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><nobreakspace><period><V>                                                       <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><nobreakspace><period><V>                                                <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><2><A>                                                                                  : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><KP_2><A>                                                                               : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><2><a>                                                                                  : "⩓" U2A53 # DOUBLE LOGICAL AND
@@ -8352,60 +8360,52 @@
 <Multi_key><KP_2><V>                                                                <nobreakspace> : "⩔" U2A54 # DOUBLE LOGICAL OR
 #
 #   These "⩕" U2A55, "⩖" U2A56 are smaller than "⨇" U2A07, "⨈" U2A08 and use
-#   therefore lowercase. However, these are most likely duplicates, that it is
-#   hard to give distinctive names to.
+#   therefore lowercase rather than leading space as would be done for ordinary
+#   duplicates.
 #
-<Multi_key><w><percent>                                                                    <space> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
-<Multi_key><w><percent>                                                             <nobreakspace> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
-<Multi_key><space><a><a>                                                                   <space> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
-<Multi_key><space><a><a>                                                            <nobreakspace> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
-<Multi_key><nobreakspace><a><a>                                                            <space> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
-<Multi_key><nobreakspace><a><a>                                                     <nobreakspace> : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
+<Multi_key><w><percent>                                                                            : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
+<Multi_key><space><a><a>                                                                           : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
+<Multi_key><nobreakspace><a><a>                                                                    : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><w>                                                                             <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
 <Multi_key><w>                                                                      <nobreakspace> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><space><v><v>                                                                   <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><space><v><v>                                                            <nobreakspace> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><nobreakspace><v><v>                                                            <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><nobreakspace><v><v>                                                     <nobreakspace> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
-<Multi_key><space><V><slash><slash>                                                        <space> : "⩗" U2A57 # SLOPING LARGE OR
-<Multi_key><space><V><slash><slash>                                                 <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
-<Multi_key><nobreakspace><V><slash><slash>                                                 <space> : "⩗" U2A57 # SLOPING LARGE OR
-<Multi_key><nobreakspace><V><slash><slash>                                          <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
-<Multi_key><A><slash><bar>                                                                         : "⩘" U2A58 # SLOPING LARGE AND
-<Multi_key><V><percent><slash>                                                                     : "⩘" U2A58 # SLOPING LARGE AND
-<Multi_key><v><A>                                                                          <space> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><v><A>                                                                   <nobreakspace> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><V><A>                                                                          <space> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><V><A>                                                                   <nobreakspace> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><v><percent><v>                                                                 <space> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><v><percent><v>                                                          <nobreakspace> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><V><percent><V>                                                                 <space> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><V><percent><V>                                                          <nobreakspace> : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+#Multi_key><space><v><v>                                                                           : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
+<Multi_key><space><v>                                                                              : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
+<Multi_key><nobreakspace><v>                                                                       : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
+<Multi_key><space><bar><slash>                                                             <space> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><space><bar><slash>                                                      <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><nobreakspace><bar><slash>                                                      <space> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><nobreakspace><bar><slash>                                               <nobreakspace> : "⩗" U2A57 # SLOPING LARGE OR
+<Multi_key><slash><bar>                                                                    <space> : "⩘" U2A58 # SLOPING LARGE AND
+<Multi_key><slash><bar>                                                             <nobreakspace> : "⩘" U2A58 # SLOPING LARGE AND
+<Multi_key><v><a>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><v><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><V><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><v><percent><v>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><V><percent><V>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><a><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><A><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><v><percent><bar>                                                               <space> : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><v><percent><bar>                                                        <nobreakspace> : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><V><percent><bar>                                                               <space> : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><V><percent><bar>                                                        <nobreakspace> : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><v><bar>                                                                        <space> : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
-<Multi_key><v><bar>                                                                 <nobreakspace> : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
-<Multi_key><V><bar>                                                                        <space> : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
-<Multi_key><V><bar>                                                                 <nobreakspace> : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
+<Multi_key><v><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
+<Multi_key><V><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
+<Multi_key><v><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
+<Multi_key><V><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><A><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><A><minus>                                                               <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><v><percent><minus>                                                             <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><v><percent><minus>                                                      <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><V><percent><minus>                                                             <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><V><percent><minus>                                                      <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><v><minus>                                                                      <space> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
-<Multi_key><v><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
-<Multi_key><V><minus>                                                                      <space> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
-<Multi_key><V><minus>                                                               <nobreakspace> : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
-<Multi_key><minus><minus><A>                                                               <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><minus><minus><A>                                                        <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><minus><minus><v><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><minus><minus><v><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><minus><minus><V><percent>                                                      <space> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><minus><minus><V><percent>                                               <nobreakspace> : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><a><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><a><minus>                                                               <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><v><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><V><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><v><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
+<Multi_key><V><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
+<Multi_key><underscore><underscore><A>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><a>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><v><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><v><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><V><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><V><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><A>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><a>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><v><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><V><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
@@ -8414,26 +8414,30 @@
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><V><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><space><A><underscore><underscore>                                              <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><space><A><underscore><underscore>                                       <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><nobreakspace><A><underscore><underscore>                                       <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><nobreakspace><A><underscore><underscore>                                <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><v><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><v><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><V><percent><underscore><underscore>                                            <space> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><V><percent><underscore><underscore>                                     <nobreakspace> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><space><A><underscore><underscore>                                                      : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><nobreakspace><A><underscore><underscore>                                               : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><v><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><V><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
 #   "⩡" U2A61 looks like a small "⊻" U22BB and thus qualifies for a sequence
 #   with trailing comma.
 #   See #   Small symbols
 #
 <Multi_key><v><underscore><comma>                                                                  : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
+<Multi_key><space><underscore><underscore><v>                                              <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><v>                                       <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><v>                                       <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><v>                                <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><V>                                              <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><V>                                       <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><V>                                       <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><V>                                <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><v><underscore><underscore>                                                     <space> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
-<Multi_key><v><underscore><underscore>                                              <nobreakspace> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
+<Multi_key><v><underscore><underscore>                                                             : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
+#@
 <Multi_key><z><less><minus><bar>                                                           <space> : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
 <Multi_key><z><less><minus><bar>                                                    <nobreakspace> : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
 <Multi_key><z><bar><minus><greater>                                                        <space> : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
