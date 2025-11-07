@@ -8455,7 +8455,7 @@
 <dead_abovedot>                                                                         <EuroSign> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <Multi_key><period>                                                                     <EuroSign> : "⋵" U22F5 # ELEMENT OF WITH DOT ABOVE
 <dead_abovedot>                                                                       <asciitilde> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
-#   Multikey conflicts with "i̇̃", "Ė̃", "ė̃", "⩫" U2A6B, "⩭" U2A6D.                      <asciitilde> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
+#   Multikey conflicts with itself and "i̇̃", "Ė̃", "ė̃", "⩫" U2A6B, "⩭" U2A6D.           <asciitilde> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <dead_abovedot>                                                                       <apostrophe> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 #   Multikey conflicts with "i̇́" # U00, "Ė́" # U01, "ė́" # U01, "᷁" U1DC1, "Ṥ" U1E64, […] <apostrophe> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <dead_abovedot>                                                             <rightsinglequotemark> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
@@ -8632,7 +8632,7 @@
 <Multi_key><period>                                                                            <z> : "ż" U017C # LATIN SMALL LETTER Z WITH DOT ABOVE
 #
 #
-# # DOT_ABOVE&GROUP1
+# # DOT_ABOVE&GROUP_1
 #   Lenient group selection
 #
 <dead_abovedot><UEFD0>                                                                <asciitilde> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
@@ -8647,7 +8647,7 @@
 <Multi_key><period><numbersign>                                                                <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 #
 #
-# # DOT_ABOVE&GROUP2
+# # DOT_ABOVE&GROUP_2
 #
 <dead_abovedot><UEFD0><UEFD0>                                                         <asciitilde> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><period><numbersign><numbersign>                                           <asciitilde> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
@@ -8659,7 +8659,10 @@
 <Multi_key><period><numbersign><numbersign>                                                    <s> : "ẛ" U1E9B # LATIN SMALL LETTER LONG S WITH DOT ABOVE
 #
 #
-# # DOT_ABOVE&GROUP3
+# # DOT_ABOVE&GROUP_3
+#
+#   The dotted "⩭" U2A6D is here because "≅" U2245 is in group 3 of tilde, but
+#   lenient group selection is also supported.
 #
 <dead_abovedot><UEFD0><3>                                                             <asciitilde> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><period><numbersign><3>                                                    <asciitilde> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
@@ -13337,6 +13340,8 @@
 <Multi_key><asterisk>                                                                       <plus> : "⨢" U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <dead_abovering>                                                                             <bar> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><asterisk>                                                                        <bar> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
+<dead_abovering>                                                                           <equal> : "⩮" U2A6E # EQUALS WITH ASTERISK
+#   Multikey is supported as part of math symbols.                                         <equal> : "⩮" U2A6E # EQUALS WITH ASTERISK
 <dead_abovering>                                                                          <period> : "⸰" U2E30 # RING POINT
 <Multi_key><asterisk>                                                                     <period> : "⸰" U2E30 # RING POINT
 <dead_abovering>                                                                               <0> : "°" U00B0 # DEGREE SIGN

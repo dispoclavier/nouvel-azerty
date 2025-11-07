@@ -8464,38 +8464,41 @@
 #Multi_key><z><greater><minus><bar>                                                                : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 <Multi_key><z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 <Multi_key><Z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
-#@
-<Multi_key><equal><period>                                                                 <space> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
-<Multi_key><equal><period>                                                          <nobreakspace> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
-<Multi_key><period><minus><equal>                                                          <space> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
-<Multi_key><period><minus><equal>                                                   <nobreakspace> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
-<Multi_key><period><equal><minus>                                                          <space> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
-<Multi_key><period><equal><minus>                                                   <nobreakspace> : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
+<Multi_key><equal><period>                                                                         : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
+<Multi_key><period><equal><underscore>                                                             : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
+#Multi_key><period><underscore><equal> conflicts with "․" U2024.                                   : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
+<Multi_key><period><equal><minus>                                                                  : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
+<Multi_key><period><minus><equal>                                                                  : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
+<Multi_key><space><equal><underscore><bar><bar>                                            <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><space><equal><underscore><bar><bar>                                     <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><nobreakspace><equal><underscore><bar><bar>                                     <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><nobreakspace><equal><underscore><bar><bar>                              <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><space><underscore><equal><bar><bar>                                            <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><space><underscore><equal><bar><bar>                                     <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><nobreakspace><underscore><equal><bar><bar>                                     <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><nobreakspace><underscore><equal><bar><bar>                              <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><equal><minus><bar><bar>                                                        <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
+<Multi_key><equal><minus><bar><bar>                                                 <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar>                                                        <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar>                                                 <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><minus><equal><bar><bar><bar>                                                   <space> : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
-<Multi_key><minus><equal><bar><bar><bar>                                            <nobreakspace> : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
-<Multi_key><space><period><asciitilde>                                                     <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
-<Multi_key><space><period><asciitilde>                                              <nobreakspace> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><asciitilde>                                              <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><asciitilde>                                       <nobreakspace> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
-<Multi_key><period><asciitilde><period>                                                    <space> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
-<Multi_key><period><asciitilde><period>                                             <nobreakspace> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
-<Multi_key><period><asciitilde><period><slash>                                             <space> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
-<Multi_key><period><asciitilde><period><slash>                                      <nobreakspace> : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
+<Multi_key><space><equal><underscore><bar><bar><bar>                                               : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><nobreakspace><equal><underscore><bar><bar><bar>                                        : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><space><underscore><equal><bar><bar><bar>                                               : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><nobreakspace><underscore><equal><bar><bar><bar>                                        : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><equal><minus><bar><bar><bar>                                                           : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><minus><equal><bar><bar><bar>                                                           : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
+<Multi_key><period><asciitilde>                                                            <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
+<Multi_key><period><asciitilde>                                                     <nobreakspace> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
+<Multi_key><period><asciitilde><period>                                                            : "⩫" U2A6B # TILDE OPERATOR WITH RISING DOTS
 <Multi_key><asciitilde><minus><asciitilde>                                                         : "⩬" U2A6C # SIMILAR MINUS SIMILAR
-<Multi_key><period><asciitilde><equal>                                                     <space> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
-<Multi_key><period><asciitilde><equal>                                              <nobreakspace> : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
+<Multi_key><period><asciitilde><equal>                                                             : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><asterisk><equal>                                                                       : "⩮" U2A6E # EQUALS WITH ASTERISK
 <Multi_key><asciicircum><asciitilde><asciitilde>                                                   : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
-<Multi_key><space><asciitilde><asciitilde><equal>                                          <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
-<Multi_key><space><asciitilde><asciitilde><equal>                                   <nobreakspace> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
-<Multi_key><nobreakspace><asciitilde><asciitilde><equal>                                   <space> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
-<Multi_key><nobreakspace><asciitilde><asciitilde><equal>                            <nobreakspace> : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
-<Multi_key><equal><plus>                                                                   <space> : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
-<Multi_key><equal><plus>                                                            <nobreakspace> : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
-<Multi_key><plus><equal>                                                                   <space> : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
-<Multi_key><plus><equal>                                                            <nobreakspace> : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
+<Multi_key><space><asciitilde><asciitilde><equal>                                                  : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
+<Multi_key><nobreakspace><asciitilde><asciitilde><equal>                                           : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
+<Multi_key><equal><plus>                                                                           : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
+<Multi_key><plus><equal>                                                                           : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
+#@
 <Multi_key><space><equal><asciitilde>                                                      <space> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
 <Multi_key><space><equal><asciitilde>                                               <nobreakspace> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
 <Multi_key><nobreakspace><equal><asciitilde>                                               <space> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
