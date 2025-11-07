@@ -5161,9 +5161,10 @@
 #   https://github.com/typst/typst/issues/1521
 #
 #   If the slanted form is not canonical, and there is a competing straight and
-#   horizontal (single-line or double-line) equal, as for "⪙" U2A99, "⪚" U2A9A
-#   versus "⪛" U2A9B, "⪜" U2A9C, the slanted one is distinguished by trailing
-#   grave, with mnemonics based on the backtick’s slant.
+#   horizontal (single-line or double-line) equal, as for "⪕" U2A95, "⪖" U2A96
+#   versus "⋜" U22DC, "⋜" U22DC, and for "⪛" U2A9B, "⪜" U2A9C versus "⪙" U2A99,
+#   "⪚" U2A9A, the slanted variant is distinguished by a trailing grave, with
+#   mnemonics based on the backtick’s slant.
 #
 #   This scheme seems better than repurposing the underscore for slanted, and
 #   introducing minus for not slanted, screwing up some arrows in the process.
@@ -5224,9 +5225,9 @@
 #
 #   Squiggle arrows "⇜" U21DC, "⇝" U21DD, "⟿" U27FF, "⬳" U2B33 use asciitilde
 #   at least twice, for intuitivity. As a result, the triple asciitilde of the
-#   long variants is consistent only with triple minus/equal variant sequences
-#   of the other long arrows, due to single asciitilde being required for wave
-#   arrows "↜" U219C, "↝" U219D (the directly pointing variants "⤳" U2933 and
+#   long variants is inconsistent with the double minus/equal sequences of the
+#   other long arrows, due to single asciitilde being required for wave arrows
+#   "↜" U219C, "↝" U219D (the directly pointing variants "⤳" U2933 and
 #   "⬿" U2B3F have a minus stem segment before their arrowhead), while normal
 #   length squiggle arrows "⇜" U21DC, "⇝" U21DD are intuitively input by the
 #   means of double asciitilde sequences.
@@ -5917,8 +5918,8 @@
 #   U21DC is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=37
 #
-<Multi_key><less><asciitilde><asciitilde>                                                  <space> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
-<Multi_key><less><asciitilde><asciitilde>                                           <nobreakspace> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
+<Multi_key><space><less><asciitilde><asciitilde>                                                   : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
+<Multi_key><nobreakspace><less><asciitilde><asciitilde>                                            : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
 <Multi_key><asciitilde><asciitilde><greater>                                                       : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
 <Multi_key><bar><less><minus>                                                                      : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar>                                                                   : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
@@ -8465,26 +8466,12 @@
 <Multi_key><z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 <Multi_key><Z><greater><minus>                                                                     : "⩥" U2A65 # Z NOTATION RANGE ANTIRESTRICTION
 <Multi_key><equal><period>                                                                         : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
-<Multi_key><period><equal><underscore>                                                             : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
-#Multi_key><period><underscore><equal> conflicts with "․" U2024.                                   : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key><period><equal><minus>                                                                  : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key><period><minus><equal>                                                                  : "⩧" U2A67 # IDENTICAL WITH DOT ABOVE
-<Multi_key><space><equal><underscore><bar><bar>                                            <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><space><equal><underscore><bar><bar>                                     <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><nobreakspace><equal><underscore><bar><bar>                                     <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><nobreakspace><equal><underscore><bar><bar>                              <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><space><underscore><equal><bar><bar>                                            <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><space><underscore><equal><bar><bar>                                     <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><nobreakspace><underscore><equal><bar><bar>                                     <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><nobreakspace><underscore><equal><bar><bar>                              <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><equal><minus><bar><bar>                                                        <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><equal><minus><bar><bar>                                                 <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar>                                                        <space> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar>                                                 <nobreakspace> : "⩨" U2A68 # TRIPLE HORIZONTAL BAR WITH DOUBLE VERTICAL STROKE
-<Multi_key><space><equal><underscore><bar><bar><bar>                                               : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
-<Multi_key><nobreakspace><equal><underscore><bar><bar><bar>                                        : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
-<Multi_key><space><underscore><equal><bar><bar><bar>                                               : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
-<Multi_key><nobreakspace><underscore><equal><bar><bar><bar>                                        : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
 <Multi_key><equal><minus><bar><bar><bar>                                                           : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
 <Multi_key><minus><equal><bar><bar><bar>                                                           : "⩩" U2A69 # TRIPLE HORIZONTAL BAR WITH TRIPLE VERTICAL STROKE
 <Multi_key><period><asciitilde>                                                            <space> : "⩪" U2A6A # TILDE OPERATOR WITH DOT ABOVE
@@ -8498,110 +8485,69 @@
 <Multi_key><nobreakspace><asciitilde><asciitilde><equal>                                           : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
 <Multi_key><equal><plus>                                                                           : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
 <Multi_key><plus><equal>                                                                           : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
-#@
-<Multi_key><space><equal><asciitilde>                                                      <space> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
-<Multi_key><space><equal><asciitilde>                                               <nobreakspace> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
-<Multi_key><nobreakspace><equal><asciitilde>                                               <space> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
-<Multi_key><nobreakspace><equal><asciitilde>                                        <nobreakspace> : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
+<Multi_key><equal><asciitilde>                                                                     : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
 <Multi_key><colon><colon><equal>                                                           <space> : "⩴" U2A74 # DOUBLE COLON EQUAL
 <Multi_key><colon><colon><equal>                                                    <nobreakspace> : "⩴" U2A74 # DOUBLE COLON EQUAL
-<Multi_key><space><equal><equal>                                                           <space> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key><space><equal><equal>                                                    <nobreakspace> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key><nobreakspace><equal><equal>                                                    <space> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key><nobreakspace><equal><equal>                                             <nobreakspace> : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><space><equal><equal>                                                                   : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key><nobreakspace><equal><equal>                                                            : "⩵" U2A75 # TWO CONSECUTIVE EQUALS SIGNS
 <Multi_key><equal><equal><equal>                                                           <space> : "⩶" U2A76 # THREE CONSECUTIVE EQUALS SIGNS
 <Multi_key><equal><equal><equal>                                                    <nobreakspace> : "⩶" U2A76 # THREE CONSECUTIVE EQUALS SIGNS
-<Multi_key><period><period><equal><period><period>                                         <space> : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
-<Multi_key><period><period><equal><period><period>                                  <nobreakspace> : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
-<Multi_key><period><period><period><period><equal><minus>                                  <space> : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
-<Multi_key><period><period><period><period><equal><minus>                           <nobreakspace> : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
-<Multi_key><period><period><period><period><minus><equal>                                  <space> : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
-<Multi_key><period><period><period><period><minus><equal>                           <nobreakspace> : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
-<Multi_key><space><space><less><o>                                                         <space> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><space><space><less><o>                                                  <nobreakspace> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><space><less><o>                                                  <space> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><space><less><o>                                           <nobreakspace> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><nobreakspace><less><o>                                           <space> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><nobreakspace><less><o>                                    <nobreakspace> : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><space><o><greater>                                                             <space> : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><space><o><greater>                                                      <nobreakspace> : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><o><greater>                                                      <space> : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><o><greater>                                               <nobreakspace> : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><question><less>                                                                <space> : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
-<Multi_key><question><less>                                                         <nobreakspace> : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
-<Multi_key><question><greater>                                                             <space> : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
-<Multi_key><question><greater>                                                      <nobreakspace> : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
-<Multi_key><less><underscore><grave>                                                       <space> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
-<Multi_key><less><underscore><grave>                                                <nobreakspace> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
-<Multi_key><greater><underscore><grave>                                                    <space> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<Multi_key><greater><underscore><grave>                                             <nobreakspace> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<Multi_key><less><underscore><period>                                                      <space> : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
-<Multi_key><less><underscore><period>                                               <nobreakspace> : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
-<Multi_key><greater><underscore><period>                                                   <space> : "⪀" U2A80 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
-<Multi_key><greater><underscore><period>                                            <nobreakspace> : "⪀" U2A80 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
+#Multi_key><period><period><equal><period><period>                                                 : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
+<Multi_key><period><period><equal>                                                                 : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
+#Multi_key><period><period><period><period><equal><minus>                                          : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
+<Multi_key><period><period><period><period>                                                        : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
+<Multi_key><space><space><less><o>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><space><less><o>                                                          : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><nobreakspace><less><o>                                                   : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><space><o><greater>                                                                     : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><o><greater>                                                              : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
+<Multi_key><question><less>                                                                        : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
+<Multi_key><question><greater>                                                                     : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
+<Multi_key><less><underscore><grave>                                                               : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
+<Multi_key><greater><underscore><grave>                                                            : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
+<Multi_key><less><underscore><period>                                                              : "⩿" U2A7F # LESS-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
+<Multi_key><greater><underscore><period>                                                           : "⪀" U2A80 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT INSIDE
 #Multi_key><period><less><underscore>                                                              : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
 <Multi_key><period><less>                                                                          : "⪁" U2A81 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
-<Multi_key><period><greater><underscore>                                                           : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
-<Multi_key><less><period><underscore>                                                      <space> : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
-<Multi_key><less><period><underscore>                                               <nobreakspace> : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
-<Multi_key><greater><period><underscore>                                                   <space> : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
-<Multi_key><greater><period><underscore>                                            <nobreakspace> : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
-<Multi_key><space><less><asciitilde><asciitilde>                                                   : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
-<Multi_key><nobreakspace><less><asciitilde><asciitilde>                                            : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
+<Multi_key><greater><period><underscore>                                                           : "⪂" U2A82 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+<Multi_key><less><period><underscore>                                                              : "⪃" U2A83 # LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE RIGHT
+<Multi_key><period><greater><underscore>                                                           : "⪄" U2A84 # GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE LEFT
+<Multi_key><less><asciitilde><asciitilde>                                                  <space> : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
+<Multi_key><less><asciitilde><asciitilde>                                           <nobreakspace> : "⪅" U2A85 # LESS-THAN OR APPROXIMATE
 <Multi_key><greater><asciitilde><asciitilde>                                               <space> : "⪆" U2A86 # GREATER-THAN OR APPROXIMATE
 <Multi_key><greater><asciitilde><asciitilde>                                        <nobreakspace> : "⪆" U2A86 # GREATER-THAN OR APPROXIMATE
-<Multi_key><less><underscore><slash>                                                       <space> : "⪇" U2A87 # LESS-THAN AND SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><underscore><slash>                                                <nobreakspace> : "⪇" U2A87 # LESS-THAN AND SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><underscore><slash>                                                    <space> : "⪈" U2A88 # GREATER-THAN AND SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><underscore><slash>                                             <nobreakspace> : "⪈" U2A88 # GREATER-THAN AND SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><asciitilde><asciitilde><slash>                                           <space> : "⪉" U2A89 # LESS-THAN AND NOT APPROXIMATE
-<Multi_key><less><asciitilde><asciitilde><slash>                                    <nobreakspace> : "⪉" U2A89 # LESS-THAN AND NOT APPROXIMATE
-<Multi_key><greater><asciitilde><asciitilde><slash>                                        <space> : "⪊" U2A8A # GREATER-THAN AND NOT APPROXIMATE
-<Multi_key><greater><asciitilde><asciitilde><slash>                                 <nobreakspace> : "⪊" U2A8A # GREATER-THAN AND NOT APPROXIMATE
-<Multi_key><space><less><equal><greater>                                                   <space> : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-<Multi_key><space><less><equal><greater>                                            <nobreakspace> : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-<Multi_key><nobreakspace><less><equal><greater>                                            <space> : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-<Multi_key><nobreakspace><less><equal><greater>                                     <nobreakspace> : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-<Multi_key><greater><equal><less>                                                          <space> : "⪌" U2A8C # GREATER-THAN ABOVE DOUBLE-LINE EQUAL ABOVE LESS-THAN
-<Multi_key><greater><equal><less>                                                   <nobreakspace> : "⪌" U2A8C # GREATER-THAN ABOVE DOUBLE-LINE EQUAL ABOVE LESS-THAN
-<Multi_key><less><asciitilde><minus>                                                       <space> : "⪍" U2A8D # LESS-THAN ABOVE SIMILAR OR EQUAL
-<Multi_key><less><asciitilde><minus>                                                <nobreakspace> : "⪍" U2A8D # LESS-THAN ABOVE SIMILAR OR EQUAL
-<Multi_key><greater><asciitilde><minus>                                                    <space> : "⪎" U2A8E # GREATER-THAN ABOVE SIMILAR OR EQUAL
-<Multi_key><greater><asciitilde><minus>                                             <nobreakspace> : "⪎" U2A8E # GREATER-THAN ABOVE SIMILAR OR EQUAL
-<Multi_key><less><asciitilde><greater>                                                     <space> : "⪏" U2A8F # LESS-THAN ABOVE SIMILAR ABOVE GREATER-THAN
-<Multi_key><less><asciitilde><greater>                                              <nobreakspace> : "⪏" U2A8F # LESS-THAN ABOVE SIMILAR ABOVE GREATER-THAN
-<Multi_key><greater><asciitilde><less>                                                     <space> : "⪐" U2A90 # GREATER-THAN ABOVE SIMILAR ABOVE LESS-THAN
-<Multi_key><greater><asciitilde><less>                                              <nobreakspace> : "⪐" U2A90 # GREATER-THAN ABOVE SIMILAR ABOVE LESS-THAN
-<Multi_key><less><greater><equal>                                                          <space> : "⪑" U2A91 # LESS-THAN ABOVE GREATER-THAN ABOVE DOUBLE-LINE EQUAL
-<Multi_key><less><greater><equal>                                                   <nobreakspace> : "⪑" U2A91 # LESS-THAN ABOVE GREATER-THAN ABOVE DOUBLE-LINE EQUAL
-<Multi_key><greater><less><equal>                                                          <space> : "⪒" U2A92 # GREATER-THAN ABOVE LESS-THAN ABOVE DOUBLE-LINE EQUAL
-<Multi_key><greater><less><equal>                                                   <nobreakspace> : "⪒" U2A92 # GREATER-THAN ABOVE LESS-THAN ABOVE DOUBLE-LINE EQUAL
-<Multi_key><less><underscore><greater><underscore>                                         <space> : "⪓" U2A93 # LESS-THAN ABOVE SLANTED EQUAL ABOVE GREATER-THAN ABOVE SLANTED EQUAL
-<Multi_key><less><underscore><greater><underscore>                                  <nobreakspace> : "⪓" U2A93 # LESS-THAN ABOVE SLANTED EQUAL ABOVE GREATER-THAN ABOVE SLANTED EQUAL
-<Multi_key><greater><underscore><less><underscore>                                         <space> : "⪔" U2A94 # GREATER-THAN ABOVE SLANTED EQUAL ABOVE LESS-THAN ABOVE SLANTED EQUAL
-<Multi_key><greater><underscore><less><underscore>                                  <nobreakspace> : "⪔" U2A94 # GREATER-THAN ABOVE SLANTED EQUAL ABOVE LESS-THAN ABOVE SLANTED EQUAL
-<Multi_key><underscore><less><grave>                                                       <space> : "⪕" U2A95 # SLANTED EQUAL TO OR LESS-THAN
-<Multi_key><underscore><less><grave>                                                <nobreakspace> : "⪕" U2A95 # SLANTED EQUAL TO OR LESS-THAN
-<Multi_key><underscore><greater><grave>                                                    <space> : "⪖" U2A96 # SLANTED EQUAL TO OR GREATER-THAN
-<Multi_key><underscore><greater><grave>                                             <nobreakspace> : "⪖" U2A96 # SLANTED EQUAL TO OR GREATER-THAN
-<Multi_key><underscore><less><period>                                                      <space> : "⪗" U2A97 # SLANTED EQUAL TO OR LESS-THAN WITH DOT INSIDE
-<Multi_key><underscore><less><period>                                               <nobreakspace> : "⪗" U2A97 # SLANTED EQUAL TO OR LESS-THAN WITH DOT INSIDE
-<Multi_key><underscore><greater><period>                                                   <space> : "⪘" U2A98 # SLANTED EQUAL TO OR GREATER-THAN WITH DOT INSIDE
-<Multi_key><underscore><greater><period>                                            <nobreakspace> : "⪘" U2A98 # SLANTED EQUAL TO OR GREATER-THAN WITH DOT INSIDE
+<Multi_key><less><underscore><slash>                                                               : "⪇" U2A87 # LESS-THAN AND SINGLE-LINE NOT EQUAL TO
+<Multi_key><greater><underscore><slash>                                                            : "⪈" U2A88 # GREATER-THAN AND SINGLE-LINE NOT EQUAL TO
+<Multi_key><less><asciitilde><asciitilde><slash>                                                   : "⪉" U2A89 # LESS-THAN AND NOT APPROXIMATE
+<Multi_key><greater><asciitilde><asciitilde><slash>                                                : "⪊" U2A8A # GREATER-THAN AND NOT APPROXIMATE
+<Multi_key><space><less><equal><greater>                                                           : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
+<Multi_key><nobreakspace><less><equal><greater>                                                    : "⪋" U2A8B # LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
+<Multi_key><greater><equal><less>                                                                  : "⪌" U2A8C # GREATER-THAN ABOVE DOUBLE-LINE EQUAL ABOVE LESS-THAN
+<Multi_key><less><asciitilde><underscore>                                                          : "⪍" U2A8D # LESS-THAN ABOVE SIMILAR OR EQUAL
+<Multi_key><less><asciitilde><minus>                                                               : "⪍" U2A8D # LESS-THAN ABOVE SIMILAR OR EQUAL
+<Multi_key><greater><asciitilde><underscore>                                                       : "⪎" U2A8E # GREATER-THAN ABOVE SIMILAR OR EQUAL
+<Multi_key><greater><asciitilde><minus>                                                            : "⪎" U2A8E # GREATER-THAN ABOVE SIMILAR OR EQUAL
+<Multi_key><less><asciitilde><greater>                                                             : "⪏" U2A8F # LESS-THAN ABOVE SIMILAR ABOVE GREATER-THAN
+<Multi_key><greater><asciitilde><less>                                                             : "⪐" U2A90 # GREATER-THAN ABOVE SIMILAR ABOVE LESS-THAN
+<Multi_key><less><greater><equal>                                                                  : "⪑" U2A91 # LESS-THAN ABOVE GREATER-THAN ABOVE DOUBLE-LINE EQUAL
+<Multi_key><greater><less><equal>                                                                  : "⪒" U2A92 # GREATER-THAN ABOVE LESS-THAN ABOVE DOUBLE-LINE EQUAL
+<Multi_key><less><underscore><greater><underscore>                                                 : "⪓" U2A93 # LESS-THAN ABOVE SLANTED EQUAL ABOVE GREATER-THAN ABOVE SLANTED EQUAL
+<Multi_key><greater><underscore><less><underscore>                                                 : "⪔" U2A94 # GREATER-THAN ABOVE SLANTED EQUAL ABOVE LESS-THAN ABOVE SLANTED EQUAL
+<Multi_key><underscore><less><grave>                                                               : "⪕" U2A95 # SLANTED EQUAL TO OR LESS-THAN
+<Multi_key><underscore><greater><grave>                                                            : "⪖" U2A96 # SLANTED EQUAL TO OR GREATER-THAN
+<Multi_key><underscore><less><period>                                                              : "⪗" U2A97 # SLANTED EQUAL TO OR LESS-THAN WITH DOT INSIDE
+<Multi_key><underscore><greater><period>                                                           : "⪘" U2A98 # SLANTED EQUAL TO OR GREATER-THAN WITH DOT INSIDE
 <Multi_key><equal><less>                                                                   <space> : "⪙" U2A99 # DOUBLE-LINE EQUAL TO OR LESS-THAN
 <Multi_key><equal><less>                                                            <nobreakspace> : "⪙" U2A99 # DOUBLE-LINE EQUAL TO OR LESS-THAN
-<Multi_key><space><equal><greater>                                                         <space> : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
-<Multi_key><space><equal><greater>                                                  <nobreakspace> : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
-<Multi_key><nobreakspace><equal><greater>                                                  <space> : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
-<Multi_key><nobreakspace><equal><greater>                                           <nobreakspace> : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
-<Multi_key><equal><less><grave>                                                            <space> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
-<Multi_key><equal><less><grave>                                                     <nobreakspace> : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
-<Multi_key><equal><greater><grave>                                                         <space> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
-<Multi_key><equal><greater><grave>                                                  <nobreakspace> : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
+<Multi_key><space><equal><greater>                                                                 : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
+<Multi_key><nobreakspace><equal><greater>                                                          : "⪚" U2A9A # DOUBLE-LINE EQUAL TO OR GREATER-THAN
+<Multi_key><equal><less><grave>                                                                    : "⪛" U2A9B # DOUBLE-LINE SLANTED EQUAL TO OR LESS-THAN
+<Multi_key><equal><greater><grave>                                                                 : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
 #
-#   The reversed tilde in "⪝" U2A9D, "⪞" U2A9E, "⪟" U2A9F, "⪠" U2AA0 is a font
-#   issue. This is a tilde like in "⩬" U2A6C, "⪍" U2A8D, "⪎" U2A8E, "⪏" U2A8F,
-#   "⪐" U2A90. Consistently the backslash in these sequences is optional.
+#   The reversed tilde in "⪝" U2A9D, "⪞" U2A9E, "⪟" U2A9F, "⪠" U2AA0 seems to
+#   be a font issue, since it is not hinted in the character names, designed
+#   like those of "⩬" U2A6C, "⪍" U2A8D, "⪎" U2A8E, "⪏" U2A8F, "⪐" U2A90.
+#   Consistently, the backslash in these sequences is optional.
 #
 <Multi_key><asciitilde><less>                                                              <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><less>                                                       <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
@@ -8615,6 +8561,7 @@
 <Multi_key><asciitilde><backslash><less><equal>                                                    : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><greater><equal>                                                            : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><backslash><greater><equal>                                                 : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
+#@
 <Multi_key><2><less>                                                                       <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><2><less>                                                                <nobreakspace> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><KP_2><less>                                                                    <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
