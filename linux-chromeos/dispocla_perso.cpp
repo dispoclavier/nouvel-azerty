@@ -1,4 +1,4 @@
-//                      Date : 2025-09-20T0246+0200
+//                      Date : 2025-11-07T0710+0100
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -21,13 +21,14 @@
 //
 //                                 /usr/share/X11/xkb/symbols/dispocla_perso
 //
-//                             car il est inclus dans toutes les dispositions de clavier
-//                             configurées dans /usr/share/X11/xkb/symbols/dispocla dès lors
-//                             que ce nouvel AZERTY a été installé, manuellement ou par le
-//                             script d’installation installer.sh inclus dans le paquetage
-//                             téléchargeable depuis son dépôt GitHub à l’adresse suivante :
+//                             manuellement ou par le script d’installation installer.sh
+//                             inclus dans le paquetage téléchargeable depuis son dépôt
+//                             GitHub à l’adresse suivante :
 //
 //                                 https://github.com/dispoclavier/nouvel-azerty/releases/latest
+//
+//                             Car il est inclus dans toutes les dispositions de clavier
+//                             configurées dans /usr/share/X11/xkb/symbols/dispocla
 //
 //                             Les personnalisations peuvent se mettre à la place de toute
 //                             instance de NoSymbol, qui signifie « rien d’autre ».
@@ -36,9 +37,8 @@
 //
 // Les mises à jour de Linux effacent les fichiers ajoutés dans /usr/share/X11/
 // et nécessitent la réinstallation des dispositions de clavier utilisées.
-//
-// Avant toute mise à jour du système il faut sauvegarder les personnalisations
-// faites dans /usr/share/X11/, par exemple en désinstallant ces dispositions.
+// C’est pourquoi les personnalisations faites dans /usr/share/X11/
+// doivent être sauvegardées, par exemple en désinstallant ces dispositions.
 //
 // Les personnalisations ne sont pas affectées par les mises à jour vers une
 // nouvelle version de ces dispositions de clavier. Lors de la désinstallation,
@@ -48,7 +48,7 @@
 // prochaine session.
 //
 //
-// ## Exemple
+// ## Exemple 1
 //
 // Le point médian "·" U00B7 est au niveau 1 de la touche B10, en synergie
 // avec les minuscules ou les capitales selon l’état de la bascule VerrCap,
@@ -86,6 +86,26 @@
 //		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ]
 //	};
 //
+//
+// ## Exemple 2
+//
+// À gauche de ⟦1&⟧, la touche E00, TLDE, utilisée pour la bascule Verrouillage
+// en mode ASCII peut être redisposée, car le verrouillage en mode ASCII est en
+// Majuscule, en AltGr et en AltFr sur la touche de verrouillage des capitales.
+//
+//	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
+//	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
+//	key <TLDE> {
+//		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
+//		[            asterisk,                  mu,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               grave ],
+//		[            asterisk,                  mu,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               grave ]
+//	};
+//
+// L’essentiel pour commencer est de rétablir les raccourcis clavier de cette
+// touche, où l’US-QWERTY a le grave (et aussi l’asciitilde en Majuscule). On
+// peut prendre le type de touche qui a le raccourci clavier au niveau 8, puis
+// disposer les autres niveaux à volonté, en mode français et en mode ASCII.
+//
 
 default partial alphanumeric_keys keypad_keys
 xkb_symbols "perso" {
@@ -93,8 +113,8 @@ xkb_symbols "perso" {
 	name[Group1] = "Personnalisations";
 	name[Group2] = "Personnalisations, mode ASCII";
 
-	key.type[Group1] = "EIGHT_LEVELS_BASIC";
-	key.type[Group2] = "EIGHT_LEVELS_BASIC";
+	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
+	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key <TLDE> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol ],
