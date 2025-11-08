@@ -8561,44 +8561,33 @@
 <Multi_key><asciitilde><backslash><less><equal>                                                    : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><greater><equal>                                                            : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><backslash><greater><equal>                                                 : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
-#@
 <Multi_key><2><less>                                                                       <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><2><less>                                                                <nobreakspace> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><KP_2><less>                                                                    <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><KP_2><less>                                                             <nobreakspace> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><2><greater>                                                                            : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-<Multi_key><KP_2><greater>                                                                 <space> : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-<Multi_key><KP_2><greater>                                                          <nobreakspace> : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-<Multi_key><space><2><less><minus>                                                         <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><2><less><minus>                                                  <nobreakspace> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><KP_2><less><minus>                                                      <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><KP_2><less><minus>                                               <nobreakspace> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><2><less><minus>                                                  <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><2><less><minus>                                           <nobreakspace> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><KP_2><less><minus>                                               <space> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><KP_2><less><minus>                                        <nobreakspace> : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><greater><less>                                                          <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
-<Multi_key><space><greater><less>                                                   <nobreakspace> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
-<Multi_key><nobreakspace><greater><less>                                                   <space> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
-<Multi_key><nobreakspace><greater><less>                                            <nobreakspace> : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
-<Multi_key><space><space><greater><less>                                                   <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><space><space><greater><less>                                            <nobreakspace> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><nobreakspace><space><greater><less>                                            <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><nobreakspace><space><greater><less>                                     <nobreakspace> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><nobreakspace><nobreakspace><greater><less>                                     <space> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><nobreakspace><nobreakspace><greater><less>                              <nobreakspace> : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
-<Multi_key><space><less><parenright>                                                       <space> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
-<Multi_key><space><less><parenright>                                                <nobreakspace> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
-<Multi_key><nobreakspace><less><parenright>                                                <space> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
-<Multi_key><nobreakspace><less><parenright>                                         <nobreakspace> : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
-<Multi_key><space><parenleft><greater>                                                     <space> : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
-<Multi_key><space><parenleft><greater>                                              <nobreakspace> : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
-<Multi_key><nobreakspace><parenleft><greater>                                              <space> : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
-<Multi_key><nobreakspace><parenleft><greater>                                       <nobreakspace> : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
-<Multi_key><less><parenright><underscore>                                                  <space> : "⪨" U2AA8 # LESS-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
-<Multi_key><less><parenright><underscore>                                           <nobreakspace> : "⪨" U2AA8 # LESS-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
-<Multi_key><parenleft><greater><underscore>                                                <space> : "⪩" U2AA9 # GREATER-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
-<Multi_key><parenleft><greater><underscore>                                         <nobreakspace> : "⪩" U2AA9 # GREATER-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
+<Multi_key><KP_2><greater>                                                                         : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
+#Multi_key><space><2><less><underscore>                                                            : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><space><2><less>                                                                        : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><space><KP_2><less>                                                                     : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><nobreakspace><2><less>                                                                 : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><nobreakspace><KP_2><less>                                                              : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+#
+#   The symbol "⪤" U2AA4 seems to be more common than "⪥" U2AA5 and is thus
+#   given the easier sequence with less leading spaces.
+#   See #   Leading space
+#
+<Multi_key><space><greater><less>                                                                  : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
+<Multi_key><nobreakspace><greater><less>                                                           : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
+<Multi_key><space><space><greater><less>                                                           : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><nobreakspace><space><greater><less>                                                    : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><nobreakspace><nobreakspace><greater><less>                                             : "⪥" U2AA5 # GREATER-THAN BESIDE LESS-THAN
+<Multi_key><space><less><parenright>                                                               : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
+<Multi_key><nobreakspace><less><parenright>                                                        : "⪦" U2AA6 # LESS-THAN CLOSED BY CURVE
+<Multi_key><space><parenleft><greater>                                                             : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
+<Multi_key><nobreakspace><parenleft><greater>                                                      : "⪧" U2AA7 # GREATER-THAN CLOSED BY CURVE
+<Multi_key><less><parenright><underscore>                                                          : "⪨" U2AA8 # LESS-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
+<Multi_key><parenleft><greater><underscore>                                                        : "⪩" U2AA9 # GREATER-THAN CLOSED BY CURVE ABOVE SLANTED EQUAL
 <Multi_key><space><less><minus>                                                            <space> : "⪪" U2AAA # SMALLER THAN
 <Multi_key><space><less><minus>                                                     <nobreakspace> : "⪪" U2AAA # SMALLER THAN
 <Multi_key><nobreakspace><less><minus>                                                     <space> : "⪪" U2AAA # SMALLER THAN
@@ -8607,121 +8596,96 @@
 <Multi_key><space><greater><minus>                                                  <nobreakspace> : "⪫" U2AAB # LARGER THAN
 <Multi_key><nobreakspace><greater><minus>                                                  <space> : "⪫" U2AAB # LARGER THAN
 <Multi_key><nobreakspace><greater><minus>                                           <nobreakspace> : "⪫" U2AAB # LARGER THAN
-<Multi_key><space><less><minus><underscore>                                                <space> : "⪬" U2AAC # SMALLER THAN OR EQUAL TO
-<Multi_key><space><less><minus><underscore>                                         <nobreakspace> : "⪬" U2AAC # SMALLER THAN OR EQUAL TO
-<Multi_key><nobreakspace><less><minus><underscore>                                         <space> : "⪬" U2AAC # SMALLER THAN OR EQUAL TO
-<Multi_key><nobreakspace><less><minus><underscore>                                  <nobreakspace> : "⪬" U2AAC # SMALLER THAN OR EQUAL TO
-<Multi_key><space><greater><minus><underscore>                                             <space> : "⪭" U2AAD # LARGER THAN OR EQUAL TO
-<Multi_key><space><greater><minus><underscore>                                      <nobreakspace> : "⪭" U2AAD # LARGER THAN OR EQUAL TO
-<Multi_key><nobreakspace><greater><minus><underscore>                                      <space> : "⪭" U2AAD # LARGER THAN OR EQUAL TO
-<Multi_key><nobreakspace><greater><minus><underscore>                               <nobreakspace> : "⪭" U2AAD # LARGER THAN OR EQUAL TO
-<Multi_key><parenleft><minus><equal>                                                       <space> : "⪮" U2AAE # EQUALS SIGN WITH BUMPY ABOVE
-<Multi_key><parenleft><minus><equal>                                                <nobreakspace> : "⪮" U2AAE # EQUALS SIGN WITH BUMPY ABOVE
-<Multi_key><less><parenright><parenleft><underscore>                                       <space> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
-<Multi_key><less><parenright><parenleft><underscore>                                <nobreakspace> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
+<Multi_key><less><minus><underscore>                                                               : "⪬" U2AAC # SMALLER THAN OR EQUAL TO
+<Multi_key><greater><minus><underscore>                                                            : "⪭" U2AAD # LARGER THAN OR EQUAL TO
+<Multi_key><parenleft><minus><equal>                                                               : "⪮" U2AAE # EQUALS SIGN WITH BUMPY ABOVE
 <Multi_key><less><parenleft><parenright><underscore>                                       <space> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
 <Multi_key><less><parenleft><parenright><underscore>                                <nobreakspace> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
-<Multi_key><greater><parenright><parenleft><underscore>                                    <space> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
-<Multi_key><greater><parenright><parenleft><underscore>                             <nobreakspace> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
+<Multi_key><less><parenright><parenleft><underscore>                                       <space> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
+<Multi_key><less><parenright><parenleft><underscore>                                <nobreakspace> : "⪯" U2AAF # PRECEDES ABOVE SINGLE-LINE EQUALS SIGN
 <Multi_key><greater><parenleft><parenright><underscore>                                    <space> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
 <Multi_key><greater><parenleft><parenright><underscore>                             <nobreakspace> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
-<Multi_key><less><parenright><parenleft><underscore><slash>                                <space> : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><parenright><parenleft><underscore><slash>                         <nobreakspace> : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><parenleft><parenright><underscore><slash>                                <space> : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><parenleft><parenright><underscore><slash>                         <nobreakspace> : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><parenright><parenleft><underscore><slash>                             <space> : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><parenright><parenleft><underscore><slash>                      <nobreakspace> : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><parenleft><parenright><underscore><slash>                             <space> : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><greater><parenleft><parenright><underscore><slash>                      <nobreakspace> : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
-<Multi_key><less><parenright><parenleft><equal>                                            <space> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
-<Multi_key><less><parenright><parenleft><equal>                                     <nobreakspace> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
+<Multi_key><greater><parenright><parenleft><underscore>                                    <space> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
+<Multi_key><greater><parenright><parenleft><underscore>                             <nobreakspace> : "⪰" U2AB0 # SUCCEEDS ABOVE SINGLE-LINE EQUALS SIGN
+<Multi_key><less><parenleft><parenright><underscore><slash>                                        : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
+<Multi_key><less><parenright><parenleft><underscore><slash>                                        : "⪱" U2AB1 # PRECEDES ABOVE SINGLE-LINE NOT EQUAL TO
+<Multi_key><greater><parenleft><parenright><underscore><slash>                                     : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
+<Multi_key><greater><parenright><parenleft><underscore><slash>                                     : "⪲" U2AB2 # SUCCEEDS ABOVE SINGLE-LINE NOT EQUAL TO
 <Multi_key><less><parenleft><parenright><equal>                                            <space> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
 <Multi_key><less><parenleft><parenright><equal>                                     <nobreakspace> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
-<Multi_key><greater><parenright><parenleft><equal>                                         <space> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
-<Multi_key><greater><parenright><parenleft><equal>                                  <nobreakspace> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
+<Multi_key><less><parenright><parenleft><equal>                                            <space> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
+<Multi_key><less><parenright><parenleft><equal>                                     <nobreakspace> : "⪳" U2AB3 # PRECEDES ABOVE EQUALS SIGN
 <Multi_key><greater><parenleft><parenright><equal>                                         <space> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
 <Multi_key><greater><parenleft><parenright><equal>                                  <nobreakspace> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
-<Multi_key><less><parenright><parenleft><equal><slash>                                     <space> : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
-<Multi_key><less><parenright><parenleft><equal><slash>                              <nobreakspace> : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
-<Multi_key><less><parenleft><parenright><equal><slash>                                     <space> : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
-<Multi_key><less><parenleft><parenright><equal><slash>                              <nobreakspace> : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
-<Multi_key><greater><parenright><parenleft><equal><slash>                                  <space> : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
-<Multi_key><greater><parenright><parenleft><equal><slash>                           <nobreakspace> : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
-<Multi_key><greater><parenleft><parenright><equal><slash>                                  <space> : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
-<Multi_key><greater><parenleft><parenright><equal><slash>                           <nobreakspace> : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
-<Multi_key><less><parenright><parenleft><asciitilde><asciitilde>                           <space> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
-<Multi_key><less><parenright><parenleft><asciitilde><asciitilde>                    <nobreakspace> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
+<Multi_key><greater><parenright><parenleft><equal>                                         <space> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
+<Multi_key><greater><parenright><parenleft><equal>                                  <nobreakspace> : "⪴" U2AB4 # SUCCEEDS ABOVE EQUALS SIGN
+<Multi_key><less><parenleft><parenright><equal><slash>                                             : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
+<Multi_key><less><parenright><parenleft><equal><slash>                                             : "⪵" U2AB5 # PRECEDES ABOVE NOT EQUAL TO
+<Multi_key><greater><parenleft><parenright><equal><slash>                                          : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
+<Multi_key><greater><parenright><parenleft><equal><slash>                                          : "⪶" U2AB6 # SUCCEEDS ABOVE NOT EQUAL TO
 <Multi_key><less><parenleft><parenright><asciitilde><asciitilde>                           <space> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
 <Multi_key><less><parenleft><parenright><asciitilde><asciitilde>                    <nobreakspace> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
-<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde>                        <space> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
-<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde>                 <nobreakspace> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
+<Multi_key><less><parenright><parenleft><asciitilde><asciitilde>                           <space> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
+<Multi_key><less><parenright><parenleft><asciitilde><asciitilde>                    <nobreakspace> : "⪷" U2AB7 # PRECEDES ABOVE ALMOST EQUAL TO
 <Multi_key><greater><parenleft><parenright><asciitilde><asciitilde>                        <space> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
 <Multi_key><greater><parenleft><parenright><asciitilde><asciitilde>                 <nobreakspace> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
-<Multi_key><less><parenright><parenleft><asciitilde><asciitilde><slash>                    <space> : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
-<Multi_key><less><parenright><parenleft><asciitilde><asciitilde><slash>             <nobreakspace> : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
-<Multi_key><less><parenleft><parenright><asciitilde><asciitilde><slash>                    <space> : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
-<Multi_key><less><parenleft><parenright><asciitilde><asciitilde><slash>             <nobreakspace> : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
-<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde><slash>                 <space> : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
-<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde><slash>          <nobreakspace> : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
-<Multi_key><greater><parenleft><parenright><asciitilde><asciitilde><slash>                 <space> : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
-<Multi_key><greater><parenleft><parenright><asciitilde><asciitilde><slash>          <nobreakspace> : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
-<Multi_key><less><less><parenright><parenleft>                                             <space> : "⪻" U2ABB # DOUBLE PRECEDES
-<Multi_key><less><less><parenright><parenleft>                                      <nobreakspace> : "⪻" U2ABB # DOUBLE PRECEDES
-<Multi_key><less><less><parenleft><parenright>                                             <space> : "⪻" U2ABB # DOUBLE PRECEDES
-<Multi_key><less><less><parenleft><parenright>                                      <nobreakspace> : "⪻" U2ABB # DOUBLE PRECEDES
-<Multi_key><greater><greater><parenright><parenleft>                                       <space> : "⪼" U2ABC # DOUBLE SUCCEEDS
-<Multi_key><greater><greater><parenright><parenleft>                                <nobreakspace> : "⪼" U2ABC # DOUBLE SUCCEEDS
-<Multi_key><greater><greater><parenleft><parenright>                                       <space> : "⪼" U2ABC # DOUBLE SUCCEEDS
-<Multi_key><greater><greater><parenleft><parenright>                                <nobreakspace> : "⪼" U2ABC # DOUBLE SUCCEEDS
+<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde>                        <space> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
+<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde>                 <nobreakspace> : "⪸" U2AB8 # SUCCEEDS ABOVE ALMOST EQUAL TO
+<Multi_key><less><parenleft><parenright><asciitilde><asciitilde><slash>                            : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
+<Multi_key><less><parenright><parenleft><asciitilde><asciitilde><slash>                            : "⪹" U2AB9 # PRECEDES ABOVE NOT ALMOST EQUAL TO
+<Multi_key><greater><parenleft><parenright><asciitilde><asciitilde><slash>                         : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
+<Multi_key><greater><parenright><parenleft><asciitilde><asciitilde><slash>                         : "⪺" U2ABA # SUCCEEDS ABOVE NOT ALMOST EQUAL TO
+#Multi_key><less><less><parenleft><parenright>                                                     : "⪻" U2ABB # DOUBLE PRECEDES
+<Multi_key><less><less><parenleft>                                                                 : "⪻" U2ABB # DOUBLE PRECEDES
+<Multi_key><less><less><parenright>                                                                : "⪻" U2ABB # DOUBLE PRECEDES
+<Multi_key><greater><greater><parenleft>                                                           : "⪼" U2ABC # DOUBLE SUCCEEDS
+<Multi_key><greater><greater><parenright>                                                          : "⪼" U2ABC # DOUBLE SUCCEEDS
 <Multi_key><c><period>                                                                     <space> : "⪽" U2ABD # SUBSET WITH DOT
 <Multi_key><c><period>                                                              <nobreakspace> : "⪽" U2ABD # SUBSET WITH DOT
-<Multi_key><b><period>                                                                     <space> : "⪾" U2ABE # SUPERSET WITH DOT
-<Multi_key><b><period>                                                              <nobreakspace> : "⪾" U2ABE # SUPERSET WITH DOT
-<Multi_key><c><backslash><period>                                                          <space> : "⪾" U2ABE # SUPERSET WITH DOT
-<Multi_key><c><backslash><period>                                                   <nobreakspace> : "⪾" U2ABE # SUPERSET WITH DOT
-<Multi_key><c><plus>                                                                       <space> : "⪿" U2ABF # SUBSET WITH PLUS SIGN BELOW
-<Multi_key><c><plus>                                                                <nobreakspace> : "⪿" U2ABF # SUBSET WITH PLUS SIGN BELOW
-<Multi_key><b><plus>                                                                       <space> : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
-<Multi_key><b><plus>                                                                <nobreakspace> : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
-<Multi_key><c><backslash><plus>                                                            <space> : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
-<Multi_key><c><backslash><plus>                                                     <nobreakspace> : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
-<Multi_key><c><x>                                                                          <space> : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><c><x>                                                                   <nobreakspace> : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
+<Multi_key><b><period>                                                                             : "⪾" U2ABE # SUPERSET WITH DOT
+<Multi_key><c><backslash><period>                                                                  : "⪾" U2ABE # SUPERSET WITH DOT
+<Multi_key><c><plus>                                                                               : "⪿" U2ABF # SUBSET WITH PLUS SIGN BELOW
+<Multi_key><b><plus>                                                                               : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
+<Multi_key><c><backslash><plus>                                                                    : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
+<Multi_key><c><c><plus>                                                                            : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
+<Multi_key><c><x>                                                                                  : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><b><x>                                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><backslash><x>                                                                       : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><space><period><c><underscore>                                                  <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><underscore>                                           <nobreakspace> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><underscore>                                           <space> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><underscore>                                    <nobreakspace> : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><b><underscore>                                                  <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><b><underscore>                                           <nobreakspace> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><b><underscore>                                           <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><b><underscore>                                    <nobreakspace> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><backslash><underscore>                                       <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><backslash><underscore>                                <nobreakspace> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><c><underscore>                                        <space> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><c><underscore>                                 <nobreakspace> : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><c><c><x>                                                                               : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
+<Multi_key><space><period><c><underscore>                                                          : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><nobreakspace><period><c><underscore>                                                   : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
+#Multi_key><space><period><b><underscore>                                                          : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><space><period><b>                                                                      : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><nobreakspace><period><b>                                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><space><period><c><backslash>                                                           : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><nobreakspace><period><c><backslash>                                                    : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><space><period><c><c>                                                                   : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><nobreakspace><period><c><c>                                                            : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><c><equal>                                                                      <space> : "⫅" U2AC5 # SUBSET OF ABOVE EQUALS SIGN
 <Multi_key><c><equal>                                                               <nobreakspace> : "⫅" U2AC5 # SUBSET OF ABOVE EQUALS SIGN
 <Multi_key><b><equal>                                                                      <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><b><equal>                                                               <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><backslash><equal>                                                           <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><backslash><equal>                                                    <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
+<Multi_key><c><c><equal>                                                                   <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
+<Multi_key><c><c><equal>                                                            <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><asciitilde>                                                                 <space> : "⫇" U2AC7 # SUBSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><asciitilde>                                                          <nobreakspace> : "⫇" U2AC7 # SUBSET OF ABOVE TILDE OPERATOR
 <Multi_key><b><asciitilde>                                                                 <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><b><asciitilde>                                                          <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                                      <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                               <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><c><asciitilde>                                                              <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><c><asciitilde>                                                       <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><asciitilde><asciitilde>                                                             : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><b><asciitilde><asciitilde>                                                             : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><backslash><asciitilde><asciitilde>                                                  : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
-<Multi_key><c><equal><slash>                                                               <space> : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
-<Multi_key><c><equal><slash>                                                        <nobreakspace> : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
-<Multi_key><b><equal><slash>                                                               <space> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
-<Multi_key><b><equal><slash>                                                        <nobreakspace> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
-<Multi_key><c><backslash><equal><slash>                                                    <space> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
-<Multi_key><c><backslash><equal><slash>                                             <nobreakspace> : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
+<Multi_key><c><c><asciitilde><asciitilde>                                                          : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
+<Multi_key><c><equal><slash>                                                                       : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
+<Multi_key><b><equal><slash>                                                                       : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
+<Multi_key><c><backslash><equal><slash>                                                            : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
+<Multi_key><c><c><equal><slash>                                                                    : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
+#@
 <Multi_key><space><bracketleft><minus>                                                     <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
 <Multi_key><space><bracketleft><minus>                                              <nobreakspace> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
 <Multi_key><nobreakspace><bracketleft><minus>                                              <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
