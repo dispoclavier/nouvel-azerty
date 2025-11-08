@@ -3758,7 +3758,6 @@
 <Multi_key><b><m>                                                                                  : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><f><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
 <Multi_key><b><numbersign>                                                                         : "♭" U266D # MUSIC FLAT SIGN
-<Multi_key><b><c>                                                                                  : "♯" U266F # MUSIC SHARP SIGN
 <Multi_key><n><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><0><numbersign>                                                                         : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><KP_0><numbersign>                                                                      : "♮" U266E # MUSIC NATURAL SIGN
@@ -5168,6 +5167,9 @@
 #
 #   This scheme seems better than repurposing the underscore for slanted, and
 #   introducing minus for not slanted, screwing up some arrows in the process.
+#
+#   Symbols without less and greater, like "≡" U2261 and "⫢" U2AE2, use minus
+#   consistently for the third line.
 #
 #
 #   Underscore and overscore
@@ -7212,7 +7214,8 @@
 <Multi_key><less><period><greater>                                                                 : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
 <Multi_key><a><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><v><percent><period>                                                                    : "⟑" U27D1 # AND WITH DOT
-<Multi_key><e><percent>                                                                            : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
+<Multi_key><e><percent>                                                                    <space> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
+<Multi_key><e><percent>                                                             <nobreakspace> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
 <Multi_key><L><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><L><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><L><percent><percent><period>                                                           : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
@@ -7822,6 +7825,7 @@
 <Multi_key><O><backslash>                                                                  <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
+#Multi_key><O><underscore><bar> conflicts with "º" U00BA.                                          : "⦹" U29B9 # CIRCLED PERPENDICULAR
 <Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
 <Multi_key><O><X>                                                                                  : "⦻" U29BB # CIRCLE WITH SUPERIMPOSED X
 <Multi_key><O><colon><slash>                                                                       : "⦼" U29BC # CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
@@ -8685,64 +8689,44 @@
 <Multi_key><b><equal><slash>                                                                       : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><backslash><equal><slash>                                                            : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><c><equal><slash>                                                                    : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
-#@
-<Multi_key><space><bracketleft><minus>                                                     <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
-<Multi_key><space><bracketleft><minus>                                              <nobreakspace> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
-<Multi_key><nobreakspace><bracketleft><minus>                                              <space> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
-<Multi_key><nobreakspace><bracketleft><minus>                                       <nobreakspace> : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
+<Multi_key><space><bracketleft><minus>                                                             : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
+<Multi_key><nobreakspace><bracketleft><minus>                                                      : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
 <Multi_key><space><minus><bracketright>                                                    <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><space><minus><bracketright>                                             <nobreakspace> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><nobreakspace><minus><bracketright>                                             <space> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><nobreakspace><minus><bracketright>                                      <nobreakspace> : "⫎" U2ACE # SQUARE RIGHT OPEN BOX OPERATOR
 <Multi_key><c><bar>                                                                        <space> : "⫏" U2ACF # CLOSED SUBSET
 <Multi_key><c><bar>                                                                 <nobreakspace> : "⫏" U2ACF # CLOSED SUBSET
-<Multi_key><b><bar>                                                                        <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><b><bar>                                                                 <nobreakspace> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><c><backslash><bar>                                                             <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><c><backslash><bar>                                                      <nobreakspace> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><space><D>                                                                      <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><space><D>                                                               <nobreakspace> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><nobreakspace><D>                                                               <space> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><nobreakspace><D>                                                        <nobreakspace> : "⫐" U2AD0 # CLOSED SUPERSET
-<Multi_key><c><bar><minus>                                                                 <space> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
-<Multi_key><c><bar><minus>                                                          <nobreakspace> : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
-<Multi_key><D><minus>                                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><b><bar><minus>                                                                         : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><backslash><bar><minus>                                                              : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
-<Multi_key><c><asciicircum><b>                                                                     : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><c><asciicircum><c><c>                                                                  : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
-<Multi_key><b><asciicircum><c>                                                             <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><b><asciicircum><c>                                                      <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><c><backslash><asciicircum><c>                                                  <space> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><c><backslash><asciicircum><c>                                           <nobreakspace> : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
-<Multi_key><c><asciicircum><c>                                                             <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
-<Multi_key><c><asciicircum><c>                                                      <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
-<Multi_key><b><asciicircum><b>                                                                     : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-<Multi_key><c><backslash><asciicircum><c><c>                                                       : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
-#Multi_key><b><ampersand><c>                                                                       : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><b><ampersand>                                                                          : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-#Multi_key><c><backslash><ampersand><c>                                                            : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><c><backslash><ampersand>                                                               : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
-<Multi_key><b><minus><c>                                                                   <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><b><minus><c>                                                            <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><c><backslash><minus><c>                                                        <space> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><c><backslash><minus><c>                                                 <nobreakspace> : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><N><I>                                                                          <space> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
-<Multi_key><N><I>                                                                   <nobreakspace> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
-<Multi_key><n><i>                                                                          <space> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
-<Multi_key><n><i>                                                                   <nobreakspace> : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
-<Multi_key><T><n>                                                                          <space> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
-<Multi_key><T><n>                                                                   <nobreakspace> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
+<Multi_key><space><D>                                                                              : "⫐" U2AD0 # CLOSED SUPERSET
+<Multi_key><nobreakspace><D>                                                                       : "⫐" U2AD0 # CLOSED SUPERSET
+<Multi_key><c><bar><underscore>                                                                    : "⫑" U2AD1 # CLOSED SUBSET OR EQUAL TO
+<Multi_key><D><underscore>                                                                         : "⫒" U2AD2 # CLOSED SUPERSET OR EQUAL TO
+<Multi_key><c><b>                                                                                  : "⫓" U2AD3 # SUBSET ABOVE SUPERSET
+<Multi_key><b><c>                                                                                  : "⫔" U2AD4 # SUPERSET ABOVE SUBSET
+<Multi_key><space><c><c>                                                                   <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
+<Multi_key><space><c><c>                                                            <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
+<Multi_key><nobreakspace><c><c>                                                            <space> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
+<Multi_key><nobreakspace><c><c>                                                     <nobreakspace> : "⫕" U2AD5 # SUBSET ABOVE SUBSET
+<Multi_key><b><b>                                                                                  : "⫖" U2AD6 # SUPERSET ABOVE SUPERSET
+<Multi_key><space><b><c>                                                                           : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><nobreakspace><b><c>                                                                    : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
+<Multi_key><b><minus><c>                                                                           : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
+<Multi_key><e><percent><percent>                                                                   : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><T><n>                                                                                  : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                          <space> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                   <nobreakspace> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
-<Multi_key><n><I>                                                                          <space> : "⫛" U2ADB # TRANSVERSAL INTERSECTION
-<Multi_key><n><I>                                                                   <nobreakspace> : "⫛" U2ADB # TRANSVERSAL INTERSECTION
-<Multi_key><bar><parenright><slash>                                                        <space> : "⫝̸" U2ADC # FORKING
-<Multi_key><bar><parenright><slash>                                                 <nobreakspace> : "⫝̸" U2ADC # FORKING
-<Multi_key><space><bar><parenright>                                                        <space> : "⫝" U2ADD # NONFORKING
-<Multi_key><space><bar><parenright>                                                 <nobreakspace> : "⫝" U2ADD # NONFORKING
-<Multi_key><nobreakspace><bar><parenright>                                                 <space> : "⫝" U2ADD # NONFORKING
-<Multi_key><nobreakspace><bar><parenright>                                          <nobreakspace> : "⫝" U2ADD # NONFORKING
+<Multi_key><n><I>                                                                                  : "⫛" U2ADB # TRANSVERSAL INTERSECTION
+<Multi_key><space><n><bar>                                                                         : "⫛" U2ADB # TRANSVERSAL INTERSECTION
+<Multi_key><nobreakspace><n><bar>                                                                  : "⫛" U2ADB # TRANSVERSAL INTERSECTION
+#
+#   Counterintuitively, the negation slash in "⫝̸" U2ADC FORKING (“symbol is
+#   slashed although positive”) is the opposite of the semantics, as opposed to
+#   "⫝" U2ADD NONFORKING (“negative symbol- has no slash”).
+#   https://www.unicode.org/L2/L1999/99244.pdf
+#
+<Multi_key><bar><parenright><slash>                                                                : "⫝̸" U2ADC # FORKING
+<Multi_key><space><bar><parenright>                                                                : "⫝" U2ADD # NONFORKING
+<Multi_key><nobreakspace><bar><parenright>                                                         : "⫝" U2ADD # NONFORKING
 <Multi_key><minus><bar>                                                                    <space> : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><minus><bar>                                                             <nobreakspace> : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><less><apostrophe>                                                                   : "⫞" U2ADE # SHORT LEFT TACK
@@ -8787,8 +8771,7 @@
 <Multi_key><equal><bar><bar>                                                        <nobreakspace> : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><2><T><2><less>                                                                         : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
 <Multi_key><KP_2><T><KP_2><less>                                                                   : "⫥" U2AE5 # DOUBLE VERTICAL BAR DOUBLE LEFT TURNSTILE
-<Multi_key><bar><minus><bar><minus>                                                        <space> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
-<Multi_key><bar><minus><bar><minus>                                                 <nobreakspace> : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
+<Multi_key><bar><minus><bar><minus>                                                                : "⫦" U2AE6 # LONG DASH FROM LEFT MEMBER OF DOUBLE VERTICAL
 <Multi_key><2><T><apostrophe>                                                                      : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><KP_2><T><apostrophe>                                                                   : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
 <Multi_key><2><T><rightsinglequotemark>                                                            : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
@@ -8822,36 +8805,26 @@
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                                   <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                            <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
-<Multi_key><space><apostrophe><equal>                                                      <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><space><apostrophe><equal>                                               <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><nobreakspace><apostrophe><equal>                                               <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><nobreakspace><apostrophe><equal>                                        <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><space><rightsinglequotemark><equal>                                            <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><space><rightsinglequotemark><equal>                                     <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><nobreakspace><rightsinglequotemark><equal>                                     <space> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
-<Multi_key><nobreakspace><rightsinglequotemark><equal>                              <nobreakspace> : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><apostrophe><equal>                                                              : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><apostrophe><equal>                                                       : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><space><rightsinglequotemark><equal>                                                    : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
+<Multi_key><nobreakspace><rightsinglequotemark><equal>                                             : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><bar><backslash>                                                                <space> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><bar><backslash>                                                         <nobreakspace> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><o><i>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><i>                                                                   <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
-<Multi_key><o><I>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
-<Multi_key><o><I>                                                                   <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
+<Multi_key><o><I>                                                                                  : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><bar>                                                                        <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><bar>                                                                 <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
-<Multi_key><i><o>                                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><i><o>                                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><I><o>                                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><I><o>                                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><space><bar><o>                                                                 <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><space><bar><o>                                                          <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><nobreakspace><bar><o>                                                          <space> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><nobreakspace><bar><o>                                                   <nobreakspace> : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><T><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
-<Multi_key><T><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><i><o>                                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><I><o>                                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><space><bar><o>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><nobreakspace><bar><o>                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><T><o>                                                                                  : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
-<Multi_key><minus><bar><o>                                                                 <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
-<Multi_key><minus><bar><o>                                                          <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><bar><exclam><o>                                                                        : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><minus><bar><o>                                                                         : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><bar><minus><bar>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><minus><bar>                                                        <nobreakspace> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><bar><minus>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
@@ -8864,34 +8837,35 @@
 <Multi_key><nobreakspace><bar><bar><bar>                                                   <space> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><nobreakspace><bar><bar><bar>                                            <nobreakspace> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><bar><bar><bar><minus>                                                                  : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><period><colon>                                                                 <space> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
-<Multi_key><period><colon>                                                          <nobreakspace> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
-<Multi_key><colon><period>                                                                 <space> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
-<Multi_key><colon><period>                                                          <nobreakspace> : "⫶" U2AF6 # TRIPLE COLON OPERATOR
+<Multi_key><3><colon>                                                                              : "⫶" U2AF6 # TRIPLE COLON OPERATOR
+<Multi_key><KP_3><colon>                                                                           : "⫶" U2AF6 # TRIPLE COLON OPERATOR
+<Multi_key><colon><period>                                                                         : "⫶" U2AF6 # TRIPLE COLON OPERATOR
+<Multi_key><period><colon>                                                                         : "⫶" U2AF6 # TRIPLE COLON OPERATOR
 <Multi_key><3><less>                                                                       <space> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
 <Multi_key><3><less>                                                                <nobreakspace> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
 <Multi_key><KP_3><less>                                                                    <space> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
 <Multi_key><KP_3><less>                                                             <nobreakspace> : "⫷" U2AF7 # TRIPLE NESTED LESS-THAN
 <Multi_key><3><greater>                                                                            : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
 <Multi_key><KP_3><greater>                                                                         : "⫸" U2AF8 # TRIPLE NESTED GREATER-THAN
-<Multi_key><less><equal><grave>                                                            <space> : "⫹" U2AF9 # DOUBLE-LINE SLANTED LESS-THAN OR EQUAL TO
-<Multi_key><less><equal><grave>                                                     <nobreakspace> : "⫹" U2AF9 # DOUBLE-LINE SLANTED LESS-THAN OR EQUAL TO
-<Multi_key><greater><equal><grave>                                                         <space> : "⫺" U2AFA # DOUBLE-LINE SLANTED GREATER-THAN OR EQUAL TO
-<Multi_key><greater><equal><grave>                                                  <nobreakspace> : "⫺" U2AFA # DOUBLE-LINE SLANTED GREATER-THAN OR EQUAL TO
-<Multi_key><space><slash><slash><slash>                                                    <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><space><slash><slash><slash>                                             <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><nobreakspace><slash><slash><slash>                                             <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><nobreakspace><slash><slash><slash>                                      <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><less><equal><grave>                                                                    : "⫹" U2AF9 # DOUBLE-LINE SLANTED LESS-THAN OR EQUAL TO
+<Multi_key><greater><equal><grave>                                                                 : "⫺" U2AFA # DOUBLE-LINE SLANTED GREATER-THAN OR EQUAL TO
+<Multi_key><3><slash>                                                                      <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><3><slash>                                                               <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><KP_3><slash>                                                                   <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><KP_3><slash>                                                            <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><space><slash><slash><slash>                                                            : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><nobreakspace><slash><slash><slash>                                                     : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 #
 #   The LARGE TRIPLE VERTICAL BAR OPERATOR is more spaced out compared to
-#   "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION.
+#   "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION. Hence its sequences have an
+#   additional leading space. (The short sequence with leading "3" is used for
+#   "⦀" U2980 TRIPLE VERTICAL BAR DELIMITER.)
 #
-<Multi_key><space><space><bar><bar><bar>                                                   <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><space><space><bar><bar><bar>                                            <nobreakspace> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><space><bar><bar><bar>                                            <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><space><bar><bar><bar>                                     <nobreakspace> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><nobreakspace><bar><bar><bar>                                     <space> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><nobreakspace><bar><bar><bar>                              <nobreakspace> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+#Multi_key><space><space><bar><bar><bar>                                                           : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><space><space><bar>                                                                     : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><space><bar>                                                              : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><nobreakspace><bar>                                                       : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+#@
 <Multi_key><space><slash><slash>                                                           <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><space><slash><slash>                                                    <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><slash><slash>                                                    <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
