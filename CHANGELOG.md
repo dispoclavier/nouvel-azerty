@@ -31,7 +31,7 @@ Rectification et simplification des séquences de composition. [compose-1.yml [b
 
 Rectification des groupes des symboles.
 
-Amélioration de la touche morte tilde.
+Amélioration des touches mortes tilde et rond en chef.
 
 * Composition :
 	* Simplifier les séquences de "♀" U+2640. compose-1.yml [4b4dcbd](https://github.com/dispoclavier/nouvel-azerty/commit/4b4dcbd8b13e01dd75df21843d6b34d3fc4262a7)
@@ -84,6 +84,8 @@ Amélioration de la touche morte tilde.
 	* Simplifier les séquences de "⩦" U+2A66, "⩪" U+2A6A, "⩫" U+2A6B, "⩭" U+2A6D, "⩰" U+2A70, "⩱" U+2A71, "⩲" U+2A72. compose-1.yml [98f8f89](https://github.com/dispoclavier/nouvel-azerty/commit/98f8f8962aad5397f8e7f215a9b70283bcc25b26)
 	* Corriger les séquences de "⇜" U+21DC, "⪂" U+2A82, "⪄" U+2A84, "⪍" U+2A8D, "⪎" U+2A8E. compose-1.yml [3bf4439](https://github.com/dispoclavier/nouvel-azerty/commit/3bf443980f82ec27a9c29588dbb6667165623073)
 	* Simplifier les séquences de "⩳" U+2A73, "⩵" U+2A75, "⩷" U+2A77, "⩸" U+2A78, "⩹" U+2A79, "⩺" U+2A7A, "⩻" U+2A7B, "⩼" U+2A7C, "⩽" U+2A7D, "⩾" U+2A7E, "⩿" U+2A7F, "⪀" U+2A80, "⪁" U+2A81, "⪃" U+2A83, "⪇" U+2A87, "⪈" U+2A88, "⪉" U+2A89, "⪊" U+2A8A, "⪋" U+2A8B, "⪌" U+2A8C, "⪏" U+2A8F, "⪐" U+2A90, "⪑" U+2A91, "⪒" U+2A92, "⪓" U+2A93, "⪔" U+2A94, "⪕" U+2A95, "⪖" U+2A96, "⪗" U+2A97, "⪘" U+2A98, "⪚" U+2A9A, "⪛" U+2A9B, "⪜" U+2A9C. ibidem
+	* Corriger les séquences de "⪣" U+2AA3. compose-1.yml [a03463d](https://github.com/dispoclavier/nouvel-azerty/commit/a03463df4de2e7d28c2f018479cdbcdd53d8f76d)
+	* Simplifier les séquences de "⪢" U+2AA2, "⪤" U+2AA4, "⪥" U+2AA5, "⪦" U+2AA6, "⪧" U+2AA7, "⪨" U+2AA8, "⪩" U+2AA9, "⪬" U+2AAC, "⪭" U+2AAD, "⪮" U+2AAE, "⪱" U+2AB1, "⪲" U+2AB2, "⪵" U+2AB5, "⪶" U+2AB6, "⪹" U+2AB9, "⪺" U+2ABA, "⪻" U+2ABB, "⪼" U+2ABC, "⪾" U+2ABE, "⪿" U+2ABF, "⫀" U+2AC0, "⫁" U+2AC1, "⫃" U+2AC3, "⫄" U+2AC4, "⫆" U+2AC6, "⫈" U+2AC8, "⫊" U+2ACA, "⫋" U+2ACB, "⫌" U+2ACC. ibidem
 * Transformations :
 	* Lettres composées pour langues du Togo : Compléter les séquences de "Ʋ̀" U+01B2 U+0300, "Ʋ́" U+01B2 U+0301, "Ʋ̂" U+01B2 U+0302, "Ʋ̄" U+01B2 U+0304, "Ʋ̌" U+01B2 U+030C, "ʋ̀" U+028B U+0300, "ʋ́" U+028B U+0301, "ʋ̂" U+028B U+0302, "ʋ̄" U+028B U+0304, "ʋ̌" U+028B U+030C pour Linux. compose-2.yml [05856c6](https://github.com/dispoclavier/nouvel-azerty/commit/05856c6f49d3da10d5a3bf6341cefbc1a61b2d28)
 	* Tilde :
