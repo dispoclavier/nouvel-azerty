@@ -1,21 +1,20 @@
- /*****************************************************************************\
+/*****************************************************************************\
 * Module name: kbdeadtrans-deadkeys.c
 *
-* Transpiled dead key content.
+* Diacritical and transformational dead key content.
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Add all dead key data as of 6.1.1 here   6.1.2.0.0 Thu 2025-10-30T0103+0100
-* Move dead key data as of 6.1.0.2 here    6.1.2.0.0 Thu 2025-10-30T0054+0100
+* Upgrade to 6.1.2.0                       6.1.2.0.3 Sun 2025-11-09T2047+0100
+* Add all dead key data as of 6.1.1 here   6.1.2.0.2 Thu 2025-10-30T0103+0100
+* Move dead key data as of 6.1.0.2 here    6.1.2.0.1 Thu 2025-10-30T0054+0100
 * Add partial kbdeadtrans-deadkeys.c       6.1.2.0.0 Wed 2025-10-29T2349+0100
 *
 * This file is included in kbdeadtrans.c.
 *
-*
-* Diacritical and transformational dead key content.
 *
 * This is up-to-date and overrides the legacy dead key content.
 *
@@ -33,11 +32,10 @@
 *
 * This line requires an extra comment:
 * <!superscript> DEADTRANS( 0x00F8	,L'^'	,0xDFA2	,0x0000	), // High surrogate: D801; U+107A2 "ø" ➔ "𐞢" MODIFIER LETTER SMALL O WITH STROKE
-* This line requires an extra comment due to the stroke dead key acting as
-* a base character. Small o with stroke is the dead character, and the base
-* character in the base alphabet is skipped as non-critical. As a result,
-* with the required high surrogate input first, the input is:
-* "superscript dead key, zero width space, superscript dead key, stroke dead key",
+* Here, the stroke dead key acts as a base character. Small o with stroke is
+* the dead character, and the base character in the base alphabet is skipped as
+* non-critical. The resulting input with the required high surrogate first is:
+* superscript dead key, zero width space, superscript dead key, stroke dead key,
 * all at level 4 (Shift + AltGr).
 *
 \*****************************************************************************/
@@ -53,6 +51,7 @@
 /*<!superscript><!diaeresis><!superscript>                         */ DEADTRANS( L'^'	,0x00C4	,0x1D40	,0x0001), // Dead key chain.
 /*<!turned><!subscript><!turned>                                   */ DEADTRANS( 0x0250	,0xAB63	,0x02BE	,0x0001), // Dead key chain.
 /*<!subscript><!turned><!subscript>                                */ DEADTRANS( L'_'	,0xA7FA	,0x02CF	,0x0001), // Dead key chain.
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x00EB	,0x010E	,0x1E73	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x1E57	,0x1E57	,0x02C8	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot><!acute>                                   */ DEADTRANS( 0x00E1	,0x02C8	,0x02C7	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot><!acute><!grave>                           */ DEADTRANS( 0x00F2	,0x02C7	,0x02B7	,0x0001), // Dead key chain.
@@ -197,7 +196,7 @@
 /*<!diaeresis><!abovering>                                         */ DEADTRANS( 0x00E5	,0x00EB	,0x00A8	,0x0001), // Dead key chain.
 /*<!diaeresis><!acute>                                             */ DEADTRANS( 0x00E1	,0x00EB	,0x1E2F	,0x0001), // Dead key chain.
 /*<!diaeresis><!caron>                                             */ DEADTRANS( 0x021F	,0x00EB	,0x01DA	,0x0001), // Dead key chain.
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00EB	,0x00EB	,0x1E73	,0x0001), // Dead key chain.
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00EB	,0x00EB	,0x010E	,0x0001), // Dead key chain.
 /*<!diaeresis><!grave>                                             */ DEADTRANS( 0x00F2	,0x00EB	,0x01DC	,0x0001), // Dead key chain.
 /*<!diaeresis><!group>                                             */ DEADTRANS( 0x2460	,0x00EB	,0x275F	,0x0001), // Dead key chain.
 /*<!diaeresis><!group><!group>                                     */ DEADTRANS( 0x2460	,0x275F	,0x2760	,0x0001), // Dead key chain.
@@ -1141,6 +1140,7 @@
 /*<!abovering><!group>                                             */ DEADTRANS( L'r'	,0xAB4C	,0xAB4C	,0x0000	), // 'r' ➔ "ꭌ" LATIN SMALL LETTER SCRIPT R WITH RING
 /*<!abovering>                                                     */ DEADTRANS( L'|'	,0x00E5	,0x2AEF	,0x0000	), // '|' ➔ "⫯" VERTICAL LINE WITH CIRCLE ABOVE
 /*<!abovering>                                                     */ DEADTRANS( L'}'	,0x00E5	,0x29B2	,0x0000	), // '}' ➔ "⦲" EMPTY SET WITH SMALL CIRCLE ABOVE
+/*<!abovering>                                                     */ DEADTRANS( L'='	,0x00E5	,0x2A6E	,0x0000	), // '=' ➔ "⩮" EQUALS WITH ASTERISK
 /*<!abovering>                                                     */ DEADTRANS( L'('	,0x00E5	,0x0351	,0x0000	), // '(' ➔ "͑" COMBINING LEFT HALF RING ABOVE
 /*<!abovering>                                                     */ DEADTRANS( L')'	,0x00E5	,0x0357	,0x0000	), // ')' ➔ "͗" COMBINING RIGHT HALF RING ABOVE
 /*<!abovering>                                                     */ DEADTRANS( L'.'	,0x00E5	,0x2E30	,0x0000	), // '.' ➔ "⸰" RING POINT
@@ -2585,6 +2585,13 @@
 /*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( L'y'	,0x1FC1	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
 /*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( 0x00A0	,0x1FC1	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
 /*<!circumflex><!diaeresis><!greek>                                */ DEADTRANS( 0x202F	,0x1FC1	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( L'*'	,0x2520	,0x1ADD	,0x0000	), // '*' ➔ "᫝" COMBINING DOT-AND-RING BELOW
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( L'U'	,0x2520	,0x1E72	,0x0000	), // 'U' ➔ "Ṳ" LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( L'u'	,0x2520	,0x1E73	,0x0000	), // 'u' ➔ "ṳ" LATIN SMALL LETTER U WITH DIAERESIS BELOW
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( 0x00A0	,0x2520	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( 0x202F	,0x2520	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( L' '	,0x2520	,0x0324	,0x0000	), // ' ' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!circumflex><!diaeresis>                                        */ DEADTRANS( 0x200B	,0x2520	,0x0324	,0x0000	), // '​' ➔ "̤" COMBINING DIAERESIS BELOW
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'A'	,0x1EA7	,0x1EA6	,0x0000	), // 'A' ➔ "Ầ" LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'a'	,0x1EA7	,0x1EA7	,0x0000	), // 'a' ➔ "ầ" LATIN SMALL LETTER A WITH CIRCUMFLEX AND GRAVE
 /*<!circumflex><!grave>                                            */ DEADTRANS( L'E'	,0x1EA7	,0x1EC0	,0x0000	), // 'E' ➔ "Ề" LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND GRAVE
@@ -2649,6 +2656,8 @@
 /*<!circumflex><!greek>                                            */ DEADTRANS( L'h'	,0x1FC0	,0x1FC6	,0x0000	), // 'h' ➔ "ῆ" GREEK SMALL LETTER ETA WITH PERISPOMENI
 /*<!circumflex><!greek>                                            */ DEADTRANS( L'i'	,0x1FC0	,0x1FD6	,0x0000	), // 'i' ➔ "ῖ" GREEK SMALL LETTER IOTA WITH PERISPOMENI
 /*<!circumflex><!greek>                                            */ DEADTRANS( L'v'	,0x1FC0	,0x1FF6	,0x0000	), // 'v' ➔ "ῶ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'x'	,0x1FC0	,0x2A36	,0x0000	), // 'x' ➔ "⨶" CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!circumflex><!greek>                                            */ DEADTRANS( L'X'	,0x1FC0	,0x2A36	,0x0000	), // 'X' ➔ "⨶" CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!circumflex><!greek>                                            */ DEADTRANS( L'y'	,0x1FC0	,0x1FE6	,0x0000	), // 'y' ➔ "ῦ" GREEK SMALL LETTER UPSILON WITH PERISPOMENI
 /*<!circumflex><!greek>                                            */ DEADTRANS( 0x00A0	,0x1FC0	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
 /*<!circumflex><!greek>                                            */ DEADTRANS( 0x202F	,0x1FC0	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
@@ -2882,13 +2891,92 @@
 /*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( L'y'	,0x1FE7	,0x1FE7	,0x0000	), // 'y' ➔ "ῧ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
 /*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( 0x00A0	,0x1FE7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
 /*<!diaeresis><!circumflex><!greek>                                */ DEADTRANS( 0x202F	,0x1FE7	,0x1FC1	,0x0000	), // ' ' ➔ "῁" GREEK DIALYTIKA AND PERISPOMENI
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'*'	,0x1E73	,0x1ADD	,0x0000	), // '*' ➔ "᫝" COMBINING DOT-AND-RING BELOW
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'U'	,0x1E73	,0x1E72	,0x0000	), // 'U' ➔ "Ṳ" LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'u'	,0x1E73	,0x1E73	,0x0000	), // 'u' ➔ "ṳ" LATIN SMALL LETTER U WITH DIAERESIS BELOW
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00A0	,0x1E73	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x202F	,0x1E73	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L' '	,0x1E73	,0x0324	,0x0000	), // ' ' ➔ "̤" COMBINING DIAERESIS BELOW
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x200B	,0x1E73	,0x0324	,0x0000	), // '​' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( L'*'	,0x2523	,0x1ADD	,0x0000	), // '*' ➔ "᫝" COMBINING DOT-AND-RING BELOW
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( L'U'	,0x2523	,0x1E72	,0x0000	), // 'U' ➔ "Ṳ" LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( L'u'	,0x2523	,0x1E73	,0x0000	), // 'u' ➔ "ṳ" LATIN SMALL LETTER U WITH DIAERESIS BELOW
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( 0x00A0	,0x2523	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( 0x202F	,0x2523	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( L' '	,0x2523	,0x0324	,0x0000	), // ' ' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!circumflex>                                        */ DEADTRANS( 0x200B	,0x2523	,0x0324	,0x0000	), // '​' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( L'*'	,0x1E73	,0x1ADD	,0x0000	), // '*' ➔ "᫝" COMBINING DOT-AND-RING BELOW
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( L'U'	,0x1E73	,0x1E72	,0x0000	), // 'U' ➔ "Ṳ" LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( L'u'	,0x1E73	,0x1E73	,0x0000	), // 'u' ➔ "ṳ" LATIN SMALL LETTER U WITH DIAERESIS BELOW
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x00A0	,0x1E73	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x202F	,0x1E73	,0x2025	,0x0000	), // ' ' ➔ "‥" TWO DOT LEADER
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( L' '	,0x1E73	,0x0324	,0x0000	), // ' ' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x200B	,0x1E73	,0x0324	,0x0000	), // '​' ➔ "̤" COMBINING DIAERESIS BELOW
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'&'	,0x010E	,0xFE26	,0x0000	), // '&' ➔ "︦" COMBINING CONJOINING MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'\''	,0x010E	,0x2A42	,0x0000	), // ''' ➔ "⩂" UNION WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x2019	,0x010E	,0x2A42	,0x0000	), // '’' ➔ "⩂" UNION WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'{'	,0x010E	,0x2A43	,0x0000	), // '{' ➔ "⩃" INTERSECTION WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'}'	,0x010E	,0x29B1	,0x0000	), // '}' ➔ "⦱" EMPTY SET WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'$'	,0x010E	,0x035E	,0x0000	), // '$' ➔ "͞" COMBINING DOUBLE MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'`'	,0x010E	,0x22BC	,0x0000	), // '`' ➔ "⊼" NAND
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'?'	,0x010E	,0x22BD	,0x0000	), // '?' ➔ "⊽" NOR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'/'	,0x010E	,0x29F6	,0x0000	), // '/' ➔ "⧶" SOLIDUS WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'0'	,0x010E	,0x2AFE	,0x0000	), // '0' ➔ "⫾" WHITE VERTICAL BAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'1'	,0x010E	,0x2223	,0x0000	), // '1' ➔ "∣" DIVIDES
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'2'	,0x010E	,0x2016	,0x0000	), // '2' ➔ "‖" DOUBLE VERTICAL LINE
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'3'	,0x010E	,0x2980	,0x0000	), // '3' ➔ "⦀" TRIPLE VERTICAL BAR DELIMITER
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'4'	,0x010E	,0x2225	,0x0000	), // '4' ➔ "∥" PARALLEL TO
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'5'	,0x010E	,0x01C0	,0x0000	), // '5' ➔ "ǀ" LATIN LETTER DENTAL CLICK
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'6'	,0x010E	,0x2AF4	,0x0000	), // '6' ➔ "⫴" TRIPLE VERTICAL BAR BINARY RELATION
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'7'	,0x010E	,0x2AFF	,0x0000	), // '7' ➔ "⫿" N-ARY WHITE VERTICAL BAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'8'	,0x010E	,0x01C1	,0x0000	), // '8' ➔ "ǁ" LATIN LETTER LATERAL CLICK
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'9'	,0x010E	,0x2AFC	,0x0000	), // '9' ➔ "⫼" LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'A'	,0x010E	,0x0100	,0x0000	), // 'A' ➔ "Ā" LATIN CAPITAL LETTER A WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'a'	,0x010E	,0x0101	,0x0000	), // 'a' ➔ "ā" LATIN SMALL LETTER A WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'B'	,0x010E	,0x0182	,0x0000	), // 'B' ➔ "Ƃ" LATIN CAPITAL LETTER B WITH TOPBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'b'	,0x010E	,0x0183	,0x0000	), // 'b' ➔ "ƃ" LATIN SMALL LETTER B WITH TOPBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'c'	,0x010E	,0x00A2	,0x0000	), // 'c' ➔ "¢" CENT SIGN
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'C'	,0x010E	,0x20B5	,0x0000	), // 'C' ➔ "₵" CEDI SIGN
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'D'	,0x010E	,0x018B	,0x0000	), // 'D' ➔ "Ƌ" LATIN CAPITAL LETTER D WITH TOPBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'd'	,0x010E	,0x018C	,0x0000	), // 'd' ➔ "ƌ" LATIN SMALL LETTER D WITH TOPBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'E'	,0x010E	,0x0112	,0x0000	), // 'E' ➔ "Ē" LATIN CAPITAL LETTER E WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'e'	,0x010E	,0x0113	,0x0000	), // 'e' ➔ "ē" LATIN SMALL LETTER E WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00C9	,0x010E	,0x1E16	,0x0000	), // 'É' ➔ "Ḗ" LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00E9	,0x010E	,0x1E17	,0x0000	), // 'é' ➔ "ḗ" LATIN SMALL LETTER E WITH MACRON AND ACUTE
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00C8	,0x010E	,0x1E14	,0x0000	), // 'È' ➔ "Ḕ" LATIN CAPITAL LETTER E WITH MACRON AND GRAVE
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00E8	,0x010E	,0x1E15	,0x0000	), // 'è' ➔ "ḕ" LATIN SMALL LETTER E WITH MACRON AND GRAVE
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x2014	,0x010E	,0x035E	,0x0000	), // '—' ➔ "͞" COMBINING DOUBLE MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'F'	,0x010E	,0xFE24	,0x0000	), // 'F' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'f'	,0x010E	,0xFE25	,0x0000	), // 'f' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'G'	,0x010E	,0x1E20	,0x0000	), // 'G' ➔ "Ḡ" LATIN CAPITAL LETTER G WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'g'	,0x010E	,0x1E21	,0x0000	), // 'g' ➔ "ḡ" LATIN SMALL LETTER G WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'H'	,0x010E	,0xFE24	,0x0000	), // 'H' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'h'	,0x010E	,0xFE25	,0x0000	), // 'h' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'I'	,0x010E	,0x012A	,0x0000	), // 'I' ➔ "Ī" LATIN CAPITAL LETTER I WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'i'	,0x010E	,0x012B	,0x0000	), // 'i' ➔ "ī" LATIN SMALL LETTER I WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'J'	,0x010E	,0xFE24	,0x0000	), // 'J' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'j'	,0x010E	,0xFE25	,0x0000	), // 'j' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'K'	,0x010E	,0xFE24	,0x0000	), // 'K' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'k'	,0x010E	,0xFE25	,0x0000	), // 'k' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'L'	,0x010E	,0x22F6	,0x0000	), // 'L' ➔ "⋶" ELEMENT OF WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'l'	,0x010E	,0x22F7	,0x0000	), // 'l' ➔ "⋷" SMALL ELEMENT OF WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'M'	,0x010E	,0x22FD	,0x0000	), // 'M' ➔ "⋽" CONTAINS WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'm'	,0x010E	,0x22FE	,0x0000	), // 'm' ➔ "⋾" SMALL CONTAINS WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'O'	,0x010E	,0x014C	,0x0000	), // 'O' ➔ "Ō" LATIN CAPITAL LETTER O WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'o'	,0x010E	,0x014D	,0x0000	), // 'o' ➔ "ō" LATIN SMALL LETTER O WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'Q'	,0x010E	,0xFE24	,0x0000	), // 'Q' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'q'	,0x010E	,0xFE25	,0x0000	), // 'q' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'R'	,0x010E	,0x027A	,0x0000	), // 'R' ➔ "ɺ" LATIN SMALL LETTER TURNED R WITH LONG LEG
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'r'	,0x010E	,0x027C	,0x0000	), // 'r' ➔ "ɼ" LATIN SMALL LETTER R WITH LONG LEG
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'S'	,0x010E	,0x2A1B	,0x0000	), // 'S' ➔ "⨛" INTEGRAL WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L's'	,0x010E	,0x2A1B	,0x0000	), // 's' ➔ "⨛" INTEGRAL WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'T'	,0x010E	,0x2AE7	,0x0000	), // 'T' ➔ "⫧" SHORT DOWN TACK WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L't'	,0x010E	,0x2AE7	,0x0000	), // 't' ➔ "⫧" SHORT DOWN TACK WITH OVERBAR
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'U'	,0x010E	,0x016A	,0x0000	), // 'U' ➔ "Ū" LATIN CAPITAL LETTER U WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'u'	,0x010E	,0x016B	,0x0000	), // 'u' ➔ "ū" LATIN SMALL LETTER U WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'V'	,0x010E	,0xFE24	,0x0000	), // 'V' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'v'	,0x010E	,0xFE25	,0x0000	), // 'v' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'Y'	,0x010E	,0x0232	,0x0000	), // 'Y' ➔ "Ȳ" LATIN CAPITAL LETTER Y WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'y'	,0x010E	,0x0233	,0x0000	), // 'y' ➔ "ȳ" LATIN SMALL LETTER Y WITH MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'Z'	,0x010E	,0xFE24	,0x0000	), // 'Z' ➔ "︤" COMBINING MACRON LEFT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'z'	,0x010E	,0xFE25	,0x0000	), // 'z' ➔ "︥" COMBINING MACRON RIGHT HALF
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x00A0	,0x010E	,0x00AF	,0x0000	), // ' ' ➔ "¯" MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x202F	,0x010E	,0x02C9	,0x0000	), // ' ' ➔ "ˉ" MODIFIER LETTER MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L' '	,0x010E	,0x0304	,0x0000	), // ' ' ➔ "̄" COMBINING MACRON
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( 0x200B	,0x010E	,0x0304	,0x0000	), // '​' ➔ "̄" COMBINING MACRON
 /*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( L'i'	,0x0344	,0x0390	,0x0000	), // 'i' ➔ "ΐ" GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 /*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( L'y'	,0x0344	,0x03B0	,0x0000	), // 'y' ➔ "ΰ" GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 /*<!diaeresis><!doubleacute><!greek>                               */ DEADTRANS( 0x00A0	,0x0344	,0x0385	,0x0000	), // ' ' ➔ "΅" GREEK DIALYTIKA TONOS
@@ -3840,6 +3928,8 @@
 /*<!greek><!circumflex>                                            */ DEADTRANS( L'h'	,0x1FB6	,0x1FC6	,0x0000	), // 'h' ➔ "ῆ" GREEK SMALL LETTER ETA WITH PERISPOMENI
 /*<!greek><!circumflex>                                            */ DEADTRANS( L'i'	,0x1FB6	,0x1FD6	,0x0000	), // 'i' ➔ "ῖ" GREEK SMALL LETTER IOTA WITH PERISPOMENI
 /*<!greek><!circumflex>                                            */ DEADTRANS( L'v'	,0x1FB6	,0x1FF6	,0x0000	), // 'v' ➔ "ῶ" GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'x'	,0x1FB6	,0x2A36	,0x0000	), // 'x' ➔ "⨶" CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!greek><!circumflex>                                            */ DEADTRANS( L'X'	,0x1FB6	,0x2A36	,0x0000	), // 'X' ➔ "⨶" CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!greek><!circumflex>                                            */ DEADTRANS( L'y'	,0x1FB6	,0x1FE6	,0x0000	), // 'y' ➔ "ῦ" GREEK SMALL LETTER UPSILON WITH PERISPOMENI
 /*<!greek><!circumflex>                                            */ DEADTRANS( 0x00A0	,0x1FB6	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
 /*<!greek><!circumflex>                                            */ DEADTRANS( 0x202F	,0x1FB6	,0x1FC0	,0x0000	), // ' ' ➔ "῀" GREEK PERISPOMENI
@@ -4954,7 +5044,7 @@
 /*<!group><0><%comma>                                              */ DEADTRANS( L'Z'	,0x213F	,0xDDED	,0x0000	), // High surrogate: D835; U+1D5ED 'Z' ➔ "𝗭" MATHEMATICAL SANS-SERIF BOLD CAPITAL Z
 /*<!group><0><%comma>                                              */ DEADTRANS( L'z'	,0x213F	,0xDE07	,0x0000	), // High surrogate: D835; U+1D607 'z' ➔ "𝘇" MATHEMATICAL SANS-SERIF BOLD SMALL Z
 /*<!group><0>                                                      */ DEADTRANS( L'$'	,0x2469	,0x00A7	,0x0000	), // '$' ➔ "§" SECTION SIGN
-/*<!group><0>                                                      */ DEADTRANS( L'='	,0x2469	,0x266E	,0x0000	), // '=' ➔ "♮" MUSIC NATURAL SIGN math
+/*<!group><0>                                                      */ DEADTRANS( L'='	,0x2469	,0x2698	,0x0000	), // '=' ➔ "⚘" FLOWER
 /*<!group><0>                                                      */ DEADTRANS( L'!'	,0x2469	,0x2235	,0x0000	), // '!' ➔ "∵" BECAUSE math
 /*<!group><0>                                                      */ DEADTRANS( L'`'	,0x2469	,0x26CE	,0x0000	), // '`' ➔ "⛎" OPHIUCHUS emoji
 /*<!group><0>                                                      */ DEADTRANS( L'>'	,0x2469	,0x23E9	,0x0000	), // '>' ➔ "⏩" BLACK RIGHT-POINTING DOUBLE TRIANGLE emoji, fast-forward button
@@ -6145,18 +6235,18 @@
 /*<!group><6>                                                      */ DEADTRANS( L'z'	,0x2465	,0x03B6	,0x0000	), // 'z' ➔ "ζ" GREEK SMALL LETTER ZETA
 /*<!group><6>                                                      */ DEADTRANS( 0x00A0	,0x2465	,0x2006	,0x0000	), // ' ' ➔ " " SIX-PER-EM SPACE
 /*<!group><6>                                                      */ DEADTRANS( L' '	,0x2465	,0x2006	,0x0000	), // ' ' ➔ " " SIX-PER-EM SPACE
-/*<!group><7>                                                      */ DEADTRANS( 0x03B5	,0x2466	,0x2742	,0x0000	), // 'ε' ➔ "❂" CIRCLED OPEN CENTRE EIGHT POINTED STAR
+/*<!group><7>                                                      */ DEADTRANS( 0x03B5	,0x2466	,0x26AC	,0x0000	), // 'ε' ➔ "⚬" MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
 /*<!group><7>                                                      */ DEADTRANS( L'&'	,0x2466	,0x26F8	,0x0000	), // '&' ➔ "⛸" ICE SKATE emoji
 /*<!group><7>                                                      */ DEADTRANS( L'\''	,0x2466	,0x26AD	,0x0000	), // ''' ➔ "⚭" MARRIAGE SYMBOL
 /*<!group><7>                                                      */ DEADTRANS( 0x2019	,0x2466	,0x26AD	,0x0000	), // '’' ➔ "⚭" MARRIAGE SYMBOL
 /*<!group><7>                                                      */ DEADTRANS( L'^'	,0x2466	,0x2693	,0x0000	), // '^' ➔ "⚓" ANCHOR emoji
 /*<!group><7>                                                      */ DEADTRANS( L'~'	,0x2466	,0x260F	,0x0000	), // '~' ➔ "☏" WHITE TELEPHONE
 /*<!group><7>                                                      */ DEADTRANS( L'*'	,0x2466	,0x2728	,0x0000	), // '*' ➔ "✨" SPARKLES emoji
-/*<!group><7>                                                      */ DEADTRANS( L'@'	,0x2466	,0x2742	,0x0000	), // '@' ➔ "❂" CIRCLED OPEN CENTRE EIGHT POINTED STAR
+/*<!group><7>                                                      */ DEADTRANS( L'@'	,0x2466	,0x26AC	,0x0000	), // '@' ➔ "⚬" MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
 /*<!group><7>                                                      */ DEADTRANS( L'\\'	,0x2466	,0x267D	,0x0000	), // '\' ➔ "♽" PARTIALLY-RECYCLED PAPER SYMBOL
 /*<!group><7>                                                      */ DEADTRANS( L'|'	,0x2466	,0x23EF	,0x0000	), // '|' ➔ "⏯" BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-/*<!group><7>                                                      */ DEADTRANS( L'{'	,0x2466	,0x26AC	,0x0000	), // '{' ➔ "⚬" MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
-/*<!group><7>                                                      */ DEADTRANS( L'}'	,0x2466	,0x2698	,0x0000	), // '}' ➔ "⚘" FLOWER
+/*<!group><7>                                                      */ DEADTRANS( L'{'	,0x2466	,0x26AF	,0x0000	), // '{' ➔ "⚯" UNMARRIED PARTNERSHIP SYMBOL
+/*<!group><7>                                                      */ DEADTRANS( L'}'	,0x2466	,0x2742	,0x0000	), // '}' ➔ "❂" CIRCLED OPEN CENTRE EIGHT POINTED STAR
 /*<!group><7>                                                      */ DEADTRANS( L'['	,0x2466	,0x2656	,0x0000	), // '[' ➔ "♖" WHITE CHESS ROOK
 /*<!group><7>                                                      */ DEADTRANS( L']'	,0x2466	,0x2628	,0x0000	), // ']' ➔ "☨" CROSS OF LORRAINE
 /*<!group><7>                                                      */ DEADTRANS( L':'	,0x2466	,0x231A	,0x0000	), // ':' ➔ "⌚" WATCH emoji
@@ -9270,8 +9360,8 @@
 /*<!tilde>                                                         */ DEADTRANS( L'~'	,0x00F5	,0xFE0E	,0x0000	), // '~' ➔ "︎" VARIATION SELECTOR-15, text style
 /*<!tilde>                                                         */ DEADTRANS( L'*'	,0x00F5	,0x2051	,0x0000	), // '*' ➔ "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!tilde>                                                         */ DEADTRANS( L'\\'	,0x00F5	,0xFE00	,0x0000	), // '\' ➔ "︀" VARIATION SELECTOR-1
-/*<!tilde>                                                         */ DEADTRANS( L'['	,0x00F5	,0x27E6	,0x0000	), // '[' ➔ "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET
-/*<!tilde>                                                         */ DEADTRANS( L']'	,0x00F5	,0x27E7	,0x0000	), // ']' ➔ "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+/*<!tilde>                                                         */ DEADTRANS( L'['	,0x00F5	,0x2770	,0x0000	), // '[' ➔ "❰" HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+/*<!tilde>                                                         */ DEADTRANS( L']'	,0x00F5	,0x2771	,0x0000	), // ']' ➔ "❱" HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 /*<!tilde>                                                         */ DEADTRANS( L'$'	,0x00F5	,0x0360	,0x0000	), // '$' ➔ "͠" COMBINING DOUBLE TILDE
 /*<!tilde>                                                         */ DEADTRANS( L'='	,0x00F5	,0x034C	,0x0000	), // '=' ➔ "͌" COMBINING ALMOST EQUAL TO ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'`'	,0x00F5	,0x000C	,0x0000	), // '`' ➔ "" FORM FEED, page break in plain text
