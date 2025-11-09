@@ -11321,6 +11321,7 @@
 #   to meet potential user expectations.
 #   See #^# CIRCUMFLEX_BELOW
 #   See #^# HACEK input facility by CIRCUMFLEX
+#   See # # DIAERESIS_BELOW input facility by DIAERESIS&CIRCUMFLEX
 #
 <dead_horn><dead_horn>                                                                     <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><plus><plus>                                                                    <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
@@ -12246,6 +12247,27 @@
 #   dead_macron
 #   Multi_key: ¦|
 #
+#   This dead key needs to be in sync with its shortcut by dead_diaeresis
+#   double press.
+#   See #^# MACRON input facility by DIAERESIS
+#
+#   For ease of access, and in an attempt to meet potential user expectations,
+#   the macron dead key is also activatable by dead_diaeresis double press,
+#   extending the logic that multiple dead key presses transform diacritics,
+#   to include the idea that a double press may also join the two dots, if
+#   that is a better option with respect to usability.
+#
+#   For portability, the full dead key content is supported, as well as
+#   multikey, even though this does not make sense.
+#
+#   While the most streamlined implementation would be by adding the double
+#   dead_diaeresis sequences here, for consistency the content is copied and
+#   maintained separately, since this file is also a documentation source.
+#   See # # Notes about documentation
+#
+#
+#   Long leg and topbar
+#
 #   Long leg is merged with macron thanks to an empty intersection and with a
 #   mnemonic based on the macron multikey equivalent pipe "|". (As of small r
 #   with long leg "ɼ" U027C, it has been obsoleted by IPA in 1989. But the
@@ -12255,9 +12277,15 @@
 #   are supported alongside thanks to an empty intersection, with a rationale
 #   based on the straightforward mnemonic.
 #
+#
+#   Currency symbols
+#
 #   Cedi "₵" U20B5 and Cent "¢" U00A2 signs are supported by lack of C with
 #   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
 #   equivalents.
+#
+#
+#   Vertical bars
 #
 #   Digits yield the full collection of simple and multiple vertical bars — but
 #   not the broken one "¦" U00A6 — for convenience, since input methods using
@@ -12266,6 +12294,9 @@
 #   See #   Outsourcing to dead keys
 #   See #*# STROKE
 #   See #*# REVERSED
+#
+#
+#   Diacritics
 #
 #   The conjoining variants of the combining diacritics are supported with
 #   ampersand as a base character both in macron and in macron below.
@@ -12281,6 +12312,9 @@
 #   experience. Halves of combining diacritics are also supported in a virtual
 #   dead key called “tilde and ampersand”.
 #   See # # TILDE&AMPERSAND
+#
+#
+#   Math symbols
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   case insensitive "s" yields "⨛" U2A1B; "L" yields "⋶" U22F6; "l" yields
@@ -14003,6 +14037,9 @@
 #
 # # CIRCUMFLEX&GREEK_OR_CIRCLED
 #
+#   This is a variant of the perispomeni dead key for maintainability.
+#   See # # GREEK_OR_CIRCLED&CIRCUMFLEX
+#
 <dead_circumflex><dead_greek>                                                                  <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 <Multi_key><less><at>                                                                          <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 <dead_greek><dead_circumflex>                                                                  <x> : "⨶" U2A36 # CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
@@ -14134,8 +14171,9 @@
 #   extending the logic that multiple dead key presses shift diacritics around,
 #   to include the idea that a double press may also turn the diacritic, if
 #   that is a better option with respect to usability.
+#   See #*# HACEK
 #
-#   The double dead_circumflex sequences are not added right in the HACEK dead
+#   The double dead_circumflex sequences are not added right in the hacek dead
 #   key for maintainability, because this file is also used as the source code
 #   for dead key tables.
 #   See # # Notes about documentation
@@ -14371,14 +14409,14 @@
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex double press,
 #   extending the logic that multiple dead key presses shift diacritics around,
-#   to consider that they may also turn them. For portability, the full dead
-#   key content is supported, as well as multikey, even though this does not
-#   make sense.
+#   to consider that they may also turn them.
+#
+#   For portability, the full dead key content is supported, as well as
+#   multikey, even though this does not make sense.
 #
 #   While the most streamlined implementation would be by adding the double
 #   dead_circumflex sequences here, for consistency the content is copied and
 #   maintained separately, since this file is also a documentation source.
-#   See #^# HACEK input facility by CIRCUMFLEX
 #   See # # Notes about documentation
 #
 #
@@ -16984,6 +17022,69 @@
 <Multi_key><asterisk><colon>                                                               <U200B> : "᪱" U1AB1 # COMBINING DIAERESIS-RING
 #
 #
+# # DIAERESIS_BELOW input facility by DIAERESIS&CIRCUMFLEX
+#   Multi_key: ¦:<
+#
+#   For convenience, an alternative input method is provided for the diaeresis
+#   below, since dead_diaeresis double press is used as a facility for macron
+#   to meet potential user expectations.
+#   See #^# DIAERESIS_BELOW
+#   See #^# CIRCUMFLEX_BELOW input facility by HORN
+#
+<dead_diaeresis><dead_circumflex>                                                          <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><colon><less>                                                                   <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_circumflex><dead_diaeresis>                                                          <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><less><colon>                                                                   <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_diaeresis><dead_circumflex>                                                          <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><colon><less>                                                                   <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_circumflex><dead_diaeresis>                                                          <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><less><colon>                                                                   <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_diaeresis><dead_circumflex>                                                   <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><colon><less>                                                            <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<dead_circumflex><dead_diaeresis>                                                   <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><less><colon>                                                            <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<dead_diaeresis><dead_circumflex>                                                          <U202F> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><colon><less>                                                                   <U202F> : "‥" U2025 # TWO DOT LEADER
+<dead_circumflex><dead_diaeresis>                                                          <U202F> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><less><colon>                                                                   <U202F> : "‥" U2025 # TWO DOT LEADER
+<dead_diaeresis><dead_circumflex>                                                       <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<Multi_key><colon><less>                                                                <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<dead_circumflex><dead_diaeresis>                                                       <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<Multi_key><less><colon>                                                                <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<dead_diaeresis><dead_circumflex>                                                              <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><less>                                                                       <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_circumflex><dead_diaeresis>                                                              <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><less><colon>                                                                       <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_circumflex>                                                              <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<Multi_key><colon><less>                                                                       <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<dead_circumflex><dead_diaeresis>                                                              <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<Multi_key><less><colon>                                                                       <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<dead_diaeresis><dead_circumflex>                                                              <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<Multi_key><colon><less>                                                                       <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<dead_circumflex><dead_diaeresis>                                                              <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<Multi_key><less><colon>                                                                       <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+#
+#
 # # DIAERESIS&HACEK
 #
 <dead_diaeresis><dead_caron>                                                                   <U> : "Ǚ" U01D9 # LATIN CAPITAL LETTER U WITH DIAERESIS AND CARON
@@ -17016,13 +17117,211 @@
 <Multi_key><grave><colon>                                                                      <u> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 #
 #
-#^# DIAERESIS_BELOW
-#   dead_belowdiaeresis
+#^# MACRON input facility by DIAERESIS
 #   dead_diaeresis double press
 #   Multi_key: ¦::
 #
+#   For ease of access, and in an attempt to meet potential user expectations,
+#   the macron dead key is also activatable by dead_diaeresis double press,
+#   extending the logic that multiple dead key presses transform diacritics,
+#   to include the idea that a double press may also join the two dots, if
+#   that is a better option with respect to usability.
+#   See #*# MACRON
+#
+#   The double dead_diaeresis sequences are not added right in the macron dead
+#   key for maintainability, because this file is also used as the source code
+#   for dead key tables.
+#   See # # Notes about documentation
+#
+<dead_diaeresis><dead_diaeresis>                                                           <space> : "̄" U0304 # COMBINING MACRON
+<Multi_key><colon><colon>                                                                  <space> : "̄" U0304 # COMBINING MACRON
+<dead_diaeresis><dead_diaeresis>                                                           <U200B> : "̄" U0304 # COMBINING MACRON
+<Multi_key><colon><colon>                                                                  <U200B> : "̄" U0304 # COMBINING MACRON
+<dead_diaeresis><dead_diaeresis>                                                    <nobreakspace> : "¯" U00AF # MACRON
+<Multi_key><colon><colon>                                                           <nobreakspace> : "¯" U00AF # MACRON
+<dead_diaeresis><dead_diaeresis>                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
+<Multi_key><colon><colon>                                                                  <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
+<dead_diaeresis><dead_diaeresis>                                                       <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><colon><colon>                                                              <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                      <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<Multi_key><colon><colon>                                                             <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                      <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><colon><colon>                                                             <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                            <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><colon><colon>                                                   <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
+<Multi_key><colon><colon>                                                              <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
+<dead_diaeresis><dead_diaeresis>                                                           <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<Multi_key><colon><colon>                                                                  <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                          <dollar> : "͞" U035E # COMBINING DOUBLE MACRON
+<Multi_key><colon><colon>                                                                 <dollar> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_diaeresis><dead_diaeresis>                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
+<Multi_key><colon><colon>                                                                 <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_diaeresis><dead_diaeresis>                                                           <grave> : "⊼" U22BC # NAND
+<Multi_key><colon><colon>                                                                  <grave> : "⊼" U22BC # NAND
+<dead_diaeresis><dead_diaeresis>                                                        <question> : "⊽" U22BD # NOR
+<Multi_key><colon><colon>                                                               <question> : "⊽" U22BD # NOR
+<dead_diaeresis><dead_diaeresis>                                                               <0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><colon><colon>                                                                      <0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<dead_diaeresis><dead_diaeresis>                                                            <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><colon><colon>                                                                   <KP_0> : "⫾" U2AFE # WHITE VERTICAL BAR
+<dead_diaeresis><dead_diaeresis>                                                               <1> : "∣" U2223 # DIVIDES
+<Multi_key><colon><colon>                                                                      <1> : "∣" U2223 # DIVIDES
+<dead_diaeresis><dead_diaeresis>                                                            <KP_1> : "∣" U2223 # DIVIDES
+<Multi_key><colon><colon>                                                                   <KP_1> : "∣" U2223 # DIVIDES
+<dead_diaeresis><dead_diaeresis>                                                               <2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><colon><colon>                                                                      <2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_diaeresis><dead_diaeresis>                                                            <KP_2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key><colon><colon>                                                                   <KP_2> : "‖" U2016 # DOUBLE VERTICAL LINE
+<dead_diaeresis><dead_diaeresis>                                                               <3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><colon><colon>                                                                      <3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<dead_diaeresis><dead_diaeresis>                                                            <KP_3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><colon><colon>                                                                   <KP_3> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<dead_diaeresis><dead_diaeresis>                                                               <4> : "∥" U2225 # PARALLEL TO
+<Multi_key><colon><colon>                                                                      <4> : "∥" U2225 # PARALLEL TO
+<dead_diaeresis><dead_diaeresis>                                                            <KP_4> : "∥" U2225 # PARALLEL TO
+<Multi_key><colon><colon>                                                                   <KP_4> : "∥" U2225 # PARALLEL TO
+<dead_diaeresis><dead_diaeresis>                                                               <5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><colon><colon>                                                                      <5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<dead_diaeresis><dead_diaeresis>                                                            <KP_5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<Multi_key><colon><colon>                                                                   <KP_5> : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
+<dead_diaeresis><dead_diaeresis>                                                               <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><colon><colon>                                                                      <6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<dead_diaeresis><dead_diaeresis>                                                            <KP_6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><colon><colon>                                                                   <KP_6> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<dead_diaeresis><dead_diaeresis>                                                               <7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><colon><colon>                                                                      <7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<dead_diaeresis><dead_diaeresis>                                                            <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><colon><colon>                                                                   <KP_7> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<dead_diaeresis><dead_diaeresis>                                                               <8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><colon><colon>                                                                      <8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<dead_diaeresis><dead_diaeresis>                                                            <KP_8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<Multi_key><colon><colon>                                                                   <KP_8> : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
+<dead_diaeresis><dead_diaeresis>                                                               <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><colon><colon>                                                                      <9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<dead_diaeresis><dead_diaeresis>                                                            <KP_9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><colon><colon>                                                                   <KP_9> : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<dead_diaeresis><dead_diaeresis>                                                               <A> : "Ā" U0100 # LATIN CAPITAL LETTER A WITH MACRON
+<Multi_key><colon><colon>                                                                      <A> : "Ā" U0100 # LATIN CAPITAL LETTER A WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <a> : "ā" U0101 # LATIN SMALL LETTER A WITH MACRON
+<Multi_key><colon><colon>                                                                      <a> : "ā" U0101 # LATIN SMALL LETTER A WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <B> : "Ƃ" U0182 # LATIN CAPITAL LETTER B WITH TOPBAR
+<Multi_key><colon><colon>                                                                      <B> : "Ƃ" U0182 # LATIN CAPITAL LETTER B WITH TOPBAR
+<dead_diaeresis><dead_diaeresis>                                                               <b> : "ƃ" U0183 # LATIN SMALL LETTER B WITH TOPBAR
+<Multi_key><colon><colon>                                                                      <b> : "ƃ" U0183 # LATIN SMALL LETTER B WITH TOPBAR
+<dead_diaeresis><dead_diaeresis>                                                               <C> : "₵" U20B5 # CEDI SIGN
+<Multi_key><colon><colon>                                                                      <C> : "₵" U20B5 # CEDI SIGN
+<dead_diaeresis><dead_diaeresis>                                                               <c> : "¢" U00A2 # CENT SIGN
+<Multi_key><colon><colon>                                                                      <c> : "¢" U00A2 # CENT SIGN
+<dead_diaeresis><dead_diaeresis>                                                               <D> : "Ƌ" U018B # LATIN CAPITAL LETTER D WITH TOPBAR
+<Multi_key><colon><colon>                                                                      <D> : "Ƌ" U018B # LATIN CAPITAL LETTER D WITH TOPBAR
+<dead_diaeresis><dead_diaeresis>                                                               <d> : "ƌ" U018C # LATIN SMALL LETTER D WITH TOPBAR
+<Multi_key><colon><colon>                                                                      <d> : "ƌ" U018C # LATIN SMALL LETTER D WITH TOPBAR
+<dead_diaeresis><dead_diaeresis>                                                               <E> : "Ē" U0112 # LATIN CAPITAL LETTER E WITH MACRON
+<Multi_key><colon><colon>                                                                      <E> : "Ē" U0112 # LATIN CAPITAL LETTER E WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
+<Multi_key><colon><colon>                                                                      <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <G> : "Ḡ" U1E20 # LATIN CAPITAL LETTER G WITH MACRON
+<Multi_key><colon><colon>                                                                      <G> : "Ḡ" U1E20 # LATIN CAPITAL LETTER G WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <g> : "ḡ" U1E21 # LATIN SMALL LETTER G WITH MACRON
+<Multi_key><colon><colon>                                                                      <g> : "ḡ" U1E21 # LATIN SMALL LETTER G WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <H> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <H> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <h> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <h> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <I> : "Ī" U012A # LATIN CAPITAL LETTER I WITH MACRON
+<Multi_key><colon><colon>                                                                      <I> : "Ī" U012A # LATIN CAPITAL LETTER I WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
+<Multi_key><colon><colon>                                                                      <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <k> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <k> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <L> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <L> : "⋶" U22F6 # ELEMENT OF WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <l> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <l> : "⋷" U22F7 # SMALL ELEMENT OF WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <M> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <M> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <m> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <m> : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
+<Multi_key><colon><colon>                                                                      <N> : "N̄" # U004E U0304 LATIN CAPITAL LETTER N WITH MACRON: Fula in Senegalese orthography
+<dead_diaeresis><dead_diaeresis>                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
+<Multi_key><colon><colon>                                                                      <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
+<dead_diaeresis><dead_diaeresis>                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
+<Multi_key><colon><colon>                                                                      <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
+<Multi_key><colon><colon>                                                                      <o> : "ō" U014D # LATIN SMALL LETTER O WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <Q> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <Q> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <q> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <q> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <R> : "ɺ" U027A # LATIN SMALL LETTER TURNED R WITH LONG LEG
+<Multi_key><colon><colon>                                                                      <R> : "ɺ" U027A # LATIN SMALL LETTER TURNED R WITH LONG LEG
+<dead_diaeresis><dead_diaeresis>                                                               <r> : "ɼ" U027C # LATIN SMALL LETTER R WITH LONG LEG
+<Multi_key><colon><colon>                                                                      <r> : "ɼ" U027C # LATIN SMALL LETTER R WITH LONG LEG
+<dead_diaeresis><dead_diaeresis>                                                               <S> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <S> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <s> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <s> : "⨛" U2A1B # INTEGRAL WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <T> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <T> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <t> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<Multi_key><colon><colon>                                                                      <t> : "⫧" U2AE7 # SHORT DOWN TACK WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                               <U> : "Ū" U016A # LATIN CAPITAL LETTER U WITH MACRON
+<Multi_key><colon><colon>                                                                      <U> : "Ū" U016A # LATIN CAPITAL LETTER U WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <u> : "ū" U016B # LATIN SMALL LETTER U WITH MACRON
+<Multi_key><colon><colon>                                                                      <u> : "ū" U016B # LATIN SMALL LETTER U WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <V> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <V> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
+<Multi_key><colon><colon>                                                                      <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
+<Multi_key><colon><colon>                                                                      <y> : "ȳ" U0233 # LATIN SMALL LETTER Y WITH MACRON
+<dead_diaeresis><dead_diaeresis>                                                               <Z> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<Multi_key><colon><colon>                                                                      <Z> : "︤" UFE24 # COMBINING MACRON LEFT HALF
+<dead_diaeresis><dead_diaeresis>                                                               <z> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<Multi_key><colon><colon>                                                                      <z> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_diaeresis><dead_diaeresis>                                                          <Eacute> : "Ḗ" U1E16 # LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
+<Multi_key><colon><colon>                                                                 <Eacute> : "Ḗ" U1E16 # LATIN CAPITAL LETTER E WITH MACRON AND ACUTE
+<dead_diaeresis><dead_diaeresis>                                                          <eacute> : "ḗ" U1E17 # LATIN SMALL LETTER E WITH MACRON AND ACUTE
+<Multi_key><colon><colon>                                                                 <eacute> : "ḗ" U1E17 # LATIN SMALL LETTER E WITH MACRON AND ACUTE
+<dead_diaeresis><dead_diaeresis>                                                          <Egrave> : "Ḕ" U1E14 # LATIN CAPITAL LETTER E WITH MACRON AND GRAVE
+<Multi_key><colon><colon>                                                                 <Egrave> : "Ḕ" U1E14 # LATIN CAPITAL LETTER E WITH MACRON AND GRAVE
+<dead_diaeresis><dead_diaeresis>                                                          <egrave> : "ḕ" U1E15 # LATIN SMALL LETTER E WITH MACRON AND GRAVE
+<Multi_key><colon><colon>                                                                 <egrave> : "ḕ" U1E15 # LATIN SMALL LETTER E WITH MACRON AND GRAVE
+#
+#
+#^# DIAERESIS_BELOW
+#   dead_belowdiaeresis
+#   dead_diaeresis triple press
+#   Multi_key: ¦:::
+#
+#   Consistency with the bépo keyboard layout and other diacritical dead keys
+#   requires virtualizing the diaeresis below dead key by double press
+#   of the diaeresis dead key. Usability however imposes to use this as
+#   a shortcut for the macron dead key located on D10, level 4, and to move to
+#   triple press the variant below, while providing a shortcut using the
+#   combination dead_diaeresis dead_circumflex in an attempt to restore some
+#   ease of input.
+#   https://bepo.fr/wiki/Touches_mortes#Tr%C3%A9ma_souscrit
+#   See # # DIAERESIS_BELOW input facility by DIAERESIS&CIRCUMFLEX
+#
 #   This is required for one precomposed letter (existing also with diaeresis),
-#   plus several composed letters.
+#   plus several composed letters. Diaeresis below is used in Min Dong and in
+#   phonetic transcription.
+#   https://www.frathwiki.com/Diaeresis_Below
 #
 #   "᫝" U1ADD COMBINING DOT-AND-RING BELOW has asterisk as a base character,
 #   because this is the multikey equivalent of ring above.
@@ -17031,32 +17330,32 @@
 #   As the diaeresis below has no spacing clone, the two dot leader "‥" U2025
 #   is provided instead.
 #
-<dead_diaeresis><dead_diaeresis>                                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
-<Multi_key><colon><colon>                                                                  <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
-<dead_diaeresis><dead_diaeresis>                                                           <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
-<Multi_key><colon><colon>                                                                  <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
-<dead_diaeresis><dead_diaeresis>                                                    <nobreakspace> : "‥" U2025 # TWO DOT LEADER
-<Multi_key><colon><colon>                                                           <nobreakspace> : "‥" U2025 # TWO DOT LEADER
-<dead_diaeresis><dead_diaeresis>                                                           <U202F> : "‥" U2025 # TWO DOT LEADER
-<Multi_key><colon><colon>                                                                  <U202F> : "‥" U2025 # TWO DOT LEADER
-<dead_diaeresis><dead_diaeresis>                                                        <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
-<Multi_key><colon><colon>                                                               <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
-<dead_diaeresis><dead_diaeresis>                                                               <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
-<Multi_key><colon><colon>                                                                      <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
-<dead_diaeresis><dead_diaeresis>                                                               <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
-<Multi_key><colon><colon>                                                                      <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
-<dead_diaeresis><dead_diaeresis>                                                               <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
-<Multi_key><colon><colon>                                                                      <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><colon><colon><colon>                                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                           <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key><colon><colon><colon>                                                           <U200B> : "̤" U0324 # COMBINING DIAERESIS BELOW
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                    <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><colon><colon><colon>                                                    <nobreakspace> : "‥" U2025 # TWO DOT LEADER
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                           <U202F> : "‥" U2025 # TWO DOT LEADER
+<Multi_key><colon><colon><colon>                                                           <U202F> : "‥" U2025 # TWO DOT LEADER
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                        <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<Multi_key><colon><colon><colon>                                                        <asterisk> : "᫝" U1ADD # COMBINING DOT-AND-RING BELOW
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <A> : "A̤" # U0041 U0324 LATIN CAPITAL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <a> : "a̤" # U0061 U0324 LATIN SMALL LETTER A WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <E> : "E̤" # U0045 U0324 LATIN CAPITAL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <e> : "e̤" # U0065 U0324 LATIN SMALL LETTER E WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <O> : "O̤" # U004F U0324 LATIN CAPITAL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<Multi_key><colon><colon><colon>                                                               <o> : "o̤" # U006F U0324 LATIN SMALL LETTER O WITH DIAERESIS BELOW: Min Dong
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<Multi_key><colon><colon><colon>                                                               <U> : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<dead_diaeresis><dead_diaeresis><dead_diaeresis>                                               <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<Multi_key><colon><colon><colon>                                                               <u> : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
 #
 #
 #*# COMMA_BELOW
