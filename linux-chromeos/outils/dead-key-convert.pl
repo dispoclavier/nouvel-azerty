@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-10-29T2303+0100
+# 2025-11-09T2048+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -414,7 +414,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!diaeresis><!abovering>$/00A8/;#<dead_diaeresis><dead_abovering>
 	$deadkey =~ s/^<!diaeresis><!acute>$/1E2F/;#<dead_diaeresis><dead_acute>
 	$deadkey =~ s/^<!diaeresis><!caron>$/01DA/;#<dead_diaeresis><dead_caron>
-	$deadkey =~ s/^<!diaeresis><!diaeresis>$/1E73/;#<dead_diaeresis><dead_diaeresis>
+	$deadkey =~ s/^<!diaeresis><!diaeresis>$/010E/;#<dead_diaeresis><dead_diaeresis>
 	$deadkey =~ s/^<!diaeresis><!grave>$/01DC/;#<dead_diaeresis><dead_grave>
 	$deadkey =~ s/^<!diaeresis><!group>$/275F/;#<dead_diaeresis><UEFD0>
 	$deadkey =~ s/^<!diaeresis><!group><!group>$/2760/;#<dead_diaeresis><UEFD0><UEFD0>
@@ -832,7 +832,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!turned><!subscript>$/0298/;#<UEFD5><UEFD5><UEFD2>
 	$deadkey =~ s/^<!turned><!turned><!superscript>$/0297/;#<UEFD5><UEFD5><UEFD1>
 
-	# Additional dead key chains (11).
+	# Additional dead key chains (12).
 	$deadkey =~ s/^<!grave><!acute>$/02C5/;#<dead_grave><dead_acute>
 	$deadkey =~ s/^<!macron><!retroflexhook>$/02FD/;#<dead_macron><UEFD4>
 	$deadkey =~ s/^<!macron><!superscript>$/02E5/;#<dead_macron><UEFD1>
@@ -844,6 +844,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!superscript><!diaeresis><!superscript>$/1D40/;#<UEFD1><dead_diaeresis><UEFD1>
 	$deadkey =~ s/^<!turned><!subscript><!turned>$/02BE/;#<UEFD5><UEFD2><UEFD5>
 	$deadkey =~ s/^<!subscript><!turned><!subscript>$/02CF/;#<UEFD2><UEFD5><UEFD2>
+	$deadkey =~ s/^<!diaeresis><!diaeresis><!diaeresis>$/1E73/;#<dead_diaeresis><dead_diaeresis><dead_diaeresis>
 
 	# Polytonic and monotonic Greek (256).
 	$deadkey =~ s/^<!abovehook><!greek>$/1FBD/;#<UEFD3><dead_greek>
@@ -1167,7 +1168,7 @@ sub get_dead_char {
 # Used to generate the required chained dead keys.
 my @chained = (
 
-	# Additional 11.
+	# Additional 12.
 	'<!grave><!acute>',
 	'<!macron><!retroflexhook>',
 	'<!macron><!superscript>',
@@ -1179,6 +1180,7 @@ my @chained = (
 	'<!superscript><!diaeresis><!superscript>',
 	'<!turned><!subscript><!turned>',
 	'<!subscript><!turned><!subscript>',
+	'<!diaeresis><!diaeresis><!diaeresis>',
 
 	# Main set, 561.
 	'<!abovedot><!abovedot>',
