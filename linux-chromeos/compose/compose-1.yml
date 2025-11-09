@@ -5930,10 +5930,10 @@
 #Multi_key><exclam><greater><less><exclam>                                                         : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key><exclam><greater><less>                                                                 : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 #Multi_key><space><3><minus><greater>                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><space><3>                                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><space><KP_3>                                                                           : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><3>                                                                       : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
-<Multi_key><nobreakspace><KP_3>                                                                    : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><3><minus>                                                                       : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><space><KP_3><minus>                                                                    : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><3><minus>                                                                : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
+<Multi_key><nobreakspace><KP_3><minus>                                                             : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 #Multi_key><minus><greater><minus><greater><minus><greater>                                        : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 <Multi_key><minus><greater><minus><greater><minus>                                                 : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
 #
@@ -8720,7 +8720,7 @@
 <Multi_key><nobreakspace><n><bar>                                                                  : "⫛" U2ADB # TRANSVERSAL INTERSECTION
 #
 #   Counterintuitively, the negation slash in "⫝̸" U2ADC FORKING (“symbol is
-#   slashed although positive”) is the opposite of the semantics, as opposed to
+#   slashed although positive”) is the opposite of the semantics, and so is
 #   "⫝" U2ADD NONFORKING (“negative symbol- has no slash”).
 #   https://www.unicode.org/L2/L1999/99244.pdf
 #
@@ -8832,6 +8832,10 @@
 <Multi_key><bar><bar><asciitilde>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
 <Multi_key><asciitilde><bar><bar>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
 <Multi_key><bar><asciitilde><bar>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
+<Multi_key><space><3><bar>                                                                         : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><space><KP_3><bar>                                                                      : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><nobreakspace><3><bar>                                                                  : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
+<Multi_key><nobreakspace><KP_3><bar>                                                               : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><space><bar><bar><bar>                                                          <space> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><space><bar><bar><bar>                                                   <nobreakspace> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><nobreakspace><bar><bar><bar>                                                   <space> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
@@ -8856,24 +8860,44 @@
 <Multi_key><space><slash><slash><slash>                                                            : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 <Multi_key><nobreakspace><slash><slash><slash>                                                     : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 #
-#   The LARGE TRIPLE VERTICAL BAR OPERATOR is more spaced out compared to
+#   The LARGE TRIPLE VERTICAL BAR OPERATOR "⫼" U2AFC is more spaced out compared to
 #   "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION. Hence its sequences have an
-#   additional leading space. (The short sequence with leading "3" is used for
-#   "⦀" U2980 TRIPLE VERTICAL BAR DELIMITER.)
+#   additional leading space. (The shortest sequence with leading "3" is used
+#   for "⦀" U2980 TRIPLE VERTICAL BAR DELIMITER, used in pairs and thus more in
+#   need of easy input.)
 #
+<Multi_key><space><space><3><bar>                                                                  : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><space><space><KP_3><bar>                                                               : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><space><3><bar>                                                           : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><space><KP_3><bar>                                                        : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><nobreakspace><3><bar>                                                    : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><nobreakspace><KP_3><bar>                                                 : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
 #Multi_key><space><space><bar><bar><bar>                                                           : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><space><space><bar>                                                                     : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><space><bar>                                                              : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-<Multi_key><nobreakspace><nobreakspace><bar>                                                       : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
-#@
+<Multi_key><space><space><bar><bar>                                                                : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><space><bar><bar>                                                         : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><nobreakspace><nobreakspace><bar><bar>                                                  : "⫼" U2AFC # LARGE TRIPLE VERTICAL BAR OPERATOR
+<Multi_key><2><slash>                                                                      <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><2><slash>                                                               <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><KP_2><slash>                                                                   <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><KP_2><slash>                                                            <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><space><slash><slash>                                                           <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><space><slash><slash>                                                    <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><slash><slash>                                                    <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><slash><slash>                                             <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><space><space><bar>                                                             <space> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><space><space><bar>                                                      <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><space><bar>                                                      <space> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><space><bar>                                               <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><bar>                                               <space> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><bar>                                        <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><i><i>                                                                          <space> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><i><i>                                                                   <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><I><I>                                                                          <space> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-<Multi_key><I><I>                                                                   <nobreakspace> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><space><space><space><bar>                                                              : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><space><space><bar>                                                       : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><space><bar>                                                : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><bar>                                         : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><I><I>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+#@
 #
 #
 # # Miscellaneous Symbols and Arrows in block U2B00 used in mathematics
