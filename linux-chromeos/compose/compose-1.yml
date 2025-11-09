@@ -7427,31 +7427,19 @@
 <Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater>                   <nobreakspace> : "⤏" U290F # RIGHTWARDS TRIPLE DASH ARROW
 <Multi_key><KP_Subtract><KP_0><KP_Subtract><KP_0><KP_Subtract><greater>                    <space> : "⤏" U290F # RIGHTWARDS TRIPLE DASH ARROW
 <Multi_key><KP_Subtract><KP_0><KP_Subtract><KP_0><KP_Subtract><greater>             <nobreakspace> : "⤏" U290F # RIGHTWARDS TRIPLE DASH ARROW
+#
+#   The sequences for "⤐" U2910 without tail as intended per the character name
+#   are completed with a font-dependent tail (DejaVu Serif).
+#
 <Multi_key><minus><0><minus><0><minus><greater><greater>                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><minus><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                         : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><KP_Subtract><KP_0><KP_Subtract><KP_0><KP_Subtract><greater><greater>                   : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-#
-#   The following alternative sequences for "⤐" U2910 account for the tail that
-#   is displayed by some fonts (DejaVu Serif). The full sequences including a
-#   leading space required because of "₀" U2080 skip the first minus for the
-#   stem end next to the tail under the maximum 9 keysyms constraint:
-#
-#       <Multi_key><space><greater><0><minus><0><minus><greater><greater>
-#
-#   But most of this is non-critical and is therefore cropped, so that the stem
-#   next to the tail is readded. Yet the streamlined sequence still stops after
-#   the first gap.
-#   See #   Streamlining
-#
-#   The following commented-out sequence is provided only for reference and is
-#   not actionable, as it exceeds the maximum input of 9 keysyms.
-#
-#Multi_key><space><greater><minus><0><minus><0><minus><greater><greater>                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><space><greater><minus><0>                                                              : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><space><greater><minus><KP_0>                                                           : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><nobreakspace><greater><minus><0>                                                       : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><nobreakspace><greater><minus><KP_0>                                                    : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+#Multi_key><greater><minus><0><minus><0><minus><greater><greater>                                  : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><greater><minus><0>                                                                     : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><greater><minus><KP_0>                                                                  : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><greater><KP_Subtract><KP_0>                                                            : "⤐" U2910 # RIGHTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><period><period><greater>                                                               : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
+<Multi_key><period><period><period><greater>                                                       : "⤑" U2911 # RIGHTWARDS ARROW WITH DOTTED STEM
 <Multi_key><bar><less><exclam>                                                                     : "⤒" U2912 # UPWARDS ARROW TO BAR
 <Multi_key><exclam><greater><bar>                                                                  : "⤓" U2913 # DOWNWARDS ARROW TO BAR
 <Multi_key><greater><minus><bar><greater>                                                  <space> : "⤔" U2914 # RIGHTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
@@ -8897,7 +8885,6 @@
 <Multi_key><nobreakspace><nobreakspace><space><bar>                                                : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><bar>                                         : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><I><I>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-#@
 #
 #
 # # Miscellaneous Symbols and Arrows in block U2B00 used in mathematics
@@ -8914,37 +8901,37 @@
 #   Mirror of U21F6.
 <Multi_key><3><less><minus>                                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><KP_3><less><minus>                                                                     : "⬱" U2B31 # THREE LEFTWARDS ARROWS
-<Multi_key><less><minus><less><minus><less><minus>                                         <space> : "⬱" U2B31 # THREE LEFTWARDS ARROWS
-<Multi_key><less><minus><less><minus><less><minus>                                  <nobreakspace> : "⬱" U2B31 # THREE LEFTWARDS ARROWS
+#Multi_key><less><minus><less><minus><less><minus>                                                 : "⬱" U2B31 # THREE LEFTWARDS ARROWS
+<Multi_key><less><minus><less><minus><less>                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 #   Mirror of U27F4.
-<Multi_key><less><minus><o><plus>                                                          <space> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
-<Multi_key><less><minus><o><plus>                                                   <nobreakspace> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
-<Multi_key><less><minus><O><plus>                                                          <space> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
-<Multi_key><less><minus><O><plus>                                                   <nobreakspace> : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
+<Multi_key><less><minus><o><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
+<Multi_key><less><minus><O><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 #   Mirror of U27FF.
 <Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
-#   Mirrors of U2900, U2901.
+#@
+#   Mirror of U2900.
 <Multi_key><less><less><bar><minus>                                                        <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><bar><minus>                                                 <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                                 <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                          <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+#   Mirror of U2901.
 <Multi_key><less><less><bar><bar><minus>                                                   <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus>                                            <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                            <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                     <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2905.
-<Multi_key><space><less><less><minus><bar>                                                 <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><space><less><less><minus><bar>                                          <nobreakspace> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><nobreakspace><less><less><minus><bar>                                          <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><nobreakspace><less><less><minus><bar>                                   <nobreakspace> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><KP_Subtract>                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><space><less><less><minus><bar>                                                         : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
+<Multi_key><nobreakspace><less><less><minus><bar>                                                  : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 #
-#   The following alternative sequence for U2B37 accounts for the tail found in
-#   some fonts (DejaVu Serif). See U2910.
+#   The sequences for "⬷" U2B37 without tail as intended per the character name
+#   would be completed with a font-dependent tail (DejaVu Serif) if they were
+#   not streamlined.
 #
-<Multi_key><less><less><minus><0><minus><0><less>                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-<Multi_key><less><less><minus><KP_0><KP_Subtract><KP_0><less>                                      : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+#   Mirror of U2910.
+#Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+#Multi_key><less><less><minus><0><minus><0><minus><less>                                           : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><0>                                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
+<Multi_key><less><less><minus><KP_0>                                                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #   Mirror of U2911.
 <Multi_key><less><period><period>                                                                  : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
 #   Mirrors of U2914..U2918.
@@ -8952,8 +8939,7 @@
 <Multi_key><less><minus><bar><minus><less>                                                         : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><bar><bar><minus><less>                                                           : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><minus><bar><bar><minus><less>                                                    : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
-<Multi_key><less><less><minus><less>                                                       <space> : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
-<Multi_key><less><less><minus><less>                                                <nobreakspace> : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
+<Multi_key><less><less><minus><less>                                                               : "⬻" U2B3B # LEFTWARDS TWO-HEADED ARROW WITH TAIL
 <Multi_key><less><less><bar><minus><less>                                                          : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus><less>                                                   : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus><less>                                                     : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
@@ -8964,15 +8950,13 @@
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 #   Mirrors of U2971, U2972, U2975.
-<Multi_key><equal><less><minus>                                                            <space> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
-<Multi_key><equal><less><minus>                                                     <nobreakspace> : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
+<Multi_key><equal><less><minus>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
-<Multi_key><less><minus><asciitilde><asciitilde><backslash>                                <space> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
-<Multi_key><less><minus><asciitilde><asciitilde><backslash>                         <nobreakspace> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><less><minus><asciitilde><asciitilde><backslash>                                        : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 #
 #   Among the three greater-minus-greater: "↣" U21A3, "⥸" U2978, "⭃" U2B43, and
-#   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none stands out enough
-#   to get the most straightforward access.
+#   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to stand out
+#   enough to get the most straightforward access.
 #
 #   Mirror of U2977.
 #Multi_key><space><space><greater><minus><greater>                                                 : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
@@ -8981,6 +8965,8 @@
 <Multi_key><nobreakspace><nobreakspace><greater><minus>                                            : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 #   Mirror of U297A.
 <Multi_key><b><minus><greater>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+#Multi_key><c><backslash><minus><greater>                                                          : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><c><backslash><minus>                                                                   : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><c><minus><greater>                                                                  : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><c><minus>                                                                           : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #
@@ -8989,25 +8975,18 @@
 #   packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 #
-<Multi_key><less><minus><4>                                                                <space> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
-<Multi_key><less><minus><4>                                                         <nobreakspace> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
-<Multi_key><less><minus><KP_4>                                                             <space> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
-<Multi_key><less><minus><KP_4>                                                      <nobreakspace> : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
-<Multi_key><minus><greater><4>                                                             <space> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
-<Multi_key><minus><greater><4>                                                      <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
-<Multi_key><minus><greater><KP_4>                                                          <space> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
-<Multi_key><minus><greater><KP_4>                                                   <nobreakspace> : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
+<Multi_key><less><minus><4>                                                                        : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
+<Multi_key><less><minus><KP_4>                                                                     : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
+<Multi_key><minus><greater><4>                                                                     : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
+<Multi_key><minus><greater><KP_4>                                                                  : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 #Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><asciitilde><backslash><minus>                                                          : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><minus><greater><asciitilde><asciitilde><backslash>                             <space> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
-<Multi_key><minus><greater><asciitilde><asciitilde><backslash>                      <nobreakspace> : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><minus><greater><asciitilde><asciitilde><backslash>                                     : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><asciitilde><less><minus>                                                               : "⭉" U2B49 # TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde>                                           <space> : "⭊" U2B4A # LEFTWARDS ARROW ABOVE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><asciitilde>                                    <nobreakspace> : "⭊" U2B4A # LEFTWARDS ARROW ABOVE ALMOST EQUAL TO
-<Multi_key><less><minus><asciitilde><backslash>                                            <space> : "⭋" U2B4B # LEFTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
-<Multi_key><less><minus><asciitilde><backslash>                                     <nobreakspace> : "⭋" U2B4B # LEFTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
-<Multi_key><minus><greater><asciitilde><backslash>                                         <space> : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
-<Multi_key><minus><greater><asciitilde><backslash>                                  <nobreakspace> : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
+<Multi_key><less><minus><asciitilde><backslash>                                                    : "⭋" U2B4B # LEFTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
+<Multi_key><minus><greater><asciitilde><backslash>                                                 : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
 #
 #
 # # Hebrew presentation form in block FB00 used in mathematics
@@ -9073,12 +9052,17 @@
 #   These are new to Unicode 17.0.
 #   https://www.unicode.org/charts/PDF/Unicode-17.0/U170-1F800.pdf
 #
+#   To separate the two stacked arrows, comma or digit 0 are used alternatively
+#   with the separating semantic based on CSV and discontinuous arrows, unless
+#   the arrowheads are sufficient for the purpose.
+#
 #Multi_key><minus><minus><greater><less><minus><minus>                (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><greater><less>                                                           : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 #Multi_key><minus><minus><minus><greater><less><minus><minus><minus>  (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><minus><greater><less>                                                    : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><grave><grave><minus><minus>                                              : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
-<Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>                                : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+#Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>                                : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+<Multi_key><minus><minus><minus><grave><grave><minus><minus>                                       : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
 <Multi_key><minus><minus><grave><grave><minus>                                             <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
 <Multi_key><minus><minus><grave><grave><minus>                                      <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
 <Multi_key><minus><minus><minus><grave><grave><minus>                                      <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
@@ -9087,23 +9071,29 @@
 #Multi_key><apostrophe><minus><minus><0><minus><apostrophe>           (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 <Multi_key><apostrophe><minus><minus><0>                                                           : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 <Multi_key><apostrophe><minus><minus><KP_0>                                                        : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
-#Multi_key><apostrophe><minus><minus><minus><0><minus><apostrophe>    (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
-<Multi_key><apostrophe><minus><minus><minus>                                                       : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><minus><comma>                                                       : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><minus><0>                                                 : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><minus><KP_0>                                              : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><minus><comma>                                             : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+#Multi_key><apostrophe><minus><minus><minus><0><minus><apostrophe>    (literal removed for syntax color) U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><minus><minus>                                                       : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><minus><minus>                                             : "🣔" U1F8D4 # LONG LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON
 #Multi_key><apostrophe><minus><0><minus><minus><apostrophe>           (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 <Multi_key><apostrophe><minus><0>                                                                  : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 <Multi_key><apostrophe><minus><KP_0>                                                               : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><apostrophe><minus><comma>                                                              : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 #Multi_key><apostrophe><minus><0><minus><minus><minus><apostrophe>    (literal removed for syntax color) U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><0>                                                        : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 <Multi_key><rightsinglequotemark><minus><KP_0>                                                     : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
+<Multi_key><rightsinglequotemark><minus><comma>                                                    : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 #Multi_key><minus><x><minus><greater>                                 (literal removed for syntax color) U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
 <Multi_key><minus><x><minus>                                                                       : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
 #Multi_key><minus><slash><slash><minus><greater>                      (literal removed for syntax color) U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 <Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 #Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 <Multi_key><less><minus><O><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><KP_O><minus>                                                              : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><comma><minus>                                                             : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 #
 #
 # # LaTeX codes
