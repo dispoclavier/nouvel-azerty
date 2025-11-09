@@ -4832,17 +4832,6 @@
 #
 ### Mathematical symbols by multikey
 #
-#   ***************************************************************************
-#   *                                                                         *
-#   *    This section is currently redesigned, and many sequences do not yet  *
-#   *    match the documentation.                                             *
-#   *    See # # Design of math sequences
-#   *                                                                         *
-#   *    Progress is not always linear, but "#@" marks the point up to where  *
-#   *    all sequences have been reviewed.                                    *
-#   *                                                                         *
-#   ***************************************************************************
-#
 #   The General Category "Symbol, other" (So) does not preclude a symbol from
 #   being a math symbol, despite there is the dedicated "Symbol, math" (Sm).
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G134153
@@ -8908,7 +8897,6 @@
 <Multi_key><less><minus><O><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 #   Mirror of U27FF.
 <Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
-#@
 #   Mirror of U2900.
 <Multi_key><less><less><bar><minus>                                                        <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><bar><minus>                                                 <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
@@ -9061,7 +9049,7 @@
 #Multi_key><minus><minus><minus><greater><less><minus><minus><minus>  (literal removed for syntax color) U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><minus><greater><less>                                                    : "🣐" U1F8D0 # LONG RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><grave><grave><minus><minus>                                              : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
-#Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>                                : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
+#Multi_key><minus><minus><minus><grave><grave><minus><minus><minus>   (literal removed for syntax color) U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
 <Multi_key><minus><minus><minus><grave><grave><minus><minus>                                       : "🣑" U1F8D1 # LONG RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON
 <Multi_key><minus><minus><grave><grave><minus>                                             <space> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
 <Multi_key><minus><minus><grave><grave><minus>                                      <nobreakspace> : "🣒" U1F8D2 # LONG RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON
