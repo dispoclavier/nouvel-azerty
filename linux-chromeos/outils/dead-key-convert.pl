@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-11-09T2048+0100
+# 2025-11-10T0511+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -832,20 +832,6 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!turned><!subscript>$/0298/;#<UEFD5><UEFD5><UEFD2>
 	$deadkey =~ s/^<!turned><!turned><!superscript>$/0297/;#<UEFD5><UEFD5><UEFD1>
 
-	# Additional dead key chains (12).
-	$deadkey =~ s/^<!grave><!acute>$/02C5/;#<dead_grave><dead_acute>
-	$deadkey =~ s/^<!macron><!retroflexhook>$/02FD/;#<dead_macron><UEFD4>
-	$deadkey =~ s/^<!macron><!superscript>$/02E5/;#<dead_macron><UEFD1>
-	$deadkey =~ s/^<!retroflexhook><!macron>$/02FE/;#<UEFD4><dead_macron>
-	$deadkey =~ s/^<!superscript><!macron>$/02E6/;#<UEFD1><dead_macron>
-	$deadkey =~ s/^<!invertedbreve><!group><1>$/023C/;#<dead_invertedbreve><UEFD0><1>
-	$deadkey =~ s/^<!turned><!stroke><!turned>$/1D12/;#<UEFD5><dead_stroke><UEFD5>
-	$deadkey =~ s/^<!turned><!diaeresis><!turned>$/00CB/;#<UEFD5><dead_diaeresis><UEFD5>
-	$deadkey =~ s/^<!superscript><!diaeresis><!superscript>$/1D40/;#<UEFD1><dead_diaeresis><UEFD1>
-	$deadkey =~ s/^<!turned><!subscript><!turned>$/02BE/;#<UEFD5><UEFD2><UEFD5>
-	$deadkey =~ s/^<!subscript><!turned><!subscript>$/02CF/;#<UEFD2><UEFD5><UEFD2>
-	$deadkey =~ s/^<!diaeresis><!diaeresis><!diaeresis>$/1E73/;#<dead_diaeresis><dead_diaeresis><dead_diaeresis>
-
 	# Polytonic and monotonic Greek (256).
 	$deadkey =~ s/^<!abovehook><!greek>$/1FBD/;#<UEFD3><dead_greek>
 	$deadkey =~ s/^<!acute><!belowdot><!breve><!greek>$/1F84/;#<dead_acute><dead_belowdot><dead_breve><dead_greek>
@@ -1159,6 +1145,20 @@ sub get_dead_char {
 	$deadkey =~ s/^<!invertedbreve><!circumflex>$/2533/;
 	$deadkey =~ s/^<!invertedbreve><!grave><!belowdot>$/2534/;
 	$deadkey =~ s/^<!invertedbreve><!grave>$/2535/;
+
+	# Additional dead key chains (12).
+	$deadkey =~ s/^<!grave><!acute>$/02C5/;#<dead_grave><dead_acute>
+	$deadkey =~ s/^<!macron><!retroflexhook>$/02FD/;#<dead_macron><UEFD4>
+	$deadkey =~ s/^<!macron><!superscript>$/02E5/;#<dead_macron><UEFD1>
+	$deadkey =~ s/^<!retroflexhook><!macron>$/02FE/;#<UEFD4><dead_macron>
+	$deadkey =~ s/^<!superscript><!macron>$/02E6/;#<UEFD1><dead_macron>
+	$deadkey =~ s/^<!invertedbreve><!group><1>$/023C/;#<dead_invertedbreve><UEFD0><1>
+	$deadkey =~ s/^<!turned><!stroke><!turned>$/1D12/;#<UEFD5><dead_stroke><UEFD5>
+	$deadkey =~ s/^<!turned><!diaeresis><!turned>$/00CB/;#<UEFD5><dead_diaeresis><UEFD5>
+	$deadkey =~ s/^<!superscript><!diaeresis><!superscript>$/1D40/;#<UEFD1><dead_diaeresis><UEFD1>
+	$deadkey =~ s/^<!turned><!subscript><!turned>$/02BE/;#<UEFD5><UEFD2><UEFD5>
+	$deadkey =~ s/^<!subscript><!turned><!subscript>$/02CF/;#<UEFD2><UEFD5><UEFD2>
+	$deadkey =~ s/^<!diaeresis><!diaeresis><!diaeresis>$/1E73/;#<dead_diaeresis><dead_diaeresis><dead_diaeresis>
 
 	# When adding dead key chains, please make sure to add them in @chained, too.
 
@@ -1745,7 +1745,7 @@ my @chained = (
 	'<!turned><!turned><!subscript>',
 	'<!turned><!turned><!superscript>',
 
-	# Polytonic and monotonic Greek (256).
+	# Greek, 256.
 	'<!abovehook><!greek>',
 	'<!acute><!belowdot><!breve><!greek>',
 	'<!acute><!belowdot><!greek>',
@@ -2003,7 +2003,7 @@ my @chained = (
 	'<!invertedbreve><!greek><!grave><!belowdot>',
 	'<!macron><!greek>',
 
-	# Latin dead key chains for Greek (54).
+	# Latin for Greek, 54.
 	'<!acute><!belowdot><!breve>',
 	'<!acute><!belowdot>',
 	'<!acute><!belowdot><!invertedbreve>',
@@ -2068,10 +2068,11 @@ foreach my $deadkey ( @chained ) {
 	$input    =~ s/<(.+)>/$1/;
 	$input    = dekeysym( $input );
 	print OUTPUT $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) .
-	"*/ DEADTRANS( " . format_char( $input ) . "\t," . format_char( $deadchar ) .
-	"\t," . format_char( get_dead_char( $deadkey ) ) . "\t,0x0001), // Dead key chain.\n";
+				"*/ DEADTRANS( " . format_char( $input ) . "\t," . format_char( $deadchar ) .
+				"\t," . format_char( get_dead_char( $deadkey ) ) . "\t,0x0001), // Dead key chain.\n";
 }
 
+# Processes the source.
 while ( my $line = <INPUT> ) {
 	if ( $line =~ /START_GREEK/ ) {
 
