@@ -4717,6 +4717,11 @@
 #   dead key based quotation mark input method.
 #   See # # Quotation mark input method
 #
+#   However, as these conflicts only affect multikey equivalents, the dead key
+#   part is able to meet widespread user expectations by supporting double
+#   acute on double press of dead_acute.
+#   See #^# DOUBLE_ACUTE
+#
 #   The DOUBLE_ACUTE dead key is also required for consistency with the symbols
 #   mapped at level 3, and with the new-school multikey scheme mapping dead
 #   keys and ASCII symbols except ampersand and question mark bijectively.
@@ -4732,11 +4737,17 @@
 #   Double acute has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Double_Acute_Accent
 #
+#
+#   Circled numbers
+#
 #   With digits, dead_doubleacute acts as a shortcut for double circled numbers
 #   with “double” mnemonic. Double arrows have their mnemonic redundancy on
 #   *dead_flag.
 #   See #^# DOUBLE_CIRCLED
 #   See #*# FLAG
+#
+#
+#   Emoji
 #
 #   Double acute is chained with reversed for an emoji dead key that is located
 #   after the symbol groups due to a file size restriction.
@@ -7431,6 +7442,35 @@
 #
 <dead_acute><dead_grave><dead_acute>                                                               : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <Multi_key><apostrophe><grave><apostrophe>                                                         : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+#
+#
+#^# DOUBLE_ACUTE
+#   dead_acute double press
+#   Multi_key: none
+#
+#   This virtual dead key is designed to meet widespread user expectations on a
+#   dead key only basis, without supporting any multikey equivalent, that would
+#   conflict with the right single quotation mark rightsinglequotemark as part
+#   of the dead key based quotation mark input method.
+#   See # # Quotation mark input method
+#   See #*# DOUBLE_ACUTE
+#
+<dead_acute><dead_acute>                                                                   <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+#   Multikey conflicts with "’" U2019.                                                     <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+<dead_acute><dead_acute>                                                                   <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+#   Multikey conflicts with "’" U2019.                                                     <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+<dead_acute><dead_acute>                                                            <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
+#   Multikey conflicts with "’" U2019.                                              <nobreakspace> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<dead_acute><dead_acute>                                                                   <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
+#   Multikey conflicts with "’" U2019.                                                     <U202F> : "˝" U02DD # DOUBLE ACUTE ACCENT
+<dead_acute><dead_acute>                                                                       <O> : "Ő" U0150 # LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
+#   Multikey conflicts with "’" U2019.                                                         <O> : "Ő" U0150 # LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
+<dead_acute><dead_acute>                                                                       <o> : "ő" U0151 # LATIN SMALL LETTER O WITH DOUBLE ACUTE
+#   Multikey conflicts with "’" U2019.                                                         <o> : "ő" U0151 # LATIN SMALL LETTER O WITH DOUBLE ACUTE
+<dead_acute><dead_acute>                                                                       <U> : "Ű" U0170 # LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
+#   Multikey conflicts with "’" U2019.                                                         <U> : "Ű" U0170 # LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
+<dead_acute><dead_acute>                                                                       <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
+#   Multikey conflicts with "’" U2019.                                                         <u> : "ű" U0171 # LATIN SMALL LETTER U WITH DOUBLE ACUTE
 #
 #
 #*# HOOK
