@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Upgrade to 6.1.2.1                       6.1.2.1.0 Mon 2025-11-10T0515+0100
 * Upgrade to 6.1.2.0                       6.1.2.0.3 Sun 2025-11-09T2047+0100
 * Add all dead key data as of 6.1.1 here   6.1.2.0.2 Thu 2025-10-30T0103+0100
 * Move dead key data as of 6.1.0.2 here    6.1.2.0.1 Thu 2025-10-30T0054+0100
@@ -2534,6 +2535,7 @@
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( 0x202F	,0x1E19	,0xA788	,0x0000	), // ' ' ➔ "ꞈ" MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( L' '	,0x1E19	,0x032D	,0x0000	), // ' ' ➔ "̭" COMBINING CIRCUMFLEX ACCENT BELOW
 /*<!circumflex><!circumflex><!circumflex>                          */ DEADTRANS( 0x200B	,0x1E19	,0x032D	,0x0000	), // '​' ➔ "̭" COMBINING CIRCUMFLEX ACCENT BELOW
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'|'	,0x01CD	,0x2E37	,0x0000	), // '|' ➔ "⸷" DAGGER WITH RIGHT GUARD
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'0'	,0x01CD	,0x2080	,0x0000	), // '0' ➔ "₀" SUBSCRIPT ZERO
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'1'	,0x01CD	,0x2081	,0x0000	), // '1' ➔ "₁" SUBSCRIPT ONE
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'2'	,0x01CD	,0x2082	,0x0000	), // '2' ➔ "₂" SUBSCRIPT TWO
@@ -2575,6 +2577,8 @@
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L't'	,0x01CD	,0x0165	,0x0000	), // 't' ➔ "ť" LATIN SMALL LETTER T WITH CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'U'	,0x01CD	,0x01D3	,0x0000	), // 'U' ➔ "Ǔ" LATIN CAPITAL LETTER U WITH CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'u'	,0x01CD	,0x01D4	,0x0000	), // 'u' ➔ "ǔ" LATIN SMALL LETTER U WITH CARON
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'W'	,0x01CD	,0x1ACF	,0x0000	), // 'W' ➔ "᫏" COMBINING DOUBLE CARON
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'w'	,0x01CD	,0x1ACF	,0x0000	), // 'w' ➔ "᫏" COMBINING DOUBLE CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'Z'	,0x01CD	,0x017D	,0x0000	), // 'Z' ➔ "Ž" LATIN CAPITAL LETTER Z WITH CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'z'	,0x01CD	,0x017E	,0x0000	), // 'z' ➔ "ž" LATIN SMALL LETTER Z WITH CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( 0x00A0	,0x01CD	,0x02C7	,0x0000	), // ' ' ➔ "ˇ" CARON
