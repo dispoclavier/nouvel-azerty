@@ -6,8 +6,8 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.1.1
-    Version et nᵒ de build : 6.1.1.0
+                   Version : 6.1.2
+    Version et nᵒ de build : 6.1.2.1
                       Date : 2025-10-29T0821+0100
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
@@ -25,17 +25,17 @@ Pour essayer ce nouvel AZERTY, un seul jeu de pilotes suffit, mais pour une util
 
 ## Dossiers et fichiers
 
-* Ce nouvel AZERTY se trouve dans le dossier « installer », dans les sous-dossiers « kbfrFRs1-6.1.1.0 » et « kbfrFRs2-6.1.1.0 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
+* Ce nouvel AZERTY se trouve dans le dossier « installer », dans les sous-dossiers « kbfrFRs1-6.1.2.1 » et « kbfrFRs2-6.1.2.1 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
 
 * Dans le dossier « installer », le sous-dossier « Variantes » contient le reste de la gamme disponible sous Windows :
 
-  * Le dossier « kbbrFRs1-6.1.1.0 » qui contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
+  * Le dossier « kbbrFRs1-6.1.2.1 » qui contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
 
-  * Le dossier « kbfrPFs1-6.1.1.0 » qui contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
+  * Le dossier « kbfrPFs1-6.1.2.1 » qui contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
 
-  * Le dossier « kbfrAFs1-6.1.1.0 » qui contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
+  * Le dossier « kbfrAFs1-6.1.2.1 » qui contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
 
-  * Le dossier « kbfrFRr1-6.1.1.0 » qui contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+  * Le dossier « kbfrFRr1-6.1.2.1 » qui contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
 * Dans le dossier « redispositions » se trouvent des fichiers d’inscription au Registre avec leur mode d’emploi « _Scancode_Map.pdf », fourni aussi comme fichier texte au format Markdown « _Scancode_Map.md » pour faciliter l’utilisation. Ces fichiers peuvent être utilisés pour mettre en place des redispositions similaires aux sous-variantes sous Linux.
 
@@ -166,7 +166,7 @@ Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on
 
 * Les touches vives émettant plusieurs unités de code (et quelques-unes qui en émettent une seule) sont personnalisables dans le tableau static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] réparti sur les sources *.C, kbligazerty.c et kbligatures.c.
 
-* Les touches mortes, toutes incapables d’émettre plusieurs unités de code, sont personnalisables dans la source kbdeadtrans.c dans le tableau static ALLOC_SECTION_LDATA DEADKEY aDeadKey[], avec les entrées modifiées placées avant les entrées d’origine.
+* Les touches mortes, toutes incapables d’émettre plusieurs unités de code, sont personnalisables dans la source kbdeadtrans.c dans le tableau static ALLOC_SECTION_LDATA DEADKEY aDeadKey[], avec les entrées modifiées placées avant la directive d’inclusion #include "kbdeadtrans-deadkeys.c".
 
 Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le titre « Installer » :
 
@@ -180,7 +180,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 4. Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre « Récemment ajoutées ».
 
-5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.1.1.zip).
+5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.1.2.zip).
 
 6. Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
@@ -194,7 +194,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 Contrairement à la licence de Windows, la licence du MSKLC n’interdit pas l’utilisation des composants, que Microsoft fournit intentionnellement au détail, sans les envelopper dans un exécutable monolithique.
 
-Pour compiler, il faut mettre la source *.C en lecture seule, et veiller à ce que la source d’en-tête commune kbcommon.H soit aussi présente à côté, ainsi que les sources kbazerty.h, kbcommon.c, kbcomazerty.c, kbdeadtrans.c, kbligatures.c, kbligazerty.c (pour une disposition AZERTY).
+Pour compiler, il faut mettre la source *.C en lecture seule, et veiller à ce que tous les partiels soient présente à côté, comme kbazerty.h, kbcommon.c, kbcomazerty.c, kbdeadtrans.c, kbdeadtrans-deadkeys.c, kbligatures.c, kbligazerty.c (pour une disposition AZERTY).
 
 Dans une invite de commande ouverte dans le dossier de ces sources, la commande pour le pilote amd64 est :
 
