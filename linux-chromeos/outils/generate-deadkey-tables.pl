@@ -8,7 +8,7 @@
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
 # 2025-10-29T0554+0100
-# 2025-11-11T0617+0100
+# 2025-11-11T1513+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -130,7 +130,9 @@ my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$sta
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( @anchors, $anchor, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str, $test, $text, $tooltip, $ucodes );
+my ( @anchors, $anchor, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str, $test, $text, $tooltip, $ucodes, $winspe );
+my $highsu = 'Uniquement pour Windows';
+my $nowin  = 'Ne fonctionne pas sous Windows';
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
@@ -223,8 +225,10 @@ while ( my $line = <INPUT> ) {
 				if ( $line =~ /^#@/ ) {
 					$line  =~ s/^#@//;
 					$class = 'winspe';
+					$winspe = 'Uniquement sous Windows';
 				} else {
 					$class = 'common';
+					$winspe = '';
 				}
 
 				# Starting from here, this should be in sync with generate-multikey-tables.pl.
@@ -545,17 +549,17 @@ while ( my $line = <INPUT> ) {
 				}
 
 				# High surrogates.
-				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "surrogat_haut_(U\+D[8-9A-B][0-9A-F]{2})" # (.+)/<tr><td title="Surrogat haut $2 (pour Windows)"><\/td><td title="$3">$2<\/td><td title="$highsu">$1<\/td><td>$3<\/td><\/tr>/;
 
 				# Composed characters.
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td title="$nowin">$1<\/td><td>$3<\/td><\/tr>/;
 
 				# Combining characters.
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td title="$winspe">$1<\/td><td>$4<\/td><\/tr>/;
 
 				# All other characters.
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4$math<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td title="$winspe">$1<\/td><td>$4$math<\/td><\/tr>/;
 
 				print OUTPUT $line;
 				if ( $comprehensive ) {
