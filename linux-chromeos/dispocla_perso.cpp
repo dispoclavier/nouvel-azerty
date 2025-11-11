@@ -1,4 +1,4 @@
-//                      Date : 2025-11-07T0710+0100
+//                      Date : 2025-11-11T1337+0100
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -93,18 +93,19 @@
 // en mode ASCII peut être redisposée, car le verrouillage en mode ASCII est en
 // Majuscule, en AltGr et en AltFr sur la touche de verrouillage des capitales.
 //
+// L’essentiel pour commencer est de rétablir les raccourcis clavier de cette
+// touche, où l’US-QWERTY a le grave (et aussi l’asciitilde en Majuscule).
+//
+// On peut prendre le type de touche qui a le raccourci clavier au niveau 8,
+// puis disposer les autres niveaux en mode français [Group1] et en mode ASCII.
+//
 //	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 //	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 //	key <TLDE> {
 //		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 //		[            asterisk,                  mu,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               grave ],
-//		[            asterisk,                  mu,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               grave ]
+//		[              dollar,            sterling,            currency,            NoSymbol,            NoSymbol,            NoSymbol,            NoSymbol,               grave ]
 //	};
-//
-// L’essentiel pour commencer est de rétablir les raccourcis clavier de cette
-// touche, où l’US-QWERTY a le grave (et aussi l’asciitilde en Majuscule). On
-// peut prendre le type de touche qui a le raccourci clavier au niveau 8, puis
-// disposer les autres niveaux à volonté, en mode français et en mode ASCII.
 //
 
 default partial alphanumeric_keys keypad_keys
