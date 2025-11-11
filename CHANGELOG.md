@@ -26,11 +26,13 @@ Transpilation pour Windows des séquences de composition.
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
 * Transformations :
-	* Accent aigu > double accent aigu : Redonder "Ő" U+0150, "ő" U+0151, "Ű" U+0170, "ű" U+0171, "˝" U+02DD, "̋" U+030B sans équivalents en composition. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), [66945f1](https://github.com/dispoclavier/nouvel-azerty/commit/66945f1726bd099ddc08fa578c7dbe9e156bf779)
+	* Prendre en charge des séquences spécifiques à Windows pour compenser l’implémentation défectueuse des touches mortes sous Windows. compose-1.yml [a7e6584](https://github.com/dispoclavier/nouvel-azerty/commit/a7e6584e0493feee47139f042e5f17e44dfcbe63), dead-key-convert.pl, generate-deadkey-tables.pl [aeafec7](https://github.com/dispoclavier/nouvel-azerty/commit/aeafec7385c71c5cb34a79f1b95b05cdff270e75)
+	* Accent aigu > double accent aigu : Redonder "Ő" U+0150, "ő" U+0151, "Ű" U+0170, "ű" U+0171, "˝" U+02DD, "̋" U+030B sans équivalents en composition. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), [66945f1](https://github.com/dispoclavier/nouvel-azerty/commit/66945f1726bd099ddc08fa578c7dbe9e156bf779), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
+* Personnalisation : Sous Linux : Corriger l’exemple 2. dispocla_perso.cpp [36511cc](https://github.com/dispoclavier/nouvel-azerty/commit/36511cc402a584a575e2ae85956aaed37cb0c85c)
 * Documentation :
 	* Corriger "Multi_key:" en "Multikey:" pour l’accorder avec le reste des annotations. compose-1.yml [37d4607](https://github.com/dispoclavier/nouvel-azerty/commit/37d46075872d0a02987523d0311e13e53c05339e)
 	* Mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b6e63c6](https://github.com/dispoclavier/nouvel-azerty/commit/b6e63c612d7a08362f84f332145836c3d3beabdc)
-	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81)
+	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
 
 ## 6.1.2 (2025-11-10)
 
