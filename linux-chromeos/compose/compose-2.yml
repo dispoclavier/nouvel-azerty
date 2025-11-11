@@ -1756,7 +1756,7 @@
 #
 #*# SUPERSCRIPT
 #   *dead_superscript UEFD1
-#   Multi_key: ¦^
+#   Multikey: ¦^
 #
 #   In Unicode CLDR, French has ordinal indicators ᵈ, ᵉ, ʳ, ˢ since v34 (2018).
 #   https://github.com/unicode-org/cldr/blob/release-34/common/main/fr.xml#L1421
@@ -3664,7 +3664,7 @@
 #
 #^# COMBINING_ABOVE
 #   *dead_superscript double press
-#   Multi_key: ¦^^
+#   Multikey: ¦^^
 #
 #   This is required for the many letter-shaped diacritics that can be placed
 #   above Latin letters.
@@ -3999,7 +3999,7 @@
 #*# TURNED
 #   turned, sideways
 #   *dead_turned UEFD5
-#   Multi_key: ¦%
+#   Multikey: ¦%
 #
 #   The rotation angle may be 180° as for TURNED, or 90° as for SIDEWAYS.
 #
@@ -4500,7 +4500,7 @@
 #^# INVERTED
 #   inverted, sideways, more turned
 #   *dead_turned double press
-#   Multi_key: ¦%%
+#   Multikey: ¦%%
 #
 #   This supports the full set of those among the Old Lisu letters that can be
 #   used for writing in turned Latin letters, except "ꓞ" UA4DE, that is in the
@@ -4710,7 +4710,7 @@
 #
 #*# DOUBLE_ACUTE
 #   dead_doubleacute
-#   Multi_key: ¦"
+#   Multikey: ¦"
 #
 #   This dead key, dedicated to what could be virtualized by dead_acute double
 #   press, and supported by XKB, is required to prevent conflicts due to the
@@ -4861,7 +4861,7 @@
 #
 #*# REVERSED
 #   *dead_reversed UEFD6
-#   Multi_key: ¦\
+#   Multikey: ¦\
 #
 #   "Ǝ" U018E LATIN CAPITAL LETTER REVERSED E, "ɘ" U0258 LATIN SMALL LETTER
 #   REVERSED E is no casing pair. The small letter has no capital letter, while
@@ -5206,7 +5206,7 @@
 #
 #*# TILDE
 #   dead_tilde
-#   Multi_key: ¦~
+#   Multikey: ¦~
 #
 #   Lithuanian requires a hard dot on i and j. The sequences with dot above are
 #   a workaround, since the hard dot on i and j is a feature of Lithuanian, and
@@ -5729,7 +5729,7 @@
 #   middle tilde, tilde below
 #   dead_belowtilde
 #   dead_tilde double press
-#   Multi_key: ¦~~
+#   Multikey: ¦~~
 #
 #   This dead key results from the merger of tilde below and middle tilde. But
 #   given that middle tilde with 14 letters (casing counted twice, "ɵ" U0275
@@ -5853,7 +5853,7 @@
 #
 #^# DOUBLE_MIDDLE_TILDE
 #   dead_tilde triple press
-#   Multi_key: ¦~~~
+#   Multikey: ¦~~~
 #
 <dead_tilde><dead_tilde><dead_tilde>                                                       <space> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <space> : "̴" U0334 # COMBINING TILDE OVERLAY
@@ -5870,7 +5870,7 @@
 #*# GREEK_OR_CIRCLED
 #   Greek letter, circled
 #   dead_greek
-#   Multi_key: ¦@
+#   Multikey: ¦@
 #
 #   The Greek letter dead key is present on several layouts and supported by
 #   XKB thanks to the French ergonomic BÉPO keyboard layout.
@@ -6182,7 +6182,7 @@
 #
 # # CIRCLED_TEEN
 #   dead_greek quotedbl
-#   Multi_key: ¦@"
+#   Multikey: ¦@"
 #
 #   This only supports "⑪" U246A.."⑳" U2473, as circled digits from 0 through 9
 #   as well as circled number 10 are supported in dead_greek single press, and
@@ -6285,7 +6285,7 @@
 #
 # # CIRCLED_NEGATIVE
 #   dead_greek backslash
-#   Multi_key: ¦@\
+#   Multikey: ¦@\
 #
 #   The leading backslash (on D04) is in synergy with the level-3 position of
 #   this dead key on D06. Mnemonically, the percent sign would be a better fit,
@@ -6448,7 +6448,7 @@
 #
 #
 # # CIRCLED_NEGATIVE_TEEN
-#   Multi_key: ¦@\"
+#   Multikey: ¦@\"
 #
 #   This uses the level-3 graphic on key D03 next to the backslash on D04, with
 #   mnemonics based on the key’s letter "E", for a streamlined user experience.
@@ -6618,7 +6618,7 @@
 #
 # # CIRCLED_SANS
 #   dead_greek asciitilde
-#   Multi_key: ¦@~
+#   Multikey: ¦@~
 #
 #   The leading asciitilde (on D05) is in synergy with the level-3 position of
 #   this dead key on D06.
@@ -6672,7 +6672,7 @@
 #
 # # CIRCLED_NEGATIVE_SANS
 #   dead_greek backslash asciitilde
-#   Multi_key: ¦@\~
+#   Multikey: ¦@\~
 #
 #   See comment on # # CIRCLED_NEGATIVE
 #
@@ -6767,7 +6767,7 @@
 #
 # # SQUARED
 #   dead_greek bracketleft
-#   Multi_key: ¦@[
+#   Multikey: ¦@[
 #
 #   Unlike squared digit emoji, squared letter dingbats are separately encoded.
 #   These sequences are based on convenience and shape-based mnemonic. These
@@ -6939,7 +6939,7 @@
 #^# CIRCLED
 #   circled, double-circled
 #   dead_greek double press
-#   Multi_key: ¦@@
+#   Multikey: ¦@@
 #
 #   This scheme supports double-circled numbers, available from 1 through 10,
 #   since single-circled numbers are supported in dead_greek single press.
@@ -7152,7 +7152,7 @@
 #
 #*# ACUTE
 #   dead_acute
-#   Multi_key: ¦'
+#   Multikey: ¦'
 #
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_acute yields high curly quotation marks U201D, U2019 (closing or
@@ -7446,7 +7446,7 @@
 #
 #^# DOUBLE_ACUTE
 #   dead_acute double press
-#   Multi_key: none
+#   Multikey: none
 #
 #   This virtual dead key is designed to meet widespread user expectations on a
 #   dead key only basis, without supporting any multikey equivalent, that would
@@ -7476,7 +7476,7 @@
 #*# HOOK
 #   hook, fishhook, crook
 #   dead_hook
-#   Multi_key: ¦{
+#   Multikey: ¦{
 #
 #   A hook may also be referred to as a shepherd’s staff or crook, that other
 #   languages may name this diacritic after. French calls it "crosse" and thus
@@ -7663,7 +7663,7 @@
 #^# CURL
 #   curl, loop, crossed tail, squirrel tail
 #   dead_hook double press
-#   Multi_key: ¦{{
+#   Multikey: ¦{{
 #
 #   As a diacritic, the double ring is used, as coming closest to a curl below.
 #   Since the combining double ring below has no spacing clone nor any modifier
@@ -7873,7 +7873,7 @@
 #^# FLOURISH
 #   flourish, hook tail, mid-height left hook
 #   dead_hook triple press
-#   Multi_key: ¦{{{
+#   Multikey: ¦{{{
 #
 #   As a diacritic, the double ring is used, as coming closest to a flourish.
 #   Since the combining double ring below has no spacing clone nor any modifier
@@ -7921,7 +7921,7 @@
 #*# RETROFLEX_HOOK
 #   retroflex hook, right hook, hook tail, tail, squirrel tail
 #   *dead_retroflexhook UEFD4
-#   Multi_key: ¦}
+#   Multikey: ¦}
 #
 #   A retroflex hook may be referred to as a right hook, and based on animal
 #   anatomy, as a tail or a hook tail.
@@ -8258,7 +8258,7 @@
 #
 #^# PALATAL_HOOK
 #   *dead_retroflexhook double press
-#   Multi_key: ¦}}
+#   Multikey: ¦}}
 #
 #   By lack of anything more to the point, the spacing modifier slot is
 #   populated with "˽" U02FD MODIFIER LETTER SHELF.
@@ -8404,7 +8404,7 @@
 #
 #^# SWASH_TAIL
 #   *dead_retroflexhook triple press
-#   Multi_key: ¦}}}
+#   Multikey: ¦}}}
 #
 #   By lack of anything more appropriate, the double breve below is provided as
 #   a diacritic, and the undertie as a spacing clone thereof, although this is
@@ -8431,7 +8431,7 @@
 #*# DOT_ABOVE
 #   dot above, middle dot, dotless
 #   dead_abovedot
-#   Multi_key: ¦.
+#   Multikey: ¦.
 #
 #   For L and l, dead_abovedot results in WITH MIDDLE DOT.
 #
@@ -8810,7 +8810,7 @@
 #^# VERTICAL_LINE_ABOVE
 #   dead_aboveverticalline
 #   dead_abovedot double press
-#   Multi_key: ¦..
+#   Multikey: ¦..
 #
 <dead_abovedot><dead_abovedot>                                                             <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <Multi_key><period><period>                                                                <space> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
@@ -8944,7 +8944,7 @@
 #*# GROUP_1
 #   group dead key
 #   *dead_group UEFD0
-#   Multi_key: ¦#
+#   Multikey: ¦#
 #
 #   The group activated by a single dead key press is group 1, not group 2 nor
 #   “secondary group”, as the base layout is numbered group 0, not “primary
@@ -9331,7 +9331,7 @@
 #
 #^# GROUP_2
 #   *dead_group double press
-#   Multi_key: ¦##
+#   Multikey: ¦##
 #
 # # Long dashes
 #
@@ -9395,8 +9395,8 @@
 #
 #^# GROUP_3
 #   *dead_group triple press
-#   Multi_key: ¦###
-#   Multi_key: ¦#3
+#   Multikey: ¦###
+#   Multikey: ¦#3
 #
 # # Long dashes
 #
@@ -9508,8 +9508,8 @@
 #
 #^# GROUP_4
 #   *dead_group quadruple press
-#   Multi_key: ¦####
-#   Multi_key: ¦#4
+#   Multikey: ¦####
+#   Multikey: ¦#4
 #
 # # Arrow emoji
 #
@@ -9601,7 +9601,7 @@
 #
 #
 #^# GROUP_5
-#   Multi_key: ¦#5
+#   Multikey: ¦#5
 #
 # # Black or filled arrows
 #
@@ -9651,7 +9651,7 @@
 #
 #
 #^# GROUP_6
-#   Multi_key: ¦#6
+#   Multikey: ¦#6
 #
 # # White or empty, outline arrows
 #
@@ -9701,7 +9701,7 @@
 #
 #
 #^# GROUP_7
-#   Multi_key: ¦#7
+#   Multikey: ¦#7
 #
 # # Triangle-headed arrows
 #
@@ -9751,13 +9751,13 @@
 #
 #
 #^# GROUP_8
-#   Multi_key: ¦#8
+#   Multikey: ¦#8
 #
 #   Used for double-struck mathematical digit symbols U1D7D8..U1D7E1.
 #
 #
 #^# GROUP_9
-#   Multi_key: ¦#9
+#   Multikey: ¦#9
 #
 # # Triangle-headed arrows to bar
 #
@@ -9804,13 +9804,13 @@
 #
 #
 #^# GROUP_10
-#   Multi_key: ¦#0
+#   Multikey: ¦#0
 #
 #   Group 10 is used for sans-serif mathematical digit symbols U1D7E2..U1D7EB.
 #
 #
 #^# GROUP_11
-#   Multi_key: ¦#11
+#   Multikey: ¦#11
 #
 # # Wide-headed light barb arrows
 #
@@ -9857,7 +9857,7 @@
 #
 #
 #^# GROUP_12
-#   Multi_key: ¦#12
+#   Multikey: ¦#12
 #
 # # Wide-headed very heavy barb arrows
 #
@@ -9905,7 +9905,7 @@
 #
 #*# CURRENCY
 #   dead_currency
-#   Multi_key: ¦$
+#   Multikey: ¦$
 #
 #   This is 100% sideways compatible with en_US.UTF-8/Compose, except for the
 #   double press, used to activate the CURRENCY_EXTENDED dead key, rather than
@@ -10126,7 +10126,7 @@
 #
 #^# CURRENCY_EXTENDED
 #   dead_currency double press
-#   Multi_key: ¦$$
+#   Multikey: ¦$$
 #
 <dead_currency><dead_currency>                                                             <space> : "¤" U00A4 # CURRENCY SIGN
 <Multi_key><dollar><dollar>                                                                <space> : "¤" U00A4 # CURRENCY SIGN
@@ -10180,7 +10180,7 @@
 #
 #*# INVERTED_BREVE
 #   dead_invertedbreve
-#   Multi_key: ¦(
+#   Multikey: ¦(
 #
 #   Both breve and inverted breve have their own dead key, for consistency with
 #   the ASCII symbol map used for dead key multikey equivalents.
@@ -10332,7 +10332,7 @@
 #
 #^# INVERTED_BREVE_BELOW
 #   dead_invertedbreve double press
-#   Multi_key: ¦((
+#   Multikey: ¦((
 #
 #   For consistency with breve below by dead_breve double press.
 #   See #^# BREVE_BELOW
@@ -10363,7 +10363,7 @@
 #
 #*# BREVE
 #   dead_breve
-#   Multi_key: ¦)
+#   Multikey: ¦)
 #
 #   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to
 #   unconflicting and case insensitive "C", with its left equivalent
@@ -10525,7 +10525,7 @@
 #   breve below, belt
 #   dead_belowbreve
 #   dead_breve double press
-#   Multi_key: ¦))
+#   Multikey: ¦))
 #
 #   The rationale for merging the BELT dead key with the BREVE dead key is
 #   similarity in shape. But in practice, BELT cannot be merged with BREVE,
@@ -10608,7 +10608,7 @@
 #
 #*# BAR
 #   *dead_bar UEFD8
-#   Multi_key: ¦-
+#   Multikey: ¦-
 #
 #   In X11 XKB, the diacritic called “stroke” had an ambiguous shape, until the
 #   horizontal stroke and the oblique stroke were distinguished, by introducing
@@ -10831,7 +10831,7 @@
 #^# DOUBLE_BAR
 #   double bar, long bar, barred descender, short bar overlay
 #   *dead_bar double press
-#   Multi_key: ¦--
+#   Multikey: ¦--
 #
 #   The eponymous letter of this virtual dead key is "Ⱡ" U2C60 LATIN CAPITAL
 #   LETTER L WITH DOUBLE BAR, "ⱡ" U2C61 LATIN SMALL LETTER L WITH DOUBLE BAR.
@@ -10956,7 +10956,7 @@
 #
 #^# HIGH_BAR
 #   *dead_bar triple press
-#   Multi_key: ¦---
+#   Multikey: ¦---
 #
 #   This dead key is required to have an intuitive input method for "Ꝉ" UA748,
 #   "ꝉ" UA749, that adds to "Ƚ" U023D, "ƚ" U019A on #dead_bar single press, and
@@ -11040,7 +11040,7 @@
 #*# HORN
 #   horn, notch, descender
 #   dead_horn
-#   Multi_key: ¦+
+#   Multikey: ¦+
 #
 #   As HORN has no reported usage outside Unicode precomposed letters, and the
 #   precomposed letters with horn alone come in two pairs only, dead_horn is
@@ -11354,7 +11354,7 @@
 #
 #^# CIRCUMFLEX_BELOW input facility by HORN
 #   dead_horn double press
-#   Multi_key: ¦++
+#   Multikey: ¦++
 #
 #   For convenience, an alternative input method is provided for the circumflex
 #   below, since dead_circumflex double press is used as a facility for hatchek
@@ -11368,7 +11368,7 @@
 #*# SUBSCRIPT
 #   subscript, small cap
 #   *dead_subscript UEFD2
-#   Multi_key: ¦_
+#   Multikey: ¦_
 #
 #   Unlike superscript letters, used as abbreviation indicators in French and
 #   other Latin-script-using languages, subscripts do not seem to be used in
@@ -11790,7 +11790,7 @@
 #
 #^# COMBINING_BELOW
 #   *dead_subscript double press
-#   Multi_key: ¦__
+#   Multikey: ¦__
 #
 #   This subscript equivalent of the combining above dead key is required since
 #   "᷊" U1DCA COMBINING LATIN SMALL LETTER R BELOW and other diacritics need to
@@ -11892,7 +11892,7 @@
 #
 #*# OGONEK
 #   dead_ogonek
-#   Multi_key: ¦[
+#   Multikey: ¦[
 #
 #   This supports the keycap diacritic  "⃣" U20E3 with *dead_abovehook UEFD3 as
 #   a base character, and a mnemonic based on the brackets pair. The multikey
@@ -12071,7 +12071,7 @@
 #
 #*# HOOK_ABOVE
 #   *dead_abovehook UEFD3
-#   Multi_key: ¦]
+#   Multikey: ¦]
 #
 #   This supports the keycap diacritic  "⃣" U20E3 with dead_ogonek as a base
 #   character, and a mnemonic based on the brackets pair. The multikey
@@ -12169,7 +12169,7 @@
 #
 #^# GLOTTAL
 #   *dead_abovehook UEFD3 double press
-#   Multi_key: ¦]]
+#   Multikey: ¦]]
 #
 #   As the glottal letters new to Unicode v12 are diacriticized with a spiritus
 #   lenis, Greek psili, they are here in a dedicated virtual dead key, based on
@@ -12209,7 +12209,7 @@
 #*# MACRON
 #   macron, long leg, topbar
 #   dead_macron
-#   Multi_key: ¦|
+#   Multikey: ¦|
 #
 #   Long leg is merged with macron thanks to an empty intersection and with a
 #   mnemonic based on the macron multikey equivalent pipe "|". (As of small r
@@ -12756,7 +12756,7 @@
 #^# MACRON_BELOW
 #   dead_belowmacron
 #   dead_macron double press
-#   Multi_key: ¦||
+#   Multikey: ¦||
 #
 #   The conjoining variants of the combining diacritics are supported with
 #   ampersand as a base character both in macron and in macron below.
@@ -12930,7 +12930,7 @@
 #^# LINE_BELOW
 #   dead_lowline
 #   *dead_macron triple press
-#   Multi_key: ¦|||
+#   Multikey: ¦|||
 #
 #   This is required for the letters used with a real line below, rather than a
 #   macron below. But there are no precomposed letters with line below. Names
@@ -12990,7 +12990,7 @@
 #   stroke, diagonal stroke, oblique stroke, bar (lenient)
 #   dead_stroke
 #   dead_longsolidusoverlay
-#   Multi_key: ¦/
+#   Multikey: ¦/
 #
 #   Some letters occur both with a diagonal stroke and with an oblique stroke,
 #   where the diagonal stroke has the steep slant of a regular slash, while the
@@ -13368,7 +13368,7 @@
 #
 #^# OBLIQUE_STROKE
 #   dead_stroke double press
-#   Multi_key: ¦//
+#   Multikey: ¦//
 #
 #   This double press virtual dead key is dedicated to letters with a slightly
 #   slanted stroke, some of which occur alongside letters with a steep slash,
@@ -13412,7 +13412,7 @@
 #
 #^# TRIPLE_STROKE
 #   dead_stroke triple press
-#   Multi_key: ¦///
+#   Multikey: ¦///
 #
 #   This may be useful as we have a combining deletion mark: "᷻" U1DFB, that
 #   is a triple solidus. As a spacing counterpart, "␥" U2425 is consistent
@@ -13431,7 +13431,7 @@
 #*# RING_ABOVE
 #   ring, ring above, circle above, middle ring, low ring inside, low right ring
 #   dead_abovering
-#   Multi_key: ¦*
+#   Multikey: ¦*
 #
 #   Lowercase "x" is required for "ꭖ" UAB56 LATIN SMALL LETTER X WITH LOW RIGHT
 #   RING as a base character, and uppercase "X" is required for "ꭘ" UAB58 LATIN
@@ -13669,7 +13669,7 @@
 #^# RING_BELOW
 #   dead_belowring
 #   dead_abovering double press
-#   Multi_key: ¦**
+#   Multikey: ¦**
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   bar yields "⫰" U2AF0, and case insensitive "T" yields "⫱" U2AF1.
@@ -13740,7 +13740,7 @@
 #
 #*# CIRCUMFLEX
 #   dead_circumflex
-#   Multi_key: ¦<
+#   Multikey: ¦<
 #
 #   Quotation mark input method
 #
@@ -14291,7 +14291,7 @@
 #
 #^# HACEK input facility by CIRCUMFLEX
 #   dead_circumflex double press
-#   Multi_key: ¦<<
+#   Multikey: ¦<<
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the hacek dead key is also activatable by dead_circumflex double press,
@@ -14308,7 +14308,7 @@
 #^# CIRCUMFLEX_BELOW
 #   dead_belowcircumflex
 #   dead_circumflex triple press
-#   Multi_key: ¦<<<
+#   Multikey: ¦<<<
 #
 #   Although the circumflex accent below is extremely rare, Unicode has 6 pairs
 #   of Latin letters precomposed with it. Except on Windows, several composed
@@ -14493,7 +14493,7 @@
 #
 #*# HACEK
 #   dead_caron
-#   Multi_key: ¦>
+#   Multikey: ¦>
 #
 #   For consistency with undiacriticized Czech spelling "haček" following
 #   Ken Whistler, this dead key is spelled "HACEK" rather than "HATCHEK".
@@ -14811,7 +14811,7 @@
 #
 #^# HACEK_BELOW
 #   dead_caron double press
-#   Multi_key: ¦>>
+#   Multikey: ¦>>
 #
 #   This is supported for consistency so as to provide an input method for
 #   "̬" U032C COMBINING CARON BELOW.
@@ -14879,7 +14879,7 @@
 #*# FLAG
 #   flag partial, letter emoji, double, equal
 #   *dead_flag UEFD7
-#   Multi_key: ¦=
+#   Multikey: ¦=
 #
 #   “FLAG” only serves the purpose of being a handy dead key identifier, while
 #   the actual flags are output by the FLAG_EMOJI virtual dead key on double
@@ -15137,7 +15137,7 @@
 #
 #^# FLAG_EMOJI
 #   *dead_flag double press
-#   Multi_key: ¦==
+#   Multikey: ¦==
 #
 #   The 258 country flags are supported on double press followed by a
 #   two-letter ISO country code or one of the following additional codes,
@@ -16297,7 +16297,7 @@
 #
 #^# REGIONAL_INDICATOR_SYMBOL
 #   *dead_flag triple press
-#   Multi_key: ¦===
+#   Multikey: ¦===
 #
 #   This yields the bare symbol not followed by word joiner or anything.
 #   See #*# FLAG
@@ -16410,7 +16410,7 @@
 #
 #*# GRAVE
 #   dead_grave
-#   Multi_key: ¦`
+#   Multikey: ¦`
 #
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_grave yields reversed high, opening curly quotation marks U201B,
@@ -16531,7 +16531,7 @@
 #^# DOUBLE_GRAVE
 #   dead_doublegrave
 #   dead_grave double press
-#   Multi_key: ¦``
+#   Multikey: ¦``
 #
 #   The precomposed letters with double grave accent require this virtual dead
 #   key, as opposed to those with double acute accent in a dedicated dead key.
@@ -16584,7 +16584,7 @@
 #
 #*# CEDILLA
 #   dead_cedilla
-#   Multi_key: ¦,
+#   Multikey: ¦,
 #
 #   The polygrams with "a", "o" and "u" make the dead_cedilla key behave like a
 #   "Ç" key in all relevant cases, along the lines of the "Ê" key emulation,
@@ -16731,7 +16731,7 @@
 #
 #^# CEDILLA_ABOVE
 #   dead_cedilla double press
-#   Multi_key: ¦,,
+#   Multikey: ¦,,
 #
 #   The cedilla above is the turned comma above, per Unicode informative alias.
 #
@@ -16747,7 +16747,7 @@
 #
 #*# DOT_BELOW
 #   dead_belowdot
-#   Multi_key: ¦!
+#   Multikey: ¦!
 #
 #   Digits yield multidot punctuation, and "⃨" U20E8 COMBINING TRIPLE UNDERDOT
 #   has underscore as a base character.
@@ -16931,7 +16931,7 @@
 #^# VERTICAL_LINE_BELOW
 #   dead_belowverticalline
 #   dead_belowdot double press
-#   Multi_key: ¦!!
+#   Multikey: ¦!!
 #
 #   This also supports "⃨" U20E8 COMBINING TRIPLE UNDERDOT since it was moved
 #   in the wake of freeing up groups 1..3 of numbersign, with the rationale
@@ -16981,7 +16981,7 @@
 #
 #*# DIAERESIS
 #   dead_diaeresis
-#   Multi_key: ¦:
+#   Multikey: ¦:
 #
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_diaeresis yields low, opening, curly quotation marks U201A, U201E.
@@ -17239,7 +17239,7 @@
 #
 #
 # # DIAERESIS_BELOW input facility by DIAERESIS&CIRCUMFLEX
-#   Multi_key: ¦:<
+#   Multikey: ¦:<
 #
 #   For convenience, an alternative input method is provided for the diaeresis
 #   below, since dead_diaeresis double press is used as a facility for macron
@@ -17284,7 +17284,7 @@
 #
 #^# MACRON input facility by DIAERESIS
 #   dead_diaeresis double press
-#   Multi_key: ¦::
+#   Multikey: ¦::
 #
 #   For ease of access, and in an attempt to meet potential user expectations,
 #   the macron dead key is also activatable by dead_diaeresis double press,
@@ -17301,7 +17301,7 @@
 #^# DIAERESIS_BELOW
 #   dead_belowdiaeresis
 #   dead_diaeresis triple press
-#   Multi_key: ¦:::
+#   Multikey: ¦:::
 #
 #   This is required for one precomposed letter (existing also with diaeresis),
 #   plus several composed letters. Diaeresis below is used in Min Dong and in
@@ -17412,8 +17412,8 @@
 #
 #*# COMMA_BELOW
 #   dead_belowcomma
-#   Multi_key: ¦;
-#   Multi_key: ¦§
+#   Multikey: ¦;
+#   Multikey: ¦§
 #
 #   The glottal letters new to Unicode v12 are duplicated here for convenience.
 #
@@ -17626,8 +17626,8 @@
 #^# COMMA_ABOVE
 #   dead_abovecomma
 #   dead_belowcomma double press
-#   Multi_key: ¦;;
-#   Multi_key: ¦§§
+#   Multikey: ¦;;
+#   Multikey: ¦§§
 #
 #   This yields mainly the glottal letters new to Unicode v12, since these may
 #   be expected here, because the spiritus lenis that these glottal letters are
