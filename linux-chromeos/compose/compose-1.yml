@@ -1010,6 +1010,11 @@
 #   in documentation.
 #   See # # Maintenance of letter groups
 #
+#   Lines starting with "#@" are Windows-specific alternative input sequences
+#   instead of multicharacter output sequences. These need to be configured in
+#   a single place with respect to dead key tables.
+#   See # # Notes about documentation
+#
 #
 #   Conflictlessness check
 #
@@ -1245,6 +1250,14 @@
 #   The plus sign omitted in Unicode code points for compatibility with X11
 #   keysyms needs to be readded for documentation.
 #   See # # Notes about syntax and terms
+#
+#   Lines starting with "#@" are designed to compensate Windows users for a
+#   defective dead key implementation that disregards the official Unicode
+#   recommendation as of supporting composed letters by dead keys. These
+#   sequences are configured in this file so as to have all sequences in a
+#   single place with special formatting in the dead key tables.
+#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
+#   See # # Notes for maintenance
 #
 #
 #*# COMPOSE
