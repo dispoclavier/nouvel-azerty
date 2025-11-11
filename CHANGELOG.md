@@ -25,6 +25,13 @@ Transpilation pour Windows des séquences de composition.
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
+* Transformations :
+	* Accent aigu > double accent aigu : Redonder "Ő" U+0150, "ő" U+0151, "Ű" U+0170, "ű" U+0171, "˝" U+02DD, "̋" U+030B sans équivalents en composition. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), [66945f1](https://github.com/dispoclavier/nouvel-azerty/commit/66945f1726bd099ddc08fa578c7dbe9e156bf779)
+* Documentation :
+	* Corriger "Multi_key:" en "Multikey:" pour l’accorder avec le reste des annotations. compose-1.yml [37d4607](https://github.com/dispoclavier/nouvel-azerty/commit/37d46075872d0a02987523d0311e13e53c05339e)
+	* Mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b6e63c6](https://github.com/dispoclavier/nouvel-azerty/commit/b6e63c612d7a08362f84f332145836c3d3beabdc)
+	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81)
+
 ## 6.1.2 (2025-11-10)
 
 Rectification et simplification des séquences de composition.
