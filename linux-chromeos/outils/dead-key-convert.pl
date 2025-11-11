@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-11-11T0616+0100
+# 2025-11-11T1404+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -47,19 +47,20 @@
 #
 # On 2025-10-29, 1 097 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
-# not have precomposed equivalents. But Windows is unable to output any of them
-# by dead keys due to an improperly designed DEADTRANS macro. Additionally, an
-# "ê" key and a "ç" key are emulated by digraphs or trigraphs output by these
-# dead keys. As a consequence, sequences with multicharacter output are skipped
-# throughout in order to not compromise the "ê" key and "ç" key emulations.
-# Windows users are aware that composed letters are to be input the other way
-# around.
+# not have precomposed equivalents. Additionally, an "ê" key and a "ç" key are
+# emulated by digraphs or trigraphs output by the related dead keys.
+#
+# But Windows is unable to output any of these strings by dead keys, due to an
+# improperly designed DEADTRANS macro. To mitigate the resulting UX disruption,
+# string start output is configured in kbdeadtrans.c.
+# See there * Diacriticized letter key emulations.
 #
 # In order to compensate Windows users for a defective dead key implementation
 # that disregards the official Unicode recommendation as of supporting composed
-# letters by dead keys, alternative input may be provided in Compose.yml so as
-# to have all sequences in a single place with special markup in the dead key
-# tables. These lines starting with "#@" are parsed in Compose.yml alongside.
+# letters by dead keys, alternative input may be provided in Compose.yml, so as
+# to have all sequences in a single place, given that documenting them requires
+# special formatting in the dead key tables, that Compose.yml is the source of.
+# These lines starting with "#@" are parsed in Compose.yml alongside.
 # https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
 # See Compose.yml # # Notes about documentation
 # See Compose.yml # # Notes for maintenance
@@ -1157,7 +1158,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!invertedbreve><!grave><!belowdot>$/2534/;
 	$deadkey =~ s/^<!invertedbreve><!grave>$/2535/;
 
-	# Additional dead key chains (12).
+	# Additional dead key chains (13).
 	$deadkey =~ s/^<!grave><!acute>$/02C5/;#<dead_grave><dead_acute>
 	$deadkey =~ s/^<!macron><!retroflexhook>$/02FD/;#<dead_macron><UEFD4>
 	$deadkey =~ s/^<!macron><!superscript>$/02E5/;#<dead_macron><UEFD1>
@@ -1170,6 +1171,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!turned><!subscript><!turned>$/02BE/;#<UEFD5><UEFD2><UEFD5>
 	$deadkey =~ s/^<!subscript><!turned><!subscript>$/02CF/;#<UEFD2><UEFD5><UEFD2>
 	$deadkey =~ s/^<!diaeresis><!diaeresis><!diaeresis>$/1E73/;#<dead_diaeresis><dead_diaeresis><dead_diaeresis>
+	$deadkey =~ s/^<!acute><!acute>$/0171/;#<dead_acute><dead_acute>
 
 	# When adding dead key chains, please make sure to add them in @chained, too.
 
@@ -1179,7 +1181,9 @@ sub get_dead_char {
 # Used to generate the required chained dead keys.
 my @chained = (
 
-	# Additional 12.
+	# Additional 13.
+	'<!acute><!acute>',
+	'<!diaeresis><!diaeresis><!diaeresis>',
 	'<!grave><!acute>',
 	'<!macron><!retroflexhook>',
 	'<!macron><!superscript>',
@@ -1191,7 +1195,6 @@ my @chained = (
 	'<!superscript><!diaeresis><!superscript>',
 	'<!turned><!subscript><!turned>',
 	'<!subscript><!turned><!subscript>',
-	'<!diaeresis><!diaeresis><!diaeresis>',
 
 	# Main set, 561.
 	'<!abovedot><!abovedot>',
