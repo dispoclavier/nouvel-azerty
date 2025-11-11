@@ -8,6 +8,7 @@
 #               Installation: Please do not use this file but the all-in-one file Compose.yml.
 #
 #
+#
 #   START_LATIN_BY_DEAD_KEYS
 #
 #
@@ -4712,7 +4713,7 @@
 #   dead_doubleacute
 #   Multikey: ¦"
 #
-#   This dead key, dedicated to what could be virtualized by dead_acute double
+#   This dead key, dedicated to what can be virtualized by dead_acute double
 #   press, and supported by XKB, is required to prevent conflicts due to the
 #   dead key based quotation mark input method.
 #   See # # Quotation mark input method
@@ -4749,9 +4750,18 @@
 #
 #   Emoji
 #
-#   Double acute is chained with reversed for an emoji dead key that is located
-#   after the symbol groups due to a file size restriction.
+#   Double acute is chained with *dead_reversed for an emoji dead key designed
+#   as a facility supporting some extra emoji on non-Windows OSes, in response
+#   to the extra emoji on live keys with the additional modifier combinations
+#   partly supported on Windows.
+#   See kbcommon-1.c:142
+#   See kbcomazerty.c
+#   See kbligatures.c:761
+#
+#   This emoji dead key content is located after the symbol groups so as to get
+#   out of compose-2.yml, due to a file size restriction on github.com.
 #   See # # EMOJI_READY
+#   See # # Notes for maintenance
 #
 <dead_doubleacute>                                                                         <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><quotedbl>                                                                      <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT

@@ -990,8 +990,9 @@
 # # Notes for maintenance
 #
 #   For display in browsers as full-fledged web pages rather than merely in
-#   plain text, this file needs to be split in three partials maxing at 2GB,
-#   due to file size restrictions in GitHub’s web interface.
+#   plain text, this file needs to be split into three partials maxing at 2GB,
+#   due to a file size restriction in GitHub’s web interface on github.com (not
+#   on github.dev).
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-1.yml
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-2.yml
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/compose-3.yml
