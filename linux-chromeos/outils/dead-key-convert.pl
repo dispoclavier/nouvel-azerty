@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-11-10T0511+0100
+# 2025-11-11T0616+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -48,10 +48,21 @@
 # On 2025-10-29, 1 097 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. But Windows is unable to output any of them
-# by dead keys due to an improperly designed DEADTRANS macro. As a consequence,
-# the sequences are skipped throughout in order to not compromise the "ê" key
-# and "ç" key emulations. Windows users are aware that composed letters are to
-# be input the other way around.
+# by dead keys due to an improperly designed DEADTRANS macro. Additionally, an
+# "ê" key and a "ç" key are emulated by digraphs or trigraphs output by these
+# dead keys. As a consequence, sequences with multicharacter output are skipped
+# throughout in order to not compromise the "ê" key and "ç" key emulations.
+# Windows users are aware that composed letters are to be input the other way
+# around.
+#
+# In order to compensate Windows users for a defective dead key implementation
+# that disregards the official Unicode recommendation as of supporting composed
+# letters by dead keys, alternative input may be provided in Compose.yml so as
+# to have all sequences in a single place with special markup in the dead key
+# tables. These lines starting with "#@" are parsed in Compose.yml alongside.
+# https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
+# See Compose.yml # # Notes about documentation
+# See Compose.yml # # Notes for maintenance
 #
 # 2 145 dead key sequences yield Latin letters or mathematical symbols encoded
 # in the SMP that Windows is unable to output in one go by a dead key. As a
@@ -2085,12 +2096,15 @@ while ( my $line = <INPUT> ) {
 	}
 
 	if ( $parse_on ) {
-		unless ( $line =~ /^<Multi_key>/   # Multikey is not processed.
+		unless ( $line =~ /<Multi_key>/    # Multikey is not processed.
 			|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
 			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
 			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
-			|| $line =~ /^#/                 # Annotations.
+			|| $line =~ /^#[^@]/             # Annotations.
 		) {
+
+			# Remove the Windows-specific prefix.
+			$line =~ s/^#@//;
 
 			# Remove spaces.
 			$line =~ s/ {2,}/ /g;

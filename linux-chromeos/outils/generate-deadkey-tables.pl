@@ -8,6 +8,7 @@
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
 # 2025-10-29T0554+0100
+# 2025-11-11T0617+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -47,6 +48,15 @@
 # ListeNoms.txt is used for characters missing from Udescripteurs.txt.
 # Characters missing from both are counted and listed with their line number
 # in Compose.yml.
+#
+# In order to compensate Windows users for a defective dead key implementation
+# that disregards the official Unicode recommendation as of supporting composed
+# letters by dead keys, alternative input may be provided in Compose.yml so as
+# to have all sequences in a single place with special markup in the dead key
+# tables. These lines starting with "#@" are parsed in Compose.yml alongside.
+# https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
+# See Compose.yml # # Notes about documentation
+# See Compose.yml # # Notes for maintenance
 #
 # The output is designed for use in WordPress, where "{{{anrghg-classes}}}" can
 # be replaced with additional CSS classes, as well as "{{{anrghg-value}}}" with
@@ -120,7 +130,7 @@ my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$sta
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( @anchors, $anchor, $cp, $descrip, $index, $line_nb, $math, $regex, $str, $test, $text, $tooltip, $ucodes );
+my ( @anchors, $anchor, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str, $test, $text, $tooltip, $ucodes );
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
@@ -168,8 +178,8 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
-		unless ( $line =~ /^<Multi_key>/   # Multikey equivalents are skipped.
-			|| $line =~ /^#/                 # Annotations are not (yet) processed.
+		unless ( $line =~ /<Multi_key>/    # Multikey equivalents are skipped.
+			|| $line =~ /^#[^@]/             # Annotations are not (yet) processed.
 			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
 			|| $line =~ /high surrogate/     # High surrogates, a Windows feature.
 			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
@@ -208,6 +218,14 @@ while ( my $line = <INPUT> ) {
 				|| $line =~ /<UEFD9>/
 				|| $line =~ /<UEFDA>/
 			) {
+
+				# The Windows-specific prefix triggers special formatting.
+				if ( $line =~ /^#@/ ) {
+					$line  =~ s/^#@//;
+					$class = 'winspe';
+				} else {
+					$class = 'common';
+				}
 
 				# Starting from here, this should be in sync with generate-multikey-tables.pl.
 				# Convert dead keys.
@@ -531,13 +549,13 @@ while ( my $line = <INPUT> ) {
 
 				# Composed characters.
 				# Anchor end tags are spaced out to prevent adding another tooltip in this table.
-				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td>$1<\/td><td>$3<\/td><\/tr>/;
 
 				# Combining characters.
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td>$1<\/td><td>$4<\/td><\/tr>/;
 
 				# All other characters.
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4$math<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td>$1<\/td><td>$4$math<\/td><\/tr>/;
 
 				print OUTPUT $line;
 				if ( $comprehensive ) {
