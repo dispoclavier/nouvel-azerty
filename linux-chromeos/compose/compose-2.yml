@@ -7450,8 +7450,8 @@
 #
 #   This virtual dead key is designed to meet widespread user expectations on a
 #   dead key only basis, without supporting any multikey equivalent, that would
-#   conflict with the right single quotation mark rightsinglequotemark as part
-#   of the dead key based quotation mark input method.
+#   conflict with the right single quotation mark as part of the dead key based
+#   quotation mark input method.
 #   See # # Quotation mark input method
 #   See #*# DOUBLE_ACUTE
 #
