@@ -3051,12 +3051,11 @@
 #   See dispocla.cpp ## Level-5 numpad
 #
 #   However, the degree sign is supported by dead key, too, if only to improve
-#   the usability of multikey. The most straightforward candidates are "0" and
-#   "8" as base characters of dead_abovering, given that "o" is required for
-#   "ⱺ" U2C7A. For multikey, the outcome is <Multi_key><asterisk><0> or -<8>,
-#   and the dead key working as a de facto shortcut goes <dead_abovering><0> or
-#   <dead_abovering><8>. The other way around is supported here, for sideways
-#   compatibility with en_US.UTF-8/Compose.
+#   the usability of multikey. The most straightforward candidate is "0" as a
+#   base character of dead_abovering, given that "o" is required for "ⱺ" U2C7A.
+#   For multikey, the outcome is <Multi_key><asterisk><0>, and the dead key
+#   working as a shortcut goes <dead_abovering><0>. The other way around is
+#   supported here, for sideways compatibility with en_US.UTF-8/Compose.
 #   See #*# RING_ABOVE
 #
 <Multi_key><0><asterisk>                                                                           : "°" U00B0 # DEGREE SIGN
