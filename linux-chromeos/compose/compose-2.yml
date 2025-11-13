@@ -5918,21 +5918,19 @@
 #       v : "ω" (was "")
 #       V : "Ω" (was "")
 #       w : "ς" (was "ω")
-#       W : "Σ" (was "Ω")
 #       x : "χ" (was "ξ")
 #       X : "Χ" (was "Ξ")
 #       y : "υ" (was "ψ")
 #       Y : "Υ" (was "Ψ")
 #
-#   The empty place on Q is used for the theta symbol preferred in Romani when
-#   only the glyph is considered, regardless of word processing concerns.
+#   The empty places on Q are used for the theta symbol, whose uppercase glyph
+#   is preferred in Romani when case conversion is less of an issue.
 #
 #   Greek subscript letters and small cap letters are also supported.
 #   See # # GREEK_OR_CIRCLED&SUBSCRIPT
 #
 #   Polytonic Greek is supported alongside to meet eventual user expectations,
-#   but due to file size restrictions, it cannot be included here. So, the
-#   Greek overflow is in part 1.
+#   but due to file size restrictions, it cannot be included right here.
 #   See ### Greek with diacritics
 #   See # # Notes for maintenance
 #
@@ -13472,10 +13470,11 @@
 #   operator, and the star operator "⋆" U22C6 by "8". (But there is no room
 #   left for stars "★" U2605 and "☆" U2606, that have easy support in group 1.)
 #
-#   As a matter of supporting the degree sign by dead key after the loss of its
-#   en_US.UTF-8/Compose sequence, and regardless of its support on live key,
-#   the left-over base character "0" is convenient for "°" U00B0.
+#   As a matter of supporting the degree sign by dead key, alongside its support
+#   on live key, after the loss of its en_US.UTF-8/Compose sequence <o> <o>, the
+#   left-over base character "0" is used, with a huge upside of sideways compat.
 #   See # # Degree sign
+#   See # # "°" U00B0
 #
 #   Unpreferred yet not discouraged precomposed temperature units "℃" U2103 and
 #   "℉" U2109 (but not conflicting "Å" U212B) are supported for completeness,

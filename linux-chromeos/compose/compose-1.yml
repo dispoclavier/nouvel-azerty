@@ -664,7 +664,7 @@
 #
 #   These strings are pointless as they fail to meet user expectations raised
 #   by keyboard layouts supporting semi-automated punctuation spacing, but they
-#   are provided regardless, for user experience test purposes.
+#   are provided for user experience test purposes.
 #   See dispocla_perso.cpp
 #
 <UEF6A> : "nᵒ" # U006E U1D52
@@ -3055,8 +3055,12 @@
 #   "8" as base characters of dead_abovering, given that "o" is required for
 #   "ⱺ" U2C7A. For multikey, the outcome is <Multi_key><asterisk><0> or -<8>,
 #   and the dead key working as a de facto shortcut goes <dead_abovering><0> or
-#   <dead_abovering><8>.
+#   <dead_abovering><8>. The other way around is supported here, for sideways
+#   compatibility with en_US.UTF-8/Compose.
 #   See #*# RING_ABOVE
+#
+<Multi_key><0><asterisk>                                                                           : "°" U00B0 # DEGREE SIGN
+<Multi_key><KP_0><KP_Multiply>                                                                     : "°" U00B0 # DEGREE SIGN
 #
 #
 #^# Bullets
@@ -3805,7 +3809,7 @@
 <Multi_key><1><asterisk>                                                                           : "♈" U2648 # ARIES emoji
 <Multi_key><KP_1><KP_Multiply>                                                                     : "♈" U2648 # ARIES emoji
 <Multi_key><a><r><i><e>                                                                            : "♈" U2648 # ARIES emoji
-#Multi_key><A><R><I><E>                                                                           : "♈" U2648 # ARIES emoji
+#Multi_key><A><R><I><E>                                                                            : "♈" U2648 # ARIES emoji
 <Multi_key><A><R>                                                                                  : "♈" U2648 # ARIES emoji
 <Multi_key><b><e><l><i>                                                                            : "♈" U2648 # ARIES emoji
 #Multi_key><B><E><L><I>                                                                            : "♈" U2648 # ARIES emoji
@@ -3896,8 +3900,6 @@
 #
 <Multi_key><A><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
 <Multi_key><a><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
-<Multi_key><0><asterisk>                                                                           : "♑" U2651 # CAPRICORN emoji
-<Multi_key><KP_0><KP_Multiply>                                                                     : "♑" U2651 # CAPRICORN emoji
 <Multi_key><c><a><p><r>                                                                            : "♑" U2651 # CAPRICORN emoji
 <Multi_key><C><A><P><R>                                                                            : "♑" U2651 # CAPRICORN emoji
 #
@@ -4290,11 +4292,39 @@
 #   See # # Arrows as on the numpad
 #   See #*# HORN
 #
+#
+#   Home key
+#
+#   The home key has several symbols, one of which has made it into the ISO/IEC
+#   keyboard standard 9995-7: "⇱" U21F1.
+#   https://en.wikipedia.org/wiki/Home_key
+#
 #Multi_key><h><o><m><e>                                                                            : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
 <Multi_key><h><o><m>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
 <Multi_key><H><O><M>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><d><e><b>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><D><E><B>                                                                               : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><d><eacute><b>                                                                          : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><D><Eacute><B>                                                                          : "⇱" U21F1 # NORTH WEST ARROW TO CORNER
+<Multi_key><2><h>                                                                                  : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><2><H>                                                                                  : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><2><d>                                                                                  : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><2><D>                                                                                  : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><3><h>                                                                                  : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+<Multi_key><3><H>                                                                                  : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+<Multi_key><3><d>                                                                                  : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+<Multi_key><3><D>                                                                                  : "↸" U21B8 # NORTH WEST ARROW TO LONG BAR
+#
+#
+#   End key
+#
+#   The end key is mostly text-labeled, but ISO/IEC 9995-7 provides a symbol.
+#   https://en.wikipedia.org/wiki/End_key
+#
 <Multi_key><e><n><d>                                                                               : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
 <Multi_key><E><N><D>                                                                               : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
+<Multi_key><f><i>                                                                                  : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
+<Multi_key><F><I>                                                                                  : "⇲" U21F2 # SOUTH EAST ARROW TO CORNER
 #
 #
 # # Symbols for deletion keys
@@ -4851,17 +4881,17 @@
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G134153
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=199
 #
-#   Indeed both Sm and So are only informative, not normative. The reason why
+#   Indeed, both Sm and So are only informative, not normative. The reason why
 #   is that labeling all math symbols as Sm is not feasible, and it is not
 #   advisable either, since mathematics repurposed many symbols intrinsically
 #   extraneous to mathematics, such as the male and female signs, already
 #   supercharged as planet symbols ("♀" U2640, "♂" U2642), three music symbols,
 #   one of which is Sm ("♯" U266F) and two, So ("♭" U266D, "♮" U266E), and the
-#   first four suits, regardless whether filled or empty ("♠" U2660, "♡" U2661,
-#   "♢" U2662, "♣" U2663), but not the last four.
+#   first four suits by scalar value no matter whether they are filled or empty
+#   ("♠" U2660, "♡" U2661, "♢" U2662, "♣" U2663), but not the other four.
 #
-#   The derived Unicode property "Math" in turn still only defines a subset of
-#   the symbols that need to be supported as math symbols.
+#   The derived Unicode property "Math", in turn, still only defines a subset
+#   of the symbols that need to be supported as math symbols.
 #   https://www.unicode.org/Public/15.0.0/ucd/DerivedCoreProperties.txt
 #
 #   E.g. "⭅" U2B45 and "⭆" U2B46 are not labeled as "Math", yet both are found
@@ -4869,7 +4899,7 @@
 #   consistently.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 #
-#   Some of these additional symbols are supported as keyboard symbols:
+#   Some of these additional symbols are supported as keyboard symbols instead:
 #   "↴" U21B4, "↵" U21B5, "↸" U21B8, "↹" U21B9.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
 #   See # # Symbols related to Enter or Return keys
@@ -5046,7 +5076,7 @@
 #   Both ASCII space and Latin-1 no-break space are supported as terminating
 #   space, the no-break space because in French mode, it is mapped at level 3,
 #   in synergy with the ASCII symbols, that are likely to occur at the end of
-#   math symbol multikey sequences; if not, U+00A0 is supported regardless, for
+#   math symbol multikey sequences; even if not, U00A0 is supported anyway, for
 #   consistency and maintainability and with respect to a following number that
 #   may need to be connected to the symbol by a no-break space.
 #
@@ -5243,7 +5273,8 @@
 #   arrows become greater, as for "↓" U2193, "⇓" U21D3.
 #
 #   Harpoon barbs, by contrast, become grave or apostrophe/rightsinglequotemark
-#   depending on their slant, regardless of stem direction.
+#   depending on their slant, no matter whether their stem is horizontal or
+#   vertical.
 #
 #
 #   Angle symbols

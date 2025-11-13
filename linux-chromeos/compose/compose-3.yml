@@ -1455,9 +1455,9 @@
 #   Browsers may display "▪" U25AA smaller than CSS "list-style-type: square".
 #   In case it is still considered too big as a lower-level bullet, there is
 #   also "⬝" U2B1D BLACK VERY SMALL SQUARE, eventually somewhat confusable with
-#   "·" U00B7 MIDDLE DOT. "⬝" U2B1D is supported here regardless, in group 4,
-#   after "‣" U2023 TRIANGULAR BULLET in group 3 as an interesting alternative,
-#   while "⁃" U2043 HYPHEN BULLET is in group 1 of minus.
+#   "·" U00B7 MIDDLE DOT. "⬝" U2B1D is supported here, in group 4, alongside
+#   "‣" U2023 TRIANGULAR BULLET in group 3 as an interesting alternative, while
+#   "⁃" U2043 HYPHEN BULLET is in group 1 of minus.
 #   See # # C05 minus
 #
 #   The rationale for supporting bullets in the groups of underscore is based
