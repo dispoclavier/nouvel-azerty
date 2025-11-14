@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Include multikey sequences in 2 files    6.1.3.0.0 Fri 2025-11-14T0554+0100
 * Split off kbdeadtrans-deadkeys.c         6.1.2.0.0 Thu 2025-10-30T0026+0100
 * Support diacriticized Greek letters too  6.1.1.0.0 Wed 2025-10-29T0201+0100
 * Complete dead key chains                 6.1.0.2.0 Thu 2025-10-23T2152+0200
@@ -35,9 +36,11 @@
 *
 * This file is included in kbcommon-2.c.
 *
-* This file includes the file containing the transpiled dead key data, so as
-* to not exceed the 2GB file size limit of the GitHub web interface.
+* This file includes the files containing the transpiled dead key data, so as
+* to not exceed the 2MB file size limit of github.com (not github.dev).
 * See #include "kbdeadtrans-deadkeys.c"
+* See #include "kbdeadtrans-multikey.c"
+* See #include "kbdeadtrans-multikey-equivalents.c"
 *
 *
 * DEADTRANS macro calls.
@@ -232,9 +235,28 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * Diacritical and transformational dead key content.
 *
 * This is up-to-date and overrides the legacy dead key content.
+* See kbdeadtrans-deadkeys.c
 *
 \*****************************************************************************/
 #include "kbdeadtrans-deadkeys.c"
+
+/*****************************************************************************\
+* Dedicated multikey sequences.
+*
+* This is up-to-date and overrides the legacy dead key content.
+* See kbdeadtrans-multikey.c
+*
+\*****************************************************************************/
+#include "kbdeadtrans-multikey.c"
+
+/*****************************************************************************\
+* Multikey equivalents of dead keys.
+*
+* This is up-to-date and overrides the legacy dead key content.
+* See kbdeadtrans-multikey-equivalents.c
+*
+\*****************************************************************************/
+#include "kbdeadtrans-multikey-equivalents.c"
 
 /*****************************************************************************\
 * Legacy dead key content.
@@ -246,15 +268,20 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * respect to the enhanced user experience design goal, and were skipped to
 * streamline and speed up the initial support on Linux.
 *
-* However, many cannot be ported, such as a shortcut for "n" with tilde in
+* Some shortcuts are not ported because they have been redesigned, and the
+* current option is better, such as "a" with tilde in the acute accent dead key
+* by "é" mnemonically near "a", instead of former "à", that is now used for "o"
+* with tilde, because it is close to the "o" key.
+*
+* Many others cannot be ported, such as a shortcut for "n" with tilde in
 * the acute accent dead key with "b" as a base character due to its use in
 * Breton, as they are particular to Windows, while regular support includes
 * composed letters, "b́" for instance.
 *
-* Other shortcuts are not ported because they have been redesigned, and the
-* current option is better, such as "a" with tilde in the acute accent dead key
-* by "é" mnemonically near "a", instead of former "à", that is now used for "o"
-* with tilde, as it is close to the "o" key.
+* These Windows-specific shortcuts, however, are required to compensate users
+* for the defective dead key implementation that disregards official Unicode
+* recommendations as of supporting composed letters by dead keys, and worse,
+* the UTF-16 encoding model of the Supplemental Multilingual Plane on Windows.
 *
 * Progress is not always linear, but "//@" marks the point up to where
 * all DEADTRANS calls have been reviewed.

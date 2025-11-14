@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Upgrade to 6.1.3.0                       6.1.3.0.0 Fri 2025-11-14T0704+0100
 * Upgrade to 6.1.2.1                       6.1.2.1.0 Mon 2025-11-10T0515+0100
 * Upgrade to 6.1.2.0                       6.1.2.0.3 Sun 2025-11-09T2047+0100
 * Add all dead key data as of 6.1.1 here   6.1.2.0.2 Thu 2025-10-30T0103+0100
@@ -41,6 +42,8 @@
 *
 \*****************************************************************************/
 
+/*<!acute><!acute>                                                 */ DEADTRANS( 0x00E1	,0x00E1	,0x0171	,0x0001), // Dead key chain.
+/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x00EB	,0x010E	,0x1E73	,0x0001), // Dead key chain.
 /*<!grave><!acute>                                                 */ DEADTRANS( 0x00E1	,0x00F2	,0x02C5	,0x0001), // Dead key chain.
 /*<!macron><!retroflexhook>                                        */ DEADTRANS( 0x0273	,0x0101	,0x02FD	,0x0001), // Dead key chain.
 /*<!macron><!superscript>                                          */ DEADTRANS( L'^'	,0x0101	,0x02E5	,0x0001), // Dead key chain.
@@ -52,7 +55,6 @@
 /*<!superscript><!diaeresis><!superscript>                         */ DEADTRANS( L'^'	,0x00C4	,0x1D40	,0x0001), // Dead key chain.
 /*<!turned><!subscript><!turned>                                   */ DEADTRANS( 0x0250	,0xAB63	,0x02BE	,0x0001), // Dead key chain.
 /*<!subscript><!turned><!subscript>                                */ DEADTRANS( L'_'	,0xA7FA	,0x02CF	,0x0001), // Dead key chain.
-/*<!diaeresis><!diaeresis><!diaeresis>                             */ DEADTRANS( 0x00EB	,0x010E	,0x1E73	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x1E57	,0x1E57	,0x02C8	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot><!acute>                                   */ DEADTRANS( 0x00E1	,0x02C8	,0x02C7	,0x0001), // Dead key chain.
 /*<!abovedot><!abovedot><!acute><!grave>                           */ DEADTRANS( 0x00F2	,0x02C7	,0x02B7	,0x0001), // Dead key chain.
@@ -227,10 +229,10 @@
 /*<!grave><!macron><!acute>                                        */ DEADTRANS( 0x00E1	,0x1E14	,0x2306	,0x0001), // Dead key chain.
 /*<!greek><!greek>                                                 */ DEADTRANS( 0x03B5	,0x03B5	,0x229A	,0x0001), // Dead key chain.
 /*<!greek><!subscript>                                             */ DEADTRANS( L'_'	,0x03B5	,0x1D66	,0x0001), // Dead key chain.
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'~'	,0x03B5	,0x2789	,0x0001), // Dead key chain.
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'\\'	,0x2789	,0x2793	,0x0001), // Dead key chain.
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'~'	,0x03B5	,0x2789	,0x0001), // Dead key chain.
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'\\'	,0x2789	,0x2793	,0x0001), // Dead key chain.
 /*<!greek><%backslash>                                             */ DEADTRANS( L'\\'	,0x03B5	,0x277F	,0x0001), // Dead key chain.
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'~'	,0x277F	,0x278A	,0x0001), // Dead key chain.
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'~'	,0x277F	,0x278A	,0x0001), // Dead key chain.
 /*<!greek><%backslash><%quotEuroSign>                              */ DEADTRANS( 0x20AC	,0x277F	,0x24EB	,0x0001), // Dead key chain.
 /*<!greek><%backslash><%quotedbl>                                  */ DEADTRANS( L'"'	,0x277F	,0x24EC	,0x0001), // Dead key chain.
 /*<!greek><%bracketleft>                                           */ DEADTRANS( L'['	,0x03B5	,0x2792	,0x0001), // Dead key chain.
@@ -960,14 +962,14 @@
 /*<!abovedot><!grave>                                              */ DEADTRANS( 0x200B	,0xA718	,0x1DC0	,0x0000	), // '​' ➔ "᷀" COMBINING DOTTED GRAVE ACCENT
 /*<!abovedot><!group><!group><!group>                              */ DEADTRANS( L'~'	,0x2A6D	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group><!group><!group>                              */ DEADTRANS( L's'	,0x2A6D	,0x1E9B	,0x0000	), // 's' ➔ "ẛ" LATIN SMALL LETTER LONG S WITH DOT ABOVE
-/*<!abovedot><!group><!group>                                      */ DEADTRANS( L'~'	,0x2A81	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group><!group>                                      */ DEADTRANS( L'>'	,0x2A81	,0x2A82	,0x0000	), // '>' ➔ "⪂" GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
 /*<!abovedot><!group><!group>                                      */ DEADTRANS( L'<'	,0x2A81	,0x2A81	,0x0000	), // '<' ➔ "⪁" LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+/*<!abovedot><!group><!group>                                      */ DEADTRANS( L'~'	,0x2A81	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group><!group>                                      */ DEADTRANS( L's'	,0x2A81	,0x1E9B	,0x0000	), // 's' ➔ "ẛ" LATIN SMALL LETTER LONG S WITH DOT ABOVE
-/*<!abovedot><!group>                                              */ DEADTRANS( L'~'	,0x1E9B	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group>                                              */ DEADTRANS( L'='	,0x1E9B	,0x2A67	,0x0000	), // '=' ➔ "⩧" IDENTICAL WITH DOT ABOVE
 /*<!abovedot><!group>                                              */ DEADTRANS( L'>'	,0x1E9B	,0x2A82	,0x0000	), // '>' ➔ "⪂" GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
 /*<!abovedot><!group>                                              */ DEADTRANS( L'<'	,0x1E9B	,0x2A81	,0x0000	), // '<' ➔ "⪁" LESS-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
+/*<!abovedot><!group>                                              */ DEADTRANS( L'~'	,0x1E9B	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group><3>                                           */ DEADTRANS( L'~'	,0x2A6D	,0x2A6D	,0x0000	), // '~' ➔ "⩭" CONGRUENT WITH DOT ABOVE
 /*<!abovedot><!group><3>                                           */ DEADTRANS( L's'	,0x2A6D	,0x1E9B	,0x0000	), // 's' ➔ "ẛ" LATIN SMALL LETTER LONG S WITH DOT ABOVE
 /*<!abovedot><!group>                                              */ DEADTRANS( L's'	,0x1E9B	,0x1E9B	,0x0000	), // 's' ➔ "ẛ" LATIN SMALL LETTER LONG S WITH DOT ABOVE
@@ -979,7 +981,6 @@
 /*<!abovedot><!macron>                                             */ DEADTRANS( 0x200B	,0x01E1	,0x1AD4	,0x0000	), // '​' ➔ "᫔" COMBINING VERTICAL-LINE-MACRON
 /*<!abovedot>                                                      */ DEADTRANS( L'\''	,0x1E57	,0x2AC3	,0x0000	), // ''' ➔ "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( 0x2019	,0x1E57	,0x2AC3	,0x0000	), // '’' ➔ "⫃" SUBSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!abovedot>                                                      */ DEADTRANS( L'~'	,0x1E57	,0x2A6A	,0x0000	), // '~' ➔ "⩪" TILDE OPERATOR WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'|'	,0x1E57	,0xA717	,0x0000	), // '|' ➔ "ꜗ" MODIFIER LETTER DOT VERTICAL BAR
 /*<!abovedot>                                                      */ DEADTRANS( L'{'	,0x1E57	,0x2AC4	,0x0000	), // '{' ➔ "⫄" SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'='	,0x1E57	,0x2250	,0x0000	), // '=' ➔ "≐" APPROACHES THE LIMIT
@@ -994,6 +995,7 @@
 /*<!abovedot>                                                      */ DEADTRANS( 0x20AC	,0x1E57	,0x22F5	,0x0000	), // '€' ➔ "⋵" ELEMENT OF WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L';'	,0x1E57	,0x2A30	,0x0000	), // ';' ➔ "⨰" MULTIPLICATION SIGN WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'/'	,0x1E57	,0xA718	,0x0000	), // '/' ➔ "ꜘ" MODIFIER LETTER DOT SLASH
+/*<!abovedot>                                                      */ DEADTRANS( L'~'	,0x1E57	,0x2A6A	,0x0000	), // '~' ➔ "⩪" TILDE OPERATOR WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'_'	,0x1E57	,0xA719	,0x0000	), // '_' ➔ "ꜙ" MODIFIER LETTER DOT HORIZONTAL BAR
 /*<!abovedot>                                                      */ DEADTRANS( L'0'	,0x1E57	,0x267C	,0x0000	), // '0' ➔ "♼" RECYCLED PAPER SYMBOL
 /*<!abovedot>                                                      */ DEADTRANS( L'1'	,0x1E57	,0x1DFA	,0x0000	), // '1' ➔ "᷺" COMBINING DOT BELOW LEFT
@@ -1188,6 +1190,14 @@
 /*<!acute><!abovedot>                                              */ DEADTRANS( 0x200B	,0x1E65	,0x1DC1	,0x0000	), // '​' ➔ "᷁" COMBINING DOTTED ACUTE ACCENT
 /*<!acute><!abovering>                                             */ DEADTRANS( L'A'	,0x01FA	,0x01FA	,0x0000	), // 'A' ➔ "Ǻ" LATIN CAPITAL LETTER A WITH RING ABOVE AND ACUTE
 /*<!acute><!abovering>                                             */ DEADTRANS( L'a'	,0x01FA	,0x01FB	,0x0000	), // 'a' ➔ "ǻ" LATIN SMALL LETTER A WITH RING ABOVE AND ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( L'O'	,0x0171	,0x0150	,0x0000	), // 'O' ➔ "Ő" LATIN CAPITAL LETTER O WITH DOUBLE ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( L'o'	,0x0171	,0x0151	,0x0000	), // 'o' ➔ "ő" LATIN SMALL LETTER O WITH DOUBLE ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( L'U'	,0x0171	,0x0170	,0x0000	), // 'U' ➔ "Ű" LATIN CAPITAL LETTER U WITH DOUBLE ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( L'u'	,0x0171	,0x0171	,0x0000	), // 'u' ➔ "ű" LATIN SMALL LETTER U WITH DOUBLE ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( 0x00A0	,0x0171	,0x02DD	,0x0000	), // ' ' ➔ "˝" DOUBLE ACUTE ACCENT
+/*<!acute><!acute>                                                 */ DEADTRANS( 0x202F	,0x0171	,0x02DD	,0x0000	), // ' ' ➔ "˝" DOUBLE ACUTE ACCENT
+/*<!acute><!acute>                                                 */ DEADTRANS( L' '	,0x0171	,0x030B	,0x0000	), // ' ' ➔ "̋" COMBINING DOUBLE ACUTE ACCENT
+/*<!acute><!acute>                                                 */ DEADTRANS( 0x200B	,0x0171	,0x030B	,0x0000	), // '​' ➔ "̋" COMBINING DOUBLE ACUTE ACCENT
 /*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'a'	,0x1F84	,0x1F84	,0x0000	), // 'a' ➔ "ᾄ" GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI
 /*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'A'	,0x1F84	,0x1F8C	,0x0000	), // 'A' ➔ "ᾌ" GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
 /*<!acute><!belowdot><!breve><!greek>                              */ DEADTRANS( L'h'	,0x1F84	,0x1F94	,0x0000	), // 'h' ➔ "ᾔ" GREEK SMALL LETTER ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI
@@ -2669,16 +2679,16 @@
 /*<!circumflex><!greek>                                            */ DEADTRANS( 0x200B	,0x1FC0	,0x0342	,0x0000	), // '​' ➔ "͂" COMBINING GREEK PERISPOMENI
 /*<!circumflex><!group><!group><!group><!group>                    */ DEADTRANS( L','	,0x2662	,0x2662	,0x0000	), // ',' ➔ "♢" WHITE DIAMOND SUIT
 /*<!circumflex><!group><!group><!group>                            */ DEADTRANS( L','	,0x2667	,0x2667	,0x0000	), // ',' ➔ "♧" WHITE CLUB SUIT
-/*<!circumflex><!group><!group>                                    */ DEADTRANS( L'~'	,0x2661	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex><!group><!group>                                    */ DEADTRANS( L','	,0x2661	,0x2661	,0x0000	), // ',' ➔ "♡" WHITE HEART SUIT
 /*<!circumflex><!group><!group>                                    */ DEADTRANS( L'"'	,0x2661	,0xDE76	,0x0000	), // High surrogate: D83D; U+1F676 '"' ➔ "🙶" SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 /*<!circumflex><!group><!group>                                    */ DEADTRANS( 0x20AC	,0x2661	,0xDE76	,0x0000	), // High surrogate: D83D; U+1F676 '€' ➔ "🙶" SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+/*<!circumflex><!group><!group>                                    */ DEADTRANS( L'~'	,0x2661	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex><!group>                                            */ DEADTRANS( L'\''	,0x2A6F	,0x275B	,0x0000	), // ''' ➔ "❛" HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 /*<!circumflex><!group>                                            */ DEADTRANS( 0x2019	,0x2A6F	,0x275B	,0x0000	), // '’' ➔ "❛" HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
-/*<!circumflex><!group>                                            */ DEADTRANS( L'~'	,0x2A6F	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex><!group>                                            */ DEADTRANS( L'|'	,0x2A6F	,0x2E36	,0x0000	), // '|' ➔ "⸶" DAGGER WITH LEFT GUARD
 /*<!circumflex><!group>                                            */ DEADTRANS( L'"'	,0x2A6F	,0x275D	,0x0000	), // '"' ➔ "❝" HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 /*<!circumflex><!group>                                            */ DEADTRANS( 0x20AC	,0x2A6F	,0x275D	,0x0000	), // '€' ➔ "❝" HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
+/*<!circumflex><!group>                                            */ DEADTRANS( L'~'	,0x2A6F	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex><!group><3>                                         */ DEADTRANS( L','	,0x2667	,0x2667	,0x0000	), // ',' ➔ "♧" WHITE CLUB SUIT
 /*<!circumflex><!group><4>                                         */ DEADTRANS( L','	,0x2662	,0x2662	,0x0000	), // ',' ➔ "♢" WHITE DIAMOND SUIT
 /*<!circumflex><!group><5>                                         */ DEADTRANS( L','	,0x2663	,0x2664	,0x0000	), // ',' ➔ "♤" WHITE SPADE SUIT
@@ -2714,7 +2724,6 @@
 /*<!circumflex><!tilde>                                            */ DEADTRANS( L'o'	,0x1EAB	,0x1ED7	,0x0000	), // 'o' ➔ "ỗ" LATIN SMALL LETTER O WITH CIRCUMFLEX AND TILDE
 /*<!circumflex>                                                    */ DEADTRANS( L'\''	,0x00EA	,0x2018	,0x0000	), // ''' ➔ "‘" LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( 0x2019	,0x00EA	,0x2018	,0x0000	), // '’' ➔ "‘" LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-/*<!circumflex>                                                    */ DEADTRANS( L'~'	,0x00EA	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex>                                                    */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000	), // '*' ➔ "⁂" ASTERISM
 /*<!circumflex>                                                    */ DEADTRANS( L'@'	,0x00EA	,0x237D	,0x0000	), // '@' ➔ "⍽" SHOULDERED OPEN BOX
 /*<!circumflex>                                                    */ DEADTRANS( L'|'	,0x00EA	,0x2E36	,0x0000	), // '|' ➔ "⸶" DAGGER WITH LEFT GUARD
@@ -2723,6 +2732,7 @@
 /*<!circumflex>                                                    */ DEADTRANS( L'+'	,0x00EA	,0x2A23	,0x0000	), // '+' ➔ "⨣" PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 /*<!circumflex>                                                    */ DEADTRANS( L'"'	,0x00EA	,0x201C	,0x0000	), // '"' ➔ "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( 0x20AC	,0x00EA	,0x201C	,0x0000	), // '€' ➔ "“" LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+/*<!circumflex>                                                    */ DEADTRANS( L'~'	,0x00EA	,0x2A6F	,0x0000	), // '~' ➔ "⩯" ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 /*<!circumflex>                                                    */ DEADTRANS( L'0'	,0x00EA	,0x2070	,0x0000	), // '0' ➔ "⁰" SUPERSCRIPT ZERO
 /*<!circumflex>                                                    */ DEADTRANS( L'1'	,0x00EA	,0x00B9	,0x0000	), // '1' ➔ "¹" SUPERSCRIPT ONE
 /*<!circumflex>                                                    */ DEADTRANS( L'2'	,0x00EA	,0x00B2	,0x0000	), // '2' ➔ "²" SUPERSCRIPT TWO
@@ -3047,10 +3057,10 @@
 /*<!diaeresis><!turned>                                            */ DEADTRANS( L'u'	,0x00FC	,0x1D1E	,0x0000	), // 'u' ➔ "ᴞ" LATIN SMALL LETTER SIDEWAYS DIAERESIZED U
 /*<!diaeresis>                                                     */ DEADTRANS( L'\''	,0x00EB	,0x201A	,0x0000	), // ''' ➔ "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000	), // '’' ➔ "‚" SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
-/*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000	), // '^' ➔ "᫜" COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'*'	,0x00EB	,0x2051	,0x0000	), // '*' ➔ "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!diaeresis>                                                     */ DEADTRANS( L'@'	,0x00EB	,0x25BE	,0x0000	), // '@' ➔ "▾" BLACK DOWN-POINTING SMALL TRIANGLE
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000	), // '\' ➔ "¦" BROKEN BAR repurposed as multikey symbol
+/*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000	), // '^' ➔ "᫜" COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000	), // '-' ➔ "⹀" DOUBLE HYPHEN
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000	), // '"' ➔ "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x20AC	,0x00EB	,0x201E	,0x0000	), // '€' ➔ "„" DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
@@ -3130,8 +3140,6 @@
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'&'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '&' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'\''	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ''' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( 0x2019	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '’' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'^'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '^' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'~'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '~' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'*'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '*' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'@'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '@' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'\\'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '\' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -3140,6 +3148,7 @@
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'}'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '}' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'['	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '[' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L']'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ']' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'^'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '^' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L':'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ':' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L','	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ',' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'$'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '$' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -3147,9 +3156,9 @@
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'!'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '!' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'`'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '`' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'>'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '>' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'#'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '#' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'<'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '<' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'-'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '-' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'#'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '#' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'('	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '(' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L')'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ')' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'%'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '%' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -3161,6 +3170,7 @@
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L';'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ';' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( 0x00A7	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '§' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'/'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '/' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!doubleacute><!reversed>                                        */ DEADTRANS( L'~'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '~' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'_'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '_' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'0'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '0' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!doubleacute><!reversed>                                        */ DEADTRANS( L'1'	,0x263B	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '1' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -4280,40 +4290,7 @@
 /*<!greek><!subscript>                                             */ DEADTRANS( L'r'	,0x1D66	,0x1D68	,0x0000	), // 'r' ➔ "ᵨ" GREEK SUBSCRIPT SMALL LETTER RHO
 /*<!greek><!subscript>                                             */ DEADTRANS( L'V'	,0x1D66	,0xAB65	,0x0000	), // 'V' ➔ "ꭥ" GREEK LETTER SMALL CAPITAL OMEGA
 /*<!greek><!subscript>                                             */ DEADTRANS( L'x'	,0x1D66	,0x1D6A	,0x0000	), // 'x' ➔ "ᵪ" GREEK SUBSCRIPT SMALL LETTER CHI
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'`'	,0x2793	,0xDD0C	,0x0000	), // High surrogate: D83C; U+1F10C '`' ➔ "🄌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'0'	,0x2793	,0x2793	,0x0000	), // '0' ➔ "➓" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'1'	,0x2793	,0x278A	,0x0000	), // '1' ➔ "➊" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'2'	,0x2793	,0x278B	,0x0000	), // '2' ➔ "➋" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'3'	,0x2793	,0x278C	,0x0000	), // '3' ➔ "➌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'4'	,0x2793	,0x278D	,0x0000	), // '4' ➔ "➍" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'5'	,0x2793	,0x278E	,0x0000	), // '5' ➔ "➎" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'6'	,0x2793	,0x278F	,0x0000	), // '6' ➔ "➏" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'7'	,0x2793	,0x2790	,0x0000	), // '7' ➔ "➐" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'8'	,0x2793	,0x2791	,0x0000	), // '8' ➔ "➑" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-/*<!greek><%asciitilde><%backslash>                                */ DEADTRANS( L'9'	,0x2793	,0x2792	,0x0000	), // '9' ➔ "➒" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'`'	,0x2789	,0xDD0B	,0x0000	), // High surrogate: D83C; U+1F10B '`' ➔ "🄋" DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'0'	,0x2789	,0x2789	,0x0000	), // '0' ➔ "➉" DINGBAT CIRCLED SANS-SERIF NUMBER TEN
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'1'	,0x2789	,0x2780	,0x0000	), // '1' ➔ "➀" DINGBAT CIRCLED SANS-SERIF DIGIT ONE
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'2'	,0x2789	,0x2781	,0x0000	), // '2' ➔ "➁" DINGBAT CIRCLED SANS-SERIF DIGIT TWO
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'3'	,0x2789	,0x2782	,0x0000	), // '3' ➔ "➂" DINGBAT CIRCLED SANS-SERIF DIGIT THREE
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'4'	,0x2789	,0x2783	,0x0000	), // '4' ➔ "➃" DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'5'	,0x2789	,0x2784	,0x0000	), // '5' ➔ "➄" DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'6'	,0x2789	,0x2785	,0x0000	), // '6' ➔ "➅" DINGBAT CIRCLED SANS-SERIF DIGIT SIX
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'7'	,0x2789	,0x2786	,0x0000	), // '7' ➔ "➆" DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'8'	,0x2789	,0x2787	,0x0000	), // '8' ➔ "➇" DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
-/*<!greek><%asciitilde>                                            */ DEADTRANS( L'9'	,0x2789	,0x2788	,0x0000	), // '9' ➔ "➈" DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 /*<!greek>                                                         */ DEADTRANS( L'*'	,0x03B5	,0x229B	,0x0000	), // '*' ➔ "⊛" CIRCLED ASTERISK OPERATOR
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'`'	,0x278A	,0xDD0C	,0x0000	), // High surrogate: D83C; U+1F10C '`' ➔ "🄌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'0'	,0x278A	,0x2793	,0x0000	), // '0' ➔ "➓" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'1'	,0x278A	,0x278A	,0x0000	), // '1' ➔ "➊" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'2'	,0x278A	,0x278B	,0x0000	), // '2' ➔ "➋" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'3'	,0x278A	,0x278C	,0x0000	), // '3' ➔ "➌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'4'	,0x278A	,0x278D	,0x0000	), // '4' ➔ "➍" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'5'	,0x278A	,0x278E	,0x0000	), // '5' ➔ "➎" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'6'	,0x278A	,0x278F	,0x0000	), // '6' ➔ "➏" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'7'	,0x278A	,0x2790	,0x0000	), // '7' ➔ "➐" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'8'	,0x278A	,0x2791	,0x0000	), // '8' ➔ "➑" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
-/*<!greek><%backslash><%asciitilde>                                */ DEADTRANS( L'9'	,0x278A	,0x2792	,0x0000	), // '9' ➔ "➒" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 /*<!greek><%backslash>                                             */ DEADTRANS( L'`'	,0x277F	,0x24FF	,0x0000	), // '`' ➔ "⓿" NEGATIVE CIRCLED DIGIT ZERO
 /*<!greek><%backslash><%quotedbl>                                  */ DEADTRANS( L'0'	,0x24EC	,0x24F4	,0x0000	), // '0' ➔ "⓴" NEGATIVE CIRCLED NUMBER TWENTY
 /*<!greek><%backslash><%quotedbl>                                  */ DEADTRANS( L'1'	,0x24EC	,0x24EB	,0x0000	), // '1' ➔ "⓫" NEGATIVE CIRCLED NUMBER ELEVEN
@@ -4335,6 +4312,17 @@
 /*<!greek><%backslash><%quotEuroSign>                              */ DEADTRANS( L'7'	,0x24EB	,0x24F1	,0x0000	), // '7' ➔ "⓱" NEGATIVE CIRCLED NUMBER SEVENTEEN
 /*<!greek><%backslash><%quotEuroSign>                              */ DEADTRANS( L'8'	,0x24EB	,0x24F2	,0x0000	), // '8' ➔ "⓲" NEGATIVE CIRCLED NUMBER EIGHTEEN
 /*<!greek><%backslash><%quotEuroSign>                              */ DEADTRANS( L'9'	,0x24EB	,0x24F3	,0x0000	), // '9' ➔ "⓳" NEGATIVE CIRCLED NUMBER NINETEEN
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'`'	,0x278A	,0xDD0C	,0x0000	), // High surrogate: D83C; U+1F10C '`' ➔ "🄌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'0'	,0x278A	,0x2793	,0x0000	), // '0' ➔ "➓" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'1'	,0x278A	,0x278A	,0x0000	), // '1' ➔ "➊" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'2'	,0x278A	,0x278B	,0x0000	), // '2' ➔ "➋" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'3'	,0x278A	,0x278C	,0x0000	), // '3' ➔ "➌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'4'	,0x278A	,0x278D	,0x0000	), // '4' ➔ "➍" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'5'	,0x278A	,0x278E	,0x0000	), // '5' ➔ "➎" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'6'	,0x278A	,0x278F	,0x0000	), // '6' ➔ "➏" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'7'	,0x278A	,0x2790	,0x0000	), // '7' ➔ "➐" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'8'	,0x278A	,0x2791	,0x0000	), // '8' ➔ "➑" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+/*<!greek><%backslash><%tilde>                                     */ DEADTRANS( L'9'	,0x278A	,0x2792	,0x0000	), // '9' ➔ "➒" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
 /*<!greek><%backslash>                                             */ DEADTRANS( L'0'	,0x277F	,0x277F	,0x0000	), // '0' ➔ "❿" DINGBAT NEGATIVE CIRCLED NUMBER TEN
 /*<!greek><%backslash>                                             */ DEADTRANS( L'1'	,0x277F	,0x2776	,0x0000	), // '1' ➔ "❶" DINGBAT NEGATIVE CIRCLED DIGIT ONE
 /*<!greek><%backslash>                                             */ DEADTRANS( L'2'	,0x277F	,0x2777	,0x0000	), // '2' ➔ "❷" DINGBAT NEGATIVE CIRCLED DIGIT TWO
@@ -4501,6 +4489,28 @@
 /*<!greek><%quotEuroSign>                                          */ DEADTRANS( L'9'	,0x2473	,0x2472	,0x0000	), // '9' ➔ "⑲" CIRCLED NUMBER NINETEEN
 /*<!greek>                                                         */ DEADTRANS( L';'	,0x03B5	,0x2297	,0x0000	), // ';' ➔ "⊗" CIRCLED TIMES
 /*<!greek>                                                         */ DEADTRANS( L'/'	,0x03B5	,0x2298	,0x0000	), // '/' ➔ "⊘" CIRCLED DIVISION SLASH
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'`'	,0x2793	,0xDD0C	,0x0000	), // High surrogate: D83C; U+1F10C '`' ➔ "🄌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'0'	,0x2793	,0x2793	,0x0000	), // '0' ➔ "➓" DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'1'	,0x2793	,0x278A	,0x0000	), // '1' ➔ "➊" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'2'	,0x2793	,0x278B	,0x0000	), // '2' ➔ "➋" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'3'	,0x2793	,0x278C	,0x0000	), // '3' ➔ "➌" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'4'	,0x2793	,0x278D	,0x0000	), // '4' ➔ "➍" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'5'	,0x2793	,0x278E	,0x0000	), // '5' ➔ "➎" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'6'	,0x2793	,0x278F	,0x0000	), // '6' ➔ "➏" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'7'	,0x2793	,0x2790	,0x0000	), // '7' ➔ "➐" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'8'	,0x2793	,0x2791	,0x0000	), // '8' ➔ "➑" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT
+/*<!greek><%tilde><%backslash>                                     */ DEADTRANS( L'9'	,0x2793	,0x2792	,0x0000	), // '9' ➔ "➒" DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'`'	,0x2789	,0xDD0B	,0x0000	), // High surrogate: D83C; U+1F10B '`' ➔ "🄋" DINGBAT CIRCLED SANS-SERIF DIGIT ZERO
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'0'	,0x2789	,0x2789	,0x0000	), // '0' ➔ "➉" DINGBAT CIRCLED SANS-SERIF NUMBER TEN
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'1'	,0x2789	,0x2780	,0x0000	), // '1' ➔ "➀" DINGBAT CIRCLED SANS-SERIF DIGIT ONE
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'2'	,0x2789	,0x2781	,0x0000	), // '2' ➔ "➁" DINGBAT CIRCLED SANS-SERIF DIGIT TWO
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'3'	,0x2789	,0x2782	,0x0000	), // '3' ➔ "➂" DINGBAT CIRCLED SANS-SERIF DIGIT THREE
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'4'	,0x2789	,0x2783	,0x0000	), // '4' ➔ "➃" DINGBAT CIRCLED SANS-SERIF DIGIT FOUR
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'5'	,0x2789	,0x2784	,0x0000	), // '5' ➔ "➄" DINGBAT CIRCLED SANS-SERIF DIGIT FIVE
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'6'	,0x2789	,0x2785	,0x0000	), // '6' ➔ "➅" DINGBAT CIRCLED SANS-SERIF DIGIT SIX
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'7'	,0x2789	,0x2786	,0x0000	), // '7' ➔ "➆" DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'8'	,0x2789	,0x2787	,0x0000	), // '8' ➔ "➇" DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT
+/*<!greek><%tilde>                                                 */ DEADTRANS( L'9'	,0x2789	,0x2788	,0x0000	), // '9' ➔ "➈" DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 /*<!greek>                                                         */ DEADTRANS( L'_'	,0x03B5	,0x229D	,0x0000	), // '_' ➔ "⊝" CIRCLED DASH
 /*<!greek>                                                         */ DEADTRANS( L'0'	,0x03B5	,0x2469	,0x0000	), // '0' ➔ "⑩" CIRCLED NUMBER TEN
 /*<!greek>                                                         */ DEADTRANS( L'1'	,0x03B5	,0x2460	,0x0000	), // '1' ➔ "①" CIRCLED DIGIT ONE
@@ -4584,8 +4594,6 @@
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'&'	,0x2463	,0x26F1	,0x0000	), // '&' ➔ "⛱" UMBRELLA ON GROUND emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'\''	,0x2463	,0x222A	,0x0000	), // ''' ➔ "∪" UNION math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( 0x2019	,0x2463	,0x222A	,0x0000	), // '’' ➔ "∪" UNION math
-/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'^'	,0x2463	,0x2200	,0x0000	), // '^' ➔ "∀" FOR ALL math
-/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'~'	,0x2463	,0x26FA	,0x0000	), // '~' ➔ "⛺" TENT emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'*'	,0x2463	,0x274C	,0x0000	), // '*' ➔ "❌" CROSS MARK emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'@'	,0x2463	,0x25CF	,0x0000	), // '@' ➔ "●" BLACK CIRCLE math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'\\'	,0x2463	,0x267B	,0x0000	), // '\' ➔ "♻" BLACK UNIVERSAL RECYCLING SYMBOL emoji
@@ -4594,6 +4602,7 @@
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'}'	,0x2463	,0x2B55	,0x0000	), // '}' ➔ "⭕" HEAVY LARGE CIRCLE emoji, hollow red circle
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'['	,0x2463	,0x27E6	,0x0000	), // '[' ➔ "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L']'	,0x2463	,0x27E7	,0x0000	), // ']' ➔ "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'^'	,0x2463	,0x2200	,0x0000	), // '^' ➔ "∀" FOR ALL math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L':'	,0x2463	,0x205E	,0x0000	), // ':' ➔ "⁞" VERTICAL FOUR DOTS
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L','	,0x2463	,0x2666	,0x0000	), // ',' ➔ "♦" BLACK DIAMOND SUIT emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'$'	,0x2463	,0x263C	,0x0000	), // '$' ➔ "☼" WHITE SUN WITH RAYS
@@ -4601,9 +4610,9 @@
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'!'	,0x2463	,0x2757	,0x0000	), // '!' ➔ "❗" HEAVY EXCLAMATION MARK SYMBOL emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'`'	,0x2463	,0x00AC	,0x0000	), // '`' ➔ "¬" NOT SIGN math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'>'	,0x2463	,0x25BA	,0x0000	), // '>' ➔ "►" BLACK RIGHT-POINTING POINTER
+/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'#'	,0x2463	,0x25AA	,0x0000	), // '#' ➔ "▪" BLACK SMALL SQUARE emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'<'	,0x2463	,0x2700	,0x0000	), // '<' ➔ "✀" BLACK SAFETY SCISSORS
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'-'	,0x2463	,0x2668	,0x0000	), // '-' ➔ "♨" HOT SPRINGS emoji
-/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'#'	,0x2463	,0x25AA	,0x0000	), // '#' ➔ "▪" BLACK SMALL SQUARE emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'('	,0x2463	,0x2206	,0x0000	), // '(' ➔ "∆" INCREMENT math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L')'	,0x2463	,0x2640	,0x0000	), // ')' ➔ "♀" FEMALE SIGN emoji, Venus, math
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'%'	,0x2463	,0x2204	,0x0000	), // '%' ➔ "∄" THERE DOES NOT EXIST
@@ -4615,6 +4624,7 @@
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L';'	,0x2463	,0x205B	,0x0000	), // ';' ➔ "⁛" FOUR DOT MARK, highlighter mark
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( 0x00A7	,0x2463	,0x205B	,0x0000	), // '§' ➔ "⁛" FOUR DOT MARK, highlighter mark
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'/'	,0x2463	,0x25AB	,0x0000	), // '/' ➔ "▫" WHITE SMALL SQUARE emoji
+/*<!group><!group><!group><!group>                                 */ DEADTRANS( L'~'	,0x2463	,0x26FA	,0x0000	), // '~' ➔ "⛺" TENT emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'_'	,0x2463	,0x2B1D	,0x0000	), // '_' ➔ "⬝" BLACK VERY SMALL SQUARE
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'0'	,0x2463	,0x2195	,0x0000	), // '0' ➔ "↕" UP DOWN ARROW emoji
 /*<!group><!group><!group><!group>                                 */ DEADTRANS( L'1'	,0x2463	,0x2199	,0x0000	), // '1' ➔ "↙" SOUTH WEST ARROW emoji
@@ -4682,8 +4692,6 @@
 /*<!group><!group><!group>                                         */ DEADTRANS( L'&'	,0x2462	,0x220F	,0x0000	), // '&' ➔ "∏" N-ARY PRODUCT math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'\''	,0x2462	,0x2283	,0x0000	), // ''' ➔ "⊃" SUPERSET OF math
 /*<!group><!group><!group>                                         */ DEADTRANS( 0x2019	,0x2462	,0x2283	,0x0000	), // '’' ➔ "⊃" SUPERSET OF math
-/*<!group><!group><!group>                                         */ DEADTRANS( L'^'	,0x2462	,0x269B	,0x0000	), // '^' ➔ "⚛" ATOM SYMBOL emoji
-/*<!group><!group><!group>                                         */ DEADTRANS( L'~'	,0x2462	,0x2245	,0x0000	), // '~' ➔ "≅" APPROXIMATELY EQUAL TO math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'*'	,0x2462	,0x00D7	,0x0000	), // '*' ➔ "×" MULTIPLICATION SIGN math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'@'	,0x2462	,0x26AA	,0x0000	), // '@' ➔ "⚪" MEDIUM WHITE CIRCLE emoji
 /*<!group><!group><!group>                                         */ DEADTRANS( L'\\'	,0x2462	,0x221C	,0x0000	), // '\' ➔ "∜" FOURTH ROOT math
@@ -4692,6 +4700,7 @@
 /*<!group><!group><!group>                                         */ DEADTRANS( L'}'	,0x2462	,0x2210	,0x0000	), // '}' ➔ "∐" N-ARY COPRODUCT math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'['	,0x2462	,0x276E	,0x0000	), // '[' ➔ "❮" HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 /*<!group><!group><!group>                                         */ DEADTRANS( L']'	,0x2462	,0x276F	,0x0000	), // ']' ➔ "❯" HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+/*<!group><!group><!group>                                         */ DEADTRANS( L'^'	,0x2462	,0x269B	,0x0000	), // '^' ➔ "⚛" ATOM SYMBOL emoji
 /*<!group><!group><!group>                                         */ DEADTRANS( L':'	,0x2462	,0x22EE	,0x0000	), // ':' ➔ "⋮" VERTICAL ELLIPSIS math
 /*<!group><!group><!group>                                         */ DEADTRANS( L','	,0x2462	,0x2663	,0x0000	), // ',' ➔ "♣" BLACK CLUB SUIT emoji math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'$'	,0x2462	,0x2211	,0x0000	), // '$' ➔ "∑" N-ARY SUMMATION math
@@ -4699,9 +4708,9 @@
 /*<!group><!group><!group>                                         */ DEADTRANS( L'!'	,0x2462	,0x2755	,0x0000	), // '!' ➔ "❕" WHITE EXCLAMATION MARK ORNAMENT emoji
 /*<!group><!group><!group>                                         */ DEADTRANS( L'`'	,0x2462	,0x2228	,0x0000	), // '`' ➔ "∨" LOGICAL OR math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'>'	,0x2462	,0x2705	,0x0000	), // '>' ➔ "✅" WHITE HEAVY CHECK MARK emoji, check mark button
+/*<!group><!group><!group>                                         */ DEADTRANS( L'#'	,0x2462	,0x2612	,0x0000	), // '#' ➔ "☒" BALLOT BOX WITH X
 /*<!group><!group><!group>                                         */ DEADTRANS( L'<'	,0x2462	,0x2702	,0x0000	), // '<' ➔ "✂" BLACK SCISSORS emoji
 /*<!group><!group><!group>                                         */ DEADTRANS( L'-'	,0x2462	,0x263B	,0x0000	), // '-' ➔ "☻" BLACK SMILING FACE
-/*<!group><!group><!group>                                         */ DEADTRANS( L'#'	,0x2462	,0x2612	,0x0000	), // '#' ➔ "☒" BALLOT BOX WITH X
 /*<!group><!group><!group>                                         */ DEADTRANS( L'('	,0x2462	,0x2639	,0x0000	), // '(' ➔ "☹" WHITE FROWNING FACE emoji with skin tone support
 /*<!group><!group><!group>                                         */ DEADTRANS( L')'	,0x2462	,0x263A	,0x0000	), // ')' ➔ "☺" WHITE SMILING FACE emoji with skin tone support, 25th-ranking
 /*<!group><!group><!group>                                         */ DEADTRANS( L'%'	,0x2462	,0x21AF	,0x0000	), // '%' ➔ "↯" DOWNWARDS ZIGZAG ARROW math
@@ -4713,6 +4722,7 @@
 /*<!group><!group><!group>                                         */ DEADTRANS( L';'	,0x2462	,0x2E2B	,0x0000	), // ';' ➔ "⸫" ONE DOT OVER TWO DOTS PUNCTUATION
 /*<!group><!group><!group>                                         */ DEADTRANS( 0x00A7	,0x2462	,0x2E2B	,0x0000	), // '§' ➔ "⸫" ONE DOT OVER TWO DOTS PUNCTUATION
 /*<!group><!group><!group>                                         */ DEADTRANS( L'/'	,0x2462	,0x00F7	,0x0000	), // '/' ➔ "÷" DIVISION SIGN math
+/*<!group><!group><!group>                                         */ DEADTRANS( L'~'	,0x2462	,0x2245	,0x0000	), // '~' ➔ "≅" APPROXIMATELY EQUAL TO math
 /*<!group><!group><!group>                                         */ DEADTRANS( L'_'	,0x2462	,0x2023	,0x0000	), // '_' ➔ "‣" TRIANGULAR BULLET
 /*<!group><!group><!group>                                         */ DEADTRANS( L'0'	,0x2462	,0x21D5	,0x0000	), // '0' ➔ "⇕" UP DOWN DOUBLE ARROW
 /*<!group><!group><!group>                                         */ DEADTRANS( L'1'	,0x2462	,0x21D9	,0x0000	), // '1' ➔ "⇙" SOUTH WEST DOUBLE ARROW
@@ -4783,8 +4793,6 @@
 /*<!group><!group>                                                 */ DEADTRANS( L'&'	,0x2461	,0x262E	,0x0000	), // '&' ➔ "☮" PEACE SYMBOL emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'\''	,0x2461	,0x2282	,0x0000	), // ''' ➔ "⊂" SUBSET OF math
 /*<!group><!group>                                                 */ DEADTRANS( 0x2019	,0x2461	,0x2282	,0x0000	), // '’' ➔ "⊂" SUBSET OF math
-/*<!group><!group>                                                 */ DEADTRANS( L'^'	,0x2461	,0x267F	,0x0000	), // '^' ➔ "♿" WHEELCHAIR SYMBOL emoji
-/*<!group><!group>                                                 */ DEADTRANS( L'~'	,0x2461	,0x2248	,0x0000	), // '~' ➔ "≈" ALMOST EQUAL TO math
 /*<!group><!group>                                                 */ DEADTRANS( L'*'	,0x2461	,0x2716	,0x0000	), // '*' ➔ "✖" HEAVY MULTIPLICATION X emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'@'	,0x2461	,0x26AB	,0x0000	), // '@' ➔ "⚫" MEDIUM BLACK CIRCLE emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'\\'	,0x2461	,0x221B	,0x0000	), // '\' ➔ "∛" CUBE ROOT math
@@ -4793,6 +4801,7 @@
 /*<!group><!group>                                                 */ DEADTRANS( L'}'	,0x2461	,0x2205	,0x0000	), // '}' ➔ "∅" EMPTY SET math
 /*<!group><!group>                                                 */ DEADTRANS( L'['	,0x2461	,0x2770	,0x0000	), // '[' ➔ "❰" HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
 /*<!group><!group>                                                 */ DEADTRANS( L']'	,0x2461	,0x2771	,0x0000	), // ']' ➔ "❱" HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+/*<!group><!group>                                                 */ DEADTRANS( L'^'	,0x2461	,0x267F	,0x0000	), // '^' ➔ "♿" WHEELCHAIR SYMBOL emoji
 /*<!group><!group>                                                 */ DEADTRANS( L':'	,0x2461	,0xA789	,0x0000	), // ':' ➔ "꞉" MODIFIER LETTER COLON
 /*<!group><!group>                                                 */ DEADTRANS( L','	,0x2461	,0x2665	,0x0000	), // ',' ➔ "♥" BLACK HEART SUIT emoji, heart suit, 14th-ranking
 /*<!group><!group>                                                 */ DEADTRANS( L'$'	,0x2461	,0x237D	,0x0000	), // '$' ➔ "⍽" SHOULDERED OPEN BOX, no-break space
@@ -4800,9 +4809,9 @@
 /*<!group><!group>                                                 */ DEADTRANS( L'!'	,0x2461	,0x203C	,0x0000	), // '!' ➔ "‼" DOUBLE EXCLAMATION MARK emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'`'	,0x2461	,0x2227	,0x0000	), // '`' ➔ "∧" LOGICAL AND math
 /*<!group><!group>                                                 */ DEADTRANS( L'>'	,0x2461	,0x2A7E	,0x0000	), // '>' ➔ "⩾" GREATER-THAN OR SLANTED EQUAL TO math
+/*<!group><!group>                                                 */ DEADTRANS( L'#'	,0x2461	,0x2611	,0x0000	), // '#' ➔ "☑" BALLOT BOX WITH CHECK emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'<'	,0x2461	,0x2A7D	,0x0000	), // '<' ➔ "⩽" LESS-THAN OR SLANTED EQUAL TO math
 /*<!group><!group>                                                 */ DEADTRANS( L'-'	,0x2461	,0x2796	,0x0000	), // '-' ➔ "➖" HEAVY MINUS SIGN emoji
-/*<!group><!group>                                                 */ DEADTRANS( L'#'	,0x2461	,0x2611	,0x0000	), // '#' ➔ "☑" BALLOT BOX WITH CHECK emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'('	,0x2461	,0x2202	,0x0000	), // '(' ➔ "∂" PARTIAL DIFFERENTIAL math
 /*<!group><!group>                                                 */ DEADTRANS( L')'	,0x2461	,0x279C	,0x0000	), // ')' ➔ "➜" HEAVY ROUND-TIPPED RIGHTWARDS ARROW
 /*<!group><!group>                                                 */ DEADTRANS( L'%'	,0x2461	,0x26A1	,0x0000	), // '%' ➔ "⚡" HIGH VOLTAGE SIGN emoji, lightning
@@ -4814,6 +4823,7 @@
 /*<!group><!group>                                                 */ DEADTRANS( L';'	,0x2461	,0x02D1	,0x0000	), // ';' ➔ "ˑ" MODIFIER LETTER HALF TRIANGULAR COLON
 /*<!group><!group>                                                 */ DEADTRANS( 0x00A7	,0x2461	,0x02D1	,0x0000	), // '§' ➔ "ˑ" MODIFIER LETTER HALF TRIANGULAR COLON
 /*<!group><!group>                                                 */ DEADTRANS( L'/'	,0x2461	,0x2797	,0x0000	), // '/' ➔ "➗" HEAVY DIVISION SIGN emoji
+/*<!group><!group>                                                 */ DEADTRANS( L'~'	,0x2461	,0x2248	,0x0000	), // '~' ➔ "≈" ALMOST EQUAL TO math
 /*<!group><!group>                                                 */ DEADTRANS( L'_'	,0x2461	,0x25E6	,0x0000	), // '_' ➔ "◦" WHITE BULLET
 /*<!group><!group>                                                 */ DEADTRANS( L'0'	,0x2461	,0x2195	,0x0000	), // '0' ➔ "↕" UP DOWN ARROW emoji
 /*<!group><!group>                                                 */ DEADTRANS( L'1'	,0x2461	,0x2199	,0x0000	), // '1' ➔ "↙" SOUTH WEST ARROW emoji
@@ -4886,8 +4896,6 @@
 /*<!group>                                                         */ DEADTRANS( L'&'	,0x2460	,0x03C0	,0x0000	), // '&' ➔ "π" GREEK SMALL LETTER PI math
 /*<!group>                                                         */ DEADTRANS( L'\''	,0x2460	,0x02BC	,0x0000	), // ''' ➔ "ʼ" MODIFIER LETTER APOSTROPHE
 /*<!group>                                                         */ DEADTRANS( 0x2019	,0x2460	,0x02BC	,0x0000	), // '’' ➔ "ʼ" MODIFIER LETTER APOSTROPHE
-/*<!group>                                                         */ DEADTRANS( L'^'	,0x2460	,0x26A0	,0x0000	), // '^' ➔ "⚠" WARNING SIGN emoji, ergonomic mapping
-/*<!group>                                                         */ DEADTRANS( L'~'	,0x2460	,0x2243	,0x0000	), // '~' ➔ "≃" ASYMPTOTICALLY EQUAL TO math
 /*<!group>                                                         */ DEADTRANS( L'*'	,0x2460	,0x2717	,0x0000	), // '*' ➔ "✗" BALLOT X
 /*<!group>                                                         */ DEADTRANS( L'@'	,0x2460	,0x25CC	,0x0000	), // '@' ➔ "◌" DOTTED CIRCLE, generic base character for combining diacritics
 /*<!group>                                                         */ DEADTRANS( L'\\'	,0x2460	,0x221A	,0x0000	), // '\' ➔ "√" SQUARE ROOT math
@@ -4896,6 +4904,7 @@
 /*<!group>                                                         */ DEADTRANS( L'}'	,0x2460	,0x03A9	,0x0000	), // '}' ➔ "Ω" GREEK CAPITAL LETTER OMEGA
 /*<!group>                                                         */ DEADTRANS( L'['	,0x2460	,0x27E8	,0x0000	), // '[' ➔ "⟨" MATHEMATICAL LEFT ANGLE BRACKET math
 /*<!group>                                                         */ DEADTRANS( L']'	,0x2460	,0x27E9	,0x0000	), // ']' ➔ "⟩" MATHEMATICAL RIGHT ANGLE BRACKET math
+/*<!group>                                                         */ DEADTRANS( L'^'	,0x2460	,0x26A0	,0x0000	), // '^' ➔ "⚠" WARNING SIGN emoji, ergonomic mapping
 /*<!group>                                                         */ DEADTRANS( L':'	,0x2460	,0x22C5	,0x0000	), // ':' ➔ "⋅" DOT OPERATOR math
 /*<!group>                                                         */ DEADTRANS( L','	,0x2460	,0x2764	,0x0000	), // ',' ➔ "❤" HEAVY BLACK HEART emoji, red heart, most-used in France
 /*<!group>                                                         */ DEADTRANS( L'$'	,0x2460	,0x2423	,0x0000	), // '$' ➔ "␣" OPEN BOX, space character
@@ -4903,9 +4912,9 @@
 /*<!group>                                                         */ DEADTRANS( L'!'	,0x2460	,0x00A1	,0x0000	), // '!' ➔ "¡" INVERTED EXCLAMATION MARK
 /*<!group>                                                         */ DEADTRANS( L'`'	,0x2460	,0x02BB	,0x0000	), // '`' ➔ "ʻ" MODIFIER LETTER TURNED COMMA
 /*<!group>                                                         */ DEADTRANS( L'>'	,0x2460	,0x2714	,0x0000	), // '>' ➔ "✔" HEAVY CHECK MARK emoji
+/*<!group>                                                         */ DEADTRANS( L'#'	,0x2460	,0x2610	,0x0000	), // '#' ➔ "☐" BALLOT BOX
 /*<!group>                                                         */ DEADTRANS( L'<'	,0x2460	,0x2713	,0x0000	), // '<' ➔ "✓" CHECK MARK
 /*<!group>                                                         */ DEADTRANS( L'-'	,0x2460	,0x2043	,0x0000	), // '-' ➔ "⁃" HYPHEN BULLET
-/*<!group>                                                         */ DEADTRANS( L'#'	,0x2460	,0x2610	,0x0000	), // '#' ➔ "☐" BALLOT BOX
 /*<!group>                                                         */ DEADTRANS( L'('	,0x2460	,0x2300	,0x0000	), // '(' ➔ "⌀" DIAMETER SIGN math
 /*<!group>                                                         */ DEADTRANS( L')'	,0x2460	,0x2794	,0x0000	), // ')' ➔ "➔" HEAVY WIDE-HEADED RIGHTWARDS ARROW
 /*<!group>                                                         */ DEADTRANS( L'%'	,0x2460	,0x2606	,0x0000	), // '%' ➔ "☆" WHITE STAR math
@@ -4917,13 +4926,12 @@
 /*<!group>                                                         */ DEADTRANS( L';'	,0x2460	,0x02D0	,0x0000	), // ';' ➔ "ː" MODIFIER LETTER TRIANGULAR COLON
 /*<!group>                                                         */ DEADTRANS( 0x00A7	,0x2460	,0x02D0	,0x0000	), // '§' ➔ "ː" MODIFIER LETTER TRIANGULAR COLON
 /*<!group>                                                         */ DEADTRANS( L'/'	,0x2460	,0x2718	,0x0000	), // '/' ➔ "✘" HEAVY BALLOT X
+/*<!group>                                                         */ DEADTRANS( L'~'	,0x2460	,0x2243	,0x0000	), // '~' ➔ "≃" ASYMPTOTICALLY EQUAL TO math
 /*<!group>                                                         */ DEADTRANS( L'_'	,0x2460	,0x2022	,0x0000	), // '_' ➔ "•" BULLET
 /*<!group><0>                                                      */ DEADTRANS( 0x03B5	,0x2469	,0x23FA	,0x0000	), // 'ε' ➔ "⏺" BLACK CIRCLE FOR RECORD emoji, record button
 /*<!group><0>                                                      */ DEADTRANS( L'&'	,0x2469	,0x2E3F	,0x0000	), // '&' ➔ "⸿" CAPITULUM
 /*<!group><0>                                                      */ DEADTRANS( L'\''	,0x2469	,0x23EB	,0x0000	), // ''' ➔ "⏫" BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 /*<!group><0>                                                      */ DEADTRANS( 0x2019	,0x2469	,0x23EB	,0x0000	), // '’' ➔ "⏫" BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
-/*<!group><0>                                                      */ DEADTRANS( L'^'	,0x2469	,0x238B	,0x0000	), // '^' ➔ "⎋" BROKEN CIRCLE WITH NORTHWEST ARROW
-/*<!group><0>                                                      */ DEADTRANS( L'~'	,0x2469	,0x2627	,0x0000	), // '~' ➔ "☧" CHI RHO
 /*<!group><0>                                                      */ DEADTRANS( L'*'	,0x2469	,0x274E	,0x0000	), // '*' ➔ "❎" NEGATIVE SQUARED CROSS MARK emoji, cross mark button
 /*<!group><0>                                                      */ DEADTRANS( L'@'	,0x2469	,0x23FA	,0x0000	), // '@' ➔ "⏺" BLACK CIRCLE FOR RECORD emoji, record button
 /*<!group><0>                                                      */ DEADTRANS( L'\\'	,0x2469	,0x232B	,0x0000	), // '\' ➔ "⌫" ERASE TO THE LEFT
@@ -4932,6 +4940,7 @@
 /*<!group><0>                                                      */ DEADTRANS( L'}'	,0x2469	,0x23EC	,0x0000	), // '}' ➔ "⏬" BLACK DOWN-POINTING DOUBLE TRIANGLE emoji, fast down button
 /*<!group><0>                                                      */ DEADTRANS( L'['	,0x2469	,0x2659	,0x0000	), // '[' ➔ "♙" WHITE CHESS PAWN
 /*<!group><0>                                                      */ DEADTRANS( L']'	,0x2469	,0x25CA	,0x0000	), // ']' ➔ "◊" LOZENGE math
+/*<!group><0>                                                      */ DEADTRANS( L'^'	,0x2469	,0x238B	,0x0000	), // '^' ➔ "⎋" BROKEN CIRCLE WITH NORTHWEST ARROW
 /*<!group><0>                                                      */ DEADTRANS( L':'	,0x2469	,0x23F2	,0x0000	), // ':' ➔ "⏲" TIMER CLOCK emoji
 /*<!group><0><%comma><%period>                                     */ DEADTRANS( L'A'	,0x2145	,0xDE3C	,0x0000	), // High surrogate: D835; U+1D63C 'A' ➔ "𝘼" MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL A
 /*<!group><0><%comma><%period>                                     */ DEADTRANS( L'a'	,0x2145	,0xDE56	,0x0000	), // High surrogate: D835; U+1D656 'a' ➔ "𝙖" MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL A
@@ -5052,9 +5061,9 @@
 /*<!group><0>                                                      */ DEADTRANS( L'!'	,0x2469	,0x2235	,0x0000	), // '!' ➔ "∵" BECAUSE math
 /*<!group><0>                                                      */ DEADTRANS( L'`'	,0x2469	,0x26CE	,0x0000	), // '`' ➔ "⛎" OPHIUCHUS emoji
 /*<!group><0>                                                      */ DEADTRANS( L'>'	,0x2469	,0x23E9	,0x0000	), // '>' ➔ "⏩" BLACK RIGHT-POINTING DOUBLE TRIANGLE emoji, fast-forward button
+/*<!group><0>                                                      */ DEADTRANS( L'#'	,0x2469	,0x23F9	,0x0000	), // '#' ➔ "⏹" BLACK SQUARE FOR STOP emoji, stop button
 /*<!group><0>                                                      */ DEADTRANS( L'<'	,0x2469	,0x23EA	,0x0000	), // '<' ➔ "⏪" BLACK LEFT-POINTING DOUBLE TRIANGLE emoji, fast reverse button
 /*<!group><0>                                                      */ DEADTRANS( L'-'	,0x2469	,0x2212	,0x0000	), // '-' ➔ "−" MINUS SIGN math
-/*<!group><0>                                                      */ DEADTRANS( L'#'	,0x2469	,0x23F9	,0x0000	), // '#' ➔ "⏹" BLACK SQUARE FOR STOP emoji, stop button
 /*<!group><0>                                                      */ DEADTRANS( L'('	,0x2469	,0x269A	,0x0000	), // '(' ➔ "⚚" STAFF OF HERMES
 /*<!group><0>                                                      */ DEADTRANS( L')'	,0x2469	,0x238D	,0x0000	), // ')' ➔ "⎍" MONOSTABLE SYMBOL
 /*<!group><0>                                                      */ DEADTRANS( L'%'	,0x2469	,0xFFFD	,0x0000	), // '%' ➔ "�" REPLACEMENT CHARACTER
@@ -5169,6 +5178,7 @@
 /*<!group><0>                                                      */ DEADTRANS( L';'	,0x2469	,0x29D6	,0x0000	), // ';' ➔ "⧖" WHITE HOURGLASS
 /*<!group><0>                                                      */ DEADTRANS( 0x00A7	,0x2469	,0x29D6	,0x0000	), // '§' ➔ "⧖" WHITE HOURGLASS
 /*<!group><0>                                                      */ DEADTRANS( L'/'	,0x2469	,0x27BF	,0x0000	), // '/' ➔ "➿" DOUBLE CURLY LOOP emoji
+/*<!group><0>                                                      */ DEADTRANS( L'~'	,0x2469	,0x2627	,0x0000	), // '~' ➔ "☧" CHI RHO
 /*<!group><0>                                                      */ DEADTRANS( L'_'	,0x2469	,0x265F	,0x0000	), // '_' ➔ "♟" BLACK CHESS PAWN emoji
 /*<!group><0>                                                      */ DEADTRANS( L'0'	,0x2469	,0xDFE2	,0x0000	), // High surrogate: D835; U+1D7E2 '0' ➔ "𝟢" MATHEMATICAL SANS-SERIF DIGIT ZERO
 /*<!group><0>                                                      */ DEADTRANS( L'1'	,0x2469	,0xDFE3	,0x0000	), // High surrogate: D835; U+1D7E3 '1' ➔ "𝟣" MATHEMATICAL SANS-SERIF DIGIT ONE
@@ -5238,8 +5248,6 @@
 /*<!group><1>                                                      */ DEADTRANS( L'&'	,0x246A	,0x00B6	,0x0000	), // '&' ➔ "¶" PILCROW SIGN
 /*<!group><1>                                                      */ DEADTRANS( L'\''	,0x246A	,0x02C8	,0x0000	), // ''' ➔ "ˈ" MODIFIER LETTER VERTICAL LINE
 /*<!group><1>                                                      */ DEADTRANS( 0x2019	,0x246A	,0x02C8	,0x0000	), // '’' ➔ "ˈ" MODIFIER LETTER VERTICAL LINE
-/*<!group><1>                                                      */ DEADTRANS( L'^'	,0x246A	,0x2038	,0x0000	), // '^' ➔ "‸" CARET
-/*<!group><1>                                                      */ DEADTRANS( L'~'	,0x246A	,0x2122	,0x0000	), // '~' ➔ "™" TRADE MARK SIGN emoji
 /*<!group><1>                                                      */ DEADTRANS( L'*'	,0x246A	,0x203B	,0x0000	), // '*' ➔ "※" REFERENCE MARK, Japanese kome
 /*<!group><1>                                                      */ DEADTRANS( L'@'	,0x246A	,0x2041	,0x0000	), // '@' ➔ "⁁" CARET INSERTION POINT
 /*<!group><1>                                                      */ DEADTRANS( L'\\'	,0x246A	,0x00AE	,0x0000	), // '\' ➔ "®" REGISTERED SIGN emoji
@@ -5248,6 +5256,7 @@
 /*<!group><1>                                                      */ DEADTRANS( L'}'	,0x246A	,0x2692	,0x0000	), // '}' ➔ "⚒" HAMMER AND PICK emoji
 /*<!group><1>                                                      */ DEADTRANS( L'['	,0x246A	,0x2752	,0x0000	), // '[' ➔ "❒" UPPER RIGHT SHADOWED WHITE SQUARE
 /*<!group><1>                                                      */ DEADTRANS( L']'	,0x246A	,0x2750	,0x0000	), // ']' ➔ "❐" UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+/*<!group><1>                                                      */ DEADTRANS( L'^'	,0x246A	,0x2038	,0x0000	), // '^' ➔ "‸" CARET
 /*<!group><1>                                                      */ DEADTRANS( L':'	,0x246A	,0x00A6	,0x0000	), // ':' ➔ "¦" BROKEN BAR repurposed as multikey symbol
 /*<!group><1>                                                      */ DEADTRANS( L','	,0x246A	,0x2691	,0x0000	), // ',' ➔ "⚑" BLACK FLAG
 /*<!group><1>                                                      */ DEADTRANS( L'$'	,0x246A	,0x2609	,0x0000	), // '$' ➔ "☉" SUN
@@ -5255,9 +5264,9 @@
 /*<!group><1>                                                      */ DEADTRANS( L'!'	,0x246A	,0x2E19	,0x0000	), // '!' ➔ "⸙" PALM BRANCH
 /*<!group><1>                                                      */ DEADTRANS( L'`'	,0x246A	,0x266E	,0x0000	), // '`' ➔ "♮" MUSIC NATURAL SIGN math
 /*<!group><1>                                                      */ DEADTRANS( L'>'	,0x246A	,0x26DB	,0x0000	), // '>' ➔ "⛛" HEAVY WHITE DOWN-POINTING TRIANGLE, drive slow sign
+/*<!group><1>                                                      */ DEADTRANS( L'#'	,0x246A	,0x266F	,0x0000	), // '#' ➔ "♯" MUSIC SHARP SIGN math
 /*<!group><1>                                                      */ DEADTRANS( L'<'	,0x246A	,0x00A9	,0x0000	), // '<' ➔ "©" COPYRIGHT SIGN emoji
 /*<!group><1>                                                      */ DEADTRANS( L'-'	,0x246A	,0x2052	,0x0000	), // '-' ➔ "⁒" COMMERCIAL MINUS SIGN
-/*<!group><1>                                                      */ DEADTRANS( L'#'	,0x246A	,0x266F	,0x0000	), // '#' ➔ "♯" MUSIC SHARP SIGN math
 /*<!group><1>                                                      */ DEADTRANS( L'('	,0x246A	,0x263E	,0x0000	), // '(' ➔ "☾" LAST QUARTER MOON
 /*<!group><1>                                                      */ DEADTRANS( L')'	,0x246A	,0x263D	,0x0000	), // ')' ➔ "☽" FIRST QUARTER MOON
 /*<!group><1>                                                      */ DEADTRANS( L'%'	,0x246A	,0x2030	,0x0000	), // '%' ➔ "‰" PER MILLE SIGN
@@ -5269,6 +5278,7 @@
 /*<!group><1>                                                      */ DEADTRANS( L';'	,0x246A	,0x27F0	,0x0000	), // ';' ➔ "⟰" UPWARDS QUADRUPLE ARROW math
 /*<!group><1>                                                      */ DEADTRANS( 0x00A7	,0x246A	,0x27F0	,0x0000	), // '§' ➔ "⟰" UPWARDS QUADRUPLE ARROW math
 /*<!group><1>                                                      */ DEADTRANS( L'/'	,0x246A	,0x27B0	,0x0000	), // '/' ➔ "➰" CURLY LOOP emoji
+/*<!group><1>                                                      */ DEADTRANS( L'~'	,0x246A	,0x2122	,0x0000	), // '~' ➔ "™" TRADE MARK SIGN emoji
 /*<!group><1>                                                      */ DEADTRANS( L'_'	,0x246A	,0x27B2	,0x0000	), // '_' ➔ "➲" CIRCLED HEAVY WHITE RIGHTWARDS ARROW
 /*<!group><1>                                                      */ DEADTRANS( L'0'	,0x246A	,0xD83E	,0x0000	), // '0' ➔ "*" Wide-headed arrow high surrogate
 /*<!group><1>                                                      */ DEADTRANS( L'1'	,0x246A	,0xDC67	,0x0000	), // High surrogate: D83E; U+1F867 '1' ➔ "🡧" WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
@@ -5331,8 +5341,6 @@
 /*<!group><2>                                                      */ DEADTRANS( L'&'	,0x246B	,0x26CF	,0x0000	), // '&' ➔ "⛏" PICK emoji
 /*<!group><2>                                                      */ DEADTRANS( L'\''	,0x246B	,0x02CC	,0x0000	), // ''' ➔ "ˌ" MODIFIER LETTER LOW VERTICAL LINE
 /*<!group><2>                                                      */ DEADTRANS( 0x2019	,0x246B	,0x02CC	,0x0000	), // '’' ➔ "ˌ" MODIFIER LETTER LOW VERTICAL LINE
-/*<!group><2>                                                      */ DEADTRANS( L'^'	,0x246B	,0x00AA	,0x0000	), // '^' ➔ "ª" FEMININE ORDINAL INDICATOR
-/*<!group><2>                                                      */ DEADTRANS( L'~'	,0x246B	,0x2618	,0x0000	), // '~' ➔ "☘" SHAMROCK emoji
 /*<!group><2>                                                      */ DEADTRANS( L'*'	,0x246B	,0x2217	,0x0000	), // '*' ➔ "∗" ASTERISK OPERATOR math
 /*<!group><2>                                                      */ DEADTRANS( L'@'	,0x246B	,0x2756	,0x0000	), // '@' ➔ "❖" BLACK DIAMOND MINUS WHITE X
 /*<!group><2>                                                      */ DEADTRANS( L'\\'	,0x246B	,0x2216	,0x0000	), // '\' ➔ "∖" SET MINUS math
@@ -5341,6 +5349,7 @@
 /*<!group><2>                                                      */ DEADTRANS( L'}'	,0x246B	,0x00BA	,0x0000	), // '}' ➔ "º" MASCULINE ORDINAL INDICATOR
 /*<!group><2>                                                      */ DEADTRANS( L'['	,0x246B	,0x2751	,0x0000	), // '[' ➔ "❑" LOWER RIGHT SHADOWED WHITE SQUARE
 /*<!group><2>                                                      */ DEADTRANS( L']'	,0x246B	,0x274F	,0x0000	), // ']' ➔ "❏" LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+/*<!group><2>                                                      */ DEADTRANS( L'^'	,0x246B	,0x00AA	,0x0000	), // '^' ➔ "ª" FEMININE ORDINAL INDICATOR
 /*<!group><2>                                                      */ DEADTRANS( L':'	,0x246B	,0x2016	,0x0000	), // ':' ➔ "‖" DOUBLE VERTICAL LINE math
 /*<!group><2>                                                      */ DEADTRANS( L','	,0x246B	,0x2690	,0x0000	), // ',' ➔ "⚐" WHITE FLAG
 /*<!group><2>                                                      */ DEADTRANS( L'$'	,0x246B	,0x2712	,0x0000	), // '$' ➔ "✒" BLACK NIB emoji, fountain pen
@@ -5348,9 +5357,9 @@
 /*<!group><2>                                                      */ DEADTRANS( L'!'	,0x246B	,0x2318	,0x0000	), // '!' ➔ "⌘" PLACE OF INTEREST SIGN
 /*<!group><2>                                                      */ DEADTRANS( L'`'	,0x246B	,0x27C2	,0x0000	), // '`' ➔ "⟂" PERPENDICULAR math
 /*<!group><2>                                                      */ DEADTRANS( L'>'	,0x246B	,0x22C8	,0x0000	), // '>' ➔ "⋈" BOWTIE math
+/*<!group><2>                                                      */ DEADTRANS( L'#'	,0x246B	,0x26A7	,0x0000	), // '#' ➔ "⚧" MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
 /*<!group><2>                                                      */ DEADTRANS( L'<'	,0x246B	,0x270F	,0x0000	), // '<' ➔ "✏" PENCIL emoji
 /*<!group><2>                                                      */ DEADTRANS( L'-'	,0x246B	,0x2010	,0x0000	), // '-' ➔ "‐" HYPHEN
-/*<!group><2>                                                      */ DEADTRANS( L'#'	,0x246B	,0x26A7	,0x0000	), // '#' ➔ "⚧" MALE WITH STROKE AND MALE AND FEMALE SIGN emoji
 /*<!group><2>                                                      */ DEADTRANS( L'('	,0x246B	,0x2040	,0x0000	), // '(' ➔ "⁀" CHARACTER TIE
 /*<!group><2>                                                      */ DEADTRANS( L')'	,0x246B	,0x203F	,0x0000	), // ')' ➔ "‿" UNDERTIE
 /*<!group><2>                                                      */ DEADTRANS( L'%'	,0x246B	,0x2031	,0x0000	), // '%' ➔ "‱" PER TEN THOUSAND SIGN
@@ -5362,6 +5371,7 @@
 /*<!group><2>                                                      */ DEADTRANS( L';'	,0x246B	,0x2328	,0x0000	), // ';' ➔ "⌨" KEYBOARD emoji
 /*<!group><2>                                                      */ DEADTRANS( 0x00A7	,0x246B	,0x2328	,0x0000	), // '§' ➔ "⌨" KEYBOARD emoji
 /*<!group><2>                                                      */ DEADTRANS( L'/'	,0x246B	,0x2215	,0x0000	), // '/' ➔ "∕" DIVISION SLASH math
+/*<!group><2>                                                      */ DEADTRANS( L'~'	,0x246B	,0x2618	,0x0000	), // '~' ➔ "☘" SHAMROCK emoji
 /*<!group><2>                                                      */ DEADTRANS( L'_'	,0x246B	,0x2B8A	,0x0000	), // '_' ➔ "⮊" RIGHTWARDS BLACK CIRCLED WHITE ARROW
 /*<!group><2>                                                      */ DEADTRANS( L'0'	,0x246B	,0xD83E	,0x0000	), // '0' ➔ "*" Wide-headed arrow high surrogate
 /*<!group><2>                                                      */ DEADTRANS( L'1'	,0x246B	,0xDC87	,0x0000	), // High surrogate: D83E; U+1F887 '1' ➔ "🢇" WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
@@ -5431,8 +5441,6 @@
 /*<!group><3>                                                      */ DEADTRANS( L'&'	,0x2462	,0x220F	,0x0000	), // '&' ➔ "∏" N-ARY PRODUCT math
 /*<!group><3>                                                      */ DEADTRANS( L'\''	,0x2462	,0x2283	,0x0000	), // ''' ➔ "⊃" SUPERSET OF math
 /*<!group><3>                                                      */ DEADTRANS( 0x2019	,0x2462	,0x2283	,0x0000	), // '’' ➔ "⊃" SUPERSET OF math
-/*<!group><3>                                                      */ DEADTRANS( L'^'	,0x2462	,0x269B	,0x0000	), // '^' ➔ "⚛" ATOM SYMBOL emoji
-/*<!group><3>                                                      */ DEADTRANS( L'~'	,0x2462	,0x2245	,0x0000	), // '~' ➔ "≅" APPROXIMATELY EQUAL TO math
 /*<!group><3>                                                      */ DEADTRANS( L'*'	,0x2462	,0x00D7	,0x0000	), // '*' ➔ "×" MULTIPLICATION SIGN math
 /*<!group><3>                                                      */ DEADTRANS( L'@'	,0x2462	,0x26AA	,0x0000	), // '@' ➔ "⚪" MEDIUM WHITE CIRCLE emoji
 /*<!group><3>                                                      */ DEADTRANS( L'\\'	,0x2462	,0x221C	,0x0000	), // '\' ➔ "∜" FOURTH ROOT math
@@ -5441,6 +5449,7 @@
 /*<!group><3>                                                      */ DEADTRANS( L'}'	,0x2462	,0x2210	,0x0000	), // '}' ➔ "∐" N-ARY COPRODUCT math
 /*<!group><3>                                                      */ DEADTRANS( L'['	,0x2462	,0x276E	,0x0000	), // '[' ➔ "❮" HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
 /*<!group><3>                                                      */ DEADTRANS( L']'	,0x2462	,0x276F	,0x0000	), // ']' ➔ "❯" HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+/*<!group><3>                                                      */ DEADTRANS( L'^'	,0x2462	,0x269B	,0x0000	), // '^' ➔ "⚛" ATOM SYMBOL emoji
 /*<!group><3>                                                      */ DEADTRANS( L':'	,0x2462	,0x22EE	,0x0000	), // ':' ➔ "⋮" VERTICAL ELLIPSIS math
 /*<!group><3>                                                      */ DEADTRANS( L','	,0x2462	,0x2663	,0x0000	), // ',' ➔ "♣" BLACK CLUB SUIT emoji math
 /*<!group><3>                                                      */ DEADTRANS( L'$'	,0x2462	,0x2211	,0x0000	), // '$' ➔ "∑" N-ARY SUMMATION math
@@ -5448,9 +5457,9 @@
 /*<!group><3>                                                      */ DEADTRANS( L'!'	,0x2462	,0x2755	,0x0000	), // '!' ➔ "❕" WHITE EXCLAMATION MARK ORNAMENT emoji
 /*<!group><3>                                                      */ DEADTRANS( L'`'	,0x2462	,0x2228	,0x0000	), // '`' ➔ "∨" LOGICAL OR math
 /*<!group><3>                                                      */ DEADTRANS( L'>'	,0x2462	,0x2705	,0x0000	), // '>' ➔ "✅" WHITE HEAVY CHECK MARK emoji, check mark button
+/*<!group><3>                                                      */ DEADTRANS( L'#'	,0x2462	,0x2612	,0x0000	), // '#' ➔ "☒" BALLOT BOX WITH X
 /*<!group><3>                                                      */ DEADTRANS( L'<'	,0x2462	,0x2702	,0x0000	), // '<' ➔ "✂" BLACK SCISSORS emoji
 /*<!group><3>                                                      */ DEADTRANS( L'-'	,0x2462	,0x263B	,0x0000	), // '-' ➔ "☻" BLACK SMILING FACE
-/*<!group><3>                                                      */ DEADTRANS( L'#'	,0x2462	,0x2612	,0x0000	), // '#' ➔ "☒" BALLOT BOX WITH X
 /*<!group><3>                                                      */ DEADTRANS( L'('	,0x2462	,0x2639	,0x0000	), // '(' ➔ "☹" WHITE FROWNING FACE emoji with skin tone support
 /*<!group><3>                                                      */ DEADTRANS( L')'	,0x2462	,0x263A	,0x0000	), // ')' ➔ "☺" WHITE SMILING FACE emoji with skin tone support, 25th-ranking
 /*<!group><3>                                                      */ DEADTRANS( L'%'	,0x2462	,0x21AF	,0x0000	), // '%' ➔ "↯" DOWNWARDS ZIGZAG ARROW math
@@ -5462,6 +5471,7 @@
 /*<!group><3>                                                      */ DEADTRANS( L';'	,0x2462	,0x2E2B	,0x0000	), // ';' ➔ "⸫" ONE DOT OVER TWO DOTS PUNCTUATION
 /*<!group><3>                                                      */ DEADTRANS( 0x00A7	,0x2462	,0x2E2B	,0x0000	), // '§' ➔ "⸫" ONE DOT OVER TWO DOTS PUNCTUATION
 /*<!group><3>                                                      */ DEADTRANS( L'/'	,0x2462	,0x00F7	,0x0000	), // '/' ➔ "÷" DIVISION SIGN math
+/*<!group><3>                                                      */ DEADTRANS( L'~'	,0x2462	,0x2245	,0x0000	), // '~' ➔ "≅" APPROXIMATELY EQUAL TO math
 /*<!group><3>                                                      */ DEADTRANS( L'_'	,0x2462	,0x2023	,0x0000	), // '_' ➔ "‣" TRIANGULAR BULLET
 /*<!group><3>                                                      */ DEADTRANS( L'0'	,0x2462	,0x21D5	,0x0000	), // '0' ➔ "⇕" UP DOWN DOUBLE ARROW
 /*<!group><3>                                                      */ DEADTRANS( L'1'	,0x2462	,0x21D9	,0x0000	), // '1' ➔ "⇙" SOUTH WEST DOUBLE ARROW
@@ -5533,8 +5543,6 @@
 /*<!group><4>                                                      */ DEADTRANS( L'&'	,0x2463	,0x26F1	,0x0000	), // '&' ➔ "⛱" UMBRELLA ON GROUND emoji
 /*<!group><4>                                                      */ DEADTRANS( L'\''	,0x2463	,0x222A	,0x0000	), // ''' ➔ "∪" UNION math
 /*<!group><4>                                                      */ DEADTRANS( 0x2019	,0x2463	,0x222A	,0x0000	), // '’' ➔ "∪" UNION math
-/*<!group><4>                                                      */ DEADTRANS( L'^'	,0x2463	,0x2200	,0x0000	), // '^' ➔ "∀" FOR ALL math
-/*<!group><4>                                                      */ DEADTRANS( L'~'	,0x2463	,0x26FA	,0x0000	), // '~' ➔ "⛺" TENT emoji
 /*<!group><4>                                                      */ DEADTRANS( L'*'	,0x2463	,0x274C	,0x0000	), // '*' ➔ "❌" CROSS MARK emoji
 /*<!group><4>                                                      */ DEADTRANS( L'@'	,0x2463	,0x25CF	,0x0000	), // '@' ➔ "●" BLACK CIRCLE math
 /*<!group><4>                                                      */ DEADTRANS( L'\\'	,0x2463	,0x267B	,0x0000	), // '\' ➔ "♻" BLACK UNIVERSAL RECYCLING SYMBOL emoji
@@ -5543,6 +5551,7 @@
 /*<!group><4>                                                      */ DEADTRANS( L'}'	,0x2463	,0x2B55	,0x0000	), // '}' ➔ "⭕" HEAVY LARGE CIRCLE emoji, hollow red circle
 /*<!group><4>                                                      */ DEADTRANS( L'['	,0x2463	,0x27E6	,0x0000	), // '[' ➔ "⟦" MATHEMATICAL LEFT WHITE SQUARE BRACKET math
 /*<!group><4>                                                      */ DEADTRANS( L']'	,0x2463	,0x27E7	,0x0000	), // ']' ➔ "⟧" MATHEMATICAL RIGHT WHITE SQUARE BRACKET math
+/*<!group><4>                                                      */ DEADTRANS( L'^'	,0x2463	,0x2200	,0x0000	), // '^' ➔ "∀" FOR ALL math
 /*<!group><4>                                                      */ DEADTRANS( L':'	,0x2463	,0x205E	,0x0000	), // ':' ➔ "⁞" VERTICAL FOUR DOTS
 /*<!group><4>                                                      */ DEADTRANS( L','	,0x2463	,0x2666	,0x0000	), // ',' ➔ "♦" BLACK DIAMOND SUIT emoji
 /*<!group><4>                                                      */ DEADTRANS( L'$'	,0x2463	,0x263C	,0x0000	), // '$' ➔ "☼" WHITE SUN WITH RAYS
@@ -5550,9 +5559,9 @@
 /*<!group><4>                                                      */ DEADTRANS( L'!'	,0x2463	,0x2757	,0x0000	), // '!' ➔ "❗" HEAVY EXCLAMATION MARK SYMBOL emoji
 /*<!group><4>                                                      */ DEADTRANS( L'`'	,0x2463	,0x00AC	,0x0000	), // '`' ➔ "¬" NOT SIGN math
 /*<!group><4>                                                      */ DEADTRANS( L'>'	,0x2463	,0x25BA	,0x0000	), // '>' ➔ "►" BLACK RIGHT-POINTING POINTER
+/*<!group><4>                                                      */ DEADTRANS( L'#'	,0x2463	,0x25AA	,0x0000	), // '#' ➔ "▪" BLACK SMALL SQUARE emoji
 /*<!group><4>                                                      */ DEADTRANS( L'<'	,0x2463	,0x2700	,0x0000	), // '<' ➔ "✀" BLACK SAFETY SCISSORS
 /*<!group><4>                                                      */ DEADTRANS( L'-'	,0x2463	,0x2668	,0x0000	), // '-' ➔ "♨" HOT SPRINGS emoji
-/*<!group><4>                                                      */ DEADTRANS( L'#'	,0x2463	,0x25AA	,0x0000	), // '#' ➔ "▪" BLACK SMALL SQUARE emoji
 /*<!group><4>                                                      */ DEADTRANS( L'('	,0x2463	,0x2206	,0x0000	), // '(' ➔ "∆" INCREMENT math
 /*<!group><4>                                                      */ DEADTRANS( L')'	,0x2463	,0x2640	,0x0000	), // ')' ➔ "♀" FEMALE SIGN emoji, Venus, math
 /*<!group><4>                                                      */ DEADTRANS( L'%'	,0x2463	,0x2204	,0x0000	), // '%' ➔ "∄" THERE DOES NOT EXIST
@@ -5564,6 +5573,7 @@
 /*<!group><4>                                                      */ DEADTRANS( L';'	,0x2463	,0x205B	,0x0000	), // ';' ➔ "⁛" FOUR DOT MARK, highlighter mark
 /*<!group><4>                                                      */ DEADTRANS( 0x00A7	,0x2463	,0x205B	,0x0000	), // '§' ➔ "⁛" FOUR DOT MARK, highlighter mark
 /*<!group><4>                                                      */ DEADTRANS( L'/'	,0x2463	,0x25AB	,0x0000	), // '/' ➔ "▫" WHITE SMALL SQUARE emoji
+/*<!group><4>                                                      */ DEADTRANS( L'~'	,0x2463	,0x26FA	,0x0000	), // '~' ➔ "⛺" TENT emoji
 /*<!group><4>                                                      */ DEADTRANS( L'_'	,0x2463	,0x2B1D	,0x0000	), // '_' ➔ "⬝" BLACK VERY SMALL SQUARE
 /*<!group><4>                                                      */ DEADTRANS( L'0'	,0x2463	,0x2195	,0x0000	), // '0' ➔ "↕" UP DOWN ARROW emoji
 /*<!group><4>                                                      */ DEADTRANS( L'1'	,0x2463	,0x2199	,0x0000	), // '1' ➔ "↙" SOUTH WEST ARROW emoji
@@ -5632,8 +5642,6 @@
 /*<!group><5>                                                      */ DEADTRANS( L'&'	,0x2464	,0x2614	,0x0000	), // '&' ➔ "☔" UMBRELLA WITH RAIN DROPS emoji
 /*<!group><5>                                                      */ DEADTRANS( L'\''	,0x2464	,0x2935	,0x0000	), // ''' ➔ "⤵" ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 /*<!group><5>                                                      */ DEADTRANS( 0x2019	,0x2464	,0x2935	,0x0000	), // '’' ➔ "⤵" ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
-/*<!group><5>                                                      */ DEADTRANS( L'^'	,0x2464	,0x2220	,0x0000	), // '^' ➔ "∠" ANGLE math
-/*<!group><5>                                                      */ DEADTRANS( L'~'	,0x2464	,0x2625	,0x0000	), // '~' ➔ "☥" ANKH
 /*<!group><5>                                                      */ DEADTRANS( L'*'	,0x2464	,0x2B50	,0x0000	), // '*' ➔ "⭐" WHITE MEDIUM STAR emoji
 /*<!group><5>                                                      */ DEADTRANS( L'@'	,0x2464	,0x25CB	,0x0000	), // '@' ➔ "○" WHITE CIRCLE math
 /*<!group><5>                                                      */ DEADTRANS( L'\\'	,0x2464	,0x2622	,0x0000	), // '\' ➔ "☢" RADIOACTIVE SIGN emoji
@@ -5642,6 +5650,7 @@
 /*<!group><5>                                                      */ DEADTRANS( L'}'	,0x2464	,0x26C8	,0x0000	), // '}' ➔ "⛈" THUNDER CLOUD AND RAIN emoji
 /*<!group><5>                                                      */ DEADTRANS( L'['	,0x2464	,0x2654	,0x0000	), // '[' ➔ "♔" WHITE CHESS KING
 /*<!group><5>                                                      */ DEADTRANS( L']'	,0x2464	,0x221F	,0x0000	), // ']' ➔ "∟" RIGHT ANGLE math
+/*<!group><5>                                                      */ DEADTRANS( L'^'	,0x2464	,0x2220	,0x0000	), // '^' ➔ "∠" ANGLE math
 /*<!group><5>                                                      */ DEADTRANS( L':'	,0x2464	,0x22EF	,0x0000	), // ':' ➔ "⋯" MIDLINE HORIZONTAL ELLIPSIS math
 /*<!group><5>                                                      */ DEADTRANS( L','	,0x2464	,0x2660	,0x0000	), // ',' ➔ "♠" BLACK SPADE SUIT emoji math
 /*<!group><5>                                                      */ DEADTRANS( L'$'	,0x2464	,0x26D1	,0x0000	), // '$' ➔ "⛑" HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
@@ -5649,9 +5658,9 @@
 /*<!group><5>                                                      */ DEADTRANS( L'!'	,0x2464	,0x2049	,0x0000	), // '!' ➔ "⁉" EXCLAMATION QUESTION MARK emoji
 /*<!group><5>                                                      */ DEADTRANS( L'`'	,0x2464	,0x26C4	,0x0000	), // '`' ➔ "⛄" SNOWMAN WITHOUT SNOW emoji
 /*<!group><5>                                                      */ DEADTRANS( L'>'	,0x2464	,0x25B6	,0x0000	), // '>' ➔ "▶" BLACK RIGHT-POINTING TRIANGLE emoji, play button
+/*<!group><5>                                                      */ DEADTRANS( L'#'	,0x2464	,0x25FE	,0x0000	), // '#' ➔ "◾" BLACK MEDIUM SMALL SQUARE emoji
 /*<!group><5>                                                      */ DEADTRANS( L'<'	,0x2464	,0x25C0	,0x0000	), // '<' ➔ "◀" BLACK LEFT-POINTING TRIANGLE emoji, reverse button
 /*<!group><5>                                                      */ DEADTRANS( L'-'	,0x2464	,0x26D0	,0x0000	), // '-' ➔ "⛐" CAR SLIDING
-/*<!group><5>                                                      */ DEADTRANS( L'#'	,0x2464	,0x25FE	,0x0000	), // '#' ➔ "◾" BLACK MEDIUM SMALL SQUARE emoji
 /*<!group><5>                                                      */ DEADTRANS( L'('	,0x2464	,0x2207	,0x0000	), // '(' ➔ "∇" NABLA math
 /*<!group><5>                                                      */ DEADTRANS( L')'	,0x2464	,0x26F2	,0x0000	), // ')' ➔ "⛲" FOUNTAIN emoji
 /*<!group><5>                                                      */ DEADTRANS( L'%'	,0x2464	,0x2607	,0x0000	), // '%' ➔ "☇" LIGHTNING
@@ -5663,6 +5672,7 @@
 /*<!group><5>                                                      */ DEADTRANS( L';'	,0x2464	,0x2E2A	,0x0000	), // ';' ➔ "⸪" TWO DOTS OVER ONE DOT PUNCTUATION
 /*<!group><5>                                                      */ DEADTRANS( 0x00A7	,0x2464	,0x2E2A	,0x0000	), // '§' ➔ "⸪" TWO DOTS OVER ONE DOT PUNCTUATION
 /*<!group><5>                                                      */ DEADTRANS( L'/'	,0x2464	,0x25FD	,0x0000	), // '/' ➔ "◽" WHITE MEDIUM SMALL SQUARE emoji
+/*<!group><5>                                                      */ DEADTRANS( L'~'	,0x2464	,0x2625	,0x0000	), // '~' ➔ "☥" ANKH
 /*<!group><5>                                                      */ DEADTRANS( L'_'	,0x2464	,0x265A	,0x0000	), // '_' ➔ "♚" BLACK CHESS KING
 /*<!group><5>                                                      */ DEADTRANS( L'0'	,0x2464	,0x2B0D	,0x0000	), // '0' ➔ "⬍" UP DOWN BLACK ARROW
 /*<!group><5>                                                      */ DEADTRANS( L'1'	,0x2464	,0x2B0B	,0x0000	), // '1' ➔ "⬋" SOUTH WEST BLACK ARROW
@@ -5729,8 +5739,6 @@
 /*<!group><6>                                                      */ DEADTRANS( L'&'	,0x2465	,0x2602	,0x0000	), // '&' ➔ "☂" UMBRELLA emoji
 /*<!group><6>                                                      */ DEADTRANS( L'\''	,0x2465	,0x2934	,0x0000	), // ''' ➔ "⤴" ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 /*<!group><6>                                                      */ DEADTRANS( 0x2019	,0x2465	,0x2934	,0x0000	), // '’' ➔ "⤴" ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
-/*<!group><6>                                                      */ DEADTRANS( L'^'	,0x2465	,0x2697	,0x0000	), // '^' ➔ "⚗" ALEMBIC emoji
-/*<!group><6>                                                      */ DEADTRANS( L'~'	,0x2465	,0x260E	,0x0000	), // '~' ➔ "☎" BLACK TELEPHONE emoji
 /*<!group><6>                                                      */ DEADTRANS( L'*'	,0x2465	,0x2747	,0x0000	), // '*' ➔ "❇" SPARKLE emoji
 /*<!group><6>                                                      */ DEADTRANS( L'@'	,0x2465	,0x274D	,0x0000	), // '@' ➔ "❍" SHADOWED WHITE CIRCLE
 /*<!group><6>                                                      */ DEADTRANS( L'\\'	,0x2465	,0x267C	,0x0000	), // '\' ➔ "♼" RECYCLED PAPER SYMBOL
@@ -5739,6 +5747,7 @@
 /*<!group><6>                                                      */ DEADTRANS( L'}'	,0x2465	,0x26D4	,0x0000	), // '}' ➔ "⛔" NO ENTRY emoji
 /*<!group><6>                                                      */ DEADTRANS( L'['	,0x2465	,0x2655	,0x0000	), // '[' ➔ "♕" WHITE CHESS QUEEN
 /*<!group><6>                                                      */ DEADTRANS( L']'	,0x2465	,0x299C	,0x0000	), // ']' ➔ "⦜" RIGHT ANGLE VARIANT WITH SQUARE math
+/*<!group><6>                                                      */ DEADTRANS( L'^'	,0x2465	,0x2697	,0x0000	), // '^' ➔ "⚗" ALEMBIC emoji
 /*<!group><6>                                                      */ DEADTRANS( L':'	,0x2465	,0x22F0	,0x0000	), // ':' ➔ "⋰" UP RIGHT DIAGONAL ELLIPSIS math
 /*<!group><6><%comma><%comma><%period>                             */ DEADTRANS( L'A'	,0x2141	,0xDF90	,0x0000	), // High surrogate: D835; U+1D790 'A' ➔ "𝞐" MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL ALPHA
 /*<!group><6><%comma><%comma><%period>                             */ DEADTRANS( L'a'	,0x2141	,0xDFAA	,0x0000	), // High surrogate: D835; U+1D7AA 'a' ➔ "𝞪" MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL ALPHA
@@ -6005,9 +6014,9 @@
 /*<!group><6>                                                      */ DEADTRANS( L'!'	,0x2465	,0x26A0	,0x0000	), // '!' ➔ "⚠" WARNING SIGN emoji, mnemonic mapping
 /*<!group><6>                                                      */ DEADTRANS( L'`'	,0x2465	,0x2603	,0x0000	), // '`' ➔ "☃" SNOWMAN emoji, snowman with snow
 /*<!group><6>                                                      */ DEADTRANS( L'>'	,0x2465	,0x25BC	,0x0000	), // '>' ➔ "▼" BLACK DOWN-POINTING TRIANGLE math
+/*<!group><6>                                                      */ DEADTRANS( L'#'	,0x2465	,0x25FC	,0x0000	), // '#' ➔ "◼" BLACK MEDIUM SQUARE emoji
 /*<!group><6>                                                      */ DEADTRANS( L'<'	,0x2465	,0x25B2	,0x0000	), // '<' ➔ "▲" BLACK UP-POINTING TRIANGLE math
 /*<!group><6>                                                      */ DEADTRANS( L'-'	,0x2465	,0x262A	,0x0000	), // '-' ➔ "☪" STAR AND CRESCENT emoji
-/*<!group><6>                                                      */ DEADTRANS( L'#'	,0x2465	,0x25FC	,0x0000	), // '#' ➔ "◼" BLACK MEDIUM SQUARE emoji
 /*<!group><6>                                                      */ DEADTRANS( L'('	,0x2465	,0x2721	,0x0000	), // '(' ➔ "✡" STAR OF DAVID emoji
 /*<!group><6>                                                      */ DEADTRANS( L')'	,0x2465	,0x26BD	,0x0000	), // ')' ➔ "⚽" SOCCER BALL emoji
 /*<!group><6>                                                      */ DEADTRANS( L'%'	,0x2465	,0x2608	,0x0000	), // '%' ➔ "☈" THUNDERSTORM
@@ -6174,6 +6183,7 @@
 /*<!group><6>                                                      */ DEADTRANS( L';'	,0x2465	,0x22F1	,0x0000	), // ';' ➔ "⋱" DOWN RIGHT DIAGONAL ELLIPSIS
 /*<!group><6>                                                      */ DEADTRANS( 0x00A7	,0x2465	,0x22F1	,0x0000	), // '§' ➔ "⋱" DOWN RIGHT DIAGONAL ELLIPSIS
 /*<!group><6>                                                      */ DEADTRANS( L'/'	,0x2465	,0x25FB	,0x0000	), // '/' ➔ "◻" WHITE MEDIUM SQUARE emoji
+/*<!group><6>                                                      */ DEADTRANS( L'~'	,0x2465	,0x260E	,0x0000	), // '~' ➔ "☎" BLACK TELEPHONE emoji
 /*<!group><6>                                                      */ DEADTRANS( L'_'	,0x2465	,0x265B	,0x0000	), // '_' ➔ "♛" BLACK CHESS QUEEN
 /*<!group><6>                                                      */ DEADTRANS( L'0'	,0x2465	,0x21F3	,0x0000	), // '0' ➔ "⇳" UP DOWN WHITE ARROW
 /*<!group><6>                                                      */ DEADTRANS( L'1'	,0x2465	,0x2B03	,0x0000	), // '1' ➔ "⬃" SOUTH WEST WHITE ARROW
@@ -6243,8 +6253,6 @@
 /*<!group><7>                                                      */ DEADTRANS( L'&'	,0x2466	,0x26F8	,0x0000	), // '&' ➔ "⛸" ICE SKATE emoji
 /*<!group><7>                                                      */ DEADTRANS( L'\''	,0x2466	,0x26AD	,0x0000	), // ''' ➔ "⚭" MARRIAGE SYMBOL
 /*<!group><7>                                                      */ DEADTRANS( 0x2019	,0x2466	,0x26AD	,0x0000	), // '’' ➔ "⚭" MARRIAGE SYMBOL
-/*<!group><7>                                                      */ DEADTRANS( L'^'	,0x2466	,0x2693	,0x0000	), // '^' ➔ "⚓" ANCHOR emoji
-/*<!group><7>                                                      */ DEADTRANS( L'~'	,0x2466	,0x260F	,0x0000	), // '~' ➔ "☏" WHITE TELEPHONE
 /*<!group><7>                                                      */ DEADTRANS( L'*'	,0x2466	,0x2728	,0x0000	), // '*' ➔ "✨" SPARKLES emoji
 /*<!group><7>                                                      */ DEADTRANS( L'@'	,0x2466	,0x26AC	,0x0000	), // '@' ➔ "⚬" MEDIUM SMALL WHITE CIRCLE, engaged, betrothed, wedding ring
 /*<!group><7>                                                      */ DEADTRANS( L'\\'	,0x2466	,0x267D	,0x0000	), // '\' ➔ "♽" PARTIALLY-RECYCLED PAPER SYMBOL
@@ -6253,6 +6261,7 @@
 /*<!group><7>                                                      */ DEADTRANS( L'}'	,0x2466	,0x2742	,0x0000	), // '}' ➔ "❂" CIRCLED OPEN CENTRE EIGHT POINTED STAR
 /*<!group><7>                                                      */ DEADTRANS( L'['	,0x2466	,0x2656	,0x0000	), // '[' ➔ "♖" WHITE CHESS ROOK
 /*<!group><7>                                                      */ DEADTRANS( L']'	,0x2466	,0x2628	,0x0000	), // ']' ➔ "☨" CROSS OF LORRAINE
+/*<!group><7>                                                      */ DEADTRANS( L'^'	,0x2466	,0x2693	,0x0000	), // '^' ➔ "⚓" ANCHOR emoji
 /*<!group><7>                                                      */ DEADTRANS( L':'	,0x2466	,0x231A	,0x0000	), // ':' ➔ "⌚" WATCH emoji
 /*<!group><7><%comma>                                              */ DEADTRANS( L'A'	,0x212C	,0xDCD0	,0x0000	), // High surrogate: D835; U+1D4D0 'A' ➔ "𝓐" MATHEMATICAL BOLD SCRIPT CAPITAL A
 /*<!group><7><%comma>                                              */ DEADTRANS( L'a'	,0x212C	,0xDCEA	,0x0000	), // High surrogate: D835; U+1D4EA 'a' ➔ "𝓪" MATHEMATICAL BOLD SCRIPT SMALL A
@@ -6311,9 +6320,9 @@
 /*<!group><7>                                                      */ DEADTRANS( L'!'	,0x2466	,0x2763	,0x0000	), // '!' ➔ "❣" HEAVY HEART EXCLAMATION MARK ORNAMENT emoji
 /*<!group><7>                                                      */ DEADTRANS( L'`'	,0x2466	,0x2746	,0x0000	), // '`' ➔ "❆" HEAVY CHEVRON SNOWFLAKE
 /*<!group><7>                                                      */ DEADTRANS( L'>'	,0x2466	,0x23ED	,0x0000	), // '>' ➔ "⏭" BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR emoji, next track button
+/*<!group><7>                                                      */ DEADTRANS( L'#'	,0x2466	,0x2B1B	,0x0000	), // '#' ➔ "⬛" BLACK LARGE SQUARE emoji
 /*<!group><7>                                                      */ DEADTRANS( L'<'	,0x2466	,0x23EE	,0x0000	), // '<' ➔ "⏮" BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR emoji, last track button
 /*<!group><7>                                                      */ DEADTRANS( L'-'	,0x2466	,0x26F3	,0x0000	), // '-' ➔ "⛳" FLAG IN HOLE emoji
-/*<!group><7>                                                      */ DEADTRANS( L'#'	,0x2466	,0x2B1B	,0x0000	), // '#' ➔ "⬛" BLACK LARGE SQUARE emoji
 /*<!group><7>                                                      */ DEADTRANS( L'('	,0x2466	,0x303D	,0x0000	), // '(' ➔ "〽" PART ALTERNATION MARK emoji
 /*<!group><7>                                                      */ DEADTRANS( L')'	,0x2466	,0x26F4	,0x0000	), // ')' ➔ "⛴" FERRY emoji
 /*<!group><7>                                                      */ DEADTRANS( L'%'	,0x2466	,0x26AE	,0x0000	), // '%' ➔ "⚮" DIVORCE SYMBOL
@@ -6376,6 +6385,7 @@
 /*<!group><7>                                                      */ DEADTRANS( L';'	,0x2466	,0x23F3	,0x0000	), // ';' ➔ "⏳" HOURGLASS WITH FLOWING SAND emoji, hourglass not done
 /*<!group><7>                                                      */ DEADTRANS( 0x00A7	,0x2466	,0x23F3	,0x0000	), // '§' ➔ "⏳" HOURGLASS WITH FLOWING SAND emoji, hourglass not done
 /*<!group><7>                                                      */ DEADTRANS( L'/'	,0x2466	,0x2B1C	,0x0000	), // '/' ➔ "⬜" WHITE LARGE SQUARE emoji
+/*<!group><7>                                                      */ DEADTRANS( L'~'	,0x2466	,0x260F	,0x0000	), // '~' ➔ "☏" WHITE TELEPHONE
 /*<!group><7>                                                      */ DEADTRANS( L'_'	,0x2466	,0x265C	,0x0000	), // '_' ➔ "♜" BLACK CHESS ROOK
 /*<!group><7>                                                      */ DEADTRANS( L'0'	,0x2466	,0x2B65	,0x0000	), // '0' ➔ "⭥" UP DOWN TRIANGLE-HEADED ARROW
 /*<!group><7>                                                      */ DEADTRANS( L'1'	,0x2466	,0x2B69	,0x0000	), // '1' ➔ "⭩" SOUTH WEST TRIANGLE-HEADED ARROW
@@ -6445,8 +6455,6 @@
 /*<!group><8>                                                      */ DEADTRANS( L'&'	,0x2467	,0x26FD	,0x0000	), // '&' ➔ "⛽" FUEL PUMP emoji
 /*<!group><8>                                                      */ DEADTRANS( L'\''	,0x2467	,0x26B1	,0x0000	), // ''' ➔ "⚱" FUNERAL URN emoji
 /*<!group><8>                                                      */ DEADTRANS( 0x2019	,0x2467	,0x26B1	,0x0000	), // '’' ➔ "⚱" FUNERAL URN emoji
-/*<!group><8>                                                      */ DEADTRANS( L'^'	,0x2467	,0x2708	,0x0000	), // '^' ➔ "✈" AIRPLANE emoji
-/*<!group><8>                                                      */ DEADTRANS( L'~'	,0x2467	,0x2699	,0x0000	), // '~' ➔ "⚙" GEAR emoji
 /*<!group><8>                                                      */ DEADTRANS( L'*'	,0x2467	,0x2734	,0x0000	), // '*' ➔ "✴" EIGHT POINTED BLACK STAR emoji
 /*<!group><8>                                                      */ DEADTRANS( L'@'	,0x2467	,0x262F	,0x0000	), // '@' ➔ "☯" YIN YANG emoji
 /*<!group><8>                                                      */ DEADTRANS( L'\\'	,0x2467	,0x26EF	,0x0000	), // '\' ➔ "⛯" MAP SYMBOL FOR LIGHTHOUSE
@@ -6455,6 +6463,7 @@
 /*<!group><8>                                                      */ DEADTRANS( L'}'	,0x2467	,0x2626	,0x0000	), // '}' ➔ "☦" ORTHODOX CROSS emoji
 /*<!group><8>                                                      */ DEADTRANS( L'['	,0x2467	,0x2657	,0x0000	), // '[' ➔ "♗" WHITE CHESS BISHOP
 /*<!group><8>                                                      */ DEADTRANS( L']'	,0x2467	,0x271D	,0x0000	), // ']' ➔ "✝" LATIN CROSS emoji
+/*<!group><8>                                                      */ DEADTRANS( L'^'	,0x2467	,0x2708	,0x0000	), // '^' ➔ "✈" AIRPLANE emoji
 /*<!group><8>                                                      */ DEADTRANS( L':'	,0x2467	,0x23F1	,0x0000	), // ':' ➔ "⏱" STOPWATCH emoji
 /*<!group><8><%comma><%period>                                     */ DEADTRANS( L'A'	,0x2148	,0xDC68	,0x0000	), // High surrogate: D835; U+1D468 'A' ➔ "𝑨" MATHEMATICAL BOLD ITALIC CAPITAL A
 /*<!group><8><%comma><%period>                                     */ DEADTRANS( L'a'	,0x2148	,0xDC82	,0x0000	), // High surrogate: D835; U+1D482 'a' ➔ "𝒂" MATHEMATICAL BOLD ITALIC SMALL A
@@ -6575,9 +6584,9 @@
 /*<!group><8>                                                      */ DEADTRANS( L'!'	,0x2467	,0x2762	,0x0000	), // '!' ➔ "❢" HEAVY EXCLAMATION MARK ORNAMENT
 /*<!group><8>                                                      */ DEADTRANS( L'`'	,0x2467	,0x26C5	,0x0000	), // '`' ➔ "⛅" SUN BEHIND CLOUD emoji
 /*<!group><8>                                                      */ DEADTRANS( L'>'	,0x2467	,0x270C	,0x0000	), // '>' ➔ "✌" VICTORY HAND emoji
+/*<!group><8>                                                      */ DEADTRANS( L'#'	,0x2467	,0x2BBD	,0x0000	), // '#' ➔ "⮽" BALLOT BOX WITH LIGHT X
 /*<!group><8>                                                      */ DEADTRANS( L'<'	,0x2467	,0x26B0	,0x0000	), // '<' ➔ "⚰" COFFIN emoji
 /*<!group><8>                                                      */ DEADTRANS( L'-'	,0x2467	,0x26FC	,0x0000	), // '-' ➔ "⛼" HEADSTONE GRAVEYARD SYMBOL
-/*<!group><8>                                                      */ DEADTRANS( L'#'	,0x2467	,0x2BBD	,0x0000	), // '#' ➔ "⮽" BALLOT BOX WITH LIGHT X
 /*<!group><8>                                                      */ DEADTRANS( L'('	,0x2467	,0x2638	,0x0000	), // '(' ➔ "☸" WHEEL OF DHARMA emoji
 /*<!group><8>                                                      */ DEADTRANS( L')'	,0x2467	,0x270A	,0x0000	), // ')' ➔ "✊" RAISED FIST emoji
 /*<!group><8>                                                      */ DEADTRANS( L'%'	,0x2467	,0x2020	,0x0000	), // '%' ➔ "†" DAGGER
@@ -6692,6 +6701,7 @@
 /*<!group><8>                                                      */ DEADTRANS( L';'	,0x2467	,0x231B	,0x0000	), // ';' ➔ "⌛" HOURGLASS emoji, hourglass done
 /*<!group><8>                                                      */ DEADTRANS( 0x00A7	,0x2467	,0x231B	,0x0000	), // '§' ➔ "⌛" HOURGLASS emoji, hourglass done
 /*<!group><8>                                                      */ DEADTRANS( L'/'	,0x2467	,0x26C6	,0x0000	), // '/' ➔ "⛆" RAIN
+/*<!group><8>                                                      */ DEADTRANS( L'~'	,0x2467	,0x2699	,0x0000	), // '~' ➔ "⚙" GEAR emoji
 /*<!group><8>                                                      */ DEADTRANS( L'_'	,0x2467	,0x265D	,0x0000	), // '_' ➔ "♝" BLACK CHESS BISHOP
 /*<!group><8>                                                      */ DEADTRANS( L'0'	,0x2467	,0xDFD8	,0x0000	), // High surrogate: D835; U+1D7D8 '0' ➔ "𝟘" MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
 /*<!group><8>                                                      */ DEADTRANS( L'1'	,0x2467	,0xDFD9	,0x0000	), // High surrogate: D835; U+1D7D9 '1' ➔ "𝟙" MATHEMATICAL DOUBLE-STRUCK DIGIT ONE
@@ -6761,8 +6771,6 @@
 /*<!group><9>                                                      */ DEADTRANS( L'&'	,0x2468	,0x2651	,0x0000	), // '&' ➔ "♑" CAPRICORN emoji
 /*<!group><9>                                                      */ DEADTRANS( L'\''	,0x2468	,0x264E	,0x0000	), // ''' ➔ "♎" LIBRA emoji
 /*<!group><9>                                                      */ DEADTRANS( 0x2019	,0x2468	,0x264E	,0x0000	), // '’' ➔ "♎" LIBRA emoji
-/*<!group><9>                                                      */ DEADTRANS( L'^'	,0x2468	,0x2648	,0x0000	), // '^' ➔ "♈" ARIES emoji
-/*<!group><9>                                                      */ DEADTRANS( L'~'	,0x2468	,0x264C	,0x0000	), // '~' ➔ "♌" LEO emoji
 /*<!group><9>                                                      */ DEADTRANS( L'*'	,0x2468	,0x2733	,0x0000	), // '*' ➔ "✳" EIGHT SPOKED ASTERISK emoji
 /*<!group><9>                                                      */ DEADTRANS( L'@'	,0x2468	,0x264D	,0x0000	), // '@' ➔ "♍" VIRGO emoji
 /*<!group><9>                                                      */ DEADTRANS( L'\\'	,0x2468	,0x264B	,0x0000	), // '\' ➔ "♋" CANCER emoji
@@ -6771,6 +6779,7 @@
 /*<!group><9>                                                      */ DEADTRANS( L'}'	,0x2468	,0x2650	,0x0000	), // '}' ➔ "♐" SAGITTARIUS emoji
 /*<!group><9>                                                      */ DEADTRANS( L'['	,0x2468	,0x2658	,0x0000	), // '[' ➔ "♘" WHITE CHESS KNIGHT
 /*<!group><9>                                                      */ DEADTRANS( L']'	,0x2468	,0x269C	,0x0000	), // ']' ➔ "⚜" FLEUR-DE-LIS emoji
+/*<!group><9>                                                      */ DEADTRANS( L'^'	,0x2468	,0x2648	,0x0000	), // '^' ➔ "♈" ARIES emoji
 /*<!group><9>                                                      */ DEADTRANS( L':'	,0x2468	,0x23F0	,0x0000	), // ':' ➔ "⏰" ALARM CLOCK emoji
 /*<!group><9><%comma>                                              */ DEADTRANS( L'A'	,0x2111	,0xDD6C	,0x0000	), // High surrogate: D835; U+1D56C 'A' ➔ "𝕬" MATHEMATICAL BOLD FRAKTUR CAPITAL A
 /*<!group><9><%comma>                                              */ DEADTRANS( L'a'	,0x2111	,0xDD86	,0x0000	), // High surrogate: D835; U+1D586 'a' ➔ "𝖆" MATHEMATICAL BOLD FRAKTUR SMALL A
@@ -6829,9 +6838,9 @@
 /*<!group><9>                                                      */ DEADTRANS( L'!'	,0x2468	,0x2234	,0x0000	), // '!' ➔ "∴" THEREFORE math
 /*<!group><9>                                                      */ DEADTRANS( L'`'	,0x2468	,0x2601	,0x0000	), // '`' ➔ "☁" CLOUD emoji
 /*<!group><9>                                                      */ DEADTRANS( L'>'	,0x2468	,0x27B8	,0x0000	), // '>' ➔ "➸" HEAVY BLACK-FEATHERED RIGHTWARDS ARROW
+/*<!group><9>                                                      */ DEADTRANS( L'#'	,0x2468	,0x2652	,0x0000	), // '#' ➔ "♒" AQUARIUS emoji
 /*<!group><9>                                                      */ DEADTRANS( L'<'	,0x2468	,0x2604	,0x0000	), // '<' ➔ "☄" COMET emoji
 /*<!group><9>                                                      */ DEADTRANS( L'-'	,0x2468	,0x279F	,0x0000	), // '-' ➔ "➟" DASHED TRIANGLE-HEADED RIGHTWARDS ARROW
-/*<!group><9>                                                      */ DEADTRANS( L'#'	,0x2468	,0x2652	,0x0000	), // '#' ➔ "♒" AQUARIUS emoji
 /*<!group><9>                                                      */ DEADTRANS( L'('	,0x2468	,0x21AA	,0x0000	), // '(' ➔ "↪" RIGHTWARDS ARROW WITH HOOK emoji
 /*<!group><9>                                                      */ DEADTRANS( L')'	,0x2468	,0x21A9	,0x0000	), // ')' ➔ "↩" LEFTWARDS ARROW WITH HOOK emoji
 /*<!group><9>                                                      */ DEADTRANS( L'%'	,0x2468	,0x2649	,0x0000	), // '%' ➔ "♉" TAURUS emoji
@@ -6905,6 +6914,7 @@
 /*<!group><9>                                                      */ DEADTRANS( L';'	,0x2468	,0x29D7	,0x0000	), // ';' ➔ "⧗" BLACK HOURGLASS
 /*<!group><9>                                                      */ DEADTRANS( 0x00A7	,0x2468	,0x29D7	,0x0000	), // '§' ➔ "⧗" BLACK HOURGLASS
 /*<!group><9>                                                      */ DEADTRANS( L'/'	,0x2468	,0x3030	,0x0000	), // '/' ➔ "〰" WAVY DASH emoji
+/*<!group><9>                                                      */ DEADTRANS( L'~'	,0x2468	,0x264C	,0x0000	), // '~' ➔ "♌" LEO emoji
 /*<!group><9>                                                      */ DEADTRANS( L'_'	,0x2468	,0x265E	,0x0000	), // '_' ➔ "♞" BLACK CHESS KNIGHT
 /*<!group><9>                                                      */ DEADTRANS( L'0'	,0x2468	,0x2B7F	,0x0000	), // '0' ➔ "⭿" VERTICAL TAB KEY
 /*<!group><9>                                                      */ DEADTRANS( L'1'	,0x2468	,0x2B79	,0x0000	), // '1' ➔ "⭹" SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
@@ -6990,9 +7000,9 @@
 /*<!group>                                                         */ DEADTRANS( 0x00C9	,0x2460	,0x00B3	,0x0000	), // 'É' ➔ "³" SUPERSCRIPT THREE
 /*<!group>                                                         */ DEADTRANS( 0x00C8	,0x2460	,0x00D1	,0x0000	), // 'È' ➔ "Ñ" LATIN CAPITAL LETTER N WITH TILDE shortcut
 /*<!group>                                                         */ DEADTRANS( 0x00E8	,0x2460	,0x00F1	,0x0000	), // 'è' ➔ "ñ" LATIN SMALL LETTER N WITH TILDE shortcut
-/*<!group><ellipsis>                                               */ DEADTRANS( L'~'	,0x263C	,0x2620	,0x0000	), // '~' ➔ "☠" SKULL AND CROSSBONES emoji
 /*<!group><ellipsis>                                               */ DEADTRANS( L'$'	,0x263C	,0x2600	,0x0000	), // '$' ➔ "☀" BLACK SUN WITH RAYS emoji
 /*<!group><ellipsis>                                               */ DEADTRANS( L'`'	,0x263C	,0x2744	,0x0000	), // '`' ➔ "❄" SNOWFLAKE emoji
+/*<!group><ellipsis>                                               */ DEADTRANS( L'~'	,0x263C	,0x2620	,0x0000	), // '~' ➔ "☠" SKULL AND CROSSBONES emoji
 /*<!group>                                                         */ DEADTRANS( 0x2014	,0x2460	,0x2E3B	,0x0000	), // '—' ➔ "⸻" THREE-EM DASH
 /*<!group>                                                         */ DEADTRANS( 0x2013	,0x2460	,0x2E3A	,0x0000	), // '–' ➔ "⸺" TWO-EM DASH
 /*<!group>                                                         */ DEADTRANS( L'F'	,0x2460	,0x0191	,0x0000	), // 'F' ➔ "Ƒ" LATIN CAPITAL LETTER F WITH HOOK
@@ -8198,8 +8208,6 @@
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'&'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '&' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'\''	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ''' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( 0x2019	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '’' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'^'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '^' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'~'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '~' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'*'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '*' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'@'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '@' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'\\'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '\' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -8208,6 +8216,7 @@
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'}'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '}' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'['	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '[' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L']'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ']' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'^'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '^' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L':'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ':' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L','	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ',' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'$'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '$' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -8215,9 +8224,9 @@
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'!'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '!' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'`'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '`' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'>'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '>' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'#'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '#' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'<'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '<' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'-'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '-' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
-/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'#'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '#' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'('	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '(' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L')'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ')' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'%'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '%' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -8229,6 +8238,7 @@
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L';'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C ';' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( 0x00A7	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '§' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'/'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '/' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
+/*<!reversed><!doubleacute>                                        */ DEADTRANS( L'~'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '~' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'_'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '_' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'0'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '0' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
 /*<!reversed><!doubleacute>                                        */ DEADTRANS( L'1'	,0x263A	,0xDD1C	,0x0000	), // High surrogate: D83D; U+1F51C '1' ➔ "🔜" SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -8351,10 +8361,9 @@
 /*<!reversed><!superscript>                                        */ DEADTRANS( L'q'	,0x02BD	,0x02C1	,0x0000	), // 'q' ➔ "ˁ" MODIFIER LETTER REVERSED GLOTTAL STOP
 /*<!reversed>                                                      */ DEADTRANS( L'\''	,0x1D19	,0x02BD	,0x0000	), // ''' ➔ "ʽ" MODIFIER LETTER REVERSED COMMA
 /*<!reversed>                                                      */ DEADTRANS( 0x2019	,0x1D19	,0x02BD	,0x0000	), // '’' ➔ "ʽ" MODIFIER LETTER REVERSED COMMA
-/*<!reversed>                                                      */ DEADTRANS( L'^'	,0x1D19	,0x29A3	,0x0000	), // '^' ➔ "⦣" REVERSED ANGLE
-/*<!reversed>                                                      */ DEADTRANS( L'~'	,0x1D19	,0x223D	,0x0000	), // '~' ➔ "∽" REVERSED TILDE
 /*<!reversed>                                                      */ DEADTRANS( L'|'	,0x1D19	,0x2AEE	,0x0000	), // '|' ➔ "⫮" DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 /*<!reversed>                                                      */ DEADTRANS( L'}'	,0x1D19	,0x29B0	,0x0000	), // '}' ➔ "⦰" REVERSED EMPTY SET
+/*<!reversed>                                                      */ DEADTRANS( L'^'	,0x1D19	,0x29A3	,0x0000	), // '^' ➔ "⦣" REVERSED ANGLE
 /*<!reversed>                                                      */ DEADTRANS( L','	,0x1D19	,0x2E41	,0x0000	), // ',' ➔ "⹁" REVERSED COMMA
 /*<!reversed>                                                      */ DEADTRANS( L'='	,0x1D19	,0x22CD	,0x0000	), // '=' ➔ "⋍" REVERSED TILDE EQUALS
 /*<!reversed>                                                      */ DEADTRANS( L'`'	,0x1D19	,0x2310	,0x0000	), // '`' ➔ "⌐" REVERSED NOT SIGN
@@ -8363,6 +8372,7 @@
 /*<!reversed>                                                      */ DEADTRANS( 0x20AC	,0x1D19	,0x201F	,0x0000	), // '€' ➔ "‟" DOUBLE HIGH-REVERSED-9 QUOTATION MARK
 /*<!reversed>                                                      */ DEADTRANS( L';'	,0x1D19	,0x204F	,0x0000	), // ';' ➔ "⁏" REVERSED SEMICOLON
 /*<!reversed>                                                      */ DEADTRANS( 0x00A7	,0x1D19	,0x204F	,0x0000	), // '§' ➔ "⁏" REVERSED SEMICOLON
+/*<!reversed>                                                      */ DEADTRANS( L'~'	,0x1D19	,0x223D	,0x0000	), // '~' ➔ "∽" REVERSED TILDE
 /*<!reversed>                                                      */ DEADTRANS( L'_'	,0x1D19	,0x2B88	,0x0000	), // '_' ➔ "⮈" LEFTWARDS BLACK CIRCLED WHITE ARROW
 /*<!reversed>                                                      */ DEADTRANS( L'1'	,0x1D19	,0x2216	,0x0000	), // '1' ➔ "∖" SET MINUS
 /*<!reversed>                                                      */ DEADTRANS( L'2'	,0x1D19	,0x29F9	,0x0000	), // '2' ➔ "⧹" BIG REVERSE SOLIDUS
@@ -8419,41 +8429,41 @@
 /*<!stroke><!group><!group><!group><!group>                        */ DEADTRANS( 0x20AC	,0xA7DC	,0x2204	,0x0000	), // '€' ➔ "∄" THERE DOES NOT EXIST
 /*<!stroke><!group><!group><!group><!group>                        */ DEADTRANS( L'o'	,0xA7DC	,0xAB3E	,0x0000	), // 'o' ➔ "ꬾ" LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'\''	,0x1E9C	,0x2285	,0x0000	), // ''' ➔ "⊅" NOT A SUPERSET OF
-/*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'~'	,0x1E9C	,0x2246	,0x0000	), // '~' ➔ "≆" APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'"'	,0x1E9C	,0x220C	,0x0000	), // '"' ➔ "∌" DOES NOT CONTAIN AS MEMBER
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( 0x20AC	,0x1E9C	,0x220C	,0x0000	), // '€' ➔ "∌" DOES NOT CONTAIN AS MEMBER
+/*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'~'	,0x1E9C	,0x2246	,0x0000	), // '~' ➔ "≆" APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'l'	,0x1E9C	,0x019B	,0x0000	), // 'l' ➔ "ƛ" LATIN SMALL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'L'	,0x1E9C	,0xA7DC	,0x0000	), // 'L' ➔ "Ƛ" LATIN CAPITAL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L'o'	,0x1E9C	,0xAB3F	,0x0000	), // 'o' ➔ "ꬿ" LATIN SMALL LETTER OPEN O WITH STROKE
 /*<!stroke><!group><!group><!group>                                */ DEADTRANS( L's'	,0x1E9C	,0x1E9C	,0x0000	), // 's' ➔ "ẜ" LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'\''	,0xAB3F	,0x2284	,0x0000	), // ''' ➔ "⊄" NOT A SUBSET OF
-/*<!stroke><!group><!group>                                        */ DEADTRANS( L'~'	,0xAB3F	,0x2247	,0x0000	), // '~' ➔ "≇" NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'|'	,0xAB3F	,0x2226	,0x0000	), // '|' ➔ "∦" NOT PARALLEL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'='	,0xAB3F	,0x2262	,0x0000	), // '=' ➔ "≢" NOT IDENTICAL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'>'	,0xAB3F	,0x2271	,0x0000	), // '>' ➔ "≱" NEITHER GREATER-THAN NOR EQUAL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'<'	,0xAB3F	,0x2270	,0x0000	), // '<' ➔ "≰" NEITHER LESS-THAN NOR EQUAL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'"'	,0xAB3F	,0x2209	,0x0000	), // '"' ➔ "∉" NOT AN ELEMENT OF
 /*<!stroke><!group><!group>                                        */ DEADTRANS( 0x20AC	,0xAB3F	,0x2209	,0x0000	), // '€' ➔ "∉" NOT AN ELEMENT OF
+/*<!stroke><!group><!group>                                        */ DEADTRANS( L'~'	,0xAB3F	,0x2247	,0x0000	), // '~' ➔ "≇" NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'l'	,0xAB3F	,0x019B	,0x0000	), // 'l' ➔ "ƛ" LATIN SMALL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'L'	,0xAB3F	,0xA7DC	,0x0000	), // 'L' ➔ "Ƛ" LATIN CAPITAL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L'o'	,0xAB3F	,0xAB3F	,0x0000	), // 'o' ➔ "ꬿ" LATIN SMALL LETTER OPEN O WITH STROKE
 /*<!stroke><!group><!group>                                        */ DEADTRANS( L's'	,0xAB3F	,0x1E9C	,0x0000	), // 's' ➔ "ẜ" LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 /*<!stroke><!group>                                                */ DEADTRANS( L'\''	,0x019B	,0x2285	,0x0000	), // ''' ➔ "⊅" NOT A SUPERSET OF
-/*<!stroke><!group>                                                */ DEADTRANS( L'~'	,0x019B	,0x2244	,0x0000	), // '~' ➔ "≄" NOT ASYMPTOTICALLY EQUAL TO
 /*<!stroke><!group>                                                */ DEADTRANS( L'|'	,0x019B	,0x2226	,0x0000	), // '|' ➔ "∦" NOT PARALLEL TO
 /*<!stroke><!group>                                                */ DEADTRANS( L'='	,0x019B	,0x2262	,0x0000	), // '=' ➔ "≢" NOT IDENTICAL TO
 /*<!stroke><!group>                                                */ DEADTRANS( L'>'	,0x019B	,0x2271	,0x0000	), // '>' ➔ "≱" NEITHER GREATER-THAN NOR EQUAL TO
 /*<!stroke><!group>                                                */ DEADTRANS( L'<'	,0x019B	,0x2270	,0x0000	), // '<' ➔ "≰" NEITHER LESS-THAN NOR EQUAL TO
 /*<!stroke><!group>                                                */ DEADTRANS( L'"'	,0x019B	,0x220C	,0x0000	), // '"' ➔ "∌" DOES NOT CONTAIN AS MEMBER
 /*<!stroke><!group>                                                */ DEADTRANS( 0x20AC	,0x019B	,0x220C	,0x0000	), // '€' ➔ "∌" DOES NOT CONTAIN AS MEMBER
+/*<!stroke><!group>                                                */ DEADTRANS( L'~'	,0x019B	,0x2244	,0x0000	), // '~' ➔ "≄" NOT ASYMPTOTICALLY EQUAL TO
 /*<!stroke><!group><1>                                             */ DEADTRANS( L'|'	,0x2270	,0x2224	,0x0000	), // '|' ➔ "∤" DOES NOT DIVIDE
 /*<!stroke><!group><1>                                             */ DEADTRANS( L'o'	,0x2270	,0xAB3E	,0x0000	), // 'o' ➔ "ꬾ" LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 /*<!stroke><!group><2>                                             */ DEADTRANS( L'|'	,0x2271	,0x2226	,0x0000	), // '|' ➔ "∦" NOT PARALLEL TO
 /*<!stroke><!group><2>                                             */ DEADTRANS( L'o'	,0x2271	,0xAB3E	,0x0000	), // 'o' ➔ "ꬾ" LATIN SMALL LETTER BLACKLETTER O WITH STROKE
 /*<!stroke><!group><3>                                             */ DEADTRANS( L'\''	,0x1E9C	,0x2285	,0x0000	), // ''' ➔ "⊅" NOT A SUPERSET OF
-/*<!stroke><!group><3>                                             */ DEADTRANS( L'~'	,0x1E9C	,0x2246	,0x0000	), // '~' ➔ "≆" APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 /*<!stroke><!group><3>                                             */ DEADTRANS( L'"'	,0x1E9C	,0x220C	,0x0000	), // '"' ➔ "∌" DOES NOT CONTAIN AS MEMBER
 /*<!stroke><!group><3>                                             */ DEADTRANS( 0x20AC	,0x1E9C	,0x220C	,0x0000	), // '€' ➔ "∌" DOES NOT CONTAIN AS MEMBER
+/*<!stroke><!group><3>                                             */ DEADTRANS( L'~'	,0x1E9C	,0x2246	,0x0000	), // '~' ➔ "≆" APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 /*<!stroke><!group><3>                                             */ DEADTRANS( L'l'	,0x1E9C	,0x019B	,0x0000	), // 'l' ➔ "ƛ" LATIN SMALL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><3>                                             */ DEADTRANS( L'L'	,0x1E9C	,0xA7DC	,0x0000	), // 'L' ➔ "Ƛ" LATIN CAPITAL LETTER LAMBDA WITH STROKE
 /*<!stroke><!group><3>                                             */ DEADTRANS( L'o'	,0x1E9C	,0xAB3F	,0x0000	), // 'o' ➔ "ꬿ" LATIN SMALL LETTER OPEN O WITH STROKE
@@ -8615,8 +8625,8 @@
 /*<!subscript><!subscript><!turned>                                */ DEADTRANS( L'w'	,0x0292	,0x1AC0	,0x0000	), // 'w' ➔ "ᫀ" COMBINING LATIN SMALL LETTER TURNED W BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'\''	,0x2017	,0x0329	,0x0000	), // ''' ➔ "̩" COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 /*<!subscript><!subscript>                                         */ DEADTRANS( 0x2019	,0x2017	,0x0329	,0x0000	), // '’' ➔ "̩" COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-/*<!subscript><!subscript>                                         */ DEADTRANS( L'^'	,0x2017	,0x0356	,0x0000	), // '^' ➔ "͖" COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'*'	,0x2017	,0x0359	,0x0000	), // '*' ➔ "͙" COMBINING ASTERISK BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'^'	,0x2017	,0x0356	,0x0000	), // '^' ➔ "͖" COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'>'	,0x2017	,0x0355	,0x0000	), // '>' ➔ "͕" COMBINING RIGHT ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'<'	,0x2017	,0x0354	,0x0000	), // '<' ➔ "͔" COMBINING LEFT ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'('	,0x2017	,0x1ABD	,0x0000	), // '(' ➔ "᪽" COMBINING PARENTHESES BELOW
@@ -9048,8 +9058,8 @@
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'['	,0xFE4C	,0x1AC5	,0x0000	), // '[' ➔ "᫅" COMBINING SQUARE BRACKETS ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L']'	,0xFE4C	,0x1AC5	,0x0000	), // ']' ➔ "᫅" COMBINING SQUARE BRACKETS ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'>'	,0xFE4C	,0x0350	,0x0000	), // '>' ➔ "͐" COMBINING RIGHT ARROWHEAD ABOVE
-/*<!superscript><!superscript>                                     */ DEADTRANS( L'<'	,0xFE4C	,0x1DFE	,0x0000	), // '<' ➔ "᷾" COMBINING LEFT ARROWHEAD ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'#'	,0xFE4C	,0x1AD9	,0x0000	), // '#' ➔ "᫙" COMBINING SHARP SIGN
+/*<!superscript><!superscript>                                     */ DEADTRANS( L'<'	,0xFE4C	,0x1DFE	,0x0000	), // '<' ➔ "᷾" COMBINING LEFT ARROWHEAD ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'('	,0xFE4C	,0x1ABB	,0x0000	), // '(' ➔ "᪻" COMBINING PARENTHESES ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L')'	,0xFE4C	,0x1ABC	,0x0000	), // ')' ➔ "᪼" COMBINING DOUBLE PARENTHESES ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'+'	,0xFE4C	,0x1AC8	,0x0000	), // '+' ➔ "᫈" COMBINING PLUS SIGN ABOVE
@@ -9317,10 +9327,10 @@
 /*<!tilde><!turned>                                                */ DEADTRANS( 0x202F	,0x223D	,0x2E2F	,0x0000	), // ' ' ➔ "ⸯ" VERTICAL TILDE
 /*<!tilde><!turned>                                                */ DEADTRANS( L' '	,0x223D	,0x033E	,0x0000	), // ' ' ➔ "̾" COMBINING VERTICAL TILDE
 /*<!tilde><!turned>                                                */ DEADTRANS( 0x200B	,0x223D	,0x033E	,0x0000	), // '​' ➔ "̾" COMBINING VERTICAL TILDE
-/*<!tilde><%ampersand>                                             */ DEADTRANS( L'^'	,0x25B3	,0x20E4	,0x0000	), // '^' ➔ "⃤" COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L'\\'	,0x25B3	,0x20E0	,0x0000	), // '\' ➔ "⃠" COMBINING ENCLOSING CIRCLE BACKSLASH
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L'['	,0x25B3	,0x20DE	,0x0000	), // '[' ➔ "⃞" COMBINING ENCLOSING SQUARE
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L']'	,0x25B3	,0x20E3	,0x0000	), // ']' ➔ "⃣" COMBINING ENCLOSING KEYCAP
+/*<!tilde><%ampersand>                                             */ DEADTRANS( L'^'	,0x25B3	,0x20E4	,0x0000	), // '^' ➔ "⃤" COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L'>'	,0x25B3	,0x20DF	,0x0000	), // '>' ➔ "⃟" COMBINING ENCLOSING DIAMOND
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L'<'	,0x25B3	,0x20EA	,0x0000	), // '<' ➔ "⃪" COMBINING LEFTWARDS ARROW OVERLAY
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L'('	,0x25B3	,0x1ABE	,0x0000	), // '(' ➔ "᪾" COMBINING PARENTHESES OVERLAY
@@ -9361,7 +9371,6 @@
 /*<!tilde><%ampersand>                                             */ DEADTRANS( 0x202F	,0x25B3	,0x25B3	,0x0000	), // ' ' ➔ "△" WHITE UP-POINTING TRIANGLE
 /*<!tilde><%ampersand>                                             */ DEADTRANS( L' '	,0x25B3	,0x20E4	,0x0000	), // ' ' ➔ "⃤" COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 /*<!tilde><%ampersand>                                             */ DEADTRANS( 0x200B	,0x25B3	,0x20E4	,0x0000	), // '​' ➔ "⃤" COMBINING ENCLOSING UPWARD POINTING TRIANGLE
-/*<!tilde>                                                         */ DEADTRANS( L'~'	,0x00F5	,0xFE0E	,0x0000	), // '~' ➔ "︎" VARIATION SELECTOR-15, text style
 /*<!tilde>                                                         */ DEADTRANS( L'*'	,0x00F5	,0x2051	,0x0000	), // '*' ➔ "⁑" TWO ASTERISKS ALIGNED VERTICALLY
 /*<!tilde>                                                         */ DEADTRANS( L'\\'	,0x00F5	,0xFE00	,0x0000	), // '\' ➔ "︀" VARIATION SELECTOR-1
 /*<!tilde>                                                         */ DEADTRANS( L'['	,0x00F5	,0x2770	,0x0000	), // '[' ➔ "❰" HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
@@ -9369,13 +9378,14 @@
 /*<!tilde>                                                         */ DEADTRANS( L'$'	,0x00F5	,0x0360	,0x0000	), // '$' ➔ "͠" COMBINING DOUBLE TILDE
 /*<!tilde>                                                         */ DEADTRANS( L'='	,0x00F5	,0x034C	,0x0000	), // '=' ➔ "͌" COMBINING ALMOST EQUAL TO ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'`'	,0x00F5	,0x000C	,0x0000	), // '`' ➔ "" FORM FEED, page break in plain text
-/*<!tilde>                                                         */ DEADTRANS( L'-'	,0x00F5	,0x2060	,0x0000	), // '-' ➔ "⁠" WORD JOINER
 /*<!tilde>                                                         */ DEADTRANS( L'#'	,0x00F5	,0x29E4	,0x0000	), // '#' ➔ "⧤" EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+/*<!tilde>                                                         */ DEADTRANS( L'-'	,0x00F5	,0x2060	,0x0000	), // '-' ➔ "⁠" WORD JOINER
 /*<!tilde>                                                         */ DEADTRANS( L'('	,0x00F5	,0x034F	,0x0000	), // '(' ➔ "͏" COMBINING GRAPHEME JOINER
 /*<!tilde>                                                         */ DEADTRANS( L')'	,0x00F5	,0xFEFF	,0x0000	), // ')' ➔ "﻿" BYTE ORDER MARK, in legacy usage ZERO WIDTH NO-BREAK SPACE
 /*<!tilde>                                                         */ DEADTRANS( L'+'	,0x00F5	,0x2A24	,0x0000	), // '+' ➔ "⨤" PLUS SIGN WITH TILDE ABOVE
 /*<!tilde>                                                         */ DEADTRANS( L'"'	,0x00F5	,0xFE0F	,0x0000	), // '"' ➔ "️" VARIATION SELECTOR-16, emoji style
 /*<!tilde>                                                         */ DEADTRANS( 0x20AC	,0x00F5	,0xFE0F	,0x0000	), // '€' ➔ "️" VARIATION SELECTOR-16, emoji style
+/*<!tilde>                                                         */ DEADTRANS( L'~'	,0x00F5	,0xFE0E	,0x0000	), // '~' ➔ "︎" VARIATION SELECTOR-15, text style
 /*<!tilde>                                                         */ DEADTRANS( L'_'	,0x00F5	,0x2053	,0x0000	), // '_' ➔ "⁓" SWUNG DASH
 /*<!tilde>                                                         */ DEADTRANS( L'0'	,0x00F5	,0x02D5	,0x0000	), // '0' ➔ "˕" MODIFIER LETTER DOWN TACK
 /*<!tilde>                                                         */ DEADTRANS( L'1'	,0x00F5	,0x2020	,0x0000	), // '1' ➔ "†" DAGGER
@@ -9448,8 +9458,8 @@
 /*<!turned><!group><!group>                                        */ DEADTRANS( L'G'	,0x2C70	,0xA77E	,0x0000	), // 'G' ➔ "Ꝿ" LATIN CAPITAL LETTER TURNED INSULAR G
 /*<!turned><!group><!group>                                        */ DEADTRANS( L'g'	,0x2C70	,0xA77F	,0x0000	), // 'g' ➔ "ꝿ" LATIN SMALL LETTER TURNED INSULAR G
 /*<!turned><!group><!group>                                        */ DEADTRANS( L'o'	,0x2C70	,0xAB43	,0x0000	), // 'o' ➔ "ꭃ" LATIN SMALL LETTER TURNED O OPEN-O
-/*<!turned><!group>                                                */ DEADTRANS( L'^'	,0x1D02	,0x29A2	,0x0000	), // '^' ➔ "⦢" TURNED ANGLE
 /*<!turned><!group>                                                */ DEADTRANS( L'|'	,0x1D02	,0x2E38	,0x0000	), // '|' ➔ "⸸" TURNED DAGGER
+/*<!turned><!group>                                                */ DEADTRANS( L'^'	,0x1D02	,0x29A2	,0x0000	), // '^' ➔ "⦢" TURNED ANGLE
 /*<!turned><!group>                                                */ DEADTRANS( L'`'	,0x1D02	,0x2319	,0x0000	), // '`' ➔ "⌙" TURNED NOT SIGN
 /*<!turned><!group><1>                                             */ DEADTRANS( L'G'	,0x2319	,0xA77E	,0x0000	), // 'G' ➔ "Ꝿ" LATIN CAPITAL LETTER TURNED INSULAR G
 /*<!turned><!group><1>                                             */ DEADTRANS( L'g'	,0x2319	,0xA77F	,0x0000	), // 'g' ➔ "ꝿ" LATIN SMALL LETTER TURNED INSULAR G
