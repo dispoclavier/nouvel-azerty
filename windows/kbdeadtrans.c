@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Exclude multikey equivalents             6.1.3.1.0 Fri 2025-11-14T0829+0100
 * Include multikey sequences in 2 files    6.1.3.0.0 Fri 2025-11-14T0554+0100
 * Split off kbdeadtrans-deadkeys.c         6.1.2.0.0 Thu 2025-10-30T0026+0100
 * Support diacriticized Greek letters too  6.1.1.0.0 Wed 2025-10-29T0201+0100
@@ -255,8 +256,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * This is up-to-date and overrides the legacy dead key content.
 * See kbdeadtrans-multikey-equivalents.c
 *
-\*****************************************************************************/
 #include "kbdeadtrans-multikey-equivalents.c"
+\*****************************************************************************/
 
 /*****************************************************************************\
 * Legacy dead key content.
