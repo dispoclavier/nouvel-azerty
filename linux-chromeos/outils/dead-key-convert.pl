@@ -3,7 +3,7 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-11-11T1404+0100
+# 2025-11-14T0532+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -123,31 +123,441 @@ my $input_path = 'Compose.yml';
 open( INPUT, '<', $input_path ) or die $!;
 print( "Opened file $input_path.\n" );
 
-my $output_path = 'WINDOWS/dead-keys.c';
-open( OUTPUT, '>', $output_path ) or die $!;
-print( "Opened file $output_path.\n" );
+my $deadkey_path = 'WINDOWS/dead-keys.c';
+open( DEADKEYS, '>', $deadkey_path ) or die $!;
+print( "Opened file $deadkey_path.\n" );
 
-my $list_path = 'WINDOWS/dead-keys.txt';
-open( LIST, '>', $list_path ) or die $!;
-print( "Opened file $list_path.\n" );
+my $equivalents_path = 'WINDOWS/multikey-equivalents.c';
+open( EQUIVALENTS, '>', $equivalents_path ) or die $!;
+print( "Opened file $equivalents_path.\n" );
+
+my $multikey_path = 'WINDOWS/multikey.c';
+open( MULTIKEY, '>', $multikey_path ) or die $!;
+print( "Opened file $multikey_path.\n" );
+
+my $report_path = 'WINDOWS/dead-keys.txt';
+open( REPORT, '>', $report_path ) or die $!;
+print( "Opened file $report_path.\n" );
 
 my $log_path = 'WINDOWS/dead-key-high-log.txt';
 open( LOG, '>', $log_path ) or die $!;
 print( "Opened file $log_path.\n" );
 
-print( "Processing content from $input_path to $output_path.\n" );
+print( "Processing content from $input_path to $deadkey_path, $multikey_path and $equivalents_path.\n" );
+print( "This is likely to take at least 40 seconds to complete.\n" );
 
-my $parse_on        = !0;
-my @dead_key_out    = ();
-my @unsupported     = ();
-my @high_surrogates = ();
-my @bad_format      = ();
-my ( $deadkey, $input, $input_string, $output_string, $output_code, $comment, $deadchar, $print,
+my $parse_on          = !0;
+my $equivalents       = !1;
+my @dead_key_out      = ();
+my @unsupported       = ();
+my @high_surrogates   = ();
+my @bad_format        = ();
+my $delim             = '"';
+my $multichar         = 0;
+my $half              = 0;
+my $full              = 0;
+my $overlong          = 0;
+my $dead_hex          = 'E200';
+my $dead_dec          = 57856;
+my @multikey_deadchar = ();
+my @multikey_out      = ();
+my @mk_equiv_out      = ();
+my @multikey_print    = ();
+my @equiv_print       = ();
+my ( $chain, $deadkey, $input, $input_string, $length, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
-my $delim     = '"';
-my $multichar = 0;
-my $half      = 0;
-my $full      = 0;
+
+# These multikey chains are not supported by the autogenerator.
+my @multikeys = (
+
+	'<!M><%ampersand><%period><%period><%period>',
+	'<!M><%ampersand><%period><%period><%period>',
+	'<!M><%apostrophe><%exclam><%parenleft><%at>',
+	'<!M><%apostrophe><%exclam><%parenleft><%at>',
+	'<!M><%apostrophe><%exclam><%parenright><%at>',
+	'<!M><%apostrophe><%exclam><%parenright><%at>',
+	'<!M><%apostrophe><%parenleft><%at>',
+	'<!M><%apostrophe><%parenleft><%at>',
+	'<!M><%apostrophe><%parenleft><%exclam><%at>',
+	'<!M><%apostrophe><%parenleft><%exclam><%at>',
+	'<!M><%apostrophe><%parenright><%exclam><%at>',
+	'<!M><%apostrophe><%parenright><%exclam><%at>',
+	'<!M><%backslash><%backslash><%slash>',
+	'<!M><%backslash><%backslash><%slash>',
+	'<!M><%bar><%braceright><%circum>',
+	'<!M><%bar><%braceright><%circum>',
+	'<!M><%bar><%braceright><%percent>',
+	'<!M><%bar><%braceright><%percent>',
+	'<!M><%bar><%circum><%braceright>',
+	'<!M><%bar><%circum><%braceright>',
+	'<!M><%bar><%circum><%percent>',
+	'<!M><%bar><%circum><%percent>',
+	'<!M><%braceright><%bar><%circum>',
+	'<!M><%braceright><%bar><%circum>',
+	'<!M><%braceright><%bar><%percent>',
+	'<!M><%braceright><%bar><%percent>',
+	'<!M><%bracketright><%backslash><%slash>',
+	'<!M><%bracketright><%backslash><%slash>',
+	'<!M><%bracketright><%slash><%backslash>',
+	'<!M><%bracketright><%slash><%backslash>',
+	'<!M><%circum><%bar><%braceright>',
+	'<!M><%circum><%bar><%braceright>',
+	'<!M><%circum><%bar><%percent>',
+	'<!M><%circum><%bar><%percent>',
+	'<!M><%equal><%minus><%bar><%bar>',
+	'<!M><%equal><%minus><%bar><%bar>',
+	'<!M><%exclam><%apostrophe><%parenleft><%at>',
+	'<!M><%exclam><%apostrophe><%parenleft><%at>',
+	'<!M><%exclam><%apostrophe><%parenright><%at>',
+	'<!M><%exclam><%apostrophe><%parenright><%at>',
+	'<!M><%exclam><%grave><%parenleft><%at>',
+	'<!M><%exclam><%grave><%parenleft><%at>',
+	'<!M><%exclam><%grave><%parenright><%at>',
+	'<!M><%exclam><%grave><%parenright><%at>',
+	'<!M><%exclam><%less><%parenleft><%at>',
+	'<!M><%exclam><%less><%parenleft><%at>',
+	'<!M><%exclam><%less><%parenright><%at>',
+	'<!M><%exclam><%less><%parenright><%at>',
+	'<!M><%exclam><%parenleft><%apostrophe><%at>',
+	'<!M><%exclam><%parenleft><%apostrophe><%at>',
+	'<!M><%exclam><%parenleft><%at>',
+	'<!M><%exclam><%parenleft><%at>',
+	'<!M><%exclam><%parenleft><%grave><%at>',
+	'<!M><%exclam><%parenleft><%grave><%at>',
+	'<!M><%exclam><%parenleft><%less><%at>',
+	'<!M><%exclam><%parenleft><%less><%at>',
+	'<!M><%exclam><%parenright><%apostrophe><%at>',
+	'<!M><%exclam><%parenright><%apostrophe><%at>',
+	'<!M><%exclam><%parenright><%grave><%at>',
+	'<!M><%exclam><%parenright><%grave><%at>',
+	'<!M><%exclam><%parenright><%less><%at>',
+	'<!M><%exclam><%parenright><%less><%at>',
+	'<!M><%exclam>comma><%minus>',
+	'<!M><%exclam>comma><%minus>',
+	'<!M><%grave><%apostrophe><%bar>',
+	'<!M><%grave><%apostrophe><%bar>',
+	'<!M><%grave><%exclam><%parenleft><%at>',
+	'<!M><%grave><%exclam><%parenleft><%at>',
+	'<!M><%grave><%exclam><%parenright><%at>',
+	'<!M><%grave><%exclam><%parenright><%at>',
+	'<!M><%grave><%parenleft><%at>',
+	'<!M><%grave><%parenleft><%at>',
+	'<!M><%grave><%parenleft><%exclam><%at>',
+	'<!M><%grave><%parenleft><%exclam><%at>',
+	'<!M><%grave><%parenright><%exclam><%at>',
+	'<!M><%grave><%parenright><%exclam><%at>',
+	'<!M><%greater><%bar><%slash>',
+	'<!M><%greater><%bar><%slash>',
+	'<!M><%greater><%less><%parenleft><%parenright>',
+	'<!M><%greater><%less><%parenleft><%parenright>',
+	'<!M><%greater><%less><%parenright><%parenleft>',
+	'<!M><%greater><%less><%parenright><%parenleft>',
+	'<!M><%greater><%minus><%bar><%bar><%greater>',
+	'<!M><%greater><%minus><%bar><%bar><%greater>',
+	'<!M><%greater><%minus><%bar><%bar><%minus><%greater>',
+	'<!M><%greater><%minus><%bar><%bar><%minus><%greater>',
+	'<!M><%greater><%minus><%bar><%greater>',
+	'<!M><%greater><%minus><%bar><%greater>',
+	'<!M><%greater><%minus><%bar><%minus><%greater>',
+	'<!M><%greater><%minus><%bar><%minus><%greater>',
+	'<!M><%greater><%parenright><%parenleft>',
+	'<!M><%greater><%parenright><%parenleft>',
+	'<!M><%greater><%underscore><%parenleft><%parenright>',
+	'<!M><%greater><%underscore><%parenleft><%parenright>',
+	'<!M><%greater><%underscore><%parenright><%parenleft>',
+	'<!M><%greater><%underscore><%parenright><%parenleft>',
+	'<!M><%less><%exclam><%parenleft><%at>',
+	'<!M><%less><%exclam><%parenleft><%at>',
+	'<!M><%less><%exclam><%parenright><%at>',
+	'<!M><%less><%exclam><%parenright><%at>',
+	'<!M><%less><%greater><%less><%minus>',
+	'<!M><%less><%greater><%less><%minus>',
+	'<!M><%less><%greater><%parenleft><%parenright>',
+	'<!M><%less><%greater><%parenleft><%parenright>',
+	'<!M><%less><%greater><%parenright><%parenleft>',
+	'<!M><%less><%greater><%parenright><%parenleft>',
+	'<!M><%less><%less><%bar><%bar><%minus>',
+	'<!M><%less><%less><%bar><%bar><%minus>',
+	'<!M><%less><%less><%bar><%minus>',
+	'<!M><%less><%less><%bar><%minus>',
+	'<!M><%less><%less><%minus><%bar><%bar><%minus>',
+	'<!M><%less><%less><%minus><%bar><%bar><%minus>',
+	'<!M><%less><%less><%minus><%bar><%minus>',
+	'<!M><%less><%less><%minus><%bar><%minus>',
+	'<!M><%less><%minus><0><%minus>',
+	'<!M><%less><%minus><0><%minus>',
+	'<!M><%less><%parenleft><%exclam><%at>',
+	'<!M><%less><%parenleft><%exclam><%at>',
+	'<!M><%less><%parenright><%exclam><%at>',
+	'<!M><%less><%parenright><%exclam><%at>',
+	'<!M><%less><%underscore><%parenleft><%parenright>',
+	'<!M><%less><%underscore><%parenleft><%parenright>',
+	'<!M><%less><%underscore><%parenright><%parenleft>',
+	'<!M><%less><%underscore><%parenright><%parenleft>',
+	'<!M><%minus><%bar><%minus><%greater>',
+	'<!M><%minus><%bar><%minus><%greater>',
+	'<!M><%minus><%comma><%exclam>',
+	'<!M><%minus><%comma><%exclam>',
+	'<!M><%minus><%comma><%less>',
+	'<!M><%minus><%comma><%less>',
+	'<!M><%minus><%equal><%bar><%bar>',
+	'<!M><%minus><%equal><%bar><%bar>',
+	'<!M><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><%greater><%minus><%greater>',
+	'<!M><%minus><%greater><%minus><%greater>',
+	'<!M><%minus><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><%minus><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><%minus><%minus><%grave><%grave><%minus>',
+	'<!M><%minus><0><%minus>',
+	'<!M><%minus><0><%minus><0><%minus><%greater>',
+	'<!M><%minus><0><%minus><0><%minus><%greater>',
+	'<!M><%parenleft><%apostrophe><%at>',
+	'<!M><%parenleft><%apostrophe><%at>',
+	'<!M><%parenleft><%apostrophe><%exclam><%at>',
+	'<!M><%parenleft><%apostrophe><%exclam><%at>',
+	'<!M><%parenleft><%exclam><%apostrophe><%at>',
+	'<!M><%parenleft><%exclam><%apostrophe><%at>',
+	'<!M><%parenleft><%exclam><%at>',
+	'<!M><%parenleft><%exclam><%at>',
+	'<!M><%parenleft><%exclam><%grave><%at>',
+	'<!M><%parenleft><%exclam><%grave><%at>',
+	'<!M><%parenleft><%exclam><%less><%at>',
+	'<!M><%parenleft><%exclam><%less><%at>',
+	'<!M><%parenleft><%grave><%at>',
+	'<!M><%parenleft><%grave><%at>',
+	'<!M><%parenleft><%grave><%exclam><%at>',
+	'<!M><%parenleft><%grave><%exclam><%at>',
+	'<!M><%parenleft><%less><%exclam><%at>',
+	'<!M><%parenleft><%less><%exclam><%at>',
+	'<!M><%parenleft><0><0><1>',
+	'<!M><%parenleft><0><0><1>',
+	'<!M><%parenleft><0><1><1>',
+	'<!M><%parenleft><0><1><1>',
+	'<!M><%parenright><%apostrophe><%exclam><%at>',
+	'<!M><%parenright><%apostrophe><%exclam><%at>',
+	'<!M><%parenright><%exclam><%apostrophe><%at>',
+	'<!M><%parenright><%exclam><%apostrophe><%at>',
+	'<!M><%parenright><%exclam><%grave><%at>',
+	'<!M><%parenright><%exclam><%grave><%at>',
+	'<!M><%parenright><%exclam><%less><%at>',
+	'<!M><%parenright><%exclam><%less><%at>',
+	'<!M><%parenright><%grave><%exclam><%at>',
+	'<!M><%parenright><%grave><%exclam><%at>',
+	'<!M><%parenright><%less><%exclam><%at>',
+	'<!M><%parenright><%less><%exclam><%at>',
+	'<!M><%parenright><0><0><0>',
+	'<!M><%parenright><0><0><0>',
+	'<!M><%parenright><0><0><1>',
+	'<!M><%parenright><0><0><1>',
+	'<!M><%parenright><0><0><2>',
+	'<!M><%parenright><0><0><2>',
+	'<!M><%parenright><0><0><3>',
+	'<!M><%parenright><0><0><3>',
+	'<!M><%parenright><0><1><0>',
+	'<!M><%parenright><0><1><0>',
+	'<!M><%parenright><0><1><1>',
+	'<!M><%parenright><0><1><1>',
+	'<!M><%parenright><0><1><2>',
+	'<!M><%parenright><0><1><2>',
+	'<!M><%parenright><0><1><3>',
+	'<!M><%parenright><0><1><3>',
+	'<!M><%parenright><0><2><0>',
+	'<!M><%parenright><0><2><0>',
+	'<!M><%parenright><0><2><1>',
+	'<!M><%parenright><0><2><1>',
+	'<!M><%parenright><0><2><2>',
+	'<!M><%parenright><0><2><2>',
+	'<!M><%parenright><0><3><0>',
+	'<!M><%parenright><0><3><0>',
+	'<!M><%parenright><0><3><1>',
+	'<!M><%parenright><0><3><1>',
+	'<!M><%parenright><0><3><3>',
+	'<!M><%parenright><0><3><3>',
+	'<!M><%parenright><1><0><0>',
+	'<!M><%parenright><1><0><0>',
+	'<!M><%parenright><1><0><1>',
+	'<!M><%parenright><1><0><1>',
+	'<!M><%parenright><1><0><3>',
+	'<!M><%parenright><1><0><3>',
+	'<!M><%parenright><1><1><0>',
+	'<!M><%parenright><1><1><0>',
+	'<!M><%parenright><1><1><1>',
+	'<!M><%parenright><1><1><1>',
+	'<!M><%parenright><1><1><3>',
+	'<!M><%parenright><1><1><3>',
+	'<!M><%parenright><1><3><0>',
+	'<!M><%parenright><1><3><0>',
+	'<!M><%parenright><1><3><1>',
+	'<!M><%parenright><1><3><1>',
+	'<!M><%parenright><1><3><3>',
+	'<!M><%parenright><1><3><3>',
+	'<!M><%parenright><2><0><0>',
+	'<!M><%parenright><2><0><0>',
+	'<!M><%parenright><2><0><2>',
+	'<!M><%parenright><2><0><2>',
+	'<!M><%parenright><3><0><0>',
+	'<!M><%parenright><3><0><0>',
+	'<!M><%parenright><3><0><1>',
+	'<!M><%parenright><3><0><1>',
+	'<!M><%parenright><3><0><3>',
+	'<!M><%parenright><3><0><3>',
+	'<!M><%parenright><3><1><0>',
+	'<!M><%parenright><3><1><0>',
+	'<!M><%parenright><3><1><1>',
+	'<!M><%parenright><3><1><1>',
+	'<!M><%parenright><3><1><3>',
+	'<!M><%parenright><3><1><3>',
+	'<!M><%quotEuroSign><%colon><%at>',
+	'<!M><%quotEuroSign><%colon><%at>',
+	'<!M><%quotedbl><%colon><%at>',
+	'<!M><%quotedbl><%colon><%at>',
+	'<!M><%underscore><%hash><%backslash><%slash>',
+	'<!M><%underscore><%hash><%backslash><%slash>',
+	'<!M><%underscore><%hash><%slash><%backslash>',
+	'<!M><%underscore><%hash><%slash><%backslash>',
+	'<!M><E><M><F>',
+	'<!M><E><M><F>',
+	'<!M><E><M><O>',
+	'<!M><E><M><O>',
+	'<!M><E><n><v><e><l><o><p>',
+	'<!M><E><n><v><e><l><o><p>',
+	'<!M><G><Eacute><M>',
+	'<!M><G><Eacute><M>',
+	'<!M><H><D><P>',
+	'<!M><H><D><P>',
+	'<!M><I><R><M><P>',
+	'<!M><I><R><M><P>',
+	'<!M><L><D><P>',
+	'<!M><L><D><P>',
+	'<!M><L><I><B>',
+	'<!M><L><I><B>',
+	'<!M><L><I><O>',
+	'<!M><L><I><O>',
+	'<!M><L><R><E>',
+	'<!M><L><R><E>',
+	'<!M><L><p><a><r><e><n><g>',
+	'<!M><L><p><a><r><e><n><g>',
+	'<!M><P><A><C>',
+	'<!M><P><A><C>',
+	'<!M><P><A><R>',
+	'<!M><P><A><R>',
+	'<!M><P><A><T>',
+	'<!M><P><A><T>',
+	'<!M><P><I><S>',
+	'<!M><P><I><S>',
+	'<!M><P><O><I>',
+	'<!M><P><O><I>',
+	'<!M><R><C><C><C><D><D>',
+	'<!M><R><C><C><C><D><D>',
+	'<!M><R><C><C><D>',
+	'<!M><R><C><C><D>',
+	'<!M><R><D><D>',
+	'<!M><R><D><D>',
+	'<!M><R><p><a><r><e><n><l>',
+	'<!M><R><p><a><r><e><n><l>',
+	'<!M><V><E><R>',
+	'<!M><V><E><R>',
+	'<!M><V><I><E>',
+	'<!M><V><I><E>',
+	'<!M><V><I><R>',
+	'<!M><V><I><R>',
+	'<!M><a><q><u>',
+	'<!M><a><q><u>',
+	'<!M><a><r><i>',
+	'<!M><a><r><i>',
+	'<!M><b><a><l>',
+	'<!M><b><a><l>',
+	'<!M><b><e><l>',
+	'<!M><b><e><l>',
+	'<!M><b><eacute><l>',
+	'<!M><b><eacute><l>',
+	'<!M><b><i><p>',
+	'<!M><b><i><p>',
+	'<!M><c><a><p><d><o>',
+	'<!M><c><a><p><d><o>',
+	'<!M><c><c><%bracketleft><%underscore>',
+	'<!M><c><c><%bracketleft><%underscore>',
+	'<!M><c><u><p><d><o>',
+	'<!M><c><u><p><d><o>',
+	'<!M><c><u><p><p><l><u>',
+	'<!M><c><u><p><p><l><u>',
+	'<!M><d><i><a><m><e><t><e>',
+	'<!M><d><i><a><m><e><t><e>',
+	'<!M><d><i><a><m><e><t><r>',
+	'<!M><d><i><a><m><e><t><r>',
+	'<!M><d><i><a><m><egrave><t><r>',
+	'<!M><d><i><a><m><egrave><t><r>',
+	'<!M><f><e><n>',
+	'<!M><f><e><n>',
+	'<!M><g><eacute><m>',
+	'<!M><g><eacute><m>',
+	'<!M><h><d><p>',
+	'<!M><h><d><p>',
+	'<!M><i><n><t><e><r><s><e>',
+	'<!M><i><n><t><e><r><s><e>',
+	'<!M><i><r><m><p>',
+	'<!M><i><r><m><p>',
+	'<!M><l><d><p>',
+	'<!M><l><d><p>',
+	'<!M><l><i><b>',
+	'<!M><l><i><b>',
+	'<!M><l><i><o>',
+	'<!M><l><i><o>',
+	'<!M><l><r><e>',
+	'<!M><l><r><e>',
+	'<!M><p><a><c>',
+	'<!M><p><a><c>',
+	'<!M><p><a><r>',
+	'<!M><p><a><r>',
+	'<!M><p><a><t>',
+	'<!M><p><a><t>',
+	'<!M><p><o><i>',
+	'<!M><p><o><i>',
+	'<!M><s><e><t><m><i><n><u>',
+	'<!M><s><e><t><m><i><n><u>',
+	'<!M><u><n><i><o>',
+	'<!M><u><n><i><o>',
+	'<!M><v><%backslash><%parenleft>',
+	'<!M><v><%backslash><%parenleft>',
+	'<!M><v><%backslash><%parenright>',
+	'<!M><v><%backslash><%parenright>',
+	'<!M><v><e><r>',
+	'<!M><v><e><r>',
+	'<!M><v><i><e>',
+	'<!M><v><i><e>',
+	'<!M><v><i><r>',
+	'<!M><v><i><r>',
+	'<!M><~nbspace><%bar><%backslash><%slash>',
+	'<!M><~nbspace><%bar><%backslash><%slash>',
+	'<!M><~nbspace><%bar><e><%backslash>',
+	'<!M><~nbspace><%bar><e><%backslash>',
+	'<!M><~nbspace><%bar><e><e>',
+	'<!M><~nbspace><%bar><e><e>',
+	'<!M><~nbspace><%slash><%hash><%underscore>',
+	'<!M><~nbspace><%slash><%hash><%underscore>',
+	'<!M><~nbspace><%underscore><%underscore><V>',
+	'<!M><~nbspace><%underscore><%underscore><V>',
+	'<!M><~nbspace><%underscore><%underscore><v>',
+	'<!M><~nbspace><%underscore><%underscore><v>',
+	'<!M><~nbspace><e><e>',
+	'<!M><~nbspace><e><e>',
+	'<!M><~space><%bar><%backslash><%slash>',
+	'<!M><~space><%bar><%backslash><%slash>',
+	'<!M><~space><%bar><e><%backslash>',
+	'<!M><~space><%bar><e><%backslash>',
+	'<!M><~space><%bar><e><e>',
+	'<!M><~space><%bar><e><e>',
+	'<!M><~space><%slash><%hash><%underscore>',
+	'<!M><~space><%slash><%hash><%underscore>',
+	'<!M><~space><%underscore><%underscore><V>',
+	'<!M><~space><%underscore><%underscore><V>',
+	'<!M><~space><%underscore><%underscore><v>',
+	'<!M><~space><%underscore><%underscore><v>',
+	'<!M><~space><e><e>',
+	'<!M><~space><e><e>',
+);
 
 sub format_char {
 	my ( $character ) = @_;
@@ -159,20 +569,21 @@ sub format_char {
 		unless ( grep( /^$character$/, @bad_format ) ) {
 			push( @bad_format, $character );
 		}
-#		$character = 'badf'; # Comment this out to see the actual string in context.
+	#	$character = 'badf'; # Comment this out to see the actual string in context.
 	}
 	return $character;
 }
 
 sub dekeysym {
 	my ( $keysym ) = @_;
+
 	$keysym =~ s/~spacezerowidth/200B/;
 	$keysym =~ s/~space/ /;
-	$keysym =~ s/~nobreakspace/00A0/;
-	$keysym =~ s/~nobreakthinspace/202F/;
+	$keysym =~ s/~nbspace/00A0/;
+	$keysym =~ s/~nbthinspace/202F/;
 	$keysym =~ s/%exclam/!/;
 	$keysym =~ s/%quotedbl/"/;
-	$keysym =~ s/%numbersign/#/;
+	$keysym =~ s/%hash/#/;
 	$keysym =~ s/%dollar/\$/;
 	$keysym =~ s/%percent/%/;
 	$keysym =~ s/%ampersand/&/;
@@ -195,13 +606,13 @@ sub dekeysym {
 	$keysym =~ s/%bracketleft/[/;
 	$keysym =~ s/%backslash/\\\\/;
 	$keysym =~ s/%bracketright/]/;
-	$keysym =~ s/%asciicircum/^/;
+	$keysym =~ s/%circum/^/;
 	$keysym =~ s/%underscore/_/;
 	$keysym =~ s/%grave/`/;
 	$keysym =~ s/%braceleft/{/;
 	$keysym =~ s/%bar/|/;
 	$keysym =~ s/%braceright/}/;
-	$keysym =~ s/%asciitilde/~/;
+	$keysym =~ s/%tilde/~/;
 	$keysym =~ s/%aprightsinglequotemark/2019/;
 	$keysym =~ s/%semsection/00A7/;
 	$keysym =~ s/%quotEuroSign/20AC/;
@@ -241,13 +652,29 @@ sub dekeysym {
 	$keysym =~ s/Eopen/0190/;
 	$keysym =~ s/oopen/0254/;
 	$keysym =~ s/Oopen/0186/;
+
 	return $keysym;
+}
+
+sub get_multikey_dead_char {
+	my ( $deadkey ) = @_;
+		$deadchar = 'dead';
+
+	foreach my $entry ( @multikey_deadchar ) {
+		if ( $entry =~ /^$deadkey➔....$/ ) {
+			$deadchar = $entry;
+			$deadchar =~ s/.+➔(....)/$1/;
+			last;
+		}
+	}
+
+	return $deadchar;
 }
 
 sub get_dead_char {
 	my ( $deadkey ) = @_;
 
-	# Single-press dead keys (32).
+	# Single-press dead keys (33).
 	$deadkey =~ s/^<!superscript>$/^/;
 	$deadkey =~ s/^<!turned>$/0250/;
 	$deadkey =~ s/^<!doubleacute>$/0151/;
@@ -280,6 +707,7 @@ sub get_dead_char {
 	$deadkey =~ s/^<!belowcomma>$/0219/;
 	$deadkey =~ s/^<!legacygrave>$/`/;
 	$deadkey =~ s/^<!legacytilde>$/~/;
+	$deadkey =~ s/^<!M>$/00A6/;
 
 	# Dead key chains (561).
 	$deadkey =~ s/^<!abovedot><!abovedot>$/02C8/;#<dead_abovedot><dead_abovedot>
@@ -456,10 +884,10 @@ sub get_dead_char {
 	$deadkey =~ s/^<!grave><!macron><!acute>$/2306/;#<dead_grave><dead_macron><dead_acute>
 	$deadkey =~ s/^<!greek><!greek>$/229A/;#<dead_greek><dead_greek>
 	$deadkey =~ s/^<!greek><!subscript>$/1D66/;#<dead_greek><UEFD2>
-	$deadkey =~ s/^<!greek><%asciitilde>$/2789/;#<dead_greek><asciitilde>
-	$deadkey =~ s/^<!greek><%asciitilde><%backslash>$/2793/;#<dead_greek><asciitilde><backslash>
+	$deadkey =~ s/^<!greek><%tilde>$/2789/;#<dead_greek><asciitilde>
+	$deadkey =~ s/^<!greek><%tilde><%backslash>$/2793/;#<dead_greek><asciitilde><backslash>
 	$deadkey =~ s/^<!greek><%backslash>$/277F/;#<dead_greek><backslash>
-	$deadkey =~ s/^<!greek><%backslash><%asciitilde>$/278A/;#<dead_greek><backslash><asciitilde>
+	$deadkey =~ s/^<!greek><%backslash><%tilde>$/278A/;#<dead_greek><backslash><asciitilde>
 	$deadkey =~ s/^<!greek><%backslash><%quotEuroSign>$/24EB/;#<dead_greek><backslash><EuroSign>
 	$deadkey =~ s/^<!greek><%backslash><%quotedbl>$/24EC/;#<dead_greek><backslash><quotedbl>
 	$deadkey =~ s/^<!greek><%bracketleft>$/2792/;#<dead_greek><bracketleft>
@@ -1371,10 +1799,10 @@ my @chained = (
 	'<!grave><!macron><!acute>',
 	'<!greek><!greek>',
 	'<!greek><!subscript>',
-	'<!greek><%asciitilde>',
-	'<!greek><%asciitilde><%backslash>',
+	'<!greek><%tilde>',
+	'<!greek><%tilde><%backslash>',
 	'<!greek><%backslash>',
-	'<!greek><%backslash><%asciitilde>',
+	'<!greek><%backslash><%tilde>',
 	'<!greek><%backslash><%quotEuroSign>',
 	'<!greek><%backslash><%quotedbl>',
 	'<!greek><%bracketleft>',
@@ -2081,7 +2509,7 @@ foreach my $deadkey ( @chained ) {
 	$input    = get_dead_char( $2 );
 	$input    =~ s/<(.+)>/$1/;
 	$input    = dekeysym( $input );
-	print OUTPUT $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) .
+	print DEADKEYS $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) ) .
 				"*/ DEADTRANS( " . format_char( $input ) . "\t," . format_char( $deadchar ) .
 				"\t," . format_char( get_dead_char( $deadkey ) ) . "\t,0x0001), // Dead key chain.\n";
 }
@@ -2093,17 +2521,18 @@ while ( my $line = <INPUT> ) {
 		# If polytonic Greek should be included, comment this out.
 		# $parse_on = !1;
 
+		$equivalents = !0;
+
 	}
 	if ( $line =~ /START_LATIN_BY_DEAD_KEYS/ ) {
 		$parse_on = !0;
 	}
 
 	if ( $parse_on ) {
-		unless ( $line =~ /<Multi_key>/    # Multikey is not processed.
+		unless ( $line =~ /^#[^@]/         # Annotations.
 			|| $line =~ /^<[^>]+> * :/       # Multichar for live keys.
 			|| $line =~ /# [Aa]vailable\.?$/ # Empty slots in letter groups.
 			|| $line =~ /<KP_/               # Keypad equivalents, a Linux feature.
-			|| $line =~ /^#[^@]/             # Annotations.
 		) {
 
 			# Remove the Windows-specific prefix.
@@ -2115,6 +2544,7 @@ while ( my $line = <INPUT> ) {
 
 			# Simplify dead key names and prepare for sorting.
 			$line =~ s/<dead_/<!/g;
+			$line =~ s/<Multi_key/<!M/g;
 
 			# Decode keysyms.
 			$line =~ s/<UEFD0>/<!group>/g;
@@ -2133,18 +2563,30 @@ while ( my $line = <INPUT> ) {
 			$line =~ s/<U0186>/<Oopen>/g;
 			$line =~ s/<U0254>/<oopen>/g;
 
-			# Prepare for sorting, further decode.
+			# Prepare for sorting, shorten, further decode.
 			$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
 			$line =~ s/<section>/<\%semsection>/g;
 			$line =~ s/<rightsinglequotemark>/<\%aprightsinglequotemark>/g;
-			$line =~ s/<(ampersand|apostrophe|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright
-							|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign
-							|parenleft|parenright|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/gx;
-			$line =~ s/<((nobreak)?space)>/<~$1>/g;
-			$line =~ s/<U202F>/<~nobreakthinspace>/g;
+			$line =~ s/<ascii(circum|tilde)>/<\%$1>/g;
+			$line =~ s/<numbersign>/<\%hash>/g;
+			$line =~ s/<(ampersand|apostrophe|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright
+									|colon|comma|dollar|equal|exclam|grave|greater|less|minus|parenleft|parenright
+									|percent|period|plus|question|quotedbl|semicolon|slash|underscore)>/<\%$1>/gx;
+			$line =~ s/<(space)>/<~$1>/g;
+			$line =~ s/<nobreak(space)>/<~nb$1>/g;
+			$line =~ s/<U202F>/<~nbthinspace>/g;
 			$line =~ s/<U200B>/<~spacezerowidth>/g;
 
-			push( @dead_key_out, $line );
+			# Group dead keys and multikey in 3 arrays.
+			if ( $line =~ /^(#@)?<!M>/ ) {
+				if ( $equivalents eq !0 ) {
+					push( @mk_equiv_out, $line );
+				} else {
+					push( @multikey_out, $line );
+				}
+			} else {
+				push( @dead_key_out, $line );
+			}
 		}
 	}
 }
@@ -2152,12 +2594,13 @@ while ( my $line = <INPUT> ) {
 # Case insensitive sorting.
 # By courtesy of https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 @dead_key_out = sort { "\L$a" cmp "\L$b" } @dead_key_out;
+@mk_equiv_out = sort { "\L$a" cmp "\L$b" } @mk_equiv_out;
+@multikey_out = sort { "\L$a" cmp "\L$b" } @multikey_out;
 
 foreach my $line ( @dead_key_out ) {
-
-	if ( $line =~ /" U[0-9A-F]{4,5}/ ) {
+	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Only process single-character output.
 		unless ( $line =~ /<UEF/ ) {
-			$line          =~ m/(<.+>)(<.+>) : "(.+)" U([0-9A-F]{4,5}) # (.+)/u;
+			$line          =~ m/(<.+>)(<.+>) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
 			$deadkey       = $1;
 			$input         = $2;
 			$output_string = $3;
@@ -2211,49 +2654,237 @@ foreach my $line ( @dead_key_out ) {
 		$print = '';
 	}
 
-	print OUTPUT $print;
+	print DEADKEYS $print;
 
 }
 
+foreach my $line ( @multikey_out ) {
+	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Only process single-character output.
+		unless ( $line =~ /<UEF/ ) {
+			$line          =~ m/(<.+>)(<.+>) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
+			$deadkey       = $1;
+			$input         = $2;
+			$output_string = $3;
+			$output_code   = $4;
+			$comment       = $5;
+
+			if ( $deadkey eq '<!M>' ) {
+				$deadchar = '00A6';
+			} else {
+				unless ( grep( /^$deadkey➔/, @multikey_deadchar ) ) {
+					push( @multikey_deadchar, $deadkey . '➔' . $dead_hex );
+					$deadchar = $dead_hex;
+					++$dead_dec;
+					$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+
+				} else {
+					$deadchar = get_multikey_dead_char( $deadkey );
+				}
+			}
+
+			$input = get_dead_char( $input );
+			$input =~ s/<(.+)>/$1/;
+			$input =~ s/U([0-9A-F]{4})/$1/;
+			$input = dekeysym( $input );
+
+			if ( $input =~ /[0-9A-F]{4}/ ) {
+				$input_string = chr( hex( $input ) );
+			} else {
+				$input_string = $input;
+				$input_string =~ s/\\?(.)/$1/;
+				if ( $input_string =~ /^"$/ ) {
+					$delim = "'";
+				}
+			}
+
+			if ( $output_code =~ /[0-9A-F]{5}/ ) {
+				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
+				$high_out    = 'High surrogate: ' . $high_su . '; U+' . $output_code . ' ';
+				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
+			} else {
+				$high_out = '';
+			}
+
+			$length = length( $deadkey );
+			if ( $length > 65 ) {
+				$length = 65;
+				++$overlong;
+			}
+			$print = '/*' . $deadkey . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_char( $input ) .
+							"\t," . format_char( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . $delim .
+							$input_string . $delim . ' ➔ "' . $output_string . '" ' . $comment . "\n";
+		}
+	} else {
+		++$multichar;
+		$print = '';
+	}
+	push( @multikey_print, $print );
+}
+
+print MULTIKEY @multikey_print;
+
+#
+# Output multikey in 2 files is required because a single file exceeds the 2MB
+# file size limit of github.com (not github.dev).
+#
+# Wrapping this code in a subroutine to comply with the D.R.Y. principle gets
+# perl 5, version 38, subversion 0 (v5.38.0) built for MSWin32-x64-multi-thread
+# to crash the computer.
+#
+foreach my $line ( @mk_equiv_out ) {
+	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Only process single-character output.
+		unless ( $line =~ /<UEF/ ) {
+			$line          =~ m/(<.+>)(<.+>) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
+			$deadkey       = $1;
+			$input         = $2;
+			$output_string = $3;
+			$output_code   = $4;
+			$comment       = $5;
+
+			if ( $deadkey eq '<!M>' ) {
+				$deadchar = '00A6';
+			} else {
+				unless ( grep( /^$deadkey➔/, @multikey_deadchar ) ) {
+					push( @multikey_deadchar, $deadkey . '➔' . $dead_hex );
+					$deadchar = $dead_hex;
+					++$dead_dec;
+					$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+
+				} else {
+					$deadchar = get_multikey_dead_char( $deadkey );
+				}
+			}
+
+			$input = get_dead_char( $input );
+			$input =~ s/<(.+)>/$1/;
+			$input =~ s/U([0-9A-F]{4})/$1/;
+			$input = dekeysym( $input );
+
+			if ( $input =~ /[0-9A-F]{4}/ ) {
+				$input_string = chr( hex( $input ) );
+			} else {
+				$input_string = $input;
+				$input_string =~ s/\\?(.)/$1/;
+				if ( $input_string =~ /^"$/ ) {
+					$delim = "'";
+				}
+			}
+
+			if ( $output_code =~ /[0-9A-F]{5}/ ) {
+				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
+				$high_out    = 'High surrogate: ' . $high_su . '; U+' . $output_code . ' ';
+				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
+			} else {
+				$high_out = '';
+			}
+
+			$length = length( $deadkey );
+			if ( $length > 65 ) {
+				$length = 65;
+				++$overlong;
+			}
+			$print = '/*' . $deadkey . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_char( $input ) .
+							"\t," . format_char( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000\t), // " . $high_out . $delim .
+							$input_string . $delim . ' ➔ "' . $output_string . '" ' . $comment . "\n";
+		}
+	} else {
+		++$multichar;
+		$print = '';
+	}
+	push( @equiv_print, $print );
+}
+
+print EQUIVALENTS @equiv_print;
+
+# Adds the unsupported multikeys.
+foreach my $element ( @multikeys ) {
+	push( @multikey_deadchar, $element . '➔' . $dead_hex );
+	++$dead_dec;
+	$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+}
+
+# Generates the multikey chains.
+foreach my $entry ( @multikey_deadchar ) {
+	$deadkey = $entry;
+	$deadkey =~ s/(<.+>).+/$1/;
+	$deadkey =~ m/(<.+>)(<.+>)/;
+	unless ( $1 =~ /^<!M>$/ ) {
+		$deadchar    = get_multikey_dead_char( $1 );
+		if ( $deadchar eq 'dead' ) {
+			unless ( grep( /^$deadkey$/, @unsupported ) ) {
+				push( @unsupported, $deadkey );
+			}
+		}
+
+		$input       = $2;
+		$input       =~ s/<(.+)>/$1/;
+		$input       = dekeysym( $input );
+		$output_code = get_multikey_dead_char( $deadkey );
+
+		$length   = length( $deadkey );
+		if ( $length > 65 ) {
+			$length = 65;
+			++$overlong;
+		}
+		$print = '/*' . $deadkey . ( " " x ( 65 - $length ) ) .	"*/ DEADTRANS( " . format_char( $input ) . "\t," .
+					 format_char( $deadchar ) .	"\t," . format_char( $output_code ) . "\t,0x0001), // Multikey chain.\n";
+
+		print MULTIKEY $print;
+	}
+}
+
+# Print report to a file.
 @unsupported = sort( @unsupported );
-print LIST ( "This is the full list of " . @unsupported . " unsupported dead keys to transpile.\n\n" );
-foreach my $line ( @unsupported ) {
-	print LIST $line . "\n";
-}
+print REPORT ( "This is the full list of " . @unsupported . " chains to transpile.\n\n" );
+print REPORT join( "\n", @unsupported );
 
 @bad_format = sort( @bad_format );
-print LIST ( "\n\n\nThis is the full list of " . @bad_format . " characters in a bad format.\n\n" );
-foreach my $line ( @bad_format ) {
-	print LIST $line . "\n";
-}
+print REPORT ( "\n\n\nThis is the full list of " . @bad_format . " characters in a bad format.\n\n" );
+print REPORT join( "\n", @bad_format );
+
+print REPORT ( "\n\n\nThis is the list of " . @multikey_deadchar . " multikey chains with their dead character.\n\n" );
+print REPORT join( "\n", @multikey_deadchar );
 
 close( INPUT );
 print( "Closed file $input_path.\n" );
-close( OUTPUT );
-print( "Closed file $output_path.\n" );
+close( DEADKEYS );
+print( "Closed file $deadkey_path.\n" );
+close( EQUIVALENTS );
+print( "Closed file $equivalents_path.\n" );
+close( MULTIKEY );
+print( "Closed file $multikey_path.\n" );
 close( LOG );
 print( "Closed file $log_path.\n" );
-close( LIST );
-print( "Closed file $list_path.\n\n" );
+close( REPORT );
+print( "Closed file $report_path.\n\n" );
 unless ( @bad_format == 0 ) {
 	if ( @bad_format == 1 ) {
 		print( '  ' . @bad_format . " character is in a bad format: @bad_format.\n" );
 	} else {
 		print( '  ' . @bad_format . " characters are in a bad format: @bad_format.\n" );
 	}
-	print( "  This enumeration is appended as a list in $list_path.\n\n" );
+	print( "  This enumeration is appended as a list in $report_path.\n\n" );
 }
 @high_surrogates = sort( @high_surrogates );
-print( "  $full potentially functional dead key sequences in $output_path.\n" );
-print( "  $half additional dead key sequences output only a low surrogate.\n" );
+print( "  $full fully functional dead key sequences in $deadkey_path.\n" );
+print( "  $half other sequences in the same file output only a low surrogate.\n" );
 print( "  The " . @high_surrogates . " required high surrogates are @high_surrogates.\n" );
 print( "  Their relationship to the dead keys is logged in $log_path.\n" );
+print( "  $multichar unsupported multicharacter output dead key sequences not processed.\n" );
+print( '  ' . @multikey_print . " potential multikey-only sequences in $multikey_path.\n" );
+print( '  ' . @equiv_print . " dead key multikey equivalent sequences in $equivalents_path.\n" );
 unless ( @unsupported == 0 ) {
 	if ( @unsupported == 1 ) {
-		print( "  The unsupported chained dead key is listed in $list_path.\n" );
+		print( "  The unsupported chain is listed in $report_path.\n" );
 	} else {
-		print( "  The " . @unsupported . " unsupported chained dead keys are listed in $list_path.\n" );
+		print( "  The " . @unsupported . " unsupported chains are listed in $report_path.\n" );
 	}
 }
-print( "  $multichar unsupported multicharacter output dead key sequences not processed.\n\n" );
-print( "Done processing.\n" );
+unless ( $overlong == 0 ) {
+	if ( $overlong == 1 ) {
+		print( "  $overlong multikey chain ID is overlong and is disturbing the source code layout.\n" );
+	} else {
+		print( "  $overlong multikey chain IDs are overlong and are disturbing the source code layout.\n" );
+	}
+}
+print( "\nDone processing.\n" );
