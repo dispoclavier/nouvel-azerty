@@ -8,13 +8,17 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Discard as broken and oversizing         6.1.3.2.0 Fri 2025-11-14T1333+0100
 * Add the content as of build 6.1.3.0      6.1.3.0.0 Fri 2025-11-14T0659+0100
 * Add kbdeadtrans-multikey-equivalents.c   6.1.3.0.0 Fri 2025-11-14T0535+0100
 *
 * This file is included in kbdeadtrans.c.
 *
 *
-* This is up-to-date and overrides the legacy multikey content.
+* This is another broken transpilation. Given that multikey equivalents of
+* dead keys are a Linux feature fostered by mutualized dead key configuration,
+* this can be skipped on Windows in order to limit the layout driver file size
+* under the menace of a total keyboard blackout.
 *
 * All chained multikey virtual dead keys are listed near the bottom of the file
 * kbdeadtrans-multikey.c.

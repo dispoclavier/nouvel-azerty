@@ -8,13 +8,15 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Discard as broken                        6.1.3.2.0 Fri 2025-11-14T1331+0100
 * Add the content as of build 6.1.3.0      6.1.3.0.0 Fri 2025-11-14T0658+0100
 * Add partial kbdeadtrans-multikey.c       6.1.3.0.0 Fri 2025-11-14T0535+0100
 *
 * This file is included in kbdeadtrans.c.
 *
 *
-* This is up-to-date and overrides the legacy multikey content.
+* This is a broken transpilation awaiting bugfixes in the transpiler.
+* https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/dead-key-convert.pl
 *
 * Near the bottom, this file lists all chained multikey virtual dead keys,
 * also those for kbdeadtrans-multikey-equivalents.c.
