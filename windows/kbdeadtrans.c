@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Exclude multikey until it is debugged    6.1.3.2.1 Sat 2025-11-15T0453+0100
 * Uppercase the legacy dead key code       6.1.3.2.0 Fri 2025-11-14T1327+0100
 * Exclude multikey equivalents             6.1.3.1.0 Fri 2025-11-14T0829+0100
 * Include multikey sequences in 2 files    6.1.3.0.0 Fri 2025-11-14T0554+0100
@@ -248,8 +249,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/dead-key-convert.pl
 * See kbdeadtrans-multikey.c
 *
-\*****************************************************************************/
 #include "kbdeadtrans-multikey.c"
+\*****************************************************************************/
 
 /*****************************************************************************\
 * Multikey equivalents of dead keys.
@@ -299,7 +300,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*ACUTE_ACCENT       */	DEADTRANS(	0x202F	,0x00E1	,0x02CA	,0x0000	), // MODIFIER LETTER ACUTE ACCENT
 /*ACUTE_ACCENT       */	DEADTRANS(	L'A'	,0x00E1	,0x00C1	,0x0000	), // LATIN CAPITAL LETTER A WITH ACUTE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'a'	,0x00E1	,0x00E1	,0x0000	), // LATIN SMALL LETTER A WITH ACUTE
-/*ACUTE_ACCENT       */	DEADTRANS(	L'B'	,0x00E1	,0x00D1	,0x0000	), // LATIN CAPITAL LETTER N WITH TILDE
+//@
+/*ACUTE_ACCENT       */	iDEADTRANS(	L'B'	,0x00E1	,0x00D1	,0x0000	), // LATIN CAPITAL LETTER N WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'b'	,0x00E1	,0x00F1	,0x0000	), // LATIN SMALL LETTER N WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'C'	,0x00E1	,0x0106	,0x0000	), // LATIN CAPITAL LETTER C WITH ACUTE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'c'	,0x00E1	,0x0107	,0x0000	), // LATIN SMALL LETTER C WITH ACUTE
@@ -363,7 +365,6 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*ACUTE_ACCENT       */	DEADTRANS(	0x0153	,0x00E1	,0x00F5	,0x0000	), // LATIN SMALL LETTER O WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	0x00D9	,0x00E1	,0x00D1	,0x0000	), // LATIN CAPITAL LETTER N WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	0x00F9	,0x00E1	,0x00F1	,0x0000	), // LATIN SMALL LETTER N WITH TILDE
-//@
 /*ACUTE_ACCENT       */	DEADTRANS(	0x0021	,0x00E1	,0x2020	,0x0000	), // DAGGER
 /*ACUTE_ACCENT       */	DEADTRANS(	0x0022	,0x00E1	,0x201D	,0x0000	), // RIGHT DOUBLE QUOTATION MARK
 /*ACUTE_ACCENT       */	DEADTRANS(	0x0023	,0x00E1	,0x201D	,0x0000	), // RIGHT DOUBLE QUOTATION MARK
