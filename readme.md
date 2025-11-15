@@ -80,7 +80,7 @@ Rendue à son usage premier de saisie des majuscules, la touche Majuscule permet
 
 Majuscule est aussi la touche des grandes ponctuations espacées, sur les huit touches en bas et à droite : quatre ponctuations doubles sur les touches ⟦?,⟧, ⟦.;⟧, ⟦/:⟧ et ⟦§!⟧ où elles sont imprimées, les deux guillemets chevrons "«" et "»" sur ⟦%ù⟧ et ⟦µ*⟧, et les deux guillemets chevrons simples "‹" et "›" sur ⟦¨^⟧ et ⟦£$¤⟧.
 
-Enfin, Majuscule donne accès à trois tirets, deux traits d’union, et l’exposant 3 qui, lui, n’est pas sur la touche ⟦²⟧ mais une touche plus loin où l’exposant 2 est en Minuscule.
+Enfin, Majuscule donne accès à trois tirets, deux traits d’union, et l’exposant 3 qui, lui, n’est pas sur la touche ⟦²⟧ mais une touche plus près sur ⟦1&⟧, où l’exposant 2 est en Minuscule.
 
 • Les trois tirets :
 
@@ -113,11 +113,11 @@ La touche AltGr gagne en importance, car elle sert à saisir les chiffres et le 
 2. Espace insécable : AltGr + Espace ;
 3. Symbole euro : AltGr + ⟦E€⟧.
 
-Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le point, l’arobase et le guillemet, tous en Minuscule sur leurs touches ou, pour l’arobase, sur la touche d’à côté.
+Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le point, l’arobase et le guillemet, tous en Minuscule sur leurs touches ou, pour l’arobase, sur la touche d’à côté ⟦°)]⟧.
 
 Parmi ces symboles en AltGr, les parenthèses sont "(" sur AltGr + ⟦D⟧ comme début, et ")" sur AltGr + ⟦F⟧ comme fin, directement sous les doigts sur la rangée de repos.
 
-Les symboles inférieur et supérieur (à) sont "<" sur AltGr + ⟦C⟧, et ">" sur AltGr + ⟦V⟧, en synergie avec l’oblique sur AltGr + ⟦W⟧ (en AltGr elle n’est pas sur sa touche), avec le point d’exclamation sur AltGr + ⟦.;⟧ (en AltGr il n’est pas sur sa touche), avec le trait d’union sur AltGr + ⟦G⟧ (en AltGr il n’est pas sur sa touche), avec le point d’interrogation sur AltGr + ⟦?,⟧, et avec le symbole égal sur AltGr + ⟦B⟧ (en AltGr il n’est pas sur sa touche).
+Les symboles inférieur et supérieur (à) sont "<" sur AltGr + ⟦C⟧, et ">" sur AltGr + ⟦V⟧, en synergie avec l’oblique sur AltGr + ⟦W⟧ (elle est aussi sur sa touche ⟦/:⟧, en Minuscule, ou en mode ASCII en Majuscule), avec le point d’exclamation sur AltGr + ⟦.;⟧ (il est aussi sur sa touche ⟦§!⟧, en AltFr), avec le trait d’union sur AltGr + ⟦G⟧ (il est aussi sur sa touche ⟦6-|⟧, en Minuscule), avec le point d’interrogation sur AltGr + ⟦?,⟧ (il y est aussi en AltFr), et avec le symbole égal sur AltGr + ⟦B⟧ (il est aussi sur sa touche ⟦+=}⟧, en AltFr, ou en mode ASCII en Minuscule).
 
 Les crochets sont "[" sur AltGr + ⟦K⟧, et "]" sur AltGr + ⟦L⟧, en synergie avec les points de suspension "…" sur AltGr + ⟦%ù⟧. (Les points de suspension entre crochets "⟦…⟧" sont aussi sur Maj + AltGr + ⟦%ù⟧.)
 
