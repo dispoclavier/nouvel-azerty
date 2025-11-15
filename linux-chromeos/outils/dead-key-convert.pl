@@ -4,6 +4,7 @@
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
 # 2025-11-14T0532+0100
+# 2025-11-15T0554+0100
 # = last modified.
 #
 # This “dead key converter” takes in the dead key configuration file for Linux,
@@ -43,7 +44,9 @@
 #
 # Multikey sequences need to be processed separately. These are unrelated to,
 # or not congruent with, the dead key output, as about 100 multikey equivalents
-# are commented out due to conflicts. Multikey is not yet supported.
+# are commented out due to conflicts. There has been an attempt to support all
+# multikey sequences on 2025-11-12, but for unknown reasons the multikey part
+# is broken. As a consequence, Multikey is not yet supported.
 #
 # On 2025-10-29, 1 097 sequences have multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
