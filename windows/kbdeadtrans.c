@@ -1,7 +1,7 @@
  /*****************************************************************************\
 * Module name: kbdeadtrans.c
 *
-* Dead key content.
+* Dead key content
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte
@@ -45,7 +45,7 @@
 * See #include "kbdeadtrans-multikey.c"
 *
 *
-* DEADTRANS macro calls.
+* DEADTRANS macro calls
 *
 * On Windows, the dead key output is restricted to the low surrogate. An input
 * method for the high surrogates is provided separately at the root of related
@@ -91,43 +91,43 @@
 static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 /*****************************************************************************\
-* High surrogates.
+* High surrogates
 *
 \*****************************************************************************/
 
-/*<!dead_abovedot>     */ DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_abovehook>    */ DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_abovering>    */ DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_acute>        */ DEADTRANS( 0x200B ,0x00E1 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_bar>          */ DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_belowcomma>   */ DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_belowdot>     */ DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_breve>        */ DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_caron>        */ DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_cedilla>      */ DEADTRANS( 0x200B ,0x00E7 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_circumflex>   */ DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_currency>     */ DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_diaeresis>    */ DEADTRANS( 0x200B ,0x00EB ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_doubleacute>  */ DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks.
-/*<!dead_flag>         */ DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
-/*<!dead_grave>        */ DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_greek>        */ DEADTRANS( 0x200B ,0x03B5 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters.
-/*<!dead_group>        */ DEADTRANS( 0x200B ,0x2460 ,0xD835 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols.
-/*<!dead_hook>         */ DEADTRANS( 0x200B ,0x0192 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_horn>         */ DEADTRANS( 0x200B ,0x01A1 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_invertedbreve>*/ DEADTRANS( 0x200B ,0x0213 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_macron>       */ DEADTRANS( 0x200B ,0x0101 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_ogonek>       */ DEADTRANS( 0x200B ,0x01EB ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_retroflexhook>*/ DEADTRANS( 0x200B ,0x0273 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_reversed>     */ DEADTRANS( 0x200B ,0x1D19 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_stroke>       */ DEADTRANS( 0x200B ,0x00F8 ,0xD83E ,0x0000 ), // High surrogate for wide-headed arrows.
-/*<!dead_subscript>    */ DEADTRANS( 0x200B ,L'_'   ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_superscript>  */ DEADTRANS( 0x200B ,L'^'   ,0xD801 ,0x0000 ), // High surrogate for modifier letters.
-/*<!dead_tilde>        */ DEADTRANS( 0x200B ,0x00F5 ,0xD837 ,0x0000 ), // High surrogate for Latin.
-/*<!dead_turned>       */ DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA.
+/*<!dead_abovedot>     */ DEADTRANS( 0x200B ,0x1E57 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_abovehook>    */ DEADTRANS( 0x200B ,0x1EBB ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_abovering>    */ DEADTRANS( 0x200B ,0x00E5 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_acute>        */ DEADTRANS( 0x200B ,0x00E1 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks
+/*<!dead_bar>          */ DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_belowcomma>   */ DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_belowdot>     */ DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_breve>        */ DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_caron>        */ DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_cedilla>      */ DEADTRANS( 0x200B ,0x00E7 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_circumflex>   */ DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks
+/*<!dead_currency>     */ DEADTRANS( 0x200B ,0x00A4 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_diaeresis>    */ DEADTRANS( 0x200B ,0x00EB ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks
+/*<!dead_doubleacute>  */ DEADTRANS( 0x200B ,0x0151 ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks
+/*<!dead_flag>         */ DEADTRANS( 0x200B ,0x2690 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters
+/*<!dead_grave>        */ DEADTRANS( 0x200B ,0x00F2 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_greek>        */ DEADTRANS( 0x200B ,0x03B5 ,0xD83C ,0x0000 ), // High surrogate for flag letters, squared letters
+/*<!dead_group>        */ DEADTRANS( 0x200B ,0x2460 ,0xD835 ,0x0000 ), // High surrogate for mathematical alphanumeric symbols
+/*<!dead_hook>         */ DEADTRANS( 0x200B ,0x0192 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_horn>         */ DEADTRANS( 0x200B ,0x01A1 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_invertedbreve>*/ DEADTRANS( 0x200B ,0x0213 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_macron>       */ DEADTRANS( 0x200B ,0x0101 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_ogonek>       */ DEADTRANS( 0x200B ,0x01EB ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_retroflexhook>*/ DEADTRANS( 0x200B ,0x0273 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_reversed>     */ DEADTRANS( 0x200B ,0x1D19 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_stroke>       */ DEADTRANS( 0x200B ,0x00F8 ,0xD83E ,0x0000 ), // High surrogate for wide-headed arrows
+/*<!dead_subscript>    */ DEADTRANS( 0x200B ,L'_'   ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_superscript>  */ DEADTRANS( 0x200B ,L'^'   ,0xD801 ,0x0000 ), // High surrogate for modifier letters
+/*<!dead_tilde>        */ DEADTRANS( 0x200B ,0x00F5 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_turned>       */ DEADTRANS( 0x200B ,0x0250 ,0xD807 ,0x0000 ), // High surrogate for U+11FB0 "𑾰" LISU LETTER YHA
 
 /*****************************************************************************\
-* Diacriticized letter key emulations.
+* Diacriticized letter key emulations
 *
 * On Windows, the dead key output is restricted to a single code unit, due to a
 * bad design decision, based on a misconception of Unicode as a 16-bit charset,
@@ -165,7 +165,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_cedilla>   */ DEADTRANS( L'U' ,0x00E7 ,0x00C7 ,0x0000 ), // "Ç" LATIN CAPITAL LETTER C WITH CEDILLA
 
 /*****************************************************************************\
-* Flag letters.
+* Flag letters
 *
 * Windows has flag letters on live keys, level AltLe (like Letter emoji), and
 * flag letters with an appended word joiner one level up for writing in letter
@@ -234,7 +234,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_flag>*/ DEADTRANS( L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
 
 /*****************************************************************************\
-* Diacritical and transformational dead key content.
+* Diacritical and transformational dead key content
 *
 * This is up-to-date and overrides the legacy dead key content.
 * See kbdeadtrans-deadkeys.c
@@ -243,7 +243,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 #include "kbdeadtrans-deadkeys.c"
 
 /*****************************************************************************\
-* Dedicated multikey sequences.
+* Dedicated multikey sequences
 *
 * This is a broken transpilation awaiting bugfixes in the transpiler.
 * https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/dead-key-convert.pl
@@ -253,7 +253,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 \*****************************************************************************/
 
 /*****************************************************************************\
-* Multikey equivalents of dead keys.
+* Multikey equivalents of dead keys
 *
 * This is another broken transpilation. Given that multikey equivalents of
 * dead keys are a Linux feature fostered by mutualized dead key configuration,
@@ -265,7 +265,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 \*****************************************************************************/
 
 /*****************************************************************************\
-* Legacy dead key content.
+* Legacy dead key content
 *
 * This is partly overridden by the transpilations included above.
 *
@@ -289,7 +289,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * recommendations as of supporting composed letters by dead keys, and worse,
 * the UTF-16 encoding model of the Supplemental Multilingual Plane on Windows.
 *
-* Progress is not always linear, but "//@" marks the point up to where
+* Progress is not always linear, but "//@" marks the point down to where
 * all DEADTRANS calls have been reviewed.
 *
 \*****************************************************************************/
@@ -300,11 +300,11 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*ACUTE_ACCENT       */	DEADTRANS(	0x202F	,0x00E1	,0x02CA	,0x0000	), // MODIFIER LETTER ACUTE ACCENT
 /*ACUTE_ACCENT       */	DEADTRANS(	L'A'	,0x00E1	,0x00C1	,0x0000	), // LATIN CAPITAL LETTER A WITH ACUTE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'a'	,0x00E1	,0x00E1	,0x0000	), // LATIN SMALL LETTER A WITH ACUTE
-//@
-/*ACUTE_ACCENT       */	iDEADTRANS(	L'B'	,0x00E1	,0x00D1	,0x0000	), // LATIN CAPITAL LETTER N WITH TILDE
+/*ACUTE_ACCENT       */	DEADTRANS(	L'B'	,0x00E1	,0x00D1	,0x0000	), // LATIN CAPITAL LETTER N WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'b'	,0x00E1	,0x00F1	,0x0000	), // LATIN SMALL LETTER N WITH TILDE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'C'	,0x00E1	,0x0106	,0x0000	), // LATIN CAPITAL LETTER C WITH ACUTE
 /*ACUTE_ACCENT       */	DEADTRANS(	L'c'	,0x00E1	,0x0107	,0x0000	), // LATIN SMALL LETTER C WITH ACUTE
+//@
 /*ACUTE_ACCENT       */	DEADTRANS(	L'D'	,0x00E1	,0x0189	,0x0000	), // LATIN CAPITAL LETTER AFRICAN D
 /*ACUTE_ACCENT       */	DEADTRANS(	L'd'	,0x00E1	,0x0256	,0x0000	), // LATIN SMALL LETTER D WITH TAIL
 /*ACUTE_ACCENT       */	DEADTRANS(	L'E'	,0x00E1	,0x00C9	,0x0000	), // LATIN CAPITAL LETTER E WITH ACUTE
