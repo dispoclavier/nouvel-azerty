@@ -8,13 +8,11 @@
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
 # 2025-10-29T0554+0100
-# 2025-11-11T1513+0100
+# 2025-11-16T1852+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
-#
-# The input requires "START_GREEK" as a start tag.
 #
 # Section headings with a leading "#*#" and the following headings switch files
 # of partial tables:
@@ -112,7 +110,7 @@ open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $input_path to $output_path.\n" );
 
-my $parse_on       = !1;
+my $parse_on       = !0;
 my $comprehensive  = !0;
 my $date_legend    = 'Tableau mis à jour le ';
 
@@ -130,15 +128,13 @@ my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$sta
 my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
-my ( @anchors, $anchor, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str, $test, $text, $tooltip, $ucodes, $winspe );
+my ( @anchors, $anchor, $check, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str,
+		 $test, $text, $tooltip, $ucodes, $winspe );
 my $highsu = 'Uniquement pour Windows';
 my $nowin  = 'Ne fonctionne pas sous Windows';
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
-	if ( $line =~ /START_GREEK/ ) {
-		$parse_on = !0;
-	}
 	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
 
 		# The symbol group table and the letter group table are generated alongside
@@ -223,12 +219,14 @@ while ( my $line = <INPUT> ) {
 
 				# The Windows-specific prefix triggers special formatting.
 				if ( $line =~ /^#@/ ) {
-					$line  =~ s/^#@//;
-					$class = 'winspe';
-					$winspe = 'Uniquement sous Windows';
+					$line    =~ s/^#@//;
+					$class   = 'winspe';
+					$winspe  = ' title="Uniquement sous Windows"';
+					$check   = '<div class="check">Windows</div>';
 				} else {
 					$class = 'common';
 					$winspe = '';
+					$check  = '';
 				}
 
 				# Starting from here, this should be in sync with generate-multikey-tables.pl.
@@ -556,10 +554,10 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/^(.+?) : "(.+?)" # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$3">$ucodes<\/td><td title="$nowin">$1<\/td><td>$3<\/td><\/tr>/;
 
 				# Combining characters.
-				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td title="$winspe">$1<\/td><td>$4<\/td><\/tr>/;
+				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td$winspe>$check$1<\/td><td>$4<\/td><\/tr>/;
 
 				# All other characters.
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td title="$winspe">$1<\/td><td>$4$math<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td$winspe>$check$1<\/td><td>$4$math<\/td><\/tr>/;
 
 				print OUTPUT $line;
 				if ( $comprehensive ) {
