@@ -7268,6 +7268,8 @@
 <Multi_key><apostrophe>                                                                        <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
 <dead_acute>                                                                                   <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
 <Multi_key><apostrophe>                                                                        <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
+#@<dead_acute>                                                                                   <B> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
+#@<dead_acute>                                                                                   <b> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
 <dead_acute>                                                                                   <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                                        <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <dead_acute>                                                                                   <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
