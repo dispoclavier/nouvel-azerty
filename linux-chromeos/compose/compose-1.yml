@@ -1012,7 +1012,10 @@
 #
 #   Lines starting with "#@" are Windows-specific alternative input sequences
 #   instead of multicharacter output sequences. These need to be configured in
-#   a single place with respect to dead key tables.
+#   a single place with respect to dead key tables, without multikey equivalent
+#   given that multikey equivalents cannot be supported on Windows due to file
+#   size constraints on keyboard layout drivers.
+#   See kbdeadtrans.c * Multikey equivalents of dead keys
 #   See # # Notes about documentation
 #
 #

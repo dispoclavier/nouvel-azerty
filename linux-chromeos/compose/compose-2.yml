@@ -7186,10 +7186,43 @@
 #   with alphabetic mnemonic and accounting for the lack of level-2 uppercase,
 #   while casing glottal stop is in group 1 of Qq.
 #
+#
+#   Primes
+#
 #   The primes by digits sequences add to the support of "′" U2032, "″" U2033,
 #   "‴" U2034, "⁗" U2057 by multikey.
 #   See # # Primes
 #   See # # Quadruple prime
+#
+#
+#   Daggers
+#
+#   Although "†" U2020 DAGGER and "‡" U2021 DOUBLE DAGGER are in groups 1 and 2
+#   of "|", dead_acute provides shortcuts with "!" and "?" as base characters.
+#
+#   This is part of the dead key enhancement carried out yet before the symbol
+#   groups were designed and implemented, There, the daggers were included as
+#   late as in version 5.0.0 (2025-04-15), after a failed early attempt for
+#   version 2.0.0 (2024-05-20).
+#
+#   This also predates the support of the full set of daggers in dead_tilde, as
+#   some daggers were in *dead_bar, in dead_circumflex, and in the virtual dead
+#   key named “LONG” that was in dead_macron double press followed by "|", now
+#   partly in dead_macron.
+#   See # # D02 percent
+#
+#
+#   Per myriad
+#
+#   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
+#   to their confusability and limited availability, they are relegated to the
+#   symbol groups 11 and 12, in favor of potentially more useful symbols in the
+#   groups 1 and 2.
+#   See # # D02 percent
+#
+#   However, per mille has a shortcut in dead_acute, and per myriad has one in
+#   dead_diaeresis.
+#   See #*# DIAERESIS
 #
 #
 #   Symbols for documentation
@@ -7232,12 +7265,18 @@
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_acute>                                                                             <percent> : "‰" U2030 # PER MILLE SIGN
+<Multi_key><apostrophe>                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
 <dead_acute>                                                                                  <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
+<dead_acute>                                                                            <question> : "‡" U2021 # DOUBLE DAGGER
+<Multi_key><apostrophe>                                                                 <question> : "‡" U2021 # DOUBLE DAGGER
+<dead_acute>                                                                              <exclam> : "†" U2020 # DAGGER
+#   Multikey conflicts with "ᾄ" U1F84, "ᾅ" U1F85, "↿" U21BF, "⥍" U294D, "⥑" U2951, […]   <exclam> : "†" U2020 # DAGGER
 <dead_acute>                                                                               <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
 #   Multikey conflicts with "Ǿ" U01FE, "ǿ" U01FF.                                          <slash> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
 <dead_acute>                                                                           <backslash> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
@@ -10660,14 +10699,31 @@
 #   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #   https://web.archive.org/web/20250202064605/https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #
+#
+#   Letters
+#
 #   All barred letters occurring in orthographies have their precomposed form
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
 #   https://www.frathwiki.com/Bar
+#
+#
+#   Daggers
+#
+#   Although "†" U2020 DAGGER and "‡" U2021 DOUBLE DAGGER are in groups 1 and 2
+#   of "|", *dead_bar provides a shortcut with "|" as a base character, and so
+#   does *dead_bar double press.
+#   See #^# DOUBLE_BAR
+#
+#
+#   Diacritic
 #
 #   As a spacing counterpart of the short bar diacritic "̵" U0335, "˗" U02D7
 #   MODIFIER LETTER MINUS SIGN is convenient, since it is not the superscript
 #   minus sign, despite being named a modifier letter.
 #   See #*# SUPERSCRIPT
+#
+#
+#   Math symbols
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   braceright yields "⦵" U29B5, with mnemonics based on braceright as the base
@@ -10688,6 +10744,8 @@
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                             <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                  <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
+<UEFD8>                                                                                      <bar> : "†" U2020 # DAGGER
+#   Multikey conflicts with "⇻" U21FB, "⟛" U27DB, "⤁" U2901, "⫣" U2AE3.                      <bar> : "†" U2020 # DAGGER
 <UEFD8>                                                                                        <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key><minus>                                                                             <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <UEFD8>                                                                                     <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
@@ -10889,6 +10947,8 @@
 <Multi_key><minus><minus>                                                           <nobreakspace> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <UEFD8><UEFD8>                                                                             <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
 <Multi_key><minus><minus>                                                                  <U202F> : "꞊" UA78A # MODIFIER LETTER SHORT EQUALS SIGN
+<UEFD8><UEFD8>                                                                               <bar> : "‡" U2021 # DOUBLE DAGGER
+#   Multikey conflicts with "⊣" U22A3.                                                       <bar> : "‡" U2021 # DOUBLE DAGGER
 <UEFD8><UEFD8>                                                                            <period> : "–" U2013 # EN DASH
 <Multi_key><minus><minus>                                                                 <period> : "–" U2013 # EN DASH
 <UEFD8><UEFD8>                                                                                 <D> : "Ꟈ" UA7C7 # LATIN CAPITAL LETTER D WITH SHORT STROKE OVERLAY
@@ -12233,7 +12293,7 @@
 #
 #
 #*# MACRON
-#   macron, long leg, topbar
+#   macron, long arm, long leg, topbar, vertical bar
 #   dead_macron
 #   Multikey: ¦|
 #
@@ -12252,6 +12312,19 @@
 #   Cedi "₵" U20B5 and Cent "¢" U00A2 signs are supported by lack of C with
 #   macron, and for consistency with en_US.UTF-8/Compose as of the multikey
 #   equivalents.
+#
+#   This extends dead_macron to a vertical bar dead key, as opposed to the
+#   horizontal bar dead key *dead_bar, and the diagonal/oblique bar dead key
+#   dead_stroke.
+#   See #*# BAR
+#   See #*# STROKE
+#
+#
+#   Daggers
+#
+#   Although "†" U2020 DAGGER and "‡" U2021 DOUBLE DAGGER are in groups 1 and 2
+#   of "|", dead_macron provides shortcuts with "+" and "=" as base characters.
+#   See #*# ACUTE
 #
 #
 #   Vertical bars
@@ -12328,14 +12401,6 @@
 <Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <dead_diaeresis><dead_diaeresis>                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <Multi_key><colon><colon>                                                                  <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
-<dead_macron>                                                                          <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-#   Multikey conflicts with "Ʋ̄", "ʋ̄".                                                  <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<dead_diaeresis><dead_diaeresis>                                                       <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><colon><colon>                                                              <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<dead_macron>                                                                         <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-#   Multikey conflicts with "𐞧" U107A7, "𝼈" U1DF08.                                   <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<dead_diaeresis><dead_diaeresis>                                                      <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
-<Multi_key><colon><colon>                                                             <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <dead_macron>                                                                         <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
 #   Multikey conflicts with "Ū́", "ū́", "᷄" U1DC4, "Ḗ" U1E16, "ḗ" U1E17, "Ṓ" U1E52, […]  <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
 <dead_diaeresis><dead_diaeresis>                                                      <apostrophe> : "⩂" U2A42 # UNION WITH OVERBAR
@@ -12344,10 +12409,22 @@
 #   Multikey conflicts with "⥒" U2952, "⥘" U2958.                           <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
 <dead_diaeresis><dead_diaeresis>                                            <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
 <Multi_key><colon><colon>                                                   <rightsinglequotemark> : "⩂" U2A42 # UNION WITH OVERBAR
+<dead_macron>                                                                          <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+#   Multikey conflicts with "Ʋ̄", "ʋ̄".                                                  <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                       <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><colon><colon>                                                              <braceleft> : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<dead_macron>                                                                         <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+#   Multikey conflicts with "𐞧" U107A7, "𝼈" U1DF08.                                   <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                      <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
+<Multi_key><colon><colon>                                                             <braceright> : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <dead_macron>                                                                          <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <dead_diaeresis><dead_diaeresis>                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><colon><colon>                                                              <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
+<dead_macron>                                                                               <plus> : "†" U2020 # DAGGER
+<Multi_key><bar>                                                                            <plus> : "†" U2020 # DAGGER
+<dead_diaeresis><dead_diaeresis>                                                            <plus> : "†" U2020 # DAGGER
+<Multi_key><colon><colon>                                                                   <plus> : "†" U2020 # DAGGER
 <dead_macron>                                                                              <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 #   Multikey conflicts with "∤" U2224, "⋈" U22C8, "⋉" U22C9, "⟖" U27D6, "⧒" U29D2.         <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <dead_diaeresis><dead_diaeresis>                                                           <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
@@ -12360,6 +12437,10 @@
 <Multi_key><bar>                                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_diaeresis><dead_diaeresis>                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><colon><colon>                                                                 <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_macron>                                                                              <equal> : "‡" U2021 # DOUBLE DAGGER
+#   Multikey conflicts with "⊧" U22A7, "⊨" U22A8, "⊭" U22AD, "⟾" U27FE, "⤇" U2907, […]     <equal> : "‡" U2021 # DOUBLE DAGGER
+<dead_diaeresis><dead_diaeresis>                                                           <equal> : "‡" U2021 # DOUBLE DAGGER
+#   Multikey conflicts with "⩴" U2A74.                                                     <equal> : "‡" U2021 # DOUBLE DAGGER
 <dead_macron>                                                                              <grave> : "⊼" U22BC # NAND
 #   Multikey conflicts with "᷆" U1DC6, "Ḕ" U1E14, "ḕ" U1E15, "Ṑ" U1E50, "ṑ" U1E51, […]      <grave> : "⊼" U22BC # NAND
 <dead_diaeresis><dead_diaeresis>                                                           <grave> : "⊼" U22BC # NAND
@@ -12784,6 +12865,22 @@
 #   dead_macron double press
 #   Multikey: ¦||
 #
+#   The precomposed letters with macron below have character names containing
+#   “WITH LINE BELOW”, as Unicode notes that in the "Latin Extended Additional"
+#   block, “the names "WITH LINE BELOW" refer to a macron below the letter.”
+#   https://unicode.org/charts/nameslist/n_1E00.html
+#
+#
+#   Stretched C
+#
+#   "ʗ" U0297 is supported by case insensitive "c" to meet eventual user
+#   expectations based on the extended semantics of dead_macron including
+#   vertical bar and long, and given that in dead_macron single press, both
+#   "C" and "c" are used for currency symbols "₵" U20B5 and "¢" U00A2.
+#
+#
+#   Diacritics
+#
 #   The conjoining variants of the combining diacritics are supported with
 #   ampersand as a base character both in macron and in macron below.
 #   See "︭" UFE2D
@@ -12799,6 +12896,9 @@
 #   redundant with the tilde-and-ampersand virtual dead key, that supports
 #   halves of combining diacritics, too.
 #   See # # TILDE&AMPERSAND
+#
+#
+#   Math symbols
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   case insensitive "s" yields "⨜" U2A1C; semicolon and multiply with B08
@@ -12855,10 +12955,10 @@
 <Multi_key><bar><bar>                                                                          <B> : "Ḇ" U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <b> : "ḇ" U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <b> : "ḇ" U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
-<dead_macron><dead_macron>                                                                     <C> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
-<Multi_key><bar><bar>                                                                          <C> : "︫" UFE2B # COMBINING MACRON LEFT HALF BELOW
-<dead_macron><dead_macron>                                                                     <c> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
-<Multi_key><bar><bar>                                                                          <c> : "︬" UFE2C # COMBINING MACRON RIGHT HALF BELOW
+<dead_macron><dead_macron>                                                                     <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><bar>                                                                          <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<dead_macron><dead_macron>                                                                     <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><bar>                                                                          <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
 <dead_macron><dead_macron>                                                                     <D> : "Ḏ" U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
 <Multi_key><bar><bar>                                                                          <D> : "Ḏ" U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
 <dead_macron><dead_macron>                                                                     <d> : "ḏ" U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
@@ -14383,7 +14483,6 @@
 <Multi_key><less><less><less>                                                           <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <dead_horn><dead_horn>                                                                  <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <Multi_key><plus><plus>                                                                 <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
-<Multi_key><plus><plus>                                                                 <quotedbl> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                     <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <Multi_key><less><less><less>                                                           <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
 <dead_horn><dead_horn>                                                                  <EuroSign> : "˿" U02FF # MODIFIER LETTER LOW LEFT ARROW
@@ -14591,7 +14690,7 @@
 <dead_caron>                                                                                 <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 #   Multikey conflicts with "⋫" U22EB.                                                       <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_circumflex><dead_circumflex>                                                           <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<Multi_key><less><less>                                                                      <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+#   Multikey conflicts with "⬴" U2B34, "⬵" U2B35, "⬼" U2B3C, "⬽" U2B3D.                      <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><greater>                                                                           <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_circumflex><dead_circumflex>                                                             <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -17016,13 +17115,19 @@
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
 #
-#   Superscript digits are also supported as a full-support alternative to the
-#   partial support in dead_circumflex, lacking the multikey equivalents.
-#   See #*# CIRCUMFLEX
-#
 #   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
 #   but also "Ø" U00D8, "ø" U00F8 for convenience.
 #   See # # Oslash for Danish, Norwegian and other languages
+#
+#
+#   Superscript digits
+#
+#   As dead_circumflex is lacking the multikey equivalents, dead_diaeresis is a
+#   full-support alternative.
+#   See #*# CIRCUMFLEX
+#
+#
+#   Asterisk symbols
 #
 #   For intuitivity, with asterisk as a base character, dead_diaeresis yields
 #   "⁑" U2051, consistently with dead_circumflex and *dead_superscript for
@@ -17031,6 +17136,19 @@
 #   See #*# RING_ABOVE
 #   See #*# CIRCUMFLEX
 #   See #*# SUPERSCRIPT
+#
+#
+#   Per myriad
+#
+#   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
+#   to their confusability and limited availability, they are relegated to the
+#   symbol groups 11 and 12, in favor of potentially more useful symbols in the
+#   groups 1 and 2.
+#   See # # D02 percent
+#
+#   However, per mille has a shortcut in dead_acute, and per myriad has one in
+#   dead_diaeresis.
+#   See #*# ACUTE
 #
 #
 #   Symbols for documentation
@@ -17074,6 +17192,8 @@
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                                     <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
 #   Multikey conflicts with "ᷲ" U1DF2, "ᷳ" U1DF3, "ᷴ" U1DF4.                            <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
+<dead_diaeresis>                                                                         <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
+#   Multikey conflicts with "ᴞ" U1D1E.                                                   <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
 <dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                  <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol

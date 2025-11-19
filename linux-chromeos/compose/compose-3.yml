@@ -343,7 +343,10 @@
 #
 #   The dagger "†" U2020 is heavily used to note dates of death, matched with
 #   asterisk "*" U002A for dates of birth. Consistently, it is supported here
-#   in group 8, additionally to the full set of daggers in dead_tilde.
+#   in group 8, additionally to the two main daggers in groups 1 and 2 of bar
+#   where they are prone to replacement, the full set of daggers in dead_tilde,
+#   and several shortcuts in other dead keys.
+#   See # # C10 bar
 #   See #*# TILDE
 #
 <UEFD0>                                                                                  <percent> : "☆" U2606 # WHITE STAR math
