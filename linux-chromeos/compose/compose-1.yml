@@ -1874,17 +1874,12 @@
 #   reverse sequences are not supported since they would not make much sense
 #   and are prone to conflicts.
 #
-#   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
-#   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
-#
-#   The letter EZH is represented by digit 3 as a shortcut, in "ɮ" U026E.
-#
 #   Sequences conflicting with ISO currency codes or others are fixed by space
-#   termination along the lines of what is done for math symbols. But this only
-#   affects "Æ" U00C6, "æ" U00E6, "Ǳ" U01F1, "ʣ" U02A3, "Ƣ" U01A2, "ƣ" U01A3,
-#   "ꝳ" UA773, "Ŋ" U014A, "ŋ" U014B, "Þ" U00DE, "þ" U00FE, most of which are
-#   supported in letter group 1.
-#   See #   Leading space
+#   termination along the lines of what is done for math symbols. This affects
+#   "Æ" U00C6, "æ" U00E6, "Ǳ" U01F1, "ʣ" U02A3, "Ƣ" U01A2, "ƣ" U01A3,
+#   "ꝳ" UA773, "Ŋ" U014A, "ŋ" U014B, "Þ" U00DE, "þ" U00FE, "ꭅ" UAB45, most of
+#   which are supported in letter group 1.
+#   See #   Trailing space
 #   See #+# GROUP_1
 #
 #   Deprecated presentation forms for typographic ligatures are not supported,
@@ -1964,6 +1959,9 @@
 <Multi_key><j><a>                                                                                  : "ꭠ" UAB60 # LATIN SMALL LETTER SAKHA YAT
 <Multi_key><L><period>                                                                             : "Ŀ" U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <Multi_key><l><period>                                                                             : "ŀ" U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+#
+#   The letter EZH is represented by digit 3 as a shortcut, in "ɮ" U026E.
+#
 <Multi_key><l><3>                                                                                  : "ɮ" U026E # LATIN SMALL LETTER LEZH
 <Multi_key><l><KP_3>                                                                               : "ɮ" U026E # LATIN SMALL LETTER LEZH
 <Multi_key><l><e><z><h>                                                                            : "ɮ" U026E # LATIN SMALL LETTER LEZH
@@ -1991,12 +1989,32 @@
 <Multi_key><c><percent><e>                                                                         : "ꭢ" UAB62 # LATIN SMALL LETTER OPEN OE
 <Multi_key><o><s><u><p>                                                                            : "ᴖ" U1D16 # LATIN SMALL LETTER TOP HALF O
 <Multi_key><o><i><n><f>                                                                            : "ᴗ" U1D17 # LATIN SMALL LETTER BOTTOM HALF O
+#
+#   "Ꝏ" UA74E LATIN CAPITAL LETTER OO is not supported with a titlecase alias,
+#   because « ¦Oo » is used for "⊚" U229A CIRCLED RING OPERATOR.
+#
 <Multi_key><O><O>                                                                                  : "Ꝏ" UA74E # LATIN CAPITAL LETTER OO
 <Multi_key><o><o>                                                                                  : "ꝏ" UA74F # LATIN SMALL LETTER OO
 <Multi_key><O><U>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><O><u>                                                                                  : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key><o><u>                                                                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
 <Multi_key><q><p>                                                                                  : "ȹ" U0239 # LATIN SMALL LETTER QP DIGRAPH
+#
+#   As a small letter, the stirrup r "ꭅ" UAB45 is only in an uppercase position
+#   in the letter groups, because there is no room left in the "r" groups.
+#   See #+# GROUP_5
+#
+#   To compensate this bad support, various multikey sequences are provided as
+#   alternative input methods for this letter used in German dialectology.
+#   https://fr.wikipedia.org/wiki/%EA%AD%85
+#   https://www.unicode.org/L2/L2011/11202-n4081-teuthonista.pdf
+#
+<Multi_key><r><parenleft>                                                                          : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><R><parenleft>                                                                          : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><apostrophe><parenleft><space>                                                          : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><apostrophe><parenleft><nobreakspace>                                                   : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><rightsinglequotemark><parenleft><space>                                                : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><rightsinglequotemark><parenleft><nobreakspace>                                         : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
 <Multi_key><r><r>                                                                                  : "ꭈ" UAB48 # LATIN SMALL LETTER DOUBLE R
 <Multi_key><R><U><M>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
 <Multi_key><R><u><m>                                                                               : "ꝶ" UA776 # LATIN LETTER SMALL CAPITAL RUM
@@ -2032,9 +2050,17 @@
 <Multi_key><V><Y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><V><y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><v><y>                                                                                  : "ꝡ" UA761 # LATIN SMALL LETTER VY
+<Multi_key><Z><3>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
+<Multi_key><Z><KP_3>                                                                               : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
+<Multi_key><z><3>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
+<Multi_key><z><KP_3>                                                                               : "ʒ" U0292 # LATIN SMALL LETTER EZH
 <Multi_key><Z><H>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <Multi_key><Z><h>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <Multi_key><z><h>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
+#Multi_key><E><Z><H>                                                                               : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
+<Multi_key><E><Z>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
+<Multi_key><E><z>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
+<Multi_key><e><z>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
 #
 #
 #   Glottal stops are supported by multikey for intuitivity thanks to the ASCII
