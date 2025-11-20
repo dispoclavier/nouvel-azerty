@@ -7162,16 +7162,22 @@
 #   dead_acute
 #   Multikey: ¦'
 #
+#   Composed "J" with acute "J́" is in en_US.UTF-8/Compose, but composed "Ĳ"
+#   with acute "Ĳ́" is not, nor do all fonts render it correctly with an accent
+#   on each letter partial making up the all-in-one digraph letter.
+#   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
+#
+#
+#   Quotation marks
+#
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_acute yields high curly quotation marks U201D, U2019 (closing or
 #   opening).
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
 #
-#   Composed "J" with acute "J́" is in en_US.UTF-8/Compose, but composed "Ĳ"
-#   with acute "Ĳ́" is not, nor do all fonts render it correctly with an accent
-#   on each letter partial making up the all-in-one digraph letter.
-#   https://glyphsapp.com/learn/localize-your-font-accented-dutch-ij
+#
+#   Shortcuts
 #
 #   Followed by Éé, dead_acute is a shortcut to Ãã for Portuguese, with spatial
 #   mnemonic on AZERTY, where "A" (D01) is close to "É" (E02).
@@ -7185,6 +7191,40 @@
 #   Followed by Ùù, dead_acute is a shortcut to unicase glottal stop "ʔ" U0294,
 #   with alphabetic mnemonic and accounting for the lack of level-2 uppercase,
 #   while casing glottal stop is in group 1 of Qq.
+#
+#   Followed by 7, dead_acute is a shortcut to unicase "ʔ" U0294.
+#
+#   Followed by grave, dead_acute is a shortcut to "ʕ" U0295.
+#
+#   Followed by parenleft, dead_acute is a shortcut to the German stirrup r
+#   "ꭅ" UAB45 with shape-based mnemonics.
+#
+#   Followed by asterisk, dead_acute is a shortcut to the bullet "•" U2022.
+#
+#   Followed by plus, dead_acute is a shortcut to "±" U00B1.
+#
+#   Followed by minus the hyphen, dead_acute is a shortcut to "–" U2013,
+#   consistently with dead_circumflex yielding "—" U2014.
+#
+#   Followed by equal, dead_acute is a shortcut to the barred equal
+#   "≠" U2260 with a shape-based mnemonic.
+#
+#   Followed by asciicircum, dead_acute is a shortcut to "‣" U2023.
+#
+#
+#   End marks
+#
+#   Followed by bracketleft, dead_acute is a shortcut to the box-shadowed
+#   "❒" U2752, with mnemonics based on the slant of the acute accent.
+#   See #*# GRAVE
+#   See "❑" U2751
+#
+#   Followed by bracketright, dead_acute is a shortcut to the drop-shadowed
+#   "❐" U2750, with mnemonics based on the slant of the acute accent. This
+#   makes for a streamlined user experience, as opposed to lenient bracket
+#   sides while using group 1 for the drop-shadowed square.
+#   See #*# GRAVE
+#   See "❏" U274F
 #
 #
 #   Primes
@@ -7228,10 +7268,9 @@
 #   Symbols for documentation
 #
 #   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
-#   dead_acute by "/" and "\" or "·" U00B7 periodcentered additionally to their
-#   support in dead_grave by "[" and "]", to work around the special formatting
-#   triggered by some ASCII-bracketed strings in Markdown, when the actual
-#   intent is to mark up keycaps in documentation.
+#   dead_acute by "/" and "\" or "·" U00B7 periodcentered to work around the
+#   special formatting triggered by some ASCII-bracketed strings in Markdown,
+#   when the actual intent is to mark up keycaps in documentation.
 #   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
 #
 #   "▿" U25BF WHITE DOWN-POINTING SMALL TRIANGLE representing the no-break
@@ -7265,14 +7304,32 @@
 <Multi_key><apostrophe>                                                               <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+<dead_acute>                                                                         <asciicircum> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><apostrophe>                                                              <asciicircum> : "‣" U2023 # TRIANGULAR BULLET
 <dead_acute>                                                                             <percent> : "‰" U2030 # PER MILLE SIGN
 <Multi_key><apostrophe>                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
 <dead_acute>                                                                                  <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
+<dead_acute>                                                                           <parenleft> : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<Multi_key><apostrophe>                                                                <parenleft> : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+<dead_acute>                                                                               <minus> : "–" U2013 # EN DASH
+<Multi_key><apostrophe>                                                                    <minus> : "–" U2013 # EN DASH
+<dead_acute>                                                                                <plus> : "±" U00B1 # PLUS-MINUS SIGN
+<Multi_key><apostrophe>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
+<dead_acute>                                                                         <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><apostrophe>                                                              <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<dead_acute>                                                                        <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><apostrophe>                                                             <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<dead_acute>                                                                            <asterisk> : "•" U2022 # BULLET
+<Multi_key><apostrophe>                                                                 <asterisk> : "•" U2022 # BULLET
+<dead_acute>                                                                               <equal> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><apostrophe>                                                                    <equal> : "≠" U2260 # NOT EQUAL TO
+<dead_acute>                                                                               <grave> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><apostrophe>                                                                    <grave> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <dead_acute>                                                                            <question> : "‡" U2021 # DOUBLE DAGGER
 <Multi_key><apostrophe>                                                                 <question> : "‡" U2021 # DOUBLE DAGGER
 <dead_acute>                                                                              <exclam> : "†" U2020 # DAGGER
@@ -7299,6 +7356,10 @@
 <Multi_key><apostrophe>                                                                        <4> : "⁗" U2057 # QUADRUPLE PRIME
 <dead_acute>                                                                                <KP_4> : "⁗" U2057 # QUADRUPLE PRIME
 <Multi_key><apostrophe>                                                                     <KP_4> : "⁗" U2057 # QUADRUPLE PRIME
+<dead_acute>                                                                                   <7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><apostrophe>                                                                        <7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<dead_acute>                                                                                <KP_7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
+<Multi_key><apostrophe>                                                                     <KP_7> : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
 <dead_acute>                                                                                   <A> : "Á" U00C1 # LATIN CAPITAL LETTER A WITH ACUTE
 <Multi_key><apostrophe>                                                                        <A> : "Á" U00C1 # LATIN CAPITAL LETTER A WITH ACUTE
 <dead_acute>                                                                                   <a> : "á" U00E1 # LATIN SMALL LETTER A WITH ACUTE
@@ -10706,12 +10767,17 @@
 #   encoded in Unicode, since the overlay bar diacritics do not render well.
 #   https://www.frathwiki.com/Bar
 #
+#   The unicase glottal stop with stroke, meaning with bar, is supported in its
+#   upright form "ʡ" U02A1 by "7", by "?", by "q", and by apostrophe, in its
+#   inverted form "ƾ" U01BE by "Q", and by percent, and in its reversed form
+#   "ʢ" U02A2 by backslash, consistently with aliases.
+#
 #
 #   Daggers
 #
 #   Although "†" U2020 DAGGER and "‡" U2021 DOUBLE DAGGER are in groups 1 and 2
-#   of "|", *dead_bar provides a shortcut with "|" as a base character, and so
-#   does *dead_bar double press.
+#   of "|", *dead_bar provides shortcuts with "|" and "+" as base characters,
+#   and so does *dead_bar double press for "‡" U2021.
 #   See #^# DOUBLE_BAR
 #
 #
@@ -10738,14 +10804,24 @@
 <Multi_key><minus>                                                                  <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                    <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
+<UEFD8>                                                                                  <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+<Multi_key><minus>                                                                       <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+<UEFD8>                                                                                <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+<Multi_key><minus>                                                                     <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+<UEFD8>                                                                               <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><minus>                                                                    <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 #   Multikey conflicts with "𝼚" U1DF1A.                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
+<UEFD8>                                                                                     <plus> : "‡" U2021 # DOUBLE DAGGER
+<Multi_key><minus>                                                                          <plus> : "‡" U2021 # DOUBLE DAGGER
 <UEFD8>                                                                              <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                             <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                  <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                                      <bar> : "†" U2020 # DAGGER
 #   Multikey conflicts with "⇻" U21FB, "⟛" U27DB, "⤁" U2901, "⫣" U2AE3.                      <bar> : "†" U2020 # DAGGER
+<UEFD8>                                                                                 <question> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+<Multi_key><minus>                                                                      <question> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                        <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key><minus>                                                                             <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <UEFD8>                                                                                     <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
@@ -10808,8 +10884,8 @@
 <Multi_key><minus>                                                                             <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
 <UEFD8>                                                                                        <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
 <Multi_key><minus>                                                                             <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
-<UEFD8>                                                                                        <Q> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                             <Q> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+<UEFD8>                                                                                        <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+<Multi_key><minus>                                                                             <Q> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                        <q> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus>                                                                             <q> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                        <R> : "Ɍ" U024C # LATIN CAPITAL LETTER R WITH STROKE
@@ -12320,6 +12396,16 @@
 #   See #*# STROKE
 #
 #
+#   Stretched C
+#
+#   In group 1, "ʗ" U0297 is supported by case insensitive "c" to meet eventual
+#   user expectations based on the extended semantics of dead_macron including
+#   vertical bar and long, additionally to the support in double press of
+#   dead_macron, given that in dead_macron single press, both "C" and "c"
+#   are used for currency symbols "₵" U20B5 and "¢" U00A2.
+#   See #^# MACRON_BELOW
+#
+#
 #   Daggers
 #
 #   Although "†" U2020 DAGGER and "‡" U2021 DOUBLE DAGGER are in groups 1 and 2
@@ -12737,6 +12823,10 @@
 <Multi_key><bar><numbersign>                                                                   <A> : "Ǣ" U01E2 # LATIN CAPITAL LETTER AE WITH MACRON
 <dead_macron><UEFD0>                                                                           <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
 <Multi_key><bar><numbersign>                                                                   <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
+<dead_macron><UEFD0>                                                                           <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><numbersign>                                                                   <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<dead_macron><UEFD0>                                                                           <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><numbersign>                                                                   <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
 #
 #
 # # MACRON&TILDE
@@ -12875,8 +12965,9 @@
 #
 #   "ʗ" U0297 is supported by case insensitive "c" to meet eventual user
 #   expectations based on the extended semantics of dead_macron including
-#   vertical bar and long, and given that in dead_macron single press, both
-#   "C" and "c" are used for currency symbols "₵" U20B5 and "¢" U00A2.
+#   vertical bar and long, additionally to the support in group 1 of
+#   dead_macron, given that in dead_macron single press, both "C" and "c"
+#   are used for currency symbols "₵" U20B5 and "¢" U00A2.
 #
 #
 #   Diacritics
@@ -13966,6 +14057,9 @@
 #   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
 #   See # # B06 grave
 #
+#   Followed by minus, dead_circumflex is a shortcut to "—" U2014, consistently
+#   with dead_acute yielding "–" U2013.
+#
 #   As "B" has not been encoded with circumflex, and French doesn’t have any
 #   word with "êb", <dead_circumflex><B> and <dead_circumflex><b> may be used
 #   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
@@ -14019,6 +14113,8 @@
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
 #   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
+<dead_circumflex>                                                                          <minus> : "—" U2014 # EM DASH
+<Multi_key><less>                                                                          <minus> : "—" U2014 # EM DASH
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
@@ -16538,20 +16634,37 @@
 #   dead_grave
 #   Multikey: ¦`
 #
+#   Quotation marks
+#
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_grave yields reversed high, opening curly quotation marks U201B,
 #   U201F.
 #   See # # Quotation mark input method
 #
+#
+#   Reversed primes
+#
 #   The reversed primes by digits sequences add to the support of "‵" U2035,
 #   "‶" U2036, "‷" U2037 by multikey.
 #   See # # Reversed primes
 #
-#   Outline square brackets "⟦" U27E6, "⟧" U27E7 used in math are supported in
-#   dead_grave by "[" and "]" to work around the special formatting triggered
-#   by some ASCII-bracketed strings in Markdown, when the actual intent is to
-#   mark up keycaps in documentation.
-#   https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md
+#
+#   End marks
+#
+#   Followed by bracketleft, dead_grave is a shortcut to the box-shadowed
+#   "❑" U2751, with mnemonics based on the slant of the grave accent.
+#   See #*# ACUTE
+#   See "❒" U2752
+#
+#   Followed by bracketright, dead_grave is a shortcut to the drop-shadowed
+#   "❏" U274F, with mnemonics based on the slant of the grave accent. This
+#   makes for a streamlined user experience, as opposed to lenient bracket
+#   sides while using group 1 for the drop-shadowed square.
+#   See #*# ACUTE
+#   See "❐" U2750
+#
+#
+#   Grave accent below
 #
 #   "̖" U0316 COMBINING GRAVE ACCENT BELOW has ampersand as a base character,
 #   and underscore yields its spacing counterpart "ˎ" U02CE MODIFIER LETTER LOW
@@ -16583,10 +16696,10 @@
 <Multi_key><grave>                                                                     <ampersand> : "̖" U0316 # COMBINING GRAVE ACCENT BELOW
 <dead_grave>                                                                          <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
 <Multi_key><grave>                                                                    <underscore> : "ˎ" U02CE # MODIFIER LETTER LOW GRAVE ACCENT
-<dead_grave>                                                                         <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><grave>                                                                   <bracketleft> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<dead_grave>                                                                        <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><grave>                                                                  <bracketright> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<dead_grave>                                                                         <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><grave>                                                                   <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<dead_grave>                                                                        <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><grave>                                                                  <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
 <dead_grave>                                                                            <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <Multi_key><grave>                                                                      <asterisk> : "˟" U02DF # MODIFIER LETTER CROSS ACCENT, Swedish grave accent
 <dead_grave>                                                                               <equal> : "˴" U02F4 # MODIFIER LETTER MIDDLE GRAVE ACCENT
