@@ -26,6 +26,7 @@ Transpilation pour Windows des séquences de composition.
 	* Ajouter "⭶" U+2B76, "↸" U+21B8, autres symboles de la touche début. compose-1.yml [ec94770](https://github.com/dispoclavier/nouvel-azerty/commit/ec947701e8dbe712d1f1f13de78e589f09ef645c)
 	* Compléter les séquences de "⇱" U+21F1, "⇲" U+21F2. ibidem
 	* Réaffecter la séquence « ¦0* » de "♑" U+2651 à "°" U+00B0. ibidem, [ddcd1b1](https://github.com/dispoclavier/nouvel-azerty/commit/ddcd1b124c58b9e91b2d86870d2860057e8eba1e)
+	* Redonder "ꭅ" U+AB45 par « ¦r( » et « ¦'(␣ » et similaires. compose-1.yml [dd10547](https://github.com/dispoclavier/nouvel-azerty/commit/dd10547ed386de5c1a540be7e0d115a3e077a217)
 	* Transpiler pour Windows. dead-key-convert.pl [747a840](https://github.com/dispoclavier/nouvel-azerty/commit/747a840b2163a4b04d328cd0638e174a83cc6516), kbdeadtrans.c, kbdeadtrans-deadkeys.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [59cc6ac](https://github.com/dispoclavier/nouvel-azerty/commit/59cc6ac3643651e4c2d43ddff8078410d3d7930e)
 		* Exclure les équivalents en composition des touches mortes pour réduire la taille de fichier des pilotes. kbdeadtrans.c [ab1190f](https://github.com/dispoclavier/nouvel-azerty/commit/ab1190fca2d73deb3928e659e9aee19aa0f5f5a8), [ab6dcc4](https://github.com/dispoclavier/nouvel-azerty/commit/ab6dcc4b51fd3e0a484d533297411942fa5c0a22)
 		* Exclure les séquences de composition dédiées tant que le transpilateur n’est pas débogué. kbdeadtrans.c [e698ca6](https://github.com/dispoclavier/nouvel-azerty/commit/e698ca618ed6a351c6bb2036dd63598ae5f9d47a), dead-key-convert.pl [04d0bfe](https://github.com/dispoclavier/nouvel-azerty/commit/04d0bfec422b0c062e7ef99aaf9b2ea56581851a)
@@ -42,13 +43,21 @@ Transpilation pour Windows des séquences de composition.
 			* Redonder "Ʌ" U+0245 par "V", "ʌ" U+028C par "v" pour la phonétique. ibidem
 			* Redonder "Ŋ" U+014A par "X", "ŋ" U+014B par "x". ibidem
 	* Accent aigu :
-		* Redonder "†" U+2020 par "!", "‡" U+2021 par "?", "‰" U+2030 par "%". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff)
+		* Redonder "†" U+2020 par "!", "‡" U+2021 par "?", "‰" U+2030 par "%". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), kbdeadtrans.c [3fa6ce1](https://github.com/dispoclavier/nouvel-azerty/commit/3fa6ce188f231153816a5b5ce90b89ef46c4663d)
+		* Redonder "ʔ" U+0294 par "7", "ʕ" U+0295 par "`", "ꭅ" U+AB45 par "(", "•" U+2022 par "*", "±" U+00B1 par "+", "–" U+2013 par "-", "≠" U+2260 par "=", "‣" U+2023 par "^", "❒" U+2752 par "[", "❐" U+2750 par "]". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784)
 		* Accent aigu > double accent aigu : Redonder "Ő" U+0150, "ő" U+0151, "Ű" U+0170, "ű" U+0171, "˝" U+02DD, "̋" U+030B sans équivalents en composition. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), [66945f1](https://github.com/dispoclavier/nouvel-azerty/commit/66945f1726bd099ddc08fa578c7dbe9e156bf779), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
-	* Rayé : Redonder "†" U+2020 par "|". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff)
-		* Double raie : Redonder "‡" U+2021 par "|". ibidem
-	* Macron : Redonder "†" U+2020 par "+", "‡" U+2021 par "=". ibidem
-		* Macron souscrit : Redonder "ʗ" U+0297 par "c" et "C". ibidem
-	* Tréma : Redonder "‱" U+2031 par "%". ibidem
+	* Rayé :
+		* Redonder "†" U+2020 par "|". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), kbdeadtrans.c ibidem
+		* Redonder "ʡ" U+02A1 par "?" et par "'", "ʢ" U+02A2 par "\\", "‡" U+2021 par "+". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784)
+		* Redonder "ƾ" U+01BE par "%" et par "Q" à la place de "ʡ" U+02A1, qui est par "q". ibidem
+		* Double raie : Redonder "‡" U+2021 par "|". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), kbdeadtrans.c ibidem
+	* Macron :
+		* Redonder "†" U+2020 par "+", "‡" U+2021 par "=". ibidem
+		* Macron groupe 1 : Redonder "ʗ" U+0297 par "c" et "C". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784)
+		* Macron souscrit : Redonder "ʗ" U+0297 par "c" et "C". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff)
+	* Accent circonflexe : Redonder "—" U+2014 par "-". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784)
+	* Accent grave : Redonder "❑" U+2751 par "[", "❏" U+274F par "]". ibidem
+	* Tréma : Redonder "‱" U+2031 par "%". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff)
 * Personnalisation : Sous Linux : Corriger l’exemple 2. dispocla_perso.cpp [36511cc](https://github.com/dispoclavier/nouvel-azerty/commit/36511cc402a584a575e2ae85956aaed37cb0c85c)
 * Documentation :
 	* Compléter le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [492e009](https://github.com/dispoclavier/nouvel-azerty/commit/492e009459fcc667bf53687221783b3ac60dc416), [e75bb74](https://github.com/dispoclavier/nouvel-azerty/commit/e75bb741c0be7f18eab59a3863350f9ceda3a89f), [79d5342](https://github.com/dispoclavier/nouvel-azerty/commit/79d5342d40196e5d5be2d2d96ff716d16b6b9e4c)
