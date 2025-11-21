@@ -7313,23 +7313,23 @@
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <Multi_key><apostrophe>                                                                <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
 <dead_acute>                                                                           <parenleft> : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
-<Multi_key><apostrophe>                                                                <parenleft> : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
+#   Multikey conflicts with "ἅ" U1F05, "Ἅ" U1F0D, "ἕ" U1F15, "Ἕ" U1F1D, "ἥ" U1F25,     <parenleft> : "ꭅ" UAB45 # LATIN SMALL LETTER STIRRUP R
 <dead_acute>                                                                               <minus> : "–" U2013 # EN DASH
-<Multi_key><apostrophe>                                                                    <minus> : "–" U2013 # EN DASH
+#   Multikey conflicts with "↼" U21BC, "⇋" U21CB, "⥊" U294A, "⥎" U294E, "⥚" U295A, […]     <minus> : "–" U2013 # EN DASH
 <dead_acute>                                                                                <plus> : "±" U00B1 # PLUS-MINUS SIGN
-<Multi_key><apostrophe>                                                                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
+#   Multikey conflicts with "Ớ" U1EDA, "ớ" U1EDB, "Ứ" U1EE8, "ứ" U1EE9.                     <plus> : "±" U00B1 # PLUS-MINUS SIGN
 <dead_acute>                                                                          <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <Multi_key><apostrophe>                                                               <underscore> : "ˏ" U02CF # MODIFIER LETTER LOW ACUTE ACCENT
 <dead_acute>                                                                         <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><apostrophe>                                                              <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+#   Multikey conflicts with "Ą́", "ą́", "Ę́", "ę́", "Į́", "į̇́", "Ų́", "ų́".                  <bracketleft> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <dead_acute>                                                                        <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <Multi_key><apostrophe>                                                             <bracketright> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <dead_acute>                                                                            <asterisk> : "•" U2022 # BULLET
-<Multi_key><apostrophe>                                                                 <asterisk> : "•" U2022 # BULLET
+#   Multikey conflicts with "Ǻ" U01FA, "ǻ" U01FB.                                       <asterisk> : "•" U2022 # BULLET
 <dead_acute>                                                                               <equal> : "≠" U2260 # NOT EQUAL TO
-<Multi_key><apostrophe>                                                                    <equal> : "≠" U2260 # NOT EQUAL TO
+#   Multikey conflicts with "⫩" U2AE9, "⫨" U2AE8.                                          <equal> : "≠" U2260 # NOT EQUAL TO
 <dead_acute>                                                                               <grave> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
-<Multi_key><apostrophe>                                                                    <grave> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+#   Multikey conflicts with "᫘" U1AD8, "᷈" U1DC8, "᷉" U1DC9.                                 <grave> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <dead_acute>                                                                            <question> : "‡" U2021 # DOUBLE DAGGER
 <Multi_key><apostrophe>                                                                 <question> : "‡" U2021 # DOUBLE DAGGER
 <dead_acute>                                                                              <exclam> : "†" U2020 # DAGGER
@@ -10819,21 +10819,21 @@
 <UEFD8>                                                                                    <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                  <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                       <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "ꭂ" UAB42.                                                  <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                     <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "ʢ" U02A2, "⦦" U29A6, "𐞴" U107B4.                          <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                               <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                    <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "¬" U00AC, "⊹" U22B9, "⥗" U2957, "⥩" U2969, "⫠" U2AE0.    <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                     <rightsinglequotemark> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                          <rightsinglequotemark> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "¬" U00AC, "⊹" U22B9, "⥗" U2957, […]            <rightsinglequotemark> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 #   Multikey conflicts with "𝼚" U1DF1A.                                               <braceright> : "⦵" U29B5 # CIRCLE WITH HORIZONTAL BAR
 <UEFD8>                                                                                    <minus> : "−" U2212 # MINUS SIGN
-<Multi_key><minus>                                                                         <minus> : "−" U2212 # MINUS SIGN
+#   Multikey conflicts with "˂" U02C2, "˃" U02C3, "˄" U02C4, "˅" U02C5, "̶" U0336, […]      <minus> : "−" U2212 # MINUS SIGN
 <UEFD8>                                                                                     <plus> : "‡" U2021 # DOUBLE DAGGER
-<Multi_key><minus>                                                                          <plus> : "‡" U2021 # DOUBLE DAGGER
+#   Multikey conflicts with "∓" U2213.                                                      <plus> : "‡" U2021 # DOUBLE DAGGER
 <UEFD8>                                                                               <parenright> : "➜" U279C # HEAVY ROUND-TIPPED RIGHTWARDS ARROW
-<Multi_key><minus>                                                                    <parenright> : "➜" U279C # HEAVY ROUND-TIPPED RIGHTWARDS ARROW
+#   Multikey conflicts with "∡" U2221, "⦨" U29A8, "⧿" U29FF.                          <parenright> : "➜" U279C # HEAVY ROUND-TIPPED RIGHTWARDS ARROW
 <UEFD8>                                                                              <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <Multi_key><minus>                                                                   <bracketleft> : "⁅" U2045 # LEFT SQUARE BRACKET WITH QUILL
 <UEFD8>                                                                             <bracketright> : "⁆" U2046 # RIGHT SQUARE BRACKET WITH QUILL
@@ -10841,17 +10841,17 @@
 <UEFD8>                                                                                      <bar> : "†" U2020 # DAGGER
 #   Multikey conflicts with "⇻" U21FB, "⟛" U27DB, "⤁" U2901, "⫣" U2AE3.                      <bar> : "†" U2020 # DAGGER
 <UEFD8>                                                                                     <less> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key><minus>                                                                          <less> : "←" U2190 # LEFTWARDS ARROW
+#   Multikey conflicts with "⟢" U27E2, "⤙" U2919, "⤛" U291B.                                <less> : "←" U2190 # LEFTWARDS ARROW
 <UEFD8>                                                                                  <greater> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key><minus>                                                                       <greater> : "→" U2192 # RIGHTWARDS ARROW
+#   Multikey conflicts with "→" U2192, "↠" U21A0, "⇄" U21C4, "⇉" U21C9, "⇛" U21DB, […]   <greater> : "→" U2192 # RIGHTWARDS ARROW
 <UEFD8>                                                                                    <equal> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
-<Multi_key><minus>                                                                         <equal> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
+#   Multikey conflicts with "≡" U2261, "≢" U2262, "≣" U2263, "⧥" U29E5, "⩨" U2A68, […]     <equal> : "➔" U2794 # HEAVY WIDE-HEADED RIGHTWARDS ARROW
 <UEFD8>                                                                                 <question> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <Multi_key><minus>                                                                      <question> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                    <comma> : "¬" U00AC # NOT SIGN
-<Multi_key><minus>                                                                         <comma> : "¬" U00AC # NOT SIGN
+#   Multikey conflicts with "⤴" U2934, "⤵" U2935.                                          <comma> : "¬" U00AC # NOT SIGN
 <UEFD8>                                                                                    <colon> : "÷" U00F7 # DIVISION SIGN
-<Multi_key><minus>                                                                         <colon> : "÷" U00F7 # DIVISION SIGN
+#   Multikey conflicts with "∹" U2239.                                                     <colon> : "÷" U00F7 # DIVISION SIGN
 <UEFD8>                                                                                        <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key><minus>                                                                             <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <UEFD8>                                                                                     <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
@@ -12428,7 +12428,7 @@
 #
 #   Stretched C
 #
-#   In group 1, "ʗ" U0297 is supported by case insensitive "c" to meet eventual
+#   In group 2, "ʗ" U0297 is supported by case insensitive "c" to meet eventual
 #   user expectations based on the extended semantics of dead_macron including
 #   vertical bar and long, additionally to the support in double press of
 #   dead_macron, given that in dead_macron single press, both "C" and "c"
@@ -12853,10 +12853,18 @@
 <Multi_key><bar><numbersign>                                                                   <A> : "Ǣ" U01E2 # LATIN CAPITAL LETTER AE WITH MACRON
 <dead_macron><UEFD0>                                                                           <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
 <Multi_key><bar><numbersign>                                                                   <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
-<dead_macron><UEFD0>                                                                           <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
-<Multi_key><bar><numbersign>                                                                   <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
-<dead_macron><UEFD0>                                                                           <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
-<Multi_key><bar><numbersign>                                                                   <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+#
+#
+# # MACRON&GROUP_2
+#
+#   In group 1, "c" and "C" are used for composed open o with macron
+#   "Ɔ̄" U0186 U0304 LATIN CAPITAL LETTER OPEN O WITH MACRON.
+#   See # # Composed letters for languages in Togo
+#
+<dead_macron><UEFD0><UEFD0>                                                                    <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><numbersign><numbersign>                                                       <C> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<dead_macron><UEFD0><UEFD0>                                                                    <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
+<Multi_key><bar><numbersign><numbersign>                                                       <c> : "ʗ" U0297 # LATIN LETTER STRETCHED C
 #
 #
 # # MACRON&TILDE
@@ -14144,7 +14152,7 @@
 <dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
 #   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
 <dead_circumflex>                                                                          <minus> : "—" U2014 # EM DASH
-<Multi_key><less>                                                                          <minus> : "—" U2014 # EM DASH
+#   Multikey conflicts with "←" U2190, "↔" U2194, "↚" U219A, "↢" U21A2, "↤" U21A4, […]     <minus> : "—" U2014 # EM DASH
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD

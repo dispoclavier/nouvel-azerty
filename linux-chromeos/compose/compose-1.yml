@@ -2050,10 +2050,6 @@
 <Multi_key><V><Y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><V><y>                                                                                  : "Ꝡ" UA760 # LATIN CAPITAL LETTER VY
 <Multi_key><v><y>                                                                                  : "ꝡ" UA761 # LATIN SMALL LETTER VY
-<Multi_key><Z><3>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
-<Multi_key><Z><KP_3>                                                                               : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
-<Multi_key><z><3>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
-<Multi_key><z><KP_3>                                                                               : "ʒ" U0292 # LATIN SMALL LETTER EZH
 <Multi_key><Z><H>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <Multi_key><Z><h>                                                                                  : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <Multi_key><z><h>                                                                                  : "ʒ" U0292 # LATIN SMALL LETTER EZH
