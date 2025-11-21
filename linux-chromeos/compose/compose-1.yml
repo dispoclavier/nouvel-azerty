@@ -1908,6 +1908,9 @@
 <Multi_key><A><V>                                                                                  : "Ꜹ" UA738 # LATIN CAPITAL LETTER AV
 <Multi_key><A><v>                                                                                  : "Ꜹ" UA738 # LATIN CAPITAL LETTER AV
 <Multi_key><a><v>                                                                                  : "ꜹ" UA739 # LATIN SMALL LETTER AV
+<Multi_key><A><minus><V>                                                                           : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
+<Multi_key><A><minus><v>                                                                           : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
+<Multi_key><a><minus><v>                                                                           : "ꜻ" UA73B # LATIN SMALL LETTER AV WITH HORIZONTAL BAR
 <Multi_key><A><Y>                                                                                  : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><A><y>                                                                                  : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><a><y>                                                                                  : "ꜽ" UA73D # LATIN SMALL LETTER AY

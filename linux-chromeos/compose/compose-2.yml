@@ -9212,7 +9212,7 @@
 <Multi_key><numbersign><numbersign><numbersign>                                           <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
 #
 #
-# # HORIZONTAL BAR for African and Breton variants
+# # HORIZONTAL BAR for Breton and African variants
 #
 #   On Breton variants, the base and shift positions of key E08 are used for
 #   "ñ" U00F1, "Ñ" U00D1; on African variants, for "ɔ" U0254, "Ɔ" U0186. (On
@@ -10329,6 +10329,9 @@
 #   shortcut for "⁐" U2050 CLOSE UP.
 #   See # # Proofreading mark
 #
+#
+#   Double diacritic
+#
 #   The double diacritic "͡" U0361 has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
@@ -10463,15 +10466,21 @@
 #   For consistency with breve below by dead_breve double press.
 #   See #^# BREVE_BELOW
 #
+#
+#   Double diacritic
+#
 #   The double diacritic "᷼" U1DFC has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
+#
+#
+#   Spacing clones
 #
 #   Given that breve below and inverted breve below do not have spacing clones,
 #   and for a consistent scheme across breve and inverted breve using modifier
 #   letters only, not symbols nor punctuation, the top and bottom half o seem a
 #   better fit. As these come in a baseline set and a superscript set, both are
-#   provided, with the superscript going on the no-break thin space as a base.
+#   provided, with the superscript going by the no-break thin space as a base.
 #
 <dead_invertedbreve><dead_invertedbreve>                                                   <space> : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key><parenleft><parenleft>                                                          <space> : "̯" U032F # COMBINING INVERTED BREVE BELOW
@@ -10488,8 +10497,19 @@
 #
 #
 #*# BREVE
+#   breve, without handle, short right leg
 #   dead_breve
 #   Multikey: ¦)
+#
+#   The cropped letters "ꭇ" UAB47, "ꭎ" UAB4E, "ꭏ" UAB4F, "ꭚ" UAB5A are also
+#   supported in dead_breve, with mnemonics based on the "short" semantics.
+#   There does not seem to be any other dead key except the group dead key,
+#   for unintuitive support in letter groups.
+#   See #+# GROUP_4
+#   See #+# GROUP_5
+#
+#
+#   Half rings
 #
 #   "˒" U02D2 MODIFIER LETTER CENTRED RIGHT HALF RING is mapped to
 #   unconflicting and case insensitive "C", with its left equivalent
@@ -10497,6 +10517,9 @@
 #   are in group 1 of "l" and "m".
 #   See #*# INVERTED_BREVE
 #   See #+# GROUP_1
+#
+#
+#   Double diacritic
 #
 #   The double diacritic "͝" U035D has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
@@ -10554,10 +10577,16 @@
 <Multi_key><parenright>                                                                        <O> : "Ŏ" U014E # LATIN CAPITAL LETTER O WITH BREVE
 <dead_breve>                                                                                   <o> : "ŏ" U014F # LATIN SMALL LETTER O WITH BREVE
 <Multi_key><parenright>                                                                        <o> : "ŏ" U014F # LATIN SMALL LETTER O WITH BREVE
+<dead_breve>                                                                                   <r> : "ꭇ" UAB47 # LATIN SMALL LETTER R WITHOUT HANDLE
+<Multi_key><parenright>                                                                        <r> : "ꭇ" UAB47 # LATIN SMALL LETTER R WITHOUT HANDLE
 <dead_breve>                                                                                   <U> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE
 <Multi_key><parenright>                                                                        <U> : "Ŭ" U016C # LATIN CAPITAL LETTER U WITH BREVE
 <dead_breve>                                                                                   <u> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE
 <Multi_key><parenright>                                                                        <u> : "ŭ" U016D # LATIN SMALL LETTER U WITH BREVE
+<dead_breve>                                                                                   <V> : "ꭏ" UAB4F # LATIN SMALL LETTER U BAR WITH SHORT RIGHT LEG
+<Multi_key><parenright>                                                                        <V> : "ꭏ" UAB4F # LATIN SMALL LETTER U BAR WITH SHORT RIGHT LEG
+<dead_breve>                                                                                   <v> : "ꭎ" UAB4E # LATIN SMALL LETTER U WITH SHORT RIGHT LEG
+<Multi_key><parenright>                                                                        <v> : "ꭎ" UAB4E # LATIN SMALL LETTER U WITH SHORT RIGHT LEG
 <dead_breve>                                                                                   <y> : "ꭚ" UAB5A # LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
 <Multi_key><parenright>                                                                        <y> : "ꭚ" UAB5A # LATIN SMALL LETTER Y WITH SHORT RIGHT LEG
 <dead_breve>                                                                              <Agrave> : "Ằ" U1EB0 # LATIN CAPITAL LETTER A WITH BREVE AND GRAVE
@@ -10672,9 +10701,15 @@
 #   BELT cannot be merged with RING either, because this occurs as middle ring
 #   on small l: "ꬹ" UAB39.
 #
+#
+#   Double diacritic
+#
 #   The double diacritic "͜" U035C has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
+#
+#
+#   Spacing clones
 #
 #   For a spacing clone of the combining breve below, "⏑" U23D1 METRICAL BREVE
 #   could be picked. Yet it is a symbol, not a letter, so it is not a good fit.
@@ -10682,7 +10717,7 @@
 #   and for a consistent scheme across breve and inverted breve using modifier
 #   letters only, not symbols nor punctuation, the TOP and BOTTOM HALF O seem a
 #   better fit. As these come in a baseline set and a superscript set, both are
-#   provided, with the superscript going on the no-break thin space as a base.
+#   provided, with the superscript going by the no-break thin space as a base.
 #
 <dead_breve><dead_breve>                                                                   <space> : "̮" U032E # COMBINING BREVE BELOW
 <Multi_key><parenright><parenright>                                                        <space> : "̮" U032E # COMBINING BREVE BELOW
@@ -10733,6 +10768,7 @@
 #
 #
 #*# BAR
+#   bar, stroke
 #   *dead_bar UEFD8
 #   Multikey: ¦-
 #
@@ -10962,8 +10998,10 @@
 <Multi_key><minus><numbersign>                                                                 <T> : "Ꝥ" UA764 # LATIN CAPITAL LETTER THORN WITH STROKE
 <UEFD8><UEFD0>                                                                                 <t> : "ꝥ" UA765 # LATIN SMALL LETTER THORN WITH STROKE
 <Multi_key><minus><numbersign>                                                                 <t> : "ꝥ" UA765 # LATIN SMALL LETTER THORN WITH STROKE
-<UEFD8><UEFD0>                                                                                 <u> : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
-<Multi_key><minus><numbersign>                                                                 <u> : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
+<UEFD8><UEFD0>                                                                                 <u> : "ꭏ" UAB4F # LATIN SMALL LETTER U BAR WITH SHORT RIGHT LEG
+<Multi_key><minus><numbersign>                                                                 <u> : "ꭏ" UAB4F # LATIN SMALL LETTER U BAR WITH SHORT RIGHT LEG
+<UEFD8><UEFD0>                                                                                 <y> : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
+<Multi_key><minus><numbersign>                                                                 <y> : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
 #
 #
 # # BAR&GROUP_2
@@ -11151,8 +11189,8 @@
 #   Multikey: ¦---
 #
 #   This dead key is required to have an intuitive input method for "Ꝉ" UA748,
-#   "ꝉ" UA749, that adds to "Ƚ" U023D, "ƚ" U019A on #dead_bar single press, and
-#   "Ⱡ" U2C60, "ⱡ" U2C61 on *dead_bar double press.
+#   "ꝉ" UA749, that adds to "Ƚ" U023D, "ƚ" U019A in #dead_bar single press, and
+#   "Ⱡ" U2C60, "ⱡ" U2C61 in *dead_bar double press.
 #
 #   "—" U2014 EM DASH could be supported in this high bar dead key to get the
 #   closest possible to sideways compatibility with en_US.UTF-8/Compose, given
@@ -11163,7 +11201,7 @@
 #   a new multikey sequence made of a quadruple minus is added to support U2014
 #   by multikey, although all of these three dashes are on live keys except for
 #   "―" U2015 on part of the regional variants.
-#   See # # HORIZONTAL BAR for African and Breton variants
+#   See # # HORIZONTAL BAR for Breton and African variants
 #   See #   Dashes
 #   See #^# DOUBLE_BAR
 #

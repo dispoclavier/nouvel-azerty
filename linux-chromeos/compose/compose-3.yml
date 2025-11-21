@@ -17,7 +17,7 @@
 #   position. E.g. group 1 of "Ɔ", "ɔ", "Ñ", "ñ", SOFT HYPHEN and NON-BREAKING
 #   HYPHEN outputs "―" U2015 HORIZONTAL BAR, a feature designed for African and
 #   Breton variants and as a fallback.
-#   See # # HORIZONTAL BAR for African and Breton variants
+#   See # # HORIZONTAL BAR for Breton and African variants
 #   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   Usually, however, the scope of the group dead key is limited to a handy set
