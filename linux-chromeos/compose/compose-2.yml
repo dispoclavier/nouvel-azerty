@@ -10305,25 +10305,36 @@
 #
 #
 #*# INVERTED_BREVE
+#   inverted breve, trill
 #   dead_invertedbreve
 #   Multikey: ¦(
 #
 #   Both breve and inverted breve have their own dead key, for consistency with
 #   the ASCII symbol map used for dead key multikey equivalents.
+#   See #*# BREVE
 #
 #   As inverted breve has only 6×2 precomposed letters, it might be virtualized
-#   by dead breve double press. Nevertheless it has a dead key of its own, for
+#   by dead breve double press. Nevertheless, it has a dead key of its own, for
 #   consistency with ASCII symbols, and with its XKB keysym dead_invertedbreve.
 #
 #   Inverted breve has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Inverted_Breve
 #
+#   This also supports "𝼀" U1DF00 LATIN SMALL LETTER FENG DIGRAPH WITH TRILL,
+#   because the trill looks like a double inverted breve. This character only
+#   exists since 2021 (Unicode 14.0), and this is the only instance of a trill.
+#   Given that the feng digraph "ʩ" U02A9 is both in group 3 and in group 11,
+#   "𝼀" U1DF00 is also supported in groups 1..5 and 11.
+#   See # # Lenient dead key press
+#
+#
+#   Half ring
+#
 #   "˓" U02D3 MODIFIER LETTER CENTRED LEFT HALF RING is mapped to unconflicting
 #   and case insensitive C, with its right equivalent in dead_breve.
 #
-#   This also supports the new U1DF00 LATIN SMALL LETTER FENG DIGRAPH WITH
-#   TRILL, because the trill looks like two inverted breves, or a double
-#   inverted breve.
+#
+#   Proofreading mark
 #
 #   With case insensitive G as a base character, dead_invertedbreve has a
 #   shortcut for "⁐" U2050 CLOSE UP.
@@ -10335,6 +10346,13 @@
 #   The double diacritic "͡" U0361 has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
+#
+#
+#   Spacing clone
+#
+#   By lack of a spacing clone of the inverted breve along the lines of what
+#   has been done for the breve, "꭛" UAB5B is used in this position.
+#   See "˘" U02D8 # BREVE
 #
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
@@ -10501,10 +10519,11 @@
 #   dead_breve
 #   Multikey: ¦)
 #
-#   The cropped letters "ꭇ" UAB47, "ꭎ" UAB4E, "ꭏ" UAB4F, "ꭚ" UAB5A are also
-#   supported in dead_breve, with mnemonics based on the "short" semantics.
+#   This also supports cropped letters "ꭇ" UAB47, "ꭎ" UAB4E, "ꭏ" UAB4F,
+#   "ꭚ" UAB5A, with mnemonics based on the "short" semantics.
+#
 #   There does not seem to be any other dead key except the group dead key,
-#   for unintuitive support in letter groups.
+#   for unintuitive support in letter groups 4 and 5.
 #   See #+# GROUP_4
 #   See #+# GROUP_5
 #
