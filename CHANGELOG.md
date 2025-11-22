@@ -49,7 +49,8 @@ Transpilation pour Windows des séquences de composition.
 		* Accent aigu > double accent aigu : Redonder "Ő" U+0150, "ő" U+0151, "Ű" U+0170, "ű" U+0171, "˝" U+02DD, "̋" U+030B sans équivalents en composition. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), [66945f1](https://github.com/dispoclavier/nouvel-azerty/commit/66945f1726bd099ddc08fa578c7dbe9e156bf779), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
 	* Brève :
 		* Redonder "ꭇ" U+AB47 par "r", "ꭎ" U+AB4E par "v", "ꭏ" U+AB4F par "V". compose-2.yml [aa2c629](https://github.com/dispoclavier/nouvel-azerty/commit/aa2c62910a37d68f2b70b29fc07531c17d2fe1e2)
-		* Brève et brève inversée : Ajouter pour redonder "꭛" U+AB5B. compose-2.yml [fa9a58b](https://github.com/dispoclavier/nouvel-azerty/commit/fa9a58bfb5f29e7be92d1b9ce67833d757bd7c80)
+		* Brève et brève inversée : Ajouter pour redonder "꭛" U+AB5B. compose-2.yml [fa9a58b](https://github.com/dispoclavier/nouvel-azerty/commit/fa9a58bfb5f29e7be92d1b9ce67833d757bd7c80), [6ca08d8](https://github.com/dispoclavier/nouvel-azerty/commit/6ca08d87f027b801b49af1e45ac1a2a8d666c48e)
+		* Brève et point en chef : Simplifier la saisie de "̐" U+0310. ibidem (2)
 	* Rayé :
 		* Corriger le groupe 1 de "ʉ" U+0289 en y mettant "ꭏ" U+AB4F à la place de "ᵿ" U+1D7F, qui va par "y" comme sans raie. compose-2.yml [aa2c629](https://github.com/dispoclavier/nouvel-azerty/commit/aa2c62910a37d68f2b70b29fc07531c17d2fe1e2)
 		* Redonder "†" U+2020 par "|". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), kbdeadtrans.c ibidem
@@ -72,6 +73,7 @@ Transpilation pour Windows des séquences de composition.
 	* Clarifier et compléter des annotations. compose-2.yml [37e6026](https://github.com/dispoclavier/nouvel-azerty/commit/37e6026e3feaa1ccc3195ba9828c7dd4d03402e2)
 	* Mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b6e63c6](https://github.com/dispoclavier/nouvel-azerty/commit/b6e63c612d7a08362f84f332145836c3d3beabdc)
 	* Corriger "Multi_key:" en "Multikey:" pour l’accorder avec le reste des annotations. compose-2.yml [37d4607](https://github.com/dispoclavier/nouvel-azerty/commit/37d46075872d0a02987523d0311e13e53c05339e)
+	* Corriger le journal des modifications. CHANGELOG.md [781e6eb](https://github.com/dispoclavier/nouvel-azerty/commit/781e6eb2ba1b391a86fcf19bd1702c62287bf0ef)
 * Builds ;
 	* 6.1.3.0 [59cc6ac](https://github.com/dispoclavier/nouvel-azerty/commit/59cc6ac3643651e4c2d43ddff8078410d3d7930e)
 	* 6.1.3.1 [ab1190f](https://github.com/dispoclavier/nouvel-azerty/commit/ab1190fca2d73deb3928e659e9aee19aa0f5f5a8)
