@@ -1908,9 +1908,9 @@
 <Multi_key><A><V>                                                                                  : "Ꜹ" UA738 # LATIN CAPITAL LETTER AV
 <Multi_key><A><v>                                                                                  : "Ꜹ" UA738 # LATIN CAPITAL LETTER AV
 <Multi_key><a><v>                                                                                  : "ꜹ" UA739 # LATIN SMALL LETTER AV
-<Multi_key><A><minus><V>                                                                           : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
-<Multi_key><A><minus><v>                                                                           : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
-<Multi_key><a><minus><v>                                                                           : "ꜻ" UA73B # LATIN SMALL LETTER AV WITH HORIZONTAL BAR
+<Multi_key><A><minus><V><minus>                                                                    : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
+<Multi_key><A><minus><v><minus>                                                                    : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
+<Multi_key><a><minus><v><minus>                                                                    : "ꜻ" UA73B # LATIN SMALL LETTER AV WITH HORIZONTAL BAR
 <Multi_key><A><Y>                                                                                  : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><A><y>                                                                                  : "Ꜽ" UA73C # LATIN CAPITAL LETTER AY
 <Multi_key><a><y>                                                                                  : "ꜽ" UA73D # LATIN SMALL LETTER AY
@@ -7326,9 +7326,12 @@
 <Multi_key><o><T><T>                                                                               : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><T><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><bar><underscore>                                                                    : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
-<Multi_key><a><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
-<Multi_key><A><minus><v>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
-<Multi_key><A><minus><V>                                                                           : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><a><minus><v>                                                                   <space> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><a><minus><v>                                                            <nobreakspace> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><A><minus><v>                                                                   <space> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><A><minus><v>                                                            <nobreakspace> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><A><minus><V>                                                                   <space> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
+<Multi_key><A><minus><V>                                                            <nobreakspace> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><bracketleft><minus>                                                              : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><bracketright><minus>                                                             : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><less><greater><parenright><parenleft>                                          <space> : "⟡" U27E1 # WHITE CONCAVE-SIDED DIAMOND

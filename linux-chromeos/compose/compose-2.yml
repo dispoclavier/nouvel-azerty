@@ -9,6 +9,9 @@
 #
 #
 #
+#
+#   END_GREEK
+#
 #   START_LATIN_BY_DEAD_KEYS
 #
 #
@@ -10353,6 +10356,7 @@
 #   By lack of a spacing clone of the inverted breve along the lines of what
 #   has been done for the breve, "꭛" UAB5B is used in this position.
 #   See "˘" U02D8 # BREVE
+#   See # # BREVE&INVERTED_BREVE
 #
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
@@ -10648,6 +10652,26 @@
 <Multi_key><parenright><period>                                                            <U200B> : "̐" U0310 # COMBINING CANDRABINDU
 <dead_abovedot><dead_breve>                                                                <U200B> : "̐" U0310 # COMBINING CANDRABINDU
 <Multi_key><period><parenright>                                                            <U200B> : "̐" U0310 # COMBINING CANDRABINDU
+#
+#
+# # BREVE&INVERTED_BREVE
+#
+<dead_breve><dead_invertedbreve>                                                           <space> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+#   Multikey conflicts with "≍" U224D.                                                     <space> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_invertedbreve><dead_breve>                                                           <space> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+#   Multikey conflicts with "≬" U226C.                                                     <space> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_breve><dead_invertedbreve>                                                           <U200B> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<Multi_key><parenright><parenleft>                                                         <U200B> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_invertedbreve><dead_breve>                                                           <U200B> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<Multi_key><parenleft><parenright>                                                         <U200B> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_breve><dead_invertedbreve>                                                    <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+#   Multikey conflicts with "≍" U224D.                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_invertedbreve><dead_breve>                                                    <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+#   Multikey conflicts with "≬" U226C.                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_breve><dead_invertedbreve>                                                           <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<Multi_key><parenright><parenleft>                                                         <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<dead_invertedbreve><dead_breve>                                                           <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+<Multi_key><parenleft><parenright>                                                         <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 #
 #
 # # BREVE&HOOK_ABOVE
