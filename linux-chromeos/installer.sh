@@ -1,5 +1,5 @@
 #!/bin/bash
-#                       Date : 2025-07-23T2317+0200
+#                       Date : 2025-11-24T0451+0100
 #                    Fichier : installer.sh
 #                   Encodage : UTF-8
 #                       Type : script Bash
@@ -105,9 +105,33 @@ function installer_dispo {
 	sudo chmod $permissions $X11/xkb/types/complete
 	# Installer le fichier de personnalisation s’il n’est pas déjà présent.
 	if [ "$dispocla_perso" -eq 0 ]; then
-		echo 'Installation du fichier de personnalisation inclus.'
-		sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
-		sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
+		dossier="$HOME/.config/dispoclavier/symbols"
+		fichier="$dossier/dispocla_perso"
+		if [ -f "$fichier" ]; then
+			echo -e "\n"
+			afficher 'sauvegardé est présent'
+			echo -e "\n  ❓  Souhaitez-vous installer ces personnalisations de disposition ?"
+			echo -e "\n       Pour installer ce fichier sauvegardé, appuyez sur Entrée."
+			echo      '       Si les personnalisations sont dans le nouveau fichier dispocla_perso.cpp,'
+			echo      '         tapez n puis Entrée afin d’installer le nouveau fichier.'
+			read -p   '    ' reponse
+			case $reponse in
+				[nN])
+					echo 'Installation du fichier de personnalisation inclus.'
+					sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
+					sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
+				;;
+				*)
+					echo 'Installation du fichier de personnalisation sauvegardé.'
+					sudo cp $fichier $X11/xkb/symbols/dispocla_perso
+					sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
+				;;
+			esac
+		else
+			echo 'Installation du fichier de personnalisation inclus.'
+			sudo cp installer/dispocla_perso.cpp $X11/xkb/symbols/dispocla_perso
+			sudo chmod $permissions $X11/xkb/symbols/dispocla_perso
+		fi
 	else
 		echo 'Confirmation de la présence d’un fichier de personnalisation.'
 		echo 'Un fichier "dispocla_perso" est présent et reste bien en place.'
