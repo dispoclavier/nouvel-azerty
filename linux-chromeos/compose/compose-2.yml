@@ -5337,6 +5337,10 @@
 #   Multikey conflicts with "~" U007E, "Ɵ" U019F, "ɫ" U026B, "ɵ" U0275, "˷" U02F7, […]<asciitilde> : "︎" UFE0E # VARIATION SELECTOR-15, text style
 <dead_tilde>                                                                          <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 #   Multikey conflicts with composed "Ɔ̃", "Ǝ̃", "Ɛ̃", "ǝ̃", "ɔ̃", "ɛ̃".                    <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<dead_tilde>                                                                              <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
+<Multi_key><asciitilde>                                                                   <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
+<dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
+<Multi_key><asciitilde>                                                                   <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                           <parenleft> : "͏" U034F # COMBINING GRAPHEME JOINER
 <Multi_key><asciitilde>                                                                <parenleft> : "͏" U034F # COMBINING GRAPHEME JOINER
 <dead_tilde>                                                                          <parenright> : "﻿" UFEFF # BYTE ORDER MARK, in legacy usage ZERO WIDTH NO-BREAK SPACE
@@ -5361,10 +5365,6 @@
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                               <grave> : "" U000C # FORM FEED, page break in plain text
 #   Multikey conflicts with composed "Ã̀", "Ẽ̀", "Ĩ̀", "Õ̀", "Ɔ̃̀", "Ɛ̃̀", "ɔ̃̀", "ɛ̃̀", "Ũ̀", "Ɛ̃̀", […] <grave> : "" U000C # FORM FEED, page break in plain text
-<dead_tilde>                                                                              <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
-<Multi_key><asciitilde>                                                                   <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
-<dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
-<Multi_key><asciitilde>                                                                   <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                                   <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
 <Multi_key><asciitilde>                                                                        <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
 <dead_tilde>                                                                                <KP_0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
@@ -12636,14 +12636,6 @@
 <Multi_key><bar>                                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <dead_diaeresis><dead_diaeresis>                                                       <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
 <Multi_key><colon><colon>                                                              <ampersand> : "︦" UFE26 # COMBINING CONJOINING MACRON
-<dead_macron>                                                                               <plus> : "†" U2020 # DAGGER
-<Multi_key><bar>                                                                            <plus> : "†" U2020 # DAGGER
-<dead_diaeresis><dead_diaeresis>                                                            <plus> : "†" U2020 # DAGGER
-<Multi_key><colon><colon>                                                                   <plus> : "†" U2020 # DAGGER
-<dead_macron>                                                                              <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
-#   Multikey conflicts with "∤" U2224, "⋈" U22C8, "⋉" U22C9, "⟖" U27D6, "⧒" U29D2.         <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
-<dead_diaeresis><dead_diaeresis>                                                           <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
-<Multi_key><colon><colon>                                                                  <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <dead_macron>                                                                             <dollar> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><bar>                                                                          <dollar> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_diaeresis><dead_diaeresis>                                                          <dollar> : "͞" U035E # COMBINING DOUBLE MACRON
@@ -12652,6 +12644,14 @@
 <Multi_key><bar>                                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <dead_diaeresis><dead_diaeresis>                                                          <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
 <Multi_key><colon><colon>                                                                 <emdash> : "͞" U035E # COMBINING DOUBLE MACRON
+<dead_macron>                                                                               <plus> : "†" U2020 # DAGGER
+<Multi_key><bar>                                                                            <plus> : "†" U2020 # DAGGER
+<dead_diaeresis><dead_diaeresis>                                                            <plus> : "†" U2020 # DAGGER
+<Multi_key><colon><colon>                                                                   <plus> : "†" U2020 # DAGGER
+<dead_macron>                                                                              <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+#   Multikey conflicts with "∤" U2224, "⋈" U22C8, "⋉" U22C9, "⟖" U27D6, "⧒" U29D2.         <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<dead_diaeresis><dead_diaeresis>                                                           <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
+<Multi_key><colon><colon>                                                                  <slash> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <dead_macron>                                                                              <equal> : "‡" U2021 # DOUBLE DAGGER
 #   Multikey conflicts with "⊧" U22A7, "⊨" U22A8, "⊭" U22AD, "⟾" U27FE, "⤇" U2907, […]     <equal> : "‡" U2021 # DOUBLE DAGGER
 <dead_diaeresis><dead_diaeresis>                                                           <equal> : "‡" U2021 # DOUBLE DAGGER
@@ -13170,6 +13170,10 @@
 <Multi_key><bar><bar>                                                                   <EuroSign> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                             <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
 <Multi_key><bar><bar>                                                                  <ampersand> : "︭" UFE2D # COMBINING CONJOINING MACRON BELOW
+<dead_macron><dead_macron>                                                                <dollar> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<Multi_key><bar><bar>                                                                     <dollar> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
+<Multi_key><bar><bar>                                                                     <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                           <bracketleft> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <Multi_key><bar><bar>                                                                <bracketleft> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <dead_macron><dead_macron>                                                          <bracketright> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
@@ -13178,10 +13182,6 @@
 #   Multikey conflicts with "D̲", "E̲", "H̲", "N̲", "O̲", "U̲", "d̲", "e̲", "h̲", "n̲", "o̲", "u̲", […]  <bar> : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <dead_macron><dead_macron>                                                                 <grave> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><bar><bar>                                                                      <grave> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<dead_macron><dead_macron>                                                                <dollar> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
-<Multi_key><bar><bar>                                                                     <dollar> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
-<dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
-<Multi_key><bar><bar>                                                                     <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                              <question> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <Multi_key><bar><bar>                                                                   <question> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <dead_macron><dead_macron>                                                             <semicolon> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
@@ -14274,6 +14274,10 @@
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
 #   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
+<dead_circumflex>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<Multi_key><less>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
+<Multi_key><less>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                          <minus> : "—" U2014 # EM DASH
 #   Multikey conflicts with "←" U2190, "↔" U2194, "↚" U219A, "↢" U21A2, "↤" U21A4, […]     <minus> : "—" U2014 # EM DASH
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
@@ -14284,10 +14288,6 @@
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<dead_circumflex>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<Multi_key><less>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<Multi_key><less>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
 <Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
 <dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
