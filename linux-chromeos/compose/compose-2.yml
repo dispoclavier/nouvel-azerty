@@ -619,6 +619,7 @@
 #   Some virtual dead keys exist for the sake of one single letter, and so
 #   offer the opportunity to be streamlined by cropping the base character.
 #   See #   As this dead key exists for
+#   See # # Design of multikey sequences
 #
 #   As a result, the letter is output as soon as the dead key combination is
 #   complete, without waiting for the base character, given the lack of
@@ -6004,10 +6005,10 @@
 <Multi_key><at>                                                                     <nobreakspace> : "ι" U1FBE # GREEK PROSGEGRAMMENI
 <dead_greek>                                                                               <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
 <Multi_key><at>                                                                            <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<dead_greek>                                                                          <parenright> : "⊚" U229A # CIRCLED RING OPERATOR
-#   Multikey conflicts with "ἀ" U1F00, "ἂ" U1F02, "ἄ" U1F04, "ἆ" U1F06, "Ἀ" U1F08, […]<parenright> : "⊚" U229A # CIRCLED RING OPERATOR
-<dead_greek>                                                                              <degree> : "⊚" U229A # CIRCLED RING OPERATOR
-<Multi_key><at>                                                                           <degree> : "⊚" U229A # CIRCLED RING OPERATOR
+<dead_greek>                                                                          <parenright> : "◎" U25CE # BULLSEYE
+#   Multikey conflicts with "ἀ" U1F00, "ἂ" U1F02, "ἄ" U1F04, "ἆ" U1F06, "Ἀ" U1F08, […]<parenright> : "◎" U25CE # BULLSEYE
+<dead_greek>                                                                              <degree> : "◎" U25CE # BULLSEYE
+<Multi_key><at>                                                                           <degree> : "◎" U25CE # BULLSEYE
 <dead_greek>                                                                               <minus> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><at>                                                                            <minus> : "⊖" U2296 # CIRCLED MINUS
 <dead_greek>                                                                                <plus> : "⊕" U2295 # CIRCLED PLUS
@@ -6970,10 +6971,10 @@
 <Multi_key><at><at>                                                                        <space> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
 <dead_greek><dead_greek>                                                                   <U200B> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
 <Multi_key><at><at>                                                                        <U200B> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
-<dead_greek><dead_greek>                                                            <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
-<Multi_key><at><at>                                                                 <nobreakspace> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
-<dead_greek><dead_greek>                                                                   <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
-<Multi_key><at><at>                                                                        <U202F> : "⚪" U26AA # MEDIUM WHITE CIRCLE emoji
+<dead_greek><dead_greek>                                                            <nobreakspace> : "◯" U25EF # LARGE CIRCLE
+<Multi_key><at><at>                                                                 <nobreakspace> : "◯" U25EF # LARGE CIRCLE
+<dead_greek><dead_greek>                                                                   <U202F> : "◯" U25EF # LARGE CIRCLE
+<Multi_key><at><at>                                                                        <U202F> : "◯" U25EF # LARGE CIRCLE
 <dead_greek><dead_greek>                                                               <backslash> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><at><at>                                                                    <backslash> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <dead_greek><dead_greek>                                                               <parenleft> : "⨷" U2A37 # MULTIPLICATION SIGN IN DOUBLE CIRCLE
@@ -7550,24 +7551,17 @@
 <Multi_key><apostrophe><bar>                                                               <U200B> : "᷇" U1DC7 # COMBINING ACUTE-MACRON
 #
 #
-# # ACUTE&GRAVE
+# # ACUTE&GRAVE&ACUTE
 #
-#   The reverse sequences <dead_grave><dead_acute>[<dead_grave>] are not
-#   supported, to prevent conflicts with quotation marks.
-#   See # # Quotation mark input method
+#   As this dead key exists for "᷉" U1DC9 only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
 #
-<dead_acute><dead_grave>                                                                   <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><apostrophe><grave>                                                             <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<dead_acute><dead_grave>                                                                   <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-<Multi_key><apostrophe><grave>                                                             <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
-#
-#   In the triple dead key press scheme <dead_acute><dead_grave><dead_acute>,
-#   the base space characters are skipped for efficiency, as there is nothing
-#   else to support.
-#   See # # Design of multikey sequences
-#
+#dead_acute><dead_grave><dead_acute>                                                       <space> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <dead_acute><dead_grave><dead_acute>                                                               : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 <Multi_key><apostrophe><grave><apostrophe>                                                         : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+#dead_acute><dead_grave><dead_acute>                                                       <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
+#Multi_key><apostrophe><grave><apostrophe>                                                 <U200B> : "᷉" U1DC9 # COMBINING ACUTE-GRAVE-ACUTE
 #
 #
 #^# DOUBLE_ACUTE
@@ -10539,11 +10533,13 @@
 #   See #+# GROUP_1
 #
 #
-#   Double diacritic
+#   Diacritics
 #
 #   The double diacritic "͝" U035D has emdash as a mnemonic base character, and
 #   dollar as an ASCII alternative with "double" mnemonics, for consistent
 #   input methods across all dead keys featuring a double diacritic.
+#
+#   The combining candrabindu "̐" U0310 has a shortcut by period.
 #
 <dead_breve>                                                                               <space> : "̆" U0306 # COMBINING BREVE
 <Multi_key><parenright>                                                                    <space> : "̆" U0306 # COMBINING BREVE
@@ -10557,6 +10553,8 @@
 <Multi_key><parenright>                                                                   <dollar> : "͝" U035D # COMBINING DOUBLE BREVE
 <dead_breve>                                                                              <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
 <Multi_key><parenright>                                                                   <emdash> : "͝" U035D # COMBINING DOUBLE BREVE
+<dead_breve>                                                                              <period> : "̐" U0310 # COMBINING CANDRABINDU
+#   Multikey conflicts with this character’s support in # # BREVE&DOT_ABOVE               <period> : "̐" U0310 # COMBINING CANDRABINDU
 <dead_breve>                                                                                   <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <Multi_key><parenright>                                                                        <A> : "Ă" U0102 # LATIN CAPITAL LETTER A WITH BREVE
 <dead_breve>                                                                                   <a> : "ă" U0103 # LATIN SMALL LETTER A WITH BREVE
@@ -10642,7 +10640,7 @@
 # # BREVE&DOT_ABOVE
 #
 #   As this dead key exists for "̐" U0310 only, it is streamlined by cropping
-#   the base character.
+#   the base characters.
 #   See # # Single-character dead keys
 #
 #dead_breve><dead_abovedot>                                                                <space> : "̐" U0310 # COMBINING CANDRABINDU
@@ -10659,7 +10657,7 @@
 # # BREVE&INVERTED_BREVE
 #
 #   As this dead key exists for "꭛" UAB5B only, it is streamlined by cropping
-#   the base character, except for its multikey equivalents.
+#   the base characters, except for its multikey equivalents.
 #   See # # Single-character dead keys
 #
 #dead_breve><dead_invertedbreve>                                                           <space> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
@@ -10696,10 +10694,15 @@
 # # BREVE&MACRON
 #   See # # MACRON&BREVE
 #
-<dead_breve><dead_macron>                                                                  <space> : "᷋" U1DCB # COMBINING BREVE-MACRON
-<Multi_key><parenright><bar>                                                               <space> : "᷋" U1DCB # COMBINING BREVE-MACRON
-<dead_breve><dead_macron>                                                                  <U200B> : "᷋" U1DCB # COMBINING BREVE-MACRON
-<Multi_key><parenright><bar>                                                               <U200B> : "᷋" U1DCB # COMBINING BREVE-MACRON
+#   As this dead key exists for "᷋" U1DCB only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#dead_breve><dead_macron>                                                                  <space> : "᷋" U1DCB # COMBINING BREVE-MACRON
+<dead_breve><dead_macron>                                                                          : "᷋" U1DCB # COMBINING BREVE-MACRON
+<Multi_key><parenright><bar>                                                                       : "᷋" U1DCB # COMBINING BREVE-MACRON
+#dead_breve><dead_macron>                                                                  <U200B> : "᷋" U1DCB # COMBINING BREVE-MACRON
+#Multi_key><parenright><bar>                                                               <U200B> : "᷋" U1DCB # COMBINING BREVE-MACRON
 #
 #
 # # BREVE&GRAVE
@@ -10857,7 +10860,7 @@
 #   upright form "ʡ" U02A1 by "7", by "?", by "q", and by apostrophe and
 #   rightsinglequotemark; in its inverted form "ƾ" U01BE by "Q", and by
 #   percent; and in its reversed form "ʢ" U02A2 by backslash, consistently with
-#   aliases.
+#   aliases, multikey equivalents and shape-based mnemonics.
 #
 #
 #   Daggers
@@ -12514,13 +12517,21 @@
 #   See #*# STROKE
 #
 #
-#   Stretched C
+#   Letters
 #
-#   In group 2, "ʗ" U0297 is supported by case insensitive "c" to meet eventual
-#   user expectations based on the extended semantics of dead_macron including
-#   vertical bar and long, additionally to the support in double press of
-#   dead_macron, given that in dead_macron single press, both "C" and "c"
-#   are used for currency symbols "₵" U20B5 and "¢" U00A2.
+#   Letters with long leg "ꭗ" UAB57 and "ꭘ" UAB58 are also supported in
+#   dead_macron, additionally to their support in letter groups, by "x" and "X"
+#   as base characters, given the extended "long" semantics of dead_macron, and
+#   because dead_abovering by "x" and "X" is used up by "ꭔ" UAB54 and "ꭖ" UAB56
+#   featuring normal-length legs.
+#   See #+# GROUP_5
+#   See #+# GROUP_3
+#
+#   In group 2, the stretched C "ʗ" U0297 is supported by case insensitive "c"
+#   to meet eventual user expectations based on the extended semantics of
+#   dead_macron including vertical bar and long, additionally to the support in
+#   double press of dead_macron, given that in dead_macron single press, both
+#   "C" and "c" are used for currency symbols "₵" U20B5 and "¢" U00A2.
 #   See #^# MACRON_BELOW
 #
 #
@@ -12901,6 +12912,14 @@
 <Multi_key><bar>                                                                               <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <dead_diaeresis><dead_diaeresis>                                                               <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
 <Multi_key><colon><colon>                                                                      <v> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_macron>                                                                                  <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
+<Multi_key><bar>                                                                               <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
+<dead_diaeresis><dead_diaeresis>                                                               <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
+<Multi_key><colon><colon>                                                                      <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
+<dead_macron>                                                                                  <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<Multi_key><bar>                                                                               <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<dead_diaeresis><dead_diaeresis>                                                               <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
+<Multi_key><colon><colon>                                                                      <x> : "ꭗ" UAB57 # LATIN SMALL LETTER X WITH LONG LEFT LEG
 <dead_macron>                                                                                  <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
 <Multi_key><bar>                                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <Y> : "Ȳ" U0232 # LATIN CAPITAL LETTER Y WITH MACRON
@@ -13033,9 +13052,14 @@
 # # MACRON&BREVE
 #   See # # BREVE&MACRON
 #
-<dead_macron><dead_breve>                                                                  <space> : "᷌" U1DCC # COMBINING MACRON-BREVE
+#   As this dead key exists for "᷌" U1DCC only, it is streamlined by cropping
+#   the base characters, except for its multikey equivalents.
+#   See # # Single-character dead keys
+#
+#dead_macron><dead_breve>                                                                  <space> : "᷌" U1DCC # COMBINING MACRON-BREVE
+<dead_macron><dead_breve>                                                                          : "᷌" U1DCC # COMBINING MACRON-BREVE
 <Multi_key><bar><parenright>                                                               <space> : "᷌" U1DCC # COMBINING MACRON-BREVE
-<dead_macron><dead_breve>                                                                  <U200B> : "᷌" U1DCC # COMBINING MACRON-BREVE
+#dead_macron><dead_breve>                                                                  <U200B> : "᷌" U1DCC # COMBINING MACRON-BREVE
 <Multi_key><bar><parenright>                                                               <U200B> : "᷌" U1DCC # COMBINING MACRON-BREVE
 #
 #
@@ -13776,16 +13800,23 @@
 #   dead_abovering
 #   Multikey: ¦*
 #
+#   Ring above has no reported usage beyond precomposed letters.
+#   https://www.frathwiki.com/Ring_Above
+#
 #   Lowercase "x" is required for "ꭖ" UAB56 LATIN SMALL LETTER X WITH LOW RIGHT
-#   RING as a base character, and uppercase "X" is required for "ꭘ" UAB58 LATIN
-#   SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING. For "ꭔ" UAB54 LATIN
-#   SMALL LETTER CHI WITH LOW RIGHT RING, "q" is picked as the most expected
-#   base character, because in en_US.UTF-8/Compose, it was previously used as a
-#   base character for Greek chi when French-style phonetic mnemonics prevailed
-#   over graphic mnemonics.
+#   RING as a base character, and uppercase "X" is required for "ꭔ" UAB54 LATIN
+#   SMALL LETTER CHI WITH LOW RIGHT RING, since "ꭘ" UAB58 LATIN SMALL LETTER X
+#   WITH LONG LEFT LEG AND LOW RIGHT RING is supported in dead_macron thanks to
+#   its long leg. This prevents "ꭔ" UAB54 LATIN SMALL LETTER CHI WITH LOW RIGHT
+#   RING from having "q" picked as a base character (consistently with
+#   en_US.UTF-8/Compose using it previously as a base character for Greek chi,
+#   when French-style phonetic mnemonics prevailed over graphic mnemonics).
 #   See #*# GREEK_OR_CIRCLED
 #   See #+# GROUP_3
 #   See #+# GROUP_4
+#
+#
+#   Half rings
 #
 #   This also supports combining half rings "͑" U0351, "͗" U0357 with matching
 #   parentheses as base characters.
@@ -13799,11 +13830,17 @@
 #       7  "ʿ" U02BF MODIFIER LETTER LEFT HALF RING
 #       9  "ʾ" U02BE MODIFIER LETTER RIGHT HALF RING
 #
+#
+#   Asterisks
+#
 #   Asterisk symbols "⁎" U204E, "⁑" U2051, "⁂" U2042 are also supported, with
 #   the related digits as base characters, and so are the asterisk operator
 #   "∗" U2217, by "5" with mnemonics based on the centered alignment of this
 #   operator, and the star operator "⋆" U22C6 by "8". (But there is no room
 #   left for stars "★" U2605 and "☆" U2606, that have easy support in group 1.)
+#
+#
+#   Degree sign
 #
 #   As a matter of supporting the degree sign by dead key, alongside its support
 #   on live key, after the loss of its en_US.UTF-8/Compose sequence <o> <o>, the
@@ -13817,15 +13854,15 @@
 #   supported by dedicated multikey sequences.
 #   See #^# Abbreviations, Units and Legal Symbols
 #
+#
+#   Math symbols
+#
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   case insensitive "T" yields "⟟" U27DF; braceright (base character of
 #   "∅" U2205 in the symbol group 2) yields "⦲" U29B2; plus yields "⨢" U2A22;
 #   bar yields "⫯" U2AEF.
 #   See # # D09 braceright
 #   $ee #*# DOT_ABOVE
-#
-#   Ring above has no reported usage beyond precomposed letters.
-#   https://www.frathwiki.com/Ring_Above
 #
 <dead_abovering>                                                                           <space> : "̊" U030A # COMBINING RING ABOVE
 <Multi_key><asterisk>                                                                      <space> : "̊" U030A # COMBINING RING ABOVE
@@ -13909,8 +13946,6 @@
 <Multi_key><asterisk>                                                                          <l> : "ꬹ" UAB39 # LATIN SMALL LETTER L WITH MIDDLE RING
 <dead_abovering>                                                                               <o> : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
 <Multi_key><asterisk>                                                                          <o> : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
-<dead_abovering>                                                                               <q> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
-<Multi_key><asterisk>                                                                          <q> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
 <dead_abovering>                                                                               <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <Multi_key><asterisk>                                                                          <r> : "ꭌ" UAB4C # LATIN SMALL LETTER SCRIPT R WITH RING
 <dead_abovering>                                                                               <T> : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
@@ -13923,8 +13958,8 @@
 <Multi_key><asterisk>                                                                          <u> : "ů" U016F # LATIN SMALL LETTER U WITH RING ABOVE
 <dead_abovering>                                                                               <w> : "ẘ" U1E98 # LATIN SMALL LETTER W WITH RING ABOVE
 <Multi_key><asterisk>                                                                          <w> : "ẘ" U1E98 # LATIN SMALL LETTER W WITH RING ABOVE
-<dead_abovering>                                                                               <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
-<Multi_key><asterisk>                                                                          <X> : "ꭘ" UAB58 # LATIN SMALL LETTER X WITH LONG LEFT LEG AND LOW RIGHT RING
+<dead_abovering>                                                                               <X> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
+<Multi_key><asterisk>                                                                          <X> : "ꭔ" UAB54 # LATIN SMALL LETTER CHI WITH LOW RIGHT RING
 <dead_abovering>                                                                               <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <Multi_key><asterisk>                                                                          <x> : "ꭖ" UAB56 # LATIN SMALL LETTER X WITH LOW RIGHT RING
 <dead_abovering>                                                                               <y> : "ẙ" U1E99 # LATIN SMALL LETTER Y WITH RING ABOVE
@@ -16884,6 +16919,19 @@
 <Multi_key><grave>                                                                             <y> : "ỳ" U1EF3 # LATIN SMALL LETTER Y WITH GRAVE
 #
 #
+# # GRAVE&ACUTE&GRAVE
+#
+#   As this dead key exists for "᷈" U1DC8 only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#dead_grave><dead_acute><dead_grave>                                                       <space> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+<dead_grave><dead_acute><dead_grave>                                                               : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+<Multi_key><grave><apostrophe><grave>                                                              : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+#dead_grave><dead_acute><dead_grave>                                                       <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+#Multi_key><grave><apostrophe><grave>                                                      <U200B> : "᷈" U1DC8 # COMBINING GRAVE-ACUTE-GRAVE
+#
+#
 # # GRAVE&MACRON
 #   See # # MACRON&GRAVE
 #
@@ -16948,20 +16996,36 @@
 #
 #
 #*# CEDILLA
+#   cedilla, serif
 #   dead_cedilla
 #   Multikey: ¦,
+#
+#   "Ç" key emulation
 #
 #   The polygrams with "a", "o" and "u" make the dead_cedilla key behave like a
 #   "Ç" key in all relevant cases, along the lines of the "Ê" key emulation,
 #   for the Canadian French QWERTY variant.
 #   See #*# CIRCUMFLEX
 #
+#
+#   Letters
+#
 #   Cedilla has no reported usage outside Unicode precomposed letters.
 #   https://www.frathwiki.com/Cedilla
 #
+#   Letters with left serif "ꭕ" UAB55 and "ꭙ" UAB59 are also supported in
+#   dead_cedilla, additionally to their support in letter groups, by "x" and
+#   "X" as base characters, given an empty intersection and by lack of a
+#   dedicated dead key, making dead_cedilla the most straightforward host.
+#   See #+# GROUP_4
+#   See #+# GROUP_11
+#
+#
+#   Dotted numbers
+#
 #   Digits yield numbers 1 through 10 followed by a period, as an experimental
-#   convenience, unlike parenthesized digits and letters, not supported.
-#   Numbers 11..20 are in dead_belowcomma.
+#   convenience, as opposed to the not supported parenthesized digits and
+#   letters. Numbers 11..20 are in dead_belowcomma.
 #   See #*# COMMA_BELOW
 #
 <dead_cedilla>                                                                             <space> : "̧" U0327 # COMBINING CEDILLA
@@ -17068,6 +17132,10 @@
 <Multi_key><comma>                                                                             <U> : "ÇU" # U00C7 U0055 Canadian French: "Ç" key emulation
 <dead_cedilla>                                                                                 <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
 <Multi_key><comma>                                                                             <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
+<dead_cedilla>                                                                                 <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<Multi_key><comma>                                                                             <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<dead_cedilla>                                                                                 <x> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+<Multi_key><comma>                                                                             <x> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
 #
 #
 # # CEDILLA&ACUTE
