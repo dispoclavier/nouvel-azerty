@@ -43,7 +43,7 @@ Transpilation pour Windows des séquences de composition.
 			* Redonder "Ṭ" U+1E6C par "T", "ṭ" U+1E6D par "t" pour des transcriptions et romanisations. ibidem
 			* Redonder "Ʌ" U+0245 par "V", "ʌ" U+028C par "v" pour la phonétique. ibidem
 			* Redonder "Ŋ" U+014A par "X", "ŋ" U+014B par "x". ibidem
-	* Tilde : Redonder "❰" U+2770, "❱" U+2771 par "<", ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93)
+	* Tilde : Redonder "❰" U+2770, "❱" U+2771 par "<", ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93), [8efaac3](https://github.com/dispoclavier/nouvel-azerty/commit/8efaac3ca70170af4bc824993ec271c0c57d318c)
 	* Grec ou cerclé : Ajouter "◎" U+25CE par ")" ou "°" à la place de "⊚" U+229A, qui est dans cerclé. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
 		* Grec ou cerclé > cerclé : Ajouter "◯" U+25EF comme clone espaçant du diacritique  "⃝" U+20DD à la place de "⚪" U+26AA, qui est dans le groupe 3 de "@". ibidem
 	* Accent aigu :
@@ -66,7 +66,7 @@ Transpilation pour Windows des séquences de composition.
 		* Double raie : Redonder "‡" U+2021 par "|". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), kbdeadtrans.c ibidem
 	* Macron :
 		* Redonder "†" U+2020 par "+", "‡" U+2021 par "=". ibidem
-		* Redonder "ꭗ" U+AB57 par "x", "ꭘ" U+AB58 par "X". compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
+		* Redonder "ꭗ" U+AB57 par "x", "ꭘ" U+AB58 par "X". compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100), [8efaac3](https://github.com/dispoclavier/nouvel-azerty/commit/8efaac3ca70170af4bc824993ec271c0c57d318c)
 		* Macron groupe 2 : Redonder "ʗ" U+0297 par "c" et "C". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784), [71f226f](https://github.com/dispoclavier/nouvel-azerty/commit/71f226f82a56d62912f4ed6789398693f493031f)
 		* Macron souscrit : Redonder "ʗ" U+0297 par "c" et "C". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff)
 		* Macron et brève : Simplifier la saisie de "᷌" U+1DCC. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
@@ -74,7 +74,8 @@ Transpilation pour Windows des séquences de composition.
 		* Redonder "ꭔ" U+AB54 par "X" à la place de "ꭘ" U+AB58, qui va dans macron par "X". ibidem
 		* Supprimer "ꭔ" U+AB54 par "q". ibidem
 	* Accent circonflexe :
-		* Ajouter "❬" U+276C par "[" ou "<", et "❭" U+276D par "]" ou ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93)
+		* Ajouter "❬" U+276C par "[" ou "<", et "❭" U+276D par "]" ou ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93), [8efaac3](https://github.com/dispoclavier/nouvel-azerty/commit/8efaac3ca70170af4bc824993ec271c0c57d318c)
+		* Redonder "‰" U+2030 par "%". compose-2.yml [8efaac3](https://github.com/dispoclavier/nouvel-azerty/commit/8efaac3ca70170af4bc824993ec271c0c57d318c)
 		* Redonder "—" U+2014 par "-". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784), [71f226f](https://github.com/dispoclavier/nouvel-azerty/commit/71f226f82a56d62912f4ed6789398693f493031f)
 	* Accent grave :
 		* Redonder "❑" U+2751 par "[", "❏" U+274F par "]". ibidem
