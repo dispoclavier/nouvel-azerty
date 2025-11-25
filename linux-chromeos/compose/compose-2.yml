@@ -5265,10 +5265,16 @@
 #   Angle brackets
 #
 #   Heavy angle bracket ornaments "❰" U2770, "❱" U2771 are supported in
-#   dead_tilde by "[" and "]" with respect to their use as escape delimiters in
-#   Unicode CLDR.
+#   dead_tilde by "[" or "<", and by "]" or ">" in synergy with the easy-access
+#   instance of dead_tilde, and by two sets of base characters for convenience,
+#   with respect to their use as escape delimiters in Unicode CLDR.
 #   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
+#
+#   Medium angle bracket ornaments "❬" U276C, "❭" U276D are also supported, but
+#   in dead_circumflex, that has an easy-access instance in French mode on the
+#   same key as dead_tilde, but not in synergy with brackets.
+#   See #*# CIRCUMFLEX
 #
 #
 #   Diacritics
@@ -5361,6 +5367,10 @@
 <Multi_key><asciitilde>                                                             <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_tilde>                                                                                <less> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><asciitilde>                                                                     <less> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<dead_tilde>                                                                             <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><asciitilde>                                                                  <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                               <grave> : "" U000C # FORM FEED, page break in plain text
@@ -14121,7 +14131,7 @@
 #   dead_circumflex
 #   Multikey: ¦<
 #
-#   Quotation mark input method
+#   Quotation marks
 #
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_circumflex yields turned high curly quotation marks U2018, U201C
@@ -14209,18 +14219,6 @@
 #   method by <dead_circumflex><f>, since French has no words including an "êf"
 #   digram.
 #
-#   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
-#   additionally to its support in the symbol groups and by dead_abovering.
-#   See # # C10 bar
-#   See #*# RING_ABOVE
-#
-#   Followed by comma, dead_circumflex provides an additional input method for
-#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
-#   See # # B06 grave
-#
-#   Followed by minus, dead_circumflex is a shortcut to "—" U2014, consistently
-#   with dead_acute yielding "–" U2013.
-#
 #   As "B" has not been encoded with circumflex, and French doesn’t have any
 #   word with "êb", <dead_circumflex><B> and <dead_circumflex><b> may be used
 #   as shortcuts for anything. "B" mnemonics suggest U WITH BREVE "Ŭ" U016C,
@@ -14230,9 +14228,35 @@
 #   Agrave on key E10), E (by Egrave on key E07) and O (French AZERTY does not
 #   feature Ograve).
 #
+#   Followed by comma, dead_circumflex provides an additional input method for
+#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#   See # # B06 grave
+#
+#   Followed by minus, dead_circumflex is a shortcut to "—" U2014, consistently
+#   with dead_acute yielding "–" U2013.
+#
+#
+#   Asterisks
+#
+#   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
+#   additionally to its support in the symbol groups and by dead_abovering.
+#   See # # C10 bar
+#   See #*# RING_ABOVE
+#
+#
+#   Symbol for documentation
+#
 #   The shouldered open box "⍽" U237D, by the at sign, is a convenience for
 #   documentation.
 #   See # # Symbols for NO-BREAK SPACE
+#
+#
+#   Angle brackets
+#
+#   Medium angle bracket ornaments "❬" U276C, "❭" U276D are supported by
+#    "[" or "<", and by "]" or ">", as an alternative to "❰" U2770, "❱" U2771
+#   in dead_tilde, and by two sets of base characters for convenience.
+#   See #*# TILDE
 #
 #
 #   Diacritics
@@ -14282,10 +14306,18 @@
 #   Multikey conflicts with "←" U2190, "↔" U2194, "↚" U219A, "↢" U21A2, "↤" U21A4, […]     <minus> : "—" U2014 # EM DASH
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+<dead_circumflex>                                                                    <bracketleft> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><less>                                                                    <bracketleft> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+<dead_circumflex>                                                                   <bracketright> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><less>                                                                   <bracketright> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 #   Multikey conflicts with "⇺" U21FA, "⇽" U21FD, "⇿" U21FF, "⊲" U22B2, "⊴" U22B4, […]       <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
+<dead_circumflex>                                                                           <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><less>                                                                           <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+<dead_circumflex>                                                                        <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><less>                                                                        <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
@@ -17416,11 +17448,16 @@
 #   dead_diaeresis
 #   Multikey: ¦:
 #
+#   Quotation marks
+#
 #   Followed by quotedbl, EuroSign, apostrophe or rightsinglequotemark,
 #   dead_diaeresis yields low, opening, curly quotation marks U201A, U201E.
 #   By multikey, these have also dedicated support.
 #   See # # Quotation mark input method
 #   See # # Comma-shaped quotation marks
+#
+#
+#   Shortcuts
 #
 #   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
 #   but also "Ø" U00D8, "ø" U00F8 for convenience.
@@ -17458,6 +17495,15 @@
 #   See #*# ACUTE
 #
 #
+#   Long dashes
+#
+#   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
+#   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
+#   the dead key and the base characters.
+#   See # # Long dashes
+#   See #   Input method for hyphens and dashes
+#
+#
 #   Symbols for documentation
 #
 #   Two less expected yet heavily used symbols, "‖" U2016 DOUBLE VERTICAL LINE
@@ -17474,12 +17520,6 @@
 #   "▾" U25BE BLACK DOWN-POINTING SMALL TRIANGLE representing the no-break thin
 #   space U202F, by at sign, is by courtesy of the Draw Spaces plugin of GEdit.
 #   See # # Symbols for no-break thin space NBTSP
-#
-#   An alternative input method for multiple-em dashes ("⸺" U2E3A by "–" U2013,
-#   "⸻" U2E3B by "—" U2014) is also provided, easing the input by proximity of
-#   the dead key and the base characters.
-#   See # # Long dashes
-#   See #   Input method for hyphens and dashes
 #
 <dead_diaeresis>                                                                           <space> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
