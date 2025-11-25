@@ -43,6 +43,7 @@ Transpilation pour Windows des séquences de composition.
 			* Redonder "Ṭ" U+1E6C par "T", "ṭ" U+1E6D par "t" pour des transcriptions et romanisations. ibidem
 			* Redonder "Ʌ" U+0245 par "V", "ʌ" U+028C par "v" pour la phonétique. ibidem
 			* Redonder "Ŋ" U+014A par "X", "ŋ" U+014B par "x". ibidem
+	* Tilde : Redonder "❰" U+2770, "❱" U+2771 par "<", ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93)
 	* Grec ou cerclé : Ajouter "◎" U+25CE par ")" ou "°" à la place de "⊚" U+229A, qui est dans cerclé. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
 		* Grec ou cerclé > cerclé : Ajouter "◯" U+25EF comme clone espaçant du diacritique  "⃝" U+20DD à la place de "⚪" U+26AA, qui est dans le groupe 3 de "@". ibidem
 	* Accent aigu :
@@ -72,7 +73,9 @@ Transpilation pour Windows des séquences de composition.
 	* Rond en chef :
 		* Redonder "ꭔ" U+AB54 par "X" à la place de "ꭘ" U+AB58, qui va dans macron par "X". ibidem
 		* Supprimer "ꭔ" U+AB54 par "q". ibidem
-	* Accent circonflexe : Redonder "—" U+2014 par "-". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784), [71f226f](https://github.com/dispoclavier/nouvel-azerty/commit/71f226f82a56d62912f4ed6789398693f493031f)
+	* Accent circonflexe :
+		* Ajouter "❬" U+276C par "[" ou "<", et "❭" U+276D par "]" ou ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93)
+		* Redonder "—" U+2014 par "-". compose-2.yml [d291088](https://github.com/dispoclavier/nouvel-azerty/commit/d29108854335a2ebf63dcc5dbdf447f4c0dde784), [71f226f](https://github.com/dispoclavier/nouvel-azerty/commit/71f226f82a56d62912f4ed6789398693f493031f)
 	* Accent grave :
 		* Redonder "❑" U+2751 par "[", "❏" U+274F par "]". ibidem
 		* Accent grave et accent aigu et accent grave : Ajouter pour "᷈" U+1DC8. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
@@ -83,6 +86,7 @@ Transpilation pour Windows des séquences de composition.
 * Personnalisation : Sous Linux : Corriger l’exemple 2. dispocla_perso.cpp [36511cc](https://github.com/dispoclavier/nouvel-azerty/commit/36511cc402a584a575e2ae85956aaed37cb0c85c)
 * Documentation :
 	* Compléter le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [492e009](https://github.com/dispoclavier/nouvel-azerty/commit/492e009459fcc667bf53687221783b3ac60dc416), [e75bb74](https://github.com/dispoclavier/nouvel-azerty/commit/e75bb741c0be7f18eab59a3863350f9ceda3a89f), [79d5342](https://github.com/dispoclavier/nouvel-azerty/commit/79d5342d40196e5d5be2d2d96ff716d16b6b9e4c)
+	* Corriger les tableaux de touches mortes après le remplacement de "?" par "=" (5.1.0) puis par "$" (6.0.4) comme caractère de base des doubles diacritiques. compose-2.yml [c50d95c](https://github.com/dispoclavier/nouvel-azerty/commit/c50d95cdf622e13ef0591ea6f716faa040acde91)
 	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
 	* Corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [ec94770](https://github.com/dispoclavier/nouvel-azerty/commit/ec947701e8dbe712d1f1f13de78e589f09ef645c), kbdeadtrans.c [dc08bbf](https://github.com/dispoclavier/nouvel-azerty/commit/dc08bbf716f9a15b9f583838d6e13b32e4e6b0e7)
 	* Clarifier et compléter des annotations. compose-2.yml [37e6026](https://github.com/dispoclavier/nouvel-azerty/commit/37e6026e3feaa1ccc3195ba9828c7dd4d03402e2)
