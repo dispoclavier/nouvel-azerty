@@ -1334,16 +1334,16 @@
 <Multi_key><apostrophe><asciitilde>                                    <numbersign><numbersign><e> : "ɛ̃́" # U025B U0303 U0301 LATIN SMALL LETTER OPEN E WITH TILDE AND ACUTE
 <dead_macron>                                                                              <U0190> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                           <U0190> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
-<dead_macron>                                                                                  <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
-<Multi_key><bar>                                                                               <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
+#   Group 0 is used for "ꭘ" UAB58.                                                             <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
+#   Group 0 is used for "ꭘ" UAB58.                                                             <X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                           <UEFD0><X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                   <numbersign><X> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                    <UEFD0><UEFD0><E> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                       <numbersign><numbersign><E> : "Ɛ̄" # U0190 U0304 LATIN CAPITAL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                              <U025B> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                           <U025B> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
-<dead_macron>                                                                                  <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
-<Multi_key><bar>                                                                               <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
+#   Group 0 is used for "ꭗ" UAB57.                                                             <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
+#   Group 0 is used for "ꭗ" UAB57.                                                             <x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                           <UEFD0><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <Multi_key><bar>                                                                   <numbersign><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
 <dead_macron>                                                                    <UEFD0><UEFD0><e> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON
@@ -5368,9 +5368,9 @@
 <dead_tilde>                                                                            <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <Multi_key><asciitilde>                                                                 <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 <dead_tilde>                                                                                <less> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><asciitilde>                                                                     <less> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "Ẫ" U1EAA, "ẫ" U1EAB, "Ễ" U1EC4, "ễ" U1EC5, "Ỗ" U1ED6, […]      <less> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                             <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><asciitilde>                                                                  <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "↝" U219D, "⪠" U2AA0.                                        <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                               <grave> : "" U000C # FORM FEED, page break in plain text
@@ -7263,7 +7263,7 @@
 #   See # # D02 percent
 #
 #
-#   Per myriad
+#   Per mille
 #
 #   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
 #   to their confusability and limited availability, they are relegated to the
@@ -7271,8 +7271,9 @@
 #   groups 1 and 2.
 #   See # # D02 percent
 #
-#   However, per mille has a shortcut in dead_acute, and per myriad has one in
-#   dead_diaeresis.
+#   However, per mille has shortcuts in dead_acute and in dead_circumflex, and
+#   per myriad has one in dead_diaeresis.
+#   See #*# CIRCUMFLEX
 #   See #*# DIAERESIS
 #
 #
@@ -13125,7 +13126,7 @@
 #
 #   "ʗ" U0297 is supported by case insensitive "c" to meet eventual user
 #   expectations based on the extended semantics of dead_macron including
-#   vertical bar and long, additionally to the support in group 1 of
+#   vertical bar and long, additionally to the support in group 2 of
 #   dead_macron, given that in dead_macron single press, both "C" and "c"
 #   are used for currency symbols "₵" U20B5 and "¢" U00A2.
 #
@@ -14244,6 +14245,20 @@
 #   See #*# RING_ABOVE
 #
 #
+#   Per mille
+#
+#   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
+#   to their confusability and limited availability, they are relegated to the
+#   symbol groups 11 and 12, in favor of potentially more useful symbols in the
+#   groups 1 and 2.
+#   See # # D02 percent
+#
+#   However, per mille has shortcuts in dead_acute and in dead_circumflex, and
+#   per myriad has one in dead_diaeresis.
+#   See #*# ACUTE
+#   See #*# DIAERESIS
+#
+#
 #   Symbol for documentation
 #
 #   The shouldered open box "⍽" U237D, by the at sign, is a convenience for
@@ -14290,12 +14305,14 @@
 <Multi_key><less>                                                                       <quotedbl> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <dead_circumflex>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 <Multi_key><less>                                                                       <EuroSign> : "“" U201C # LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
-<dead_circumflex>                                                                     <asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
-#   Multikey conflicts with "Ẫ" U1EAA, "ẫ" U1EAB, "Ễ" U1EC4, "ễ" U1EC5, "Ỗ" U1ED6, […]<asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 #   Multikey conflicts with "Ấ" U1EA4, "ấ" U1EA5, "Ế" U1EBE, "ế" U1EBF, "Ố" U1ED0, […]<apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <Multi_key><less>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
+<dead_circumflex>                                                                        <percent> : "‰" U2030 # PER MILLE SIGN
+<Multi_key><less>                                                                        <percent> : "‰" U2030 # PER MILLE SIGN
+<dead_circumflex>                                                                     <asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
+#   Multikey conflicts with "Ẫ" U1EAA, "ẫ" U1EAB, "Ễ" U1EC4, "ễ" U1EC5, "Ỗ" U1ED6, […]<asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
 #   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
 <dead_circumflex>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
@@ -14307,17 +14324,17 @@
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                    <bracketleft> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><less>                                                                    <bracketleft> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "◊" U25CA, "⟠" U27E0, "⟨" U27E8, "⦑" U2991, "⧫" U29EB.   <bracketleft> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                   <bracketright> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><less>                                                                   <bracketright> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "Ẩ" U1EA8, "ẩ" U1EA9, "Ể" U1EC2, "ể" U1EC3, […]         <bracketright> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                            <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 #   Multikey conflicts with "⇺" U21FA, "⇽" U21FD, "⇿" U21FF, "⊲" U22B2, "⊴" U22B4, […]       <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <dead_circumflex>                                                                           <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><less>                                                                           <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "A̭", "C̭", "H̭", "I̭", "K̭", "O̭", "R̭", "S̭", "W̭", "Z̭", "a̭", "c̭", […] <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                        <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><less>                                                                        <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
+#   Multikey conflicts with "≶" U2276, "≸" U2278, "⟡" U27E1, "⟣" U27E3, "⤝" U291D, […]   <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
