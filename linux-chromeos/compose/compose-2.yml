@@ -7214,8 +7214,9 @@
 #
 #   Followed by plus, dead_acute is a shortcut to "±" U00B1.
 #
-#   Followed by minus the hyphen, dead_acute is a shortcut to "–" U2013,
-#   consistently with dead_circumflex yielding "—" U2014.
+#   Followed by minus the hyphen, dead_acute is a shortcut to the en dash
+#   "–" U2013, consistently with dead_circumflex yielding the em dash
+#   "—" U2014.
 #
 #   Followed by equal, dead_acute is a shortcut to the barred equal
 #   "≠" U2260 with a shape-based mnemonic.
@@ -7263,7 +7264,7 @@
 #   See # # D02 percent
 #
 #
-#   Per mille
+#   Per myriad
 #
 #   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
 #   to their confusability and limited availability, they are relegated to the
@@ -7271,8 +7272,8 @@
 #   groups 1 and 2.
 #   See # # D02 percent
 #
-#   However, per mille has shortcuts in dead_acute and in dead_circumflex, and
-#   per myriad has one in dead_diaeresis.
+#   However, per mille has shortcuts in dead_diaeresis and in dead_circumflex,
+#   and per myriad has one in dead_acute.
 #   See #*# CIRCUMFLEX
 #   See #*# DIAERESIS
 #
@@ -7318,8 +7319,8 @@
 <Multi_key><apostrophe>                                                     <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                         <asciicircum> : "‣" U2023 # TRIANGULAR BULLET
 <Multi_key><apostrophe>                                                              <asciicircum> : "‣" U2023 # TRIANGULAR BULLET
-<dead_acute>                                                                             <percent> : "‰" U2030 # PER MILLE SIGN
-<Multi_key><apostrophe>                                                                  <percent> : "‰" U2030 # PER MILLE SIGN
+<dead_acute>                                                                             <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
+<Multi_key><apostrophe>                                                                  <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
 <dead_acute>                                                                                  <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                           <ampersand> : "̗" U0317 # COMBINING ACUTE ACCENT BELOW
@@ -14230,11 +14231,19 @@
 #   feature Ograve).
 #
 #   Followed by comma, dead_circumflex provides an additional input method for
-#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
-#   See # # B06 grave
+#   "ʼ" U02BC MODIFIER LETTER APOSTROPHE.
+#   See # # D07 apostrophe
 #
-#   Followed by minus, dead_circumflex is a shortcut to "—" U2014, consistently
-#   with dead_acute yielding "–" U2013.
+#   Followed by period, dead_circumflex is a shortcut to the middle dot
+#   "·" U00B7, with mnemonics based on the superscript semantics of its
+#   legacy multikey equivalent asciicircum, consistently with superscript
+#   digits, also supported to meet current user expectations.
+#
+#   Followed by minus the hyphen, dead_circumflex is a shortcut to the em dash
+#   "—" U2014, consistently with dead_acute yielding the en dash "–" U2013.
+#
+#   Followed by slash, dead_circumflex is a shortcut to the fraction slash
+#   "⁄" U2044.
 #
 #
 #   Asterisks
@@ -14331,12 +14340,16 @@
 #   Multikey conflicts with "⇺" U21FA, "⇽" U21FD, "⇿" U21FF, "⊲" U22B2, "⊴" U22B4, […]       <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <dead_circumflex>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
 <Multi_key><less>                                                                       <asterisk> : "⁂" U2042 # ASTERISM
+<dead_circumflex>                                                                          <slash> : "⁄" U2044 # FRACTION SLASH
+#   Multikey conflicts with "↙" U2199, "⇙" U21D9, "≰" U2270, "≴" U2274, "⤢" U2922, […]     <slash> : "⁄" U2044 # FRACTION SLASH
 <dead_circumflex>                                                                           <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
 #   Multikey conflicts with "A̭", "C̭", "H̭", "I̭", "K̭", "O̭", "R̭", "S̭", "W̭", "Z̭", "a̭", "c̭", […] <less> : "❬" U276C # MEDIUM LEFT-POINTING ANGLE BRACKET ORNAMENT
 <dead_circumflex>                                                                        <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 #   Multikey conflicts with "≶" U2276, "≸" U2278, "⟡" U27E1, "⟣" U27E3, "⤝" U291D, […]   <greater> : "❭" U276D # MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                         <period> : "·" U00B7 # MIDDLE DOT
+#   Multikey conflicts with "⋖" U22D6, "⟐" U27D0, "⪃" U2A83, "⬸" U2B38.                   <period> : "·" U00B7 # MIDDLE DOT
 <dead_circumflex>                                                                    <twosuperior> : "′" U2032 # PRIME
 <Multi_key><less>                                                                    <twosuperior> : "′" U2032 # PRIME
 <dead_circumflex>                                                                  <threesuperior> : "″" U2033 # DOUBLE PRIME
@@ -14953,6 +14966,13 @@
 #   See # # Quotation mark input method
 #
 #
+#   Turned letter apostrophe
+#
+#   Followed by comma, dead_caron provides an additional input method for
+#   "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#   See # # B06 grave
+#
+#
 #   Diacritic
 #
 #   The doubled diacritic "᫏" U1ACF COMBINING DOUBLE CARON (since Unicode 17.0)
@@ -14997,6 +15017,10 @@
 #   Multikey conflicts with "⋫" U22EB.                                                       <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_circumflex><dead_circumflex>                                                           <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 #   Multikey conflicts with "⬴" U2B34, "⬵" U2B35, "⬼" U2B3C, "⬽" U2B3D.                      <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
+<dead_caron>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><greater>                                                                       <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<dead_circumflex><dead_circumflex>                                                         <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><less><less>                                                                    <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_caron>                                                                                   <0> : "₀" U2080 # SUBSCRIPT ZERO
 <Multi_key><greater>                                                                           <0> : "₀" U2080 # SUBSCRIPT ZERO
 <dead_circumflex><dead_circumflex>                                                             <0> : "₀" U2080 # SUBSCRIPT ZERO
@@ -17476,9 +17500,13 @@
 #
 #   Shortcuts
 #
-#   With diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
-#   but also "Ø" U00D8, "ø" U00F8 for convenience.
+#   By diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
+#   by "Ù", "ù", but also "Ø" U00D8, "ø" U00F8 by "Ç", "ç" for convenience.
 #   See # # Oslash for Danish, Norwegian and other languages
+#
+#   The long s "ſ" U017F has a shortcut by "s", because the sharp s "ß" U00DF,
+#   that may be expected in dead_diaeresis, is in group 1 of "s" and thus well
+#   supported, unlike the long s, in group 3 of "s" due to its antiquation.
 #
 #
 #   Superscript digits
@@ -17499,7 +17527,7 @@
 #   See #*# SUPERSCRIPT
 #
 #
-#   Per myriad
+#   Per mille
 #
 #   Since per mille "‰" U2030 and per myriad "‱" U2031 are not widely used, due
 #   to their confusability and limited availability, they are relegated to the
@@ -17507,9 +17535,10 @@
 #   groups 1 and 2.
 #   See # # D02 percent
 #
-#   However, per mille has a shortcut in dead_acute, and per myriad has one in
-#   dead_diaeresis.
+#   However, per myriad has a shortcut in dead_acute, and per mille has two in
+#   dead_diaeresis and in dead_circumflex.
 #   See #*# ACUTE
+#   See #*# CIRCUMFLEX
 #
 #
 #   Long dashes
@@ -17556,8 +17585,8 @@
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                                     <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
 #   Multikey conflicts with "ᷲ" U1DF2, "ᷳ" U1DF3, "ᷴ" U1DF4.                            <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
-<dead_diaeresis>                                                                         <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
-#   Multikey conflicts with "ᴞ" U1D1E.                                                   <percent> : "‱" U2031 # PER TEN THOUSAND SIGN
+<dead_diaeresis>                                                                         <percent> : "‰" U2030 # PER MILLE SIGN
+#   Multikey conflicts with "ᴞ" U1D1E.                                                   <percent> : "‰" U2030 # PER MILLE SIGN
 <dead_diaeresis>                                                                       <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><colon>                                                                     <backslash> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                  <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
@@ -17638,6 +17667,8 @@
 <Multi_key><colon>                                                                             <O> : "Ö" U00D6 # LATIN CAPITAL LETTER O WITH DIAERESIS
 <dead_diaeresis>                                                                               <o> : "ö" U00F6 # LATIN SMALL LETTER O WITH DIAERESIS
 <Multi_key><colon>                                                                             <o> : "ö" U00F6 # LATIN SMALL LETTER O WITH DIAERESIS
+<dead_diaeresis>                                                                               <s> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><colon>                                                                             <s> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <dead_diaeresis>                                                                               <T> : "T̈" # U0054 U0308 LATIN CAPITAL LETTER T WITH DIAERESIS: Arabic transliteration
 <Multi_key><colon>                                                                             <T> : "T̈" # U0054 U0308 LATIN CAPITAL LETTER T WITH DIAERESIS: Arabic transliteration
 <dead_diaeresis>                                                                               <t> : "ẗ" U1E97 # LATIN SMALL LETTER T WITH DIAERESIS
