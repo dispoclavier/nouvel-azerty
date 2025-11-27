@@ -28,7 +28,7 @@ Transpilation pour Windows des séquences de composition.
 	* Réaffecter la séquence « ¦0* » de "♑" U+2651 à "°" U+00B0. ibidem, [ddcd1b1](https://github.com/dispoclavier/nouvel-azerty/commit/ddcd1b124c58b9e91b2d86870d2860057e8eba1e)
 	* Redonder "ꭅ" U+AB45 par « ¦r( » et « ¦'(␣ » et similaires. compose-1.yml [dd10547](https://github.com/dispoclavier/nouvel-azerty/commit/dd10547ed386de5c1a540be7e0d115a3e077a217)
 	* Redonder "Ꜻ" U+A73A, "ꜻ" U+A73B par « ¦A-V- », « ¦a-v- ». compose-1.yml [aa2c629](https://github.com/dispoclavier/nouvel-azerty/commit/aa2c62910a37d68f2b70b29fc07531c17d2fe1e2), [fa9a58b](https://github.com/dispoclavier/nouvel-azerty/commit/fa9a58bfb5f29e7be92d1b9ce67833d757bd7c80)
-@	* Redonder "ſ" U+017F par « ¦sl ».
+	* Redonder "ſ" U+017F par « ¦sl ». compose-1.yml [63e7db5](https://github.com/dispoclavier/nouvel-azerty/commit/63e7db54efd00f34e2ab123ed9d5d8b77c0cf0ff)
 	* Transpiler pour Windows. dead-key-convert.pl [747a840](https://github.com/dispoclavier/nouvel-azerty/commit/747a840b2163a4b04d328cd0638e174a83cc6516), kbdeadtrans.c, kbdeadtrans-deadkeys.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [59cc6ac](https://github.com/dispoclavier/nouvel-azerty/commit/59cc6ac3643651e4c2d43ddff8078410d3d7930e)
 		* Exclure les équivalents en composition des touches mortes pour réduire la taille de fichier des pilotes. kbdeadtrans.c [ab1190f](https://github.com/dispoclavier/nouvel-azerty/commit/ab1190fca2d73deb3928e659e9aee19aa0f5f5a8), [ab6dcc4](https://github.com/dispoclavier/nouvel-azerty/commit/ab6dcc4b51fd3e0a484d533297411942fa5c0a22)
 		* Exclure les séquences de composition dédiées tant que le transpilateur n’est pas débogué. kbdeadtrans.c [e698ca6](https://github.com/dispoclavier/nouvel-azerty/commit/e698ca618ed6a351c6bb2036dd63598ae5f9d47a), dead-key-convert.pl [04d0bfe](https://github.com/dispoclavier/nouvel-azerty/commit/04d0bfec422b0c062e7ef99aaf9b2ea56581851a)
@@ -94,13 +94,14 @@ Transpilation pour Windows des séquences de composition.
 * Documentation :
 	* Compléter le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [492e009](https://github.com/dispoclavier/nouvel-azerty/commit/492e009459fcc667bf53687221783b3ac60dc416), [e75bb74](https://github.com/dispoclavier/nouvel-azerty/commit/e75bb741c0be7f18eab59a3863350f9ceda3a89f), [79d5342](https://github.com/dispoclavier/nouvel-azerty/commit/79d5342d40196e5d5be2d2d96ff716d16b6b9e4c)
 	* Corriger les tableaux de touches mortes après le remplacement de "?" par "=" (5.1.0) puis par "$" (6.0.4) comme caractère de base des doubles diacritiques. compose-2.yml [c50d95c](https://github.com/dispoclavier/nouvel-azerty/commit/c50d95cdf622e13ef0591ea6f716faa040acde91)
+	* Corriger et mettre à jour le mode d’emploi de Compose.yml. linux-chromeos/compose/readme.md [63e7db5](https://github.com/dispoclavier/nouvel-azerty/commit/63e7db54efd00f34e2ab123ed9d5d8b77c0cf0ff)
 	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
 	* Corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [ec94770](https://github.com/dispoclavier/nouvel-azerty/commit/ec947701e8dbe712d1f1f13de78e589f09ef645c), kbdeadtrans.c [dc08bbf](https://github.com/dispoclavier/nouvel-azerty/commit/dc08bbf716f9a15b9f583838d6e13b32e4e6b0e7)
 	* Clarifier et compléter des annotations. compose-2.yml [37e6026](https://github.com/dispoclavier/nouvel-azerty/commit/37e6026e3feaa1ccc3195ba9828c7dd4d03402e2)
 	* Mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b6e63c6](https://github.com/dispoclavier/nouvel-azerty/commit/b6e63c612d7a08362f84f332145836c3d3beabdc)
 	* Corriger "Multi_key:" en "Multikey:" pour l’accorder avec le reste des annotations. compose-2.yml [37d4607](https://github.com/dispoclavier/nouvel-azerty/commit/37d46075872d0a02987523d0311e13e53c05339e)
 	* Corriger le journal des modifications. CHANGELOG.md [781e6eb](https://github.com/dispoclavier/nouvel-azerty/commit/781e6eb2ba1b391a86fcf19bd1702c62287bf0ef)
-* Builds ;
+* Builds :
 	* 6.1.3.0 [59cc6ac](https://github.com/dispoclavier/nouvel-azerty/commit/59cc6ac3643651e4c2d43ddff8078410d3d7930e)
 	* 6.1.3.1 [ab1190f](https://github.com/dispoclavier/nouvel-azerty/commit/ab1190fca2d73deb3928e659e9aee19aa0f5f5a8)
 
