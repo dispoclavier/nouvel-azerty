@@ -1942,7 +1942,6 @@
 <Multi_key><f><e><n><g>                                                                            : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <Multi_key><f><n><g>                                                                               : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
 <Multi_key><f><g>                                                                                  : "ʩ" U02A9 # LATIN SMALL LETTER FENG DIGRAPH
-<Multi_key><f><s>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><G><H><space>                                                                           : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
 <Multi_key><G><h>                                                                                  : "Ƣ" U01A2 # LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
 <Multi_key><g><h><space>                                                                           : "ƣ" U01A3 # LATIN SMALL LETTER OI, LATIN SMALL LETTER GHA
@@ -2028,6 +2027,8 @@
 <Multi_key><S><H>                                                                                  : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
 <Multi_key><S><h>                                                                                  : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
 <Multi_key><s><h>                                                                                  : "ʃ" U0283 # LATIN SMALL LETTER ESH
+<Multi_key><s><l>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><f><s>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><S><S>                                                                                  : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><S><s>                                                                                  : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><s><s>                                                                                  : "ß" U00DF # LATIN SMALL LETTER SHARP S
