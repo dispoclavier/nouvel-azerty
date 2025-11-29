@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.1.2
-    Version et nᵒ de build : 6.1.2.1
-                      Date : 2025-10-29T0821+0100
+                   Version : 6.1.3
+    Version et nᵒ de build : 6.1.3.2
+                      Date : 2025-11-29T2107+0100
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -25,17 +25,19 @@ Pour essayer ce nouvel AZERTY, un seul jeu de pilotes suffit, mais pour une util
 
 ## Dossiers et fichiers
 
-* Ce nouvel AZERTY se trouve dans le dossier « installer », dans les sous-dossiers « kbfrFRs1-6.1.2.1 » et « kbfrFRs2-6.1.2.1 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
+Afin de limiter la taille du paquet téléchargeable de la version de base, les variantes sont fournies à part.
 
-* Dans le dossier « installer », le sous-dossier « Variantes » contient le reste de la gamme disponible sous Windows :
+* Ce nouvel AZERTY se trouve dans le paquet « Un-nouvel-AZERTY-Windows-6.1.3 », dans le dossier « installer », dans les sous-dossiers « kbfrFRs1-6.1.3.2 » et « kbfrFRs2-6.1.3.2 », chacun avec ses 4 pilotes de disposition, ses 3 installateurs et son setup.exe.
 
-  * Le dossier « kbbrFRs1-6.1.2.1 » qui contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧), en Minuscule et en Majuscule.
+* Dans le paquet « Un-nouvel-AZERTY-Windows-variantes-6.1.3 », le dossier « installer » contient les autres dispositions de la gamme disponible sous Windows :
 
-  * Le dossier « kbfrPFs1-6.1.2.1 » qui contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
+  * Le dossier « kbbrFRs1-6.1.3.2 » contient la variante AZERTY pour la langue bretonne, avec le "cʼh" sur le ⟦1⟧, et le "ñ" sur le ⟦8⟧ à la place du tiret bas (qui est aussi sur AltGr + ⟦J⟧).
 
-  * Le dossier « kbfrAFs1-6.1.2.1 » qui contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧, en Minuscule et en Majuscule.
+  * Le dossier « kbfrPFs1-6.1.3.2 » contient la variante AZERTY pour la Polynésie française, avec le ʻeta sur le ⟦1⟧, et une touche morte tārava sur le ⟦8⟧.
 
-  * Le dossier « kbfrFRr1-6.1.2.1 » qui contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
+  * Le dossier « kbfrAFs1-6.1.3.2 » contient la variante AZERTY pour l’Afrique francophone, pour le bambara en particulier, avec l’epsilon latin "ɛ" sur le ⟦1⟧, et le o ouvert "ɔ" sur le ⟦8⟧.
+
+  * Le dossier « kbfrFRr1-6.1.3.2 » contient la variante redisposée de base de ce nouvel AZERTY, disposée en QZJFGY de manière plus ergonomique tout en restant assez proche de l’AZERTY, afin que les exigences d’ergonomie n’obligent pas à renoncer aux fonctionnalités de ce nouvel AZERTY.
 
 * Dans le dossier « redispositions » se trouvent des fichiers d’inscription au Registre avec leur mode d’emploi « _Scancode_Map.pdf », fourni aussi comme fichier texte au format Markdown « _Scancode_Map.md » pour faciliter l’utilisation. Ces fichiers peuvent être utilisés pour mettre en place des redispositions similaires aux sous-variantes sous Linux.
 
@@ -61,7 +63,7 @@ Pour passer le Microsoft Defender SmartScreen, vous avez deux options. Pour ne p
 
 * Ouvrir les propriétés du setup.exe en faisant un clic droit dessus et en cliquant « Propriétés » tout en bas. Car au bas du premier onglet, on peut alors cocher la case « ☐ Débloquer » derrière « Sécurité : Ce fichier provient d’un autre ordinateur et peut éventuellement être bloqué pour protéger cet ordinateur. »
 
-### Les étapes de l’installation
+#### Les étapes de l’installation
 
 1. Cliquer sur « ☐ Débloquer » derrière « Sécurité : Ce fichier provient d’un autre ordinateur et peut éventuellement être bloqué pour protéger cet ordinateur. »
 
@@ -104,13 +106,13 @@ L’affirmation selon laquelle l’éditeur du setup.exe et des trois installate
 
 ### Faire compiler les pilotes soi-même
 
-Pour pallier un manque de confiance, on peut toujours faire compiler et paqueter ses propres pilotes. Le logiciel est disponible chez Microsoft (ci-dessus), les sources sont sur GitHub, la licence permet la redistribution, et la marche à suivre est détaillée sur [la page de création de clavier de MNA](http://accentuez.mon.nom.free.fr/Clavier-CreationClavier.php).
+Pour pallier un manque de confiance, on peut toujours faire compiler et paqueter ses propres pilotes. Le logiciel est disponible chez Microsoft (ci-dessus), les sources sont sur GitHub, leur licence permet la redistribution, et la marche à suivre est détaillée sur [la page de création de clavier de MNA](http://accentuez.mon.nom.free.fr/Clavier-CreationClavier.php).
 
-Un mode d’emploi de la compilation figure aussi directement dans ce fichier, plus bas sous le titre « Personnalisation ».
+Un mode d’emploi de la compilation figure aussi directement ici plus bas sous le titre « Personnalisation ».
 
 Pour l’exhaustivité, le script creadispo.cmd doit aussi être mentionné. Conçu vers 2018 pour offrir une expérience utilisateur conviviale à bas seuil, il a le potentiel de faciliter tout ce travail ; mais étant un script, il nécessite une revue complète avant utilisation et [n’est disponible que sur GitHub](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/outils/creadispo.cmd), car tout comme les autres outils du projet, il est exclu des paquets de code source téléchargeables.
 
-Une copie de ce script ne peut fonctionner que si elle a été téléchargée en entier, avec l’indicateur d’ordre des octets à son début, car l’IOO (BOM) au début n’est pas copié dans le presse-papiers ; or il est indispensable pour faire tourner sous Windows ce script, qui autrement sort n’importe quoi.
+Une copie de ce script ne peut fonctionner que si elle a été téléchargée en entier, avec l’indicateur d’ordre des octets à son début, car l’IOO (BOM) au début n’est pas copié-collé par le presse-papiers ; or il est indispensable pour faire tourner sous Windows ce script.
 
 ## Dispositions de clavier : les variantes
 
@@ -118,7 +120,7 @@ Une copie de ce script ne peut fonctionner que si elle a été téléchargée en
 
 À terme, toutes les variantes disponibles sous Linux seront disponibles aussi sous Windows :
 
-* Variantes AZERTY :
+* Toutes les variantes AZERTY :
 
     * Breton et français disposition de clavier semi-automatique
 
@@ -128,7 +130,7 @@ Une copie de ce script ne peut fonctionner que si elle a été téléchargée en
 
     * Français Belgique disposition de clavier semi-automatique
 
-* Autres variantes redisposées QZJFGY :
+* Les autres variantes redisposées QZJFGY :
 
     * Breton et français disposition de clavier semi-automatique redisposée
 
@@ -156,9 +158,9 @@ Des optimisations optionnelles par redisposition de touches sont possibles indé
 
 ## Témoin lumineux
 
-Le témoin lumineux d’Arrêt Défilement devrait pouvoir servir de témoin du verrouillage en mode ASCII par la bascule VerrMod sur la touche E00 au-dessus de Tab à gauche du 1, mais à ce jour, cela fonctionne sous Linux uniquement, sans compter que de nombreux ordinateurs portables sont dépourvus de ce témoin.
+Le témoin lumineux d’Arrêt Défilement devrait pouvoir servir de témoin du verrouillage en mode ASCII par la bascule VerrMod sur la touche E00 au-dessus de Tab à gauche du ⟦1⟧, mais à ce jour, cela fonctionne sous Linux uniquement, sans compter que de nombreux ordinateurs portables sont dépourvus de ce témoin.
 
-Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible aussi lors de la saisie de mots de passe, à condition de commencer la saisie par le chiffre 5, car en mode français, la touche ⟦5⟧ de ce nouvel AZERTY est la touche morte tréma, de sorte que l’absence de retour visuel indique tout de suite que le clavier est en mode français.
+Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible aussi lors de la saisie de mots de passe, à condition de commencer la saisie par le chiffre 5, car en mode français, la touche ⟦5⟧ de ce nouvel AZERTY est la touche morte tréma, de sorte que la présence du retour visuel indique tout de suite que le clavier est en mode ASCII.
 
 ## Personnalisation
 
@@ -180,7 +182,7 @@ Ensuite, il faut recompiler les pilotes de disposition comme mentionné sous le 
 
 4. Appuyer sur la touche Windows et cliquer sur « Microsoft Keyboard Layout Creator 1.4 » sous le titre « Récemment ajoutées ».
 
-5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.1.2.zip).
+5. Télécharger le code source de ce nouvel AZERTY depuis [la page d’accueil](https://github.com/dispoclavier/nouvel-azerty/archive/refs/heads/main.zip) ou [la page d’une version](https://github.com/dispoclavier/nouvel-azerty/archive/refs/tags/6.1.3.zip).
 
 6. Ouvrir le fichier *.klc dans le MSKLC par Ctrl + O ou par « File > Load Source File… ».
 
