@@ -6,9 +6,9 @@ Dispositions de clavier adaptées aux langues nationales, régionales et voisine
 
 Grand public et développeurs, écrivains, éditeurs, journalistes, programmeurs, rédacteurs, scientifiques, secrétaires, traducteurs, typographes.
 
-                   Version : 6.1.2
-    Version et nᵒ de build : 6.1.2.1
-                      Date : 2025-10-29T0821+0100
+                   Version : 6.1.3
+    Version et nᵒ de build : 6.1.3.2
+                      Date : 2025-11-29T2108+0100
               Dépôt GitHub : https://github.com/dispoclavier/nouvel-azerty
              Documentation : https://dispoclavier.com/nouvel-azerty/
               Licence code : Apache 2.0
@@ -79,29 +79,29 @@ Ce script est documenté dans son en-tête, dans le Mode-d-emploi-sous-Linux.pdf
 
 1. Ouvrir un terminal dans le dossier personnel et sauvegarder la disposition actuelle dans un fichier que l’on pourra nommer "normal.xkb" et qui servira à revenir à la disposition actuelle sans fermer la session. (Si ":0" ne fonctionne pas, invoquer la variable d’environnement "$DISPLAY" à la place.)
 
-        xkbcomp :0 normal.xkb
+      xkbcomp :0 normal.xkb
 
 2. Copier les fichiers Compose.yml et nouvel-azerty.xkb (ou celui de la variante choisie) vers le dossier personnel.
 
 3. Si le dossier personnel contient déjà un fichier invisible .XCompose, ajouter le contenu du fichier Compose.yml dans ce fichier au début pour ignorer les séquences en conflit, ou à la fin pour remplacer les séquences en conflit. Sinon, renommer Compose.yml en .XCompose. Si les règles de en_US.UTF-8/Compose doivent continuer de s’appliquer si elles ne sont pas en conflit, décommenter la ligne suivante et, si les règles de en_US.UTF-8/Compose sont prioritaires, la placer à la fin du fichier :
 
-        include "%L"
+      include "%L"
 
 4. Fermer et rouvrir les applications avec saisie de texte, afin d’y activer ce répertoire de touches mortes.
 
 5. Activer ce nouvel AZERTY dans le terminal ouvert au point 1 (en remplaçant le cas échéant "nouvel-azerty.xkb" par le nom de la variante et sous-variante choisie). Il est normal qu’xkbcomp signale qu’aucun symbole n’est défini pour les touches de fonction 19 et 24, ni pour la touche AE13 qui, si elle est présente, se trouve entre Égal et Effacement arrière :
 
-        xkbcomp nouvel-azerty.xkb :0
+      xkbcomp nouvel-azerty.xkb :0
 
 6. Veiller à ce que le système de saisie au clavier soit XIM. Ce réglage se trouve dans Système > Personnel > Langues > Langue > Méthode d’entrée, ou dans Système > Pays et langue > Système > Gérer les langues installées > Langue > Système de saisie au clavier. On a le choix entre iBus, XIM et Aucun. — Le système de saisie au clavier peut aussi être paramétré en ligne de commande. Pour ce faire, utiliser la commande suivante :
 
-        im-config -n xim
+      im-config -n xim
 
 Ce nouvel AZERTY peut maintenant être testé.
 
 La commande pour désactiver ce nouvel AZERTY et réactiver la disposition précédente grâce au fichier mis en place à l’étape 1 est :
 
-        xkbcomp normal.xkb :0
+    xkbcomp normal.xkb :0
 
 ### Comment installer ce nouvel AZERTY
 
@@ -135,7 +135,9 @@ L’installation pas à pas est décrite dans le « Mode-d-emploi-sous-Linux.p
 
 Le témoin lumineux d’Arrêt Défilement sert de témoin du verrouillage en mode ASCII par la bascule VerrMod sur la touche E00 au-dessus de Tab à gauche du 1.
 
-Ce témoin lumineux manque sur beaucoup d’ordinateurs portables récents, mais il est présent sur la plupart des claviers externes, tels que les claviers compacts USB ou sans fil.
+Ce témoin lumineux est présent sur la plupart des claviers externes, tels que les claviers compacts USB ou sans fil, mais de nombreux ordinateurs portables sont dépourvus de ce témoin.
+
+Si lors de la saisie de texte français, on s’aperçoit vite dans quel mode on se trouve, cela est possible aussi lors de la saisie de mots de passe, à condition de commencer la saisie par le chiffre 5, car en mode français, la touche ⟦5⟧ de ce nouvel AZERTY est la touche morte tréma, de sorte que la présence du retour visuel indique tout de suite que le clavier est en mode ASCII.
 
 ## Personnalisation
 
@@ -147,7 +149,7 @@ En ajoutant un fichier .XCompose dans le dossier personnel, il faut y mettre une
 
     include "%L"
 
-Puis ajouter en dessous, les séquences qui doivent remplacer des séquences existantes,
+Puis ajouter en dessous les séquences qui doivent remplacer des séquences existantes,
 
 ## Retours d’expérience, suggestions et critiques
 
