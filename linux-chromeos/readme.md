@@ -213,13 +213,13 @@ Aussi les chromebooks sont-ils invendables à moins d’être bradés.
 
 ## Extensions de fichiers
 
-À l’usage, la plupart des fichiers pour Linux de ce nouvel AZERTY sont sans extension. Les extensions « .c », « .cpp » et « .yml » servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension « .cpp » a été choisie pour éviter « dispocla.c ». (Les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.) Les statistiques de langage sont de toute manière désactivées dans ce dépôt.
+À l’usage, la plupart des fichiers pour Linux de ce nouvel AZERTY sont sans extension. Les extensions « .c », « .cpp » et « .yml » servent uniquement à la coloration syntaxique et à faciliter l’ouverture sous Windows dans un souci d’interopérabilité. L’extension « .cpp » a été choisie pour éviter « dispocla.c ». (Les noms « dispo », « disposyms » et « disposymbols » ne seraient pas de bonnes alternatives.) Les statistiques de langage sont de toute manière en partie désactivées dans ce dépôt.
 
 ## Utilisation
 
 Les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge sont présentées dans le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
 
-Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Linux.
+Ce mode d’emploi complémentaire présente ce qui est particulier à Linux.
 
 ### Lettres
 
