@@ -8,11 +8,13 @@
 # 2025-06-18T0815+0200
 # 2025-08-14T1938+0200
 # 2025-10-29T0554+0100
-# 2025-11-16T1852+0100
+# 2025-11-30T0351+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
 # Multi_key equivalents are skipped.
+#
+# The input requires "START_GREEK" as a start tag.
 #
 # Section headings with a leading "#*#" and the following headings switch files
 # of partial tables:
@@ -110,7 +112,7 @@ open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
 print( "Processing dead keys from $input_path to $output_path.\n" );
 
-my $parse_on       = !0;
+my $parse_on       = !1;
 my $comprehensive  = !0;
 my $date_legend    = 'Tableau mis à jour le ';
 
@@ -135,6 +137,9 @@ my $nowin  = 'Ne fonctionne pas sous Windows';
 
 while ( my $line = <INPUT> ) {
 	$line_nb = $.;
+	if ( $line =~ /START_GREEK/ ) {
+		$parse_on = !0;
+	}
 	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
 
 		# The symbol group table and the letter group table are generated alongside
