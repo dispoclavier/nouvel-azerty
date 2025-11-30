@@ -16,11 +16,23 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
 
-## 6.1.3 (projet)
+## 6.1.4 (projet)
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
 Transpilation pour Windows des séquences de composition.
+
+## 6.1.3 (2025-11-30)
+
+Prise en charge des personnalisations lors de la réinstallation sous Linux.
+
+Prise en charge de séquences de touche morte spécifiques à Windows.
+
+Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
+
+Réduction de la taille de fichier des paquets téléchargeables pour Windows.
+
+Complétion du contenu des touches mortes et des séquences de composition.
 
 * Composition :
 	* Ajouter "⭶" U+2B76, "↸" U+21B8, autres symboles de la touche début. compose-1.yml [ec94770](https://github.com/dispoclavier/nouvel-azerty/commit/ec947701e8dbe712d1f1f13de78e589f09ef645c)
@@ -90,9 +102,11 @@ Transpilation pour Windows des séquences de composition.
 		* Redonder "ſ" U+017F par "s". compose-2.yml [bcd5b17](https://github.com/dispoclavier/nouvel-azerty/commit/bcd5b179ed907ebf6c22ddef574d066ec142144e)
 * Installation :
 	* Sous Linux : Réinstaller les personnalisations de disposition sauvegardées. installer.sh [1d31944](https://github.com/dispoclavier/nouvel-azerty/commit/1d31944908545e090f2cacd13c17dfa386907431)
+	* Sous Windows : Réduire la taille du paquet téléchargeable en mettant les variantes à part. windows/Lisez-moi-svp.md [45304f7](https://github.com/dispoclavier/nouvel-azerty/commit/45304f7f4c1ba64a34348b4e5d7d0bfdb5083f76)
 * Personnalisation : Sous Linux : Corriger l’exemple 2. dispocla_perso.cpp [36511cc](https://github.com/dispoclavier/nouvel-azerty/commit/36511cc402a584a575e2ae85956aaed37cb0c85c)
 * Documentation :
 	* Compléter le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [492e009](https://github.com/dispoclavier/nouvel-azerty/commit/492e009459fcc667bf53687221783b3ac60dc416), [e75bb74](https://github.com/dispoclavier/nouvel-azerty/commit/e75bb741c0be7f18eab59a3863350f9ceda3a89f), [79d5342](https://github.com/dispoclavier/nouvel-azerty/commit/79d5342d40196e5d5be2d2d96ff716d16b6b9e4c)
+	* Mettre à jour les autres modes d’emploi. linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [87b2fa5](https://github.com/dispoclavier/nouvel-azerty/commit/87b2fa5ec5b186652d2e8bc5221772eb3be8cd59), linux-chromeos/Lisez-moi-svp.md [6451574](https://github.com/dispoclavier/nouvel-azerty/commit/6451574290636026fcbda8d9ad53ec43e3e2219a)
 	* Corriger les tableaux de touches mortes après le remplacement de "?" par "=" (5.1.0) puis par "$" (6.0.4) comme caractère de base des doubles diacritiques. compose-2.yml [c50d95c](https://github.com/dispoclavier/nouvel-azerty/commit/c50d95cdf622e13ef0591ea6f716faa040acde91)
 	* Corriger et mettre à jour le mode d’emploi de Compose.yml. linux-chromeos/compose/readme.md [63e7db5](https://github.com/dispoclavier/nouvel-azerty/commit/63e7db54efd00f34e2ab123ed9d5d8b77c0cf0ff), [c404e1e](https://github.com/dispoclavier/nouvel-azerty/commit/c404e1ed9d57f5429adeb30f498ebd475204e5c3)
 	* Corriger des annotations. compose-2.yml [8843f14](https://github.com/dispoclavier/nouvel-azerty/commit/8843f148e416027779377545603cc00c21296e81), dead-key-convert.pl [7d63cac](https://github.com/dispoclavier/nouvel-azerty/commit/7d63cac23d21880f5fa712c719e02181631f7b52)
@@ -104,6 +118,7 @@ Transpilation pour Windows des séquences de composition.
 * Builds :
 	* 6.1.3.0 [59cc6ac](https://github.com/dispoclavier/nouvel-azerty/commit/59cc6ac3643651e4c2d43ddff8078410d3d7930e)
 	* 6.1.3.1 [ab1190f](https://github.com/dispoclavier/nouvel-azerty/commit/ab1190fca2d73deb3928e659e9aee19aa0f5f5a8)
+	* 6.1.3.2 [6c097e4](https://github.com/dispoclavier/nouvel-azerty/commit/6c097e4913d96770e19caa9cd373bf1f3dafa5f3), [bcd5b17](https://github.com/dispoclavier/nouvel-azerty/commit/bcd5b179ed907ebf6c22ddef574d066ec142144e)
 
 ## 6.1.2 (2025-11-10)
 
@@ -296,7 +311,7 @@ Complétion de la touche morte accent aigu.
 	* Simplifier et compléter les séquences de "⋢" U+22E2, "⋣" U+22E3, "⋤" U+22E4, "⋥" U+22E5. compose-1.yml [0236e61](https://github.com/dispoclavier/nouvel-azerty/commit/0236e61769521aa4aa1eadf7b2e6cc170cb3c6a4)
 	* Simplifier la saisie de "⋦" U+22E6, "⋧" U+22E7, "⋨" U+22E8, "⋩" U+22E9. compose-1.yml [f5a5061](https://github.com/dispoclavier/nouvel-azerty/commit/f5a5061797ce1d51f665d337c2415295bd54b3ee)
 * Transformations : Accent aigu :
-	* Redonder "Ñ" U+00D1, "ñ" U+00F1 par "È" U+00C8, "è" U+00E8. compose-2.yml [](), kbdeadtrans.c [8101eb6](https://github.com/dispoclavier/nouvel-azerty/commit/8101eb63e73531313ccbf1fd94a85bfbbea71f71)
+	* Redonder "Ñ" U+00D1, "ñ" U+00F1 par "È" U+00C8, "è" U+00E8. compose-2.yml [332d457](https://github.com/dispoclavier/nouvel-azerty/commit/332d457c2e4a9dd277f650e2e98c5e6c39dca85d), kbdeadtrans.c [8101eb6](https://github.com/dispoclavier/nouvel-azerty/commit/8101eb63e73531313ccbf1fd94a85bfbbea71f71)
 	* Redonder "ʔ" U+0294 par "ù" U+00F9, "Ù" U+00D9. ibidem
 * Sous-variantes : Mettre à jour, corriger et compléter les fichiers d’inscription au Registre et leur mode d’emploi. windows/redispositions/readme.md alias _Scancode_Map.md [680a5b5](https://github.com/dispoclavier/nouvel-azerty/commit/680a5b5feff04b7baa0c21c25244ec43bb85ce6f), [25de410](https://github.com/dispoclavier/nouvel-azerty/commit/25de410b41e51c6732e63214dbc41992cab6b1a1), [135574f](https://github.com/dispoclavier/nouvel-azerty/commit/135574fd8e0ebbd460cd86a42359bd03dc844dec)
 * Documentation :
