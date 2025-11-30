@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.3.2" # See #   End of line comments
+<UEFA0>                     : "version 6.1.4.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -5723,6 +5723,16 @@
 #   trailing at sign, and italic translates to a trailing slash, although in
 #   other instances, this is used to denote negation: "∄" U2204, "∅" U2205.
 #
+#       Font style                  Trailing transform
+#
+#       Greek                       @
+#       Hebrew                      \
+#       italic                      /
+#       script                      ~
+#       blackletter                 #
+#
+#       double-struck or outlined   duplication
+#
 #   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode#Letterlike_Symbols_block
 #   https://en.wikipedia.org/wiki/Letterlike_Symbols
 #   https://www.unicode.org/charts/PDF/U2100.pdf
@@ -5739,11 +5749,16 @@
 <Multi_key><H><asciitilde>                                                                         : "ℋ" U210B # SCRIPT CAPITAL H
 <Multi_key><H><numbersign>                                                                         : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><H>                                                                                  : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
+<Multi_key><h><asciitilde>                                                                 <space> : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><h><asciitilde>                                                          <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
 #Multi_key><P><L><A><N><C><K>                                                                      : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><L><A>                                                                               : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><p><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><h><slash>                                                                              : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><h><slash>                                                                      <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><h><slash>                                                               <nobreakspace> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><h><asciitilde><slash>                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><h><slash><asciitilde>                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key><I><asciitilde>                                                                         : "ℐ" U2110 # SCRIPT CAPITAL I
 <Multi_key><I><numbersign>                                                                         : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><L><asciitilde>                                                                         : "ℒ" U2112 # SCRIPT CAPITAL L
