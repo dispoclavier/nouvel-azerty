@@ -5749,16 +5749,16 @@
 <Multi_key><H><asciitilde>                                                                         : "ℋ" U210B # SCRIPT CAPITAL H
 <Multi_key><H><numbersign>                                                                         : "ℌ" U210C # BLACK-LETTER CAPITAL H
 <Multi_key><H><H>                                                                                  : "ℍ" U210D # DOUBLE-STRUCK CAPITAL H
-<Multi_key><h><asciitilde>                                                                 <space> : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><h><asciitilde>                                                          <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><h><slash>                                                                      <space> : "ℎ" U210E # PLANCK CONSTANT
+<Multi_key><h><slash>                                                               <nobreakspace> : "ℎ" U210E # PLANCK CONSTANT
 #Multi_key><P><L><A><N><C><K>                                                                      : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><L><A>                                                                               : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><P><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
 <Multi_key><p><l><a>                                                                               : "ℎ" U210E # PLANCK CONSTANT
-<Multi_key><h><slash>                                                                      <space> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><h><slash>                                                               <nobreakspace> : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><h><asciitilde><slash>                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key><h><slash><asciitilde>                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><h><slash><slash>                                                                       : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+#Multi_key><P><2><p>                                                                               : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><P><2>                                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key><p><2>                                                                                  : "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key><I><asciitilde>                                                                         : "ℐ" U2110 # SCRIPT CAPITAL I
 <Multi_key><I><numbersign>                                                                         : "ℑ" U2111 # BLACK-LETTER CAPITAL I
 <Multi_key><L><asciitilde>                                                                         : "ℒ" U2112 # SCRIPT CAPITAL L
