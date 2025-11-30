@@ -23,7 +23,7 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows avant
 Transpilation pour Windows des séquences de composition.
 
 * Composition :
-	* Compléter les séquences de "ℎ" U+210E, "ℏ" U+210F. compose-1.yml [8725e5f](https://github.com/dispoclavier/nouvel-azerty/commit/8725e5f675b7db452d8518b8edb14aa7e71d1de5)
+	* Compléter les séquences de "ℎ" U+210E, "ℏ" U+210F. compose-1.yml [8725e5f](https://github.com/dispoclavier/nouvel-azerty/commit/8725e5f675b7db452d8518b8edb14aa7e71d1de5), [b80ec55](https://github.com/dispoclavier/nouvel-azerty/commit/b80ec5563464dde3806d36c18321b48a0c6d276d)
 * Documentation :
 	* Corriger les tableaux des touches mortes et des séquences de composition. generate-deadkey-tables [1b589d6](https://github.com/dispoclavier/nouvel-azerty/commit/1b589d6245797649976a4ff6606bf461f63d49dd) ; idem, generate-multikey-tables, generate-math-table [02cdc01](https://github.com/dispoclavier/nouvel-azerty/commit/02cdc014e79654715161978b19ae760e9af8c032)
 	* Compléter une annotation. compose-1.yml [8725e5f](https://github.com/dispoclavier/nouvel-azerty/commit/8725e5f675b7db452d8518b8edb14aa7e71d1de5)
