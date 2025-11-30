@@ -4,7 +4,7 @@
 # 2023-11-02T0819+0100
 # 2024-05-16T1520+0200
 # 2024-10-28T1415+0100
-# 2025-10-25T2205+0200
+# 2025-11-30T2108+0100
 # = last modified.
 #
 # Generates HTML tables of dedicated non-math multikey sequences found in
@@ -126,35 +126,39 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $comment -->\n";
 		}
-		# Skip comments, numpad alternatives and output like "en_US.UTF-8/Compose".
-		unless ( $line =~ /^#/ || $line =~ /<KP_/ || $line =~ /\/Compose"/ ) {
+
+		unless ( $line =~ /^#/                 # Skip annotations.
+			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
+			|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
+			|| $line =~ /\/Compose"/             # Output like "en_US.UTF-8/Compose".
+		) {
 			if ( $line =~ /<Multi_key>/ ) {
 
 				# Starting from here, this should be in sync with generate-deadkey-tables.pl.
 				# Convert dead keys.
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + ⟦+=}⟧ ou AltGr\/Option + ⟦£\$¤⟧ (en mode ASCII uniquement)">¦<\/kbd>/g;
+				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;ou AltGr\/Option + ⟦£\$¤⟧ (en mode ASCII uniquement)">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + ⟦P⟧">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + ⟦X⟧">rond en chef<\/kbd>/g;
-				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$¤ ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
+				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$¤&#10;ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
 				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + ⟦§!⟧">virgule souscrite<\/kbd>/g;
 				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + ⟦.;⟧">point souscrit<\/kbd>/g;
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + ⟦F⟧">brève<\/kbd>/g;
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + ⟦V⟧">hatchek<\/kbd>/g;
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ⟦?,⟧">cédille<\/kbd>/g;
-				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ⟦¨^⟧ ou Maj + AltGr\/Option + ⟦C⟧">circonflexe<\/kbd>/g;
+				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ⟦¨^⟧&#10;ou Maj + AltGr\/Option + ⟦C⟧">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte monétaire Maj + AltGr\/Option + ⟦S⟧">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧ ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧&#10;ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + ⟦E⟧">double aigu<\/kbd>/g;
-				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + ⟦£\$¤⟧ ou Maj + AltGr\/Option + ⟦N⟧">grave<\/kbd>/g;
-				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + ⟦Y⟧ ou Maj + AltGr\/Option + ⟦Y⟧">grec<\/kbd>/g;
+				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + ⟦£\$¤⟧&#10;ou Maj + AltGr\/Option + ⟦N⟧">grave<\/kbd>/g;
+				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + ⟦Y⟧&#10;ou Maj + AltGr\/Option + ⟦Y⟧">grec<\/kbd>/g;
 				$line =~ s/<dead_hook>/<kbd class="deadkey" title="Touche morte crosse ou crochet Maj + AltGr\/Option + ⟦I⟧">crosse<\/kbd>/g;
 				$line =~ s/<dead_horn>/<kbd class="deadkey" title="Touche morte cornu Maj + AltGr\/Option + ⟦H⟧">cornu<\/kbd>/g;
 				$line =~ s/<dead_invertedbreve>/<kbd class="deadkey long" title="Touche morte brève inversée Maj + AltGr\/Option + ⟦D⟧">brève inversée<\/kbd>/g;
 				$line =~ s/<dead_macron>/<kbd class="deadkey" title="Touche morte macron Maj + AltGr\/Option + ⟦M⟧">macron<\/kbd>/g;
 				$line =~ s/<dead_ogonek>/<kbd class="deadkey" title="Touche morte ogonek Maj + AltGr\/Option + ⟦K⟧">ogonek<\/kbd>/g;
 				$line =~ s/<dead_stroke>/<kbd class="deadkey" title="Touche morte barré Maj + AltGr\/Option + ⟦W⟧">barré<\/kbd>/g;
-				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde AltGr\/Option + ⟦¨^⟧ ou Maj + AltGr\/Option + ⟦T⟧">tilde<\/kbd>/g;
-				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte groupe Touche ⟦µ*⟧ ou Maj + AltGr\/Option + ⟦Q⟧">groupe<\/kbd>/g;
+				$line =~ s/<dead_tilde>/<kbd class="deadkey" title="Touche morte tilde AltGr\/Option + ⟦¨^⟧&#10;ou Maj + AltGr\/Option + ⟦T⟧">tilde<\/kbd>/g;
+				$line =~ s/<UEFD0>/<kbd class="deadkey" title="Touche morte groupe Touche ⟦µ*⟧&#10;ou Maj + AltGr\/Option + ⟦Q⟧">groupe<\/kbd>/g;
 				$line =~ s/<UEFD1>/<kbd class="deadkey" title="Touche morte exposant Maj + AltGr\/Option + ⟦A⟧">exposant<\/kbd>/g;
 				$line =~ s/<UEFD2>/<kbd class="deadkey" title="Touche morte indice Maj + AltGr\/Option + ⟦J⟧">indice<\/kbd>/g;
 				$line =~ s/<UEFD3>/<kbd class="deadkey long" title="Touche morte crochet en chef Maj + AltGr\/Option + ⟦L⟧">crochet en chef<\/kbd>/g;
@@ -183,13 +187,14 @@ while ( my $line = <INPUT> ) {
 				# Add tooltips.
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + ⟦Espace⟧ (en mode français uniquement)">⍽<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
 				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche ⟦4&#x27;{⟧">’<\/span>/g;
-				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français, ou touche ⟦%ù⟧ en mode ASCII, ou AltGr\/Option + ⟦U⟧">&#x27;<\/span>/g;
 				$line =~ s/<degree>/<span class="tooltip" title="Symbole degré Maj + ⟦°)]⟧">°<\/span>/g;
 				$line =~ s/<multiply>/<span class="tooltip" title="Symbole multiplication AltFr + ⟦C⟧">×<\/span>/g;
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + ⟦P⟧">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦¨^⟧">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦£\$¤⟧">›<\/span>/g;
+				$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;

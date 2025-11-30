@@ -4,7 +4,7 @@
 # 2024-05-16T1520+0200
 # 2024-10-28T1417+0100
 # 2025-09-25T0143+0200
-# 2025-10-25T2202+0200
+# 2025-11-30T2108+0100
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -111,18 +111,22 @@ while ( my $line = <INPUT> ) {
 		$parse_on = !1;
 	}
 	if ( $parse_on ) {
-		if ( $line =~ /^</ ) {
-			unless ( $line =~ /<nobreakspace>/ || $line =~ /<KP_/ ) {
+		if ( $line =~ /^</ ) {                   # Skip annotations.
+			unless ( $line =~ /<nobreakspace>/     # No-break space alias sequences.
+				|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
+				|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
+			) {
 
 				# Collapse spaces.
 				$line =~ s/ {2,}/ /g;
 				$line =~ s/> </></g;
 
 				# Add tooltips.
-				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧ ou, en mode ASCII, AltGr\/Option + ⟦£\$¤⟧">¦<\/span>/g;
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;ou AltGr\/Option + ⟦£\$¤⟧ en mode ASCII">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
+				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
 				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche ⟦4&#x27;{⟧">’<\/span>/g;
-				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦5([⟧ en mode français, ou touche ⟦%ù⟧ en mode ASCII, ou AltGr\/Option + U">&#x27;<\/span>/g;
+				$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
