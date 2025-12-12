@@ -3,15 +3,19 @@
 # 2024-12-31T0424+0100
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
-# 2025-11-14T0532+0100
 # 2025-11-15T0554+0100
+# 2025-12-12T0109+0100
 # = last modified.
 #
-# This “dead key converter” takes in the dead key configuration file for Linux,
-# Compose.yml, due to having the two replacerulesets documented there built in.
-# See Compose.yml # # Notes for maintenance
-# And thanks to improved sorting.
+# This “dead key converter” generates DEADTRANS macro calls for Windows. As it
+# takes in the dead key configuration file for Linux, Compose.yml, it is part
+# of the toolset for Linux that also encompasses the HTML	table generators for
+# the documentation.
+#
+# This script has the two replacerulesets documented in Compose.yml built in,
+# and sorting is improved.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
+# See Compose.yml # # Notes for maintenance
 #
 # Chained dead keys started being supported on 2025-10-18. New dead key chains
 # require a dedicated dead character in get_dead_char, and need to be added in
@@ -130,13 +134,13 @@ my $deadkey_path = 'WINDOWS/dead-keys.c';
 open( DEADKEYS, '>', $deadkey_path ) or die $!;
 print( "Opened file $deadkey_path.\n" );
 
-my $equivalents_path = 'WINDOWS/multikey-equivalents.c';
-open( EQUIVALENTS, '>', $equivalents_path ) or die $!;
-print( "Opened file $equivalents_path.\n" );
-
 my $multikey_path = 'WINDOWS/multikey.c';
 open( MULTIKEY, '>', $multikey_path ) or die $!;
 print( "Opened file $multikey_path.\n" );
+
+my $equivalents_path = 'WINDOWS/multikey-equivalents.c';
+open( EQUIVALENTS, '>', $equivalents_path ) or die $!;
+print( "Opened file $equivalents_path.\n" );
 
 my $report_path = 'WINDOWS/dead-keys.txt';
 open( REPORT, '>', $report_path ) or die $!;
@@ -166,7 +170,7 @@ my @multikey_deadchar = ();
 my @multikey_out      = ();
 my @mk_equiv_out      = ();
 my @multikey_print    = ();
-my @equiv_print       = ();
+my @mk_equiv_print    = ();
 my ( $chain, $deadkey, $input, $input_string, $length, $output_string, $output_code, $comment, $deadchar, $print,
      $high_su, $high_out, $number_bad_format );
 
@@ -2794,10 +2798,10 @@ foreach my $line ( @mk_equiv_out ) {
 		++$multichar;
 		$print = '';
 	}
-	push( @equiv_print, $print );
+	push( @mk_equiv_print, $print );
 }
 
-print EQUIVALENTS @equiv_print;
+print EQUIVALENTS @mk_equiv_print;
 
 # Adds the unsupported multikeys.
 foreach my $element ( @multikeys ) {
@@ -2875,7 +2879,7 @@ print( "  The " . @high_surrogates . " required high surrogates are @high_surrog
 print( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print( "  $multichar unsupported multicharacter output dead key sequences not processed.\n" );
 print( '  ' . @multikey_print . " potential multikey-only sequences in $multikey_path.\n" );
-print( '  ' . @equiv_print . " dead key multikey equivalent sequences in $equivalents_path.\n" );
+print( '  ' . @mk_equiv_print . " dead key multikey equivalent sequences in $equivalents_path.\n" );
 unless ( @unsupported == 0 ) {
 	if ( @unsupported == 1 ) {
 		print( "  The unsupported chain is listed in $report_path.\n" );
