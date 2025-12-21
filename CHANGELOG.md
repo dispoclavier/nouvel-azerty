@@ -18,16 +18,17 @@ Mise à jour pour macOS des dispositions émulées selon ce qui a été dévelop
 
 ## 6.1.4 (projet)
 
-Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
-
 Transpilation pour Windows des séquences de composition.
+
+Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
 * Composition :
 	* Compléter les séquences de "ℎ" U+210E, "ℏ" U+210F. compose-1.yml [8725e5f](https://github.com/dispoclavier/nouvel-azerty/commit/8725e5f675b7db452d8518b8edb14aa7e71d1de5), [b80ec55](https://github.com/dispoclavier/nouvel-azerty/commit/b80ec5563464dde3806d36c18321b48a0c6d276d)
+	* Transpiler pour Windows les séquences de composition dédiées. dead-key-convert.pl [7284fab](https://github.com/dispoclavier/nouvel-azerty/commit/7284fab2f5fd9b723e53b91ba6de3fc38141056d), [d3ee05b](https://github.com/dispoclavier/nouvel-azerty/commit/d3ee05b94d048cdd86ef7af287737b2d49f65148)
 * Documentation :
 	* Corriger les tableaux des touches mortes et des séquences de composition. generate-deadkey-tables [1b589d6](https://github.com/dispoclavier/nouvel-azerty/commit/1b589d6245797649976a4ff6606bf461f63d49dd) ; idem, generate-multikey-tables, generate-math-table [02cdc01](https://github.com/dispoclavier/nouvel-azerty/commit/02cdc014e79654715161978b19ae760e9af8c032)
 	* Compléter une annotation. compose-1.yml [8725e5f](https://github.com/dispoclavier/nouvel-azerty/commit/8725e5f675b7db452d8518b8edb14aa7e71d1de5)
-	
+
 ## 6.1.3 (2025-11-30)
 
 Prise en charge des personnalisations lors de la réinstallation sous Linux.
@@ -56,7 +57,7 @@ Complétion du contenu des touches mortes et des séquences de composition.
 			* Redonder "Ñ" U+00D1 par "B", "ñ" U+00F1 par "b" pour le breton. compose-2.yml [935cab1](https://github.com/dispoclavier/nouvel-azerty/commit/935cab1bf41f45793da30f46044a47378912e012)
 			* Redonder "Ɖ" U+0189 par "D", "ɖ" U+0256 par "d" pour les langues africaines. compose-2.yml [8d77433](https://github.com/dispoclavier/nouvel-azerty/commit/8d7743351b6bfb2d3443fe64e7358d7f85f58489)
 			* Redonder "Ǝ" U+018E par "F", "ǝ" U+01DD par "f" pour les langues africaines. ibidem
-			* Redonder "Ḥ" U+1E24 par "H", "ḥ" U+1E25 psr "h" pour la transcription de l’arabe, du syriaque et de l’hébreu. ibidem
+			* Redonder "Ḥ" U+1E24 par "H", "ḥ" U+1E25 par "h" pour la transcription de l’arabe, du syriaque et de l’hébreu. ibidem
 			* Redonder "Ɲ" U+019D par "J", "ɲ" U+0272 par "j" pour les langues africaines. ibidem
 			* Redonder "¦" U+00A6 par "q", "Q" comme symbole de la touche de composition. ibidem
 			* Redonder "Ṭ" U+1E6C par "T", "ṭ" U+1E6D par "t" pour des transcriptions et romanisations. ibidem
@@ -461,7 +462,7 @@ Rectification et simplification de séquences de composition.
 	* Commun : readme.md [d66b174](https://github.com/dispoclavier/nouvel-azerty/commit/d66b1747204665b2f7a6ed60d075da06bce85356)
 	* Linux : linux-chromeos/readme.md [8f51187](https://github.com/dispoclavier/nouvel-azerty/commit/8f511879a37714f0b82b6a0a36770eb8d3a3b989), Lisez-moi-svp.md [313a75f](https://github.com/dispoclavier/nouvel-azerty/commit/313a75f44083c1eb534f942acd3137a848570aea).
 	* Windows : windows/readme.md [a850608](https://github.com/dispoclavier/nouvel-azerty/commit/a850608e538abe1c4802a6ddf49c8f55e442fde5), [58f8c55](https://github.com/dispoclavier/nouvel-azerty/commit/58f8c55b9fa3c487faf3391810f6348de05161f2), Lisez-moi-svp.md [c6d3121](https://github.com/dispoclavier/nouvel-azerty/commit/c6d3121199d121e79af28d6f2f95bf3b0d98b633)
-	
+
 ## 6.0.5 (2025-08-31)
 
 Variantes pour la Polynésie française et pour l’Afrique francophone AZERTY sous Windows.
@@ -505,7 +506,7 @@ Dans réfléchi, "ʕ" U+0295 est désormais par "G" au lieu de "q".
 	* Tourné : Ajouter "᫣" U+1AE3 par "p".
 	* Réfléchi :
 		* Changer le caractère de base de "ʕ" U+0295 de "q" en "G".
-		* Ajouter "꟎" U+A7CE par "Q" à la place de "ʢ" U+02A2, qui va dans réfléchi rayé par "q" 
+		* Ajouter "꟎" U+A7CE par "Q" à la place de "ʢ" U+02A2, qui va dans réfléchi rayé par "q"
 		* Ajouter "꟏" U+A7CF par "q" à la place de "ʕ" U+0295, qui va par "G".
 		* Réfléchi rayé : Ajouter pour "ʢ" U+02A2, qui était dans réfléchi par "Q".
 	* Tilde :
@@ -802,7 +803,7 @@ Prise en charge d’un émoji supplémentaire sur touche vive.
 	* Simplifier la saisie de "𐞍" U+1078D, "𐞔" U+10794, "𐞜" U+1079C, "𐞝" U+1079D, "𐞡" U+107A1, "𐞢" U+107A2, "𐞧" U+107A7, "𐞴" U+107B4. compose-2.yml [f65ce6e](https://github.com/dispoclavier/nouvel-azerty/commit/f65ce6e0983576c1489a2df9af72323b6367105c)
 	* Accent circonflexe groupe 2 : Prendre en charge "🙶" U+1F676. ibidem
 	* Accent aigu groupe 2 : Prendre en charge "🙷" U+1F677. ibidem
-	* Tréma : 
+	* Tréma :
 		* Groupe 2 : Prendre en charge "🙸" U+1F678. ibidem
 		* Supprimer le demi-codet haut U+D835 des symboles mathématiques alphanumériques. ibidem
 	* Drapeau : Supprimer le demi-codet haut U+D835 des symboles mathématiques alphanumériques. ibidem
@@ -875,7 +876,7 @@ Reconception, rectification et simplification de séquences de composition.
 		* Nombre cerclé : Limiter aux nombres de 11 à 20 et supprimer "㉑" U+3251.."㊿" U+32BF, qui sont en composition. compose-2.yml [c862b14](https://github.com/dispoclavier/nouvel-azerty/commit/c862b145f8eb02890a5f2b341e75822c236e7c1b), [4dd4ec3](https://github.com/dispoclavier/nouvel-azerty/commit/4dd4ec3c8e190e5e5453f826b4537588037ff775), compose-1.yml [91eac71](https://github.com/dispoclavier/nouvel-azerty/commit/91eac71bd5f0dc0c536c4fb58c3ed756cc9e4759)
 	* Crosse : Diacritique espaçant : Redonder "˞" U+02DE à la place de "˽" U+02FD, qui est dans crochet rétroflexe > crochet palatal. compose-2.yml [6214504](https://github.com/dispoclavier/nouvel-azerty/commit/621450437fd27b9f46410119752e0f9dc273ba6c)
 	* Point en chef :
-		* Prendre en charge "ꜗ" U+A717, qui était dans macron. compose-2.yml [278348c](https://github.com/dispoclavier/nouvel-azerty/commit/278348c54e2b70c60c6747e559bab6eda7f4ccb4), 
+		* Prendre en charge "ꜗ" U+A717, qui était dans macron. compose-2.yml [278348c](https://github.com/dispoclavier/nouvel-azerty/commit/278348c54e2b70c60c6747e559bab6eda7f4ccb4),
 		* Prendre en charge "ꜘ" U+A718, qui était dans barré. ibidem
 		* Prendre en charge "ꜙ" U+A719, qui était dans rayé. ibidem et compose-2.yml [66ee349](https://github.com/dispoclavier/nouvel-azerty/commit/66ee34943f8c8c3e2c3894cadc0e700d32ef587f)
 		* Redonder "∔" U+2214, "∸" U+2238. compose-2.yml [66ee349](https://github.com/dispoclavier/nouvel-azerty/commit/66ee34943f8c8c3e2c3894cadc0e700d32ef587f)
@@ -1530,7 +1531,7 @@ Correction du mode ASCII suite à la version 2.
 ## 4.4.3 (2024-09-29)
 
 * Documentation : Corriger des annotations. compose-1.yml [154f6a5](https://github.com/dispoclavier/nouvel-azerty/commit/154f6a51ac081b8e88fe9413c3337c9c8d7ce6b3)
-	
+
 ## 4.4.2 (2024-09-29)
 
 * Documentation : Corriger des annotations. compose-1.yml [20c53d0](https://github.com/dispoclavier/nouvel-azerty/commit/20c53d0d5f5e8f240d77550c6e7eb27f9ab8cde9), compose-2.yml [8cc6866](https://github.com/dispoclavier/nouvel-azerty/commit/8cc6866e2f52ade8224ca12b636cc08956ce6e84)
