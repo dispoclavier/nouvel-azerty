@@ -2327,8 +2327,8 @@ sub get_multikey_dead_character {
 		if ( $deadkey eq $check ) {
 			$deadchar = $entry;
 			$deadchar =~ s/.+➔(....)/$1/;
+			last;
 		}
-		last;
 	}
 	return $deadchar;
 }
