@@ -300,7 +300,7 @@
 #
 #   All headings may be used in cross-references starting with "#   See ". Some
 #   frequent line starts like "#   Multikey conflicts with" followed by an
-#   enumeration, or "#   Multikey is supported as part of math symbols." or 
+#   enumeration, or "#   Multikey is supported as part of math symbols." or
 #   "#   As this dead key exists for" as a typical paragraph start may also be
 #   used in this setting.
 #
@@ -1149,11 +1149,11 @@
 #             "replace": "<sem$1"
 #           },
 #           "sortRightSingleQuotationMark": {
-#             "find": "<(rightsinglequotemark)",
-#             "replace": "<ap$1"
+#             "find": "<rightsinglequotemark",
+#             "replace": "<aprightsingquotmark"
 #           },
 #           "prefixAsciiAndAliases": {
-#             "find": "<(ampersand|apostrophe|aprightsinglequotemark|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotEuroSign|quotedbl|semicolon|semsection|slash|underscore)>",
+#             "find": "<(ampersand|apostrophe|aprightsingquotmark|asciicircum|asciitilde|asterisk|at|backslash|bar|braceleft|braceright|bracketleft|bracketright|colon|comma|dollar|equal|exclam|grave|greater|less|minus|numbersign|parenleft|parenright|percent|period|plus|question|quotEuroSign|quotedbl|semicolon|semsection|slash|underscore)>",
 #             "replace": "<%$1>"
 #           },
 #           "sortSpaces": {
@@ -1793,7 +1793,7 @@
 <Multi_key><parenleft>                                                          <5><0>             : "㊿" U32BF # CIRCLED NUMBER FIFTY
 <Multi_key><parenleft>                                                    <KP_5><KP_0>             : "㊿" U32BF # CIRCLED NUMBER FIFTY
 #
-# 
+#
 # # Circled by leading "o"
 #
 #   This case insensitive "o" prefix supports only numbers 1..10, since letters
@@ -7583,7 +7583,7 @@
 <Multi_key><minus><comma><less><exclam>                                                            : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><minus><comma><exclam><greater>                                                         : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS
 <Multi_key><less><minus><comma><exclam>                                                            : "⤶" U2936 # ARROW POINTING DOWNWARDS THEN CURVING LEFTWARDS
-<Multi_key><exclam>comma><minus><greater>                                                          : "⤷" U2937 # ARROW POINTING DOWNWARDS THEN CURVING RIGHTWARDS
+<Multi_key><exclam><comma><minus><greater>                                                         : "⤷" U2937 # ARROW POINTING DOWNWARDS THEN CURVING RIGHTWARDS
 <Multi_key><parenright><less>                                                              <space> : "⤸" U2938 # RIGHT-SIDE ARC CLOCKWISE ARROW
 <Multi_key><parenright><less>                                                       <nobreakspace> : "⤸" U2938 # RIGHT-SIDE ARC CLOCKWISE ARROW
 <Multi_key><parenleft><greater>                                                            <space> : "⤹" U2939 # LEFT-SIDE ARC ANTICLOCKWISE ARROW
