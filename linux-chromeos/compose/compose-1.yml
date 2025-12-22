@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.4.0" # See #   End of line comments
+<UEFA0>                     : "version 6.1.5.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -7595,6 +7595,8 @@
 <Multi_key><less><parenleft><plus>                                                                 : "⤽" U293D # TOP ARC ANTICLOCKWISE ARROW WITH PLUS
 <Multi_key><space><less><C>                                                                        : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
 <Multi_key><nobreakspace><less><C>                                                                 : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+<Multi_key><space><less><c>                                                                        : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+<Multi_key><nobreakspace><less><c>                                                                 : "⤾" U293E # LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
 <Multi_key><C><greater>                                                                            : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><o><less>                                                                               : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><space><less><o>                                                                        : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
