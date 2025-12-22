@@ -24,7 +24,7 @@ Simplification ou correction de plusieurs séquences de composition.
 
 ## 6.1.4 (2025-12-22)
 
-Transpilation pour Windows des séquences de composition.
+Transpilation pour Windows des séquences de composition dédiées.
 
 Débogage, simplification ou correction de plusieurs séquences de composition.
 
