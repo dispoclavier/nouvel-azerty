@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Include debugged multikey                6.1.4.0.0 Sun 2025-12-21T1943+0100
 * Exclude multikey until it is debugged    6.1.3.2.1 Sat 2025-11-15T0453+0100
 * Uppercase the legacy dead key code       6.1.3.2.0 Fri 2025-11-14T1327+0100
 * Exclude multikey equivalents             6.1.3.1.0 Fri 2025-11-14T0829+0100
@@ -245,21 +246,23 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*****************************************************************************\
 * Dedicated multikey sequences
 *
-* This is a broken transpilation awaiting bugfixes in the transpiler.
-* https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/outils/dead-key-convert.pl
+* This is part of the keyboard layout but must be shipped separately due to
+* file size restrictions on github.com.
 * See kbdeadtrans-multikey.c
 *
-#include "kbdeadtrans-multikey.c"
 \*****************************************************************************/
+#include "kbdeadtrans-multikey.c"
 
 /*****************************************************************************\
 * Multikey equivalents of dead keys
 *
-* This is another broken transpilation. Given that multikey equivalents of
-* dead keys are a Linux feature fostered by mutualized dead key configuration,
-* this can be skipped on Windows in order to limit the layout driver file size
-* under the menace of a total keyboard blackout.
-* See kbdeadtrans-multikey-equivalents.c
+* This Linux feature csnnot be supported on Windows to prevent bloating the
+* layout drivers and crashing the keyboard software. Additionally, the SMP
+* PUA only supports the number of dead characters required for dedicated
+* multikey sequences.
+*
+* Multikey equivalents of dead keys are a Linux feature fostered by mutualized
+* dead key configuration.
 *
 #include "kbdeadtrans-multikey-equivalents.c"
 \*****************************************************************************/

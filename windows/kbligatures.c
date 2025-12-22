@@ -26,7 +26,7 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '1', '.', '3', '.', '2', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '1', '.', '4', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
