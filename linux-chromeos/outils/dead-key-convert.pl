@@ -4,7 +4,7 @@
 # 2025-01-02T2142+0100
 # 2025-10-23T2145+0200
 # 2025-11-15T0554+0100
-# 2025-12-22T1429+0100
+# 2025-12-23T0450+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -2175,8 +2175,8 @@ foreach my $deadkey ( @chained ) {
 # To work around Perl’s "uninitialized value" warning,
 # multikey dead characters are hard-coded like the dead
 # key dead characters where this makes actual sense.
-# This is based on the list of 5252 multikey chains with
-# their dead character generated on 2025-12-21.
+# This is based on a list of 1302 intermediate multikey
+# chains with their dead character output on 2025-12-22.
 sub get_multikey_dead_character {
 	my ( $multikey ) = @_;
 
