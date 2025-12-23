@@ -10,17 +10,19 @@
 
 Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
-Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives pour Windows.
+Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives sous Windows.
 
 ## 6.2.0 (projet)
 
-Mise à jour pour macOS des dispositions émulées selon ce qui a été développé pour Linux et Windows.
+Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows.
 
 ## 6.1.5 (projet)
 
-Simplification ou correction de plusieurs séquences de composition (projet).
+Simplification ou correction de plusieurs séquences de composition.
 
-Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018 (projet).
+Complétion des séquences de touches mortes spécifiques à Windows.
+
+Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
 Correction du transpilateur.
 
