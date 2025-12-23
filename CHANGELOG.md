@@ -18,9 +18,9 @@ Mise à jour pour macOS des dispositions émulées selon ce qui a été dévelop
 
 ## 6.1.5 (projet)
 
-Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018 (projet).
-
 Simplification ou correction de plusieurs séquences de composition (projet).
+
+Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018 (projet).
 
 Correction du transpilateur.
 
@@ -29,6 +29,8 @@ Correction du transpilateur.
 	* Transpiler pour Windows les séquences de composition dédiées :
 		* Corriger la mise en page du code source. dead-key-convert.pl [7e3fd84](https://github.com/dispoclavier/nouvel-azerty/commit/7e3fd842bdacc49295ee1b76e54be7b3738a7f7c), [cd17e0e](https://github.com/dispoclavier/nouvel-azerty/commit/cd17e0e9241e2761512cc58f0cb24c2f5600b481), kbdeadtrans.c, kbdeadtrans-multikey.c [d407518](https://github.com/dispoclavier/nouvel-azerty/commit/d407518344a51924c34d294dba721d6552b69c06)
 		* Améliorer la performance du transpilateur. ibidem
+* Builds :
+	* 6.1.5.0 [d407518](https://github.com/dispoclavier/nouvel-azerty/commit/d407518344a51924c34d294dba721d6552b69c06)
 
 ## 6.1.4 (2025-12-22)
 
