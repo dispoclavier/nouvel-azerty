@@ -5,7 +5,7 @@
 # 2025-10-23T2145+0200
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
-# 2025-12-25T0210+0100
+# 2025-12-25T0221+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -365,7 +365,7 @@ sub get_dead_character {
 	$deadkey =~ s/^<!legacytilde>$/~/;
 	$deadkey =~ s/^<!M>$/00A6/;
 
-	# Dead key chains (575).
+	# Intermediate dead key chain links (575).
 	$deadkey =~ s/^<!abovedot><!abovedot>$/02C8/;#<dead_abovedot><dead_abovedot>
 	$deadkey =~ s/^<!abovedot><!abovedot><!acute>$/02C7/;#<dead_abovedot><dead_abovedot><dead_acute>
 	$deadkey =~ s/^<!abovedot><!abovedot><!acute><!grave>$/02B7/;#<dead_abovedot><dead_abovedot><dead_acute><dead_grave>
@@ -2170,7 +2170,7 @@ foreach my $deadkey ( @chained ) {
 	$input    = dekeysym( $input );
 	print DEADKEYS $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) )
 				. "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-				. "\t," . format_character( get_dead_character( $deadkey ) ) . "\t,0x0001), // Dead key chain\n";
+				. "\t," . format_character( get_dead_character( $deadkey ) ) . "\t,0x0001), // Virtual dead key’s Intermediate chain link\n";
 }
 
 sub get_multikey_dead_character {
