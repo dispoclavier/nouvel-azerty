@@ -5,7 +5,7 @@
 # 2025-10-23T2145+0200
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
-# 2025-12-25T0204+0100
+# 2025-12-25T0210+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -2517,7 +2517,7 @@ foreach my $line ( @multikey_out ) {
 				$input      = dekeysym( $input );
 				$print      = '/*' . $line . ( " " x ( 65 - length( $line ) ) )
 				               . "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-				               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Multikey chain\n";
+				               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Intermediate multikey chain link\n";
 			}
 		} else {
 			++$multichar;
@@ -2602,7 +2602,7 @@ foreach my $line ( @mk_equiv_out ) {
 			$input      = dekeysym( $input );
 			$print      = '/*' . $line . ( " " x ( 65 - length( $line ) ) )
 			               . "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-			               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Multikey chain\n";
+			               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Intermediate multikey chain link\n";
 		} else {
 			++$multichar;
 			$print = '';
