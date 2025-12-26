@@ -4246,8 +4246,9 @@
 #   actually being a Latin letter, and without search equivalence.
 #   See # # Multiplication and division symbols
 #
-<Multi_key><space><x>                                                                              : "х" U0445 # CYRILLIC SMALL LETTER HA
-<Multi_key><nobreakspace><x>                                                                       : "х" U0445 # CYRILLIC SMALL LETTER HA
+<Multi_key><space><space><x>                                                                       : "х" U0445 # CYRILLIC SMALL LETTER HA
+<Multi_key><nobreakspace><space><x>                                                                : "х" U0445 # CYRILLIC SMALL LETTER HA
+<Multi_key><nobreakspace><nobreakspace><x>                                                         : "х" U0445 # CYRILLIC SMALL LETTER HA
 #
 #
 # # Power switch
@@ -6101,7 +6102,6 @@
 <Multi_key><A>                                                                             <space> : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                      <nobreakspace> : "∀" U2200 # FOR ALL
 <Multi_key><A><percent>                                                                            : "∀" U2200 # FOR ALL
-<Multi_key><A><backslash>                                                                          : "∀" U2200 # FOR ALL
 <Multi_key><C>                                                                             <space> : "∁" U2201 # COMPLEMENT
 <Multi_key><C>                                                                      <nobreakspace> : "∁" U2201 # COMPLEMENT
 <Multi_key><d>                                                                             <space> : "∂" U2202 # PARTIAL DIFFERENTIAL
@@ -6119,8 +6119,6 @@
 #
 <Multi_key><D><percent>                                                                            : "∇" U2207 # NABLA
 <Multi_key><d><percent>                                                                            : "∇" U2207 # NABLA
-<Multi_key><D><backslash>                                                                          : "∇" U2207 # NABLA
-<Multi_key><d><backslash>                                                                          : "∇" U2207 # NABLA
 <Multi_key><H>                                                                             <space> : "∇" U2207 # NABLA
 <Multi_key><H>                                                                      <nobreakspace> : "∇" U2207 # NABLA
 <Multi_key><h>                                                                             <space> : "∇" U2207 # NABLA
@@ -6403,8 +6401,6 @@
 <Multi_key><equal><colon>                                                                          : "≕" U2255 # EQUALS COLON
 <Multi_key><space><minus><o><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><nobreakspace><minus><o><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><space><minus><O><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><nobreakspace><minus><O><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><o><equal>                                                                              : "≗" U2257 # RING EQUAL TO
 <Multi_key><parenleft><equal>                                                                      : "≘" U2258 # CORRESPONDS TO
 <Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
@@ -6608,7 +6604,6 @@
 <Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
 #Multi_key><bracketleft><x><bracketright>                                                          : "⊠" U22A0 # SQUARED TIMES
 <Multi_key><bracketleft><x>                                                                        : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><bracketleft><X>                                                                        : "⊠" U22A0 # SQUARED TIMES
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
 #
@@ -8541,10 +8536,10 @@
 <Multi_key><KP_2><V><V>                                                                            : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><2><v><v>                                                                               : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><KP_2><v><v>                                                                            : "⩓" U2A53 # DOUBLE LOGICAL AND
-<Multi_key><2><V>                                                                          <space> : "⩔" U2A54 # DOUBLE LOGICAL OR
-<Multi_key><2><V>                                                                   <nobreakspace> : "⩔" U2A54 # DOUBLE LOGICAL OR
-<Multi_key><KP_2><V>                                                                       <space> : "⩔" U2A54 # DOUBLE LOGICAL OR
-<Multi_key><KP_2><V>                                                                <nobreakspace> : "⩔" U2A54 # DOUBLE LOGICAL OR
+<Multi_key><space><2><V>                                                                           : "⩔" U2A54 # DOUBLE LOGICAL OR
+<Multi_key><space><KP_2><V>                                                                        : "⩔" U2A54 # DOUBLE LOGICAL OR
+<Multi_key><nobreakspace><2><V>                                                                    : "⩔" U2A54 # DOUBLE LOGICAL OR
+<Multi_key><nobreakspace><KP_2><V>                                                                 : "⩔" U2A54 # DOUBLE LOGICAL OR
 #
 #   These "⩕" U2A55, "⩖" U2A56 are smaller than "⨇" U2A07, "⨈" U2A08 and use
 #   therefore lowercase rather than leading space as would be done for ordinary
@@ -8568,11 +8563,9 @@
 <Multi_key><v><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><V><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><v><percent><v>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
-<Multi_key><V><percent><V>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><a><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><A><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
-<Multi_key><V><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><V><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><A><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
@@ -8580,7 +8573,6 @@
 <Multi_key><a><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><a><minus>                                                               <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
-<Multi_key><V><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><underscore><underscore><A>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
@@ -8599,12 +8591,9 @@
 <Multi_key><nobreakspace><A><underscore>                                            <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><V><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><V><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore><underscore>                                                      : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><nobreakspace><A><underscore><underscore>                                               : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><V><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
 #   "⩡" U2A61 looks like a small "⊻" U22BB and thus qualifies for a sequence
 #   with trailing comma.
