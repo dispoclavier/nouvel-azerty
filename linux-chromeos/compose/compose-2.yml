@@ -12171,6 +12171,8 @@
 <Multi_key><underscore><underscore>                                                            <X> : "᪵" U1AB5 # COMBINING X-X BELOW
 <UEFD2><UEFD2>                                                                                 <x> : "͓" U0353 # COMBINING X BELOW
 <Multi_key><underscore><underscore>                                                            <x> : "͓" U0353 # COMBINING X BELOW
+<UEFD2><UEFD2>                                                                                 <Z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
+<Multi_key><underscore><underscore>                                                            <Z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 <UEFD2><UEFD2>                                                                                 <z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 <Multi_key><underscore><underscore>                                                            <z> : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 #

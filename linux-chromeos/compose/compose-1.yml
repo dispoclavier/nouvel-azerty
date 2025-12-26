@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.5.0" # See #   End of line comments
+<UEFA0>                     : "version 6.1.5.1" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -2170,6 +2170,7 @@
 <Multi_key><ampersand><9>                                                                          : "᷒" U1DD2 # COMBINING US ABOVE
 <Multi_key><ampersand><KP_9>                                                                       : "᷒" U1DD2 # COMBINING US ABOVE
 <Multi_key><ampersand><z>                                                                          : "᷏" U1DCF # COMBINING ZIGZAG BELOW
+<Multi_key><ampersand><Z>                                                                          : "᷏" U1DCF # COMBINING ZIGZAG BELOW
 #
 #
 # # Small apostrophe n
@@ -4237,6 +4238,18 @@
 <Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
 #
 #
+# # Alternative multiplication symbol
+#
+#   An alternative multiplication symbol is also supported with respect to its
+#   use on real-world websites, as the Cyrillic letter "х" U0445 is repurposed
+#   as a multiplication symbol with a look and feel close to Latin "x" without
+#   actually being a Latin letter, and without search equivalence.
+#   See # # Multiplication and division symbols
+#
+<Multi_key><space><x>                                                                              : "х" U0445 # CYRILLIC SMALL LETTER HA
+<Multi_key><nobreakspace><x>                                                                       : "х" U0445 # CYRILLIC SMALL LETTER HA
+#
+#
 # # Power switch
 #
 #   Unambiguous, widely used symbol carrying both ON and OFF semantics.
@@ -5186,6 +5199,11 @@
 #   "⨈" U2A08  W    |  "⨇" U2A07  AA                    W%
 #   "∏" U220F  P    |  "∐" U2210  CP                    P%
 #
+#   While for turned, the regular trailing transform is percent, consistently
+#   with the leading transform of *dead_turned multikey equivalent, for ease of
+#   input, the trailing transform for turned may also be backslash, if this is
+#   available, like for "∧" U2227, "⋀" U22C0.
+#
 #
 #   Brackets and lozenges
 #
@@ -5386,6 +5404,12 @@
 #   with apostrophe should also work with rightsinglequotemark. Yet apostrophe
 #   is on key E12, at the same (base) level as rightsinglequotemark on E04.
 #
+#   Sequences including the at sign are duplicated using dead_greek instead,
+#   if the at sign is preceded by another ASCII symbol that has a mapping at
+#   level 3, for example in a sequence for "϶" U03F6, given that dead_greek
+#   replaces the at sign on AltGr/Option + Y, and the at sign on key E11 is not
+#   in synergy with those ASCII symbols that are mapped at level 3 only.
+#
 #
 # # Not sign
 #
@@ -5431,6 +5455,10 @@
 #   See # # B02 asterisk
 #   See # # B01 slash
 #
+#   An alternative multiplication symbol is also supported with respect to its
+#   use on real-world websites.
+#   See # # Alternative multiplication symbol
+#
 <Multi_key><x>                                                                             <space> : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><x>                                                                      <nobreakspace> : "×" U00D7 # MULTIPLICATION SIGN
 <Multi_key><colon><minus>                                                                  <space> : "÷" U00F7 # DIVISION SIGN
@@ -5464,6 +5492,7 @@
 <Multi_key><e><at>                                                                                 : "ϵ" U03F5 # GREEK LUNATE EPSILON SYMBOL
 <Multi_key><E><at>                                                                                 : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 <Multi_key><e><backslash><at>                                                                      : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><e><backslash><dead_greek>                                                              : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 #
 #
 # # Double vertical bar
@@ -5605,7 +5634,9 @@
 #   See dispocla.cpp key <AC06>
 #
 <Multi_key><ampersand><f>                                                                              : "⁡" U2061 # FUNCTION APPLICATION invisible
+<Multi_key><ampersand><F>                                                                              : "⁡" U2061 # FUNCTION APPLICATION invisible
 <Multi_key><ampersand><x>                                                                              : "⁢" U2062 # INVISIBLE TIMES
+<Multi_key><ampersand><X>                                                                              : "⁢" U2062 # INVISIBLE TIMES
 <Multi_key><ampersand><comma>                                                                          : "⁣" U2063 # INVISIBLE SEPARATOR
 <Multi_key><ampersand><plus>                                                                           : "⁤" U2064 # INVISIBLE PLUS
 #
@@ -5672,11 +5703,18 @@
 <Multi_key><ampersand><minus><greater>                                                             : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key><ampersand><o>                                                                  <space> : "⃘" U20D8 # COMBINING RING OVERLAY
 <Multi_key><ampersand><o>                                                           <nobreakspace> : "⃘" U20D8 # COMBINING RING OVERLAY
+<Multi_key><ampersand><O>                                                                  <space> : "⃘" U20D8 # COMBINING RING OVERLAY
+<Multi_key><ampersand><O>                                                           <nobreakspace> : "⃘" U20D8 # COMBINING RING OVERLAY
 <Multi_key><ampersand><o><greater>                                                         <space> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater>                                                  <nobreakspace> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><greater>                                                         <space> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><greater>                                                  <nobreakspace> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><less>                                                                    : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><less>                                                                    : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 #Multi_key><ampersand><3><period>                                                                  : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><3>                                                                          : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><KP_3>                                                                       : "⃛" U20DB # COMBINING THREE DOTS ABOVE
@@ -5773,12 +5811,9 @@
 <Multi_key><R><R>                                                                                  : "ℝ" U211D # DOUBLE-STRUCK CAPITAL R
 <Multi_key><Z><Z>                                                                                  : "ℤ" U2124 # DOUBLE-STRUCK CAPITAL Z
 <Multi_key><Z><numbersign>                                                                         : "ℨ" U2128 # BLACK-LETTER CAPITAL Z
-<Multi_key><i><at>                                                                         <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
-<Multi_key><i><at>                                                                  <nobreakspace> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
-<Multi_key><i><percent>                                                                    <space> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
-<Multi_key><i><percent>                                                             <nobreakspace> : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
-<Multi_key><i><at><percent>                                                                        : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
-<Multi_key><i><percent><at>                                                                        : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><at>                                                                                 : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><percent>                                                                            : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><backslash>                                                                          : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><B><asciitilde>                                                                         : "ℬ" U212C # SCRIPT CAPITAL B
 <Multi_key><C><numbersign>                                                                         : "ℭ" U212D # BLACK-LETTER CAPITAL C
 <Multi_key><e><asciitilde>                                                                         : "ℯ" U212F # SCRIPT SMALL E
@@ -5810,6 +5845,7 @@
 <Multi_key><L><backslash>                                                                  <space> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                           <nobreakspace> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><Y><percent>                                                                            : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
+<Multi_key><Y><backslash>                                                                          : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 #Multi_key><D><D><slash>                                                                           : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 <Multi_key><D><D>                                                                                  : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 #Multi_key><d><d><slash>                                                                           : "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
@@ -5890,7 +5926,10 @@
 <Multi_key><parenleft><minus><greater>                                                             : "↪" U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key><less><minus><o>                                                                <space> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
 <Multi_key><less><minus><o>                                                         <nobreakspace> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
+<Multi_key><less><minus><O>                                                                <space> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
+<Multi_key><less><minus><O>                                                         <nobreakspace> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
 <Multi_key><o><minus><greater>                                                                     : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
+<Multi_key><O><minus><greater>                                                                     : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
 <Multi_key><space><less><asciitilde><greater>                                                      : "↭" U21AD # LEFT RIGHT WAVE ARROW
 <Multi_key><nobreakspace><less><asciitilde><greater>                                               : "↭" U21AD # LEFT RIGHT WAVE ARROW
 #Multi_key><less><minus><slash><minus><greater>                                                    : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
@@ -6004,6 +6043,8 @@
 <Multi_key><minus><greater><bar>                                                                   : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
 <Multi_key><space><o><minus><greater>                                                              : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><nobreakspace><o><minus><greater>                                                       : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><space><O><minus><greater>                                                              : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><nobreakspace><O><minus><greater>                                                       : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 #Multi_key><exclam><greater><less><exclam>                                                         : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key><exclam><greater><less>                                                                 : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 #Multi_key><space><3><minus><greater>                                                              : "⇶" U21F6 # THREE RIGHTWARDS ARROWS
@@ -6059,6 +6100,8 @@
 #
 <Multi_key><A>                                                                             <space> : "∀" U2200 # FOR ALL
 <Multi_key><A>                                                                      <nobreakspace> : "∀" U2200 # FOR ALL
+<Multi_key><A><percent>                                                                            : "∀" U2200 # FOR ALL
+<Multi_key><A><backslash>                                                                          : "∀" U2200 # FOR ALL
 <Multi_key><C>                                                                             <space> : "∁" U2201 # COMPLEMENT
 <Multi_key><C>                                                                      <nobreakspace> : "∁" U2201 # COMPLEMENT
 <Multi_key><d>                                                                             <space> : "∂" U2202 # PARTIAL DIFFERENTIAL
@@ -6069,13 +6112,19 @@
 <Multi_key><O><slash>                                                                              : "∅" U2205 # EMPTY SET
 <Multi_key><D>                                                                             <space> : "∆" U2206 # INCREMENT
 <Multi_key><D>                                                                      <nobreakspace> : "∆" U2206 # INCREMENT
+#
+#   As "∇" U2207 may be used to denote the Hessian matrix, a corresponding
+#   mnemonic sequence is provided additionally to its turned-capital-delta
+#   sequence.
+#
 <Multi_key><D><percent>                                                                            : "∇" U2207 # NABLA
-#
-#   As nabla may be used to denote the Hessian matrix, it has a corresponding
-#   mnemonic sequence additionally to the turned-capital-delta sequence above.
-#
+<Multi_key><d><percent>                                                                            : "∇" U2207 # NABLA
+<Multi_key><D><backslash>                                                                          : "∇" U2207 # NABLA
+<Multi_key><d><backslash>                                                                          : "∇" U2207 # NABLA
 <Multi_key><H>                                                                             <space> : "∇" U2207 # NABLA
 <Multi_key><H>                                                                      <nobreakspace> : "∇" U2207 # NABLA
+<Multi_key><h>                                                                             <space> : "∇" U2207 # NABLA
+<Multi_key><h>                                                                      <nobreakspace> : "∇" U2207 # NABLA
 <Multi_key><e>                                                                             <space> : "∈" U2208 # ELEMENT OF
 <Multi_key><e>                                                                      <nobreakspace> : "∈" U2208 # ELEMENT OF
 <Multi_key><e><slash>                                                                              : "∉" U2209 # NOT AN ELEMENT OF
@@ -6111,6 +6160,7 @@
 <Multi_key><P>                                                                             <space> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P><percent>                                                                            : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><P><backslash>                                                                          : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
@@ -6137,20 +6187,42 @@
 <Multi_key><nobreakspace><nobreakspace><period>                                                    : "∙" U2219 # BULLET OPERATOR
 <Multi_key><v><2>                                                                                  : "√" U221A # SQUARE ROOT
 <Multi_key><v><KP_2>                                                                               : "√" U221A # SQUARE ROOT
+<Multi_key><V><2>                                                                                  : "√" U221A # SQUARE ROOT
+<Multi_key><V><KP_2>                                                                               : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                          <space> : "√" U221A # SQUARE ROOT
 <Multi_key><2><v>                                                                   <nobreakspace> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                       <space> : "√" U221A # SQUARE ROOT
 <Multi_key><KP_2><v>                                                                <nobreakspace> : "√" U221A # SQUARE ROOT
+<Multi_key><2><V>                                                                          <space> : "√" U221A # SQUARE ROOT
+<Multi_key><2><V>                                                                   <nobreakspace> : "√" U221A # SQUARE ROOT
+<Multi_key><KP_2><V>                                                                       <space> : "√" U221A # SQUARE ROOT
+<Multi_key><KP_2><V>                                                                <nobreakspace> : "√" U221A # SQUARE ROOT
 <Multi_key><v><3>                                                                                  : "∛" U221B # CUBE ROOT
 <Multi_key><v><KP_3>                                                                               : "∛" U221B # CUBE ROOT
+<Multi_key><V><3>                                                                                  : "∛" U221B # CUBE ROOT
+<Multi_key><V><KP_3>                                                                               : "∛" U221B # CUBE ROOT
 <Multi_key><3><v>                                                                                  : "∛" U221B # CUBE ROOT
 <Multi_key><KP_3><v>                                                                               : "∛" U221B # CUBE ROOT
+<Multi_key><3><V>                                                                                  : "∛" U221B # CUBE ROOT
+<Multi_key><KP_3><V>                                                                               : "∛" U221B # CUBE ROOT
 <Multi_key><v><4>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><v><KP_4>                                                                               : "∜" U221C # FOURTH ROOT
+<Multi_key><V><4>                                                                                  : "∜" U221C # FOURTH ROOT
+<Multi_key><V><KP_4>                                                                               : "∜" U221C # FOURTH ROOT
 <Multi_key><4><v>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><v>                                                                               : "∜" U221C # FOURTH ROOT
+<Multi_key><4><V>                                                                                  : "∜" U221C # FOURTH ROOT
+<Multi_key><KP_4><V>                                                                               : "∜" U221C # FOURTH ROOT
 <Multi_key><8><backslash>                                                                          : "∝" U221D # PROPORTIONAL TO
 <Multi_key><KP_8><backslash>                                                                       : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><slash>                                                                              : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><slash>                                                                           : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><less>                                                                               : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><less>                                                                            : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><comma>                                                                              : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><comma>                                                                           : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><period>                                                                             : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><period>                                                                          : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><8>                                                                              : "∝" U221D # PROPORTIONAL TO
 <Multi_key><space><KP_8>                                                                           : "∝" U221D # PROPORTIONAL TO
 <Multi_key><nobreakspace><8>                                                                       : "∝" U221D # PROPORTIONAL TO
@@ -6184,8 +6256,13 @@
 <Multi_key><bar><bar><slash>                                                                       : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><a>                                                                             <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                      <nobreakspace> : "∧" U2227 # LOGICAL AND
+<Multi_key><space><space><A>                                                                       : "∧" U2227 # LOGICAL AND
+<Multi_key><nobreakspace><space><A>                                                                : "∧" U2227 # LOGICAL AND
+<Multi_key><nobreakspace><nobreakspace><A>                                                         : "∧" U2227 # LOGICAL AND
 <Multi_key><v><percent>                                                                    <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><percent>                                                             <nobreakspace> : "∧" U2227 # LOGICAL AND
+<Multi_key><v><backslash>                                                                  <space> : "∧" U2227 # LOGICAL AND
+<Multi_key><v><backslash>                                                           <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><space><asciicircum>                                                            <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><space><asciicircum>                                                     <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><nobreakspace><asciicircum>                                                     <space> : "∧" U2227 # LOGICAL AND
@@ -6246,7 +6323,7 @@
 #
 #   Additionally, its vertical alignment matches digits, not the x height.
 #   https://github.com/microsoft/cascadia-code/issues/572
-#   (Colon’s does, too, provided that the font supports this.)
+#   Colon’s does, too, provided that the font supports this.
 #   https://ux.stackexchange.com/questions/122248/should-u2236-ratio-be-used-as-a-time-separator-instead-of-u003a-colon
 #
 <Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
@@ -6275,11 +6352,10 @@
 <Multi_key><nobreakspace><asciitilde>                                               <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
-<Multi_key><s><percent>                                                                    <space> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent>                                                             <nobreakspace> : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><percent>                                                                   : "∾" U223E # INVERTED LAZY S
+<Multi_key><s><percent>                                                                            : "∾" U223E # INVERTED LAZY S
+<Multi_key><S><percent>                                                                            : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
-<Multi_key><s><percent><backslash>                                                                 : "∾" U223E # INVERTED LAZY S
+<Multi_key><S><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><i><n>                                                                               : "∿" U223F # SINE WAVE
 <Multi_key><S><I><N>                                                                               : "∿" U223F # SINE WAVE
 <Multi_key><space><asciitilde><percent>                                                            : "≀" U2240 # WREATH PRODUCT
@@ -6327,19 +6403,25 @@
 <Multi_key><equal><colon>                                                                          : "≕" U2255 # EQUALS COLON
 <Multi_key><space><minus><o><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><nobreakspace><minus><o><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><space><minus><O><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><nobreakspace><minus><O><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><o><equal>                                                                              : "≗" U2257 # RING EQUAL TO
 <Multi_key><parenleft><equal>                                                                      : "≘" U2258 # CORRESPONDS TO
 <Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
 <Multi_key><v><v><equal>                                                                           : "≙" U2259 # ESTIMATES
+<Multi_key><V><V><equal>                                                                           : "≙" U2259 # ESTIMATES
 <Multi_key><space><asciicircum><equal>                                                             : "≙" U2259 # ESTIMATES
 <Multi_key><nobreakspace><asciicircum><equal>                                                      : "≙" U2259 # ESTIMATES
 <Multi_key><v><equal>                                                                              : "≚" U225A # EQUIANGULAR TO
+<Multi_key><V><equal>                                                                              : "≚" U225A # EQUIANGULAR TO
 <Multi_key><space><asterisk><equal>                                                                : "≛" U225B # STAR EQUALS
 <Multi_key><nobreakspace><asterisk><equal>                                                         : "≛" U225B # STAR EQUALS
 <Multi_key><D><equal>                                                                              : "≜" U225C # DELTA EQUAL TO
 #Multi_key><d><e><f><equal>                                                                        : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><d><e><f>                                                                               : "≝" U225D # EQUAL TO BY DEFINITION
+<Multi_key><D><E><F>                                                                               : "≝" U225D # EQUAL TO BY DEFINITION
 <Multi_key><m><equal>                                                                              : "≞" U225E # MEASURED BY
+<Multi_key><M><equal>                                                                              : "≞" U225E # MEASURED BY
 <Multi_key><question><equal>                                                                       : "≟" U225F # QUESTIONED EQUAL TO
 <Multi_key><equal><slash>                                                                  <space> : "≠" U2260 # NOT EQUAL TO
 <Multi_key><equal><slash>                                                           <nobreakspace> : "≠" U2260 # NOT EQUAL TO
@@ -6468,6 +6550,7 @@
 <Multi_key><c><backslash><underscore><slash>                                                       : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #Multi_key><u><less><minus>                                                                        : "⊌" U228C # MULTISET
 <Multi_key><u><less>                                                                               : "⊌" U228C # MULTISET
+<Multi_key><U><less>                                                                               : "⊌" U228C # MULTISET
 <Multi_key><u><period>                                                                             : "⊍" U228D # MULTISET MULTIPLICATION
 <Multi_key><u><plus>                                                                               : "⊎" U228E # MULTISET UNION
 <Multi_key><c><bracketleft>                                                                <space> : "⊏" U228F # SQUARE IMAGE OF
@@ -6508,16 +6591,24 @@
 <Multi_key><O><asterisk>                                                                           : "⊛" U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key><space><o><equal>                                                                       : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><nobreakspace><o><equal>                                                                : "⊜" U229C # CIRCLED EQUALS
+<Multi_key><space><O><equal>                                                                       : "⊜" U229C # CIRCLED EQUALS
+<Multi_key><nobreakspace><O><equal>                                                                : "⊜" U229C # CIRCLED EQUALS
 <Multi_key><o><minus><minus>                                                                       : "⊝" U229D # CIRCLED DASH
+<Multi_key><O><minus><minus>                                                                       : "⊝" U229D # CIRCLED DASH
 <Multi_key><space><o><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
 <Multi_key><space><o><minus>                                                        <nobreakspace> : "⊝" U229D # CIRCLED DASH
 <Multi_key><nobreakspace><o><minus>                                                        <space> : "⊝" U229D # CIRCLED DASH
 <Multi_key><nobreakspace><o><minus>                                                 <nobreakspace> : "⊝" U229D # CIRCLED DASH
+<Multi_key><space><O><minus>                                                               <space> : "⊝" U229D # CIRCLED DASH
+<Multi_key><space><O><minus>                                                        <nobreakspace> : "⊝" U229D # CIRCLED DASH
+<Multi_key><nobreakspace><O><minus>                                                        <space> : "⊝" U229D # CIRCLED DASH
+<Multi_key><nobreakspace><O><minus>                                                 <nobreakspace> : "⊝" U229D # CIRCLED DASH
 #Multi_key><bracketleft><plus><bracketright>                                                       : "⊞" U229E # SQUARED PLUS
 <Multi_key><bracketleft><plus>                                                                     : "⊞" U229E # SQUARED PLUS
 <Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
 #Multi_key><bracketleft><x><bracketright>                                                          : "⊠" U22A0 # SQUARED TIMES
 <Multi_key><bracketleft><x>                                                                        : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><X>                                                                        : "⊠" U22A0 # SQUARED TIMES
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
 #
@@ -6641,6 +6732,7 @@
 <Multi_key><space><A>                                                               <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                               <space> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><nobreakspace><A>                                                        <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
+<Multi_key><V><percent>                                                                            : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V><backslash>                                                                          : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V>                                                                             <space> : "⋁" U22C1 # N-ARY LOGICAL OR
 <Multi_key><V>                                                                      <nobreakspace> : "⋁" U22C1 # N-ARY LOGICAL OR
@@ -6700,6 +6792,8 @@
 <Multi_key><v><parenleft><parenright>                                                              : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><a><parenright><parenleft>                                                              : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><a><parenleft><parenright>                                                              : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><percent><parenright><parenleft>                                                     : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><percent><parenleft><parenright>                                                     : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><backslash><parenright><parenleft>                                                   : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><backslash><parenleft><parenright>                                                   : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><2><c>                                                                          <space> : "⋐" U22D0 # DOUBLE SUBSET
