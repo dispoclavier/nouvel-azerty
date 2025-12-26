@@ -5,6 +5,7 @@
 # 2024-10-28T1417+0100
 # 2025-09-25T0143+0200
 # 2025-11-30T2108+0100
+# 2025-12-26T0915+0100
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -12,7 +13,8 @@
 #
 # The input requires the "START_MATH" start tag, and the "END_MATH" end tag.
 #
-# Alias sequences with no-break space or with numpad digits are skipped.
+# Alias sequences with no-break space, with numpad digits, with curly
+# apostrophe or with the Greek or circled dead key are skipped.
 #
 # The keyboard output is displayed on a white background span (class "bg") with
 # a light-blue baseline for the purpose of delimiting whitespace characters and
@@ -115,6 +117,7 @@ while ( my $line = <INPUT> ) {
 			unless ( $line =~ /<nobreakspace>/     # No-break space alias sequences.
 				|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
 				|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
+				|| $line =~ /<dead_greek/            # Alias of <at> in multikey sequences.
 			) {
 
 				# Collapse spaces.
