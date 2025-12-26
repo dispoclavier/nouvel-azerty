@@ -4240,9 +4240,9 @@
 #
 # # Alternative multiplication symbol
 #
-#   An alternative multiplication symbol is also supported with respect to its
-#   use on real-world websites, as the Cyrillic letter "х" U0445 is repurposed
-#   as a multiplication symbol with a look and feel close to Latin "x" without
+#   An alternative multiplication symbol is also supported, with respect to its
+#   use on real-world websites when the Cyrillic letter "х" U0445 is repurposed
+#   as a multiplication symbol, with a look and feel close to Latin "x" without
 #   actually being a Latin letter, and without search equivalence.
 #   See # # Multiplication and division symbols
 #
