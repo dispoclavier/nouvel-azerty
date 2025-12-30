@@ -241,10 +241,10 @@
 #   of these has any precomposed letters, and Windows’ DEADTRANS macro only
 #   supports one single code unit output instead of 2, 5 or more, and as a
 #   consequence, decomposed (NFD/NFKD) letters cannot be input by dead key like
-#   precomposed letters. But the stroke vs bar distinction made a good point
-#   for adding the “extra dead elements for German T3 layout” alongside the use
-#   of vertical line below and its alternate representation vertical line above
-#   in Yoruba and in other languages.
+#   precomposed letters. But the stroke versus bar distinction made a good
+#   point for adding the “extra dead elements for German T3 layout” alongside
+#   the use of vertical line below and its alternate representation vertical
+#   line above in Yoruba and in other languages.
 #
 #   Initially, the new keysym was called "dead_longsolidus", and "dead_stroke"
 #   was disruptively renamed to "dead_shortstroke" as well.
@@ -999,7 +999,7 @@
 #   easily accessible on live keys instead.
 #
 #   Hence it is proposed to use space as a base character to get the combining
-#   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s 
+#   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s
 #   US Custom keyboard layout for macOS:
 #   http://uscustom.sourceforge.net/
 #
@@ -1819,7 +1819,7 @@
 #   more resilient keyboard layouts.
 #   See # # Quotation mark input method
 #
-#   Followed by asterisk, *dead_superscript provides an intuitive shortcut for 
+#   Followed by asterisk, *dead_superscript provides an intuitive shortcut for
 #   "⁂" U2042 ASTERISM, with mnemonics based on the ASCII circumflex, no longer
 #   the multikey equivalent of dead_circumflex, that "⁂" U2042 is also in.
 #   See #*# CIRCUMFLEX
@@ -5224,7 +5224,7 @@
 #   should not depend on user input, but on font settings instead.
 #
 #   All letters annotated as for Lithuanian in this file are by courtesy of
-#   Vilnius University, the State Commission of the Lithuanian language, 
+#   Vilnius University, the State Commission of the Lithuanian language,
 #   Lithuanian Standards Board.
 #   https://unicode.org/L2/L2012/12026r-n4191-lithuanian.pdf
 #
@@ -6313,7 +6313,7 @@
 #
 #   This also supports circled and squared letters. As these come in uppercase
 #   only, for intuitivity uppercase is used for squared, lowercase for circled
-#   consistently with the more rounded shapes of lowercase vs uppercase.
+#   consistently with the more rounded shapes of lowercase versus uppercase.
 #
 #   These SMP dingbats have limited cross-platform compatibility.
 #   See # # SQUARED
@@ -7190,6 +7190,9 @@
 #
 #   Shortcuts
 #
+#   For usability, in French mode, dead_acute is in the benefit of an unshifted
+#   position. Hence its use for various shortcuts.
+#
 #   Followed by Éé, dead_acute is a shortcut to Ãã for Portuguese, with spatial
 #   mnemonic on AZERTY, where "A" (D01) is close to "É" (E02).
 #
@@ -7200,15 +7203,19 @@
 #   spatial mnemonic on AZERTY, where "N" (B06) is below "È" (E07).
 #
 #   Followed by Ùù, dead_acute is a shortcut to unicase glottal stop "ʔ" U0294,
-#   with alphabetic mnemonic and accounting for the lack of level-2 uppercase,
-#   while casing glottal stop is in group 1 of Qq.
+#   with an alphabetic mnemonic based on "u", and accomodating with the lack of
+#   level-2 uppercase according to French usage, while casing glottal stop is
+#   in group 1 of Qq.
+#   See # # Glottal stops
 #
-#   Followed by 7, dead_acute is a shortcut to unicase "ʔ" U0294.
+#   Followed by "7", dead_acute is another shortcut to unicase "ʔ" U0294, with
+#   a mnemonic based on this ASCII alias.
+#   https://en.wikipedia.org/wiki/Glottal_stop#Writing
 #
 #   Followed by grave, dead_acute is a shortcut to "ʕ" U0295.
 #
 #   Followed by parenleft, dead_acute is a shortcut to the German stirrup r
-#   "ꭅ" UAB45 with shape-based mnemonics.
+#   "ꭅ" UAB45 with a mnemonic based on the stirrup’s shape.
 #
 #   Followed by asterisk, dead_acute is a shortcut to the bullet "•" U2022.
 #
@@ -9117,8 +9124,8 @@
 #   spacing, these spaced-out punctuation marks UEF60 and UEF63 are supported
 #   as base characters alongside.
 #   See # # Punctuation spacing for French, regular with U202F NBTSP
-#   See # # B07-level3 question
-#   See # # B08-level3 exclam
+#   See # # B07-level_3 question
+#   See # # B08-level_3 exclam
 #
 <UEFD0>                                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -9372,8 +9379,8 @@
 #
 #   HAIR SPACE is in group 11 on the space bar. The following facility using
 #   no-break thin space U202F as a base character is only a shortcut.
-#   See # # A03-level1 space
-#   See # # A03-level3 nobreakspace
+#   See # # A03-level_1 space
+#   See # # A03-level_3 nobreakspace
 #
 <UEFD0>                                                                                    <U202F> : " " U200A # HAIR SPACE
 <Multi_key><numbersign>                                                                    <U202F> : " " U200A # HAIR SPACE
@@ -14217,7 +14224,11 @@
 #
 #   Shortcuts
 #
-#   Followed by Çç, circumflex is a shortcut to Ññ for Breton and Spanish.
+#   For consistency with the French AZERTY keyboard layout, in French mode,
+#   dead_circumflex is in the benefit of an unshifted position. Hence its use
+#   for various shortcuts.
+#
+#   Followed by Çç, dead_circumflex is a shortcut to Ññ for Breton and Spanish.
 #
 #   U017F LATIN SMALL LETTER LONG S, in group 3 of s, has an additional input
 #   method by <dead_circumflex><f>, since French has no words including an "êf"
@@ -14536,13 +14547,13 @@
 <Multi_key><less><numbersign>                                               <rightsinglequotemark> : "❛" U275B # HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT
 <dead_circumflex><UEFD0>                                                                     <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
 <Multi_key><less><numbersign>                                                                <bar> : "⸶" U2E36 # DAGGER WITH LEFT GUARD
-# 
+#
 # # CIRCUMFLEX&GROUP_2
 #
 #   Groups 2 through 5 of dead_circumflex support the outlined counterparts of
 #   the HEART "♥" U2665, CLUB "♣" U2663, DIAMOND "♦" U2666 and SPADE "♠" U2660
 #   suits.
-#   See # # B07-level1 comma
+#   See # # B07-level_1 comma
 #
 <dead_circumflex><UEFD0><UEFD0>                                                         <quotedbl> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
 <Multi_key><less><numbersign><numbersign>                                               <quotedbl> : "🙶" U1F676 # SANS-SERIF HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT
@@ -17501,6 +17512,9 @@
 #
 #
 #   Shortcuts
+#
+#   For usability, in French mode, dead_diaeresis is in the benefit of an
+#   unshifted position. Hence its use for various shortcuts.
 #
 #   By diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
 #   by "Ù", "ù", but also "Ø" U00D8, "ø" U00F8 by "Ç", "ç" for convenience.

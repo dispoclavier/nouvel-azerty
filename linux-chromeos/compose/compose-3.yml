@@ -511,8 +511,8 @@
 #
 #   The radical symbols "√" U221A, "∛" U221B, "∜" U221C are so important that
 #   they come in the very first groups of backslash, mapped on key D04 "R" for
-#   mnemonics. The more fine-grained mnemonic implied by having the cube root
-#   in group 3 and the fourth root in group 4 is ditched in favor of usability.
+#   mnemonics. A more fine-grained mnemonic based on the equality of the root
+#   index to the group number is ditched in favor of usability.
 #
 #   Recycling symbols are more extensively supported in *dead_retroflexhook and
 #   by Multi_key, and paper symbols in dead_abovedot.
@@ -1835,6 +1835,9 @@
 #   to prevent abuse.
 #   https://www.w3.org/Style/CSS/Test/CSS2.1/20100316/xhtml1/first-letter-punctuation-252.xht
 #
+#   Scissors "✂" U2702, "✀" U2700 are more extensively supported by multikey.
+#   See # # Scissors
+#
 <UEFD0>                                                                                     <less> : "✓" U2713 # CHECK MARK
 <Multi_key><numbersign>                                                                     <less> : "✓" U2713 # CHECK MARK
 <UEFD0><UEFD0>                                                                              <less> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO math
@@ -1997,17 +2000,20 @@
 #   See #*# CIRCUMFLEX
 #   See # # D07 apostrophe
 #
-#   The "❄" U2744 emoji, previously in group 7, with French alphabetic mnemonic
-#   based on "neige" and this key’s letter "N", was removed due to repurposing.
+#   The "❄" U2744 emoji was previously in group 7 with an alphabetic mnemonic
+#   in French based on "neige" and this key’s letter "N", but it was removed
+#   because it is repurposed.
 #   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
-#   In the wake it is replaced with "❆" U2746, that cannot be used as emoji and
-#   is excluded from the emoji count in the table, while it maintains the snow
-#   semantics, as a tribute to snow in the current era of scarcity. For those
-#   looking for the snow emoji with its genuine semantics, U2744 is in the
-#   extra group.
+#
+#   In the wake it was replaced with "❆" U2746, that cannot be used as an emoji
+#   (so it is excluded from the emoji count in the table), while it maintains
+#   the snow semantics, as a tribute to snow in the current era of scarcity.
+#
+#   For those looking for the snow emoji with its genuine semantics, U2744 is
+#   in the extra group.
 #
 #   This also supports "∧" U2227 and "∨" U2228 with graphic mnemonics based on
-#   the shape of "N"
+#   the shape of "N".
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -2061,7 +2067,7 @@
 <Multi_key><numbersign><KP_2>                                                              <grave> : "⟂" U27C2 # PERPENDICULAR math
 #
 #
-# # B07-level1 comma
+# # B07-level_1 comma
 #
 #   Frequency requires the two hearts to be in the topmost groups, with U2764
 #   HEAVY BLACK HEART (red heart) in group 1 for being the most-used emoji in
@@ -2127,7 +2133,7 @@
 <Multi_key><numbersign><KP_2>                                                              <comma> : "⚐" U2690 # WHITE FLAG
 #
 #
-# # B07-level3 question
+# # B07-level_3 question
 #
 <UEFD0>                                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
 <Multi_key><numbersign>                                                                 <question> : "¿" U00BF # INVERTED QUESTION MARK
@@ -2179,7 +2185,7 @@
 <Multi_key><numbersign><KP_2>                                                           <question> : "♇" U2647 # PLUTO
 #
 #
-# # B08-level1 period
+# # B08-level_1 period
 #
 #   This is only a small subset of the many vertically centered dots in Unicode
 #   as discussed in:
@@ -2247,7 +2253,7 @@
 <Multi_key><numbersign><KP_2>                                                         <KP_Decimal> : "⁘" U2058 # FOUR DOT PUNCTUATION
 #
 #
-# # B08-level3 exclam
+# # B08-level_3 exclam
 #
 <UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -2369,8 +2375,8 @@
 # # B10 semicolon, section
 #
 #   The (full) triangular colon is about 40 times more frequent than its half.
-#   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. For mnemonics,
-#   rather than the number of triangles, the 1/1 vs 1/2 logic is convenient.
+#   Consistently, "ː" U02D0 is in group 1, "ˑ" U02D1 in group 2. Mnemonics may
+#   rely on the 1/1 versus 1/2 logic rather than the number of triangular dots.
 #   https://books.google.com/ngrams/graph?content=%CB%90%2C%CB%91&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
 #   "⁛" U205B FOUR DOT MARK is a highlighter mark used by scribes in the margin
@@ -2481,7 +2487,7 @@
 <Multi_key><numbersign><KP_2>                                                            <section> : "⌨" U2328 # KEYBOARD emoji
 #
 #
-# # A03-level1 space
+# # A03-level_1 space
 #
 #   ISO A03 should be the left Thumb Shift (Oyayubi Shifuto).
 #   https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
@@ -2506,7 +2512,7 @@
 #
 #   U2002 and U2003 are at level 1 for usability, although these spaces were
 #   originally intended to be no-break. That brings the need to move their two
-#   breaking clones " " U2000, " " U2001 to A03-level3, since these have been
+#   breaking clones " " U2000, " " U2001 to A03-level_3, since these have been
 #   made canonically equivalent, as part of mitigating the mess left by the
 #   typographical space range vandalization; U2002..U2006 and U2008..U200A were
 #   originally intended to be no-break, just like U2007 FIGURE SPACE ultimately
@@ -2573,7 +2579,7 @@
 <Multi_key><numbersign><KP_2>                                                              <space> : "　" U3000 # IDEOGRAPHIC SPACE
 #
 #
-# # A03-level3 nobreakspace
+# # A03-level_3 nobreakspace
 #
 #   Except U2000 and U2001, originally intended to be breaking, these space
 #   characters could be followed by WORD JOINER so as to convert them to
@@ -9239,7 +9245,7 @@
 #
 #   For convenience, " " U2007 FIGURE SPACE is also supported, as its width is
 #   consistent with the monospace typeface style.
-#   See # # A03-level1 space
+#   See # # A03-level_1 space
 #
 <UEFD0><9><period>                                                                         <space> : " " U2007 # FIGURE SPACE
 <Multi_key><numbersign><9><period>                                                         <space> : " " U2007 # FIGURE SPACE
