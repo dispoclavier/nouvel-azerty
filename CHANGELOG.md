@@ -20,6 +20,8 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 Prise en charge sous Windows des équivalents en composition des touches mortes simples.
 
+Simplification de la saisie des symboles mathématiques.
+
 Complétion des séquences de touches mortes spécifiques à Windows.
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
