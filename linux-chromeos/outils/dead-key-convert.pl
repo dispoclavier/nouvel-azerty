@@ -6,7 +6,7 @@
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
-# 2025-12-31T0421+0100
+# 2025-12-31T0815+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -26,7 +26,7 @@
 # require a dedicated dead character in the subroutine get_dead_character, and
 # need to be added in @chained for a virtual dead key to be generated. Chains
 # need to be supported incrementally, even when there is no output for a given
-# intermediate chain.
+# intermediate chain. Missing dead key chains are reported in dead-keys.txt.
 # See Compose.yml # # Lenient dead key press
 #
 # Not all chained dead keys are symmetric. As the symmetricity of chained dead
@@ -59,20 +59,26 @@
 # or not congruent with, the dead key output, as about 100 multikey equivalents
 # are commented out due to conflicts.
 #
-# Multikey equivalents of dead keys cannot be supported on Windows because that
-# bloats the layout drivers, that are then prone to crashing the keyboard. That
-# notwithstanding, there are ways to support more intermediate chains, as the
-# first private use area E000..F8FF encompassing 6400 code points is not used
-# up by dedicated multikey sequences. On 2025-12-22, a set of 1302 intermediate
+# Dedicated multikey sequences are an indispensable part of the keyboard layout
+# and are the only sustainable input method for precomposed fractions, as well
+# as for most mathematical symbols. After an attempt to support all multikey
+# sequences on 2025-11-12, the subset of the dedicated multikey sequences is
+# ultimately supported since 2025-12-22, and the transpiler is fixed since
+# 2025-12-24 (2025-12-25).
+#
+# Multikey equivalents of dead keys cannot be supported on Windows, due to an
+# issue presumably related to the file size of the layout drivers crashing the
+# keyboard software in some of the applications (e.g. in VSCode, not in Windows
+# File Explorer). That notwithstanding, all the intermediate chains can be
+# supported, as the first private use area E000..F8FF encompassing 6400 code
+# points is not used up by dedicated multikey sequences, and not even when
+# multikey equivalents are added. On 2025-12-22, a set of 1302 intermediate
 # multikey chains used E201..E715. The full set of 2256 intermediate multikey
 # chains with multikey equivalents of dead keys used E201..EACF (2025-12-30).
+# See kbdeadtrans-multikey-equivalents.c
 #
 # For test purposes, this part can be toggled here:
 my $support_multikey_equivalents = !1;
-#
-# This is different from dedicated multikey, that is indispensable. After an
-# attempt to support all multikey sequences on 2025-11-12, the subset of the
-# dedicated multikey sequences is ultimately supported since 2025-12-22.
 #
 #
 # Multicharacter output
