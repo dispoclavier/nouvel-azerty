@@ -6,6 +6,7 @@
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
+# 2025-12-30T1608+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -66,7 +67,7 @@
 # multikey chains used E201..E715.
 #
 # For test purposes, this part can be toggled here:
-my $support_multikey_equivalents = !1;
+my $support_multikey_equivalents = !0;
 #
 # This is different from dedicated multikey, that is indispensable. After an
 # attempt to support all multikey sequences on 2025-11-12, the subset of the
@@ -2553,17 +2554,15 @@ foreach my $line ( @mk_equiv_out ) {
 			$output_code   = $5;
 			$comment       = $6;
 
-			if ( $deadkey eq '<!M>' ) {
-				$deadchar = '00A6';
-			} else {
-				$deadchar = get_multikey_dead_character( $deadkey );
-			}
+			$deadchar = get_multikey_dead_character( $deadkey );
 
-			$input = get_multikey_dead_character( $input );
+			# Get input code for DEADTRANS call.
+			$input = get_dead_character( $input );
 			$input =~ s/<(.+)>/$1/;
 			$input =~ s/U([0-9A-F]{4})/$1/;
 			$input = dekeysym( $input );
 
+			# Get input character for annotation.
 			if ( $input =~ /[0-9A-F]{4}/ ) {
 				$input_string = chr( hex( $input ) );
 			} else {
@@ -2574,12 +2573,22 @@ foreach my $line ( @mk_equiv_out ) {
 				}
 			}
 
+			# Convert SMP characters to surrogate pairs.
 			if ( $output_code =~ /[0-9A-F]{5}/ ) {
 				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
-				$high_out    = 'High surrogate: ' . $high_su . '; U+' . $output_code . ' ';
+				unless ( grep( /^$high_su$/, @high_surrogates ) ) {
+					push( @high_surrogates, $high_su );
+				}
+				$high_out     = 'High surrogate: ' . $high_su . '; ';
+				$uplus_output = 'U+' . $output_code . ' ';
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
+				++$half;
+				print LOG $high_su . ', ' . $deadkey . "\n";
+
 			} else {
-				$high_out = '';
+				$uplus_output = 'U+' . $output_code . ' ';
+				$high_out     = '';
+				++$full;
 			}
 
 			$length = length( $full_chain );
@@ -2589,20 +2598,23 @@ foreach my $line ( @mk_equiv_out ) {
 			}
 			$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
 							. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
-							. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $comment . "\n";
+							. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
 		}
 	} else {
 		if ( $line =~ /^<.+>$/ ) {
-			$line       =~ m/((<.+>)(<.+>))/;
-			$full_chain = $1;
-			$deadkey    = $2;
-			$input      = $3;
-			$deadchar   = get_multikey_dead_character( $deadkey );
-			$input      =~ s/<(.+)>/$input/;
-			$input      = dekeysym( $input );
-			$print      = '/*' . $line . ( " " x ( 65 - length( $line ) ) )
-			               . "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-			               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Intermediate multikey chain link\n";
+			if ( $line eq '<!M>' ) {
+				$print = '';
+			} else {
+				$line       =~ m/(<.+>)(<.+>)/;
+				$deadkey    = $1;
+				$input      = $2;
+				$deadchar   = get_multikey_dead_character( $deadkey );
+				$input      =~ s/<(.+)>/$input/;
+				$input      = dekeysym( $input );
+				$print      = '/*' . $line . ( " " x ( 65 - length( $line ) ) )
+				               . "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
+				               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Intermediate multikey chain link\n";
+			}
 		} else {
 			++$multichar;
 			$print = '';
