@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Include debugged multikey equivalents    6.1.5.2.0 Tue 2025-12-30T1622+0100
 * Include debugged multikey                6.1.4.0.0 Sun 2025-12-21T1943+0100
 * Exclude multikey until it is debugged    6.1.3.2.1 Sat 2025-11-15T0453+0100
 * Uppercase the legacy dead key code       6.1.3.2.0 Fri 2025-11-14T1327+0100
@@ -257,15 +258,15 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 * Multikey equivalents of dead keys
 *
 * This Linux feature csnnot be supported on Windows to prevent bloating the
-* layout drivers and crashing the keyboard software. Additionally, the SMP
-* PUA only supports the number of dead characters required for dedicated
-* multikey sequences.
+* layout drivers and crashing the keyboard software, although the SMP PUA
+* supports all the dead characters required for both dedicated and dead key
+* equivalent multikey sequences.
 *
 * Multikey equivalents of dead keys are a Linux feature fostered by mutualized
 * dead key configuration.
 *
-#include "kbdeadtrans-multikey-equivalents.c"
 \*****************************************************************************/
+#include "kbdeadtrans-multikey-equivalents.c"
 
 /*****************************************************************************\
 * Legacy dead key content
