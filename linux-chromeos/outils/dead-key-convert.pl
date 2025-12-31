@@ -6,7 +6,7 @@
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
-# 2025-12-31T0815+0100
+# 2025-12-31T1259+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -66,11 +66,14 @@
 # ultimately supported since 2025-12-22, and the transpiler is fixed since
 # 2025-12-24 (2025-12-25).
 #
-# Multikey equivalents of dead keys cannot be supported on Windows, due to an
-# issue presumably related to the file size of the layout drivers crashing the
-# keyboard software in some of the applications (e.g. in VSCode, not in Windows
-# File Explorer). That notwithstanding, all the intermediate chains can be
-# supported, as the first private use area E000..F8FF encompassing 6400 code
+# Supporting all available multikey equivalents of dead key chains on Windows
+# causes an unidentified issue, presumably when exceeding a 256 kB file size
+# limit. The affected layout does not show up in the Language bar, and if it
+# is the default, the keyboard does not work in some of the applications (not
+# in VSCode, but in Windows File Explorer). Half of the equivalents could still
+# be supported. Also, the dead characters would need to be in sync with those
+# of dead key chains. Even using private use characters, all the intermediate
+# chains can be supported, as the first area E000..F8FF encompassing 6400 code
 # points is not used up by dedicated multikey sequences, and not even when
 # multikey equivalents are added. On 2025-12-22, a set of 1302 intermediate
 # multikey chains used E201..E715. The full set of 2256 intermediate multikey
