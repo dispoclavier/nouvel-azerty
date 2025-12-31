@@ -6,7 +6,7 @@
 # 2025-11-15T0554+0100
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
-# 2025-12-30T1608+0100
+# 2025-12-31T0421+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -64,10 +64,11 @@
 # notwithstanding, there are ways to support more intermediate chains, as the
 # first private use area E000..F8FF encompassing 6400 code points is not used
 # up by dedicated multikey sequences. On 2025-12-22, a set of 1302 intermediate
-# multikey chains used E201..E715.
+# multikey chains used E201..E715. The full set of 2256 intermediate multikey
+# chains with multikey equivalents of dead keys used E201..EACF (2025-12-30).
 #
 # For test purposes, this part can be toggled here:
-my $support_multikey_equivalents = !0;
+my $support_multikey_equivalents = !1;
 #
 # This is different from dedicated multikey, that is indispensable. After an
 # attempt to support all multikey sequences on 2025-11-12, the subset of the
