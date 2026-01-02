@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-02T0335+0100
+# 2026-01-02T0821+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -83,6 +83,7 @@
 #
 # For test purposes, this part can be toggled here:
 my $support_multikey_equivalents = !0;
+my $support_all_multikey_equivalents = !1;
 #
 #
 # Multicharacter output
@@ -339,44 +340,52 @@ sub dekeysym {
 	return $keysym;
 }
 
+my @mk_equiv_dead_characters = (
+	# Single-press dead keys (33).
+	'<!M><%apostrophe>➔00E1',
+	'<!M><%aprightsingquotmark>➔00E1',
+	'<!M><%asterisk>➔00E5',
+	'<!M><%at>➔03B5',
+	'<!M><%backslash>➔1D19',
+	'<!M><%bar>➔0101',
+	'<!M><%braceleft>➔0192',
+	'<!M><%braceright>➔0273',
+	'<!M><%bracketleft>➔01EB',
+	'<!M><%bracketright>➔1EBB',
+	'<!M><%circum>➔005E',
+	'<!M><%colon>➔00EB',
+	'<!M><%comma>➔00E7',
+	'<!M><%dollar>➔00A4',
+	'<!M><%equal>➔2690',
+	'<!M><%exclam>➔1E05',
+	'<!M><%grave>➔00F2',
+	'<!M><%greater>➔021F',
+	'<!M><%hash>➔2460',
+	'<!M><%less>➔00EA',
+	'<!M><%minus>➔024D',
+	'<!M><%parenleft>➔0213',
+	'<!M><%parenright>➔0115',
+	'<!M><%percent>➔0250',
+	'<!M><%period>➔1E57',
+	'<!M><%plus>➔01A1',
+	'<!M><%quotEuroSign>➔0151',
+	'<!M><%quotedbl>➔0151',
+	'<!M><%semicolon>➔0219',
+	'<!M><%semsection>➔0219',
+	'<!M><%slash>➔00F8',
+	'<!M><%tilde>➔00F5',
+	'<!M><%underscore>➔005F',
+);
+
 sub get_mk_equiv_dead_character {
 	my ( $deadkey ) = @_;
-
-	# Single-press dead keys (33).
-	$deadkey =~ s/^<!M><%circum>$/^/;
-	$deadkey =~ s/^<!M><%percent>$/0250/;
-	$deadkey =~ s/^<!M><%quotedbl>$/0151/;
-	$deadkey =~ s/^<!M><%quotEuroSign>$/0151/;
-	$deadkey =~ s/^<!M><%backslash>$/1D19/;
-	$deadkey =~ s/^<!M><%tilde>$/00F5/;
-	$deadkey =~ s/^<!M><%at>$/03B5/;
-	$deadkey =~ s/^<!M><%apostrophe>$/00E1/;
-	$deadkey =~ s/^<!M><%aprightsingquotmark>$/00E1/;
-	$deadkey =~ s/^<!M><%braceleft>$/0192/;
-	$deadkey =~ s/^<!M><%braceright>$/0273/;
-	$deadkey =~ s/^<!M><%period>$/1E57/;
-	$deadkey =~ s/^<!M><%hash>$/2460/;
-	$deadkey =~ s/^<!M><%dollar>$/00A4/;
-	$deadkey =~ s/^<!M><%parenleft>$/0213/;
-	$deadkey =~ s/^<!M><%parenright>$/0115/;
-	$deadkey =~ s/^<!M><%minus>$/024D/;
-	$deadkey =~ s/^<!M><%plus>$/01A1/;
-	$deadkey =~ s/^<!M><%underscore>$/_/;
-	$deadkey =~ s/^<!M><%bracketleft>$/01EB/;
-	$deadkey =~ s/^<!M><%bracketright>$/1EBB/;
-	$deadkey =~ s/^<!M><%bar>$/0101/;
-	$deadkey =~ s/^<!M><%slash>$/00F8/;
-	$deadkey =~ s/^<!M><%asterisk>$/00E5/;
-	$deadkey =~ s/^<!M><%less>$/00EA/;
-	$deadkey =~ s/^<!M><%greater>$/021F/;
-	$deadkey =~ s/^<!M><%equal>$/2690/;
-	$deadkey =~ s/^<!M><%grave>$/00F2/;
-	$deadkey =~ s/^<!M><%comma>$/00E7/;
-	$deadkey =~ s/^<!M><%exclam>$/1E05/;
-	$deadkey =~ s/^<!M><%colon>$/00EB/;
-	$deadkey =~ s/^<!M><%semicolon>$/0219/;
-	$deadkey =~ s/^<!M><%semsection>$/0219/;
-
+	foreach my $item ( @mk_equiv_dead_characters ) {
+		if ( substr( $item, 0, -5 ) eq $deadkey ) {
+			$deadkey = substr( $item, -4, 4 );
+			last;
+		}
+	}
+	$deadkey = get_multikey_dead_character( $deadkey );
 	return $deadkey;
 }
 
@@ -2416,9 +2425,15 @@ print CONSOLE ( "Defining the multikey dead characters complete.\n" );
 print( "Defining the multikey equivalent dead characters in progress ---\n" );
 print CONSOLE ( "Defining the multikey equivalent dead characters in progress ---\n" );
 foreach my $entry ( @mk_equiv_complete ) {
-	push( @multikey_dchars, $entry . '➔' . $dead_hex );
-	++$dead_dec;
-	$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+	$deadkey = $entry;
+	$deadkey = get_mk_equiv_dead_character( $deadkey );
+	unless ( length( $deadkey ) > 4 ) {
+		push( @multikey_dchars, $entry . '➔' . $deadkey );
+	} else {
+		push( @multikey_dchars, $entry . '➔' . $dead_hex );
+		++$dead_dec;
+		$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+	}
 }
 print( "Defining the multikey equivalent dead characters complete.\n" );
 print CONSOLE ( "Defining the multikey equivalent dead characters complete.\n" );
@@ -2586,7 +2601,10 @@ print MULTIKEY @multikey_print;
 
 #
 # Output multikey in 2 files is required because a single file exceeds the 2MB
-# file size limit of github.com (not github.dev).
+# file size limit of github.com (not github.dev) if all multikey equivalents
+# are supported. Yet, only single press dead key multikey equivalents are
+# supported, dead key chains are excluded, as a way to keep the layout driver
+# file size below a presumed 254 kB limit.
 #
 # Wrapping this code in a subroutine to comply with the D.R.Y. principle gets
 # perl 5, version 38, subversion 0 (v5.38.0) built for MSWin32-x64-multi-thread
@@ -2606,54 +2624,57 @@ foreach my $line ( @mk_equiv_out ) {
 			$output_code   = $5;
 			$comment       = $6;
 
-			$deadchar = get_multikey_dead_character( $deadkey );
+			$deadchar = get_mk_equiv_dead_character( $deadkey );
 
-			# Get input code for DEADTRANS call.
-			$input = get_dead_character( $input );
-			$input =~ s/<(.+)>/$1/;
-			$input =~ s/U([0-9A-F]{4})/$1/;
-			$input = dekeysym( $input );
+			if ( length( $deadchar ) < 3 || hex( $deadchar ) < 57856 || $support_all_multikey_equivalents eq !0 ) {
+					
+				# Get input code for DEADTRANS call.
+				$input = get_dead_character( $input );
+				$input =~ s/<(.+)>/$1/;
+				$input =~ s/U([0-9A-F]{4})/$1/;
+				$input = dekeysym( $input );
 
-			# Get input character for annotation.
-			if ( $input =~ /[0-9A-F]{4}/ ) {
-				$input_string = chr( hex( $input ) );
-			} else {
-				$input_string = $input;
-				$input_string =~ s/\\?(.)/$1/;
-				if ( $input_string =~ /^"$/ ) {
-					$delim = "'";
+				# Get input character for annotation.
+				if ( $input =~ /[0-9A-F]{4}/ ) {
+					$input_string = chr( hex( $input ) );
+				} else {
+					$input_string = $input;
+					$input_string =~ s/\\?(.)/$1/;
+					if ( $input_string =~ /^"$/ ) {
+						$delim = "'";
+					}
 				}
-			}
 
-			# Convert SMP characters to surrogate pairs.
-			if ( $output_code =~ /[0-9A-F]{5}/ ) {
-				$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
-				unless ( grep( /^$high_su$/, @high_surrogates ) ) {
-					push( @high_surrogates, $high_su );
+				# Convert SMP characters to surrogate pairs.
+				if ( $output_code =~ /[0-9A-F]{5}/ ) {
+					$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
+					unless ( grep( /^$high_su$/, @high_surrogates ) ) {
+						push( @high_surrogates, $high_su );
+					}
+					$high_out     = 'High surrogate: ' . $high_su . '; ';
+					$uplus_output = 'U+' . $output_code . ' ';
+					$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
+					++$half;
+					print LOG $high_su . ', ' . $deadkey . "\n";
+
+				} else {
+					$uplus_output = 'U+' . $output_code . ' ';
+					$high_out     = '';
+					++$full;
 				}
-				$high_out     = 'High surrogate: ' . $high_su . '; ';
-				$uplus_output = 'U+' . $output_code . ' ';
-				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
-				++$half;
-				print LOG $high_su . ', ' . $deadkey . "\n";
 
-			} else {
-				$uplus_output = 'U+' . $output_code . ' ';
-				$high_out     = '';
-				++$full;
+				$length = length( $full_chain );
+				if ( $length > 65 ) {
+					$length = 65;
+					++$overlong;
+				}
+				$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
+								. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
+								. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
 			}
-
-			$length = length( $full_chain );
-			if ( $length > 65 ) {
-				$length = 65;
-				++$overlong;
-			}
-			$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
-							. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
-							. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
 		}
 	} else {
-		if ( $line =~ /^<.+>$/ ) {
+		if ( $line =~ /^<.+>$/ && $support_all_multikey_equivalents eq !0 ) {
 			if ( $line eq '<!M>' ) {
 				$print = '';
 			} else {
