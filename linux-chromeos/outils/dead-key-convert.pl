@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-02T0840+0100
+# 2026-01-02T1246+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -345,8 +345,9 @@ sub dekeysym {
 	return $keysym;
 }
 
+# Single-press dead keys for multikey (33).
 my @mk_equiv_dead_characters = (
-	# Single-press dead keys (33).
+	
 	'<!M><%apostrophe>➔00E1',
 	'<!M><%aprightsingquotmark>➔00E1',
 	'<!M><%asterisk>➔00E5',
@@ -2704,6 +2705,18 @@ print( "Processing the dead key multikey equivalent output complete.\n" );
 print CONSOLE ( "Processing the dead key multikey equivalent output complete.\n" );
 
 print EQUIVALENTS @mk_equiv_print;
+
+# Generates the required multikey chain links.
+foreach my $deadkey ( @mk_equiv_dead_characters ) {
+	$input       = substr( $deadkey, 4, -5 );
+	$output_code = substr( $deadkey, -4, 4 );
+	$deadkey     = substr( $deadkey, 0, -5 );
+	$deadchar    = '00A6';
+	$input       = dekeysym( $input );
+	print EQUIVALENTS $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) )
+				. "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
+				. "\t," . format_character( $output_code ) . "\t,0x0001), // Intermediate multikey chain link\n";
+}
 
 # Print report to a file.
 print( "Printing the reports in progress ---\n" );
