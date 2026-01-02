@@ -7,6 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
+# 2026-01-02T0335+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -81,7 +82,7 @@
 # See kbdeadtrans-multikey-equivalents.c
 #
 # For test purposes, this part can be toggled here:
-my $support_multikey_equivalents = !1;
+my $support_multikey_equivalents = !0;
 #
 #
 # Multicharacter output
@@ -336,6 +337,47 @@ sub dekeysym {
 	$keysym =~ s/Oopen/0186/;
 
 	return $keysym;
+}
+
+sub get_mk_equiv_dead_character {
+	my ( $deadkey ) = @_;
+
+	# Single-press dead keys (33).
+	$deadkey =~ s/^<!M><%circum>$/^/;
+	$deadkey =~ s/^<!M><%percent>$/0250/;
+	$deadkey =~ s/^<!M><%quotedbl>$/0151/;
+	$deadkey =~ s/^<!M><%quotEuroSign>$/0151/;
+	$deadkey =~ s/^<!M><%backslash>$/1D19/;
+	$deadkey =~ s/^<!M><%tilde>$/00F5/;
+	$deadkey =~ s/^<!M><%at>$/03B5/;
+	$deadkey =~ s/^<!M><%apostrophe>$/00E1/;
+	$deadkey =~ s/^<!M><%aprightsingquotmark>$/00E1/;
+	$deadkey =~ s/^<!M><%braceleft>$/0192/;
+	$deadkey =~ s/^<!M><%braceright>$/0273/;
+	$deadkey =~ s/^<!M><%period>$/1E57/;
+	$deadkey =~ s/^<!M><%hash>$/2460/;
+	$deadkey =~ s/^<!M><%dollar>$/00A4/;
+	$deadkey =~ s/^<!M><%parenleft>$/0213/;
+	$deadkey =~ s/^<!M><%parenright>$/0115/;
+	$deadkey =~ s/^<!M><%minus>$/024D/;
+	$deadkey =~ s/^<!M><%plus>$/01A1/;
+	$deadkey =~ s/^<!M><%underscore>$/_/;
+	$deadkey =~ s/^<!M><%bracketleft>$/01EB/;
+	$deadkey =~ s/^<!M><%bracketright>$/1EBB/;
+	$deadkey =~ s/^<!M><%bar>$/0101/;
+	$deadkey =~ s/^<!M><%slash>$/00F8/;
+	$deadkey =~ s/^<!M><%asterisk>$/00E5/;
+	$deadkey =~ s/^<!M><%less>$/00EA/;
+	$deadkey =~ s/^<!M><%greater>$/021F/;
+	$deadkey =~ s/^<!M><%equal>$/2690/;
+	$deadkey =~ s/^<!M><%grave>$/00F2/;
+	$deadkey =~ s/^<!M><%comma>$/00E7/;
+	$deadkey =~ s/^<!M><%exclam>$/1E05/;
+	$deadkey =~ s/^<!M><%colon>$/00EB/;
+	$deadkey =~ s/^<!M><%semicolon>$/0219/;
+	$deadkey =~ s/^<!M><%semsection>$/0219/;
+
+	return $deadkey;
 }
 
 sub get_dead_character {
@@ -2331,15 +2373,15 @@ foreach my $entry ( @mk_equiv_parsed ) {
 		$preceding = $1;
 		# This should work better than "unless ( grep { /^\Q$preceding$/ } @mk_equiv_complete ) {".
 		my $ok = !1;
-		foreach my $item ( @multikey_complete ) {
+		foreach my $item ( @mk_equiv_complete ) {
 			if ( $item eq $preceding ) {
 				$ok = !0;
 				last;
 			}
 		}
 		if ( $ok eq !1 ) {
-			push( @multikey_complete, $preceding );
-			push( @multikey_out, $preceding );
+			push( @mk_equiv_complete, $preceding );
+			push( @mk_equiv_out, $preceding );
 		}
 		$entry =~ s/^(<.+>)<.+>$/$1/;
 	} while ( $entry =~ /^<.+><.+>$/ );
