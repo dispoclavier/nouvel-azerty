@@ -16,15 +16,29 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows.
 
-## 6.1.6 (projet)
-
-Prise en charge sous Windows des équivalents en composition des touches mortes simples.
+## 6.1.7 (projet)
 
 Simplification de la saisie des symboles mathématiques.
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
+
+## 6.1.6 (2026-01-02)
+
+Prise en charge sous Windows des équivalents en composition des touches mortes simples.
+
+* Composition :
+	* Windows :
+		* Déboguer le transpilateur. dead-key-convert.pl [f88bc8e](https://github.com/dispoclavier/nouvel-azerty/commit/f88bc8e384b28246f5a719b07ca843033b227727), [66144a6](https://github.com/dispoclavier/nouvel-azerty/commit/66144a6793cec86a8f701e8688a582f05a512e0e), [7dae1dc](https://github.com/dispoclavier/nouvel-azerty/commit/7dae1dc133b093fa65039718a629827dbe73814a), [1888071](https://github.com/dispoclavier/nouvel-azerty/commit/1888071c47aa4ee2c64a47e85572792ae93dd9ed), [56d542b](https://github.com/dispoclavier/nouvel-azerty/commit/56d542b799d5c83eabcab588b3e49865e26b59d6)
+		* Transpiler les équivalents en composition des touches mortes simples. kbdeadtrans.c, kbdeadtrans-multikey-equivalents.c [d83ebb5](https://github.com/dispoclavier/nouvel-azerty/commit/d83ebb5ced6dae9805b109e50d35817951c5843f), [719b16b](https://github.com/dispoclavier/nouvel-azerty/commit/719b16be2a83b129158069c72569ba4066d86752), [a8fcc56](https://github.com/dispoclavier/nouvel-azerty/commit/a8fcc564493acd14c86b85a0cc8de8e401dcd96f)
+* Documentation :
+	* Ajouter des ancres aux aveux de culpabilité. readme.md alias Mode-d-emploi-commun.md [afad468](https://github.com/dispoclavier/nouvel-azerty/commit/afad4686215b8b593a66429a0d1e7b7e644fc985)
+	* Versionnage : Clarifier le numéro de build. readme.md alias Mode-d-emploi-commun.md [3f9cf06](https://github.com/dispoclavier/nouvel-azerty/commit/3f9cf06c71a7d028fd98fe13438257d86a947a99)
+* Builds :
+	* 6.1.6.0 [d83ebb5](https://github.com/dispoclavier/nouvel-azerty/commit/d83ebb5ced6dae9805b109e50d35817951c5843f)
+	* 6.1.6.1 [719b16b](https://github.com/dispoclavier/nouvel-azerty/commit/719b16be2a83b129158069c72569ba4066d86752)
+	* 6.1.6.2 [a8fcc56](https://github.com/dispoclavier/nouvel-azerty/commit/a8fcc564493acd14c86b85a0cc8de8e401dcd96f)
 
 ## 6.1.5 (2025-12-31)
 
