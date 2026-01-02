@@ -1,4 +1,4 @@
-# 6.1.5 (2026-01-02)
+# 6.1.6 (2026-01-02)
 
 Prise en charge sous Windows des équivalents en composition des touches mortes simples.
 
@@ -24,7 +24,7 @@ La variante AZERTY pour la langue bretonne, celle pour la Polynésie française,
 
 ### Installation
 
-Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.1.5.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.5/Un-nouvel-AZERTY-Windows-6.1.5.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.1.5.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.5/Un-nouvel-AZERTY-Windows-variantes-6.1.5.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
+Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.1.6.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.6/Un-nouvel-AZERTY-Windows-6.1.6.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.1.6.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.6/Un-nouvel-AZERTY-Windows-variantes-6.1.6.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
 Le meilleur mode d’emploi [coule de source sûre dans CCM](https://www.commentcamarche.net/informatique/windows/33353-majuscules-accentuees-windows-quad/) pour une autre disposition de clavier. Il est facilement transposable au cas où.
 
@@ -36,7 +36,7 @@ Toutes les variantes AZERTY ou redisposées sont incluses pour installation et f
 
 ### Activation ou installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.1.5.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.5/Un-nouvel-AZERTY-Linux-6.1.5.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.1.6.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.1.6/Un-nouvel-AZERTY-Linux-6.1.6.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
 
 ## Pour macOS
 
