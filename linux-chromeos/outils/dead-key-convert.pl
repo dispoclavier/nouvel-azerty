@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-02T1246+0100
+# 2026-01-02T1406+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -2420,9 +2420,15 @@ print CONSOLE ( "Case insensitive sorting complete.\n" );
 print( "Defining the multikey dead characters in progress ---\n" );
 print CONSOLE ( "Defining the multikey dead characters in progress ---\n" );
 foreach my $entry ( @multikey_complete ) {
-	push( @multikey_dchars, $entry . '➔' . $dead_hex );
-	++$dead_dec;
-	$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+	$deadkey = $entry;
+	$deadkey = get_mk_equiv_dead_character( $deadkey );
+	unless ( length( $deadkey ) > 4 ) {
+		push( @multikey_dchars, $entry . '➔' . $deadkey );
+	} else {
+		push( @multikey_dchars, $entry . '➔' . $dead_hex );
+		++$dead_dec;
+		$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
+	}
 }
 print( "Defining the multikey dead characters complete.\n" );
 print CONSOLE ( "Defining the multikey dead characters complete.\n" );
