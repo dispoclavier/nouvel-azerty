@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Include a subset of multikey equivalents 6.1.6.0.0 Fri 2026-01-02T0912+0100
 * Exclude multikey equivalents             6.1.5.3.0 Wed 2025-12-31T0627+0100
 * Include debugged multikey equivalents    6.1.5.2.0 Tue 2025-12-30T1622+0100
 * Include debugged multikey                6.1.4.0.0 Sun 2025-12-21T1943+0100
@@ -258,19 +259,17 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*****************************************************************************\
 * Multikey equivalents of dead keys
 *
-* This Linux feature cannot be supported on Windows, presumably due to a
-* layout driver file size issue crashing the keyboard software in some of
-* the applications (e.g. in VSCode, not in Windows File Explorer), although
-* the BMP PUA supports all the dead characters required for both dedicated
-* and dead key equivalent multikey sequences.
+* The full set of multikey equivalents cannot be supported on Windows,
+* presumably due to a layout driver file size issue. A small subset however
+* including unchained dead keys can be safely supported.
 * See kbdeadtrans-multikey-equivalents.c
 *
 * Multikey equivalents of dead keys are a Linux feature fostered and
 * required by mutualized dead key configuration, with layouts lacking
 * some or all dead keys but supporting the Multikey.
 *
-#include "kbdeadtrans-multikey-equivalents.c"
 \*****************************************************************************/
+#include "kbdeadtrans-multikey-equivalents.c"
 
 /*****************************************************************************\
 * Legacy dead key content
