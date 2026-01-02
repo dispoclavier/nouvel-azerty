@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-02T0821+0100
+# 2026-01-02T0840+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -68,20 +68,25 @@
 # 2025-12-24 (2025-12-25).
 #
 # Supporting all available multikey equivalents of dead key chains on Windows
-# causes an unidentified issue, presumably when exceeding a 256 kB file size
+# causes an issue, presumably when exceeding a 256 kB layout driver file size
 # limit. The affected layout does not show up in the Language bar, and if it
 # is the default, the keyboard does not work in some of the applications (not
-# in VSCode, but in Windows File Explorer). Half of the equivalents could still
-# be supported. Also, the dead characters would need to be in sync with those
-# of dead key chains. Even using private use characters, all the intermediate
+# in VSCode, but in Windows File Explorer).
+#
+# As multikey equivalents may increase the DLL file size from 219 to 289 kB,
+# half of the equivalents can still be supported. Also, the dead characters
+# need to be in sync with those of dead key chains. As a compromise, only
+# unchained dead keys have their multikey equivalent supported.
+# See kbdeadtrans-multikey-equivalents.c
+#
+# Even for all equivalents, using private use characters, all the intermediate
 # chains can be supported, as the first area E000..F8FF encompassing 6400 code
 # points is not used up by dedicated multikey sequences, and not even when
 # multikey equivalents are added. On 2025-12-22, a set of 1302 intermediate
 # multikey chains used E201..E715. The full set of 2256 intermediate multikey
 # chains with multikey equivalents of dead keys used E201..EACF (2025-12-30).
-# See kbdeadtrans-multikey-equivalents.c
 #
-# For test purposes, this part can be toggled here:
+# For test purposes, this can be toggled here:
 my $support_multikey_equivalents = !0;
 my $support_all_multikey_equivalents = !1;
 #
@@ -2627,7 +2632,7 @@ foreach my $line ( @mk_equiv_out ) {
 			$deadchar = get_mk_equiv_dead_character( $deadkey );
 
 			if ( length( $deadchar ) < 3 || hex( $deadchar ) < 57856 || $support_all_multikey_equivalents eq !0 ) {
-					
+
 				# Get input code for DEADTRANS call.
 				$input = get_dead_character( $input );
 				$input =~ s/<(.+)>/$1/;
