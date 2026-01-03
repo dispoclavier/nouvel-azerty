@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2220+0100
 * Debug multikey equivalents               6.1.6.2.0 Fri 2026-01-02T1411+0100
 * Update to 6.1.6.1                        6.1.6.1.0 Fri 2026-01-02T1241+0100
 * Update to 6.1.6.0                        6.1.6.0.0 Fri 2026-01-02T0901+0100
@@ -291,6 +292,7 @@
 /*<!M><%bar><%exclam><%grave>                                      */ DEADTRANS( L'`'	,0xE235	,0x2961	,0x0000), // '`' ➔ "⥡" U+2961 DOWNWARDS HARPOON WITH BARB LEFT FROM BAR
 /*<!M><%bar><%exclam><%greater>                                    */ DEADTRANS( L'>'	,0xE235	,0x21A7	,0x0000), // '>' ➔ "↧" U+21A7 DOWNWARDS ARROW FROM BAR
 /*<!M><%bar><%exclam><o>                                           */ DEADTRANS( L'o'	,0xE235	,0x2AF1	,0x0000), // 'o' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><%bar><%exclam><O>                                           */ DEADTRANS( L'O'	,0xE235	,0x2AF1	,0x0000), // 'O' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
 /*<!M><%bar><%grave>                                               */ DEADTRANS( L'`'	,0x0101	,0xE236	,0x0001), // Intermediate multikey chain link
 /*<!M><%bar><%grave><%exclam>                                      */ DEADTRANS( L'!'	,0xE236	,0x2954	,0x0000), // '!' ➔ "⥔" U+2954 UPWARDS HARPOON WITH BARB RIGHT TO BAR
 /*<!M><%bar><%grave><%minus>                                       */ DEADTRANS( L'-'	,0xE236	,0x2956	,0x0000), // '-' ➔ "⥖" U+2956 LEFTWARDS HARPOON WITH BARB DOWN TO BAR
@@ -1010,6 +1012,7 @@
 /*<!M><%less><%minus><%underscore>                                 */ DEADTRANS( L'_'	,0xE2E1	,0x2AAC	,0x0000), // '_' ➔ "⪬" U+2AAC SMALLER THAN OR EQUAL TO
 /*<!M><%less><%minus><0>                                           */ DEADTRANS( L'0'	,0xE2E1	,0xE2ED	,0x0001), // Intermediate multikey chain link
 /*<!M><%less><%minus><0><%minus>                                   */ DEADTRANS( L'-'	,0xE2ED	,0xE2EE	,0x0001), // Intermediate multikey chain link
+/*<!M><%less><%minus><0><%minus>                                   */ DEADTRANS( L'-'	,0xE2ED	,0xDCD8	,0x0000), // High surrogate: D83E; '-' ➔ "🣘" U+1F8D8 LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 /*<!M><%less><%minus><0><%minus><0>                                */ DEADTRANS( L'0'	,0xE2EE	,0x290E	,0x0000), // '0' ➔ "⤎" U+290E LEFTWARDS TRIPLE DASH ARROW
 /*<!M><%less><%minus><0><%minus><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE2EE	,0x290C	,0x0000), // ' ' ➔ "⤌" U+290C LEFTWARDS DOUBLE DASH ARROW
 /*<!M><%less><%minus><0><%minus><~space>                           */ DEADTRANS( L' '	,0xE2EE	,0x290C	,0x0000), // ' ' ➔ "⤌" U+290C LEFTWARDS DOUBLE DASH ARROW
@@ -1031,6 +1034,7 @@
 /*<!M><%less><%minus><o><~space>                                   */ DEADTRANS( L' '	,0xE2EF	,0x21AB	,0x0000), // ' ' ➔ "↫" U+21AB LEFTWARDS ARROW WITH LOOP
 /*<!M><%less><%minus><O><~space>                                   */ DEADTRANS( L' '	,0xE2F0	,0x21AB	,0x0000), // ' ' ➔ "↫" U+21AB LEFTWARDS ARROW WITH LOOP
 /*<!M><%less><%minus><x>                                           */ DEADTRANS( L'x'	,0xE2E1	,0x2B3E	,0x0000), // 'x' ➔ "⬾" U+2B3E LEFTWARDS ARROW THROUGH X
+/*<!M><%less><%minus><X>                                           */ DEADTRANS( L'X'	,0xE2E1	,0x2B3E	,0x0000), // 'X' ➔ "⬾" U+2B3E LEFTWARDS ARROW THROUGH X
 /*<!M><%less><%minus><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE2E1	,0x2190	,0x0000), // ' ' ➔ "←" U+2190 LEFTWARDS ARROW
 /*<!M><%less><%minus><~space>                                      */ DEADTRANS( L' '	,0xE2E1	,0x2190	,0x0000), // ' ' ➔ "←" U+2190 LEFTWARDS ARROW
 /*<!M><%less><%parenleft>                                          */ DEADTRANS( L'('	,0x00EA	,0xE2F2	,0x0001), // Intermediate multikey chain link
@@ -1185,6 +1189,7 @@
 /*<!M><%minus><%bar><%minus><%greater><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE312	,0x21F8	,0x0000), // ' ' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
 /*<!M><%minus><%bar><%minus><%greater><~space>                     */ DEADTRANS( L' '	,0xE312	,0x21F8	,0x0000), // ' ' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
 /*<!M><%minus><%bar><o>                                            */ DEADTRANS( L'o'	,0xE30B	,0x2AF1	,0x0000), // 'o' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><%minus><%bar><O>                                            */ DEADTRANS( L'O'	,0xE30B	,0x2AF1	,0x0000), // 'O' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
 /*<!M><%minus><%bar><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE30B	,0x2ADE	,0x0000), // ' ' ➔ "⫞" U+2ADE SHORT LEFT TACK
 /*<!M><%minus><%bar><~space>                                       */ DEADTRANS( L' '	,0xE30B	,0x2ADE	,0x0000), // ' ' ➔ "⫞" U+2ADE SHORT LEFT TACK
 /*<!M><%minus><%circum>                                            */ DEADTRANS( L'^'	,0x024D	,0xE313	,0x0001), // Intermediate multikey chain link
@@ -1286,6 +1291,8 @@
 /*<!M><%minus><%minus><a>                                          */ DEADTRANS( L'a'	,0xE327	,0x2A5E	,0x0000), // 'a' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
 /*<!M><%minus><%minus><v>                                          */ DEADTRANS( L'v'	,0xE327	,0xE331	,0x0001), // Intermediate multikey chain link
 /*<!M><%minus><%minus><V>                                          */ DEADTRANS( L'V'	,0xE327	,0xE332	,0x0001), // Intermediate multikey chain link
+/*<!M><%minus><%minus><v><%backslash>                              */ DEADTRANS( L'\\'	,0xE331	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><%minus><%minus><V><%backslash>                              */ DEADTRANS( L'\\'	,0xE332	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
 /*<!M><%minus><%minus><v><%percent>                                */ DEADTRANS( L'%'	,0xE331	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
 /*<!M><%minus><%minus><V><%percent>                                */ DEADTRANS( L'%'	,0xE332	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
 /*<!M><%minus><%minus><v><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE331	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
@@ -1330,6 +1337,7 @@
 /*<!M><%minus><x><%colon>                                          */ DEADTRANS( L':'	,0xE33E	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
 /*<!M><%minus><X><%colon>                                          */ DEADTRANS( L':'	,0xE33F	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
 /*<!M><%minus><x><%minus>                                          */ DEADTRANS( L'-'	,0xE33E	,0xDCD6	,0x0000), // High surrogate: D83E; '-' ➔ "🣖" U+1F8D6 LONG RIGHTWARDS ARROW THROUGH X
+/*<!M><%minus><X><%minus>                                          */ DEADTRANS( L'-'	,0xE33F	,0xDCD6	,0x0000), // High surrogate: D83E; '-' ➔ "🣖" U+1F8D6 LONG RIGHTWARDS ARROW THROUGH X
 /*<!M><%parenleft>                                                 */ DEADTRANS( L'('	,0x00A6	,0x0213	,0x0001), // Intermediate multikey chain link
 /*<!M><%parenleft><%backslash>                                     */ DEADTRANS( L'\\'	,0x0213	,0x2925	,0x0000), // '\' ➔ "⤥" U+2925 SOUTH EAST ARROW WITH HOOK
 /*<!M><%parenleft><%bracketleft>                                   */ DEADTRANS( L'['	,0x0213	,0x2997	,0x0000), // '[' ➔ "⦗" U+2997 LEFT BLACK TORTOISE SHELL BRACKET
@@ -2019,6 +2027,7 @@
 /*<!M><2><t>                                                       */ DEADTRANS( L't'	,0xE3D1	,0x02E8	,0x0000), // 't' ➔ "˨" U+02E8 MODIFIER LETTER LOW TONE BAR
 /*<!M><2><T><%apostrophe>                                          */ DEADTRANS( L'\''	,0xE3DC	,0x2AE7	,0x0000), // ''' ➔ "⫧" U+2AE7 SHORT DOWN TACK WITH OVERBAR
 /*<!M><2><T><%aprightsingquotmark>                                 */ DEADTRANS( 0x2019	,0xE3DC	,0x2AE7	,0x0000), // '’' ➔ "⫧" U+2AE7 SHORT DOWN TACK WITH OVERBAR
+/*<!M><2><T><%backslash>                                           */ DEADTRANS( L'\\'	,0xE3DC	,0x2AE8	,0x0000), // '\' ➔ "⫨" U+2AE8 SHORT UP TACK WITH UNDERBAR
 /*<!M><2><T><%greater>                                             */ DEADTRANS( L'>'	,0xE3DC	,0xE3DD	,0x0001), // Intermediate multikey chain link
 /*<!M><2><T><%greater><%slash>                                     */ DEADTRANS( L'/'	,0xE3DD	,0x22AE	,0x0000), // '/' ➔ "⊮" U+22AE DOES NOT FORCE
 /*<!M><2><T><%greater><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE3DD	,0x22A9	,0x0000), // ' ' ➔ "⊩" U+22A9 FORCES
@@ -2719,6 +2728,7 @@
 /*<!M><e><%at>                                                     */ DEADTRANS( L'@'	,0xE47E	,0x03F5	,0x0000), // '@' ➔ "ϵ" U+03F5 GREEK LUNATE EPSILON SYMBOL
 /*<!M><E><%at>                                                     */ DEADTRANS( L'@'	,0xE47D	,0x03F6	,0x0000), // '@' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash>                                              */ DEADTRANS( L'\\'	,0xE47E	,0xE47F	,0x0001), // Intermediate multikey chain link
+/*<!M><e><%backslash>                                              */ DEADTRANS( L'\\'	,0xE47E	,0x27D2	,0x0000), // '\' ➔ "⟒" U+27D2 ELEMENT OF OPENING UPWARDS
 /*<!M><e><%backslash><!greek>                                      */ DEADTRANS( 0x03B5	,0xE47F	,0x03F6	,0x0000), // 'ε' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash><%at>                                         */ DEADTRANS( L'@'	,0xE47F	,0x03F6	,0x0000), // '@' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash><%bar>                                        */ DEADTRANS( L'|'	,0xE47F	,0xE480	,0x0001), // Intermediate multikey chain link
@@ -2744,11 +2754,8 @@
 /*<!M><E><%hash>                                                   */ DEADTRANS( L'#'	,0xE47D	,0x266B	,0x0000), // '#' ➔ "♫" U+266B BEAMED EIGHTH NOTES
 /*<!M><e><%less>                                                   */ DEADTRANS( L'<'	,0xE47E	,0x202B	,0x0000), // '<' ➔ "‫" U+202B RIGHT-TO-LEFT EMBEDDING
 /*<!M><e><%minus>                                                  */ DEADTRANS( L'-'	,0xE47E	,0x22F2	,0x0000), // '-' ➔ "⋲" U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE
-/*<!M><e><%percent>                                                */ DEADTRANS( L'%'	,0xE47E	,0xE482	,0x0001), // Intermediate multikey chain link
 /*<!M><E><%percent>                                                */ DEADTRANS( L'%'	,0xE47D	,0x2108	,0x0000), // '%' ➔ "℈" U+2108 SCRUPLE
-/*<!M><e><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE482	,0x2AD9	,0x0000), // '%' ➔ "⫙" U+2AD9 ELEMENT OF OPENING DOWNWARDS
-/*<!M><e><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE482	,0x27D2	,0x0000), // ' ' ➔ "⟒" U+27D2 ELEMENT OF OPENING UPWARDS
-/*<!M><e><%percent><~space>                                        */ DEADTRANS( L' '	,0xE482	,0x27D2	,0x0000), // ' ' ➔ "⟒" U+27D2 ELEMENT OF OPENING UPWARDS
+/*<!M><e><%percent>                                                */ DEADTRANS( L'%'	,0xE47E	,0x27D2	,0x0000), // '%' ➔ "⟒" U+27D2 ELEMENT OF OPENING UPWARDS
 /*<!M><E><%slash>                                                  */ DEADTRANS( L'/'	,0xE47D	,0x2204	,0x0000), // '/' ➔ "∄" U+2204 THERE DOES NOT EXIST
 /*<!M><e><%slash>                                                  */ DEADTRANS( L'/'	,0xE47E	,0x2209	,0x0000), // '/' ➔ "∉" U+2209 NOT AN ELEMENT OF
 /*<!M><e><%tilde>                                                  */ DEADTRANS( L'~'	,0xE47E	,0x212F	,0x0000), // '~' ➔ "ℯ" U+212F SCRIPT SMALL E
@@ -2757,66 +2764,66 @@
 /*<!M><e><a>                                                       */ DEADTRANS( L'a'	,0xE47E	,0x2606	,0x0000), // 'a' ➔ "☆" U+2606 WHITE STAR
 /*<!M><E><A>                                                       */ DEADTRANS( L'A'	,0xE47D	,0x2606	,0x0000), // 'A' ➔ "☆" U+2606 WHITE STAR
 /*<!M><e><e>                                                       */ DEADTRANS( L'e'	,0xE47E	,0x2147	,0x0000), // 'e' ➔ "ⅇ" U+2147 DOUBLE-STRUCK ITALIC SMALL E
-/*<!M><e><m>                                                       */ DEADTRANS( L'm'	,0xE47E	,0xE483	,0x0001), // Intermediate multikey chain link
-/*<!M><E><M>                                                       */ DEADTRANS( L'M'	,0xE47D	,0xE484	,0x0001), // Intermediate multikey chain link
-/*<!M><e><m><f>                                                    */ DEADTRANS( L'f'	,0xE483	,0xE485	,0x0001), // Intermediate multikey chain link
-/*<!M><E><M><F>                                                    */ DEADTRANS( L'F'	,0xE484	,0xE486	,0x0001), // Intermediate multikey chain link
-/*<!M><e><m><f><c>                                                 */ DEADTRANS( L'c'	,0xE485	,0x25CF	,0x0000), // 'c' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><E><M><F><C>                                                 */ DEADTRANS( L'C'	,0xE486	,0x25CF	,0x0000), // 'C' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><e><m><f><r>                                                 */ DEADTRANS( L'r'	,0xE485	,0x25AC	,0x0000), // 'r' ➔ "▬" U+25AC BLACK RECTANGLE
-/*<!M><E><M><F><R>                                                 */ DEADTRANS( L'R'	,0xE486	,0x25AC	,0x0000), // 'R' ➔ "▬" U+25AC BLACK RECTANGLE
-/*<!M><e><m><o>                                                    */ DEADTRANS( L'o'	,0xE483	,0xE487	,0x0001), // Intermediate multikey chain link
-/*<!M><E><M><O>                                                    */ DEADTRANS( L'O'	,0xE484	,0xE488	,0x0001), // Intermediate multikey chain link
-/*<!M><e><m><o><r>                                                 */ DEADTRANS( L'r'	,0xE487	,0x25AD	,0x0000), // 'r' ➔ "▭" U+25AD WHITE RECTANGLE
-/*<!M><E><M><O><R>                                                 */ DEADTRANS( L'R'	,0xE488	,0x25AD	,0x0000), // 'R' ➔ "▭" U+25AD WHITE RECTANGLE
-/*<!M><e><m><p>                                                    */ DEADTRANS( L'p'	,0xE483	,0x2205	,0x0000), // 'p' ➔ "∅" U+2205 EMPTY SET
-/*<!M><e><n>                                                       */ DEADTRANS( L'n'	,0xE47E	,0xE489	,0x0001), // Intermediate multikey chain link
-/*<!M><E><N>                                                       */ DEADTRANS( L'N'	,0xE47D	,0xE48A	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n>                                                       */ DEADTRANS( L'n'	,0xE47D	,0xE48B	,0x0001), // Intermediate multikey chain link
-/*<!M><e><n><d>                                                    */ DEADTRANS( L'd'	,0xE489	,0x21F2	,0x0000), // 'd' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
-/*<!M><E><N><D>                                                    */ DEADTRANS( L'D'	,0xE48A	,0x21F2	,0x0000), // 'D' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
-/*<!M><e><n><f>                                                    */ DEADTRANS( L'f'	,0xE489	,0xE48C	,0x0001), // Intermediate multikey chain link
-/*<!M><E><N><F>                                                    */ DEADTRANS( L'F'	,0xE48A	,0xE48D	,0x0001), // Intermediate multikey chain link
-/*<!M><e><n><f><c>                                                 */ DEADTRANS( L'c'	,0xE48C	,0x2022	,0x0000), // 'c' ➔ "•" U+2022 BULLET
-/*<!M><E><N><F><C>                                                 */ DEADTRANS( L'C'	,0xE48D	,0x2022	,0x0000), // 'C' ➔ "•" U+2022 BULLET
-/*<!M><e><n><f><r>                                                 */ DEADTRANS( L'r'	,0xE48C	,0x25AE	,0x0000), // 'r' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
-/*<!M><E><N><F><R>                                                 */ DEADTRANS( L'R'	,0xE48D	,0x25AE	,0x0000), // 'R' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
-/*<!M><e><n><f><s>                                                 */ DEADTRANS( L's'	,0xE48C	,0x25AA	,0x0000), // 's' ➔ "▪" U+25AA BLACK SMALL SQUARE
-/*<!M><E><N><F><S>                                                 */ DEADTRANS( L'S'	,0xE48D	,0x25AA	,0x0000), // 'S' ➔ "▪" U+25AA BLACK SMALL SQUARE
-/*<!M><e><n><o>                                                    */ DEADTRANS( L'o'	,0xE489	,0xE48E	,0x0001), // Intermediate multikey chain link
-/*<!M><E><N><O>                                                    */ DEADTRANS( L'O'	,0xE48A	,0xE48F	,0x0001), // Intermediate multikey chain link
-/*<!M><e><n><o><c>                                                 */ DEADTRANS( L'c'	,0xE48E	,0x25E6	,0x0000), // 'c' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><E><N><O><C>                                                 */ DEADTRANS( L'C'	,0xE48F	,0x25E6	,0x0000), // 'C' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><e><n><o><s>                                                 */ DEADTRANS( L's'	,0xE48E	,0x25AB	,0x0000), // 's' ➔ "▫" U+25AB WHITE SMALL SQUARE
-/*<!M><E><N><O><S>                                                 */ DEADTRANS( L'S'	,0xE48F	,0x25AB	,0x0000), // 'S' ➔ "▫" U+25AB WHITE SMALL SQUARE
-/*<!M><e><n><s>                                                    */ DEADTRANS( L's'	,0xE489	,0x2205	,0x0000), // 's' ➔ "∅" U+2205 EMPTY SET French shortened name
-/*<!M><e><n><t>                                                    */ DEADTRANS( L't'	,0xE489	,0x2324	,0x0000), // 't' ➔ "⌤" U+2324 UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS
-/*<!M><E><N><T>                                                    */ DEADTRANS( L'T'	,0xE48A	,0x2386	,0x0000), // 'T' ➔ "⎆" U+2386 ENTER SYMBOL
-/*<!M><e><n><u>                                                    */ DEADTRANS( L'u'	,0xE489	,0xE490	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n><v>                                                    */ DEADTRANS( L'v'	,0xE48B	,0xE491	,0x0001), // Intermediate multikey chain link
-/*<!M><e><n><v>                                                    */ DEADTRANS( L'v'	,0xE489	,0x2709	,0x0000), // 'v' ➔ "✉" U+2709 ENVELOPE
-/*<!M><E><n><v><e>                                                 */ DEADTRANS( L'e'	,0xE491	,0xE492	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n><v><e><l>                                              */ DEADTRANS( L'l'	,0xE492	,0xE493	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n><v><e><l><o>                                           */ DEADTRANS( L'o'	,0xE493	,0xE494	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n><v><e><l><o><p>                                        */ DEADTRANS( L'p'	,0xE494	,0xE495	,0x0001), // Intermediate multikey chain link
-/*<!M><E><n><v><e><l><o><p><e>                                     */ DEADTRANS( L'e'	,0xE495	,0x2709	,0x0000), // 'e' ➔ "✉" U+2709 ENVELOPE TeX control has title case
+/*<!M><e><m>                                                       */ DEADTRANS( L'm'	,0xE47E	,0xE482	,0x0001), // Intermediate multikey chain link
+/*<!M><E><M>                                                       */ DEADTRANS( L'M'	,0xE47D	,0xE483	,0x0001), // Intermediate multikey chain link
+/*<!M><e><m><f>                                                    */ DEADTRANS( L'f'	,0xE482	,0xE484	,0x0001), // Intermediate multikey chain link
+/*<!M><E><M><F>                                                    */ DEADTRANS( L'F'	,0xE483	,0xE485	,0x0001), // Intermediate multikey chain link
+/*<!M><e><m><f><c>                                                 */ DEADTRANS( L'c'	,0xE484	,0x25CF	,0x0000), // 'c' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><E><M><F><C>                                                 */ DEADTRANS( L'C'	,0xE485	,0x25CF	,0x0000), // 'C' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><e><m><f><r>                                                 */ DEADTRANS( L'r'	,0xE484	,0x25AC	,0x0000), // 'r' ➔ "▬" U+25AC BLACK RECTANGLE
+/*<!M><E><M><F><R>                                                 */ DEADTRANS( L'R'	,0xE485	,0x25AC	,0x0000), // 'R' ➔ "▬" U+25AC BLACK RECTANGLE
+/*<!M><e><m><o>                                                    */ DEADTRANS( L'o'	,0xE482	,0xE486	,0x0001), // Intermediate multikey chain link
+/*<!M><E><M><O>                                                    */ DEADTRANS( L'O'	,0xE483	,0xE487	,0x0001), // Intermediate multikey chain link
+/*<!M><e><m><o><r>                                                 */ DEADTRANS( L'r'	,0xE486	,0x25AD	,0x0000), // 'r' ➔ "▭" U+25AD WHITE RECTANGLE
+/*<!M><E><M><O><R>                                                 */ DEADTRANS( L'R'	,0xE487	,0x25AD	,0x0000), // 'R' ➔ "▭" U+25AD WHITE RECTANGLE
+/*<!M><e><m><p>                                                    */ DEADTRANS( L'p'	,0xE482	,0x2205	,0x0000), // 'p' ➔ "∅" U+2205 EMPTY SET
+/*<!M><e><n>                                                       */ DEADTRANS( L'n'	,0xE47E	,0xE488	,0x0001), // Intermediate multikey chain link
+/*<!M><E><N>                                                       */ DEADTRANS( L'N'	,0xE47D	,0xE489	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n>                                                       */ DEADTRANS( L'n'	,0xE47D	,0xE48A	,0x0001), // Intermediate multikey chain link
+/*<!M><e><n><d>                                                    */ DEADTRANS( L'd'	,0xE488	,0x21F2	,0x0000), // 'd' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
+/*<!M><E><N><D>                                                    */ DEADTRANS( L'D'	,0xE489	,0x21F2	,0x0000), // 'D' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
+/*<!M><e><n><f>                                                    */ DEADTRANS( L'f'	,0xE488	,0xE48B	,0x0001), // Intermediate multikey chain link
+/*<!M><E><N><F>                                                    */ DEADTRANS( L'F'	,0xE489	,0xE48C	,0x0001), // Intermediate multikey chain link
+/*<!M><e><n><f><c>                                                 */ DEADTRANS( L'c'	,0xE48B	,0x2022	,0x0000), // 'c' ➔ "•" U+2022 BULLET
+/*<!M><E><N><F><C>                                                 */ DEADTRANS( L'C'	,0xE48C	,0x2022	,0x0000), // 'C' ➔ "•" U+2022 BULLET
+/*<!M><e><n><f><r>                                                 */ DEADTRANS( L'r'	,0xE48B	,0x25AE	,0x0000), // 'r' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
+/*<!M><E><N><F><R>                                                 */ DEADTRANS( L'R'	,0xE48C	,0x25AE	,0x0000), // 'R' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
+/*<!M><e><n><f><s>                                                 */ DEADTRANS( L's'	,0xE48B	,0x25AA	,0x0000), // 's' ➔ "▪" U+25AA BLACK SMALL SQUARE
+/*<!M><E><N><F><S>                                                 */ DEADTRANS( L'S'	,0xE48C	,0x25AA	,0x0000), // 'S' ➔ "▪" U+25AA BLACK SMALL SQUARE
+/*<!M><e><n><o>                                                    */ DEADTRANS( L'o'	,0xE488	,0xE48D	,0x0001), // Intermediate multikey chain link
+/*<!M><E><N><O>                                                    */ DEADTRANS( L'O'	,0xE489	,0xE48E	,0x0001), // Intermediate multikey chain link
+/*<!M><e><n><o><c>                                                 */ DEADTRANS( L'c'	,0xE48D	,0x25E6	,0x0000), // 'c' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><E><N><O><C>                                                 */ DEADTRANS( L'C'	,0xE48E	,0x25E6	,0x0000), // 'C' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><e><n><o><s>                                                 */ DEADTRANS( L's'	,0xE48D	,0x25AB	,0x0000), // 's' ➔ "▫" U+25AB WHITE SMALL SQUARE
+/*<!M><E><N><O><S>                                                 */ DEADTRANS( L'S'	,0xE48E	,0x25AB	,0x0000), // 'S' ➔ "▫" U+25AB WHITE SMALL SQUARE
+/*<!M><e><n><s>                                                    */ DEADTRANS( L's'	,0xE488	,0x2205	,0x0000), // 's' ➔ "∅" U+2205 EMPTY SET French shortened name
+/*<!M><e><n><t>                                                    */ DEADTRANS( L't'	,0xE488	,0x2324	,0x0000), // 't' ➔ "⌤" U+2324 UP ARROWHEAD BETWEEN TWO HORIZONTAL BARS
+/*<!M><E><N><T>                                                    */ DEADTRANS( L'T'	,0xE489	,0x2386	,0x0000), // 'T' ➔ "⎆" U+2386 ENTER SYMBOL
+/*<!M><e><n><u>                                                    */ DEADTRANS( L'u'	,0xE488	,0xE48F	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n><v>                                                    */ DEADTRANS( L'v'	,0xE48A	,0xE490	,0x0001), // Intermediate multikey chain link
+/*<!M><e><n><v>                                                    */ DEADTRANS( L'v'	,0xE488	,0x2709	,0x0000), // 'v' ➔ "✉" U+2709 ENVELOPE
+/*<!M><E><n><v><e>                                                 */ DEADTRANS( L'e'	,0xE490	,0xE491	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n><v><e><l>                                              */ DEADTRANS( L'l'	,0xE491	,0xE492	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n><v><e><l><o>                                           */ DEADTRANS( L'o'	,0xE492	,0xE493	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n><v><e><l><o><p>                                        */ DEADTRANS( L'p'	,0xE493	,0xE494	,0x0001), // Intermediate multikey chain link
+/*<!M><E><n><v><e><l><o><p><e>                                     */ DEADTRANS( L'e'	,0xE494	,0x2709	,0x0000), // 'e' ➔ "✉" U+2709 ENVELOPE TeX control has title case
 /*<!M><e><o>                                                       */ DEADTRANS( L'o'	,0xE47E	,0x220E	,0x0000), // 'o' ➔ "∎" U+220E END OF PROOF
 /*<!M><E><O>                                                       */ DEADTRANS( L'O'	,0xE47D	,0x220E	,0x0000), // 'O' ➔ "∎" U+220E END OF PROOF
-/*<!M><e><s>                                                       */ DEADTRANS( L's'	,0xE47E	,0xE496	,0x0001), // Intermediate multikey chain link
-/*<!M><E><S>                                                       */ DEADTRANS( L'S'	,0xE47D	,0xE497	,0x0001), // Intermediate multikey chain link
-/*<!M><e><s><c>                                                    */ DEADTRANS( L'c'	,0xE496	,0x238B	,0x0000), // 'c' ➔ "⎋" U+238B BROKEN CIRCLE WITH NORTHWEST ARROW
-/*<!M><E><S><C>                                                    */ DEADTRANS( L'C'	,0xE497	,0x238B	,0x0000), // 'C' ➔ "⎋" U+238B BROKEN CIRCLE WITH NORTHWEST ARROW
-/*<!M><e><s><t>                                                    */ DEADTRANS( L't'	,0xE496	,0x212E	,0x0000), // 't' ➔ "℮" U+212E ESTIMATED SYMBOL
-/*<!M><E><S><T>                                                    */ DEADTRANS( L'T'	,0xE497	,0x212E	,0x0000), // 'T' ➔ "℮" U+212E ESTIMATED SYMBOL
+/*<!M><e><s>                                                       */ DEADTRANS( L's'	,0xE47E	,0xE495	,0x0001), // Intermediate multikey chain link
+/*<!M><E><S>                                                       */ DEADTRANS( L'S'	,0xE47D	,0xE496	,0x0001), // Intermediate multikey chain link
+/*<!M><e><s><c>                                                    */ DEADTRANS( L'c'	,0xE495	,0x238B	,0x0000), // 'c' ➔ "⎋" U+238B BROKEN CIRCLE WITH NORTHWEST ARROW
+/*<!M><E><S><C>                                                    */ DEADTRANS( L'C'	,0xE496	,0x238B	,0x0000), // 'C' ➔ "⎋" U+238B BROKEN CIRCLE WITH NORTHWEST ARROW
+/*<!M><e><s><t>                                                    */ DEADTRANS( L't'	,0xE495	,0x212E	,0x0000), // 't' ➔ "℮" U+212E ESTIMATED SYMBOL
+/*<!M><E><S><T>                                                    */ DEADTRANS( L'T'	,0xE496	,0x212E	,0x0000), // 'T' ➔ "℮" U+212E ESTIMATED SYMBOL
 /*<!M><e><t>                                                       */ DEADTRANS( L't'	,0xE47E	,0xA76B	,0x0000), // 't' ➔ "ꝫ" U+A76B LATIN SMALL LETTER ET
-/*<!M><e><u>                                                       */ DEADTRANS( L'u'	,0xE47E	,0xE498	,0x0001), // Intermediate multikey chain link
-/*<!M><E><U>                                                       */ DEADTRANS( L'U'	,0xE47D	,0xE499	,0x0001), // Intermediate multikey chain link
-/*<!M><E><u>                                                       */ DEADTRANS( L'u'	,0xE47D	,0xE49A	,0x0001), // Intermediate multikey chain link
-/*<!M><E><U><L>                                                    */ DEADTRANS( L'L'	,0xE499	,0x2107	,0x0000), // 'L' ➔ "ℇ" U+2107 EULER CONSTANT
-/*<!M><E><u><l>                                                    */ DEADTRANS( L'l'	,0xE49A	,0x2107	,0x0000), // 'l' ➔ "ℇ" U+2107 EULER CONSTANT
-/*<!M><e><u><l>                                                    */ DEADTRANS( L'l'	,0xE498	,0x2107	,0x0000), // 'l' ➔ "ℇ" U+2107 EULER CONSTANT
-/*<!M><e><u><r>                                                    */ DEADTRANS( L'r'	,0xE498	,0x20AC	,0x0000), // 'r' ➔ "€" U+20AC EURO SIGN, Euro EUROPEAN UNION
-/*<!M><E><U><R>                                                    */ DEADTRANS( L'R'	,0xE499	,0x20AC	,0x0000), // 'R' ➔ "€" U+20AC EURO SIGN, Euro EUROPEAN UNION
+/*<!M><e><u>                                                       */ DEADTRANS( L'u'	,0xE47E	,0xE497	,0x0001), // Intermediate multikey chain link
+/*<!M><E><U>                                                       */ DEADTRANS( L'U'	,0xE47D	,0xE498	,0x0001), // Intermediate multikey chain link
+/*<!M><E><u>                                                       */ DEADTRANS( L'u'	,0xE47D	,0xE499	,0x0001), // Intermediate multikey chain link
+/*<!M><E><U><L>                                                    */ DEADTRANS( L'L'	,0xE498	,0x2107	,0x0000), // 'L' ➔ "ℇ" U+2107 EULER CONSTANT
+/*<!M><E><u><l>                                                    */ DEADTRANS( L'l'	,0xE499	,0x2107	,0x0000), // 'l' ➔ "ℇ" U+2107 EULER CONSTANT
+/*<!M><e><u><l>                                                    */ DEADTRANS( L'l'	,0xE497	,0x2107	,0x0000), // 'l' ➔ "ℇ" U+2107 EULER CONSTANT
+/*<!M><e><u><r>                                                    */ DEADTRANS( L'r'	,0xE497	,0x20AC	,0x0000), // 'r' ➔ "€" U+20AC EURO SIGN, Euro EUROPEAN UNION
+/*<!M><E><U><R>                                                    */ DEADTRANS( L'R'	,0xE498	,0x20AC	,0x0000), // 'R' ➔ "€" U+20AC EURO SIGN, Euro EUROPEAN UNION
 /*<!M><E><Z>                                                       */ DEADTRANS( L'Z'	,0xE47D	,0x01B7	,0x0000), // 'Z' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
 /*<!M><E><z>                                                       */ DEADTRANS( L'z'	,0xE47D	,0x01B7	,0x0000), // 'z' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
 /*<!M><e><z>                                                       */ DEADTRANS( L'z'	,0xE47E	,0x0292	,0x0000), // 'z' ➔ "ʒ" U+0292 LATIN SMALL LETTER EZH
@@ -2824,2677 +2831,2723 @@
 /*<!M><e><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE47E	,0x2208	,0x0000), // ' ' ➔ "∈" U+2208 ELEMENT OF
 /*<!M><E><~space>                                                  */ DEADTRANS( L' '	,0xE47D	,0x2203	,0x0000), // ' ' ➔ "∃" U+2203 THERE EXISTS
 /*<!M><e><~space>                                                  */ DEADTRANS( L' '	,0xE47E	,0x2208	,0x0000), // ' ' ➔ "∈" U+2208 ELEMENT OF
-/*<!M><eacute>                                                     */ DEADTRANS( 0x00E9	,0x00A6	,0xE49B	,0x0001), // Intermediate multikey chain link
-/*<!M><Eacute>                                                     */ DEADTRANS( 0x00C9	,0x00A6	,0xE49C	,0x0001), // Intermediate multikey chain link
-/*<!M><eacute><a>                                                  */ DEADTRANS( L'a'	,0xE49B	,0x2606	,0x0000), // 'a' ➔ "☆" U+2606 WHITE STAR
-/*<!M><Eacute><a>                                                  */ DEADTRANS( L'a'	,0xE49C	,0x2606	,0x0000), // 'a' ➔ "☆" U+2606 WHITE STAR
-/*<!M><f>                                                          */ DEADTRANS( L'f'	,0x00A6	,0xE49D	,0x0001), // Intermediate multikey chain link
-/*<!M><F>                                                          */ DEADTRANS( L'F'	,0x00A6	,0xE49E	,0x0001), // Intermediate multikey chain link
-/*<!M><f><%at>                                                     */ DEADTRANS( L'@'	,0xE49D	,0x03D5	,0x0000), // '@' ➔ "ϕ" U+03D5 GREEK PHI SYMBOL
-/*<!M><f><%greater>                                                */ DEADTRANS( L'>'	,0xE49D	,0x202D	,0x0000), // '>' ➔ "‭" U+202D LEFT-TO-RIGHT OVERRIDE
-/*<!M><f><%hash>                                                   */ DEADTRANS( L'#'	,0xE49D	,0x266D	,0x0000), // '#' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><f><%less>                                                   */ DEADTRANS( L'<'	,0xE49D	,0x202E	,0x0000), // '<' ➔ "‮" U+202E RIGHT-TO-LEFT OVERRIDE
-/*<!M><f><%slash>                                                  */ DEADTRANS( L'/'	,0xE49D	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><F><%slash>                                                  */ DEADTRANS( L'/'	,0xE49E	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><F><%tilde>                                                  */ DEADTRANS( L'~'	,0xE49E	,0x2131	,0x0000), // '~' ➔ "ℱ" U+2131 SCRIPT CAPITAL F
-/*<!M><f><a>                                                       */ DEADTRANS( L'a'	,0xE49D	,0x213B	,0x0000), // 'a' ➔ "℻" U+213B FACSIMILE SIGN
-/*<!M><F><a>                                                       */ DEADTRANS( L'a'	,0xE49E	,0x213B	,0x0000), // 'a' ➔ "℻" U+213B FACSIMILE SIGN
-/*<!M><F><A>                                                       */ DEADTRANS( L'A'	,0xE49E	,0x213B	,0x0000), // 'A' ➔ "℻" U+213B FACSIMILE SIGN
-/*<!M><f><e>                                                       */ DEADTRANS( L'e'	,0xE49D	,0xE49F	,0x0001), // Intermediate multikey chain link
-/*<!M><f><e><n>                                                    */ DEADTRANS( L'n'	,0xE49F	,0xE4A0	,0x0001), // Intermediate multikey chain link
-/*<!M><f><e><n><g>                                                 */ DEADTRANS( L'g'	,0xE4A0	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
-/*<!M><F><F>                                                       */ DEADTRANS( L'F'	,0xE49E	,0x20A3	,0x0000), // 'F' ➔ "₣" U+20A3 FRENCH FRANC SIGN
-/*<!M><F><f>                                                       */ DEADTRANS( L'f'	,0xE49E	,0x20A3	,0x0000), // 'f' ➔ "₣" U+20A3 FRENCH FRANC SIGN
-/*<!M><f><f>                                                       */ DEADTRANS( L'f'	,0xE49D	,0x20A3	,0x0000), // 'f' ➔ "₣" U+20A3 FRENCH FRANC SIGN
-/*<!M><f><g>                                                       */ DEADTRANS( L'g'	,0xE49D	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
-/*<!M><f><i>                                                       */ DEADTRANS( L'i'	,0xE49D	,0x21F2	,0x0000), // 'i' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
-/*<!M><F><I>                                                       */ DEADTRANS( L'I'	,0xE49E	,0x21F2	,0x0000), // 'I' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
-/*<!M><f><l>                                                       */ DEADTRANS( L'l'	,0xE49D	,0xE4A1	,0x0001), // Intermediate multikey chain link
-/*<!M><F><L>                                                       */ DEADTRANS( L'L'	,0xE49E	,0xE4A2	,0x0001), // Intermediate multikey chain link
-/*<!M><f><l><i>                                                    */ DEADTRANS( L'i'	,0xE4A1	,0x261A	,0x0000), // 'i' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-/*<!M><F><L><I>                                                    */ DEADTRANS( L'I'	,0xE4A2	,0x261A	,0x0000), // 'I' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-/*<!M><f><l><p>                                                    */ DEADTRANS( L'p'	,0xE4A1	,0x204C	,0x0000), // 'p' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
-/*<!M><F><L><P>                                                    */ DEADTRANS( L'P'	,0xE4A2	,0x204C	,0x0000), // 'P' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
-/*<!M><f><l><t>                                                    */ DEADTRANS( L't'	,0xE4A1	,0x25C2	,0x0000), // 't' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
-/*<!M><F><L><T>                                                    */ DEADTRANS( L'T'	,0xE4A2	,0x25C2	,0x0000), // 'T' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
-/*<!M><f><n>                                                       */ DEADTRANS( L'n'	,0xE49D	,0xE4A3	,0x0001), // Intermediate multikey chain link
-/*<!M><f><n><g>                                                    */ DEADTRANS( L'g'	,0xE4A3	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
-/*<!M><f><r>                                                       */ DEADTRANS( L'r'	,0xE49D	,0xE4A4	,0x0001), // Intermediate multikey chain link
-/*<!M><F><R>                                                       */ DEADTRANS( L'R'	,0xE49E	,0xE4A5	,0x0001), // Intermediate multikey chain link
-/*<!M><f><r><b>                                                    */ DEADTRANS( L'b'	,0xE4A4	,0x220E	,0x0000), // 'b' ➔ "∎" U+220E END OF PROOF
-/*<!M><F><R><B>                                                    */ DEADTRANS( L'B'	,0xE4A5	,0x220E	,0x0000), // 'B' ➔ "∎" U+220E END OF PROOF
-/*<!M><f><r><i>                                                    */ DEADTRANS( L'i'	,0xE4A4	,0x261B	,0x0000), // 'i' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-/*<!M><F><R><I>                                                    */ DEADTRANS( L'I'	,0xE4A5	,0x261B	,0x0000), // 'I' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-/*<!M><f><r><p>                                                    */ DEADTRANS( L'p'	,0xE4A4	,0x204D	,0x0000), // 'p' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
-/*<!M><F><R><P>                                                    */ DEADTRANS( L'P'	,0xE4A5	,0x204D	,0x0000), // 'P' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
-/*<!M><f><r><t>                                                    */ DEADTRANS( L't'	,0xE4A4	,0x2023	,0x0000), // 't' ➔ "‣" U+2023 TRIANGULAR BULLET
-/*<!M><F><R><T>                                                    */ DEADTRANS( L'T'	,0xE4A5	,0x2023	,0x0000), // 'T' ➔ "‣" U+2023 TRIANGULAR BULLET
-/*<!M><f><s>                                                       */ DEADTRANS( L's'	,0xE49D	,0x017F	,0x0000), // 's' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
-/*<!M><f><t>                                                       */ DEADTRANS( L't'	,0xE49D	,0xE4A6	,0x0001), // Intermediate multikey chain link
-/*<!M><F><T>                                                       */ DEADTRANS( L'T'	,0xE49E	,0xE4A7	,0x0001), // Intermediate multikey chain link
-/*<!M><f><t><d>                                                    */ DEADTRANS( L'd'	,0xE4A6	,0x25BE	,0x0000), // 'd' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><F><T><D>                                                    */ DEADTRANS( L'D'	,0xE4A7	,0x25BE	,0x0000), // 'D' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><f><t><u>                                                    */ DEADTRANS( L'u'	,0xE4A6	,0x25B4	,0x0000), // 'u' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><F><T><U>                                                    */ DEADTRANS( L'U'	,0xE4A7	,0x25B4	,0x0000), // 'U' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><g>                                                          */ DEADTRANS( L'g'	,0x00A6	,0xE4A8	,0x0001), // Intermediate multikey chain link
-/*<!M><G>                                                          */ DEADTRANS( L'G'	,0x00A6	,0xE4A9	,0x0001), // Intermediate multikey chain link
-/*<!M><g><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4A8	,0x2137	,0x0000), // '\' ➔ "ℷ" U+2137 GIMEL SYMBOL
-/*<!M><G><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4A9	,0x2137	,0x0000), // '\' ➔ "ℷ" U+2137 GIMEL SYMBOL
-/*<!M><g><%bar>                                                    */ DEADTRANS( L'|'	,0xE4A8	,0x20B2	,0x0000), // '|' ➔ "₲" U+20B2 GUARANI SIGN
-/*<!M><G><%bar>                                                    */ DEADTRANS( L'|'	,0xE4A9	,0x20B2	,0x0000), // '|' ➔ "₲" U+20B2 GUARANI SIGN
-/*<!M><G><%percent>                                                */ DEADTRANS( L'%'	,0xE4A9	,0x2141	,0x0000), // '%' ➔ "⅁" U+2141 TURNED SANS-SERIF CAPITAL G
-/*<!M><G><%slash>                                                  */ DEADTRANS( L'/'	,0xE4A9	,0x20B2	,0x0000), // '/' ➔ "₲" U+20B2 GUARANI SIGN
-/*<!M><g><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4A8	,0x210A	,0x0000), // '~' ➔ "ℊ" U+210A SCRIPT SMALL G
-/*<!M><g><e>                                                       */ DEADTRANS( L'e'	,0xE4A8	,0xE4AA	,0x0001), // Intermediate multikey chain link
-/*<!M><G><E>                                                       */ DEADTRANS( L'E'	,0xE4A9	,0xE4AB	,0x0001), // Intermediate multikey chain link
-/*<!M><g><e><l>                                                    */ DEADTRANS( L'l'	,0xE4AA	,0x20BE	,0x0000), // 'l' ➔ "₾" U+20BE LARI SIGN, Lari GEORGIA
-/*<!M><G><E><L>                                                    */ DEADTRANS( L'L'	,0xE4AB	,0x20BE	,0x0000), // 'L' ➔ "₾" U+20BE LARI SIGN, Lari GEORGIA
-/*<!M><g><e><m>                                                    */ DEADTRANS( L'm'	,0xE4AA	,0xE4AC	,0x0001), // Intermediate multikey chain link
-/*<!M><G><E><M>                                                    */ DEADTRANS( L'M'	,0xE4AB	,0xE4AD	,0x0001), // Intermediate multikey chain link
-/*<!M><g><e><m><e>                                                 */ DEADTRANS( L'e'	,0xE4AC	,0x264A	,0x0000), // 'e' ➔ "♊" U+264A GEMINI emoji
-/*<!M><G><E><M><E>                                                 */ DEADTRANS( L'E'	,0xE4AD	,0x264A	,0x0000), // 'E' ➔ "♊" U+264A GEMINI emoji
-/*<!M><g><e><m><i>                                                 */ DEADTRANS( L'i'	,0xE4AC	,0x264A	,0x0000), // 'i' ➔ "♊" U+264A GEMINI emoji
-/*<!M><G><E><M><I>                                                 */ DEADTRANS( L'I'	,0xE4AD	,0x264A	,0x0000), // 'I' ➔ "♊" U+264A GEMINI emoji
-/*<!M><g><e><n>                                                    */ DEADTRANS( L'n'	,0xE4AA	,0x267A	,0x0000), // 'n' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
-/*<!M><G><E><N>                                                    */ DEADTRANS( L'N'	,0xE4AB	,0x267A	,0x0000), // 'N' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
-/*<!M><g><eacute>                                                  */ DEADTRANS( 0x00E9	,0xE4A8	,0xE4AE	,0x0001), // Intermediate multikey chain link
-/*<!M><G><Eacute>                                                  */ DEADTRANS( 0x00C9	,0xE4A9	,0xE4AF	,0x0001), // Intermediate multikey chain link
-/*<!M><g><eacute><m>                                               */ DEADTRANS( L'm'	,0xE4AE	,0xE4B0	,0x0001), // Intermediate multikey chain link
-/*<!M><G><Eacute><M>                                               */ DEADTRANS( L'M'	,0xE4AF	,0xE4B1	,0x0001), // Intermediate multikey chain link
-/*<!M><g><eacute><m><e>                                            */ DEADTRANS( L'e'	,0xE4B0	,0x264A	,0x0000), // 'e' ➔ "♊" U+264A GEMINI emoji
-/*<!M><G><Eacute><M><E>                                            */ DEADTRANS( L'E'	,0xE4B1	,0x264A	,0x0000), // 'E' ➔ "♊" U+264A GEMINI emoji
-/*<!M><g><g>                                                       */ DEADTRANS( L'g'	,0xE4A8	,0xE4B2	,0x0001), // Intermediate multikey chain link
-/*<!M><G><G>                                                       */ DEADTRANS( L'G'	,0xE4A9	,0xE4B3	,0x0001), // Intermediate multikey chain link
-/*<!M><g><g><%at>                                                  */ DEADTRANS( L'@'	,0xE4B2	,0x213D	,0x0000), // '@' ➔ "ℽ" U+213D DOUBLE-STRUCK SMALL GAMMA
-/*<!M><G><G><%at>                                                  */ DEADTRANS( L'@'	,0xE4B3	,0x213E	,0x0000), // '@' ➔ "ℾ" U+213E DOUBLE-STRUCK CAPITAL GAMMA
-/*<!M><G><H>                                                       */ DEADTRANS( L'H'	,0xE4A9	,0xE4B4	,0x0001), // Intermediate multikey chain link
-/*<!M><g><h>                                                       */ DEADTRANS( L'h'	,0xE4A8	,0xE4B5	,0x0001), // Intermediate multikey chain link
-/*<!M><G><h>                                                       */ DEADTRANS( L'h'	,0xE4A9	,0x01A2	,0x0000), // 'h' ➔ "Ƣ" U+01A2 LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
-/*<!M><g><h><s>                                                    */ DEADTRANS( L's'	,0xE4B5	,0x20B5	,0x0000), // 's' ➔ "₵" U+20B5 CEDI SIGN, Ghana Cedi GHANA
-/*<!M><G><H><S>                                                    */ DEADTRANS( L'S'	,0xE4B4	,0x20B5	,0x0000), // 'S' ➔ "₵" U+20B5 CEDI SIGN, Ghana Cedi GHANA
-/*<!M><G><H><~space>                                               */ DEADTRANS( L' '	,0xE4B4	,0x01A2	,0x0000), // ' ' ➔ "Ƣ" U+01A2 LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
-/*<!M><g><h><~space>                                               */ DEADTRANS( L' '	,0xE4B5	,0x01A3	,0x0000), // ' ' ➔ "ƣ" U+01A3 LATIN SMALL LETTER OI, LATIN SMALL LETTER GHA
-/*<!M><G><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4A9	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><g><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4A8	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><G><~space>                                                  */ DEADTRANS( L' '	,0xE4A9	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><g><~space>                                                  */ DEADTRANS( L' '	,0xE4A8	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><h>                                                          */ DEADTRANS( L'h'	,0x00A6	,0xE4B6	,0x0001), // Intermediate multikey chain link
-/*<!M><H>                                                          */ DEADTRANS( L'H'	,0x00A6	,0xE4B7	,0x0001), // Intermediate multikey chain link
-/*<!M><H><%hash>                                                   */ DEADTRANS( L'#'	,0xE4B7	,0x210C	,0x0000), // '#' ➔ "ℌ" U+210C BLACK-LETTER CAPITAL H
-/*<!M><h><%hash>                                                   */ DEADTRANS( L'#'	,0xE4B6	,0x266A	,0x0000), // '#' ➔ "♪" U+266A EIGHTH NOTE
-/*<!M><h><%minus>                                                  */ DEADTRANS( L'-'	,0xE4B6	,0x266B	,0x0000), // '-' ➔ "♫" U+266B BEAMED EIGHTH NOTES
-/*<!M><H><%minus>                                                  */ DEADTRANS( L'-'	,0xE4B7	,0x266B	,0x0000), // '-' ➔ "♫" U+266B BEAMED EIGHTH NOTES
-/*<!M><h><%slash>                                                  */ DEADTRANS( L'/'	,0xE4B6	,0xE4B8	,0x0001), // Intermediate multikey chain link
-/*<!M><h><%slash><%slash>                                          */ DEADTRANS( L'/'	,0xE4B8	,0x210F	,0x0000), // '/' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
-/*<!M><h><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE4B8	,0x210E	,0x0000), // ' ' ➔ "ℎ" U+210E PLANCK CONSTANT
-/*<!M><h><%slash><~space>                                          */ DEADTRANS( L' '	,0xE4B8	,0x210E	,0x0000), // ' ' ➔ "ℎ" U+210E PLANCK CONSTANT
-/*<!M><H><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4B7	,0x210B	,0x0000), // '~' ➔ "ℋ" U+210B SCRIPT CAPITAL H
-/*<!M><h><d>                                                       */ DEADTRANS( L'd'	,0xE4B6	,0xE4B9	,0x0001), // Intermediate multikey chain link
-/*<!M><H><D>                                                       */ DEADTRANS( L'D'	,0xE4B7	,0xE4BA	,0x0001), // Intermediate multikey chain link
-/*<!M><h><d><p>                                                    */ DEADTRANS( L'p'	,0xE4B9	,0xE4BB	,0x0001), // Intermediate multikey chain link
-/*<!M><H><D><P>                                                    */ DEADTRANS( L'P'	,0xE4BA	,0xE4BC	,0x0001), // Intermediate multikey chain link
-/*<!M><h><d><p><e>                                                 */ DEADTRANS( L'e'	,0xE4BB	,0x2674	,0x0000), // 'e' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><H><D><P><E>                                                 */ DEADTRANS( L'E'	,0xE4BC	,0x2674	,0x0000), // 'E' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><H><H>                                                       */ DEADTRANS( L'H'	,0xE4B7	,0x210D	,0x0000), // 'H' ➔ "ℍ" U+210D DOUBLE-STRUCK CAPITAL H
-/*<!M><H><N>                                                       */ DEADTRANS( L'N'	,0xE4B7	,0xA726	,0x0000), // 'N' ➔ "Ꜧ" U+A726 LATIN CAPITAL LETTER HENG
-/*<!M><H><n>                                                       */ DEADTRANS( L'n'	,0xE4B7	,0xA726	,0x0000), // 'n' ➔ "Ꜧ" U+A726 LATIN CAPITAL LETTER HENG
-/*<!M><h><n>                                                       */ DEADTRANS( L'n'	,0xE4B6	,0xA727	,0x0000), // 'n' ➔ "ꜧ" U+A727 LATIN SMALL LETTER HENG
-/*<!M><h><o>                                                       */ DEADTRANS( L'o'	,0xE4B6	,0xE4BD	,0x0001), // Intermediate multikey chain link
-/*<!M><H><O>                                                       */ DEADTRANS( L'O'	,0xE4B7	,0xE4BE	,0x0001), // Intermediate multikey chain link
-/*<!M><h><o><m>                                                    */ DEADTRANS( L'm'	,0xE4BD	,0x21F1	,0x0000), // 'm' ➔ "⇱" U+21F1 NORTH WEST ARROW TO CORNER
-/*<!M><H><O><M>                                                    */ DEADTRANS( L'M'	,0xE4BE	,0x21F1	,0x0000), // 'M' ➔ "⇱" U+21F1 NORTH WEST ARROW TO CORNER
-/*<!M><h><v>                                                       */ DEADTRANS( L'v'	,0xE4B6	,0x0195	,0x0000), // 'v' ➔ "ƕ" U+0195 LATIN SMALL LETTER HV
-/*<!M><H><V>                                                       */ DEADTRANS( L'V'	,0xE4B7	,0x01F6	,0x0000), // 'V' ➔ "Ƕ" U+01F6 LATIN CAPITAL LETTER HWAIR
-/*<!M><H><v>                                                       */ DEADTRANS( L'v'	,0xE4B7	,0x01F6	,0x0000), // 'v' ➔ "Ƕ" U+01F6 LATIN CAPITAL LETTER HWAIR
-/*<!M><H><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4B7	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
-/*<!M><h><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4B6	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
-/*<!M><H><~space>                                                  */ DEADTRANS( L' '	,0xE4B7	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
-/*<!M><h><~space>                                                  */ DEADTRANS( L' '	,0xE4B6	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
-/*<!M><i>                                                          */ DEADTRANS( L'i'	,0x00A6	,0xE4BF	,0x0001), // Intermediate multikey chain link
-/*<!M><I>                                                          */ DEADTRANS( L'I'	,0x00A6	,0xE4C0	,0x0001), // Intermediate multikey chain link
-/*<!M><i><%at>                                                     */ DEADTRANS( L'@'	,0xE4BF	,0x2129	,0x0000), // '@' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
-/*<!M><i><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4BF	,0x2129	,0x0000), // '\' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
-/*<!M><i><%bar>                                                    */ DEADTRANS( L'|'	,0xE4BF	,0x2068	,0x0000), // '|' ➔ "⁨" U+2068 FIRST STRONG ISOLATE
-/*<!M><I><%bracketleft>                                            */ DEADTRANS( L'['	,0xE4C0	,0xE4C1	,0x0001), // Intermediate multikey chain link
-/*<!M><I><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE4C1	,0x29EE	,0x0000), // ']' ➔ "⧮" U+29EE ERROR-BARRED WHITE SQUARE
-/*<!M><I><%bracketleft><%hash>                                     */ DEADTRANS( L'#'	,0xE4C1	,0x29EF	,0x0000), // '#' ➔ "⧯" U+29EF ERROR-BARRED BLACK SQUARE
-/*<!M><I><%bracketright>                                           */ DEADTRANS( L']'	,0xE4C0	,0x29EE	,0x0000), // ']' ➔ "⧮" U+29EE ERROR-BARRED WHITE SQUARE
-/*<!M><i><%equal>                                                  */ DEADTRANS( L'='	,0xE4BF	,0x2069	,0x0000), // '=' ➔ "⁩" U+2069 POP DIRECTIONAL ISOLATE
-/*<!M><i><%greater>                                                */ DEADTRANS( L'>'	,0xE4BF	,0x2066	,0x0000), // '>' ➔ "⁦" U+2066 LEFT-TO-RIGHT ISOLATE
-/*<!M><I><%greater>                                                */ DEADTRANS( L'>'	,0xE4C0	,0x29F0	,0x0000), // '>' ➔ "⧰" U+29F0 ERROR-BARRED WHITE DIAMOND
-/*<!M><I><%hash>                                                   */ DEADTRANS( L'#'	,0xE4C0	,0x2111	,0x0000), // '#' ➔ "ℑ" U+2111 BLACK-LETTER CAPITAL I
-/*<!M><I><%less>                                                   */ DEADTRANS( L'<'	,0xE4C0	,0xE4C2	,0x0001), // Intermediate multikey chain link
-/*<!M><i><%less>                                                   */ DEADTRANS( L'<'	,0xE4BF	,0x2067	,0x0000), // '<' ➔ "⁧" U+2067 RIGHT-TO-LEFT ISOLATE
-/*<!M><I><%less><%greater>                                         */ DEADTRANS( L'>'	,0xE4C2	,0x29F0	,0x0000), // '>' ➔ "⧰" U+29F0 ERROR-BARRED WHITE DIAMOND
-/*<!M><I><%less><%hash>                                            */ DEADTRANS( L'#'	,0xE4C2	,0x29F1	,0x0000), // '#' ➔ "⧱" U+29F1 ERROR-BARRED BLACK DIAMOND
-/*<!M><i><%percent>                                                */ DEADTRANS( L'%'	,0xE4BF	,0x2129	,0x0000), // '%' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
-/*<!M><I><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4C0	,0x2110	,0x0000), // '~' ➔ "ℐ" U+2110 SCRIPT CAPITAL I
-/*<!M><I><%underscore>                                             */ DEADTRANS( L'_'	,0xE4C0	,0xE4C3	,0x0001), // Intermediate multikey chain link
-/*<!M><I><%underscore><%apostrophe>                                */ DEADTRANS( L'\''	,0xE4C3	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><I><%underscore><%bar>                                       */ DEADTRANS( L'|'	,0xE4C3	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><I><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4C3	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
-/*<!M><I><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE4C3	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
-/*<!M><i><1>                                                       */ DEADTRANS( L'1'	,0xE4BF	,0xA70D	,0x0000), // '1' ➔ "꜍" U+A70D MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-/*<!M><I><1>                                                       */ DEADTRANS( L'1'	,0xE4C0	,0xA70D	,0x0000), // '1' ➔ "꜍" U+A70D MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-/*<!M><i><2>                                                       */ DEADTRANS( L'2'	,0xE4BF	,0xA70E	,0x0000), // '2' ➔ "꜎" U+A70E MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-/*<!M><I><2>                                                       */ DEADTRANS( L'2'	,0xE4C0	,0xA70E	,0x0000), // '2' ➔ "꜎" U+A70E MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-/*<!M><i><3>                                                       */ DEADTRANS( L'3'	,0xE4BF	,0xA70F	,0x0000), // '3' ➔ "꜏" U+A70F MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-/*<!M><I><3>                                                       */ DEADTRANS( L'3'	,0xE4C0	,0xA70F	,0x0000), // '3' ➔ "꜏" U+A70F MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-/*<!M><i><4>                                                       */ DEADTRANS( L'4'	,0xE4BF	,0xA710	,0x0000), // '4' ➔ "꜐" U+A710 MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-/*<!M><I><4>                                                       */ DEADTRANS( L'4'	,0xE4C0	,0xA710	,0x0000), // '4' ➔ "꜐" U+A710 MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-/*<!M><i><5>                                                       */ DEADTRANS( L'5'	,0xE4BF	,0xA711	,0x0000), // '5' ➔ "꜑" U+A711 MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-/*<!M><I><5>                                                       */ DEADTRANS( L'5'	,0xE4C0	,0xA711	,0x0000), // '5' ➔ "꜑" U+A711 MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-/*<!M><i><e>                                                       */ DEADTRANS( L'e'	,0xE4BF	,0xAB61	,0x0000), // 'e' ➔ "ꭡ" U+AB61 LATIN SMALL LETTER IOTIFIED E
-/*<!M><i><i>                                                       */ DEADTRANS( L'i'	,0xE4BF	,0xE4C4	,0x0001), // Intermediate multikey chain link
-/*<!M><I><I>                                                       */ DEADTRANS( L'I'	,0xE4C0	,0x2AFF	,0x0000), // 'I' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><i><i><%slash>                                               */ DEADTRANS( L'/'	,0xE4C4	,0x2148	,0x0000), // '/' ➔ "ⅈ" U+2148 DOUBLE-STRUCK ITALIC SMALL I
-/*<!M><i><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE4C4	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><i><i><~space>                                               */ DEADTRANS( L' '	,0xE4C4	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><I><J>                                                       */ DEADTRANS( L'J'	,0xE4C0	,0x0132	,0x0000), // 'J' ➔ "Ĳ" U+0132 LATIN CAPITAL LIGATURE IJ
-/*<!M><I><j>                                                       */ DEADTRANS( L'j'	,0xE4C0	,0x0132	,0x0000), // 'j' ➔ "Ĳ" U+0132 LATIN CAPITAL LIGATURE IJ
-/*<!M><i><j>                                                       */ DEADTRANS( L'j'	,0xE4BF	,0x0133	,0x0000), // 'j' ➔ "ĳ" U+0133 LATIN SMALL LIGATURE IJ
-/*<!M><i><l>                                                       */ DEADTRANS( L'l'	,0xE4BF	,0xE4C5	,0x0001), // Intermediate multikey chain link
-/*<!M><I><L>                                                       */ DEADTRANS( L'L'	,0xE4C0	,0xE4C6	,0x0001), // Intermediate multikey chain link
-/*<!M><i><l><s>                                                    */ DEADTRANS( L's'	,0xE4C5	,0x20AA	,0x0000), // 's' ➔ "₪" U+20AA NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
-/*<!M><I><L><S>                                                    */ DEADTRANS( L'S'	,0xE4C6	,0x20AA	,0x0000), // 'S' ➔ "₪" U+20AA NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
-/*<!M><i><n>                                                       */ DEADTRANS( L'n'	,0xE4BF	,0xE4C7	,0x0001), // Intermediate multikey chain link
-/*<!M><I><N>                                                       */ DEADTRANS( L'N'	,0xE4C0	,0xE4C8	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><r>                                                    */ DEADTRANS( L'r'	,0xE4C7	,0x20B9	,0x0000), // 'r' ➔ "₹" U+20B9 INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
-/*<!M><I><N><R>                                                    */ DEADTRANS( L'R'	,0xE4C8	,0x20B9	,0x0000), // 'R' ➔ "₹" U+20B9 INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
-/*<!M><i><n><t>                                                    */ DEADTRANS( L't'	,0xE4C7	,0xE4C9	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><t><e>                                                 */ DEADTRANS( L'e'	,0xE4C9	,0xE4CA	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><t><e><r>                                              */ DEADTRANS( L'r'	,0xE4CA	,0xE4CB	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><t><e><r><s>                                           */ DEADTRANS( L's'	,0xE4CB	,0xE4CC	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><t><e><r><s><e>                                        */ DEADTRANS( L'e'	,0xE4CC	,0xE4CD	,0x0001), // Intermediate multikey chain link
-/*<!M><i><n><t><e><r><s><e><c>                                     */ DEADTRANS( L'c'	,0xE4CD	,0x2229	,0x0000), // 'c' ➔ "∩" U+2229 INTERSECTION French truncated name
-/*<!M><I><O>                                                       */ DEADTRANS( L'O'	,0xE4C0	,0xE4CE	,0x0001), // Intermediate multikey chain link
-/*<!M><i><o>                                                       */ DEADTRANS( L'o'	,0xE4BF	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
-/*<!M><I><o>                                                       */ DEADTRANS( L'o'	,0xE4C0	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
-/*<!M><I><O><%hash>                                                */ DEADTRANS( L'#'	,0xE4CE	,0x29F3	,0x0000), // '#' ➔ "⧳" U+29F3 ERROR-BARRED BLACK CIRCLE
-/*<!M><I><O><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE4CE	,0x29F2	,0x0000), // ' ' ➔ "⧲" U+29F2 ERROR-BARRED WHITE CIRCLE
-/*<!M><I><O><~space>                                               */ DEADTRANS( L' '	,0xE4CE	,0x29F2	,0x0000), // ' ' ➔ "⧲" U+29F2 ERROR-BARRED WHITE CIRCLE
-/*<!M><i><p>                                                       */ DEADTRANS( L'p'	,0xE4BF	,0xE4CF	,0x0001), // Intermediate multikey chain link
-/*<!M><I><P>                                                       */ DEADTRANS( L'P'	,0xE4C0	,0xE4D0	,0x0001), // Intermediate multikey chain link
-/*<!M><i><p><d>                                                    */ DEADTRANS( L'd'	,0xE4CF	,0x261B	,0x0000), // 'd' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-/*<!M><I><P><D>                                                    */ DEADTRANS( L'D'	,0xE4D0	,0x261B	,0x0000), // 'D' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
-/*<!M><i><p><g>                                                    */ DEADTRANS( L'g'	,0xE4CF	,0x261A	,0x0000), // 'g' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-/*<!M><I><P><G>                                                    */ DEADTRANS( L'G'	,0xE4D0	,0x261A	,0x0000), // 'G' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
-/*<!M><i><q>                                                       */ DEADTRANS( L'q'	,0xE4BF	,0xE4D1	,0x0001), // Intermediate multikey chain link
-/*<!M><I><Q>                                                       */ DEADTRANS( L'Q'	,0xE4C0	,0xE4D2	,0x0001), // Intermediate multikey chain link
-/*<!M><i><q><d>                                                    */ DEADTRANS( L'd'	,0xE4D1	,0x0639	,0x0000), // 'd' ➔ "ع" U+0639 ARABIC LETTER AIN, Iraqi Dinar IRAQ
-/*<!M><I><Q><D>                                                    */ DEADTRANS( L'D'	,0xE4D2	,0x0639	,0x0000), // 'D' ➔ "ع" U+0639 ARABIC LETTER AIN, Iraqi Dinar IRAQ
-/*<!M><i><r>                                                       */ DEADTRANS( L'r'	,0xE4BF	,0xE4D3	,0x0001), // Intermediate multikey chain link
-/*<!M><I><R>                                                       */ DEADTRANS( L'R'	,0xE4C0	,0xE4D4	,0x0001), // Intermediate multikey chain link
-/*<!M><i><r><m>                                                    */ DEADTRANS( L'm'	,0xE4D3	,0xE4D5	,0x0001), // Intermediate multikey chain link
-/*<!M><I><R><M>                                                    */ DEADTRANS( L'M'	,0xE4D4	,0xE4D6	,0x0001), // Intermediate multikey chain link
-/*<!M><i><r><m><p>                                                 */ DEADTRANS( L'p'	,0xE4D5	,0xE4D7	,0x0001), // Intermediate multikey chain link
-/*<!M><I><R><M><P>                                                 */ DEADTRANS( L'P'	,0xE4D6	,0xE4D8	,0x0001), // Intermediate multikey chain link
-/*<!M><i><r><m><p><d>                                              */ DEADTRANS( L'd'	,0xE4D7	,0xDC49	,0x0000), // High surrogate: D83D; 'd' ➔ "👉" U+1F449 WHITE RIGHT POINTING BACKHAND INDEX
-/*<!M><I><R><M><P><D>                                              */ DEADTRANS( L'D'	,0xE4D8	,0xDC49	,0x0000), // High surrogate: D83D; 'D' ➔ "👉" U+1F449 WHITE RIGHT POINTING BACKHAND INDEX
-/*<!M><i><r><m><p><g>                                              */ DEADTRANS( L'g'	,0xE4D7	,0xDC48	,0x0000), // High surrogate: D83D; 'g' ➔ "👈" U+1F448 WHITE LEFT POINTING BACKHAND INDEX
-/*<!M><I><R><M><P><G>                                              */ DEADTRANS( L'G'	,0xE4D8	,0xDC48	,0x0000), // High surrogate: D83D; 'G' ➔ "👈" U+1F448 WHITE LEFT POINTING BACKHAND INDEX
-/*<!M><i><r><r>                                                    */ DEADTRANS( L'r'	,0xE4D3	,0xFDFC	,0x0000), // 'r' ➔ "﷼" U+FDFC RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
-/*<!M><I><R><R>                                                    */ DEADTRANS( L'R'	,0xE4D4	,0xFDFC	,0x0000), // 'R' ➔ "﷼" U+FDFC RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
-/*<!M><I><S>                                                       */ DEADTRANS( L'S'	,0xE4C0	,0xA76C	,0x0000), // 'S' ➔ "Ꝭ" U+A76C LATIN CAPITAL LETTER IS
-/*<!M><I><s>                                                       */ DEADTRANS( L's'	,0xE4C0	,0xA76C	,0x0000), // 's' ➔ "Ꝭ" U+A76C LATIN CAPITAL LETTER IS
-/*<!M><i><s>                                                       */ DEADTRANS( L's'	,0xE4BF	,0xA76D	,0x0000), // 's' ➔ "ꝭ" U+A76D LATIN SMALL LETTER IS
-/*<!M><j>                                                          */ DEADTRANS( L'j'	,0x00A6	,0xE4D9	,0x0001), // Intermediate multikey chain link
-/*<!M><J>                                                          */ DEADTRANS( L'J'	,0x00A6	,0xE4DA	,0x0001), // Intermediate multikey chain link
-/*<!M><j><%exclam>                                                 */ DEADTRANS( L'!'	,0xE4D9	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
-/*<!M><J><%exclam>                                                 */ DEADTRANS( L'!'	,0xE4DA	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
-/*<!M><j><%greater>                                                */ DEADTRANS( L'>'	,0xE4D9	,0x22B1	,0x0000), // '>' ➔ "⊱" U+22B1 SUCCEEDS UNDER RELATION
-/*<!M><J><%greater>                                                */ DEADTRANS( L'>'	,0xE4DA	,0x22B1	,0x0000), // '>' ➔ "⊱" U+22B1 SUCCEEDS UNDER RELATION
-/*<!M><j><%less>                                                   */ DEADTRANS( L'<'	,0xE4D9	,0x22B0	,0x0000), // '<' ➔ "⊰" U+22B0 PRECEDES UNDER RELATION
-/*<!M><J><%less>                                                   */ DEADTRANS( L'<'	,0xE4DA	,0x22B0	,0x0000), // '<' ➔ "⊰" U+22B0 PRECEDES UNDER RELATION
-/*<!M><j><%minus>                                                  */ DEADTRANS( L'-'	,0xE4D9	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><J><%minus>                                                  */ DEADTRANS( L'-'	,0xE4DA	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><j><a>                                                       */ DEADTRANS( L'a'	,0xE4D9	,0xAB60	,0x0000), // 'a' ➔ "ꭠ" U+AB60 LATIN SMALL LETTER SAKHA YAT
-/*<!M><j><j>                                                       */ DEADTRANS( L'j'	,0xE4D9	,0x2149	,0x0000), // 'j' ➔ "ⅉ" U+2149 DOUBLE-STRUCK ITALIC SMALL J
-/*<!M><j><o>                                                       */ DEADTRANS( L'o'	,0xE4D9	,0xE4DB	,0x0001), // Intermediate multikey chain link
-/*<!M><J><O>                                                       */ DEADTRANS( L'O'	,0xE4DA	,0xE4DC	,0x0001), // Intermediate multikey chain link
-/*<!M><j><p>                                                       */ DEADTRANS( L'p'	,0xE4D9	,0xE4DD	,0x0001), // Intermediate multikey chain link
-/*<!M><J><P>                                                       */ DEADTRANS( L'P'	,0xE4DA	,0xE4DE	,0x0001), // Intermediate multikey chain link
-/*<!M><j><p><y>                                                    */ DEADTRANS( L'y'	,0xE4DD	,0x00A5	,0x0000), // 'y' ➔ "¥" U+00A5 YEN SIGN, Yen JAPAN
-/*<!M><J><P><Y>                                                    */ DEADTRANS( L'Y'	,0xE4DE	,0x00A5	,0x0000), // 'Y' ➔ "¥" U+00A5 YEN SIGN, Yen JAPAN
-/*<!M><k>                                                          */ DEADTRANS( L'k'	,0x00A6	,0xE4DF	,0x0001), // Intermediate multikey chain link
-/*<!M><K>                                                          */ DEADTRANS( L'K'	,0x00A6	,0xE4E0	,0x0001), // Intermediate multikey chain link
-/*<!M><k><%at>                                                     */ DEADTRANS( L'@'	,0xE4DF	,0x03F0	,0x0000), // '@' ➔ "ϰ" U+03F0 GREEK KAPPA SYMBOL
-/*<!M><k><%equal>                                                  */ DEADTRANS( L'='	,0xE4DF	,0x20AD	,0x0000), // '=' ➔ "₭" U+20AD KIP SIGN
-/*<!M><K><%equal>                                                  */ DEADTRANS( L'='	,0xE4E0	,0x20AD	,0x0000), // '=' ➔ "₭" U+20AD KIP SIGN
-/*<!M><k><%minus>                                                  */ DEADTRANS( L'-'	,0xE4DF	,0x20AD	,0x0000), // '-' ➔ "₭" U+20AD KIP SIGN
-/*<!M><K><%minus>                                                  */ DEADTRANS( L'-'	,0xE4E0	,0x20AD	,0x0000), // '-' ➔ "₭" U+20AD KIP SIGN
-/*<!M><k><d>                                                       */ DEADTRANS( L'd'	,0xE4DF	,0x23F7	,0x0000), // 'd' ➔ "⏷" U+23F7 BLACK MEDIUM DOWN-POINTING TRIANGLE
-/*<!M><K><D>                                                       */ DEADTRANS( L'D'	,0xE4E0	,0x23F7	,0x0000), // 'D' ➔ "⏷" U+23F7 BLACK MEDIUM DOWN-POINTING TRIANGLE
-/*<!M><k><g>                                                       */ DEADTRANS( L'g'	,0xE4DF	,0xE4E1	,0x0001), // Intermediate multikey chain link
-/*<!M><K><G>                                                       */ DEADTRANS( L'G'	,0xE4E0	,0xE4E2	,0x0001), // Intermediate multikey chain link
-/*<!M><k><g><s>                                                    */ DEADTRANS( L's'	,0xE4E1	,0x20C0	,0x0000), // 's' ➔ "⃀" U+20C0 SOM SIGN, Som KYRGYZSTAN
-/*<!M><K><G><S>                                                    */ DEADTRANS( L'S'	,0xE4E2	,0x20C0	,0x0000), // 'S' ➔ "⃀" U+20C0 SOM SIGN, Som KYRGYZSTAN
-/*<!M><k><h>                                                       */ DEADTRANS( L'h'	,0xE4DF	,0xE4E3	,0x0001), // Intermediate multikey chain link
-/*<!M><K><H>                                                       */ DEADTRANS( L'H'	,0xE4E0	,0xE4E4	,0x0001), // Intermediate multikey chain link
-/*<!M><k><h><r>                                                    */ DEADTRANS( L'r'	,0xE4E3	,0x17DB	,0x0000), // 'r' ➔ "៛" U+17DB KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
-/*<!M><K><H><R>                                                    */ DEADTRANS( L'R'	,0xE4E4	,0x17DB	,0x0000), // 'R' ➔ "៛" U+17DB KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
-/*<!M><k><o>                                                       */ DEADTRANS( L'o'	,0xE4DF	,0xE4E5	,0x0001), // Intermediate multikey chain link
-/*<!M><K><O>                                                       */ DEADTRANS( L'O'	,0xE4E0	,0xE4E6	,0x0001), // Intermediate multikey chain link
-/*<!M><k><o><m>                                                    */ DEADTRANS( L'm'	,0xE4E5	,0x203B	,0x0000), // 'm' ➔ "※" U+203B REFERENCE MARK, Japanese kome
-/*<!M><K><O><M>                                                    */ DEADTRANS( L'M'	,0xE4E6	,0x203B	,0x0000), // 'M' ➔ "※" U+203B REFERENCE MARK, Japanese kome
-/*<!M><k><p>                                                       */ DEADTRANS( L'p'	,0xE4DF	,0xE4E7	,0x0001), // Intermediate multikey chain link
-/*<!M><K><P>                                                       */ DEADTRANS( L'P'	,0xE4E0	,0xE4E8	,0x0001), // Intermediate multikey chain link
-/*<!M><k><p><w>                                                    */ DEADTRANS( L'w'	,0xE4E7	,0x20A9	,0x0000), // 'w' ➔ "₩" U+20A9 WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
-/*<!M><K><P><W>                                                    */ DEADTRANS( L'W'	,0xE4E8	,0x20A9	,0x0000), // 'W' ➔ "₩" U+20A9 WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
-/*<!M><k><r>                                                       */ DEADTRANS( L'r'	,0xE4DF	,0xE4E9	,0x0001), // Intermediate multikey chain link
-/*<!M><K><R>                                                       */ DEADTRANS( L'R'	,0xE4E0	,0xE4EA	,0x0001), // Intermediate multikey chain link
-/*<!M><k><r><w>                                                    */ DEADTRANS( L'w'	,0xE4E9	,0x20A9	,0x0000), // 'w' ➔ "₩" U+20A9 WON SIGN, Won KOREA (THE REPUBLIC OF)
-/*<!M><K><R><W>                                                    */ DEADTRANS( L'W'	,0xE4EA	,0x20A9	,0x0000), // 'W' ➔ "₩" U+20A9 WON SIGN, Won KOREA (THE REPUBLIC OF)
-/*<!M><k><u>                                                       */ DEADTRANS( L'u'	,0xE4DF	,0x23F6	,0x0000), // 'u' ➔ "⏶" U+23F6 BLACK MEDIUM UP-POINTING TRIANGLE
-/*<!M><K><U>                                                       */ DEADTRANS( L'U'	,0xE4E0	,0x23F6	,0x0000), // 'U' ➔ "⏶" U+23F6 BLACK MEDIUM UP-POINTING TRIANGLE
-/*<!M><k><w>                                                       */ DEADTRANS( L'w'	,0xE4DF	,0xE4EB	,0x0001), // Intermediate multikey chain link
-/*<!M><K><W>                                                       */ DEADTRANS( L'W'	,0xE4E0	,0xE4EC	,0x0001), // Intermediate multikey chain link
-/*<!M><k><z>                                                       */ DEADTRANS( L'z'	,0xE4DF	,0xE4ED	,0x0001), // Intermediate multikey chain link
-/*<!M><K><Z>                                                       */ DEADTRANS( L'Z'	,0xE4E0	,0xE4EE	,0x0001), // Intermediate multikey chain link
-/*<!M><k><z><t>                                                    */ DEADTRANS( L't'	,0xE4ED	,0x20B8	,0x0000), // 't' ➔ "₸" U+20B8 TENGE SIGN, Tenge KAZAKHSTAN
-/*<!M><K><Z><T>                                                    */ DEADTRANS( L'T'	,0xE4EE	,0x20B8	,0x0000), // 'T' ➔ "₸" U+20B8 TENGE SIGN, Tenge KAZAKHSTAN
-/*<!M><l>                                                          */ DEADTRANS( L'l'	,0x00A6	,0xE4EF	,0x0001), // Intermediate multikey chain link
-/*<!M><L>                                                          */ DEADTRANS( L'L'	,0x00A6	,0xE4F0	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4F0	,0xE4F1	,0x0001), // Intermediate multikey chain link
-/*<!M><l><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4EF	,0xE4F2	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%backslash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE4F1	,0xE4F3	,0x0001), // Intermediate multikey chain link
-/*<!M><l><%backslash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE4F2	,0xE4F4	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%backslash><%backslash><%period>                         */ DEADTRANS( L'.'	,0xE4F3	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><l><%backslash><%backslash><%period>                         */ DEADTRANS( L'.'	,0xE4F4	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><L><%backslash><%period>                                     */ DEADTRANS( L'.'	,0xE4F1	,0x27D3	,0x0000), // '.' ➔ "⟓" U+27D3 LOWER RIGHT CORNER WITH DOT
-/*<!M><l><%backslash><%period>                                     */ DEADTRANS( L'.'	,0xE4F2	,0x27D3	,0x0000), // '.' ➔ "⟓" U+27D3 LOWER RIGHT CORNER WITH DOT
-/*<!M><L><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE4F1	,0x2143	,0x0000), // ' ' ➔ "⅃" U+2143 REVERSED SANS-SERIF CAPITAL L
-/*<!M><L><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE4F1	,0x2143	,0x0000), // ' ' ➔ "⅃" U+2143 REVERSED SANS-SERIF CAPITAL L
-/*<!M><L><%bracketright>                                           */ DEADTRANS( L']'	,0xE4F0	,0x299C	,0x0000), // ']' ➔ "⦜" U+299C RIGHT ANGLE VARIANT WITH SQUARE
-/*<!M><l><%bracketright>                                           */ DEADTRANS( L']'	,0xE4EF	,0x299C	,0x0000), // ']' ➔ "⦜" U+299C RIGHT ANGLE VARIANT WITH SQUARE
-/*<!M><L><%equal>                                                  */ DEADTRANS( L'='	,0xE4F0	,0x20A4	,0x0000), // '=' ➔ "₤" U+20A4 LIRA SIGN
-/*<!M><l><%minus>                                                  */ DEADTRANS( L'-'	,0xE4EF	,0x00A3	,0x0000), // '-' ➔ "£" U+00A3 POUND SIGN
-/*<!M><L><%minus>                                                  */ DEADTRANS( L'-'	,0xE4F0	,0x00A3	,0x0000), // '-' ➔ "£" U+00A3 POUND SIGN
-/*<!M><L><%parenright>                                             */ DEADTRANS( L')'	,0xE4F0	,0xE4F5	,0x0001), // Intermediate multikey chain link
-/*<!M><l><%parenright>                                             */ DEADTRANS( L')'	,0xE4EF	,0xE4F6	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%parenright><%period>                                    */ DEADTRANS( L'.'	,0xE4F5	,0x299D	,0x0000), // '.' ➔ "⦝" U+299D MEASURED RIGHT ANGLE WITH DOT
-/*<!M><l><%parenright><%period>                                    */ DEADTRANS( L'.'	,0xE4F6	,0x299D	,0x0000), // '.' ➔ "⦝" U+299D MEASURED RIGHT ANGLE WITH DOT
-/*<!M><L><%parenright><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4F5	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
-/*<!M><l><%parenright><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4F6	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
-/*<!M><L><%parenright><~space>                                     */ DEADTRANS( L' '	,0xE4F5	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
-/*<!M><l><%parenright><~space>                                     */ DEADTRANS( L' '	,0xE4F6	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
-/*<!M><L><%percent>                                                */ DEADTRANS( L'%'	,0xE4F0	,0xE4F7	,0x0001), // Intermediate multikey chain link
-/*<!M><l><%percent>                                                */ DEADTRANS( L'%'	,0xE4EF	,0xE4F8	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE4F7	,0xE4F9	,0x0001), // Intermediate multikey chain link
-/*<!M><l><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE4F8	,0xE4FA	,0x0001), // Intermediate multikey chain link
-/*<!M><L><%percent><%percent><%period>                             */ DEADTRANS( L'.'	,0xE4F9	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><l><%percent><%percent><%period>                             */ DEADTRANS( L'.'	,0xE4FA	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><L><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE4F7	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><l><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE4F8	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
-/*<!M><L><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE4F7	,0x2142	,0x0000), // ' ' ➔ "⅂" U+2142 TURNED SANS-SERIF CAPITAL L
-/*<!M><L><%percent><~space>                                        */ DEADTRANS( L' '	,0xE4F7	,0x2142	,0x0000), // ' ' ➔ "⅂" U+2142 TURNED SANS-SERIF CAPITAL L
-/*<!M><L><%period>                                                 */ DEADTRANS( L'.'	,0xE4F0	,0x013F	,0x0000), // '.' ➔ "Ŀ" U+013F LATIN CAPITAL LETTER L WITH MIDDLE DOT
-/*<!M><l><%period>                                                 */ DEADTRANS( L'.'	,0xE4EF	,0x0140	,0x0000), // '.' ➔ "ŀ" U+0140 LATIN SMALL LETTER L WITH MIDDLE DOT
-/*<!M><L><%slash>                                                  */ DEADTRANS( L'/'	,0xE4F0	,0x27C0	,0x0000), // '/' ➔ "⟀" U+27C0 THREE DIMENSIONAL ANGLE
-/*<!M><l><%slash>                                                  */ DEADTRANS( L'/'	,0xE4EF	,0x27C0	,0x0000), // '/' ➔ "⟀" U+27C0 THREE DIMENSIONAL ANGLE
-/*<!M><L><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4F0	,0x2112	,0x0000), // '~' ➔ "ℒ" U+2112 SCRIPT CAPITAL L
-/*<!M><l><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4EF	,0x2113	,0x0000), // '~' ➔ "ℓ" U+2113 SCRIPT SMALL L
-/*<!M><l><2>                                                       */ DEADTRANS( L'2'	,0xE4EF	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
-/*<!M><L><2>                                                       */ DEADTRANS( L'2'	,0xE4F0	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
-/*<!M><l><3>                                                       */ DEADTRANS( L'3'	,0xE4EF	,0x026E	,0x0000), // '3' ➔ "ɮ" U+026E LATIN SMALL LETTER LEZH
-/*<!M><L><3>                                                       */ DEADTRANS( L'3'	,0xE4F0	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
-/*<!M><l><5>                                                       */ DEADTRANS( L'5'	,0xE4EF	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
-/*<!M><L><5>                                                       */ DEADTRANS( L'5'	,0xE4F0	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
-/*<!M><l><a>                                                       */ DEADTRANS( L'a'	,0xE4EF	,0xE4FB	,0x0001), // Intermediate multikey chain link
-/*<!M><L><A>                                                       */ DEADTRANS( L'A'	,0xE4F0	,0xE4FC	,0x0001), // Intermediate multikey chain link
-/*<!M><l><a><k>                                                    */ DEADTRANS( L'k'	,0xE4FB	,0x20AD	,0x0000), // 'k' ➔ "₭" U+20AD KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
-/*<!M><L><A><K>                                                    */ DEADTRANS( L'K'	,0xE4FC	,0x20AD	,0x0000), // 'K' ➔ "₭" U+20AD KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
-/*<!M><l><b>                                                       */ DEADTRANS( L'b'	,0xE4EF	,0xE4FD	,0x0001), // Intermediate multikey chain link
-/*<!M><L><B>                                                       */ DEADTRANS( L'B'	,0xE4F0	,0xE4FE	,0x0001), // Intermediate multikey chain link
-/*<!M><l><b><%minus>                                               */ DEADTRANS( L'-'	,0xE4FD	,0x2114	,0x0000), // '-' ➔ "℔" U+2114 L B BAR SYMBOL
-/*<!M><l><d>                                                       */ DEADTRANS( L'd'	,0xE4EF	,0xE4FF	,0x0001), // Intermediate multikey chain link
-/*<!M><L><D>                                                       */ DEADTRANS( L'D'	,0xE4F0	,0xE500	,0x0001), // Intermediate multikey chain link
-/*<!M><l><d><p>                                                    */ DEADTRANS( L'p'	,0xE4FF	,0xE501	,0x0001), // Intermediate multikey chain link
-/*<!M><L><D><P>                                                    */ DEADTRANS( L'P'	,0xE500	,0xE502	,0x0001), // Intermediate multikey chain link
-/*<!M><l><d><p><e>                                                 */ DEADTRANS( L'e'	,0xE501	,0x2676	,0x0000), // 'e' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><L><D><P><E>                                                 */ DEADTRANS( L'E'	,0xE502	,0x2676	,0x0000), // 'E' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><l><e>                                                       */ DEADTRANS( L'e'	,0xE4EF	,0xE503	,0x0001), // Intermediate multikey chain link
-/*<!M><L><E>                                                       */ DEADTRANS( L'E'	,0xE4F0	,0xE504	,0x0001), // Intermediate multikey chain link
-/*<!M><l><e><o>                                                    */ DEADTRANS( L'o'	,0xE503	,0x264C	,0x0000), // 'o' ➔ "♌" U+264C LEO emoji
-/*<!M><L><E><O>                                                    */ DEADTRANS( L'O'	,0xE504	,0x264C	,0x0000), // 'O' ➔ "♌" U+264C LEO emoji
-/*<!M><l><e><z>                                                    */ DEADTRANS( L'z'	,0xE503	,0xE505	,0x0001), // Intermediate multikey chain link
-/*<!M><l><e><z><h>                                                 */ DEADTRANS( L'h'	,0xE505	,0x026E	,0x0000), // 'h' ➔ "ɮ" U+026E LATIN SMALL LETTER LEZH
-/*<!M><l><f>                                                       */ DEADTRANS( L'f'	,0xE4EF	,0x21B4	,0x0000), // 'f' ➔ "↴" U+21B4 RIGHTWARDS ARROW WITH CORNER DOWNWARDS
-/*<!M><L><F>                                                       */ DEADTRANS( L'F'	,0xE4F0	,0x21B4	,0x0000), // 'F' ➔ "↴" U+21B4 RIGHTWARDS ARROW WITH CORNER DOWNWARDS
-/*<!M><l><i>                                                       */ DEADTRANS( L'i'	,0xE4EF	,0xE506	,0x0001), // Intermediate multikey chain link
-/*<!M><L><I>                                                       */ DEADTRANS( L'I'	,0xE4F0	,0xE507	,0x0001), // Intermediate multikey chain link
-/*<!M><l><i><b>                                                    */ DEADTRANS( L'b'	,0xE506	,0xE508	,0x0001), // Intermediate multikey chain link
-/*<!M><L><I><B>                                                    */ DEADTRANS( L'B'	,0xE507	,0xE509	,0x0001), // Intermediate multikey chain link
-/*<!M><l><i><b><r>                                                 */ DEADTRANS( L'r'	,0xE508	,0x264E	,0x0000), // 'r' ➔ "♎" U+264E LIBRA emoji
-/*<!M><L><I><B><R>                                                 */ DEADTRANS( L'R'	,0xE509	,0x264E	,0x0000), // 'R' ➔ "♎" U+264E LIBRA emoji
-/*<!M><l><i><o>                                                    */ DEADTRANS( L'o'	,0xE506	,0xE50A	,0x0001), // Intermediate multikey chain link
-/*<!M><L><I><O>                                                    */ DEADTRANS( L'O'	,0xE507	,0xE50B	,0x0001), // Intermediate multikey chain link
-/*<!M><l><i><o><n>                                                 */ DEADTRANS( L'n'	,0xE50A	,0x264C	,0x0000), // 'n' ➔ "♌" U+264C LEO emoji
-/*<!M><L><I><O><N>                                                 */ DEADTRANS( L'N'	,0xE50B	,0x264C	,0x0000), // 'N' ➔ "♌" U+264C LEO emoji
-/*<!M><L><J>                                                       */ DEADTRANS( L'J'	,0xE4F0	,0x01C7	,0x0000), // 'J' ➔ "Ǉ" U+01C7 LATIN CAPITAL LETTER LJ
-/*<!M><L><j>                                                       */ DEADTRANS( L'j'	,0xE4F0	,0x01C8	,0x0000), // 'j' ➔ "ǈ" U+01C8 LATIN CAPITAL LETTER L WITH SMALL LETTER J
-/*<!M><l><j>                                                       */ DEADTRANS( L'j'	,0xE4EF	,0x01C9	,0x0000), // 'j' ➔ "ǉ" U+01C9 LATIN SMALL LETTER LJ
-/*<!M><L><L>                                                       */ DEADTRANS( L'L'	,0xE4F0	,0x1EFA	,0x0000), // 'L' ➔ "Ỻ" U+1EFA LATIN CAPITAL LETTER MIDDLE-WELSH LL
-/*<!M><L><l>                                                       */ DEADTRANS( L'l'	,0xE4F0	,0x1EFA	,0x0000), // 'l' ➔ "Ỻ" U+1EFA LATIN CAPITAL LETTER MIDDLE-WELSH LL
-/*<!M><l><l>                                                       */ DEADTRANS( L'l'	,0xE4EF	,0x1EFB	,0x0000), // 'l' ➔ "ỻ" U+1EFB LATIN SMALL LETTER MIDDLE-WELSH LL
-/*<!M><L><N>                                                       */ DEADTRANS( L'N'	,0xE4F0	,0x237C	,0x0000), // 'N' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
-/*<!M><l><n>                                                       */ DEADTRANS( L'n'	,0xE4EF	,0x237C	,0x0000), // 'n' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
-/*<!M><L><p>                                                       */ DEADTRANS( L'p'	,0xE4F0	,0xE50C	,0x0001), // Intermediate multikey chain link
-/*<!M><L><P>                                                       */ DEADTRANS( L'P'	,0xE4F0	,0x214A	,0x0000), // 'P' ➔ "⅊" U+214A PROPERTY LINE
-/*<!M><l><p>                                                       */ DEADTRANS( L'p'	,0xE4EF	,0x214A	,0x0000), // 'p' ➔ "⅊" U+214A PROPERTY LINE
-/*<!M><L><p><a>                                                    */ DEADTRANS( L'a'	,0xE50C	,0xE50D	,0x0001), // Intermediate multikey chain link
-/*<!M><L><p><a><r>                                                 */ DEADTRANS( L'r'	,0xE50D	,0xE50E	,0x0001), // Intermediate multikey chain link
-/*<!M><L><p><a><r><e>                                              */ DEADTRANS( L'e'	,0xE50E	,0xE50F	,0x0001), // Intermediate multikey chain link
-/*<!M><L><p><a><r><e><n>                                           */ DEADTRANS( L'n'	,0xE50F	,0xE510	,0x0001), // Intermediate multikey chain link
-/*<!M><L><p><a><r><e><n><g>                                        */ DEADTRANS( L'g'	,0xE510	,0xE511	,0x0001), // Intermediate multikey chain link
-/*<!M><L><p><a><r><e><n><g><t>                                     */ DEADTRANS( L't'	,0xE511	,0x2995	,0x0000), // 't' ➔ "⦕" U+2995 DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
-/*<!M><l><r>                                                       */ DEADTRANS( L'r'	,0xE4EF	,0xE512	,0x0001), // Intermediate multikey chain link
-/*<!M><L><R>                                                       */ DEADTRANS( L'R'	,0xE4F0	,0xE513	,0x0001), // Intermediate multikey chain link
-/*<!M><l><r><e>                                                    */ DEADTRANS( L'e'	,0xE512	,0xE514	,0x0001), // Intermediate multikey chain link
-/*<!M><L><R><E>                                                    */ DEADTRANS( L'E'	,0xE513	,0xE515	,0x0001), // Intermediate multikey chain link
-/*<!M><l><r><e><t>                                                 */ DEADTRANS( L't'	,0xE514	,0x2BA0	,0x0000), // 't' ➔ "⮠" U+2BA0 DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
-/*<!M><L><R><E><T>                                                 */ DEADTRANS( L'T'	,0xE515	,0x2BA0	,0x0000), // 'T' ➔ "⮠" U+2BA0 DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
-/*<!M><l><s>                                                       */ DEADTRANS( L's'	,0xE4EF	,0x02AA	,0x0000), // 's' ➔ "ʪ" U+02AA LATIN SMALL LETTER LS DIGRAPH
-/*<!M><l><u>                                                       */ DEADTRANS( L'u'	,0xE4EF	,0xA772	,0x0000), // 'u' ➔ "ꝲ" U+A772 LATIN SMALL LETTER LUM
-/*<!M><l><z>                                                       */ DEADTRANS( L'z'	,0xE4EF	,0x02AB	,0x0000), // 'z' ➔ "ʫ" U+02AB LATIN SMALL LETTER LZ DIGRAPH
-/*<!M><L><Z>                                                       */ DEADTRANS( L'Z'	,0xE4F0	,0x237C	,0x0000), // 'Z' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
-/*<!M><L><z>                                                       */ DEADTRANS( L'z'	,0xE4F0	,0x237C	,0x0000), // 'z' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
-/*<!M><L><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4F0	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
-/*<!M><l><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4EF	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
-/*<!M><L><~space>                                                  */ DEADTRANS( L' '	,0xE4F0	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
-/*<!M><l><~space>                                                  */ DEADTRANS( L' '	,0xE4EF	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
-/*<!M><m>                                                          */ DEADTRANS( L'm'	,0x00A6	,0xE516	,0x0001), // Intermediate multikey chain link
-/*<!M><M>                                                          */ DEADTRANS( L'M'	,0x00A6	,0xE517	,0x0001), // Intermediate multikey chain link
-/*<!M><m><%backslash>                                              */ DEADTRANS( L'\\'	,0xE516	,0x29E2	,0x0000), // '\' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
-/*<!M><m><%equal>                                                  */ DEADTRANS( L'='	,0xE516	,0x225E	,0x0000), // '=' ➔ "≞" U+225E MEASURED BY
-/*<!M><M><%equal>                                                  */ DEADTRANS( L'='	,0xE517	,0x225E	,0x0000), // '=' ➔ "≞" U+225E MEASURED BY
-/*<!M><m><%greater>                                                */ DEADTRANS( L'>'	,0xE516	,0x200E	,0x0000), // '>' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
-/*<!M><m><%less>                                                   */ DEADTRANS( L'<'	,0xE516	,0x200F	,0x0000), // '<' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
-/*<!M><m><%percent>                                                */ DEADTRANS( L'%'	,0xE516	,0x29E2	,0x0000), // '%' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
-/*<!M><m><%slash>                                                  */ DEADTRANS( L'/'	,0xE516	,0x20A5	,0x0000), // '/' ➔ "₥" U+20A5 MILL SIGN
-/*<!M><M><%tilde>                                                  */ DEADTRANS( L'~'	,0xE517	,0x2133	,0x0000), // '~' ➔ "ℳ" U+2133 SCRIPT CAPITAL M
-/*<!M><m><c>                                                       */ DEADTRANS( L'c'	,0xE516	,0xDD6A	,0x0000), // High surrogate: D83C; 'c' ➔ "🅪" U+1F16A RAISED MC SIGN
-/*<!M><M><C>                                                       */ DEADTRANS( L'C'	,0xE517	,0xDD6A	,0x0000), // High surrogate: D83C; 'C' ➔ "🅪" U+1F16A RAISED MC SIGN
-/*<!M><m><d>                                                       */ DEADTRANS( L'd'	,0xE516	,0xDD6B	,0x0000), // High surrogate: D83C; 'd' ➔ "🅫" U+1F16B RAISED MD SIGN
-/*<!M><M><D>                                                       */ DEADTRANS( L'D'	,0xE517	,0xDD6B	,0x0000), // High surrogate: D83C; 'D' ➔ "🅫" U+1F16B RAISED MD SIGN
-/*<!M><m><h>                                                       */ DEADTRANS( L'h'	,0xE516	,0x2127	,0x0000), // 'h' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><M><h>                                                       */ DEADTRANS( L'h'	,0xE517	,0x2127	,0x0000), // 'h' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><M><H>                                                       */ DEADTRANS( L'H'	,0xE517	,0x2127	,0x0000), // 'H' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><m><k>                                                       */ DEADTRANS( L'k'	,0xE516	,0xE518	,0x0001), // Intermediate multikey chain link
-/*<!M><M><K>                                                       */ DEADTRANS( L'K'	,0xE517	,0xE519	,0x0001), // Intermediate multikey chain link
-/*<!M><m><n>                                                       */ DEADTRANS( L'n'	,0xE516	,0xE51A	,0x0001), // Intermediate multikey chain link
-/*<!M><M><N>                                                       */ DEADTRANS( L'N'	,0xE517	,0xE51B	,0x0001), // Intermediate multikey chain link
-/*<!M><m><n><t>                                                    */ DEADTRANS( L't'	,0xE51A	,0x20AE	,0x0000), // 't' ➔ "₮" U+20AE TUGRIK SIGN, Tugrik MONGOLIA
-/*<!M><M><N><T>                                                    */ DEADTRANS( L'T'	,0xE51B	,0x20AE	,0x0000), // 'T' ➔ "₮" U+20AE TUGRIK SIGN, Tugrik MONGOLIA
-/*<!M><m><r>                                                       */ DEADTRANS( L'r'	,0xE516	,0xDD6C	,0x0000), // High surrogate: D83C; 'r' ➔ "🅬" U+1F16C RAISED MR SIGN
-/*<!M><M><R>                                                       */ DEADTRANS( L'R'	,0xE517	,0xDD6C	,0x0000), // High surrogate: D83C; 'R' ➔ "🅬" U+1F16C RAISED MR SIGN
-/*<!M><m><s>                                                       */ DEADTRANS( L's'	,0xE516	,0x2120	,0x0000), // 's' ➔ "℠" U+2120 SERVICE MARK
-/*<!M><M><S>                                                       */ DEADTRANS( L'S'	,0xE517	,0x2120	,0x0000), // 'S' ➔ "℠" U+2120 SERVICE MARK
-/*<!M><m><t>                                                       */ DEADTRANS( L't'	,0xE516	,0x2122	,0x0000), // 't' ➔ "™" U+2122 TRADE MARK SIGN emoji
-/*<!M><M><T>                                                       */ DEADTRANS( L'T'	,0xE517	,0x2122	,0x0000), // 'T' ➔ "™" U+2122 TRADE MARK SIGN emoji
-/*<!M><m><u>                                                       */ DEADTRANS( L'u'	,0xE516	,0xE51C	,0x0001), // Intermediate multikey chain link
-/*<!M><M><U>                                                       */ DEADTRANS( L'U'	,0xE517	,0xE51D	,0x0001), // Intermediate multikey chain link
-/*<!M><m><u><l>                                                    */ DEADTRANS( L'l'	,0xE51C	,0x00A6	,0x0000), // 'l' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
-/*<!M><M><U><L>                                                    */ DEADTRANS( L'L'	,0xE51D	,0x00A6	,0x0000), // 'L' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
-/*<!M><m><u><r>                                                    */ DEADTRANS( L'r'	,0xE51C	,0x20A8	,0x0000), // 'r' ➔ "₨" U+20A8 RUPEE SIGN, Mauritius Rupee MAURITIUS
-/*<!M><M><U><R>                                                    */ DEADTRANS( L'R'	,0xE51D	,0x20A8	,0x0000), // 'R' ➔ "₨" U+20A8 RUPEE SIGN, Mauritius Rupee MAURITIUS
-/*<!M><m><u><~space>                                               */ DEADTRANS( L' '	,0xE51C	,0xA773	,0x0000), // ' ' ➔ "ꝳ" U+A773 LATIN SMALL LETTER MUM
-/*<!M><m><v>                                                       */ DEADTRANS( L'v'	,0xE516	,0xE51E	,0x0001), // Intermediate multikey chain link
-/*<!M><M><V>                                                       */ DEADTRANS( L'V'	,0xE517	,0xE51F	,0x0001), // Intermediate multikey chain link
-/*<!M><m><v><r>                                                    */ DEADTRANS( L'r'	,0xE51E	,0x0783	,0x0000), // 'r' ➔ "ރ" U+0783 THAANA LETTER RAA, Rufiyaa MALDIVES
-/*<!M><M><V><R>                                                    */ DEADTRANS( L'R'	,0xE51F	,0x0783	,0x0000), // 'R' ➔ "ރ" U+0783 THAANA LETTER RAA, Rufiyaa MALDIVES
-/*<!M><m><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE516	,0x29E2	,0x0000), // ' ' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
-/*<!M><m><~space>                                                  */ DEADTRANS( L' '	,0xE516	,0x29E2	,0x0000), // ' ' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
-/*<!M><multiply>                                                   */ DEADTRANS( 0x00D7	,0x00A6	,0xE520	,0x0001), // Intermediate multikey chain link
-/*<!M><multiply><division>                                         */ DEADTRANS( 0x00F7	,0xE520	,0x22C7	,0x0000), // '÷' ➔ "⋇" U+22C7 DIVISION TIMES
-/*<!M><N>                                                          */ DEADTRANS( L'N'	,0x00A6	,0xE521	,0x0001), // Intermediate multikey chain link
-/*<!M><n>                                                          */ DEADTRANS( L'n'	,0x00A6	,0xE522	,0x0001), // Intermediate multikey chain link
-/*<!M><n><%bar>                                                    */ DEADTRANS( L'|'	,0xE522	,0x22D4	,0x0000), // '|' ➔ "⋔" U+22D4 PITCHFORK
-/*<!M><n><%bracketleft>                                            */ DEADTRANS( L'['	,0xE522	,0x2293	,0x0000), // '[' ➔ "⊓" U+2293 SQUARE CAP
-/*<!M><N><%bracketleft>                                            */ DEADTRANS( L'['	,0xE521	,0x2A05	,0x0000), // '[' ➔ "⨅" U+2A05 N-ARY SQUARE INTERSECTION OPERATOR
-/*<!M><n><%bracketright>                                           */ DEADTRANS( L']'	,0xE522	,0x2293	,0x0000), // ']' ➔ "⊓" U+2293 SQUARE CAP
-/*<!M><N><%bracketright>                                           */ DEADTRANS( L']'	,0xE521	,0x2A05	,0x0000), // ']' ➔ "⨅" U+2A05 N-ARY SQUARE INTERSECTION OPERATOR
-/*<!M><n><%circum>                                                 */ DEADTRANS( L'^'	,0xE522	,0x2A44	,0x0000), // '^' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><N><%circum>                                                 */ DEADTRANS( L'^'	,0xE521	,0x2A44	,0x0000), // '^' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><N><%equal>                                                  */ DEADTRANS( L'='	,0xE521	,0x20A6	,0x0000), // '=' ➔ "₦" U+20A6 NAIRA SIGN
-/*<!M><n><%equal>                                                  */ DEADTRANS( L'='	,0xE522	,0x266C	,0x0000), // '=' ➔ "♬" U+266C BEAMED SIXTEENTH NOTES
-/*<!M><N><%greater>                                                */ DEADTRANS( L'>'	,0xE521	,0x21AF	,0x0000), // '>' ➔ "↯" U+21AF DOWNWARDS ZIGZAG ARROW
-/*<!M><n><%greater>                                                */ DEADTRANS( L'>'	,0xE522	,0x21B7	,0x0000), // '>' ➔ "↷" U+21B7 CLOCKWISE TOP SEMICIRCLE ARROW
-/*<!M><n><%hash>                                                   */ DEADTRANS( L'#'	,0xE522	,0x266E	,0x0000), // '#' ➔ "♮" U+266E MUSIC NATURAL SIGN
-/*<!M><n><%less>                                                   */ DEADTRANS( L'<'	,0xE522	,0x21B6	,0x0000), // '<' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
-/*<!M><n><%period>                                                 */ DEADTRANS( L'.'	,0xE522	,0x2A40	,0x0000), // '.' ➔ "⩀" U+2A40 INTERSECTION WITH DOT
-/*<!M><N><%period>                                                 */ DEADTRANS( L'.'	,0xE521	,0x2A40	,0x0000), // '.' ➔ "⩀" U+2A40 INTERSECTION WITH DOT
-/*<!M><n><%underscore>                                             */ DEADTRANS( L'_'	,0xE522	,0xE523	,0x0001), // Intermediate multikey chain link
-/*<!M><N><%underscore>                                             */ DEADTRANS( L'_'	,0xE521	,0xE524	,0x0001), // Intermediate multikey chain link
-/*<!M><n><%underscore><u>                                          */ DEADTRANS( L'u'	,0xE523	,0x2A49	,0x0000), // 'u' ➔ "⩉" U+2A49 INTERSECTION ABOVE BAR ABOVE UNION
-/*<!M><N><%underscore><U>                                          */ DEADTRANS( L'U'	,0xE524	,0x2A49	,0x0000), // 'U' ➔ "⩉" U+2A49 INTERSECTION ABOVE BAR ABOVE UNION
-/*<!M><n><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE523	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
-/*<!M><N><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE524	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
-/*<!M><n><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE523	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
-/*<!M><N><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE524	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
-/*<!M><n><2>                                                       */ DEADTRANS( L'2'	,0xE522	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
-/*<!M><N><2>                                                       */ DEADTRANS( L'2'	,0xE521	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
-/*<!M><n><3>                                                       */ DEADTRANS( L'3'	,0xE522	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
-/*<!M><N><3>                                                       */ DEADTRANS( L'3'	,0xE521	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
-/*<!M><n><4>                                                       */ DEADTRANS( L'4'	,0xE522	,0x2669	,0x0000), // '4' ➔ "♩" U+2669 QUARTER NOTE
-/*<!M><N><4>                                                       */ DEADTRANS( L'4'	,0xE521	,0x2669	,0x0000), // '4' ➔ "♩" U+2669 QUARTER NOTE
-/*<!M><n><5>                                                       */ DEADTRANS( L'5'	,0xE522	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
-/*<!M><N><5>                                                       */ DEADTRANS( L'5'	,0xE521	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
-/*<!M><n><8>                                                       */ DEADTRANS( L'8'	,0xE522	,0x266A	,0x0000), // '8' ➔ "♪" U+266A EIGHTH NOTE
-/*<!M><N><8>                                                       */ DEADTRANS( L'8'	,0xE521	,0x266A	,0x0000), // '8' ➔ "♪" U+266A EIGHTH NOTE
-/*<!M><n><a>                                                       */ DEADTRANS( L'a'	,0xE522	,0xE525	,0x0001), // Intermediate multikey chain link
-/*<!M><N><A>                                                       */ DEADTRANS( L'A'	,0xE521	,0xE526	,0x0001), // Intermediate multikey chain link
-/*<!M><n><a><n>                                                    */ DEADTRANS( L'n'	,0xE525	,0x22BC	,0x0000), // 'n' ➔ "⊼" U+22BC NAND
-/*<!M><N><A><N>                                                    */ DEADTRANS( L'N'	,0xE526	,0x22BC	,0x0000), // 'N' ➔ "⊼" U+22BC NAND
-/*<!M><n><a><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE525	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><N><A><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE526	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><n><a><~space>                                               */ DEADTRANS( L' '	,0xE525	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><N><A><~space>                                               */ DEADTRANS( L' '	,0xE526	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
-/*<!M><n><b>                                                       */ DEADTRANS( L'b'	,0xE522	,0xE527	,0x0001), // Intermediate multikey chain link
-/*<!M><N><B>                                                       */ DEADTRANS( L'B'	,0xE521	,0xE528	,0x0001), // Intermediate multikey chain link
-/*<!M><n><b><s>                                                    */ DEADTRANS( L's'	,0xE527	,0x25BF	,0x0000), // 's' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><N><B><S>                                                    */ DEADTRANS( L'S'	,0xE528	,0x25BF	,0x0000), // 'S' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><n><b><t>                                                    */ DEADTRANS( L't'	,0xE527	,0x25BE	,0x0000), // 't' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><N><B><T>                                                    */ DEADTRANS( L'T'	,0xE528	,0x25BE	,0x0000), // 'T' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><n><e>                                                       */ DEADTRANS( L'e'	,0xE522	,0xE529	,0x0001), // Intermediate multikey chain link
-/*<!M><N><E>                                                       */ DEADTRANS( L'E'	,0xE521	,0xE52A	,0x0001), // Intermediate multikey chain link
-/*<!M><n><e><i>                                                    */ DEADTRANS( L'i'	,0xE529	,0x2744	,0x0000), // 'i' ➔ "❄" U+2744 SNOWFLAKE emoji
-/*<!M><N><E><I>                                                    */ DEADTRANS( L'I'	,0xE52A	,0x2744	,0x0000), // 'I' ➔ "❄" U+2744 SNOWFLAKE emoji
-/*<!M><N><G>                                                       */ DEADTRANS( L'G'	,0xE521	,0xE52B	,0x0001), // Intermediate multikey chain link
-/*<!M><n><g>                                                       */ DEADTRANS( L'g'	,0xE522	,0xE52C	,0x0001), // Intermediate multikey chain link
-/*<!M><N><g>                                                       */ DEADTRANS( L'g'	,0xE521	,0x014A	,0x0000), // 'g' ➔ "Ŋ" U+014A LATIN CAPITAL LETTER ENG
-/*<!M><n><g><n>                                                    */ DEADTRANS( L'n'	,0xE52C	,0x20A6	,0x0000), // 'n' ➔ "₦" U+20A6 NAIRA SIGN, Naira NIGERIA
-/*<!M><N><G><N>                                                    */ DEADTRANS( L'N'	,0xE52B	,0x20A6	,0x0000), // 'N' ➔ "₦" U+20A6 NAIRA SIGN, Naira NIGERIA
-/*<!M><N><G><~space>                                               */ DEADTRANS( L' '	,0xE52B	,0x014A	,0x0000), // ' ' ➔ "Ŋ" U+014A LATIN CAPITAL LETTER ENG
-/*<!M><n><g><~space>                                               */ DEADTRANS( L' '	,0xE52C	,0x014B	,0x0000), // ' ' ➔ "ŋ" U+014B LATIN SMALL LETTER ENG
-/*<!M><n><I>                                                       */ DEADTRANS( L'I'	,0xE522	,0x2ADB	,0x0000), // 'I' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
-/*<!M><N><J>                                                       */ DEADTRANS( L'J'	,0xE521	,0x01CA	,0x0000), // 'J' ➔ "Ǌ" U+01CA LATIN CAPITAL LETTER NJ
-/*<!M><N><j>                                                       */ DEADTRANS( L'j'	,0xE521	,0x01CB	,0x0000), // 'j' ➔ "ǋ" U+01CB LATIN CAPITAL LETTER N WITH SMALL LETTER J
-/*<!M><n><j>                                                       */ DEADTRANS( L'j'	,0xE522	,0x01CC	,0x0000), // 'j' ➔ "ǌ" U+01CC LATIN SMALL LETTER NJ
-/*<!M><n><m>                                                       */ DEADTRANS( L'm'	,0xE522	,0xE52D	,0x0001), // Intermediate multikey chain link
-/*<!M><N><M>                                                       */ DEADTRANS( L'M'	,0xE521	,0xE52E	,0x0001), // Intermediate multikey chain link
-/*<!M><n><m><l>                                                    */ DEADTRANS( L'l'	,0xE52D	,0x21ED	,0x0000), // 'l' ➔ "⇭" U+21ED UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
-/*<!M><N><M><L>                                                    */ DEADTRANS( L'L'	,0xE52E	,0x21ED	,0x0000), // 'L' ➔ "⇭" U+21ED UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
-/*<!M><N><N>                                                       */ DEADTRANS( L'N'	,0xE521	,0x2115	,0x0000), // 'N' ➔ "ℕ" U+2115 DOUBLE-STRUCK CAPITAL N
-/*<!M><n><n>                                                       */ DEADTRANS( L'n'	,0xE522	,0x2A4B	,0x0000), // 'n' ➔ "⩋" U+2A4B INTERSECTION BESIDE AND JOINED WITH INTERSECTION
-/*<!M><n><o>                                                       */ DEADTRANS( L'o'	,0xE522	,0xE52F	,0x0001), // Intermediate multikey chain link
-/*<!M><N><O>                                                       */ DEADTRANS( L'O'	,0xE521	,0xE530	,0x0001), // Intermediate multikey chain link
-/*<!M><N><o>                                                       */ DEADTRANS( L'o'	,0xE521	,0x2116	,0x0000), // 'o' ➔ "№" U+2116 NUMERO SIGN
-/*<!M><n><O>                                                       */ DEADTRANS( L'O'	,0xE522	,0x2116	,0x0000), // 'O' ➔ "№" U+2116 NUMERO SIGN
-/*<!M><n><o><%underscore>                                          */ DEADTRANS( L'_'	,0xE52F	,0x2116	,0x0000), // '_' ➔ "№" U+2116 NUMERO SIGN
-/*<!M><N><O><%underscore>                                          */ DEADTRANS( L'_'	,0xE530	,0x2116	,0x0000), // '_' ➔ "№" U+2116 NUMERO SIGN
-/*<!M><n><o><r>                                                    */ DEADTRANS( L'r'	,0xE52F	,0x22BD	,0x0000), // 'r' ➔ "⊽" U+22BD NOR
-/*<!M><N><O><R>                                                    */ DEADTRANS( L'R'	,0xE530	,0x22BD	,0x0000), // 'R' ➔ "⊽" U+22BD NOR
-/*<!M><n><p>                                                       */ DEADTRANS( L'p'	,0xE522	,0xE531	,0x0001), // Intermediate multikey chain link
-/*<!M><N><P>                                                       */ DEADTRANS( L'P'	,0xE521	,0xE532	,0x0001), // Intermediate multikey chain link
-/*<!M><n><s>                                                       */ DEADTRANS( L's'	,0xE522	,0x20AA	,0x0000), // 's' ➔ "₪" U+20AA NEW SHEQEL SIGN
-/*<!M><N><S>                                                       */ DEADTRANS( L'S'	,0xE521	,0x20AA	,0x0000), // 'S' ➔ "₪" U+20AA NEW SHEQEL SIGN
-/*<!M><n><u>                                                       */ DEADTRANS( L'u'	,0xE522	,0xE533	,0x0001), // Intermediate multikey chain link
-/*<!M><N><U>                                                       */ DEADTRANS( L'U'	,0xE521	,0xE534	,0x0001), // Intermediate multikey chain link
-/*<!M><n><u><m>                                                    */ DEADTRANS( L'm'	,0xE533	,0xA774	,0x0000), // 'm' ➔ "ꝴ" U+A774 LATIN SMALL LETTER NUM
-/*<!M><n><u><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE533	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
-/*<!M><N><U><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE534	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
-/*<!M><n><u><~space>                                               */ DEADTRANS( L' '	,0xE533	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
-/*<!M><N><U><~space>                                               */ DEADTRANS( L' '	,0xE534	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
-/*<!M><n><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE522	,0x2229	,0x0000), // ' ' ➔ "∩" U+2229 INTERSECTION
-/*<!M><N><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE521	,0x22C2	,0x0000), // ' ' ➔ "⋂" U+22C2 N-ARY INTERSECTION
-/*<!M><n><~space>                                                  */ DEADTRANS( L' '	,0xE522	,0x2229	,0x0000), // ' ' ➔ "∩" U+2229 INTERSECTION
-/*<!M><N><~space>                                                  */ DEADTRANS( L' '	,0xE521	,0x22C2	,0x0000), // ' ' ➔ "⋂" U+22C2 N-ARY INTERSECTION
-/*<!M><o>                                                          */ DEADTRANS( L'o'	,0x00A6	,0xE535	,0x0001), // Intermediate multikey chain link
-/*<!M><O>                                                          */ DEADTRANS( L'O'	,0x00A6	,0xE536	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%asterisk>                                               */ DEADTRANS( L'*'	,0xE535	,0x229B	,0x0000), // '*' ➔ "⊛" U+229B CIRCLED ASTERISK OPERATOR
-/*<!M><O><%asterisk>                                               */ DEADTRANS( L'*'	,0xE536	,0x229B	,0x0000), // '*' ➔ "⊛" U+229B CIRCLED ASTERISK OPERATOR
-/*<!M><o><%backslash>                                              */ DEADTRANS( L'\\'	,0xE535	,0xE537	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%backslash>                                              */ DEADTRANS( L'\\'	,0xE536	,0xE538	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%backslash><c>                                           */ DEADTRANS( L'c'	,0xE537	,0xDD6E	,0x0000), // High surrogate: D83C; 'c' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
-/*<!M><o><%backslash><C>                                           */ DEADTRANS( L'C'	,0xE537	,0xDD6E	,0x0000), // High surrogate: D83C; 'C' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
-/*<!M><O><%backslash><C>                                           */ DEADTRANS( L'C'	,0xE538	,0xDD6E	,0x0000), // High surrogate: D83C; 'C' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
-/*<!M><O><%backslash><c>                                           */ DEADTRANS( L'c'	,0xE538	,0xDD6E	,0x0000), // High surrogate: D83C; 'c' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
-/*<!M><O><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE538	,0x29B8	,0x0000), // ' ' ➔ "⦸" U+29B8 CIRCLED REVERSE SOLIDUS
-/*<!M><o><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE537	,0x29F5	,0x0000), // ' ' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><O><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE538	,0x29B8	,0x0000), // ' ' ➔ "⦸" U+29B8 CIRCLED REVERSE SOLIDUS
-/*<!M><o><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE537	,0x29F5	,0x0000), // ' ' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><o><%bar>                                                    */ DEADTRANS( L'|'	,0xE535	,0xE539	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%bar>                                                    */ DEADTRANS( L'|'	,0xE536	,0xE53A	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%bar><%bar>                                              */ DEADTRANS( L'|'	,0xE53A	,0x29B7	,0x0000), // '|' ➔ "⦷" U+29B7 CIRCLED PARALLEL
-/*<!M><o><%bar><%bar>                                              */ DEADTRANS( L'|'	,0xE539	,0x29B7	,0x0000), // '|' ➔ "⦷" U+29B7 CIRCLED PARALLEL
-/*<!M><o><%bar><%hash>                                             */ DEADTRANS( L'#'	,0xE539	,0x25D1	,0x0000), // '#' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
-/*<!M><O><%bar><%hash>                                             */ DEADTRANS( L'#'	,0xE53A	,0x25D1	,0x0000), // '#' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
-/*<!M><o><%bar><%underscore>                                       */ DEADTRANS( L'_'	,0xE539	,0x27DF	,0x0000), // '_' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><O><%bar><%underscore>                                       */ DEADTRANS( L'_'	,0xE53A	,0x29B9	,0x0000), // '_' ➔ "⦹" U+29B9 CIRCLED PERPENDICULAR
-/*<!M><O><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE53A	,0x29B6	,0x0000), // ' ' ➔ "⦶" U+29B6 CIRCLED VERTICAL BAR
-/*<!M><o><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE539	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
-/*<!M><O><%bar><~space>                                            */ DEADTRANS( L' '	,0xE53A	,0x29B6	,0x0000), // ' ' ➔ "⦶" U+29B6 CIRCLED VERTICAL BAR
-/*<!M><o><%bar><~space>                                            */ DEADTRANS( L' '	,0xE539	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
-/*<!M><o><%circum>                                                 */ DEADTRANS( L'^'	,0xE535	,0x2A22	,0x0000), // '^' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
-/*<!M><o><%colon>                                                  */ DEADTRANS( L':'	,0xE535	,0xE53B	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%colon>                                                  */ DEADTRANS( L':'	,0xE536	,0xE53C	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%colon><%minus>                                          */ DEADTRANS( L'-'	,0xE53C	,0x2A38	,0x0000), // '-' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
-/*<!M><o><%colon><%minus>                                          */ DEADTRANS( L'-'	,0xE53B	,0x2A38	,0x0000), // '-' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
-/*<!M><O><%colon><%slash>                                          */ DEADTRANS( L'/'	,0xE53C	,0x29BC	,0x0000), // '/' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><o><%colon><%slash>                                          */ DEADTRANS( L'/'	,0xE53B	,0x29BC	,0x0000), // '/' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><o><%colon><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE53B	,0x2982	,0x0000), // ' ' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><o><%colon><~space>                                          */ DEADTRANS( L' '	,0xE53B	,0x2982	,0x0000), // ' ' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><o><%equal>                                                  */ DEADTRANS( L'='	,0xE535	,0x2257	,0x0000), // '=' ➔ "≗" U+2257 RING EQUAL TO
-/*<!M><O><%equal>                                                  */ DEADTRANS( L'='	,0xE536	,0x29C3	,0x0000), // '=' ➔ "⧃" U+29C3 CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
-/*<!M><O><%exclam>                                                 */ DEADTRANS( L'!'	,0xE536	,0x29EC	,0x0000), // '!' ➔ "⧬" U+29EC WHITE CIRCLE WITH DOWN ARROW
-/*<!M><o><%greater>                                                */ DEADTRANS( L'>'	,0xE535	,0x2941	,0x0000), // '>' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><O><%greater>                                                */ DEADTRANS( L'>'	,0xE536	,0x29C1	,0x0000), // '>' ➔ "⧁" U+29C1 CIRCLED GREATER-THAN
-/*<!M><o><%hash>                                                   */ DEADTRANS( L'#'	,0xE535	,0xE53D	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%hash>                                                   */ DEADTRANS( L'#'	,0xE536	,0xE53E	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%hash><%bar>                                             */ DEADTRANS( L'|'	,0xE53D	,0x25D0	,0x0000), // '|' ➔ "◐" U+25D0 CIRCLE WITH LEFT HALF BLACK
-/*<!M><O><%hash><%bar>                                             */ DEADTRANS( L'|'	,0xE53E	,0x25D0	,0x0000), // '|' ➔ "◐" U+25D0 CIRCLE WITH LEFT HALF BLACK
-/*<!M><O><%hash><%exclam>                                          */ DEADTRANS( L'!'	,0xE53E	,0x29ED	,0x0000), // '!' ➔ "⧭" U+29ED BLACK CIRCLE WITH DOWN ARROW
-/*<!M><o><%hash><%minus>                                           */ DEADTRANS( L'-'	,0xE53D	,0x25D3	,0x0000), // '-' ➔ "◓" U+25D3 CIRCLE WITH UPPER HALF BLACK
-/*<!M><O><%hash><%minus>                                           */ DEADTRANS( L'-'	,0xE53E	,0x25D3	,0x0000), // '-' ➔ "◓" U+25D3 CIRCLE WITH UPPER HALF BLACK
-/*<!M><o><%hash><e>                                                */ DEADTRANS( L'e'	,0xE53D	,0xAB62	,0x0000), // 'e' ➔ "ꭢ" U+AB62 LATIN SMALL LETTER OPEN OE
-/*<!M><o><%hash><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53D	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><O><%hash><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53E	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><o><%hash><~space>                                           */ DEADTRANS( L' '	,0xE53D	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><O><%hash><~space>                                           */ DEADTRANS( L' '	,0xE53E	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><O><%less>                                                   */ DEADTRANS( L'<'	,0xE536	,0xE53F	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%less>                                                   */ DEADTRANS( L'<'	,0xE535	,0x2940	,0x0000), // '<' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><O><%less><%exclam>                                          */ DEADTRANS( L'!'	,0xE53F	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
-/*<!M><O><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53F	,0x29C0	,0x0000), // ' ' ➔ "⧀" U+29C0 CIRCLED LESS-THAN
-/*<!M><O><%less><~space>                                           */ DEADTRANS( L' '	,0xE53F	,0x29C0	,0x0000), // ' ' ➔ "⧀" U+29C0 CIRCLED LESS-THAN
-/*<!M><o><%minus>                                                  */ DEADTRANS( L'-'	,0xE535	,0xE540	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%minus>                                                  */ DEADTRANS( L'-'	,0xE536	,0xE541	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%minus><%bar>                                            */ DEADTRANS( L'|'	,0xE541	,0x29BA	,0x0000), // '|' ➔ "⦺" U+29BA CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
-/*<!M><O><%minus><%colon>                                          */ DEADTRANS( L':'	,0xE541	,0x2A38	,0x0000), // ':' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
-/*<!M><o><%minus><%colon>                                          */ DEADTRANS( L':'	,0xE540	,0x2A38	,0x0000), // ':' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
-/*<!M><o><%minus><%greater>                                        */ DEADTRANS( L'>'	,0xE540	,0x21AC	,0x0000), // '>' ➔ "↬" U+21AC RIGHTWARDS ARROW WITH LOOP
-/*<!M><O><%minus><%greater>                                        */ DEADTRANS( L'>'	,0xE541	,0x21AC	,0x0000), // '>' ➔ "↬" U+21AC RIGHTWARDS ARROW WITH LOOP
-/*<!M><o><%minus><%hash>                                           */ DEADTRANS( L'#'	,0xE540	,0x25D2	,0x0000), // '#' ➔ "◒" U+25D2 CIRCLE WITH LOWER HALF BLACK
-/*<!M><O><%minus><%hash>                                           */ DEADTRANS( L'#'	,0xE541	,0x25D2	,0x0000), // '#' ➔ "◒" U+25D2 CIRCLE WITH LOWER HALF BLACK
-/*<!M><o><%minus><%minus>                                          */ DEADTRANS( L'-'	,0xE540	,0x229D	,0x0000), // '-' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><O><%minus><%minus>                                          */ DEADTRANS( L'-'	,0xE541	,0x229D	,0x0000), // '-' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><o><%minus><%period>                                         */ DEADTRANS( L'.'	,0xE540	,0x22B6	,0x0000), // '.' ➔ "⊶" U+22B6 ORIGINAL OF
-/*<!M><o><%minus><o>                                               */ DEADTRANS( L'o'	,0xE540	,0x29DF	,0x0000), // 'o' ➔ "⧟" U+29DF DOUBLE-ENDED MULTIMAP
-/*<!M><o><%minus><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE540	,0x2296	,0x0000), // ' ' ➔ "⊖" U+2296 CIRCLED MINUS
-/*<!M><O><%minus><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE541	,0x29B5	,0x0000), // ' ' ➔ "⦵" U+29B5 CIRCLE WITH HORIZONTAL BAR
-/*<!M><o><%minus><~space>                                          */ DEADTRANS( L' '	,0xE540	,0x2296	,0x0000), // ' ' ➔ "⊖" U+2296 CIRCLED MINUS
-/*<!M><O><%minus><~space>                                          */ DEADTRANS( L' '	,0xE541	,0x29B5	,0x0000), // ' ' ➔ "⦵" U+29B5 CIRCLE WITH HORIZONTAL BAR
-/*<!M><o><%parenright>                                             */ DEADTRANS( L')'	,0xE535	,0x29DC	,0x0000), // ')' ➔ "⧜" U+29DC INCOMPLETE INFINITY
-/*<!M><O><%parenright>                                             */ DEADTRANS( L')'	,0xE536	,0x29DC	,0x0000), // ')' ➔ "⧜" U+29DC INCOMPLETE INFINITY
-/*<!M><O><%percent>                                                */ DEADTRANS( L'%'	,0xE536	,0xE542	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%percent>                                                */ DEADTRANS( L'%'	,0xE535	,0x2127	,0x0000), // '%' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><O><%percent><C>                                             */ DEADTRANS( L'C'	,0xE542	,0xDD2F	,0x0000), // High surrogate: D83C; 'C' ➔ "🄯" U+1F12F COPYLEFT SYMBOL
-/*<!M><O><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE542	,0x2127	,0x0000), // ' ' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><O><%percent><~space>                                        */ DEADTRANS( L' '	,0xE542	,0x2127	,0x0000), // ' ' ➔ "℧" U+2127 INVERTED OHM SIGN
-/*<!M><o><%period>                                                 */ DEADTRANS( L'.'	,0xE535	,0x2299	,0x0000), // '.' ➔ "⊙" U+2299 CIRCLED DOT OPERATOR
-/*<!M><O><%period>                                                 */ DEADTRANS( L'.'	,0xE536	,0x2A00	,0x0000), // '.' ➔ "⨀" U+2A00 N-ARY CIRCLED DOT OPERATOR
-/*<!M><o><%plus>                                                   */ DEADTRANS( L'+'	,0xE535	,0xE543	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%plus>                                                   */ DEADTRANS( L'+'	,0xE536	,0xE544	,0x0001), // Intermediate multikey chain link
-/*<!M><o><%plus><%minus>                                           */ DEADTRANS( L'-'	,0xE543	,0x27F4	,0x0000), // '-' ➔ "⟴" U+27F4 RIGHT ARROW WITH CIRCLED PLUS
-/*<!M><O><%plus><%minus>                                           */ DEADTRANS( L'-'	,0xE544	,0x27F4	,0x0000), // '-' ➔ "⟴" U+27F4 RIGHT ARROW WITH CIRCLED PLUS
-/*<!M><o><%plus><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE543	,0x2295	,0x0000), // ' ' ➔ "⊕" U+2295 CIRCLED PLUS
-/*<!M><O><%plus><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE544	,0x2A01	,0x0000), // ' ' ➔ "⨁" U+2A01 N-ARY CIRCLED PLUS OPERATOR
-/*<!M><o><%plus><~space>                                           */ DEADTRANS( L' '	,0xE543	,0x2295	,0x0000), // ' ' ➔ "⊕" U+2295 CIRCLED PLUS
-/*<!M><O><%plus><~space>                                           */ DEADTRANS( L' '	,0xE544	,0x2A01	,0x0000), // ' ' ➔ "⨁" U+2A01 N-ARY CIRCLED PLUS OPERATOR
-/*<!M><o><%semicolon>                                              */ DEADTRANS( L';'	,0xE535	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><o><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE535	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><o><%slash>                                                  */ DEADTRANS( L'/'	,0xE535	,0xE545	,0x0001), // Intermediate multikey chain link
-/*<!M><O><%slash>                                                  */ DEADTRANS( L'/'	,0xE536	,0x2205	,0x0000), // '/' ➔ "∅" U+2205 EMPTY SET
-/*<!M><o><%slash><%greater>                                        */ DEADTRANS( L'>'	,0xE545	,0x2642	,0x0000), // '>' ➔ "♂" U+2642 MALE SIGN
-/*<!M><o><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE545	,0x2300	,0x0000), // ' ' ➔ "⌀" U+2300 DIAMETER SIGN
-/*<!M><o><%slash><~space>                                          */ DEADTRANS( L' '	,0xE545	,0x2300	,0x0000), // ' ' ➔ "⌀" U+2300 DIAMETER SIGN
-/*<!M><o><%tilde>                                                  */ DEADTRANS( L'~'	,0xE535	,0x2134	,0x0000), // '~' ➔ "ℴ" U+2134 SCRIPT SMALL O
-/*<!M><o><%underscore>                                             */ DEADTRANS( L'_'	,0xE535	,0x00BA	,0x0000), // '_' ➔ "º" U+00BA MASCULINE ORDINAL INDICATOR
-/*<!M><O><%underscore>                                             */ DEADTRANS( L'_'	,0xE536	,0x00BA	,0x0000), // '_' ➔ "º" U+00BA MASCULINE ORDINAL INDICATOR
-/*<!M><o><0>                                                       */ DEADTRANS( L'0'	,0xE535	,0x2469	,0x0000), // '0' ➔ "⑩" U+2469 CIRCLED NUMBER TEN
-/*<!M><O><0>                                                       */ DEADTRANS( L'0'	,0xE536	,0x2469	,0x0000), // '0' ➔ "⑩" U+2469 CIRCLED NUMBER TEN
-/*<!M><o><1>                                                       */ DEADTRANS( L'1'	,0xE535	,0x2460	,0x0000), // '1' ➔ "①" U+2460 CIRCLED DIGIT ONE
-/*<!M><O><1>                                                       */ DEADTRANS( L'1'	,0xE536	,0x2460	,0x0000), // '1' ➔ "①" U+2460 CIRCLED DIGIT ONE
-/*<!M><o><2>                                                       */ DEADTRANS( L'2'	,0xE535	,0x2461	,0x0000), // '2' ➔ "②" U+2461 CIRCLED DIGIT TWO
-/*<!M><O><2>                                                       */ DEADTRANS( L'2'	,0xE536	,0x2461	,0x0000), // '2' ➔ "②" U+2461 CIRCLED DIGIT TWO
-/*<!M><o><3>                                                       */ DEADTRANS( L'3'	,0xE535	,0x2462	,0x0000), // '3' ➔ "③" U+2462 CIRCLED DIGIT THREE
-/*<!M><O><3>                                                       */ DEADTRANS( L'3'	,0xE536	,0x2462	,0x0000), // '3' ➔ "③" U+2462 CIRCLED DIGIT THREE
-/*<!M><o><4>                                                       */ DEADTRANS( L'4'	,0xE535	,0x2463	,0x0000), // '4' ➔ "④" U+2463 CIRCLED DIGIT FOUR
-/*<!M><O><4>                                                       */ DEADTRANS( L'4'	,0xE536	,0x2463	,0x0000), // '4' ➔ "④" U+2463 CIRCLED DIGIT FOUR
-/*<!M><o><5>                                                       */ DEADTRANS( L'5'	,0xE535	,0x2464	,0x0000), // '5' ➔ "⑤" U+2464 CIRCLED DIGIT FIVE
-/*<!M><O><5>                                                       */ DEADTRANS( L'5'	,0xE536	,0x2464	,0x0000), // '5' ➔ "⑤" U+2464 CIRCLED DIGIT FIVE
-/*<!M><o><6>                                                       */ DEADTRANS( L'6'	,0xE535	,0x2465	,0x0000), // '6' ➔ "⑥" U+2465 CIRCLED DIGIT SIX
-/*<!M><O><6>                                                       */ DEADTRANS( L'6'	,0xE536	,0x2465	,0x0000), // '6' ➔ "⑥" U+2465 CIRCLED DIGIT SIX
-/*<!M><o><7>                                                       */ DEADTRANS( L'7'	,0xE535	,0x2466	,0x0000), // '7' ➔ "⑦" U+2466 CIRCLED DIGIT SEVEN
-/*<!M><O><7>                                                       */ DEADTRANS( L'7'	,0xE536	,0x2466	,0x0000), // '7' ➔ "⑦" U+2466 CIRCLED DIGIT SEVEN
-/*<!M><o><8>                                                       */ DEADTRANS( L'8'	,0xE535	,0x2467	,0x0000), // '8' ➔ "⑧" U+2467 CIRCLED DIGIT EIGHT
-/*<!M><O><8>                                                       */ DEADTRANS( L'8'	,0xE536	,0x2467	,0x0000), // '8' ➔ "⑧" U+2467 CIRCLED DIGIT EIGHT
-/*<!M><o><9>                                                       */ DEADTRANS( L'9'	,0xE535	,0x2468	,0x0000), // '9' ➔ "⑨" U+2468 CIRCLED DIGIT NINE
-/*<!M><O><9>                                                       */ DEADTRANS( L'9'	,0xE536	,0x2468	,0x0000), // '9' ➔ "⑨" U+2468 CIRCLED DIGIT NINE
-/*<!M><o><A>                                                       */ DEADTRANS( L'A'	,0xE535	,0x212B	,0x0000), // 'A' ➔ "Å" U+212B ANGSTROM SIGN
-/*<!M><o><a>                                                       */ DEADTRANS( L'a'	,0xE535	,0x212B	,0x0000), // 'a' ➔ "Å" U+212B ANGSTROM SIGN
-/*<!M><O><A>                                                       */ DEADTRANS( L'A'	,0xE536	,0x212B	,0x0000), // 'A' ➔ "Å" U+212B ANGSTROM SIGN
-/*<!M><O><a>                                                       */ DEADTRANS( L'a'	,0xE536	,0x212B	,0x0000), // 'a' ➔ "Å" U+212B ANGSTROM SIGN
-/*<!M><o><b>                                                       */ DEADTRANS( L'b'	,0xE535	,0xDD6F	,0x0000), // High surrogate: D83C; 'b' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
-/*<!M><O><b>                                                       */ DEADTRANS( L'b'	,0xE536	,0xDD6F	,0x0000), // High surrogate: D83C; 'b' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
-/*<!M><O><B>                                                       */ DEADTRANS( L'B'	,0xE536	,0xDD6F	,0x0000), // High surrogate: D83C; 'B' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
-/*<!M><o><c>                                                       */ DEADTRANS( L'c'	,0xE535	,0x00A9	,0x0000), // 'c' ➔ "©" U+00A9 COPYRIGHT SIGN emoji
-/*<!M><O><c>                                                       */ DEADTRANS( L'c'	,0xE536	,0x00A9	,0x0000), // 'c' ➔ "©" U+00A9 COPYRIGHT SIGN emoji
-/*<!M><o><C>                                                       */ DEADTRANS( L'C'	,0xE535	,0xDD6D	,0x0000), // High surrogate: D83C; 'C' ➔ "🅭" U+1F16D CIRCLED CC
-/*<!M><O><C>                                                       */ DEADTRANS( L'C'	,0xE536	,0xDD6D	,0x0000), // High surrogate: D83C; 'C' ➔ "🅭" U+1F16D CIRCLED CC
-/*<!M><O><E>                                                       */ DEADTRANS( L'E'	,0xE536	,0x0152	,0x0000), // 'E' ➔ "Œ" U+0152 LATIN CAPITAL LIGATURE OE
-/*<!M><O><e>                                                       */ DEADTRANS( L'e'	,0xE536	,0x0152	,0x0000), // 'e' ➔ "Œ" U+0152 LATIN CAPITAL LIGATURE OE
-/*<!M><o><e>                                                       */ DEADTRANS( L'e'	,0xE535	,0x0153	,0x0000), // 'e' ➔ "œ" U+0153 LATIN SMALL LIGATURE OE
-/*<!M><o><h>                                                       */ DEADTRANS( L'h'	,0xE535	,0x2126	,0x0000), // 'h' ➔ "Ω" U+2126 OHM SIGN
-/*<!M><O><h>                                                       */ DEADTRANS( L'h'	,0xE536	,0x2126	,0x0000), // 'h' ➔ "Ω" U+2126 OHM SIGN
-/*<!M><O><H>                                                       */ DEADTRANS( L'H'	,0xE536	,0x2126	,0x0000), // 'H' ➔ "Ω" U+2126 OHM SIGN
-/*<!M><o><i>                                                       */ DEADTRANS( L'i'	,0xE535	,0xE546	,0x0001), // Intermediate multikey chain link
-/*<!M><O><I>                                                       */ DEADTRANS( L'I'	,0xE536	,0x23FB	,0x0000), // 'I' ➔ "⏻" U+23FB POWER SYMBOL
-/*<!M><o><I>                                                       */ DEADTRANS( L'I'	,0xE535	,0x2AEF	,0x0000), // 'I' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
-/*<!M><o><i><n>                                                    */ DEADTRANS( L'n'	,0xE546	,0xE547	,0x0001), // Intermediate multikey chain link
-/*<!M><o><i><n><f>                                                 */ DEADTRANS( L'f'	,0xE547	,0x1D17	,0x0000), // 'f' ➔ "ᴗ" U+1D17 LATIN SMALL LETTER BOTTOM HALF O
-/*<!M><o><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE546	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
-/*<!M><o><i><~space>                                               */ DEADTRANS( L' '	,0xE546	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
-/*<!M><o><m>                                                       */ DEADTRANS( L'm'	,0xE535	,0xE548	,0x0001), // Intermediate multikey chain link
-/*<!M><O><M>                                                       */ DEADTRANS( L'M'	,0xE536	,0xE549	,0x0001), // Intermediate multikey chain link
-/*<!M><O><o>                                                       */ DEADTRANS( L'o'	,0xE536	,0xE54A	,0x0001), // Intermediate multikey chain link
-/*<!M><o><O>                                                       */ DEADTRANS( L'O'	,0xE535	,0x29B2	,0x0000), // 'O' ➔ "⦲" U+29B2 EMPTY SET WITH SMALL CIRCLE ABOVE
-/*<!M><O><O>                                                       */ DEADTRANS( L'O'	,0xE536	,0xA74E	,0x0000), // 'O' ➔ "Ꝏ" U+A74E LATIN CAPITAL LETTER OO
-/*<!M><o><o>                                                       */ DEADTRANS( L'o'	,0xE535	,0xA74F	,0x0000), // 'o' ➔ "ꝏ" U+A74F LATIN SMALL LETTER OO
-/*<!M><O><o><x>                                                    */ DEADTRANS( L'x'	,0xE54A	,0x2A37	,0x0000), // 'x' ➔ "⨷" U+2A37 MULTIPLICATION SIGN IN DOUBLE CIRCLE
-/*<!M><O><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE54A	,0x229A	,0x0000), // ' ' ➔ "⊚" U+229A CIRCLED RING OPERATOR
-/*<!M><O><o><~space>                                               */ DEADTRANS( L' '	,0xE54A	,0x229A	,0x0000), // ' ' ➔ "⊚" U+229A CIRCLED RING OPERATOR
-/*<!M><o><p>                                                       */ DEADTRANS( L'p'	,0xE535	,0xE54B	,0x0001), // Intermediate multikey chain link
-/*<!M><O><P>                                                       */ DEADTRANS( L'P'	,0xE536	,0xE54C	,0x0001), // Intermediate multikey chain link
-/*<!M><o><P>                                                       */ DEADTRANS( L'P'	,0xE535	,0x2117	,0x0000), // 'P' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
-/*<!M><O><p>                                                       */ DEADTRANS( L'p'	,0xE536	,0x2117	,0x0000), // 'p' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
-/*<!M><o><p><h>                                                    */ DEADTRANS( L'h'	,0xE54B	,0x26CE	,0x0000), // 'h' ➔ "⛎" U+26CE OPHIUCHUS emoji
-/*<!M><O><P><H>                                                    */ DEADTRANS( L'H'	,0xE54C	,0x26CE	,0x0000), // 'H' ➔ "⛎" U+26CE OPHIUCHUS emoji
-/*<!M><o><p><t>                                                    */ DEADTRANS( L't'	,0xE54B	,0x2325	,0x0000), // 't' ➔ "⌥" U+2325 OPTION KEY
-/*<!M><O><P><T>                                                    */ DEADTRANS( L'T'	,0xE54C	,0x2325	,0x0000), // 'T' ➔ "⌥" U+2325 OPTION KEY
-/*<!M><o><R>                                                       */ DEADTRANS( L'R'	,0xE535	,0x00AE	,0x0000), // 'R' ➔ "®" U+00AE REGISTERED SIGN emoji
-/*<!M><O><r>                                                       */ DEADTRANS( L'r'	,0xE536	,0x00AE	,0x0000), // 'r' ➔ "®" U+00AE REGISTERED SIGN emoji
-/*<!M><o><r>                                                       */ DEADTRANS( L'r'	,0xE535	,0x2228	,0x0000), // 'r' ➔ "∨" U+2228 LOGICAL OR
-/*<!M><O><R>                                                       */ DEADTRANS( L'R'	,0xE536	,0x2228	,0x0000), // 'R' ➔ "∨" U+2228 LOGICAL OR
-/*<!M><o><s>                                                       */ DEADTRANS( L's'	,0xE535	,0xE54D	,0x0001), // Intermediate multikey chain link
-/*<!M><O><S>                                                       */ DEADTRANS( L'S'	,0xE536	,0x2606	,0x0000), // 'S' ➔ "☆" U+2606 WHITE STAR
-/*<!M><o><S>                                                       */ DEADTRANS( L'S'	,0xE535	,0x2A0A	,0x0000), // 'S' ➔ "⨊" U+2A0A MODULO TWO SUM
-/*<!M><o><s><t>                                                    */ DEADTRANS( L't'	,0xE54D	,0x2606	,0x0000), // 't' ➔ "☆" U+2606 WHITE STAR
-/*<!M><o><s><u>                                                    */ DEADTRANS( L'u'	,0xE54D	,0xE54E	,0x0001), // Intermediate multikey chain link
-/*<!M><o><s><u><p>                                                 */ DEADTRANS( L'p'	,0xE54E	,0x1D16	,0x0000), // 'p' ➔ "ᴖ" U+1D16 LATIN SMALL LETTER TOP HALF O
-/*<!M><o><t>                                                       */ DEADTRANS( L't'	,0xE535	,0xE54F	,0x0001), // Intermediate multikey chain link
-/*<!M><O><T>                                                       */ DEADTRANS( L'T'	,0xE536	,0xE550	,0x0001), // Intermediate multikey chain link
-/*<!M><o><T>                                                       */ DEADTRANS( L'T'	,0xE535	,0xE551	,0x0001), // Intermediate multikey chain link
-/*<!M><o><T><%backslash>                                           */ DEADTRANS( L'\\'	,0xE551	,0x27DF	,0x0000), // '\' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><t><%backslash>                                           */ DEADTRANS( L'\\'	,0xE54F	,0x27DF	,0x0000), // '\' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><T><%percent>                                             */ DEADTRANS( L'%'	,0xE551	,0x27DF	,0x0000), // '%' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><t><%percent>                                             */ DEADTRANS( L'%'	,0xE54F	,0x27DF	,0x0000), // '%' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><t><d>                                                    */ DEADTRANS( L'd'	,0xE54F	,0x25BF	,0x0000), // 'd' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><O><T><D>                                                    */ DEADTRANS( L'D'	,0xE550	,0x25BF	,0x0000), // 'D' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><o><t><h>                                                    */ DEADTRANS( L'h'	,0xE54F	,0x2679	,0x0000), // 'h' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><O><T><H>                                                    */ DEADTRANS( L'H'	,0xE550	,0x2679	,0x0000), // 'H' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><o><t><r>                                                    */ DEADTRANS( L'r'	,0xE54F	,0x2679	,0x0000), // 'r' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><O><T><R>                                                    */ DEADTRANS( L'R'	,0xE550	,0x2679	,0x0000), // 'R' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><o><T><T>                                                    */ DEADTRANS( L'T'	,0xE551	,0x27DF	,0x0000), // 'T' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><t><t>                                                    */ DEADTRANS( L't'	,0xE54F	,0x27DF	,0x0000), // 't' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
-/*<!M><o><t><u>                                                    */ DEADTRANS( L'u'	,0xE54F	,0x25B5	,0x0000), // 'u' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><O><T><U>                                                    */ DEADTRANS( L'U'	,0xE550	,0x25B5	,0x0000), // 'U' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><O><U>                                                       */ DEADTRANS( L'U'	,0xE536	,0x0222	,0x0000), // 'U' ➔ "Ȣ" U+0222 LATIN CAPITAL LETTER OU
-/*<!M><O><u>                                                       */ DEADTRANS( L'u'	,0xE536	,0x0222	,0x0000), // 'u' ➔ "Ȣ" U+0222 LATIN CAPITAL LETTER OU
-/*<!M><o><u>                                                       */ DEADTRANS( L'u'	,0xE535	,0x0223	,0x0000), // 'u' ➔ "ȣ" U+0223 LATIN SMALL LETTER OU
-/*<!M><o><x>                                                       */ DEADTRANS( L'x'	,0xE535	,0x2297	,0x0000), // 'x' ➔ "⊗" U+2297 CIRCLED TIMES
-/*<!M><O><X>                                                       */ DEADTRANS( L'X'	,0xE536	,0x29BB	,0x0000), // 'X' ➔ "⦻" U+29BB CIRCLE WITH SUPERIMPOSED X
-/*<!M><O><x>                                                       */ DEADTRANS( L'x'	,0xE536	,0x2A02	,0x0000), // 'x' ➔ "⨂" U+2A02 N-ARY CIRCLED TIMES OPERATOR
-/*<!M><o><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE535	,0x2218	,0x0000), // ' ' ➔ "∘" U+2218 RING OPERATOR
-/*<!M><O><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE536	,0x25CB	,0x0000), // ' ' ➔ "○" U+25CB WHITE CIRCLE
-/*<!M><o><~space>                                                  */ DEADTRANS( L' '	,0xE535	,0x2218	,0x0000), // ' ' ➔ "∘" U+2218 RING OPERATOR
-/*<!M><O><~space>                                                  */ DEADTRANS( L' '	,0xE536	,0x25CB	,0x0000), // ' ' ➔ "○" U+25CB WHITE CIRCLE
-/*<!M><p>                                                          */ DEADTRANS( L'p'	,0x00A6	,0xE552	,0x0001), // Intermediate multikey chain link
-/*<!M><P>                                                          */ DEADTRANS( L'P'	,0x00A6	,0xE553	,0x0001), // Intermediate multikey chain link
-/*<!M><P><%backslash>                                              */ DEADTRANS( L'\\'	,0xE553	,0x2210	,0x0000), // '\' ➔ "∐" U+2210 N-ARY COPRODUCT
-/*<!M><p><%backslash>                                              */ DEADTRANS( L'\\'	,0xE552	,0x2A3F	,0x0000), // '\' ➔ "⨿" U+2A3F AMALGAMATION OR COPRODUCT
-/*<!M><p><%bar>                                                    */ DEADTRANS( L'|'	,0xE552	,0xE554	,0x0001), // Intermediate multikey chain link
-/*<!M><p><%bar><%comma>                                            */ DEADTRANS( L','	,0xE554	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><p><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE554	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><p><%bar><~space>                                            */ DEADTRANS( L' '	,0xE554	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><p><%comma>                                                  */ DEADTRANS( L','	,0xE552	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
-/*<!M><p><%equal>                                                  */ DEADTRANS( L'='	,0xE552	,0x20B1	,0x0000), // '=' ➔ "₱" U+20B1 PESO SIGN
-/*<!M><P><%equal>                                                  */ DEADTRANS( L'='	,0xE553	,0x20B1	,0x0000), // '=' ➔ "₱" U+20B1 PESO SIGN
-/*<!M><p><%exclam>                                                 */ DEADTRANS( L'!'	,0xE552	,0x00B6	,0x0000), // '!' ➔ "¶" U+00B6 PILCROW SIGN
-/*<!M><P><%exclam>                                                 */ DEADTRANS( L'!'	,0xE553	,0x00B6	,0x0000), // '!' ➔ "¶" U+00B6 PILCROW SIGN
-/*<!M><p><%greater>                                                */ DEADTRANS( L'>'	,0xE552	,0x202C	,0x0000), // '>' ➔ "‬" U+202C POP DIRECTIONAL FORMATTING
-/*<!M><p><%less>                                                   */ DEADTRANS( L'<'	,0xE552	,0x202C	,0x0000), // '<' ➔ "‬" U+202C POP DIRECTIONAL FORMATTING
-/*<!M><P><%minus>                                                  */ DEADTRANS( L'-'	,0xE553	,0x20B1	,0x0000), // '-' ➔ "₱" U+20B1 PESO SIGN
-/*<!M><p><%minus>                                                  */ DEADTRANS( L'-'	,0xE552	,0x22FA	,0x0000), // '-' ➔ "⋺" U+22FA CONTAINS WITH LONG HORIZONTAL STROKE
-/*<!M><P><%percent>                                                */ DEADTRANS( L'%'	,0xE553	,0x2210	,0x0000), // '%' ➔ "∐" U+2210 N-ARY COPRODUCT
-/*<!M><p><%percent>                                                */ DEADTRANS( L'%'	,0xE552	,0x2A3F	,0x0000), // '%' ➔ "⨿" U+2A3F AMALGAMATION OR COPRODUCT
-/*<!M><p><%slash>                                                  */ DEADTRANS( L'/'	,0xE552	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
-/*<!M><P><%tilde>                                                  */ DEADTRANS( L'~'	,0xE553	,0x2118	,0x0000), // '~' ➔ "℘" U+2118 SCRIPT CAPITAL P
-/*<!M><P><2>                                                       */ DEADTRANS( L'2'	,0xE553	,0x210F	,0x0000), // '2' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
-/*<!M><p><2>                                                       */ DEADTRANS( L'2'	,0xE552	,0x210F	,0x0000), // '2' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
-/*<!M><p><a>                                                       */ DEADTRANS( L'a'	,0xE552	,0xE555	,0x0001), // Intermediate multikey chain link
-/*<!M><P><A>                                                       */ DEADTRANS( L'A'	,0xE553	,0xE556	,0x0001), // Intermediate multikey chain link
-/*<!M><p><a><c>                                                    */ DEADTRANS( L'c'	,0xE555	,0xE557	,0x0001), // Intermediate multikey chain link
-/*<!M><P><A><C>                                                    */ DEADTRANS( L'C'	,0xE556	,0xE558	,0x0001), // Intermediate multikey chain link
-/*<!M><p><a><c><a>                                                 */ DEADTRANS( L'a'	,0xE557	,0x25AB	,0x0000), // 'a' ➔ "▫" U+25AB WHITE SMALL SQUARE
-/*<!M><P><A><C><A>                                                 */ DEADTRANS( L'A'	,0xE558	,0x25AB	,0x0000), // 'A' ➔ "▫" U+25AB WHITE SMALL SQUARE
-/*<!M><p><a><c><d>                                                 */ DEADTRANS( L'd'	,0xE557	,0x25E6	,0x0000), // 'd' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><P><A><C><D>                                                 */ DEADTRANS( L'D'	,0xE558	,0x25E6	,0x0000), // 'D' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><p><a><r>                                                    */ DEADTRANS( L'r'	,0xE555	,0xE559	,0x0001), // Intermediate multikey chain link
-/*<!M><P><A><R>                                                    */ DEADTRANS( L'R'	,0xE556	,0xE55A	,0x0001), // Intermediate multikey chain link
-/*<!M><p><a><r><c>                                                 */ DEADTRANS( L'c'	,0xE559	,0x25AD	,0x0000), // 'c' ➔ "▭" U+25AD WHITE RECTANGLE
-/*<!M><P><A><R><C>                                                 */ DEADTRANS( L'C'	,0xE55A	,0x25AD	,0x0000), // 'C' ➔ "▭" U+25AD WHITE RECTANGLE
-/*<!M><p><a><r><o>                                                 */ DEADTRANS( L'o'	,0xE559	,0x25E6	,0x0000), // 'o' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><P><A><R><O>                                                 */ DEADTRANS( L'O'	,0xE55A	,0x25E6	,0x0000), // 'O' ➔ "◦" U+25E6 WHITE BULLET
-/*<!M><p><a><t>                                                    */ DEADTRANS( L't'	,0xE555	,0xE55B	,0x0001), // Intermediate multikey chain link
-/*<!M><P><A><T>                                                    */ DEADTRANS( L'T'	,0xE556	,0xE55C	,0x0001), // Intermediate multikey chain link
-/*<!M><p><a><t><b>                                                 */ DEADTRANS( L'b'	,0xE55B	,0x25BF	,0x0000), // 'b' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><P><A><T><B>                                                 */ DEADTRANS( L'B'	,0xE55C	,0x25BF	,0x0000), // 'B' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><p><a><t><h>                                                 */ DEADTRANS( L'h'	,0xE55B	,0x25B5	,0x0000), // 'h' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><P><A><T><H>                                                 */ DEADTRANS( L'H'	,0xE55C	,0x25B5	,0x0000), // 'H' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><p><d>                                                       */ DEADTRANS( L'd'	,0xE552	,0xE55D	,0x0001), // Intermediate multikey chain link
-/*<!M><p><d><i>                                                    */ DEADTRANS( L'i'	,0xE55D	,0x2069	,0x0000), // 'i' ➔ "⁩" U+2069 POP DIRECTIONAL ISOLATE
-/*<!M><p><e>                                                       */ DEADTRANS( L'e'	,0xE552	,0xE55E	,0x0001), // Intermediate multikey chain link
-/*<!M><P><e>                                                       */ DEADTRANS( L'e'	,0xE553	,0xE55F	,0x0001), // Intermediate multikey chain link
-/*<!M><P><E>                                                       */ DEADTRANS( L'E'	,0xE553	,0xE560	,0x0001), // Intermediate multikey chain link
-/*<!M><p><e><h>                                                    */ DEADTRANS( L'h'	,0xE55E	,0xE561	,0x0001), // Intermediate multikey chain link
-/*<!M><P><E><H>                                                    */ DEADTRANS( L'H'	,0xE560	,0xE562	,0x0001), // Intermediate multikey chain link
-/*<!M><p><e><h><d>                                                 */ DEADTRANS( L'd'	,0xE561	,0x2674	,0x0000), // 'd' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><P><E><H><D>                                                 */ DEADTRANS( L'D'	,0xE562	,0x2674	,0x0000), // 'D' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><p><e><l>                                                    */ DEADTRANS( L'l'	,0xE55E	,0xE563	,0x0001), // Intermediate multikey chain link
-/*<!M><P><E><L>                                                    */ DEADTRANS( L'L'	,0xE560	,0xE564	,0x0001), // Intermediate multikey chain link
-/*<!M><p><e><l><d>                                                 */ DEADTRANS( L'd'	,0xE563	,0x2676	,0x0000), // 'd' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><P><E><L><D>                                                 */ DEADTRANS( L'D'	,0xE564	,0x2676	,0x0000), // 'D' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><p><e><r>                                                    */ DEADTRANS( L'r'	,0xE55E	,0x214C	,0x0000), // 'r' ➔ "⅌" U+214C PER SIGN
-/*<!M><P><e><r>                                                    */ DEADTRANS( L'r'	,0xE55F	,0x214C	,0x0000), // 'r' ➔ "⅌" U+214C PER SIGN
-/*<!M><P><E><R>                                                    */ DEADTRANS( L'R'	,0xE560	,0x214C	,0x0000), // 'R' ➔ "⅌" U+214C PER SIGN
-/*<!M><p><e><t>                                                    */ DEADTRANS( L't'	,0xE55E	,0x2673	,0x0000), // 't' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
-/*<!M><P><E><T>                                                    */ DEADTRANS( L'T'	,0xE560	,0x2673	,0x0000), // 'T' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
-/*<!M><P><f>                                                       */ DEADTRANS( L'f'	,0xE553	,0x20B0	,0x0000), // 'f' ➔ "₰" U+20B0 GERMAN PENNY SIGN
-/*<!M><p><h>                                                       */ DEADTRANS( L'h'	,0xE552	,0xE565	,0x0001), // Intermediate multikey chain link
-/*<!M><P><H>                                                       */ DEADTRANS( L'H'	,0xE553	,0xE566	,0x0001), // Intermediate multikey chain link
-/*<!M><p><h><p>                                                    */ DEADTRANS( L'p'	,0xE565	,0x20B1	,0x0000), // 'p' ➔ "₱" U+20B1 PESO SIGN, Philippine Peso THE PHILIPPINES
-/*<!M><P><H><P>                                                    */ DEADTRANS( L'P'	,0xE566	,0x20B1	,0x0000), // 'P' ➔ "₱" U+20B1 PESO SIGN, Philippine Peso THE PHILIPPINES
-/*<!M><p><i>                                                       */ DEADTRANS( L'i'	,0xE552	,0xE567	,0x0001), // Intermediate multikey chain link
-/*<!M><P><I>                                                       */ DEADTRANS( L'I'	,0xE553	,0xE568	,0x0001), // Intermediate multikey chain link
-/*<!M><p><i><s>                                                    */ DEADTRANS( L's'	,0xE567	,0xE569	,0x0001), // Intermediate multikey chain link
-/*<!M><P><I><S>                                                    */ DEADTRANS( L'S'	,0xE568	,0xE56A	,0x0001), // Intermediate multikey chain link
-/*<!M><p><i><s><c>                                                 */ DEADTRANS( L'c'	,0xE569	,0x2653	,0x0000), // 'c' ➔ "♓" U+2653 PISCES emoji
-/*<!M><P><I><S><C>                                                 */ DEADTRANS( L'C'	,0xE56A	,0x2653	,0x0000), // 'C' ➔ "♓" U+2653 PISCES emoji
-/*<!M><p><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE567	,0x03C0	,0x0000), // ' ' ➔ "π" U+03C0 GREEK SMALL LETTER PI
-/*<!M><p><i><~space>                                               */ DEADTRANS( L' '	,0xE567	,0x03C0	,0x0000), // ' ' ➔ "π" U+03C0 GREEK SMALL LETTER PI
-/*<!M><p><l>                                                       */ DEADTRANS( L'l'	,0xE552	,0xE56B	,0x0001), // Intermediate multikey chain link
-/*<!M><P><L>                                                       */ DEADTRANS( L'L'	,0xE553	,0xE56C	,0x0001), // Intermediate multikey chain link
-/*<!M><P><l>                                                       */ DEADTRANS( L'l'	,0xE553	,0xE56D	,0x0001), // Intermediate multikey chain link
-/*<!M><P><L><A>                                                    */ DEADTRANS( L'A'	,0xE56C	,0x210E	,0x0000), // 'A' ➔ "ℎ" U+210E PLANCK CONSTANT
-/*<!M><P><l><a>                                                    */ DEADTRANS( L'a'	,0xE56D	,0x210E	,0x0000), // 'a' ➔ "ℎ" U+210E PLANCK CONSTANT
-/*<!M><p><l><a>                                                    */ DEADTRANS( L'a'	,0xE56B	,0x210E	,0x0000), // 'a' ➔ "ℎ" U+210E PLANCK CONSTANT
-/*<!M><p><o>                                                       */ DEADTRANS( L'o'	,0xE552	,0xE56E	,0x0001), // Intermediate multikey chain link
-/*<!M><P><O>                                                       */ DEADTRANS( L'O'	,0xE553	,0xE56F	,0x0001), // Intermediate multikey chain link
-/*<!M><P><o>                                                       */ DEADTRANS( L'o'	,0xE553	,0x2117	,0x0000), // 'o' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
-/*<!M><p><O>                                                       */ DEADTRANS( L'O'	,0xE552	,0x2117	,0x0000), // 'O' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
-/*<!M><p><o><i>                                                    */ DEADTRANS( L'i'	,0xE56E	,0xE570	,0x0001), // Intermediate multikey chain link
-/*<!M><P><O><I>                                                    */ DEADTRANS( L'I'	,0xE56F	,0xE571	,0x0001), // Intermediate multikey chain link
-/*<!M><p><o><i><s>                                                 */ DEADTRANS( L's'	,0xE570	,0x2653	,0x0000), // 's' ➔ "♓" U+2653 PISCES emoji
-/*<!M><P><O><I><S>                                                 */ DEADTRANS( L'S'	,0xE571	,0x2653	,0x0000), // 'S' ➔ "♓" U+2653 PISCES emoji
-/*<!M><p><p>                                                       */ DEADTRANS( L'p'	,0xE552	,0xE572	,0x0001), // Intermediate multikey chain link
-/*<!M><P><P>                                                       */ DEADTRANS( L'P'	,0xE553	,0xE573	,0x0001), // Intermediate multikey chain link
-/*<!M><p><p><%at>                                                  */ DEADTRANS( L'@'	,0xE572	,0x213C	,0x0000), // '@' ➔ "ℼ" U+213C DOUBLE-STRUCK SMALL PI
-/*<!M><P><P><%at>                                                  */ DEADTRANS( L'@'	,0xE573	,0x213F	,0x0000), // '@' ➔ "ℿ" U+213F DOUBLE-STRUCK CAPITAL PI
-/*<!M><p><p><c>                                                    */ DEADTRANS( L'c'	,0xE572	,0xE574	,0x0001), // Intermediate multikey chain link
-/*<!M><P><P><C>                                                    */ DEADTRANS( L'C'	,0xE573	,0xE575	,0x0001), // Intermediate multikey chain link
-/*<!M><p><p><c><a>                                                 */ DEADTRANS( L'a'	,0xE574	,0x25AA	,0x0000), // 'a' ➔ "▪" U+25AA BLACK SMALL SQUARE
-/*<!M><P><P><C><A>                                                 */ DEADTRANS( L'A'	,0xE575	,0x25AA	,0x0000), // 'A' ➔ "▪" U+25AA BLACK SMALL SQUARE
-/*<!M><p><p><c><c>                                                 */ DEADTRANS( L'c'	,0xE574	,0x25CF	,0x0000), // 'c' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><P><P><C><C>                                                 */ DEADTRANS( L'C'	,0xE575	,0x25CF	,0x0000), // 'C' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><p><p><c><d>                                                 */ DEADTRANS( L'd'	,0xE574	,0x2022	,0x0000), // 'd' ➔ "•" U+2022 BULLET
-/*<!M><P><P><C><D>                                                 */ DEADTRANS( L'D'	,0xE575	,0x2022	,0x0000), // 'D' ➔ "•" U+2022 BULLET
-/*<!M><p><p><m>                                                    */ DEADTRANS( L'm'	,0xE572	,0xE576	,0x0001), // Intermediate multikey chain link
-/*<!M><P><P><M>                                                    */ DEADTRANS( L'M'	,0xE573	,0xE577	,0x0001), // Intermediate multikey chain link
-/*<!M><p><p><m><d>                                                 */ DEADTRANS( L'd'	,0xE576	,0x204D	,0x0000), // 'd' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
-/*<!M><P><P><M><D>                                                 */ DEADTRANS( L'D'	,0xE577	,0x204D	,0x0000), // 'D' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
-/*<!M><p><p><m><g>                                                 */ DEADTRANS( L'g'	,0xE576	,0x204C	,0x0000), // 'g' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
-/*<!M><P><P><M><G>                                                 */ DEADTRANS( L'G'	,0xE577	,0x204C	,0x0000), // 'G' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
-/*<!M><p><p><p>                                                    */ DEADTRANS( L'p'	,0xE572	,0x2677	,0x0000), // 'p' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
-/*<!M><P><P><P>                                                    */ DEADTRANS( L'P'	,0xE573	,0x2677	,0x0000), // 'P' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
-/*<!M><p><p><r>                                                    */ DEADTRANS( L'r'	,0xE572	,0xE578	,0x0001), // Intermediate multikey chain link
-/*<!M><P><P><R>                                                    */ DEADTRANS( L'R'	,0xE573	,0xE579	,0x0001), // Intermediate multikey chain link
-/*<!M><p><p><r><c>                                                 */ DEADTRANS( L'c'	,0xE578	,0x25AC	,0x0000), // 'c' ➔ "▬" U+25AC BLACK RECTANGLE
-/*<!M><P><P><R><C>                                                 */ DEADTRANS( L'C'	,0xE579	,0x25AC	,0x0000), // 'C' ➔ "▬" U+25AC BLACK RECTANGLE
-/*<!M><p><p><r><d>                                                 */ DEADTRANS( L'd'	,0xE578	,0x25AE	,0x0000), // 'd' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
-/*<!M><P><P><R><D>                                                 */ DEADTRANS( L'D'	,0xE579	,0x25AE	,0x0000), // 'D' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
-/*<!M><p><p><r><e>                                                 */ DEADTRANS( L'e'	,0xE578	,0x220E	,0x0000), // 'e' ➔ "∎" U+220E END OF PROOF
-/*<!M><P><P><R><E>                                                 */ DEADTRANS( L'E'	,0xE579	,0x220E	,0x0000), // 'E' ➔ "∎" U+220E END OF PROOF
-/*<!M><p><p><r><o>                                                 */ DEADTRANS( L'o'	,0xE578	,0x2022	,0x0000), // 'o' ➔ "•" U+2022 BULLET
-/*<!M><P><P><R><O>                                                 */ DEADTRANS( L'O'	,0xE579	,0x2022	,0x0000), // 'O' ➔ "•" U+2022 BULLET
-/*<!M><p><p><t>                                                    */ DEADTRANS( L't'	,0xE572	,0xE57A	,0x0001), // Intermediate multikey chain link
-/*<!M><P><P><T>                                                    */ DEADTRANS( L'T'	,0xE573	,0xE57B	,0x0001), // Intermediate multikey chain link
-/*<!M><p><p><t><b>                                                 */ DEADTRANS( L'b'	,0xE57A	,0x25BE	,0x0000), // 'b' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><P><P><T><B>                                                 */ DEADTRANS( L'B'	,0xE57B	,0x25BE	,0x0000), // 'B' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><p><p><t><d>                                                 */ DEADTRANS( L'd'	,0xE57A	,0x2023	,0x0000), // 'd' ➔ "‣" U+2023 TRIANGULAR BULLET
-/*<!M><P><P><T><D>                                                 */ DEADTRANS( L'D'	,0xE57B	,0x2023	,0x0000), // 'D' ➔ "‣" U+2023 TRIANGULAR BULLET
-/*<!M><p><p><t><g>                                                 */ DEADTRANS( L'g'	,0xE57A	,0x25C2	,0x0000), // 'g' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
-/*<!M><P><P><T><G>                                                 */ DEADTRANS( L'G'	,0xE57B	,0x25C2	,0x0000), // 'G' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
-/*<!M><p><p><t><h>                                                 */ DEADTRANS( L'h'	,0xE57A	,0x25B4	,0x0000), // 'h' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><P><P><T><H>                                                 */ DEADTRANS( L'H'	,0xE57B	,0x25B4	,0x0000), // 'H' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><P><P><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE573	,0x2119	,0x0000), // ' ' ➔ "ℙ" U+2119 DOUBLE-STRUCK CAPITAL P
-/*<!M><P><P><~space>                                               */ DEADTRANS( L' '	,0xE573	,0x2119	,0x0000), // ' ' ➔ "ℙ" U+2119 DOUBLE-STRUCK CAPITAL P
-/*<!M><p><s>                                                       */ DEADTRANS( L's'	,0xE552	,0x2678	,0x0000), // 's' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
-/*<!M><P><S>                                                       */ DEADTRANS( L'S'	,0xE553	,0x2678	,0x0000), // 'S' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
-/*<!M><p><t>                                                       */ DEADTRANS( L't'	,0xE552	,0xE57C	,0x0001), // Intermediate multikey chain link
-/*<!M><P><T>                                                       */ DEADTRANS( L'T'	,0xE553	,0xE57D	,0x0001), // Intermediate multikey chain link
-/*<!M><P><t>                                                       */ DEADTRANS( L't'	,0xE553	,0x20A7	,0x0000), // 't' ➔ "₧" U+20A7 PESETA SIGN
-/*<!M><p><t><0>                                                    */ DEADTRANS( L'0'	,0xE57C	,0x2672	,0x0000), // '0' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><P><T><0>                                                    */ DEADTRANS( L'0'	,0xE57D	,0x2672	,0x0000), // '0' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><p><t><1>                                                    */ DEADTRANS( L'1'	,0xE57C	,0x2673	,0x0000), // '1' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
-/*<!M><P><T><1>                                                    */ DEADTRANS( L'1'	,0xE57D	,0x2673	,0x0000), // '1' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
-/*<!M><p><t><2>                                                    */ DEADTRANS( L'2'	,0xE57C	,0x2674	,0x0000), // '2' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><P><T><2>                                                    */ DEADTRANS( L'2'	,0xE57D	,0x2674	,0x0000), // '2' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
-/*<!M><p><t><3>                                                    */ DEADTRANS( L'3'	,0xE57C	,0x2675	,0x0000), // '3' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
-/*<!M><P><T><3>                                                    */ DEADTRANS( L'3'	,0xE57D	,0x2675	,0x0000), // '3' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
-/*<!M><p><t><4>                                                    */ DEADTRANS( L'4'	,0xE57C	,0x2676	,0x0000), // '4' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><P><T><4>                                                    */ DEADTRANS( L'4'	,0xE57D	,0x2676	,0x0000), // '4' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
-/*<!M><p><t><5>                                                    */ DEADTRANS( L'5'	,0xE57C	,0x2677	,0x0000), // '5' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
-/*<!M><P><T><5>                                                    */ DEADTRANS( L'5'	,0xE57D	,0x2677	,0x0000), // '5' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
-/*<!M><p><t><6>                                                    */ DEADTRANS( L'6'	,0xE57C	,0x2678	,0x0000), // '6' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
-/*<!M><P><T><6>                                                    */ DEADTRANS( L'6'	,0xE57D	,0x2678	,0x0000), // '6' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
-/*<!M><p><t><7>                                                    */ DEADTRANS( L'7'	,0xE57C	,0x2679	,0x0000), // '7' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><P><T><7>                                                    */ DEADTRANS( L'7'	,0xE57D	,0x2679	,0x0000), // '7' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
-/*<!M><p><t><8>                                                    */ DEADTRANS( L'8'	,0xE57C	,0x267A	,0x0000), // '8' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
-/*<!M><P><T><8>                                                    */ DEADTRANS( L'8'	,0xE57D	,0x267A	,0x0000), // '8' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
-/*<!M><p><t><9>                                                    */ DEADTRANS( L'9'	,0xE57C	,0x267B	,0x0000), // '9' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><P><T><9>                                                    */ DEADTRANS( L'9'	,0xE57D	,0x267B	,0x0000), // '9' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><p><v>                                                       */ DEADTRANS( L'v'	,0xE552	,0xE57E	,0x0001), // Intermediate multikey chain link
-/*<!M><P><V>                                                       */ DEADTRANS( L'V'	,0xE553	,0xE57F	,0x0001), // Intermediate multikey chain link
-/*<!M><p><v><c>                                                    */ DEADTRANS( L'c'	,0xE57E	,0x2675	,0x0000), // 'c' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
-/*<!M><P><V><C>                                                    */ DEADTRANS( L'C'	,0xE57F	,0x2675	,0x0000), // 'C' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
-/*<!M><p><y>                                                       */ DEADTRANS( L'y'	,0xE552	,0xE580	,0x0001), // Intermediate multikey chain link
-/*<!M><P><Y>                                                       */ DEADTRANS( L'Y'	,0xE553	,0xE581	,0x0001), // Intermediate multikey chain link
-/*<!M><p><y><g>                                                    */ DEADTRANS( L'g'	,0xE580	,0x20B2	,0x0000), // 'g' ➔ "₲" U+20B2 GUARANI SIGN, Guarani PARAGUAY
-/*<!M><P><Y><G>                                                    */ DEADTRANS( L'G'	,0xE581	,0x20B2	,0x0000), // 'G' ➔ "₲" U+20B2 GUARANI SIGN, Guarani PARAGUAY
-/*<!M><p><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE552	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><P><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE553	,0x220F	,0x0000), // ' ' ➔ "∏" U+220F N-ARY PRODUCT
-/*<!M><p><~space>                                                  */ DEADTRANS( L' '	,0xE552	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><P><~space>                                                  */ DEADTRANS( L' '	,0xE553	,0x220F	,0x0000), // ' ' ➔ "∏" U+220F N-ARY PRODUCT
-/*<!M><q>                                                          */ DEADTRANS( L'q'	,0x00A6	,0xE582	,0x0001), // Intermediate multikey chain link
-/*<!M><Q>                                                          */ DEADTRANS( L'Q'	,0x00A6	,0xE583	,0x0001), // Intermediate multikey chain link
-/*<!M><q><%hash>                                                   */ DEADTRANS( L'#'	,0xE582	,0x2669	,0x0000), // '#' ➔ "♩" U+2669 QUARTER NOTE
-/*<!M><Q><%hash>                                                   */ DEADTRANS( L'#'	,0xE583	,0x2669	,0x0000), // '#' ➔ "♩" U+2669 QUARTER NOTE
-/*<!M><Q><0>                                                       */ DEADTRANS( L'0'	,0xE583	,0x25CB	,0x0000), // '0' ➔ "○" U+25CB WHITE CIRCLE
-/*<!M><q><0>                                                       */ DEADTRANS( L'0'	,0xE582	,0x25CB	,0x0000), // '0' ➔ "○" U+25CB WHITE CIRCLE
-/*<!M><Q><1>                                                       */ DEADTRANS( L'1'	,0xE583	,0x25D4	,0x0000), // '1' ➔ "◔" U+25D4 CIRCLE WITH UPPER RIGHT QUADRANT BLACK
-/*<!M><q><1>                                                       */ DEADTRANS( L'1'	,0xE582	,0x25F7	,0x0000), // '1' ➔ "◷" U+25F7 WHITE CIRCLE WITH UPPER RIGHT QUADRANT
-/*<!M><Q><2>                                                       */ DEADTRANS( L'2'	,0xE583	,0x25D1	,0x0000), // '2' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
-/*<!M><q><2>                                                       */ DEADTRANS( L'2'	,0xE582	,0x25F6	,0x0000), // '2' ➔ "◶" U+25F6 WHITE CIRCLE WITH LOWER RIGHT QUADRANT
-/*<!M><Q><3>                                                       */ DEADTRANS( L'3'	,0xE583	,0x25D5	,0x0000), // '3' ➔ "◕" U+25D5 CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
-/*<!M><q><3>                                                       */ DEADTRANS( L'3'	,0xE582	,0x25F5	,0x0000), // '3' ➔ "◵" U+25F5 WHITE CIRCLE WITH LOWER LEFT QUADRANT
-/*<!M><Q><4>                                                       */ DEADTRANS( L'4'	,0xE583	,0x25CF	,0x0000), // '4' ➔ "●" U+25CF BLACK CIRCLE
-/*<!M><q><4>                                                       */ DEADTRANS( L'4'	,0xE582	,0x25F4	,0x0000), // '4' ➔ "◴" U+25F4 WHITE CIRCLE WITH UPPER LEFT QUADRANT
-/*<!M><q><a>                                                       */ DEADTRANS( L'a'	,0xE582	,0xE584	,0x0001), // Intermediate multikey chain link
-/*<!M><Q><A>                                                       */ DEADTRANS( L'A'	,0xE583	,0xE585	,0x0001), // Intermediate multikey chain link
-/*<!M><q><e>                                                       */ DEADTRANS( L'e'	,0xE582	,0x220E	,0x0000), // 'e' ➔ "∎" U+220E END OF PROOF
-/*<!M><Q><E>                                                       */ DEADTRANS( L'E'	,0xE583	,0x220E	,0x0000), // 'E' ➔ "∎" U+220E END OF PROOF
-/*<!M><q><p>                                                       */ DEADTRANS( L'p'	,0xE582	,0x0239	,0x0000), // 'p' ➔ "ȹ" U+0239 LATIN SMALL LETTER QP DIGRAPH
-/*<!M><Q><Q>                                                       */ DEADTRANS( L'Q'	,0xE583	,0x211A	,0x0000), // 'Q' ➔ "ℚ" U+211A DOUBLE-STRUCK CAPITAL Q
-/*<!M><r>                                                          */ DEADTRANS( L'r'	,0x00A6	,0xE586	,0x0001), // Intermediate multikey chain link
-/*<!M><R>                                                          */ DEADTRANS( L'R'	,0x00A6	,0xE587	,0x0001), // Intermediate multikey chain link
-/*<!M><r><%at>                                                     */ DEADTRANS( L'@'	,0xE586	,0x03F1	,0x0000), // '@' ➔ "ϱ" U+03F1 GREEK RHO SYMBOL
-/*<!M><r><%equal>                                                  */ DEADTRANS( L'='	,0xE586	,0x20B9	,0x0000), // '=' ➔ "₹" U+20B9 INDIAN RUPEE SIGN
-/*<!M><R><%equal>                                                  */ DEADTRANS( L'='	,0xE587	,0x20B9	,0x0000), // '=' ➔ "₹" U+20B9 INDIAN RUPEE SIGN
-/*<!M><R><%hash>                                                   */ DEADTRANS( L'#'	,0xE587	,0x211C	,0x0000), // '#' ➔ "ℜ" U+211C BLACK-LETTER CAPITAL R
-/*<!M><R><%minus>                                                  */ DEADTRANS( L'-'	,0xE587	,0x211E	,0x0000), // '-' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><r><%minus>                                                  */ DEADTRANS( L'-'	,0xE586	,0x211E	,0x0000), // '-' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><r><%parenleft>                                              */ DEADTRANS( L'('	,0xE586	,0xAB45	,0x0000), // '(' ➔ "ꭅ" U+AB45 LATIN SMALL LETTER STIRRUP R
-/*<!M><R><%parenleft>                                              */ DEADTRANS( L'('	,0xE587	,0xAB45	,0x0000), // '(' ➔ "ꭅ" U+AB45 LATIN SMALL LETTER STIRRUP R
-/*<!M><R><%slash>                                                  */ DEADTRANS( L'/'	,0xE587	,0x211F	,0x0000), // '/' ➔ "℟" U+211F RESPONSE
-/*<!M><r><%slash>                                                  */ DEADTRANS( L'/'	,0xE586	,0x211F	,0x0000), // '/' ➔ "℟" U+211F RESPONSE
-/*<!M><R><%tilde>                                                  */ DEADTRANS( L'~'	,0xE587	,0x211B	,0x0000), // '~' ➔ "ℛ" U+211B SCRIPT CAPITAL R
-/*<!M><R><C>                                                       */ DEADTRANS( L'C'	,0xE587	,0xE588	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C>                                                    */ DEADTRANS( L'C'	,0xE588	,0xE589	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C><C>                                                 */ DEADTRANS( L'C'	,0xE589	,0xE58A	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C><C><D>                                              */ DEADTRANS( L'D'	,0xE58A	,0xE58B	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C><C><D><D>                                           */ DEADTRANS( L'D'	,0xE58B	,0xE58C	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C><C><D><D><D>                                        */ DEADTRANS( L'D'	,0xE58C	,0x2188	,0x0000), // 'D' ➔ "ↈ" U+2188 ROMAN NUMERAL ONE HUNDRED THOUSAND
-/*<!M><R><C><C><D>                                                 */ DEADTRANS( L'D'	,0xE589	,0xE58D	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><C><D><D>                                              */ DEADTRANS( L'D'	,0xE58D	,0x2182	,0x0000), // 'D' ➔ "ↂ" U+2182 ROMAN NUMERAL TEN THOUSAND
-/*<!M><R><C><D>                                                    */ DEADTRANS( L'D'	,0xE588	,0x2180	,0x0000), // 'D' ➔ "ↀ" U+2180 ROMAN NUMERAL ONE THOUSAND C D
-/*<!M><R><C><V>                                                    */ DEADTRANS( L'V'	,0xE588	,0xE58E	,0x0001), // Intermediate multikey chain link
-/*<!M><R><C><V><I>                                                 */ DEADTRANS( L'I'	,0xE58E	,0x2185	,0x0000), // 'I' ➔ "ↅ" U+2185 ROMAN NUMERAL SIX LATE FORM
-/*<!M><R><D>                                                       */ DEADTRANS( L'D'	,0xE587	,0xE58F	,0x0001), // Intermediate multikey chain link
-/*<!M><R><D><D>                                                    */ DEADTRANS( L'D'	,0xE58F	,0xE590	,0x0001), // Intermediate multikey chain link
-/*<!M><R><D><D><D>                                                 */ DEADTRANS( L'D'	,0xE590	,0x2187	,0x0000), // 'D' ➔ "ↇ" U+2187 ROMAN NUMERAL FIFTY THOUSAND
-/*<!M><R><D><D><~space>                                            */ DEADTRANS( L' '	,0xE590	,0x2181	,0x0000), // ' ' ➔ "ↁ" U+2181 ROMAN NUMERAL FIVE THOUSAND
-/*<!M><r><e>                                                       */ DEADTRANS( L'e'	,0xE586	,0xE591	,0x0001), // Intermediate multikey chain link
-/*<!M><R><E>                                                       */ DEADTRANS( L'E'	,0xE587	,0xE592	,0x0001), // Intermediate multikey chain link
-/*<!M><r><e><c>                                                    */ DEADTRANS( L'c'	,0xE591	,0xE593	,0x0001), // Intermediate multikey chain link
-/*<!M><R><E><C>                                                    */ DEADTRANS( L'C'	,0xE592	,0xE594	,0x0001), // Intermediate multikey chain link
-/*<!M><r><e><c><a>                                                 */ DEADTRANS( L'a'	,0xE593	,0x2672	,0x0000), // 'a' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><R><E><C><A>                                                 */ DEADTRANS( L'A'	,0xE594	,0x2672	,0x0000), // 'A' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><r><e><c><e>                                                 */ DEADTRANS( L'e'	,0xE593	,0x2672	,0x0000), // 'e' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><R><E><C><E>                                                 */ DEADTRANS( L'E'	,0xE594	,0x2672	,0x0000), // 'E' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><r><e><c><f>                                                 */ DEADTRANS( L'f'	,0xE593	,0x267B	,0x0000), // 'f' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><R><E><C><F>                                                 */ DEADTRANS( L'F'	,0xE594	,0x267B	,0x0000), // 'F' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><r><e><c><g>                                                 */ DEADTRANS( L'g'	,0xE593	,0x267B	,0x0000), // 'g' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><R><E><C><G>                                                 */ DEADTRANS( L'G'	,0xE594	,0x267B	,0x0000), // 'G' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><r><e><c><i>                                                 */ DEADTRANS( L'i'	,0xE593	,0x267B	,0x0000), // 'i' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><R><E><C><I>                                                 */ DEADTRANS( L'I'	,0xE594	,0x267B	,0x0000), // 'I' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><r><e><c><o>                                                 */ DEADTRANS( L'o'	,0xE593	,0x2672	,0x0000), // 'o' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><R><E><C><O>                                                 */ DEADTRANS( L'O'	,0xE594	,0x2672	,0x0000), // 'O' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><r><e><c><p>                                                 */ DEADTRANS( L'p'	,0xE593	,0x267B	,0x0000), // 'p' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><R><E><C><P>                                                 */ DEADTRANS( L'P'	,0xE594	,0x267B	,0x0000), // 'P' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><r><e><c><u>                                                 */ DEADTRANS( L'u'	,0xE593	,0x2672	,0x0000), // 'u' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><R><E><C><U>                                                 */ DEADTRANS( L'U'	,0xE594	,0x2672	,0x0000), // 'U' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
-/*<!M><r><e><c><v>                                                 */ DEADTRANS( L'v'	,0xE593	,0x267B	,0x0000), // 'v' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><R><E><C><V>                                                 */ DEADTRANS( L'V'	,0xE594	,0x267B	,0x0000), // 'V' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
-/*<!M><r><e><t>                                                    */ DEADTRANS( L't'	,0xE591	,0x21B5	,0x0000), // 't' ➔ "↵" U+21B5 DOWNWARDS ARROW WITH CORNER LEFTWARDS
-/*<!M><R><E><T>                                                    */ DEADTRANS( L'T'	,0xE592	,0x23CE	,0x0000), // 'T' ➔ "⏎" U+23CE RETURN SYMBOL
-/*<!M><R><L>                                                       */ DEADTRANS( L'L'	,0xE587	,0xE595	,0x0001), // Intermediate multikey chain link
-/*<!M><R><L><L>                                                    */ DEADTRANS( L'L'	,0xE595	,0x2186	,0x0000), // 'L' ➔ "ↆ" U+2186 ROMAN NUMERAL FIFTY EARLY FORM
-/*<!M><r><m>                                                       */ DEADTRANS( L'm'	,0xE586	,0xDD6C	,0x0000), // High surrogate: D83C; 'm' ➔ "🅬" U+1F16C RAISED MR SIGN
-/*<!M><R><M>                                                       */ DEADTRANS( L'M'	,0xE587	,0xDD6C	,0x0000), // High surrogate: D83C; 'M' ➔ "🅬" U+1F16C RAISED MR SIGN
-/*<!M><r><o>                                                       */ DEADTRANS( L'o'	,0xE586	,0x00AE	,0x0000), // 'o' ➔ "®" U+00AE REGISTERED SIGN emoji
-/*<!M><R><O>                                                       */ DEADTRANS( L'O'	,0xE587	,0x00AE	,0x0000), // 'O' ➔ "®" U+00AE REGISTERED SIGN emoji
-/*<!M><R><p>                                                       */ DEADTRANS( L'p'	,0xE587	,0xE596	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a>                                                    */ DEADTRANS( L'a'	,0xE596	,0xE597	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a><r>                                                 */ DEADTRANS( L'r'	,0xE597	,0xE598	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a><r><e>                                              */ DEADTRANS( L'e'	,0xE598	,0xE599	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a><r><e><n>                                           */ DEADTRANS( L'n'	,0xE599	,0xE59A	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a><r><e><n><l>                                        */ DEADTRANS( L'l'	,0xE59A	,0xE59B	,0x0001), // Intermediate multikey chain link
-/*<!M><R><p><a><r><e><n><l><t>                                     */ DEADTRANS( L't'	,0xE59B	,0x2996	,0x0000), // 't' ➔ "⦖" U+2996 DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
-/*<!M><R><R>                                                       */ DEADTRANS( L'R'	,0xE587	,0x211D	,0x0000), // 'R' ➔ "ℝ" U+211D DOUBLE-STRUCK CAPITAL R
-/*<!M><r><r>                                                       */ DEADTRANS( L'r'	,0xE586	,0xAB48	,0x0000), // 'r' ➔ "ꭈ" U+AB48 LATIN SMALL LETTER DOUBLE R
-/*<!M><R><s>                                                       */ DEADTRANS( L's'	,0xE587	,0x20A8	,0x0000), // 's' ➔ "₨" U+20A8 RUPEE SIGN
-/*<!M><R><U>                                                       */ DEADTRANS( L'U'	,0xE587	,0xE59C	,0x0001), // Intermediate multikey chain link
-/*<!M><R><u>                                                       */ DEADTRANS( L'u'	,0xE587	,0xE59D	,0x0001), // Intermediate multikey chain link
-/*<!M><r><u>                                                       */ DEADTRANS( L'u'	,0xE586	,0xE59E	,0x0001), // Intermediate multikey chain link
-/*<!M><r><u><b>                                                    */ DEADTRANS( L'b'	,0xE59E	,0x20BD	,0x0000), // 'b' ➔ "₽" U+20BD RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
-/*<!M><R><U><B>                                                    */ DEADTRANS( L'B'	,0xE59C	,0x20BD	,0x0000), // 'B' ➔ "₽" U+20BD RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
-/*<!M><r><u><m>                                                    */ DEADTRANS( L'm'	,0xE59E	,0xA775	,0x0000), // 'm' ➔ "ꝵ" U+A775 LATIN SMALL LETTER RUM
-/*<!M><R><U><M>                                                    */ DEADTRANS( L'M'	,0xE59C	,0xA776	,0x0000), // 'M' ➔ "ꝶ" U+A776 LATIN LETTER SMALL CAPITAL RUM
-/*<!M><R><u><m>                                                    */ DEADTRANS( L'm'	,0xE59D	,0xA776	,0x0000), // 'm' ➔ "ꝶ" U+A776 LATIN LETTER SMALL CAPITAL RUM
-/*<!M><R><U><R>                                                    */ DEADTRANS( L'R'	,0xE59C	,0xA75C	,0x0000), // 'R' ➔ "Ꝝ" U+A75C LATIN CAPITAL LETTER RUM ROTUNDA
-/*<!M><R><u><r>                                                    */ DEADTRANS( L'r'	,0xE59D	,0xA75C	,0x0000), // 'r' ➔ "Ꝝ" U+A75C LATIN CAPITAL LETTER RUM ROTUNDA
-/*<!M><r><u><r>                                                    */ DEADTRANS( L'r'	,0xE59E	,0xA75D	,0x0000), // 'r' ➔ "ꝝ" U+A75D LATIN SMALL LETTER RUM ROTUNDA
-/*<!M><s>                                                          */ DEADTRANS( L's'	,0x00A6	,0xE59F	,0x0001), // Intermediate multikey chain link
-/*<!M><S>                                                          */ DEADTRANS( L'S'	,0x00A6	,0xE5A0	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%backslash>                                              */ DEADTRANS( L'\\'	,0xE59F	,0xE5A1	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5A0	,0xE5A2	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%backslash><%percent>                                    */ DEADTRANS( L'%'	,0xE5A1	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
-/*<!M><S><%backslash><%percent>                                    */ DEADTRANS( L'%'	,0xE5A2	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
-/*<!M><s><%backslash><%slash>                                      */ DEADTRANS( L'/'	,0xE5A1	,0x29CC	,0x0000), // '/' ➔ "⧌" U+29CC S IN TRIANGLE
-/*<!M><s><%braceleft>                                              */ DEADTRANS( L'{'	,0xE59F	,0x27C5	,0x0000), // '{' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><S><%braceleft>                                              */ DEADTRANS( L'{'	,0xE5A0	,0x27C5	,0x0000), // '{' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><s><%braceright>                                             */ DEADTRANS( L'}'	,0xE59F	,0x27C6	,0x0000), // '}' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><S><%braceright>                                             */ DEADTRANS( L'}'	,0xE5A0	,0x27C6	,0x0000), // '}' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><s><%bracketleft>                                            */ DEADTRANS( L'['	,0xE59F	,0xE5A3	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%bracketleft>                                            */ DEADTRANS( L'['	,0xE5A0	,0xE5A4	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE5A3	,0x2A16	,0x0000), // ']' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
-/*<!M><S><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE5A4	,0x2A16	,0x0000), // ']' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
-/*<!M><s><%bracketleft><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE5A3	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><S><%bracketleft><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE5A4	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><s><%bracketleft><~space>                                    */ DEADTRANS( L' '	,0xE5A3	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><S><%bracketleft><~space>                                    */ DEADTRANS( L' '	,0xE5A4	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
-/*<!M><s><%bracketright>                                           */ DEADTRANS( L']'	,0xE59F	,0xE5A5	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%bracketright>                                           */ DEADTRANS( L']'	,0xE5A0	,0xE5A6	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%bracketright><%bracketleft>                             */ DEADTRANS( L'['	,0xE5A5	,0x2A16	,0x0000), // '[' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
-/*<!M><S><%bracketright><%bracketleft>                             */ DEADTRANS( L'['	,0xE5A6	,0x2A16	,0x0000), // '[' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
-/*<!M><s><%bracketright><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE5A5	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><S><%bracketright><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE5A6	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><s><%bracketright><~space>                                   */ DEADTRANS( L' '	,0xE5A5	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><S><%bracketright><~space>                                   */ DEADTRANS( L' '	,0xE5A6	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
-/*<!M><S><%equal>                                                  */ DEADTRANS( L'='	,0xE5A0	,0x20B4	,0x0000), // '=' ➔ "₴" U+20B4 HRYVNIA SIGN
-/*<!M><s><%equal>                                                  */ DEADTRANS( L'='	,0xE59F	,0x2A0E	,0x0000), // '=' ➔ "⨎" U+2A0E INTEGRAL WITH DOUBLE STROKE
-/*<!M><s><%exclam>                                                 */ DEADTRANS( L'!'	,0xE59F	,0x00A7	,0x0000), // '!' ➔ "§" U+00A7 SECTION SIGN
-/*<!M><S><%exclam>                                                 */ DEADTRANS( L'!'	,0xE5A0	,0x00A7	,0x0000), // '!' ➔ "§" U+00A7 SECTION SIGN
-/*<!M><S><%hash>                                                   */ DEADTRANS( L'#'	,0xE5A0	,0x266C	,0x0000), // '#' ➔ "♬" U+266C BEAMED SIXTEENTH NOTES
-/*<!M><s><%hash>                                                   */ DEADTRANS( L'#'	,0xE59F	,0x266F	,0x0000), // '#' ➔ "♯" U+266F MUSIC SHARP SIGN
-/*<!M><s><%less>                                                   */ DEADTRANS( L'<'	,0xE59F	,0xE5A7	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%less>                                                   */ DEADTRANS( L'<'	,0xE5A0	,0xE5A8	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE5A7	,0x2A17	,0x0000), // '-' ➔ "⨗" U+2A17 INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-/*<!M><S><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE5A8	,0x2A17	,0x0000), // '-' ➔ "⨗" U+2A17 INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
-/*<!M><S><%minus>                                                  */ DEADTRANS( L'-'	,0xE5A0	,0x20B4	,0x0000), // '-' ➔ "₴" U+20B4 HRYVNIA SIGN
-/*<!M><s><%minus>                                                  */ DEADTRANS( L'-'	,0xE59F	,0x2A0D	,0x0000), // '-' ➔ "⨍" U+2A0D FINITE PART INTEGRAL
-/*<!M><s><%parenleft>                                              */ DEADTRANS( L'('	,0xE59F	,0x2231	,0x0000), // '(' ➔ "∱" U+2231 CLOCKWISE INTEGRAL
-/*<!M><S><%parenleft>                                              */ DEADTRANS( L'('	,0xE5A0	,0x2231	,0x0000), // '(' ➔ "∱" U+2231 CLOCKWISE INTEGRAL
-/*<!M><s><%parenright>                                             */ DEADTRANS( L')'	,0xE59F	,0x2A11	,0x0000), // ')' ➔ "⨑" U+2A11 ANTICLOCKWISE INTEGRATION
-/*<!M><S><%parenright>                                             */ DEADTRANS( L')'	,0xE5A0	,0x2A11	,0x0000), // ')' ➔ "⨑" U+2A11 ANTICLOCKWISE INTEGRATION
-/*<!M><s><%percent>                                                */ DEADTRANS( L'%'	,0xE59F	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
-/*<!M><S><%percent>                                                */ DEADTRANS( L'%'	,0xE5A0	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
-/*<!M><s><%period>                                                 */ DEADTRANS( L'.'	,0xE59F	,0xE5A9	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%period>                                                 */ DEADTRANS( L'.'	,0xE5A0	,0xE5AA	,0x0001), // Intermediate multikey chain link
-/*<!M><s><%period><%bracketright>                                  */ DEADTRANS( L']'	,0xE5A9	,0x2A12	,0x0000), // ']' ➔ "⨒" U+2A12 LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
-/*<!M><S><%period><%bracketright>                                  */ DEADTRANS( L']'	,0xE5AA	,0x2A12	,0x0000), // ']' ➔ "⨒" U+2A12 LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
-/*<!M><s><%period><%parenright>                                    */ DEADTRANS( L')'	,0xE5A9	,0x2A13	,0x0000), // ')' ➔ "⨓" U+2A13 LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
-/*<!M><S><%period><%parenright>                                    */ DEADTRANS( L')'	,0xE5AA	,0x2A13	,0x0000), // ')' ➔ "⨓" U+2A13 LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
-/*<!M><s><%period><o>                                              */ DEADTRANS( L'o'	,0xE5A9	,0x2A14	,0x0000), // 'o' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
-/*<!M><S><%period><o>                                              */ DEADTRANS( L'o'	,0xE5AA	,0x2A14	,0x0000), // 'o' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
-/*<!M><S><%period><O>                                              */ DEADTRANS( L'O'	,0xE5AA	,0x2A14	,0x0000), // 'O' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
-/*<!M><s><%slash>                                                  */ DEADTRANS( L'/'	,0xE59F	,0xE5AB	,0x0001), // Intermediate multikey chain link
-/*<!M><S><%slash>                                                  */ DEADTRANS( L'/'	,0xE5A0	,0x2A0F	,0x0000), // '/' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
-/*<!M><s><%slash><%backslash>                                      */ DEADTRANS( L'\\'	,0xE5AB	,0x29CC	,0x0000), // '\' ➔ "⧌" U+29CC S IN TRIANGLE
-/*<!M><s><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE5AB	,0x2A0F	,0x0000), // ' ' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
-/*<!M><s><%slash><~space>                                          */ DEADTRANS( L' '	,0xE5AB	,0x2A0F	,0x0000), // ' ' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
-/*<!M><s><%underscore>                                             */ DEADTRANS( L'_'	,0xE59F	,0x2A1C	,0x0000), // '_' ➔ "⨜" U+2A1C INTEGRAL WITH UNDERBAR
-/*<!M><S><%underscore>                                             */ DEADTRANS( L'_'	,0xE5A0	,0x2A1C	,0x0000), // '_' ➔ "⨜" U+2A1C INTEGRAL WITH UNDERBAR
-/*<!M><s><a>                                                       */ DEADTRANS( L'a'	,0xE59F	,0xE5AC	,0x0001), // Intermediate multikey chain link
-/*<!M><S><a>                                                       */ DEADTRANS( L'a'	,0xE5A0	,0xE5AD	,0x0001), // Intermediate multikey chain link
-/*<!M><S><A>                                                       */ DEADTRANS( L'A'	,0xE5A0	,0xE5AE	,0x0001), // Intermediate multikey chain link
-/*<!M><s><a><g>                                                    */ DEADTRANS( L'g'	,0xE5AC	,0xE5AF	,0x0001), // Intermediate multikey chain link
-/*<!M><S><A><G>                                                    */ DEADTRANS( L'G'	,0xE5AE	,0xE5B0	,0x0001), // Intermediate multikey chain link
-/*<!M><s><a><g><i>                                                 */ DEADTRANS( L'i'	,0xE5AF	,0x2650	,0x0000), // 'i' ➔ "♐" U+2650 SAGITTARIUS emoji
-/*<!M><S><A><G><I>                                                 */ DEADTRANS( L'I'	,0xE5B0	,0x2650	,0x0000), // 'I' ➔ "♐" U+2650 SAGITTARIUS emoji
-/*<!M><s><a><m>                                                    */ DEADTRANS( L'm'	,0xE5AC	,0x214F	,0x0000), // 'm' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
-/*<!M><S><a><m>                                                    */ DEADTRANS( L'm'	,0xE5AD	,0x214F	,0x0000), // 'm' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
-/*<!M><S><A><M>                                                    */ DEADTRANS( L'M'	,0xE5AE	,0x214F	,0x0000), // 'M' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
-/*<!M><s><c>                                                       */ DEADTRANS( L'c'	,0xE59F	,0xE5B1	,0x0001), // Intermediate multikey chain link
-/*<!M><S><c>                                                       */ DEADTRANS( L'c'	,0xE5A0	,0xE5B2	,0x0001), // Intermediate multikey chain link
-/*<!M><S><C>                                                       */ DEADTRANS( L'C'	,0xE5A0	,0xE5B3	,0x0001), // Intermediate multikey chain link
-/*<!M><s><c><o>                                                    */ DEADTRANS( L'o'	,0xE5B1	,0xE5B4	,0x0001), // Intermediate multikey chain link
-/*<!M><S><C><O>                                                    */ DEADTRANS( L'O'	,0xE5B3	,0xE5B5	,0x0001), // Intermediate multikey chain link
-/*<!M><s><c><o><r>                                                 */ DEADTRANS( L'r'	,0xE5B4	,0x264F	,0x0000), // 'r' ➔ "♏" U+264F SCORPIUS emoji
-/*<!M><S><C><O><R>                                                 */ DEADTRANS( L'R'	,0xE5B5	,0x264F	,0x0000), // 'R' ➔ "♏" U+264F SCORPIUS emoji
-/*<!M><s><c><r>                                                    */ DEADTRANS( L'r'	,0xE5B1	,0x2108	,0x0000), // 'r' ➔ "℈" U+2108 SCRUPLE
-/*<!M><S><c><r>                                                    */ DEADTRANS( L'r'	,0xE5B2	,0x2108	,0x0000), // 'r' ➔ "℈" U+2108 SCRUPLE
-/*<!M><S><C><R>                                                    */ DEADTRANS( L'R'	,0xE5B3	,0x2108	,0x0000), // 'R' ➔ "℈" U+2108 SCRUPLE
-/*<!M><s><c><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B1	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><S><c><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B2	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><S><C><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B3	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><s><c><~space>                                               */ DEADTRANS( L' '	,0xE5B1	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><S><c><~space>                                               */ DEADTRANS( L' '	,0xE5B2	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><S><C><~space>                                               */ DEADTRANS( L' '	,0xE5B3	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
-/*<!M><s><d>                                                       */ DEADTRANS( L'd'	,0xE59F	,0xE5B6	,0x0001), // Intermediate multikey chain link
-/*<!M><S><D>                                                       */ DEADTRANS( L'D'	,0xE5A0	,0xE5B7	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e>                                                       */ DEADTRANS( L'e'	,0xE59F	,0xE5B8	,0x0001), // Intermediate multikey chain link
-/*<!M><S><E>                                                       */ DEADTRANS( L'E'	,0xE5A0	,0xE5B9	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><r>                                                    */ DEADTRANS( L'r'	,0xE5B8	,0x26CE	,0x0000), // 'r' ➔ "⛎" U+26CE OPHIUCHUS emoji
-/*<!M><S><E><R>                                                    */ DEADTRANS( L'R'	,0xE5B9	,0x26CE	,0x0000), // 'R' ➔ "⛎" U+26CE OPHIUCHUS emoji
-/*<!M><s><e><t>                                                    */ DEADTRANS( L't'	,0xE5B8	,0xE5BA	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><t><m>                                                 */ DEADTRANS( L'm'	,0xE5BA	,0xE5BB	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><t><m><i>                                              */ DEADTRANS( L'i'	,0xE5BB	,0xE5BC	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><t><m><i><n>                                           */ DEADTRANS( L'n'	,0xE5BC	,0xE5BD	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><t><m><i><n><u>                                        */ DEADTRANS( L'u'	,0xE5BD	,0xE5BE	,0x0001), // Intermediate multikey chain link
-/*<!M><s><e><t><m><i><n><u><s>                                     */ DEADTRANS( L's'	,0xE5BE	,0x2216	,0x0000), // 's' ➔ "∖" U+2216 SET MINUS
-/*<!M><S><H>                                                       */ DEADTRANS( L'H'	,0xE5A0	,0x01A9	,0x0000), // 'H' ➔ "Ʃ" U+01A9 LATIN CAPITAL LETTER ESH
-/*<!M><S><h>                                                       */ DEADTRANS( L'h'	,0xE5A0	,0x01A9	,0x0000), // 'h' ➔ "Ʃ" U+01A9 LATIN CAPITAL LETTER ESH
-/*<!M><s><h>                                                       */ DEADTRANS( L'h'	,0xE59F	,0x0283	,0x0000), // 'h' ➔ "ʃ" U+0283 LATIN SMALL LETTER ESH
-/*<!M><s><i>                                                       */ DEADTRANS( L'i'	,0xE59F	,0xE5BF	,0x0001), // Intermediate multikey chain link
-/*<!M><S><I>                                                       */ DEADTRANS( L'I'	,0xE5A0	,0xE5C0	,0x0001), // Intermediate multikey chain link
-/*<!M><s><i><n>                                                    */ DEADTRANS( L'n'	,0xE5BF	,0x223F	,0x0000), // 'n' ➔ "∿" U+223F SINE WAVE
-/*<!M><S><I><N>                                                    */ DEADTRANS( L'N'	,0xE5C0	,0x223F	,0x0000), // 'N' ➔ "∿" U+223F SINE WAVE
-/*<!M><s><l>                                                       */ DEADTRANS( L'l'	,0xE59F	,0x017F	,0x0000), // 'l' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
-/*<!M><s><m>                                                       */ DEADTRANS( L'm'	,0xE59F	,0x2120	,0x0000), // 'm' ➔ "℠" U+2120 SERVICE MARK
-/*<!M><S><M>                                                       */ DEADTRANS( L'M'	,0xE5A0	,0x2120	,0x0000), // 'M' ➔ "℠" U+2120 SERVICE MARK
-/*<!M><s><n>                                                       */ DEADTRANS( L'n'	,0xE59F	,0xE5C1	,0x0001), // Intermediate multikey chain link
-/*<!M><S><N>                                                       */ DEADTRANS( L'N'	,0xE5A0	,0xE5C2	,0x0001), // Intermediate multikey chain link
-/*<!M><S><n>                                                       */ DEADTRANS( L'n'	,0xE5A0	,0x2A19	,0x0000), // 'n' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
-/*<!M><s><n><o>                                                    */ DEADTRANS( L'o'	,0xE5C1	,0x2744	,0x0000), // 'o' ➔ "❄" U+2744 SNOWFLAKE emoji
-/*<!M><S><N><O>                                                    */ DEADTRANS( L'O'	,0xE5C2	,0x2744	,0x0000), // 'O' ➔ "❄" U+2744 SNOWFLAKE emoji
-/*<!M><s><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C1	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
-/*<!M><S><N><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C2	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
-/*<!M><s><n><~space>                                               */ DEADTRANS( L' '	,0xE5C1	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
-/*<!M><S><N><~space>                                               */ DEADTRANS( L' '	,0xE5C2	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
-/*<!M><s><o>                                                       */ DEADTRANS( L'o'	,0xE59F	,0xE5C3	,0x0001), // Intermediate multikey chain link
-/*<!M><S><O>                                                       */ DEADTRANS( L'O'	,0xE5A0	,0xE5C4	,0x0001), // Intermediate multikey chain link
-/*<!M><S><o>                                                       */ DEADTRANS( L'o'	,0xE5A0	,0xE5C5	,0x0001), // Intermediate multikey chain link
-/*<!M><s><o><%greater>                                             */ DEADTRANS( L'>'	,0xE5C3	,0x2232	,0x0000), // '>' ➔ "∲" U+2232 CLOCKWISE CONTOUR INTEGRAL
-/*<!M><S><o><%greater>                                             */ DEADTRANS( L'>'	,0xE5C5	,0x2232	,0x0000), // '>' ➔ "∲" U+2232 CLOCKWISE CONTOUR INTEGRAL
-/*<!M><s><o><%less>                                                */ DEADTRANS( L'<'	,0xE5C3	,0x2233	,0x0000), // '<' ➔ "∳" U+2233 ANTICLOCKWISE CONTOUR INTEGRAL
-/*<!M><S><o><%less>                                                */ DEADTRANS( L'<'	,0xE5C5	,0x2233	,0x0000), // '<' ➔ "∳" U+2233 ANTICLOCKWISE CONTOUR INTEGRAL
-/*<!M><s><o><%period>                                              */ DEADTRANS( L'.'	,0xE5C3	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
-/*<!M><S><o><%period>                                              */ DEADTRANS( L'.'	,0xE5C5	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
-/*<!M><S><O><%period>                                              */ DEADTRANS( L'.'	,0xE5C4	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
-/*<!M><s><o><l>                                                    */ DEADTRANS( L'l'	,0xE5C3	,0x2600	,0x0000), // 'l' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
-/*<!M><S><O><L>                                                    */ DEADTRANS( L'L'	,0xE5C4	,0x2600	,0x0000), // 'L' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
-/*<!M><s><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C3	,0x222E	,0x0000), // ' ' ➔ "∮" U+222E CONTOUR INTEGRAL
-/*<!M><S><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C5	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
-/*<!M><S><O><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C4	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
-/*<!M><s><o><~space>                                               */ DEADTRANS( L' '	,0xE5C3	,0x222E	,0x0000), // ' ' ➔ "∮" U+222E CONTOUR INTEGRAL
-/*<!M><S><o><~space>                                               */ DEADTRANS( L' '	,0xE5C5	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
-/*<!M><S><O><~space>                                               */ DEADTRANS( L' '	,0xE5C4	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
-/*<!M><s><p>                                                       */ DEADTRANS( L'p'	,0xE59F	,0x2423	,0x0000), // 'p' ➔ "␣" U+2423 OPEN BOX
-/*<!M><S><P>                                                       */ DEADTRANS( L'P'	,0xE5A0	,0x2423	,0x0000), // 'P' ➔ "␣" U+2423 OPEN BOX
-/*<!M><s><S>                                                       */ DEADTRANS( L'S'	,0xE59F	,0x00A7	,0x0000), // 'S' ➔ "§" U+00A7 SECTION SIGN
-/*<!M><s><s>                                                       */ DEADTRANS( L's'	,0xE59F	,0x00DF	,0x0000), // 's' ➔ "ß" U+00DF LATIN SMALL LETTER SHARP S
-/*<!M><S><S>                                                       */ DEADTRANS( L'S'	,0xE5A0	,0x1E9E	,0x0000), // 'S' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
-/*<!M><S><s>                                                       */ DEADTRANS( L's'	,0xE5A0	,0x1E9E	,0x0000), // 's' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
-/*<!M><s><u>                                                       */ DEADTRANS( L'u'	,0xE59F	,0xE5C6	,0x0001), // Intermediate multikey chain link
-/*<!M><S><U>                                                       */ DEADTRANS( L'U'	,0xE5A0	,0xE5C7	,0x0001), // Intermediate multikey chain link
-/*<!M><S><u>                                                       */ DEADTRANS( L'u'	,0xE5A0	,0x2A1A	,0x0000), // 'u' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
-/*<!M><s><u><n>                                                    */ DEADTRANS( L'n'	,0xE5C6	,0x2600	,0x0000), // 'n' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
-/*<!M><S><U><N>                                                    */ DEADTRANS( L'N'	,0xE5C7	,0x2600	,0x0000), // 'N' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
-/*<!M><s><u><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C6	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
-/*<!M><S><U><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C7	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
-/*<!M><s><u><~space>                                               */ DEADTRANS( L' '	,0xE5C6	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
-/*<!M><S><U><~space>                                               */ DEADTRANS( L' '	,0xE5C7	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
-/*<!M><s><v>                                                       */ DEADTRANS( L'v'	,0xE59F	,0xE5C8	,0x0001), // Intermediate multikey chain link
-/*<!M><S><V>                                                       */ DEADTRANS( L'V'	,0xE5A0	,0xE5C9	,0x0001), // Intermediate multikey chain link
-/*<!M><s><v><c>                                                    */ DEADTRANS( L'c'	,0xE5C8	,0x20A1	,0x0000), // 'c' ➔ "₡" U+20A1 COLON SIGN, El Salvador Colon EL SALVADOR
-/*<!M><S><V><C>                                                    */ DEADTRANS( L'C'	,0xE5C9	,0x20A1	,0x0000), // 'C' ➔ "₡" U+20A1 COLON SIGN, El Salvador Colon EL SALVADOR
-/*<!M><s><x>                                                       */ DEADTRANS( L'x'	,0xE59F	,0x2A18	,0x0000), // 'x' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
-/*<!M><S><x>                                                       */ DEADTRANS( L'x'	,0xE5A0	,0x2A18	,0x0000), // 'x' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
-/*<!M><S><X>                                                       */ DEADTRANS( L'X'	,0xE5A0	,0x2A18	,0x0000), // 'X' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
-/*<!M><s><z>                                                       */ DEADTRANS( L'z'	,0xE59F	,0x00DF	,0x0000), // 'z' ➔ "ß" U+00DF LATIN SMALL LETTER SHARP S
-/*<!M><S><Z>                                                       */ DEADTRANS( L'Z'	,0xE5A0	,0x1E9E	,0x0000), // 'Z' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
-/*<!M><S><z>                                                       */ DEADTRANS( L'z'	,0xE5A0	,0x1E9E	,0x0000), // 'z' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
-/*<!M><S><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5A0	,0x2211	,0x0000), // ' ' ➔ "∑" U+2211 N-ARY SUMMATION
-/*<!M><s><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE59F	,0x222B	,0x0000), // ' ' ➔ "∫" U+222B INTEGRAL
-/*<!M><S><~space>                                                  */ DEADTRANS( L' '	,0xE5A0	,0x2211	,0x0000), // ' ' ➔ "∑" U+2211 N-ARY SUMMATION
-/*<!M><s><~space>                                                  */ DEADTRANS( L' '	,0xE59F	,0x222B	,0x0000), // ' ' ➔ "∫" U+222B INTEGRAL
-/*<!M><T>                                                          */ DEADTRANS( L'T'	,0x00A6	,0xE5CA	,0x0001), // Intermediate multikey chain link
-/*<!M><t>                                                          */ DEADTRANS( L't'	,0x00A6	,0xE5CB	,0x0001), // Intermediate multikey chain link
-/*<!M><T><%apostrophe>                                             */ DEADTRANS( L'\''	,0xE5CA	,0x2ADF	,0x0000), // ''' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><T><%aprightsingquotmark>                                    */ DEADTRANS( 0x2019	,0xE5CA	,0x2ADF	,0x0000), // '’' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><T><%at>                                                     */ DEADTRANS( L'@'	,0xE5CA	,0x03F4	,0x0000), // '@' ➔ "ϴ" U+03F4 GREEK CAPITAL THETA SYMBOL
-/*<!M><t><%at>                                                     */ DEADTRANS( L'@'	,0xE5CB	,0x03D1	,0x0000), // '@' ➔ "ϑ" U+03D1 GREEK THETA SYMBOL
-/*<!M><T><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5CA	,0xE5CC	,0x0001), // Intermediate multikey chain link
-/*<!M><T><%backslash><%bar>                                        */ DEADTRANS( L'|'	,0xE5CC	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><T><%bar>                                                    */ DEADTRANS( L'|'	,0xE5CA	,0x27D9	,0x0000), // '|' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><t><%equal>                                                  */ DEADTRANS( L'='	,0xE5CB	,0x20AE	,0x0000), // '=' ➔ "₮" U+20AE TUGRIK SIGN
-/*<!M><T><%equal>                                                  */ DEADTRANS( L'='	,0xE5CA	,0x20AE	,0x0000), // '=' ➔ "₮" U+20AE TUGRIK SIGN
-/*<!M><T><%greater>                                                */ DEADTRANS( L'>'	,0xE5CA	,0xE5CD	,0x0001), // Intermediate multikey chain link
-/*<!M><T><%greater><%apostrophe>                                   */ DEADTRANS( L'\''	,0xE5CD	,0x22A6	,0x0000), // ''' ➔ "⊦" U+22A6 ASSERTION
-/*<!M><T><%greater><%aprightsingquotmark>                          */ DEADTRANS( 0x2019	,0xE5CD	,0x22A6	,0x0000), // '’' ➔ "⊦" U+22A6 ASSERTION
-/*<!M><T><%greater><%bar>                                          */ DEADTRANS( L'|'	,0xE5CD	,0x27DD	,0x0000), // '|' ➔ "⟝" U+27DD LONG RIGHT TACK
-/*<!M><T><%greater><%less>                                         */ DEADTRANS( L'<'	,0xE5CD	,0x27DB	,0x0000), // '<' ➔ "⟛" U+27DB LEFT AND RIGHT TACK
-/*<!M><T><%greater><%slash>                                        */ DEADTRANS( L'/'	,0xE5CD	,0x22AC	,0x0000), // '/' ➔ "⊬" U+22AC DOES NOT PROVE
-/*<!M><T><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5CD	,0x22A2	,0x0000), // ' ' ➔ "⊢" U+22A2 RIGHT TACK
-/*<!M><T><%greater><~space>                                        */ DEADTRANS( L' '	,0xE5CD	,0x22A2	,0x0000), // ' ' ➔ "⊢" U+22A2 RIGHT TACK
-/*<!M><T><%less>                                                   */ DEADTRANS( L'<'	,0xE5CA	,0xE5CE	,0x0001), // Intermediate multikey chain link
-/*<!M><T><%less><%apostrophe>                                      */ DEADTRANS( L'\''	,0xE5CE	,0x2ADE	,0x0000), // ''' ➔ "⫞" U+2ADE SHORT LEFT TACK
-/*<!M><T><%less><%aprightsingquotmark>                             */ DEADTRANS( 0x2019	,0xE5CE	,0x2ADE	,0x0000), // '’' ➔ "⫞" U+2ADE SHORT LEFT TACK
-/*<!M><T><%less><%bar>                                             */ DEADTRANS( L'|'	,0xE5CE	,0x27DE	,0x0000), // '|' ➔ "⟞" U+27DE LONG LEFT TACK
-/*<!M><T><%less><%greater>                                         */ DEADTRANS( L'>'	,0xE5CE	,0x27DB	,0x0000), // '>' ➔ "⟛" U+27DB LEFT AND RIGHT TACK
-/*<!M><T><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE5CE	,0x22A3	,0x0000), // ' ' ➔ "⊣" U+22A3 LEFT TACK
-/*<!M><T><%less><~space>                                           */ DEADTRANS( L' '	,0xE5CE	,0x22A3	,0x0000), // ' ' ➔ "⊣" U+22A3 LEFT TACK
-/*<!M><t><%minus>                                                  */ DEADTRANS( L'-'	,0xE5CB	,0x20AE	,0x0000), // '-' ➔ "₮" U+20AE TUGRIK SIGN
-/*<!M><T><%minus>                                                  */ DEADTRANS( L'-'	,0xE5CA	,0x20AE	,0x0000), // '-' ➔ "₮" U+20AE TUGRIK SIGN
-/*<!M><T><%percent>                                                */ DEADTRANS( L'%'	,0xE5CA	,0xE5CF	,0x0001), // Intermediate multikey chain link
-/*<!M><T><%percent><%apostrophe>                                   */ DEADTRANS( L'\''	,0xE5CF	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><T><%percent><%bar>                                          */ DEADTRANS( L'|'	,0xE5CF	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><T><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE5CF	,0x2AE9	,0x0000), // '%' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
-/*<!M><T><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5CF	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
-/*<!M><T><%percent><~space>                                        */ DEADTRANS( L' '	,0xE5CF	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
-/*<!M><t><1>                                                       */ DEADTRANS( L'1'	,0xE5CB	,0xA716	,0x0000), // '1' ➔ "꜖" U+A716 MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-/*<!M><T><1>                                                       */ DEADTRANS( L'1'	,0xE5CA	,0xA716	,0x0000), // '1' ➔ "꜖" U+A716 MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-/*<!M><T><2>                                                       */ DEADTRANS( L'2'	,0xE5CA	,0xE5D0	,0x0001), // Intermediate multikey chain link
-/*<!M><t><2>                                                       */ DEADTRANS( L'2'	,0xE5CB	,0xA715	,0x0000), // '2' ➔ "꜕" U+A715 MODIFIER LETTER LOW LEFT-STEM TONE BAR
-/*<!M><T><2><%greater>                                             */ DEADTRANS( L'>'	,0xE5D0	,0xE5D1	,0x0001), // Intermediate multikey chain link
-/*<!M><T><2><%greater><%apostrophe>                                */ DEADTRANS( L'\''	,0xE5D1	,0x22A7	,0x0000), // ''' ➔ "⊧" U+22A7 MODELS
-/*<!M><T><2><%greater><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE5D1	,0x22A7	,0x0000), // '’' ➔ "⊧" U+22A7 MODELS
-/*<!M><T><2><%greater><%less>                                      */ DEADTRANS( L'<'	,0xE5D1	,0x27DA	,0x0000), // '<' ➔ "⟚" U+27DA LEFT AND RIGHT DOUBLE TURNSTILE
-/*<!M><T><2><%greater><%slash>                                     */ DEADTRANS( L'/'	,0xE5D1	,0x22AD	,0x0000), // '/' ➔ "⊭" U+22AD NOT TRUE
-/*<!M><T><2><%greater><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5D1	,0x22A8	,0x0000), // ' ' ➔ "⊨" U+22A8 TRUE
-/*<!M><T><2><%greater><~space>                                     */ DEADTRANS( L' '	,0xE5D1	,0x22A8	,0x0000), // ' ' ➔ "⊨" U+22A8 TRUE
-/*<!M><T><2><%less>                                                */ DEADTRANS( L'<'	,0xE5D0	,0xE5D2	,0x0001), // Intermediate multikey chain link
-/*<!M><T><2><%less><%greater>                                      */ DEADTRANS( L'>'	,0xE5D2	,0x27DA	,0x0000), // '>' ➔ "⟚" U+27DA LEFT AND RIGHT DOUBLE TURNSTILE
-/*<!M><T><2><%less><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5D2	,0x2AE4	,0x0000), // ' ' ➔ "⫤" U+2AE4 VERTICAL BAR DOUBLE LEFT TURNSTILE
-/*<!M><T><2><%less><~space>                                        */ DEADTRANS( L' '	,0xE5D2	,0x2AE4	,0x0000), // ' ' ➔ "⫤" U+2AE4 VERTICAL BAR DOUBLE LEFT TURNSTILE
-/*<!M><T><2><%percent>                                             */ DEADTRANS( L'%'	,0xE5D0	,0x2AEB	,0x0000), // '%' ➔ "⫫" U+2AEB DOUBLE UP TACK
-/*<!M><T><2><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5D0	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
-/*<!M><T><2><~space>                                               */ DEADTRANS( L' '	,0xE5D0	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
-/*<!M><T><3>                                                       */ DEADTRANS( L'3'	,0xE5CA	,0xE5D3	,0x0001), // Intermediate multikey chain link
-/*<!M><t><3>                                                       */ DEADTRANS( L'3'	,0xE5CB	,0xA714	,0x0000), // '3' ➔ "꜔" U+A714 MODIFIER LETTER MID LEFT-STEM TONE BAR
-/*<!M><T><3><%greater>                                             */ DEADTRANS( L'>'	,0xE5D3	,0x2AE2	,0x0000), // '>' ➔ "⫢" U+2AE2 VERTICAL BAR TRIPLE RIGHT TURNSTILE
-/*<!M><t><4>                                                       */ DEADTRANS( L'4'	,0xE5CB	,0xA713	,0x0000), // '4' ➔ "꜓" U+A713 MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-/*<!M><T><4>                                                       */ DEADTRANS( L'4'	,0xE5CA	,0xA713	,0x0000), // '4' ➔ "꜓" U+A713 MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-/*<!M><t><5>                                                       */ DEADTRANS( L'5'	,0xE5CB	,0xA712	,0x0000), // '5' ➔ "꜒" U+A712 MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-/*<!M><T><5>                                                       */ DEADTRANS( L'5'	,0xE5CA	,0xA712	,0x0000), // '5' ➔ "꜒" U+A712 MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-/*<!M><t><a>                                                       */ DEADTRANS( L'a'	,0xE5CB	,0xE5D4	,0x0001), // Intermediate multikey chain link
-/*<!M><T><A>                                                       */ DEADTRANS( L'A'	,0xE5CA	,0xE5D5	,0x0001), // Intermediate multikey chain link
-/*<!M><t><a><b>                                                    */ DEADTRANS( L'b'	,0xE5D4	,0x21B9	,0x0000), // 'b' ➔ "↹" U+21B9 LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR, tab with shift tab
-/*<!M><T><A><B>                                                    */ DEADTRANS( L'B'	,0xE5D5	,0x2B7E	,0x0000), // 'B' ➔ "⭾" U+2B7E HORIZONTAL TAB KEY
-/*<!M><t><a><i>                                                    */ DEADTRANS( L'i'	,0xE5D4	,0x25C9	,0x0000), // 'i' ➔ "◉" U+25C9 FISHEYE, Japanese tainome, bullet
-/*<!M><T><A><I>                                                    */ DEADTRANS( L'I'	,0xE5D5	,0x25C9	,0x0000), // 'I' ➔ "◉" U+25C9 FISHEYE, Japanese tainome, bullet
-/*<!M><t><a><u>                                                    */ DEADTRANS( L'u'	,0xE5D4	,0xE5D6	,0x0001), // Intermediate multikey chain link
-/*<!M><T><A><U>                                                    */ DEADTRANS( L'U'	,0xE5D5	,0xE5D7	,0x0001), // Intermediate multikey chain link
-/*<!M><t><a><u><r>                                                 */ DEADTRANS( L'r'	,0xE5D6	,0x2649	,0x0000), // 'r' ➔ "♉" U+2649 TAURUS emoji
-/*<!M><T><A><U><R>                                                 */ DEADTRANS( L'R'	,0xE5D7	,0x2649	,0x0000), // 'R' ➔ "♉" U+2649 TAURUS emoji
-/*<!M><t><c>                                                       */ DEADTRANS( L'c'	,0xE5CB	,0x02A8	,0x0000), // 'c' ➔ "ʨ" U+02A8 LATIN SMALL LETTER TC DIGRAPH WITH CURL
-/*<!M><t><e>                                                       */ DEADTRANS( L'e'	,0xE5CB	,0xE5D8	,0x0001), // Intermediate multikey chain link
-/*<!M><T><E>                                                       */ DEADTRANS( L'E'	,0xE5CA	,0x2121	,0x0000), // 'E' ➔ "℡" U+2121 TELEPHONE SIGN
-/*<!M><T><e>                                                       */ DEADTRANS( L'e'	,0xE5CA	,0x2121	,0x0000), // 'e' ➔ "℡" U+2121 TELEPHONE SIGN
-/*<!M><t><e><c>                                                    */ DEADTRANS( L'c'	,0xE5D8	,0x02A7	,0x0000), // 'c' ➔ "ʧ" U+02A7 LATIN SMALL LETTER TESH DIGRAPH
-/*<!M><t><e><l>                                                    */ DEADTRANS( L'l'	,0xE5D8	,0x2121	,0x0000), // 'l' ➔ "℡" U+2121 TELEPHONE SIGN
-/*<!M><t><e><s>                                                    */ DEADTRANS( L's'	,0xE5D8	,0x02A7	,0x0000), // 's' ➔ "ʧ" U+02A7 LATIN SMALL LETTER TESH DIGRAPH
-/*<!M><T><H>                                                       */ DEADTRANS( L'H'	,0xE5CA	,0xE5D9	,0x0001), // Intermediate multikey chain link
-/*<!M><t><h>                                                       */ DEADTRANS( L'h'	,0xE5CB	,0xE5DA	,0x0001), // Intermediate multikey chain link
-/*<!M><T><h>                                                       */ DEADTRANS( L'h'	,0xE5CA	,0x00DE	,0x0000), // 'h' ➔ "Þ" U+00DE LATIN CAPITAL LETTER THORN
-/*<!M><t><h><%slash>                                               */ DEADTRANS( L'/'	,0xE5DA	,0x1D7A	,0x0000), // '/' ➔ "ᵺ" U+1D7A LATIN SMALL LETTER TH WITH STRIKETHROUGH
-/*<!M><t><h><b>                                                    */ DEADTRANS( L'b'	,0xE5DA	,0x0E3F	,0x0000), // 'b' ➔ "฿" U+0E3F THAI CURRENCY SYMBOL BAHT, Baht THAILAND
-/*<!M><T><H><B>                                                    */ DEADTRANS( L'B'	,0xE5D9	,0x0E3F	,0x0000), // 'B' ➔ "฿" U+0E3F THAI CURRENCY SYMBOL BAHT, Baht THAILAND
-/*<!M><T><H><~space>                                               */ DEADTRANS( L' '	,0xE5D9	,0x00DE	,0x0000), // ' ' ➔ "Þ" U+00DE LATIN CAPITAL LETTER THORN
-/*<!M><t><h><~space>                                               */ DEADTRANS( L' '	,0xE5DA	,0x00FE	,0x0000), // ' ' ➔ "þ" U+00FE LATIN SMALL LETTER THORN
-/*<!M><t><m>                                                       */ DEADTRANS( L'm'	,0xE5CB	,0x2122	,0x0000), // 'm' ➔ "™" U+2122 TRADE MARK SIGN emoji
-/*<!M><T><M>                                                       */ DEADTRANS( L'M'	,0xE5CA	,0x2122	,0x0000), // 'M' ➔ "™" U+2122 TRADE MARK SIGN emoji
-/*<!M><t><n>                                                       */ DEADTRANS( L'n'	,0xE5CB	,0xE5DB	,0x0001), // Intermediate multikey chain link
-/*<!M><T><N>                                                       */ DEADTRANS( L'N'	,0xE5CA	,0xE5DC	,0x0001), // Intermediate multikey chain link
-/*<!M><T><n>                                                       */ DEADTRANS( L'n'	,0xE5CA	,0x2ADA	,0x0000), // 'n' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
-/*<!M><t><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5DB	,0x2ADA	,0x0000), // ' ' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
-/*<!M><t><n><~space>                                               */ DEADTRANS( L' '	,0xE5DB	,0x2ADA	,0x0000), // ' ' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
-/*<!M><t><o>                                                       */ DEADTRANS( L'o'	,0xE5CB	,0xE5DD	,0x0001), // Intermediate multikey chain link
-/*<!M><T><O>                                                       */ DEADTRANS( L'O'	,0xE5CA	,0xE5DE	,0x0001), // Intermediate multikey chain link
-/*<!M><T><o>                                                       */ DEADTRANS( L'o'	,0xE5CA	,0x2AF1	,0x0000), // 'o' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
-/*<!M><t><o><x>                                                    */ DEADTRANS( L'x'	,0xE5DD	,0x2620	,0x0000), // 'x' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
-/*<!M><T><O><X>                                                    */ DEADTRANS( L'X'	,0xE5DE	,0x2620	,0x0000), // 'X' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
-/*<!M><t><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5DD	,0x2AF1	,0x0000), // ' ' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
-/*<!M><t><o><~space>                                               */ DEADTRANS( L' '	,0xE5DD	,0x2AF1	,0x0000), // ' ' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
-/*<!M><t><r>                                                       */ DEADTRANS( L'r'	,0xE5CB	,0xE5DF	,0x0001), // Intermediate multikey chain link
-/*<!M><T><R>                                                       */ DEADTRANS( L'R'	,0xE5CA	,0xE5E0	,0x0001), // Intermediate multikey chain link
-/*<!M><t><r><y>                                                    */ DEADTRANS( L'y'	,0xE5DF	,0x20BA	,0x0000), // 'y' ➔ "₺" U+20BA TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
-/*<!M><T><R><Y>                                                    */ DEADTRANS( L'Y'	,0xE5E0	,0x20BA	,0x0000), // 'Y' ➔ "₺" U+20BA TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
-/*<!M><t><s>                                                       */ DEADTRANS( L's'	,0xE5CB	,0x02A6	,0x0000), // 's' ➔ "ʦ" U+02A6 LATIN SMALL LETTER TS DIGRAPH
-/*<!M><T><T>                                                       */ DEADTRANS( L'T'	,0xE5CA	,0xE5E1	,0x0001), // Intermediate multikey chain link
-/*<!M><T><T><%apostrophe>                                          */ DEADTRANS( L'\''	,0xE5E1	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><T><T><%bar>                                                 */ DEADTRANS( L'|'	,0xE5E1	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><T><T><%percent>                                             */ DEADTRANS( L'%'	,0xE5E1	,0xE5E2	,0x0001), // Intermediate multikey chain link
-/*<!M><T><T><%percent><%apostrophe>                                */ DEADTRANS( L'\''	,0xE5E2	,0x2AE9	,0x0000), // ''' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
-/*<!M><T><T><%percent><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE5E2	,0x2AE9	,0x0000), // '’' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
-/*<!M><T><T><%percent><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5E2	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
-/*<!M><T><T><%percent><~space>                                     */ DEADTRANS( L' '	,0xE5E2	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
-/*<!M><T><T><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E1	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
-/*<!M><T><T><~space>                                               */ DEADTRANS( L' '	,0xE5E1	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
-/*<!M><t><u>                                                       */ DEADTRANS( L'u'	,0xE5CB	,0xA777	,0x0000), // 'u' ➔ "ꝷ" U+A777 LATIN SMALL LETTER TUM
-/*<!M><T><Z>                                                       */ DEADTRANS( L'Z'	,0xE5CA	,0xA728	,0x0000), // 'Z' ➔ "Ꜩ" U+A728 LATIN CAPITAL LETTER TZ
-/*<!M><T><z>                                                       */ DEADTRANS( L'z'	,0xE5CA	,0xA728	,0x0000), // 'z' ➔ "Ꜩ" U+A728 LATIN CAPITAL LETTER TZ
-/*<!M><t><z>                                                       */ DEADTRANS( L'z'	,0xE5CB	,0xA729	,0x0000), // 'z' ➔ "ꜩ" U+A729 LATIN SMALL LETTER TZ
-/*<!M><T><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CA	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
-/*<!M><t><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CB	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
-/*<!M><T><~space>                                                  */ DEADTRANS( L' '	,0xE5CA	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
-/*<!M><t><~space>                                                  */ DEADTRANS( L' '	,0xE5CB	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
-/*<!M><u>                                                          */ DEADTRANS( L'u'	,0x00A6	,0xE5E3	,0x0001), // Intermediate multikey chain link
-/*<!M><U>                                                          */ DEADTRANS( L'U'	,0x00A6	,0xE5E4	,0x0001), // Intermediate multikey chain link
-/*<!M><U><%at>                                                     */ DEADTRANS( L'@'	,0xE5E4	,0x03F4	,0x0000), // '@' ➔ "ϴ" U+03F4 GREEK CAPITAL THETA SYMBOL
-/*<!M><u><%at>                                                     */ DEADTRANS( L'@'	,0xE5E3	,0x03D1	,0x0000), // '@' ➔ "ϑ" U+03D1 GREEK THETA SYMBOL
-/*<!M><u><%bracketleft>                                            */ DEADTRANS( L'['	,0xE5E3	,0x2294	,0x0000), // '[' ➔ "⊔" U+2294 SQUARE CUP
-/*<!M><U><%bracketleft>                                            */ DEADTRANS( L'['	,0xE5E4	,0x2A06	,0x0000), // '[' ➔ "⨆" U+2A06 N-ARY SQUARE UNION OPERATOR
-/*<!M><u><%bracketright>                                           */ DEADTRANS( L']'	,0xE5E3	,0x2294	,0x0000), // ']' ➔ "⊔" U+2294 SQUARE CUP
-/*<!M><U><%bracketright>                                           */ DEADTRANS( L']'	,0xE5E4	,0x2A06	,0x0000), // ']' ➔ "⨆" U+2A06 N-ARY SQUARE UNION OPERATOR
-/*<!M><u><%less>                                                   */ DEADTRANS( L'<'	,0xE5E3	,0x228C	,0x0000), // '<' ➔ "⊌" U+228C MULTISET
-/*<!M><U><%less>                                                   */ DEADTRANS( L'<'	,0xE5E4	,0x228C	,0x0000), // '<' ➔ "⊌" U+228C MULTISET
-/*<!M><u><%minus>                                                  */ DEADTRANS( L'-'	,0xE5E3	,0x2A41	,0x0000), // '-' ➔ "⩁" U+2A41 UNION WITH MINUS SIGN
-/*<!M><U><%minus>                                                  */ DEADTRANS( L'-'	,0xE5E4	,0x2A41	,0x0000), // '-' ➔ "⩁" U+2A41 UNION WITH MINUS SIGN
-/*<!M><u><%period>                                                 */ DEADTRANS( L'.'	,0xE5E3	,0x228D	,0x0000), // '.' ➔ "⊍" U+228D MULTISET MULTIPLICATION
-/*<!M><U><%period>                                                 */ DEADTRANS( L'.'	,0xE5E4	,0x2A03	,0x0000), // '.' ➔ "⨃" U+2A03 N-ARY UNION OPERATOR WITH DOT
-/*<!M><u><%plus>                                                   */ DEADTRANS( L'+'	,0xE5E3	,0x228E	,0x0000), // '+' ➔ "⊎" U+228E MULTISET UNION
-/*<!M><U><%plus>                                                   */ DEADTRANS( L'+'	,0xE5E4	,0x2A04	,0x0000), // '+' ➔ "⨄" U+2A04 N-ARY UNION OPERATOR WITH PLUS
-/*<!M><u><%underscore>                                             */ DEADTRANS( L'_'	,0xE5E3	,0x2A48	,0x0000), // '_' ➔ "⩈" U+2A48 UNION ABOVE BAR ABOVE INTERSECTION
-/*<!M><U><%underscore>                                             */ DEADTRANS( L'_'	,0xE5E4	,0x2A48	,0x0000), // '_' ➔ "⩈" U+2A48 UNION ABOVE BAR ABOVE INTERSECTION
-/*<!M><u><a>                                                       */ DEADTRANS( L'a'	,0xE5E3	,0xE5E5	,0x0001), // Intermediate multikey chain link
-/*<!M><U><A>                                                       */ DEADTRANS( L'A'	,0xE5E4	,0xE5E6	,0x0001), // Intermediate multikey chain link
-/*<!M><u><a><h>                                                    */ DEADTRANS( L'h'	,0xE5E5	,0x20B4	,0x0000), // 'h' ➔ "₴" U+20B4 HRYVNIA SIGN, Hryvnia UKRAINE
-/*<!M><U><A><H>                                                    */ DEADTRANS( L'H'	,0xE5E6	,0x20B4	,0x0000), // 'H' ➔ "₴" U+20B4 HRYVNIA SIGN, Hryvnia UKRAINE
-/*<!M><u><e>                                                       */ DEADTRANS( L'e'	,0xE5E3	,0x1D6B	,0x0000), // 'e' ➔ "ᵫ" U+1D6B LATIN SMALL LETTER UE
-/*<!M><u><i>                                                       */ DEADTRANS( L'i'	,0xE5E3	,0xAB50	,0x0000), // 'i' ➔ "ꭐ" U+AB50 LATIN SMALL LETTER UI
-/*<!M><u><m>                                                       */ DEADTRANS( L'm'	,0xE5E3	,0xA778	,0x0000), // 'm' ➔ "ꝸ" U+A778 LATIN SMALL LETTER UM
-/*<!M><u><n>                                                       */ DEADTRANS( L'n'	,0xE5E3	,0xE5E7	,0x0001), // Intermediate multikey chain link
-/*<!M><U><N>                                                       */ DEADTRANS( L'N'	,0xE5E4	,0xE5E8	,0x0001), // Intermediate multikey chain link
-/*<!M><u><n><i>                                                    */ DEADTRANS( L'i'	,0xE5E7	,0xE5E9	,0x0001), // Intermediate multikey chain link
-/*<!M><u><n><i><o>                                                 */ DEADTRANS( L'o'	,0xE5E9	,0xE5EA	,0x0001), // Intermediate multikey chain link
-/*<!M><u><n><i><o><n>                                              */ DEADTRANS( L'n'	,0xE5EA	,0x222A	,0x0000), // 'n' ➔ "∪" U+222A UNION French name
-/*<!M><u><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E7	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
-/*<!M><U><N><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E8	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
-/*<!M><u><n><~space>                                               */ DEADTRANS( L' '	,0xE5E7	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
-/*<!M><U><N><~space>                                               */ DEADTRANS( L' '	,0xE5E8	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
-/*<!M><u><o>                                                       */ DEADTRANS( L'o'	,0xE5E3	,0xAB63	,0x0000), // 'o' ➔ "ꭣ" U+AB63 LATIN SMALL LETTER UO
-/*<!M><u><u>                                                       */ DEADTRANS( L'u'	,0xE5E3	,0x2A4A	,0x0000), // 'u' ➔ "⩊" U+2A4A UNION BESIDE AND JOINED WITH UNION
-/*<!M><U><U>                                                       */ DEADTRANS( L'U'	,0xE5E4	,0x2A4A	,0x0000), // 'U' ➔ "⩊" U+2A4A UNION BESIDE AND JOINED WITH UNION
-/*<!M><u><v>                                                       */ DEADTRANS( L'v'	,0xE5E3	,0x2A45	,0x0000), // 'v' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
-/*<!M><U><V>                                                       */ DEADTRANS( L'V'	,0xE5E4	,0x2A45	,0x0000), // 'V' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
-/*<!M><u><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5E3	,0x222A	,0x0000), // ' ' ➔ "∪" U+222A UNION
-/*<!M><U><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5E4	,0x22C3	,0x0000), // ' ' ➔ "⋃" U+22C3 N-ARY UNION
-/*<!M><u><~space>                                                  */ DEADTRANS( L' '	,0xE5E3	,0x222A	,0x0000), // ' ' ➔ "∪" U+222A UNION
-/*<!M><U><~space>                                                  */ DEADTRANS( L' '	,0xE5E4	,0x22C3	,0x0000), // ' ' ➔ "⋃" U+22C3 N-ARY UNION
-/*<!M><V>                                                          */ DEADTRANS( L'V'	,0x00A6	,0xE5EB	,0x0001), // Intermediate multikey chain link
-/*<!M><v>                                                          */ DEADTRANS( L'v'	,0x00A6	,0xE5EC	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5EC	,0xE5ED	,0x0001), // Intermediate multikey chain link
-/*<!M><V><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5EB	,0x22C0	,0x0000), // '\' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><v><%backslash><%parenleft>                                  */ DEADTRANS( L'('	,0xE5ED	,0xE5EE	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%backslash><%parenleft><%parenright>                     */ DEADTRANS( L')'	,0xE5EE	,0x22CF	,0x0000), // ')' ➔ "⋏" U+22CF CURLY LOGICAL AND
-/*<!M><v><%backslash><%parenright>                                 */ DEADTRANS( L')'	,0xE5ED	,0xE5EF	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%backslash><%parenright><%parenleft>                     */ DEADTRANS( L'('	,0xE5EF	,0x22CF	,0x0000), // '(' ➔ "⋏" U+22CF CURLY LOGICAL AND
-/*<!M><v><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE5ED	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><v><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE5ED	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><v><%bar>                                                    */ DEADTRANS( L'|'	,0xE5EC	,0x2A5B	,0x0000), // '|' ➔ "⩛" U+2A5B LOGICAL OR WITH MIDDLE STEM
-/*<!M><V><%bar>                                                    */ DEADTRANS( L'|'	,0xE5EB	,0x2A5B	,0x0000), // '|' ➔ "⩛" U+2A5B LOGICAL OR WITH MIDDLE STEM
-/*<!M><v><%bracketright>                                           */ DEADTRANS( L']'	,0xE5EC	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><V><%bracketright>                                           */ DEADTRANS( L']'	,0xE5EB	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><v><%equal>                                                  */ DEADTRANS( L'='	,0xE5EC	,0x225A	,0x0000), // '=' ➔ "≚" U+225A EQUIANGULAR TO
-/*<!M><V><%equal>                                                  */ DEADTRANS( L'='	,0xE5EB	,0x225A	,0x0000), // '=' ➔ "≚" U+225A EQUIANGULAR TO
-/*<!M><v><%minus>                                                  */ DEADTRANS( L'-'	,0xE5EC	,0x2A5D	,0x0000), // '-' ➔ "⩝" U+2A5D LOGICAL OR WITH HORIZONTAL DASH
-/*<!M><V><%minus>                                                  */ DEADTRANS( L'-'	,0xE5EB	,0x2A5D	,0x0000), // '-' ➔ "⩝" U+2A5D LOGICAL OR WITH HORIZONTAL DASH
-/*<!M><v><%parenleft>                                              */ DEADTRANS( L'('	,0xE5EC	,0xE5F0	,0x0001), // Intermediate multikey chain link
-/*<!M><V><%parenleft>                                              */ DEADTRANS( L'('	,0xE5EB	,0xE5F1	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%parenleft><%parenright>                                 */ DEADTRANS( L')'	,0xE5F0	,0x22CE	,0x0000), // ')' ➔ "⋎" U+22CE CURLY LOGICAL OR
-/*<!M><V><%parenleft><%parenright>                                 */ DEADTRANS( L')'	,0xE5F1	,0x22CE	,0x0000), // ')' ➔ "⋎" U+22CE CURLY LOGICAL OR
-/*<!M><v><%parenright>                                             */ DEADTRANS( L')'	,0xE5EC	,0xE5F2	,0x0001), // Intermediate multikey chain link
-/*<!M><V><%parenright>                                             */ DEADTRANS( L')'	,0xE5EB	,0xE5F3	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%parenright><%parenleft>                                 */ DEADTRANS( L'('	,0xE5F2	,0x22CE	,0x0000), // '(' ➔ "⋎" U+22CE CURLY LOGICAL OR
-/*<!M><V><%parenright><%parenleft>                                 */ DEADTRANS( L'('	,0xE5F3	,0x22CE	,0x0000), // '(' ➔ "⋎" U+22CE CURLY LOGICAL OR
-/*<!M><v><%percent>                                                */ DEADTRANS( L'%'	,0xE5EC	,0xE5F4	,0x0001), // Intermediate multikey chain link
-/*<!M><V><%percent>                                                */ DEADTRANS( L'%'	,0xE5EB	,0x22C0	,0x0000), // '%' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><v><%percent><%bar>                                          */ DEADTRANS( L'|'	,0xE5F4	,0x2A5A	,0x0000), // '|' ➔ "⩚" U+2A5A LOGICAL AND WITH MIDDLE STEM
-/*<!M><v><%percent><%bracketright>                                 */ DEADTRANS( L']'	,0xE5F4	,0x27CE	,0x0000), // ']' ➔ "⟎" U+27CE SQUARED LOGICAL AND
-/*<!M><v><%percent><%minus>                                        */ DEADTRANS( L'-'	,0xE5F4	,0x2A5C	,0x0000), // '-' ➔ "⩜" U+2A5C LOGICAL AND WITH HORIZONTAL DASH
-/*<!M><v><%percent><%parenleft>                                    */ DEADTRANS( L'('	,0xE5F4	,0xE5F5	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%percent><%parenleft><%parenright>                       */ DEADTRANS( L')'	,0xE5F5	,0x22CF	,0x0000), // ')' ➔ "⋏" U+22CF CURLY LOGICAL AND
-/*<!M><v><%percent><%parenright>                                   */ DEADTRANS( L')'	,0xE5F4	,0xE5F6	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%percent><%parenright><%parenleft>                       */ DEADTRANS( L'('	,0xE5F6	,0x22CF	,0x0000), // '(' ➔ "⋏" U+22CF CURLY LOGICAL AND
-/*<!M><v><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE5F4	,0x27D1	,0x0000), // '.' ➔ "⟑" U+27D1 AND WITH DOT
-/*<!M><v><%percent><%underscore>                                   */ DEADTRANS( L'_'	,0xE5F4	,0xE5F7	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%percent><%underscore><%underscore>                      */ DEADTRANS( L'_'	,0xE5F7	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
-/*<!M><v><%percent><%underscore><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE5F7	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><v><%percent><%underscore><~space>                           */ DEADTRANS( L' '	,0xE5F7	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><v><%percent><v>                                             */ DEADTRANS( L'v'	,0xE5F4	,0x2A59	,0x0000), // 'v' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
-/*<!M><v><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5F4	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><v><%percent><~space>                                        */ DEADTRANS( L' '	,0xE5F4	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><v><%period>                                                 */ DEADTRANS( L'.'	,0xE5EC	,0x27C7	,0x0000), // '.' ➔ "⟇" U+27C7 OR WITH DOT INSIDE
-/*<!M><V><%period>                                                 */ DEADTRANS( L'.'	,0xE5EB	,0x27C7	,0x0000), // '.' ➔ "⟇" U+27C7 OR WITH DOT INSIDE
-/*<!M><V><%slash>                                                  */ DEADTRANS( L'/'	,0xE5EB	,0x2123	,0x0000), // '/' ➔ "℣" U+2123 VERSICLE
-/*<!M><v><%slash>                                                  */ DEADTRANS( L'/'	,0xE5EC	,0x2123	,0x0000), // '/' ➔ "℣" U+2123 VERSICLE
-/*<!M><v><%underscore>                                             */ DEADTRANS( L'_'	,0xE5EC	,0xE5F8	,0x0001), // Intermediate multikey chain link
-/*<!M><v><%underscore><%comma>                                     */ DEADTRANS( L','	,0xE5F8	,0x2A61	,0x0000), // ',' ➔ "⩡" U+2A61 SMALL VEE WITH UNDERBAR
-/*<!M><v><%underscore><%underscore>                                */ DEADTRANS( L'_'	,0xE5F8	,0x2A63	,0x0000), // '_' ➔ "⩣" U+2A63 LOGICAL OR WITH DOUBLE UNDERBAR
-/*<!M><v><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5F8	,0x22BB	,0x0000), // ' ' ➔ "⊻" U+22BB XOR
-/*<!M><v><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE5F8	,0x22BB	,0x0000), // ' ' ➔ "⊻" U+22BB XOR
-/*<!M><v><2>                                                       */ DEADTRANS( L'2'	,0xE5EC	,0x221A	,0x0000), // '2' ➔ "√" U+221A SQUARE ROOT
-/*<!M><V><2>                                                       */ DEADTRANS( L'2'	,0xE5EB	,0x221A	,0x0000), // '2' ➔ "√" U+221A SQUARE ROOT
-/*<!M><v><3>                                                       */ DEADTRANS( L'3'	,0xE5EC	,0x221B	,0x0000), // '3' ➔ "∛" U+221B CUBE ROOT
-/*<!M><V><3>                                                       */ DEADTRANS( L'3'	,0xE5EB	,0x221B	,0x0000), // '3' ➔ "∛" U+221B CUBE ROOT
-/*<!M><v><4>                                                       */ DEADTRANS( L'4'	,0xE5EC	,0x221C	,0x0000), // '4' ➔ "∜" U+221C FOURTH ROOT
-/*<!M><V><4>                                                       */ DEADTRANS( L'4'	,0xE5EB	,0x221C	,0x0000), // '4' ➔ "∜" U+221C FOURTH ROOT
-/*<!M><v><a>                                                       */ DEADTRANS( L'a'	,0xE5EC	,0x2A59	,0x0000), // 'a' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
-/*<!M><v><A>                                                       */ DEADTRANS( L'A'	,0xE5EC	,0x2A59	,0x0000), // 'A' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
-/*<!M><V><A>                                                       */ DEADTRANS( L'A'	,0xE5EB	,0x2A59	,0x0000), // 'A' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
-/*<!M><v><e>                                                       */ DEADTRANS( L'e'	,0xE5EC	,0xE5F9	,0x0001), // Intermediate multikey chain link
-/*<!M><V><E>                                                       */ DEADTRANS( L'E'	,0xE5EB	,0xE5FA	,0x0001), // Intermediate multikey chain link
-/*<!M><v><e><r>                                                    */ DEADTRANS( L'r'	,0xE5F9	,0xE5FB	,0x0001), // Intermediate multikey chain link
-/*<!M><V><E><R>                                                    */ DEADTRANS( L'R'	,0xE5FA	,0xE5FC	,0x0001), // Intermediate multikey chain link
-/*<!M><v><e><r><s>                                                 */ DEADTRANS( L's'	,0xE5FB	,0x2652	,0x0000), // 's' ➔ "♒" U+2652 AQUARIUS emoji
-/*<!M><V><E><R><S>                                                 */ DEADTRANS( L'S'	,0xE5FC	,0x2652	,0x0000), // 'S' ➔ "♒" U+2652 AQUARIUS emoji
-/*<!M><v><i>                                                       */ DEADTRANS( L'i'	,0xE5EC	,0xE5FD	,0x0001), // Intermediate multikey chain link
-/*<!M><V><I>                                                       */ DEADTRANS( L'I'	,0xE5EB	,0xE5FE	,0x0001), // Intermediate multikey chain link
-/*<!M><v><i><e>                                                    */ DEADTRANS( L'e'	,0xE5FD	,0xE5FF	,0x0001), // Intermediate multikey chain link
-/*<!M><V><I><E>                                                    */ DEADTRANS( L'E'	,0xE5FE	,0xE600	,0x0001), // Intermediate multikey chain link
-/*<!M><v><i><e><r>                                                 */ DEADTRANS( L'r'	,0xE5FF	,0x264D	,0x0000), // 'r' ➔ "♍" U+264D VIRGO emoji
-/*<!M><V><I><E><R>                                                 */ DEADTRANS( L'R'	,0xE600	,0x264D	,0x0000), // 'R' ➔ "♍" U+264D VIRGO emoji
-/*<!M><v><i><r>                                                    */ DEADTRANS( L'r'	,0xE5FD	,0xE601	,0x0001), // Intermediate multikey chain link
-/*<!M><V><I><R>                                                    */ DEADTRANS( L'R'	,0xE5FE	,0xE602	,0x0001), // Intermediate multikey chain link
-/*<!M><v><i><r><g>                                                 */ DEADTRANS( L'g'	,0xE601	,0x264D	,0x0000), // 'g' ➔ "♍" U+264D VIRGO emoji
-/*<!M><V><I><R><G>                                                 */ DEADTRANS( L'G'	,0xE602	,0x264D	,0x0000), // 'G' ➔ "♍" U+264D VIRGO emoji
-/*<!M><v><n>                                                       */ DEADTRANS( L'n'	,0xE5EC	,0xE603	,0x0001), // Intermediate multikey chain link
-/*<!M><V><N>                                                       */ DEADTRANS( L'N'	,0xE5EB	,0xE604	,0x0001), // Intermediate multikey chain link
-/*<!M><v><n><d>                                                    */ DEADTRANS( L'd'	,0xE603	,0x20AB	,0x0000), // 'd' ➔ "₫" U+20AB DONG SIGN, Dong VIET NAM
-/*<!M><V><N><D>                                                    */ DEADTRANS( L'D'	,0xE604	,0x20AB	,0x0000), // 'D' ➔ "₫" U+20AB DONG SIGN, Dong VIET NAM
-/*<!M><v><u>                                                       */ DEADTRANS( L'u'	,0xE5EC	,0x2A45	,0x0000), // 'u' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
-/*<!M><V><U>                                                       */ DEADTRANS( L'U'	,0xE5EB	,0x2A45	,0x0000), // 'U' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
-/*<!M><v><v>                                                       */ DEADTRANS( L'v'	,0xE5EC	,0xE605	,0x0001), // Intermediate multikey chain link
-/*<!M><V><V>                                                       */ DEADTRANS( L'V'	,0xE5EB	,0xE606	,0x0001), // Intermediate multikey chain link
-/*<!M><v><v><%equal>                                               */ DEADTRANS( L'='	,0xE605	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
-/*<!M><V><V><%equal>                                               */ DEADTRANS( L'='	,0xE606	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
-/*<!M><V><Y>                                                       */ DEADTRANS( L'Y'	,0xE5EB	,0xA760	,0x0000), // 'Y' ➔ "Ꝡ" U+A760 LATIN CAPITAL LETTER VY
-/*<!M><V><y>                                                       */ DEADTRANS( L'y'	,0xE5EB	,0xA760	,0x0000), // 'y' ➔ "Ꝡ" U+A760 LATIN CAPITAL LETTER VY
-/*<!M><v><y>                                                       */ DEADTRANS( L'y'	,0xE5EC	,0xA761	,0x0000), // 'y' ➔ "ꝡ" U+A761 LATIN SMALL LETTER VY
-/*<!M><v><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5EC	,0x2228	,0x0000), // ' ' ➔ "∨" U+2228 LOGICAL OR
-/*<!M><V><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5EB	,0x22C1	,0x0000), // ' ' ➔ "⋁" U+22C1 N-ARY LOGICAL OR
-/*<!M><v><~space>                                                  */ DEADTRANS( L' '	,0xE5EC	,0x2228	,0x0000), // ' ' ➔ "∨" U+2228 LOGICAL OR
-/*<!M><V><~space>                                                  */ DEADTRANS( L' '	,0xE5EB	,0x22C1	,0x0000), // ' ' ➔ "⋁" U+22C1 N-ARY LOGICAL OR
-/*<!M><w>                                                          */ DEADTRANS( L'w'	,0x00A6	,0xE607	,0x0001), // Intermediate multikey chain link
-/*<!M><W>                                                          */ DEADTRANS( L'W'	,0x00A6	,0xE608	,0x0001), // Intermediate multikey chain link
-/*<!M><w><%bracketleft>                                            */ DEADTRANS( L'['	,0xE607	,0x29D8	,0x0000), // '[' ➔ "⧘" U+29D8 LEFT WIGGLY FENCE
-/*<!M><W><%bracketleft>                                            */ DEADTRANS( L'['	,0xE608	,0x29D8	,0x0000), // '[' ➔ "⧘" U+29D8 LEFT WIGGLY FENCE
-/*<!M><w><%bracketright>                                           */ DEADTRANS( L']'	,0xE607	,0x29D9	,0x0000), // ']' ➔ "⧙" U+29D9 RIGHT WIGGLY FENCE
-/*<!M><W><%bracketright>                                           */ DEADTRANS( L']'	,0xE608	,0x29D9	,0x0000), // ']' ➔ "⧙" U+29D9 RIGHT WIGGLY FENCE
-/*<!M><w><%equal>                                                  */ DEADTRANS( L'='	,0xE607	,0x20A9	,0x0000), // '=' ➔ "₩" U+20A9 WON SIGN
-/*<!M><W><%equal>                                                  */ DEADTRANS( L'='	,0xE608	,0x20A9	,0x0000), // '=' ➔ "₩" U+20A9 WON SIGN
-/*<!M><W><%percent>                                                */ DEADTRANS( L'%'	,0xE608	,0x2A07	,0x0000), // '%' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
-/*<!M><w><%percent>                                                */ DEADTRANS( L'%'	,0xE607	,0x2A55	,0x0000), // '%' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
-/*<!M><w><l>                                                       */ DEADTRANS( L'l'	,0xE607	,0x2307	,0x0000), // 'l' ➔ "⌇" U+2307 WAVY LINE
-/*<!M><W><L>                                                       */ DEADTRANS( L'L'	,0xE608	,0x2307	,0x0000), // 'L' ➔ "⌇" U+2307 WAVY LINE
-/*<!M><w><v>                                                       */ DEADTRANS( L'v'	,0xE607	,0x2AFF	,0x0000), // 'v' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><W><V>                                                       */ DEADTRANS( L'V'	,0xE608	,0x2AFF	,0x0000), // 'V' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><w><w>                                                       */ DEADTRANS( L'w'	,0xE607	,0xE609	,0x0001), // Intermediate multikey chain link
-/*<!M><W><W>                                                       */ DEADTRANS( L'W'	,0xE608	,0xE60A	,0x0001), // Intermediate multikey chain link
-/*<!M><w><w><%bracketleft>                                         */ DEADTRANS( L'['	,0xE609	,0x29DA	,0x0000), // '[' ➔ "⧚" U+29DA LEFT DOUBLE WIGGLY FENCE
-/*<!M><W><W><%bracketleft>                                         */ DEADTRANS( L'['	,0xE60A	,0x29DA	,0x0000), // '[' ➔ "⧚" U+29DA LEFT DOUBLE WIGGLY FENCE
-/*<!M><w><w><%bracketright>                                        */ DEADTRANS( L']'	,0xE609	,0x29DB	,0x0000), // ']' ➔ "⧛" U+29DB RIGHT DOUBLE WIGGLY FENCE
-/*<!M><W><W><%bracketright>                                        */ DEADTRANS( L']'	,0xE60A	,0x29DB	,0x0000), // ']' ➔ "⧛" U+29DB RIGHT DOUBLE WIGGLY FENCE
-/*<!M><w><z>                                                       */ DEADTRANS( L'z'	,0xE607	,0xDD2E	,0x0000), // High surrogate: D83C; 'z' ➔ "🄮" U+1F12E CIRCLED WZ
-/*<!M><W><Z>                                                       */ DEADTRANS( L'Z'	,0xE608	,0xDD2E	,0x0000), // High surrogate: D83C; 'Z' ➔ "🄮" U+1F12E CIRCLED WZ
-/*<!M><W><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE608	,0x2A08	,0x0000), // ' ' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
-/*<!M><w><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE607	,0x2A56	,0x0000), // ' ' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
-/*<!M><W><~space>                                                  */ DEADTRANS( L' '	,0xE608	,0x2A08	,0x0000), // ' ' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
-/*<!M><w><~space>                                                  */ DEADTRANS( L' '	,0xE607	,0x2A56	,0x0000), // ' ' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
-/*<!M><X>                                                          */ DEADTRANS( L'X'	,0x00A6	,0xE60B	,0x0001), // Intermediate multikey chain link
-/*<!M><x>                                                          */ DEADTRANS( L'x'	,0x00A6	,0xE60C	,0x0001), // Intermediate multikey chain link
-/*<!M><x><%colon>                                                  */ DEADTRANS( L':'	,0xE60C	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
-/*<!M><X><%colon>                                                  */ DEADTRANS( L':'	,0xE60B	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
-/*<!M><X><%hash>                                                   */ DEADTRANS( L'#'	,0xE60B	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><x><%hash>                                                   */ DEADTRANS( L'#'	,0xE60C	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><x><%minus>                                                  */ DEADTRANS( L'-'	,0xE60C	,0x2947	,0x0000), // '-' ➔ "⥇" U+2947 RIGHTWARDS ARROW THROUGH X
-/*<!M><X><%minus>                                                  */ DEADTRANS( L'-'	,0xE60B	,0x2947	,0x0000), // '-' ➔ "⥇" U+2947 RIGHTWARDS ARROW THROUGH X
-/*<!M><x><%parenright>                                             */ DEADTRANS( L')'	,0xE60C	,0x2A35	,0x0000), // ')' ➔ "⨵" U+2A35 MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
-/*<!M><X><%parenright>                                             */ DEADTRANS( L')'	,0xE60B	,0x2A35	,0x0000), // ')' ➔ "⨵" U+2A35 MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
-/*<!M><x><%period>                                                 */ DEADTRANS( L'.'	,0xE60C	,0x22C7	,0x0000), // '.' ➔ "⋇" U+22C7 DIVISION TIMES
-/*<!M><X><%period>                                                 */ DEADTRANS( L'.'	,0xE60B	,0x22C7	,0x0000), // '.' ➔ "⋇" U+22C7 DIVISION TIMES
-/*<!M><X><%underscore>                                             */ DEADTRANS( L'_'	,0xE60B	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
-/*<!M><x><%underscore>                                             */ DEADTRANS( L'_'	,0xE60C	,0x2A31	,0x0000), // '_' ➔ "⨱" U+2A31 MULTIPLICATION SIGN WITH UNDERBAR
-/*<!M><x><o>                                                       */ DEADTRANS( L'o'	,0xE60C	,0xE60D	,0x0001), // Intermediate multikey chain link
-/*<!M><X><O>                                                       */ DEADTRANS( L'O'	,0xE60B	,0xE60E	,0x0001), // Intermediate multikey chain link
-/*<!M><X><o>                                                       */ DEADTRANS( L'o'	,0xE60B	,0x00A4	,0x0000), // 'o' ➔ "¤" U+00A4 CURRENCY SIGN
-/*<!M><x><O>                                                       */ DEADTRANS( L'O'	,0xE60C	,0x00A4	,0x0000), // 'O' ➔ "¤" U+00A4 CURRENCY SIGN
-/*<!M><x><o><r>                                                    */ DEADTRANS( L'r'	,0xE60D	,0x22BB	,0x0000), // 'r' ➔ "⊻" U+22BB XOR
-/*<!M><X><O><R>                                                    */ DEADTRANS( L'R'	,0xE60E	,0x22BB	,0x0000), // 'R' ➔ "⊻" U+22BB XOR
-/*<!M><X><R>                                                       */ DEADTRANS( L'R'	,0xE60B	,0x2627	,0x0000), // 'R' ➔ "☧" U+2627 CHI RHO
-/*<!M><x><R>                                                       */ DEADTRANS( L'R'	,0xE60C	,0x2627	,0x0000), // 'R' ➔ "☧" U+2627 CHI RHO
-/*<!M><X><r>                                                       */ DEADTRANS( L'r'	,0xE60B	,0x2627	,0x0000), // 'r' ➔ "☧" U+2627 CHI RHO
-/*<!M><x><r>                                                       */ DEADTRANS( L'r'	,0xE60C	,0x2627	,0x0000), // 'r' ➔ "☧" U+2627 CHI RHO
-/*<!M><x><t>                                                       */ DEADTRANS( L't'	,0xE60C	,0xE60F	,0x0001), // Intermediate multikey chain link
-/*<!M><X><T>                                                       */ DEADTRANS( L'T'	,0xE60B	,0xE610	,0x0001), // Intermediate multikey chain link
-/*<!M><x><t><l>                                                    */ DEADTRANS( L'l'	,0xE60F	,0x232B	,0x0000), // 'l' ➔ "⌫" U+232B ERASE TO THE LEFT
-/*<!M><X><T><L>                                                    */ DEADTRANS( L'L'	,0xE610	,0x232B	,0x0000), // 'L' ➔ "⌫" U+232B ERASE TO THE LEFT
-/*<!M><x><t><r>                                                    */ DEADTRANS( L'r'	,0xE60F	,0x2326	,0x0000), // 'r' ➔ "⌦" U+2326 ERASE TO THE RIGHT
-/*<!M><X><T><R>                                                    */ DEADTRANS( L'R'	,0xE610	,0x2326	,0x0000), // 'R' ➔ "⌦" U+2326 ERASE TO THE RIGHT
-/*<!M><x><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE60C	,0x00D7	,0x0000), // ' ' ➔ "×" U+00D7 MULTIPLICATION SIGN
-/*<!M><X><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE60B	,0x2A09	,0x0000), // ' ' ➔ "⨉" U+2A09 N-ARY TIMES OPERATOR
-/*<!M><x><~space>                                                  */ DEADTRANS( L' '	,0xE60C	,0x00D7	,0x0000), // ' ' ➔ "×" U+00D7 MULTIPLICATION SIGN
-/*<!M><X><~space>                                                  */ DEADTRANS( L' '	,0xE60B	,0x2A09	,0x0000), // ' ' ➔ "⨉" U+2A09 N-ARY TIMES OPERATOR
-/*<!M><y>                                                          */ DEADTRANS( L'y'	,0x00A6	,0xE611	,0x0001), // Intermediate multikey chain link
-/*<!M><Y>                                                          */ DEADTRANS( L'Y'	,0x00A6	,0xE612	,0x0001), // Intermediate multikey chain link
-/*<!M><Y><%at>                                                     */ DEADTRANS( L'@'	,0xE612	,0x03D2	,0x0000), // '@' ➔ "ϒ" U+03D2 GREEK UPSILON WITH HOOK SYMBOL
-/*<!M><Y><%backslash>                                              */ DEADTRANS( L'\\'	,0xE612	,0x2144	,0x0000), // '\' ➔ "⅄" U+2144 TURNED SANS-SERIF CAPITAL Y
-/*<!M><y><%equal>                                                  */ DEADTRANS( L'='	,0xE611	,0x00A5	,0x0000), // '=' ➔ "¥" U+00A5 YEN SIGN
-/*<!M><Y><%equal>                                                  */ DEADTRANS( L'='	,0xE612	,0x00A5	,0x0000), // '=' ➔ "¥" U+00A5 YEN SIGN
-/*<!M><Y><%exclam>                                                 */ DEADTRANS( L'!'	,0xE612	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
-/*<!M><y><%exclam>                                                 */ DEADTRANS( L'!'	,0xE611	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
-/*<!M><y><%minus>                                                  */ DEADTRANS( L'-'	,0xE611	,0x00A5	,0x0000), // '-' ➔ "¥" U+00A5 YEN SIGN
-/*<!M><Y><%minus>                                                  */ DEADTRANS( L'-'	,0xE612	,0x00A5	,0x0000), // '-' ➔ "¥" U+00A5 YEN SIGN
-/*<!M><Y><%percent>                                                */ DEADTRANS( L'%'	,0xE612	,0x2144	,0x0000), // '%' ➔ "⅄" U+2144 TURNED SANS-SERIF CAPITAL Y
-/*<!M><y><e>                                                       */ DEADTRANS( L'e'	,0xE611	,0xE613	,0x0001), // Intermediate multikey chain link
-/*<!M><Y><E>                                                       */ DEADTRANS( L'E'	,0xE612	,0xE614	,0x0001), // Intermediate multikey chain link
-/*<!M><y><e><r>                                                    */ DEADTRANS( L'r'	,0xE613	,0xFDFC	,0x0000), // 'r' ➔ "﷼" U+FDFC RIAL SIGN, Yemeni Rial YEMEN
-/*<!M><Y><E><R>                                                    */ DEADTRANS( L'R'	,0xE614	,0xFDFC	,0x0000), // 'R' ➔ "﷼" U+FDFC RIAL SIGN, Yemeni Rial YEMEN
-/*<!M><z>                                                          */ DEADTRANS( L'z'	,0x00A6	,0xE615	,0x0001), // Intermediate multikey chain link
-/*<!M><Z>                                                          */ DEADTRANS( L'Z'	,0x00A6	,0xE616	,0x0001), // Intermediate multikey chain link
-/*<!M><z><%bar>                                                    */ DEADTRANS( L'|'	,0xE615	,0x2A65	,0x0000), // '|' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
-/*<!M><Z><%bar>                                                    */ DEADTRANS( L'|'	,0xE616	,0x2A65	,0x0000), // '|' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
-/*<!M><z><%colon>                                                  */ DEADTRANS( L':'	,0xE615	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><Z><%colon>                                                  */ DEADTRANS( L':'	,0xE616	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE615	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
-/*<!M><Z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE616	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
-/*<!M><z><%greater>                                                */ DEADTRANS( L'>'	,0xE615	,0xE617	,0x0001), // Intermediate multikey chain link
-/*<!M><Z><%greater>                                                */ DEADTRANS( L'>'	,0xE616	,0xE618	,0x0001), // Intermediate multikey chain link
-/*<!M><z><%greater><%greater>                                      */ DEADTRANS( L'>'	,0xE617	,0x2A20	,0x0000), // '>' ➔ "⨠" U+2A20 Z NOTATION SCHEMA PIPING
-/*<!M><Z><%greater><%greater>                                      */ DEADTRANS( L'>'	,0xE618	,0x2A20	,0x0000), // '>' ➔ "⨠" U+2A20 Z NOTATION SCHEMA PIPING
-/*<!M><z><%greater><%minus>                                        */ DEADTRANS( L'-'	,0xE617	,0x2A65	,0x0000), // '-' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
-/*<!M><Z><%greater><%minus>                                        */ DEADTRANS( L'-'	,0xE618	,0x2A65	,0x0000), // '-' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
-/*<!M><z><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE617	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
-/*<!M><Z><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE618	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
-/*<!M><z><%greater><~space>                                        */ DEADTRANS( L' '	,0xE617	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
-/*<!M><Z><%greater><~space>                                        */ DEADTRANS( L' '	,0xE618	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
-/*<!M><Z><%hash>                                                   */ DEADTRANS( L'#'	,0xE616	,0x2128	,0x0000), // '#' ➔ "ℨ" U+2128 BLACK-LETTER CAPITAL Z
-/*<!M><z><%less>                                                   */ DEADTRANS( L'<'	,0xE615	,0xE619	,0x0001), // Intermediate multikey chain link
-/*<!M><Z><%less>                                                   */ DEADTRANS( L'<'	,0xE616	,0xE61A	,0x0001), // Intermediate multikey chain link
-/*<!M><z><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE619	,0x2A64	,0x0000), // '-' ➔ "⩤" U+2A64 Z NOTATION DOMAIN ANTIRESTRICTION
-/*<!M><Z><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE61A	,0x2A64	,0x0000), // '-' ➔ "⩤" U+2A64 Z NOTATION DOMAIN ANTIRESTRICTION
-/*<!M><z><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE619	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
-/*<!M><Z><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE61A	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
-/*<!M><z><%less><~space>                                           */ DEADTRANS( L' '	,0xE619	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
-/*<!M><Z><%less><~space>                                           */ DEADTRANS( L' '	,0xE61A	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
-/*<!M><z><%parenleft>                                              */ DEADTRANS( L'('	,0xE615	,0x2987	,0x0000), // '(' ➔ "⦇" U+2987 Z NOTATION LEFT IMAGE BRACKET
-/*<!M><Z><%parenleft>                                              */ DEADTRANS( L'('	,0xE616	,0x2987	,0x0000), // '(' ➔ "⦇" U+2987 Z NOTATION LEFT IMAGE BRACKET
-/*<!M><z><%parenright>                                             */ DEADTRANS( L')'	,0xE615	,0x2988	,0x0000), // ')' ➔ "⦈" U+2988 Z NOTATION RIGHT IMAGE BRACKET
-/*<!M><Z><%parenright>                                             */ DEADTRANS( L')'	,0xE616	,0x2988	,0x0000), // ')' ➔ "⦈" U+2988 Z NOTATION RIGHT IMAGE BRACKET
-/*<!M><z><%period>                                                 */ DEADTRANS( L'.'	,0xE615	,0x2981	,0x0000), // '.' ➔ "⦁" U+2981 Z NOTATION SPOT
-/*<!M><Z><%period>                                                 */ DEADTRANS( L'.'	,0xE616	,0x2981	,0x0000), // '.' ➔ "⦁" U+2981 Z NOTATION SPOT
-/*<!M><z><%semicolon>                                              */ DEADTRANS( L';'	,0xE615	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><Z><%semicolon>                                              */ DEADTRANS( L';'	,0xE616	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE615	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><Z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE616	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><z><1>                                                       */ DEADTRANS( L'1'	,0xE615	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
-/*<!M><Z><1>                                                       */ DEADTRANS( L'1'	,0xE616	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
-/*<!M><Z><2>                                                       */ DEADTRANS( L'2'	,0xE616	,0x01A7	,0x0000), // '2' ➔ "Ƨ" U+01A7 LATIN CAPITAL LETTER TONE TWO
-/*<!M><z><2>                                                       */ DEADTRANS( L'2'	,0xE615	,0x01A8	,0x0000), // '2' ➔ "ƨ" U+01A8 LATIN SMALL LETTER TONE TWO
-/*<!M><Z><3>                                                       */ DEADTRANS( L'3'	,0xE616	,0x0417	,0x0000), // '3' ➔ "З" U+0417 CYRILLIC CAPITAL LETTER ZE
-/*<!M><z><3>                                                       */ DEADTRANS( L'3'	,0xE615	,0x0437	,0x0000), // '3' ➔ "з" U+0437 CYRILLIC SMALL LETTER ZE
-/*<!M><Z><4>                                                       */ DEADTRANS( L'4'	,0xE616	,0x0427	,0x0000), // '4' ➔ "Ч" U+0427 CYRILLIC CAPITAL LETTER CHE
-/*<!M><z><4>                                                       */ DEADTRANS( L'4'	,0xE615	,0x0447	,0x0000), // '4' ➔ "ч" U+0447 CYRILLIC SMALL LETTER CHE
-/*<!M><Z><5>                                                       */ DEADTRANS( L'5'	,0xE616	,0x01BC	,0x0000), // '5' ➔ "Ƽ" U+01BC LATIN CAPITAL LETTER TONE FIVE
-/*<!M><z><5>                                                       */ DEADTRANS( L'5'	,0xE615	,0x01BD	,0x0000), // '5' ➔ "ƽ" U+01BD LATIN SMALL LETTER TONE FIVE
-/*<!M><Z><6>                                                       */ DEADTRANS( L'6'	,0xE616	,0x0184	,0x0000), // '6' ➔ "Ƅ" U+0184 LATIN CAPITAL LETTER TONE SIX
-/*<!M><z><6>                                                       */ DEADTRANS( L'6'	,0xE615	,0x0185	,0x0000), // '6' ➔ "ƅ" U+0185 LATIN SMALL LETTER TONE SIX
-/*<!M><z><e>                                                       */ DEADTRANS( L'e'	,0xE615	,0x22FF	,0x0000), // 'e' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
-/*<!M><Z><e>                                                       */ DEADTRANS( L'e'	,0xE616	,0x22FF	,0x0000), // 'e' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
-/*<!M><z><E>                                                       */ DEADTRANS( L'E'	,0xE615	,0x22FF	,0x0000), // 'E' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
-/*<!M><Z><E>                                                       */ DEADTRANS( L'E'	,0xE616	,0x22FF	,0x0000), // 'E' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
-/*<!M><Z><H>                                                       */ DEADTRANS( L'H'	,0xE616	,0x01B7	,0x0000), // 'H' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
-/*<!M><Z><h>                                                       */ DEADTRANS( L'h'	,0xE616	,0x01B7	,0x0000), // 'h' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
-/*<!M><z><h>                                                       */ DEADTRANS( L'h'	,0xE615	,0x0292	,0x0000), // 'h' ➔ "ʒ" U+0292 LATIN SMALL LETTER EZH
-/*<!M><z><w>                                                       */ DEADTRANS( L'w'	,0xE615	,0xDD2E	,0x0000), // High surrogate: D83C; 'w' ➔ "🄮" U+1F12E CIRCLED WZ
-/*<!M><Z><W>                                                       */ DEADTRANS( L'W'	,0xE616	,0xDD2E	,0x0000), // High surrogate: D83C; 'W' ➔ "🄮" U+1F12E CIRCLED WZ
-/*<!M><Z><Z>                                                       */ DEADTRANS( L'Z'	,0xE616	,0x2124	,0x0000), // 'Z' ➔ "ℤ" U+2124 DOUBLE-STRUCK CAPITAL Z
-/*<!M><z><z>                                                       */ DEADTRANS( L'z'	,0xE615	,0x2125	,0x0000), // 'z' ➔ "℥" U+2125 OUNCE SIGN
-/*<!M><Z><z>                                                       */ DEADTRANS( L'z'	,0xE616	,0x2125	,0x0000), // 'z' ➔ "℥" U+2125 OUNCE SIGN
-/*<!M><z><Z>                                                       */ DEADTRANS( L'Z'	,0xE615	,0x2125	,0x0000), // 'Z' ➔ "℥" U+2125 OUNCE SIGN
-/*<!M><~nbspace>                                                   */ DEADTRANS( 0x00A0	,0x00A6	,0xE61B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%ampersand>                                       */ DEADTRANS( L'&'	,0xE61B	,0xE61C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%ampersand><%bar>                                 */ DEADTRANS( L'|'	,0xE61C	,0x20D3	,0x0000), // '|' ➔ "⃓" U+20D3 COMBINING SHORT VERTICAL LINE OVERLAY
-/*<!M><~nbspace><%ampersand><%less>                                */ DEADTRANS( L'<'	,0xE61C	,0x20EE	,0x0000), // '<' ➔ "⃮" U+20EE COMBINING LEFT ARROW BELOW
-/*<!M><~nbspace><%ampersand><%minus>                               */ DEADTRANS( L'-'	,0xE61C	,0x20EF	,0x0000), // '-' ➔ "⃯" U+20EF COMBINING RIGHT ARROW BELOW
-/*<!M><~nbspace><%apostrophe>                                      */ DEADTRANS( L'\''	,0xE61B	,0xE61D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%apostrophe><%equal>                              */ DEADTRANS( L'='	,0xE61D	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
-/*<!M><~nbspace><%apostrophe><%minus>                              */ DEADTRANS( L'-'	,0xE61D	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
-/*<!M><~nbspace><%apostrophe><%plus>                               */ DEADTRANS( L'+'	,0xE61D	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~nbspace><%aprightsingquotmark>                             */ DEADTRANS( 0x2019	,0xE61B	,0xE61E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%aprightsingquotmark><%equal>                     */ DEADTRANS( L'='	,0xE61E	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
-/*<!M><~nbspace><%aprightsingquotmark><%minus>                     */ DEADTRANS( L'-'	,0xE61E	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
-/*<!M><~nbspace><%aprightsingquotmark><%plus>                      */ DEADTRANS( L'+'	,0xE61E	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~nbspace><%asterisk>                                        */ DEADTRANS( L'*'	,0xE61B	,0xE61F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%asterisk><%equal>                                */ DEADTRANS( L'='	,0xE61F	,0x225B	,0x0000), // '=' ➔ "≛" U+225B STAR EQUALS
-/*<!M><~nbspace><%asterisk><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE61F	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
-/*<!M><~nbspace><%asterisk><~space>                                */ DEADTRANS( L' '	,0xE61F	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
-/*<!M><~nbspace><%backslash>                                       */ DEADTRANS( L'\\'	,0xE61B	,0xE620	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%backslash><%greater>                             */ DEADTRANS( L'>'	,0xE620	,0x292D	,0x0000), // '>' ➔ "⤭" U+292D SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-/*<!M><~nbspace><%backslash><%minus>                               */ DEADTRANS( L'-'	,0xE620	,0x29A3	,0x0000), // '-' ➔ "⦣" U+29A3 REVERSED ANGLE
-/*<!M><~nbspace><%backslash><%slash>                               */ DEADTRANS( L'/'	,0xE620	,0xE621	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%backslash><%slash><%bar>                         */ DEADTRANS( L'|'	,0xE621	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
-/*<!M><~nbspace><%backslash><%slash><%hash>                        */ DEADTRANS( L'#'	,0xE621	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><%backslash><%slash><%underscore>                  */ DEADTRANS( L'_'	,0xE621	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
-/*<!M><~nbspace><%backslash><c>                                    */ DEADTRANS( L'c'	,0xE620	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
-/*<!M><~nbspace><%backslash><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE620	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
-/*<!M><~nbspace><%backslash><~space>                               */ DEADTRANS( L' '	,0xE620	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
-/*<!M><~nbspace><%bar>                                             */ DEADTRANS( L'|'	,0xE61B	,0xE622	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%backslash>                                 */ DEADTRANS( L'\\'	,0xE622	,0xE623	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%backslash><%slash>                         */ DEADTRANS( L'/'	,0xE623	,0xE624	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%backslash><%slash><%bar>                   */ DEADTRANS( L'|'	,0xE624	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
-/*<!M><~nbspace><%bar><%backslash><%slash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE624	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~nbspace><%bar><%backslash><%slash><~space>                 */ DEADTRANS( L' '	,0xE624	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~nbspace><%bar><%bar>                                       */ DEADTRANS( L'|'	,0xE622	,0xE625	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE625	,0xE626	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%bar><%bar><%minus>                         */ DEADTRANS( L'-'	,0xE626	,0x22AA	,0x0000), // '-' ➔ "⊪" U+22AA TRIPLE VERTICAL BAR RIGHT TURNSTILE
-/*<!M><~nbspace><%bar><%bar><%bar><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE626	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~nbspace><%bar><%bar><%bar><~space>                         */ DEADTRANS( L' '	,0xE626	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~nbspace><%bar><%bar><%minus>                               */ DEADTRANS( L'-'	,0xE625	,0x22A9	,0x0000), // '-' ➔ "⊩" U+22A9 FORCES
-/*<!M><~nbspace><%bar><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE625	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
-/*<!M><~nbspace><%bar><%bar><~space>                               */ DEADTRANS( L' '	,0xE625	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
-/*<!M><~nbspace><%bar><%equal>                                     */ DEADTRANS( L'='	,0xE622	,0x29E7	,0x0000), // '=' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~nbspace><%bar><%hash>                                      */ DEADTRANS( L'#'	,0xE622	,0x25B6	,0x0000), // '#' ➔ "▶" U+25B6 BLACK RIGHT-POINTING TRIANGLE
-/*<!M><~nbspace><%bar><%minus>                                     */ DEADTRANS( L'-'	,0xE622	,0x27CA	,0x0000), // '-' ➔ "⟊" U+27CA VERTICAL BAR WITH HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><%parenright>                                */ DEADTRANS( L')'	,0xE622	,0x2ADD	,0x0000), // ')' ➔ "⫝" U+2ADD NONFORKING
-/*<!M><~nbspace><%bar><%slash>                                     */ DEADTRANS( L'/'	,0xE622	,0xE627	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%slash><%backslash>                         */ DEADTRANS( L'\\'	,0xE627	,0xE628	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><%slash><%backslash><%bar>                   */ DEADTRANS( L'|'	,0xE628	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
-/*<!M><~nbspace><%bar><%slash><%backslash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE628	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~nbspace><%bar><%slash><%backslash><~space>                 */ DEADTRANS( L' '	,0xE628	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~nbspace><%bar><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE627	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
-/*<!M><~nbspace><%bar><%slash><~space>                             */ DEADTRANS( L' '	,0xE627	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
-/*<!M><~nbspace><%bar><e>                                          */ DEADTRANS( L'e'	,0xE622	,0xE629	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><e><%backslash>                              */ DEADTRANS( L'\\'	,0xE629	,0xE62A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><e><%backslash><%comma>                      */ DEADTRANS( L','	,0xE62A	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><e><%backslash><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE62A	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><e><%backslash><~space>                      */ DEADTRANS( L' '	,0xE62A	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><e><e>                                       */ DEADTRANS( L'e'	,0xE629	,0xE62B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><e><e><%comma>                               */ DEADTRANS( L','	,0xE62B	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><e><e><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE62B	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><e><e><~space>                               */ DEADTRANS( L' '	,0xE62B	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><o>                                          */ DEADTRANS( L'o'	,0xE622	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
-/*<!M><~nbspace><%bar><p>                                          */ DEADTRANS( L'p'	,0xE622	,0xE62C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bar><p><%comma>                                  */ DEADTRANS( L','	,0xE62C	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><p><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE62C	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><p><~space>                                  */ DEADTRANS( L' '	,0xE62C	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><%bar><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE622	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
-/*<!M><~nbspace><%bar><~space>                                     */ DEADTRANS( L' '	,0xE622	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
-/*<!M><~nbspace><%braceleft>                                       */ DEADTRANS( L'{'	,0xE61B	,0x2983	,0x0000), // '{' ➔ "⦃" U+2983 LEFT WHITE CURLY BRACKET
-/*<!M><~nbspace><%braceright>                                      */ DEADTRANS( L'}'	,0xE61B	,0x2984	,0x0000), // '}' ➔ "⦄" U+2984 RIGHT WHITE CURLY BRACKET
-/*<!M><~nbspace><%bracketleft>                                     */ DEADTRANS( L'['	,0xE61B	,0xE62D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bracketleft><%bracketleft>                       */ DEADTRANS( L'['	,0xE62D	,0x27E6	,0x0000), // '[' ➔ "⟦" U+27E6 MATHEMATICAL LEFT WHITE SQUARE BRACKET
-/*<!M><~nbspace><%bracketleft><%bracketright>                      */ DEADTRANS( L']'	,0xE62D	,0x25FB	,0x0000), // ']' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
-/*<!M><~nbspace><%bracketleft><%hash>                              */ DEADTRANS( L'#'	,0xE62D	,0x25FC	,0x0000), // '#' ➔ "◼" U+25FC BLACK MEDIUM SQUARE
-/*<!M><~nbspace><%bracketleft><%minus>                             */ DEADTRANS( L'-'	,0xE62D	,0x2ACD	,0x0000), // '-' ➔ "⫍" U+2ACD SQUARE LEFT OPEN BOX OPERATOR
-/*<!M><~nbspace><%bracketleft><%underscore>                        */ DEADTRANS( L'_'	,0xE62D	,0x298B	,0x0000), // '_' ➔ "⦋" U+298B LEFT SQUARE BRACKET WITH UNDERBAR
-/*<!M><~nbspace><%bracketleft><a>                                  */ DEADTRANS( L'a'	,0xE62D	,0x27CE	,0x0000), // 'a' ➔ "⟎" U+27CE SQUARED LOGICAL AND
-/*<!M><~nbspace><%bracketleft><A>                                  */ DEADTRANS( L'A'	,0xE62D	,0x27CE	,0x0000), // 'A' ➔ "⟎" U+27CE SQUARED LOGICAL AND
-/*<!M><~nbspace><%bracketleft><o>                                  */ DEADTRANS( L'o'	,0xE62D	,0x29C7	,0x0000), // 'o' ➔ "⧇" U+29C7 SQUARED SMALL CIRCLE
-/*<!M><~nbspace><%bracketleft><v>                                  */ DEADTRANS( L'v'	,0xE62D	,0xE62E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bracketleft><V>                                  */ DEADTRANS( L'V'	,0xE62D	,0xE62F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bracketleft><v><%bracketright>                   */ DEADTRANS( L']'	,0xE62E	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><~nbspace><%bracketleft><V><%bracketright>                   */ DEADTRANS( L']'	,0xE62F	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><~nbspace><%bracketleft><x>                                  */ DEADTRANS( L'x'	,0xE62D	,0x22A0	,0x0000), // 'x' ➔ "⊠" U+22A0 SQUARED TIMES
-/*<!M><~nbspace><%bracketleft><X>                                  */ DEADTRANS( L'X'	,0xE62D	,0x22A0	,0x0000), // 'X' ➔ "⊠" U+22A0 SQUARED TIMES
-/*<!M><~nbspace><%bracketright>                                    */ DEADTRANS( L']'	,0xE61B	,0xE630	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%bracketright><%bracketleft>                      */ DEADTRANS( L'['	,0xE630	,0x25FB	,0x0000), // '[' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
-/*<!M><~nbspace><%bracketright><%bracketright>                     */ DEADTRANS( L']'	,0xE630	,0x27E7	,0x0000), // ']' ➔ "⟧" U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-/*<!M><~nbspace><%bracketright><%underscore>                       */ DEADTRANS( L'_'	,0xE630	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
-/*<!M><~nbspace><%circum>                                          */ DEADTRANS( L'^'	,0xE61B	,0xE631	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%circum><%circum>                                 */ DEADTRANS( L'^'	,0xE631	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~nbspace><%circum><%equal>                                  */ DEADTRANS( L'='	,0xE631	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
-/*<!M><~nbspace><%circum><%underscore>                             */ DEADTRANS( L'_'	,0xE631	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%circum><o>                                       */ DEADTRANS( L'o'	,0xE631	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-/*<!M><~nbspace><%circum><O>                                       */ DEADTRANS( L'O'	,0xE631	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-/*<!M><~nbspace><%circum><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE631	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~nbspace><%circum><~space>                                  */ DEADTRANS( L' '	,0xE631	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~nbspace><%colon>                                           */ DEADTRANS( L':'	,0xE61B	,0xE632	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%colon><%colon>                                   */ DEADTRANS( L':'	,0xE632	,0x2237	,0x0000), // ':' ➔ "∷" U+2237 PROPORTION
-/*<!M><~nbspace><%colon><%tilde>                                   */ DEADTRANS( L'~'	,0xE632	,0x223B	,0x0000), // '~' ➔ "∻" U+223B HOMOTHETIC
-/*<!M><~nbspace><%colon><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE632	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
-/*<!M><~nbspace><%colon><~space>                                   */ DEADTRANS( L' '	,0xE632	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
-/*<!M><~nbspace><%equal>                                           */ DEADTRANS( L'='	,0xE61B	,0xE633	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%equal><%bar>                                     */ DEADTRANS( L'|'	,0xE633	,0xE634	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%equal><%bar><%bar>                               */ DEADTRANS( L'|'	,0xE634	,0x22D5	,0x0000), // '|' ➔ "⋕" U+22D5 EQUAL AND PARALLEL TO
-/*<!M><~nbspace><%equal><%bar><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE634	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~nbspace><%equal><%bar><~space>                             */ DEADTRANS( L' '	,0xE634	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~nbspace><%equal><%equal>                                   */ DEADTRANS( L'='	,0xE633	,0x2A75	,0x0000), // '=' ➔ "⩵" U+2A75 TWO CONSECUTIVE EQUALS SIGNS
-/*<!M><~nbspace><%equal><%greater>                                 */ DEADTRANS( L'>'	,0xE633	,0x2A9A	,0x0000), // '>' ➔ "⪚" U+2A9A DOUBLE-LINE EQUAL TO OR GREATER-THAN
-/*<!M><~nbspace><%equal><%minus>                                   */ DEADTRANS( L'-'	,0xE633	,0xE635	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%equal><%minus><%greater>                         */ DEADTRANS( L'>'	,0xE635	,0x2971	,0x0000), // '>' ➔ "⥱" U+2971 EQUALS SIGN ABOVE RIGHTWARDS ARROW
-/*<!M><~nbspace><%equal><%minus><%slash>                           */ DEADTRANS( L'/'	,0xE635	,0x29E5	,0x0000), // '/' ➔ "⧥" U+29E5 IDENTICAL TO AND SLANTED PARALLEL
-/*<!M><~nbspace><%exclam>                                          */ DEADTRANS( L'!'	,0xE61B	,0xE636	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%exclam><%exclam>                                 */ DEADTRANS( L'!'	,0xE636	,0x00A1	,0x0000), // '!' ➔ "¡" U+00A1 INVERTED EXCLAMATION MARK
-/*<!M><~nbspace><%exclam><j>                                       */ DEADTRANS( L'j'	,0xE636	,0x297F	,0x0000), // 'j' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~nbspace><%exclam><J>                                       */ DEADTRANS( L'J'	,0xE636	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~nbspace><%exclam><Y>                                       */ DEADTRANS( L'Y'	,0xE636	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~nbspace><%exclam><y>                                       */ DEADTRANS( L'y'	,0xE636	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~nbspace><%greater>                                         */ DEADTRANS( L'>'	,0xE61B	,0xE637	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%greater><%greater>                               */ DEADTRANS( L'>'	,0xE637	,0xE638	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%greater><%greater><%greater>                     */ DEADTRANS( L'>'	,0xE638	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
-/*<!M><~nbspace><%greater><%greater><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE638	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
-/*<!M><~nbspace><%greater><%greater><~space>                       */ DEADTRANS( L' '	,0xE638	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
-/*<!M><~nbspace><%greater><%less>                                  */ DEADTRANS( L'<'	,0xE637	,0x2AA4	,0x0000), // '<' ➔ "⪤" U+2AA4 GREATER-THAN OVERLAPPING LESS-THAN
-/*<!M><~nbspace><%greater><%minus>                                 */ DEADTRANS( L'-'	,0xE637	,0xE639	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%greater><%minus><%greater>                       */ DEADTRANS( L'>'	,0xE639	,0x2978	,0x0000), // '>' ➔ "⥸" U+2978 GREATER-THAN ABOVE RIGHTWARDS ARROW
-/*<!M><~nbspace><%greater><%minus><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE639	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
-/*<!M><~nbspace><%greater><%minus><~space>                         */ DEADTRANS( L' '	,0xE639	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
-/*<!M><~nbspace><%greater><%parenright>                            */ DEADTRANS( L')'	,0xE637	,0x2994	,0x0000), // ')' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
-/*<!M><~nbspace><%greater><o>                                      */ DEADTRANS( L'o'	,0xE637	,0x2941	,0x0000), // 'o' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~nbspace><%greater><O>                                      */ DEADTRANS( L'O'	,0xE637	,0x2941	,0x0000), // 'O' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~nbspace><%greater><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE637	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
-/*<!M><~nbspace><%greater><~space>                                 */ DEADTRANS( L' '	,0xE637	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
-/*<!M><~nbspace><%hash>                                            */ DEADTRANS( L'#'	,0xE61B	,0xE63A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%hash><%backslash>                                */ DEADTRANS( L'\\'	,0xE63A	,0x2A33	,0x0000), // '\' ➔ "⨳" U+2A33 SMASH PRODUCT
-/*<!M><~nbspace><%hash><%percent>                                  */ DEADTRANS( L'%'	,0xE63A	,0x2A33	,0x0000), // '%' ➔ "⨳" U+2A33 SMASH PRODUCT
-/*<!M><~nbspace><%hash><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE63A	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
-/*<!M><~nbspace><%hash><~space>                                    */ DEADTRANS( L' '	,0xE63A	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
-/*<!M><~nbspace><%less>                                            */ DEADTRANS( L'<'	,0xE61B	,0xE63B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%backslash>                                */ DEADTRANS( L'\\'	,0xE63B	,0x2932	,0x0000), // '\' ➔ "⤲" U+2932 NORTH WEST ARROW CROSSING NORTH EAST ARROW
-/*<!M><~nbspace><%less><%equal>                                    */ DEADTRANS( L'='	,0xE63B	,0xE63C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%equal><%greater>                          */ DEADTRANS( L'>'	,0xE63C	,0x2A8B	,0x0000), // '>' ➔ "⪋" U+2A8B LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-/*<!M><~nbspace><%less><%equal><%slash>                            */ DEADTRANS( L'/'	,0xE63C	,0x2268	,0x0000), // '/' ➔ "≨" U+2268 LESS-THAN BUT NOT EQUAL TO
-/*<!M><~nbspace><%less><%equal><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE63C	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
-/*<!M><~nbspace><%less><%equal><~space>                            */ DEADTRANS( L' '	,0xE63C	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
-/*<!M><~nbspace><%less><%exclam>                                   */ DEADTRANS( L'!'	,0xE63B	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
-/*<!M><~nbspace><%less><%greater>                                  */ DEADTRANS( L'>'	,0xE63B	,0x22C4	,0x0000), // '>' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~nbspace><%less><%less>                                     */ DEADTRANS( L'<'	,0xE63B	,0xE63D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%less><%less>                              */ DEADTRANS( L'<'	,0xE63D	,0x22D8	,0x0000), // '<' ➔ "⋘" U+22D8 VERY MUCH LESS-THAN
-/*<!M><~nbspace><%less><%less><%minus>                             */ DEADTRANS( L'-'	,0xE63D	,0xE63E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%less><%minus><%bar>                       */ DEADTRANS( L'|'	,0xE63E	,0x2B36	,0x0000), // '|' ➔ "⬶" U+2B36 LEFTWARDS TWO-HEADED ARROW FROM BAR
-/*<!M><~nbspace><%less><%less><%minus><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE63E	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
-/*<!M><~nbspace><%less><%less><%minus><~space>                     */ DEADTRANS( L' '	,0xE63E	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
-/*<!M><~nbspace><%less><%less><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE63D	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
-/*<!M><~nbspace><%less><%less><~space>                             */ DEADTRANS( L' '	,0xE63D	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
-/*<!M><~nbspace><%less><%minus>                                    */ DEADTRANS( L'-'	,0xE63B	,0xE63F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%minus><%bar>                              */ DEADTRANS( L'|'	,0xE63F	,0x21F7	,0x0000), // '|' ➔ "⇷" U+21F7 LEFTWARDS ARROW WITH VERTICAL STROKE
-/*<!M><~nbspace><%less><%minus><%less>                             */ DEADTRANS( L'<'	,0xE63F	,0x2977	,0x0000), // '<' ➔ "⥷" U+2977 LEFTWARDS ARROW THROUGH LESS-THAN
-/*<!M><~nbspace><%less><%minus><%minus>                            */ DEADTRANS( L'-'	,0xE63F	,0x27F7	,0x0000), // '-' ➔ "⟷" U+27F7 LONG LEFT RIGHT ARROW
-/*<!M><~nbspace><%less><%minus><%tilde>                            */ DEADTRANS( L'~'	,0xE63F	,0x2973	,0x0000), // '~' ➔ "⥳" U+2973 LEFTWARDS ARROW ABOVE TILDE OPERATOR
-/*<!M><~nbspace><%less><%minus><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE63F	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
-/*<!M><~nbspace><%less><%minus><~space>                            */ DEADTRANS( L' '	,0xE63F	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
-/*<!M><~nbspace><%less><%parenleft>                                */ DEADTRANS( L'('	,0xE63B	,0x2993	,0x0000), // '(' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
-/*<!M><~nbspace><%less><%parenright>                               */ DEADTRANS( L')'	,0xE63B	,0x2AA6	,0x0000), // ')' ➔ "⪦" U+2AA6 LESS-THAN CLOSED BY CURVE
-/*<!M><~nbspace><%less><%slash>                                    */ DEADTRANS( L'/'	,0xE63B	,0x226E	,0x0000), // '/' ➔ "≮" U+226E NOT LESS-THAN
-/*<!M><~nbspace><%less><%tilde>                                    */ DEADTRANS( L'~'	,0xE63B	,0xE640	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%less><%tilde><%greater>                          */ DEADTRANS( L'>'	,0xE640	,0x21AD	,0x0000), // '>' ➔ "↭" U+21AD LEFT RIGHT WAVE ARROW
-/*<!M><~nbspace><%less><%tilde><%tilde>                            */ DEADTRANS( L'~'	,0xE640	,0x21DC	,0x0000), // '~' ➔ "⇜" U+21DC LEFTWARDS SQUIGGLE ARROW
-/*<!M><~nbspace><%less><%tilde><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE640	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
-/*<!M><~nbspace><%less><%tilde><~space>                            */ DEADTRANS( L' '	,0xE640	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
-/*<!M><~nbspace><%less><3>                                         */ DEADTRANS( L'3'	,0xE63B	,0x2660	,0x0000), // '3' ➔ "♠" U+2660 BLACK SPADE SUIT
-/*<!M><~nbspace><%less><C>                                         */ DEADTRANS( L'C'	,0xE63B	,0x293E	,0x0000), // 'C' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
-/*<!M><~nbspace><%less><c>                                         */ DEADTRANS( L'c'	,0xE63B	,0x293E	,0x0000), // 'c' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
-/*<!M><~nbspace><%less><n>                                         */ DEADTRANS( L'n'	,0xE63B	,0x21B6	,0x0000), // 'n' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
-/*<!M><~nbspace><%less><o>                                         */ DEADTRANS( L'o'	,0xE63B	,0x2940	,0x0000), // 'o' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~nbspace><%less><O>                                         */ DEADTRANS( L'O'	,0xE63B	,0x2940	,0x0000), // 'O' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~nbspace><%less><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE63B	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
-/*<!M><~nbspace><%less><~space>                                    */ DEADTRANS( L' '	,0xE63B	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
-/*<!M><~nbspace><%minus>                                           */ DEADTRANS( L'-'	,0xE61B	,0xE641	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><%apostrophe>                              */ DEADTRANS( L'\''	,0xE641	,0xE642	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><%apostrophe><%minus>                      */ DEADTRANS( L'-'	,0xE642	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~nbspace><%minus><%apostrophe><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE642	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~nbspace><%minus><%apostrophe><~space>                      */ DEADTRANS( L' '	,0xE642	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~nbspace><%minus><%aprightsingquotmark>                     */ DEADTRANS( 0x2019	,0xE641	,0xE643	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><%aprightsingquotmark><%minus>             */ DEADTRANS( L'-'	,0xE643	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~nbspace><%minus><%aprightsingquotmark><~nbspace>           */ DEADTRANS( 0x00A0	,0xE643	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~nbspace><%minus><%aprightsingquotmark><~space>             */ DEADTRANS( L' '	,0xE643	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~nbspace><%minus><%bar>                                     */ DEADTRANS( L'|'	,0xE641	,0x21F8	,0x0000), // '|' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
-/*<!M><~nbspace><%minus><%bracketleft>                             */ DEADTRANS( L'['	,0xE641	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
-/*<!M><~nbspace><%minus><%bracketright>                            */ DEADTRANS( L']'	,0xE641	,0xE644	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><%bracketright><%bracketleft>              */ DEADTRANS( L'['	,0xE644	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
-/*<!M><~nbspace><%minus><%bracketright><~nbspace>                  */ DEADTRANS( 0x00A0	,0xE644	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
-/*<!M><~nbspace><%minus><%bracketright><~space>                    */ DEADTRANS( L' '	,0xE644	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
-/*<!M><~nbspace><%minus><%slash>                                   */ DEADTRANS( L'/'	,0xE641	,0x29A2	,0x0000), // '/' ➔ "⦢" U+29A2 TURNED ANGLE
-/*<!M><~nbspace><%minus><e>                                        */ DEADTRANS( L'e'	,0xE641	,0x22F2	,0x0000), // 'e' ➔ "⋲" U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE
-/*<!M><~nbspace><%minus><j>                                        */ DEADTRANS( L'j'	,0xE641	,0x297D	,0x0000), // 'j' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~nbspace><%minus><J>                                        */ DEADTRANS( L'J'	,0xE641	,0x297D	,0x0000), // 'J' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~nbspace><%minus><o>                                        */ DEADTRANS( L'o'	,0xE641	,0xE645	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><O>                                        */ DEADTRANS( L'O'	,0xE641	,0x29B1	,0x0000), // 'O' ➔ "⦱" U+29B1 EMPTY SET WITH OVERBAR
-/*<!M><~nbspace><%minus><o><%minus>                                */ DEADTRANS( L'-'	,0xE645	,0x2256	,0x0000), // '-' ➔ "≖" U+2256 RING IN EQUAL TO
-/*<!M><~nbspace><%minus><o><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE645	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
-/*<!M><~nbspace><%minus><o><~space>                                */ DEADTRANS( L' '	,0xE645	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
-/*<!M><~nbspace><%minus><s>                                        */ DEADTRANS( L's'	,0xE641	,0xE646	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%minus><S>                                        */ DEADTRANS( L'S'	,0xE641	,0x2A1B	,0x0000), // 'S' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~nbspace><%minus><s><%slash>                                */ DEADTRANS( L'/'	,0xE646	,0x299E	,0x0000), // '/' ➔ "⦞" U+299E ANGLE WITH S INSIDE
-/*<!M><~nbspace><%minus><s><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE646	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~nbspace><%minus><s><~space>                                */ DEADTRANS( L' '	,0xE646	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~nbspace><%minus><Y>                                        */ DEADTRANS( L'Y'	,0xE641	,0x297D	,0x0000), // 'Y' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~nbspace><%minus><y>                                        */ DEADTRANS( L'y'	,0xE641	,0x297D	,0x0000), // 'y' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~nbspace><%parenleft>                                       */ DEADTRANS( L'('	,0xE61B	,0xE647	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%parenleft><%bracketleft>                         */ DEADTRANS( L'['	,0xE647	,0x27EE	,0x0000), // '[' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
-/*<!M><~nbspace><%parenleft><%bracketright>                        */ DEADTRANS( L']'	,0xE647	,0x27EE	,0x0000), // ']' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
-/*<!M><~nbspace><%parenleft><%equal>                               */ DEADTRANS( L'='	,0xE647	,0x224E	,0x0000), // '=' ➔ "≎" U+224E GEOMETRICALLY EQUIVALENT TO
-/*<!M><~nbspace><%parenleft><%greater>                             */ DEADTRANS( L'>'	,0xE647	,0x2AA7	,0x0000), // '>' ➔ "⪧" U+2AA7 GREATER-THAN CLOSED BY CURVE
-/*<!M><~nbspace><%parenleft><%less>                                */ DEADTRANS( L'<'	,0xE647	,0x2993	,0x0000), // '<' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
-/*<!M><~nbspace><%parenleft><%parenleft>                           */ DEADTRANS( L'('	,0xE647	,0x2985	,0x0000), // '(' ➔ "⦅" U+2985 LEFT WHITE PARENTHESIS
-/*<!M><~nbspace><%parenleft><8>                                    */ DEADTRANS( L'8'	,0xE647	,0x29DD	,0x0000), // '8' ➔ "⧝" U+29DD TIE OVER INFINITY
-/*<!M><~nbspace><%parenright>                                      */ DEADTRANS( L')'	,0xE61B	,0xE648	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%parenright><%bracketleft>                        */ DEADTRANS( L'['	,0xE648	,0x27EF	,0x0000), // '[' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-/*<!M><~nbspace><%parenright><%bracketright>                       */ DEADTRANS( L']'	,0xE648	,0x27EF	,0x0000), // ']' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-/*<!M><~nbspace><%parenright><%greater>                            */ DEADTRANS( L'>'	,0xE648	,0x2994	,0x0000), // '>' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
-/*<!M><~nbspace><%parenright><%parenright>                         */ DEADTRANS( L')'	,0xE648	,0x2986	,0x0000), // ')' ➔ "⦆" U+2986 RIGHT WHITE PARENTHESIS
-/*<!M><~nbspace><%period>                                          */ DEADTRANS( L'.'	,0xE61B	,0xE649	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%period><a>                                       */ DEADTRANS( L'a'	,0xE649	,0x2A51	,0x0000), // 'a' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~nbspace><%period><A>                                       */ DEADTRANS( L'A'	,0xE649	,0x2A51	,0x0000), // 'A' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~nbspace><%period><b>                                       */ DEADTRANS( L'b'	,0xE649	,0x2AC4	,0x0000), // 'b' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~nbspace><%period><c>                                       */ DEADTRANS( L'c'	,0xE649	,0xE64A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%period><c><%backslash>                           */ DEADTRANS( L'\\'	,0xE64A	,0x2AC4	,0x0000), // '\' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~nbspace><%period><c><%underscore>                          */ DEADTRANS( L'_'	,0xE64A	,0x2AC3	,0x0000), // '_' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~nbspace><%period><c><c>                                    */ DEADTRANS( L'c'	,0xE64A	,0x2AC4	,0x0000), // 'c' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~nbspace><%period><e>                                       */ DEADTRANS( L'e'	,0xE649	,0x22F5	,0x0000), // 'e' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
-/*<!M><~nbspace><%period><v>                                       */ DEADTRANS( L'v'	,0xE649	,0xE64B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%period><V>                                       */ DEADTRANS( L'V'	,0xE649	,0xE64C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%period><v><v>                                    */ DEADTRANS( L'v'	,0xE64B	,0x2A51	,0x0000), // 'v' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~nbspace><%period><V><V>                                    */ DEADTRANS( L'V'	,0xE64C	,0x2A51	,0x0000), // 'V' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~nbspace><%period><v><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE64B	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~nbspace><%period><V><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE64C	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~nbspace><%period><v><~space>                               */ DEADTRANS( L' '	,0xE64B	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~nbspace><%period><V><~space>                               */ DEADTRANS( L' '	,0xE64C	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~nbspace><%period><x>                                       */ DEADTRANS( L'x'	,0xE649	,0x2A30	,0x0000), // 'x' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
-/*<!M><~nbspace><%period><X>                                       */ DEADTRANS( L'X'	,0xE649	,0x2A30	,0x0000), // 'X' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
-/*<!M><~nbspace><%period><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE649	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
-/*<!M><~nbspace><%period><~space>                                  */ DEADTRANS( L' '	,0xE649	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
-/*<!M><~nbspace><%plus>                                            */ DEADTRANS( L'+'	,0xE61B	,0xE64D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%plus><%apostrophe>                               */ DEADTRANS( L'\''	,0xE64D	,0x22B9	,0x0000), // ''' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~nbspace><%plus><%aprightsingquotmark>                      */ DEADTRANS( 0x2019	,0xE64D	,0x22B9	,0x0000), // '’' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~nbspace><%plus><%circum>                                   */ DEADTRANS( L'^'	,0xE64D	,0x2A28	,0x0000), // '^' ➔ "⨨" U+2A28 PLUS SIGN WITH BLACK TRIANGLE
-/*<!M><~nbspace><%plus><%plus>                                     */ DEADTRANS( L'+'	,0xE64D	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
-/*<!M><~nbspace><%plus><2>                                         */ DEADTRANS( L'2'	,0xE64D	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
-/*<!M><~nbspace><%semicolon>                                       */ DEADTRANS( L';'	,0xE61B	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~nbspace><%semsection>                                      */ DEADTRANS( 0x00A7	,0xE61B	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~nbspace><%slash>                                           */ DEADTRANS( L'/'	,0xE61B	,0xE64E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%backslash>                               */ DEADTRANS( L'\\'	,0xE64E	,0xE64F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%backslash><%bar>                         */ DEADTRANS( L'|'	,0xE64F	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
-/*<!M><~nbspace><%slash><%backslash><%hash>                        */ DEADTRANS( L'#'	,0xE64F	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><%slash><%backslash><%underscore>                  */ DEADTRANS( L'_'	,0xE64F	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
-/*<!M><~nbspace><%slash><%hash>                                    */ DEADTRANS( L'#'	,0xE64E	,0xE650	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%hash><%underscore>                       */ DEADTRANS( L'_'	,0xE650	,0xE651	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%hash><%underscore><%backslash>           */ DEADTRANS( L'\\'	,0xE651	,0x25B4	,0x0000), // '\' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%slash><%slash>                                   */ DEADTRANS( L'/'	,0xE64E	,0xE652	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%slash><%slash>                           */ DEADTRANS( L'/'	,0xE652	,0x2AFB	,0x0000), // '/' ➔ "⫻" U+2AFB TRIPLE SOLIDUS BINARY RELATION
-/*<!M><~nbspace><%slash><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE652	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
-/*<!M><~nbspace><%slash><%slash><~space>                           */ DEADTRANS( L' '	,0xE652	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
-/*<!M><~nbspace><%slash><%underscore>                              */ DEADTRANS( L'_'	,0xE64E	,0xE653	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%slash><%underscore><%backslash>                  */ DEADTRANS( L'\\'	,0xE653	,0x25B5	,0x0000), // '\' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%slash><c>                                        */ DEADTRANS( L'c'	,0xE64E	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
-/*<!M><~nbspace><%slash><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE64E	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
-/*<!M><~nbspace><%slash><~space>                                   */ DEADTRANS( L' '	,0xE64E	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
-/*<!M><~nbspace><%tilde>                                           */ DEADTRANS( L'~'	,0xE61B	,0xE654	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%tilde><%colon>                                   */ DEADTRANS( L':'	,0xE654	,0x223B	,0x0000), // ':' ➔ "∻" U+223B HOMOTHETIC
-/*<!M><~nbspace><%tilde><%equal>                                   */ DEADTRANS( L'='	,0xE654	,0xE655	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%tilde><%equal><%slash>                           */ DEADTRANS( L'/'	,0xE655	,0xE656	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%tilde><%equal><%slash><%slash>                   */ DEADTRANS( L'/'	,0xE656	,0x29E4	,0x0000), // '/' ➔ "⧤" U+29E4 EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-/*<!M><~nbspace><%tilde><%equal><%slash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE656	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-/*<!M><~nbspace><%tilde><%equal><%slash><~space>                   */ DEADTRANS( L' '	,0xE656	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-/*<!M><~nbspace><%tilde><%equal><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE655	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
-/*<!M><~nbspace><%tilde><%equal><~space>                           */ DEADTRANS( L' '	,0xE655	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
-/*<!M><~nbspace><%tilde><%greater>                                 */ DEADTRANS( L'>'	,0xE654	,0x2A9E	,0x0000), // '>' ➔ "⪞" U+2A9E SIMILAR OR GREATER-THAN
-/*<!M><~nbspace><%tilde><%minus>                                   */ DEADTRANS( L'-'	,0xE654	,0x2972	,0x0000), // '-' ➔ "⥲" U+2972 TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-/*<!M><~nbspace><%tilde><%percent>                                 */ DEADTRANS( L'%'	,0xE654	,0x2240	,0x0000), // '%' ➔ "≀" U+2240 WREATH PRODUCT
-/*<!M><~nbspace><%tilde><%slash>                                   */ DEADTRANS( L'/'	,0xE654	,0xE657	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%tilde><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE657	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
-/*<!M><~nbspace><%tilde><%slash><~space>                           */ DEADTRANS( L' '	,0xE657	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
-/*<!M><~nbspace><%tilde><%tilde>                                   */ DEADTRANS( L'~'	,0xE654	,0xE658	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%tilde><%tilde><%equal>                           */ DEADTRANS( L'='	,0xE658	,0x2A70	,0x0000), // '=' ➔ "⩰" U+2A70 APPROXIMATELY EQUAL OR EQUAL TO
-/*<!M><~nbspace><%tilde><%tilde><%tilde>                           */ DEADTRANS( L'~'	,0xE658	,0x224B	,0x0000), // '~' ➔ "≋" U+224B TRIPLE TILDE
-/*<!M><~nbspace><%tilde><%tilde><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE658	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
-/*<!M><~nbspace><%tilde><%tilde><~space>                           */ DEADTRANS( L' '	,0xE658	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
-/*<!M><~nbspace><%tilde><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE654	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
-/*<!M><~nbspace><%tilde><~space>                                   */ DEADTRANS( L' '	,0xE654	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
-/*<!M><~nbspace><%underscore>                                      */ DEADTRANS( L'_'	,0xE61B	,0xE659	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><%backslash>                          */ DEADTRANS( L'\\'	,0xE659	,0x25BF	,0x0000), // '\' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%underscore><%hash>                               */ DEADTRANS( L'#'	,0xE659	,0x25BE	,0x0000), // '#' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%underscore><%minus>                              */ DEADTRANS( L'-'	,0xE659	,0xE65A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><%minus><%apostrophe>                 */ DEADTRANS( L'\''	,0xE65A	,0x296D	,0x0000), // ''' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
-/*<!M><~nbspace><%underscore><%minus><%aprightsingquotmark>        */ DEADTRANS( 0x2019	,0xE65A	,0x296D	,0x0000), // '’' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
-/*<!M><~nbspace><%underscore><%minus><%slash>                      */ DEADTRANS( L'/'	,0xE65A	,0x29A4	,0x0000), // '/' ➔ "⦤" U+29A4 ANGLE WITH UNDERBAR
-/*<!M><~nbspace><%underscore><%slash>                              */ DEADTRANS( L'/'	,0xE659	,0x25BF	,0x0000), // '/' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><~nbspace><%underscore><%underscore>                         */ DEADTRANS( L'_'	,0xE659	,0xE65B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><%underscore><v>                      */ DEADTRANS( L'v'	,0xE65B	,0xE65C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><%underscore><V>                      */ DEADTRANS( L'V'	,0xE65B	,0xE65D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><%underscore><v><%percent>            */ DEADTRANS( L'%'	,0xE65C	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><%underscore><V><%percent>            */ DEADTRANS( L'%'	,0xE65D	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><%underscore><v><~nbspace>            */ DEADTRANS( 0x00A0	,0xE65C	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><%underscore><V><~nbspace>            */ DEADTRANS( 0x00A0	,0xE65D	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><%underscore><v><~space>              */ DEADTRANS( L' '	,0xE65C	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><%underscore><V><~space>              */ DEADTRANS( L' '	,0xE65D	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~nbspace><%underscore><a>                                   */ DEADTRANS( L'a'	,0xE659	,0x22BC	,0x0000), // 'a' ➔ "⊼" U+22BC NAND
-/*<!M><~nbspace><%underscore><e>                                   */ DEADTRANS( L'e'	,0xE659	,0xE65E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><e><%backslash>                       */ DEADTRANS( L'\\'	,0xE65E	,0xE65F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><e><%backslash><%comma>               */ DEADTRANS( L','	,0xE65F	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><e><%backslash><~nbspace>             */ DEADTRANS( 0x00A0	,0xE65F	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><e><%backslash><~space>               */ DEADTRANS( L' '	,0xE65F	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><e><%comma>                           */ DEADTRANS( L','	,0xE65E	,0x22F7	,0x0000), // ',' ➔ "⋷" U+22F7 SMALL ELEMENT OF WITH OVERBAR
-/*<!M><~nbspace><%underscore><e><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE65E	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
-/*<!M><~nbspace><%underscore><e><~space>                           */ DEADTRANS( L' '	,0xE65E	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
-/*<!M><~nbspace><%underscore><n>                                   */ DEADTRANS( L'n'	,0xE659	,0x2A43	,0x0000), // 'n' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
-/*<!M><~nbspace><%underscore><N>                                   */ DEADTRANS( L'N'	,0xE659	,0x2A43	,0x0000), // 'N' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
-/*<!M><~nbspace><%underscore><p>                                   */ DEADTRANS( L'p'	,0xE659	,0xE660	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><p><%comma>                           */ DEADTRANS( L','	,0xE660	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><p><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE660	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><p><~space>                           */ DEADTRANS( L' '	,0xE660	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~nbspace><%underscore><u>                                   */ DEADTRANS( L'u'	,0xE659	,0xE661	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><U>                                   */ DEADTRANS( L'U'	,0xE659	,0xE662	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><u><%hash>                            */ DEADTRANS( L'#'	,0xE661	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-/*<!M><~nbspace><%underscore><U><%hash>                            */ DEADTRANS( L'#'	,0xE662	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-/*<!M><~nbspace><%underscore><u><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE661	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~nbspace><%underscore><U><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE662	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~nbspace><%underscore><u><~space>                           */ DEADTRANS( L' '	,0xE661	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~nbspace><%underscore><U><~space>                           */ DEADTRANS( L' '	,0xE662	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~nbspace><%underscore><v>                                   */ DEADTRANS( L'v'	,0xE659	,0xE663	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><v><v>                                */ DEADTRANS( L'v'	,0xE663	,0x22BC	,0x0000), // 'v' ➔ "⊼" U+22BC NAND
-/*<!M><~nbspace><%underscore><v><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE663	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
-/*<!M><~nbspace><%underscore><v><~space>                           */ DEADTRANS( L' '	,0xE663	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
-/*<!M><~nbspace><%underscore><X>                                   */ DEADTRANS( L'X'	,0xE659	,0xE664	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><x>                                   */ DEADTRANS( L'x'	,0xE659	,0xE665	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><%underscore><X><%hash>                            */ DEADTRANS( L'#'	,0xE664	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><~nbspace><%underscore><x><%hash>                            */ DEADTRANS( L'#'	,0xE665	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><~nbspace><%underscore><X><%underscore>                      */ DEADTRANS( L'_'	,0xE664	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
-/*<!M><~nbspace><%underscore><x><%underscore>                      */ DEADTRANS( L'_'	,0xE665	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
-/*<!M><~nbspace><2>                                                */ DEADTRANS( L'2'	,0xE61B	,0xE666	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><2><%less>                                         */ DEADTRANS( L'<'	,0xE666	,0x2AA3	,0x0000), // '<' ➔ "⪣" U+2AA3 DOUBLE NESTED LESS-THAN WITH UNDERBAR
-/*<!M><~nbspace><2><%minus>                                        */ DEADTRANS( L'-'	,0xE666	,0x21C9	,0x0000), // '-' ➔ "⇉" U+21C9 RIGHTWARDS PAIRED ARROWS
-/*<!M><~nbspace><2><V>                                             */ DEADTRANS( L'V'	,0xE666	,0x2A54	,0x0000), // 'V' ➔ "⩔" U+2A54 DOUBLE LOGICAL OR
-/*<!M><~nbspace><3>                                                */ DEADTRANS( L'3'	,0xE61B	,0xE667	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><3><%bar>                                          */ DEADTRANS( L'|'	,0xE667	,0x2AF4	,0x0000), // '|' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~nbspace><3><%minus>                                        */ DEADTRANS( L'-'	,0xE667	,0x21F6	,0x0000), // '-' ➔ "⇶" U+21F6 THREE RIGHTWARDS ARROWS
-/*<!M><~nbspace><8>                                                */ DEADTRANS( L'8'	,0xE61B	,0x221D	,0x0000), // '8' ➔ "∝" U+221D PROPORTIONAL TO
-/*<!M><~nbspace><A>                                                */ DEADTRANS( L'A'	,0xE61B	,0xE668	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><a>                                                */ DEADTRANS( L'a'	,0xE61B	,0xE669	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><A><%minus>                                        */ DEADTRANS( L'-'	,0xE668	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
-/*<!M><~nbspace><a><%minus>                                        */ DEADTRANS( L'-'	,0xE669	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
-/*<!M><~nbspace><A><%underscore>                                   */ DEADTRANS( L'_'	,0xE668	,0xE66A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><A><%underscore><%underscore>                      */ DEADTRANS( L'_'	,0xE66A	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
-/*<!M><~nbspace><A><%underscore><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE66A	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><~nbspace><A><%underscore><~space>                           */ DEADTRANS( L' '	,0xE66A	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><~nbspace><A><A>                                             */ DEADTRANS( L'A'	,0xE668	,0x2A07	,0x0000), // 'A' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
-/*<!M><~nbspace><a><a>                                             */ DEADTRANS( L'a'	,0xE669	,0x2A55	,0x0000), // 'a' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
-/*<!M><~nbspace><A><V>                                             */ DEADTRANS( L'V'	,0xE668	,0x25CA	,0x0000), // 'V' ➔ "◊" U+25CA LOZENGE
-/*<!M><~nbspace><a><v>                                             */ DEADTRANS( L'v'	,0xE669	,0x25CA	,0x0000), // 'v' ➔ "◊" U+25CA LOZENGE
-/*<!M><~nbspace><A><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE668	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><~nbspace><A><~space>                                        */ DEADTRANS( L' '	,0xE668	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><~nbspace><b>                                                */ DEADTRANS( L'b'	,0xE61B	,0xE66B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><B>                                                */ DEADTRANS( L'B'	,0xE61B	,0xE66C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><b><%slash>                                        */ DEADTRANS( L'/'	,0xE66B	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~nbspace><b><c>                                             */ DEADTRANS( L'c'	,0xE66B	,0x2AD7	,0x0000), // 'c' ➔ "⫗" U+2AD7 SUPERSET BESIDE SUBSET
-/*<!M><~nbspace><b><o>                                             */ DEADTRANS( L'o'	,0xE66B	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~nbspace><b><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE66B	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~nbspace><B><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE66C	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~nbspace><b><~space>                                        */ DEADTRANS( L' '	,0xE66B	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~nbspace><B><~space>                                        */ DEADTRANS( L' '	,0xE66C	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~nbspace><c>                                                */ DEADTRANS( L'c'	,0xE61B	,0xE66D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><c><%backslash>                                    */ DEADTRANS( L'\\'	,0xE66D	,0xE66E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><c><%backslash><%slash>                            */ DEADTRANS( L'/'	,0xE66E	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~nbspace><c><%backslash><o>                                 */ DEADTRANS( L'o'	,0xE66E	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~nbspace><c><c>                                             */ DEADTRANS( L'c'	,0xE66D	,0xE66F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><c><c><%slash>                                     */ DEADTRANS( L'/'	,0xE66F	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~nbspace><c><c><o>                                          */ DEADTRANS( L'o'	,0xE66F	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~nbspace><c><c><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE66F	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
-/*<!M><~nbspace><c><c><~space>                                     */ DEADTRANS( L' '	,0xE66F	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
-/*<!M><~nbspace><c><o>                                             */ DEADTRANS( L'o'	,0xE66D	,0x27C3	,0x0000), // 'o' ➔ "⟃" U+27C3 OPEN SUBSET
-/*<!M><~nbspace><D>                                                */ DEADTRANS( L'D'	,0xE61B	,0x2AD0	,0x0000), // 'D' ➔ "⫐" U+2AD0 CLOSED SUPERSET
-/*<!M><~nbspace><e>                                                */ DEADTRANS( L'e'	,0xE61B	,0xE670	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><e><e>                                             */ DEADTRANS( L'e'	,0xE670	,0xE671	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><e><e><%bar>                                       */ DEADTRANS( L'|'	,0xE671	,0xE672	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><e><e><%bar><%comma>                               */ DEADTRANS( L','	,0xE672	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><e><e><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE672	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><e><e><%bar><~space>                               */ DEADTRANS( L' '	,0xE672	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~nbspace><e><e><%comma>                                     */ DEADTRANS( L','	,0xE671	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
-/*<!M><~nbspace><e><e><%slash>                                     */ DEADTRANS( L'/'	,0xE671	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
-/*<!M><~nbspace><e><e><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE671	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><~nbspace><e><e><~space>                                     */ DEADTRANS( L' '	,0xE671	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><~nbspace><G>                                                */ DEADTRANS( L'G'	,0xE61B	,0x27F2	,0x0000), // 'G' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><~nbspace><g>                                                */ DEADTRANS( L'g'	,0xE61B	,0x27F2	,0x0000), // 'g' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><~nbspace><h>                                                */ DEADTRANS( L'h'	,0xE61B	,0x266E	,0x0000), // 'h' ➔ "♮" U+266E MUSIC NATURAL SIGN
-/*<!M><~nbspace><H>                                                */ DEADTRANS( L'H'	,0xE61B	,0x266E	,0x0000), // 'H' ➔ "♮" U+266E MUSIC NATURAL SIGN
-/*<!M><~nbspace><I>                                                */ DEADTRANS( L'I'	,0xE61B	,0x2AE0	,0x0000), // 'I' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~nbspace><K>                                                */ DEADTRANS( L'K'	,0xE61B	,0x212A	,0x0000), // 'K' ➔ "K" U+212A KELVIN SIGN
-/*<!M><~nbspace><k>                                                */ DEADTRANS( L'k'	,0xE61B	,0x212A	,0x0000), // 'k' ➔ "K" U+212A KELVIN SIGN
-/*<!M><~nbspace><n>                                                */ DEADTRANS( L'n'	,0xE61B	,0xE673	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><n><%bar>                                          */ DEADTRANS( L'|'	,0xE673	,0x2ADB	,0x0000), // '|' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
-/*<!M><~nbspace><o>                                                */ DEADTRANS( L'o'	,0xE61B	,0xE674	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><O>                                                */ DEADTRANS( L'O'	,0xE61B	,0xE675	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><O><%backslash>                                    */ DEADTRANS( L'\\'	,0xE675	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
-/*<!M><~nbspace><o><%backslash>                                    */ DEADTRANS( L'\\'	,0xE674	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
-/*<!M><~nbspace><o><%equal>                                        */ DEADTRANS( L'='	,0xE674	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
-/*<!M><~nbspace><O><%equal>                                        */ DEADTRANS( L'='	,0xE675	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
-/*<!M><~nbspace><o><%greater>                                      */ DEADTRANS( L'>'	,0xE674	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
-/*<!M><~nbspace><o><%minus>                                        */ DEADTRANS( L'-'	,0xE674	,0xE676	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><O><%minus>                                        */ DEADTRANS( L'-'	,0xE675	,0xE677	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><o><%minus><%greater>                              */ DEADTRANS( L'>'	,0xE676	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
-/*<!M><~nbspace><O><%minus><%greater>                              */ DEADTRANS( L'>'	,0xE677	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
-/*<!M><~nbspace><o><%minus><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE676	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~nbspace><O><%minus><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE677	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~nbspace><o><%minus><~space>                                */ DEADTRANS( L' '	,0xE676	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~nbspace><O><%minus><~space>                                */ DEADTRANS( L' '	,0xE677	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~nbspace><O><%percent>                                      */ DEADTRANS( L'%'	,0xE675	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><~nbspace><o><%percent>                                      */ DEADTRANS( L'%'	,0xE674	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><~nbspace><O><%period>                                       */ DEADTRANS( L'.'	,0xE675	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
-/*<!M><~nbspace><o><%period>                                       */ DEADTRANS( L'.'	,0xE674	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
-/*<!M><~nbspace><o><%plus>                                         */ DEADTRANS( L'+'	,0xE674	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
-/*<!M><~nbspace><o><%semicolon>                                    */ DEADTRANS( L';'	,0xE674	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><o><%semsection>                                   */ DEADTRANS( 0x00A7	,0xE674	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><o><%slash>                                        */ DEADTRANS( L'/'	,0xE674	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
-/*<!M><~nbspace><o><8>                                             */ DEADTRANS( L'8'	,0xE674	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
-/*<!M><~nbspace><O><8>                                             */ DEADTRANS( L'8'	,0xE675	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
-/*<!M><~nbspace><O><o>                                             */ DEADTRANS( L'o'	,0xE675	,0x29BE	,0x0000), // 'o' ➔ "⦾" U+29BE CIRCLED WHITE BULLET
-/*<!M><~nbspace><R>                                                */ DEADTRANS( L'R'	,0xE61B	,0xE678	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><r>                                                */ DEADTRANS( L'r'	,0xE61B	,0xE679	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><R><%slash>                                        */ DEADTRANS( L'/'	,0xE678	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><~nbspace><r><%slash>                                        */ DEADTRANS( L'/'	,0xE679	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><~nbspace><S>                                                */ DEADTRANS( L'S'	,0xE61B	,0xE67A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><s>                                                */ DEADTRANS( L's'	,0xE61B	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
-/*<!M><~nbspace><S><S>                                             */ DEADTRANS( L'S'	,0xE67A	,0xE67B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><S><s>                                             */ DEADTRANS( L's'	,0xE67A	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
-/*<!M><~nbspace><S><S><%at>                                        */ DEADTRANS( L'@'	,0xE67B	,0x2140	,0x0000), // '@' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~nbspace><S><S><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE67B	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~nbspace><S><S><~space>                                     */ DEADTRANS( L' '	,0xE67B	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~nbspace><T>                                                */ DEADTRANS( L'T'	,0xE61B	,0xE67C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><T><%percent>                                      */ DEADTRANS( L'%'	,0xE67C	,0x2AE0	,0x0000), // '%' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~nbspace><T><T>                                             */ DEADTRANS( L'T'	,0xE67C	,0x2AE0	,0x0000), // 'T' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~nbspace><V>                                                */ DEADTRANS( L'V'	,0xE61B	,0xE67D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><v>                                                */ DEADTRANS( L'v'	,0xE61B	,0x2A56	,0x0000), // 'v' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
-/*<!M><~nbspace><V><V>                                             */ DEADTRANS( L'V'	,0xE67D	,0x2A08	,0x0000), // 'V' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
-/*<!M><~nbspace><x>                                                */ DEADTRANS( L'x'	,0xE61B	,0x2A2F	,0x0000), // 'x' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
-/*<!M><~nbspace><X>                                                */ DEADTRANS( L'X'	,0xE61B	,0x2A2F	,0x0000), // 'X' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
-/*<!M><~nbspace><Y>                                                */ DEADTRANS( L'Y'	,0xE61B	,0xE67E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><y>                                                */ DEADTRANS( L'y'	,0xE61B	,0xE67F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><Y><%minus>                                        */ DEADTRANS( L'-'	,0xE67E	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><~nbspace><y><%minus>                                        */ DEADTRANS( L'-'	,0xE67F	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><~nbspace><z>                                                */ DEADTRANS( L'z'	,0xE61B	,0x2A1F	,0x0000), // 'z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><Z>                                                */ DEADTRANS( L'Z'	,0xE61B	,0x2A1F	,0x0000), // 'Z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE61B	,0xE680	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%asterisk>                              */ DEADTRANS( L'*'	,0xE680	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
-/*<!M><~nbspace><~nbspace><%backslash>                             */ DEADTRANS( L'\\'	,0xE680	,0xE681	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%backslash><%slash>                     */ DEADTRANS( L'/'	,0xE681	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><~nbspace><%backslash><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE681	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~nbspace><~nbspace><%backslash><~space>                     */ DEADTRANS( L' '	,0xE681	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~nbspace><~nbspace><%bar>                                   */ DEADTRANS( L'|'	,0xE680	,0xE682	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%bar><%bar>                             */ DEADTRANS( L'|'	,0xE682	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~nbspace><~nbspace><%bar><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE682	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~nbspace><~nbspace><%bar><~space>                           */ DEADTRANS( L' '	,0xE682	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~nbspace><~nbspace><%bracketleft>                           */ DEADTRANS( L'['	,0xE680	,0xE683	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%bracketleft><%bracketright>            */ DEADTRANS( L']'	,0xE683	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~nbspace><%bracketleft><%hash>                    */ DEADTRANS( L'#'	,0xE683	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~nbspace><%bracketright>                          */ DEADTRANS( L']'	,0xE680	,0xE684	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%bracketright><%bracketleft>            */ DEADTRANS( L'['	,0xE684	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~nbspace><%colon>                                 */ DEADTRANS( L':'	,0xE680	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><~nbspace><~nbspace><%equal>                                 */ DEADTRANS( L'='	,0xE680	,0xE685	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%equal><%equal>                         */ DEADTRANS( L'='	,0xE685	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
-/*<!M><~nbspace><~nbspace><%greater>                               */ DEADTRANS( L'>'	,0xE680	,0xE686	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%greater><%less>                        */ DEADTRANS( L'<'	,0xE686	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
-/*<!M><~nbspace><~nbspace><%greater><%minus>                       */ DEADTRANS( L'-'	,0xE686	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
-/*<!M><~nbspace><~nbspace><%hash>                                  */ DEADTRANS( L'#'	,0xE680	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
-/*<!M><~nbspace><~nbspace><%less>                                  */ DEADTRANS( L'<'	,0xE680	,0xE687	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%less><%greater>                        */ DEADTRANS( L'>'	,0xE687	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
-/*<!M><~nbspace><~nbspace><%less><o>                               */ DEADTRANS( L'o'	,0xE687	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
-/*<!M><~nbspace><~nbspace><%minus>                                 */ DEADTRANS( L'-'	,0xE680	,0xE688	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%minus><%apostrophe>                    */ DEADTRANS( L'\''	,0xE688	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~nbspace><%minus><%aprightsingquotmark>           */ DEADTRANS( 0x2019	,0xE688	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~nbspace><%minus><%slash>                         */ DEADTRANS( L'/'	,0xE688	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
-/*<!M><~nbspace><~nbspace><%period>                                */ DEADTRANS( L'.'	,0xE680	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
-/*<!M><~nbspace><~nbspace><%semicolon>                             */ DEADTRANS( L';'	,0xE680	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~nbspace><%semsection>                            */ DEADTRANS( 0x00A7	,0xE680	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~nbspace><%slash>                                 */ DEADTRANS( L'/'	,0xE680	,0xE689	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%slash><%backslash>                     */ DEADTRANS( L'\\'	,0xE689	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><~nbspace><%slash><%minus>                         */ DEADTRANS( L'-'	,0xE689	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
-/*<!M><~nbspace><~nbspace><%slash><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE689	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~nbspace><~nbspace><%slash><~space>                         */ DEADTRANS( L' '	,0xE689	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~nbspace><~nbspace><%underscore>                            */ DEADTRANS( L'_'	,0xE680	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
-/*<!M><~nbspace><~nbspace><3>                                      */ DEADTRANS( L'3'	,0xE680	,0xE68A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><3><%bar>                                */ DEADTRANS( L'|'	,0xE68A	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~nbspace><~nbspace><8>                                      */ DEADTRANS( L'8'	,0xE680	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
-/*<!M><~nbspace><~nbspace><A>                                      */ DEADTRANS( L'A'	,0xE680	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~nbspace><~nbspace><I>                                      */ DEADTRANS( L'I'	,0xE680	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~nbspace><i>                                      */ DEADTRANS( L'i'	,0xE680	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~nbspace><o>                                      */ DEADTRANS( L'o'	,0xE680	,0xE68B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><O>                                      */ DEADTRANS( L'O'	,0xE680	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-/*<!M><~nbspace><~nbspace><o><%minus>                              */ DEADTRANS( L'-'	,0xE68B	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
-/*<!M><~nbspace><~nbspace><o><%plus>                               */ DEADTRANS( L'+'	,0xE68B	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
-/*<!M><~nbspace><~nbspace><T>                                      */ DEADTRANS( L'T'	,0xE680	,0xE68C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><T><%backslash>                          */ DEADTRANS( L'\\'	,0xE68C	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~nbspace><T><%percent>                            */ DEADTRANS( L'%'	,0xE68C	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~nbspace><T><T>                                   */ DEADTRANS( L'T'	,0xE68C	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~nbspace><T><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE68C	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~nbspace><~nbspace><T><~space>                              */ DEADTRANS( L' '	,0xE68C	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~nbspace><~nbspace><x>                                      */ DEADTRANS( L'x'	,0xE680	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
-/*<!M><~nbspace><~nbspace><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE680	,0xE68D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~nbspace><%asterisk>                    */ DEADTRANS( L'*'	,0xE68D	,0xE68E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><%hash>             */ DEADTRANS( L'#'	,0xE68E	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
-/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><~nbspace>          */ DEADTRANS( 0x00A0	,0xE68E	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><~space>            */ DEADTRANS( L' '	,0xE68E	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~nbspace><~nbspace><%backslash>                   */ DEADTRANS( L'\\'	,0xE68D	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
-/*<!M><~nbspace><~nbspace><~nbspace><%bar>                         */ DEADTRANS( L'|'	,0xE68D	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><~nbspace><~nbspace><~nbspace><%less>                        */ DEADTRANS( L'<'	,0xE68D	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
-/*<!M><~nbspace><~nbspace><~nbspace><%slash>                       */ DEADTRANS( L'/'	,0xE68D	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
-/*<!M><~nbspace><~nbspace><~nbspace><o>                            */ DEADTRANS( L'o'	,0xE68D	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
-/*<!M><~nbspace><~nbspace><~nbspace><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE68D	,0xE68F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~nbspace><~nbspace><%backslash>         */ DEADTRANS( L'\\'	,0xE68F	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><~nbspace><~nbspace><~nbspace><~nbspace><%slash>             */ DEADTRANS( L'/'	,0xE68F	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><~nbspace><~nbspace><~nbspace><~space>                       */ DEADTRANS( L' '	,0xE68D	,0xE690	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~nbspace><~space><%backslash>           */ DEADTRANS( L'\\'	,0xE690	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><~nbspace><~nbspace><~nbspace><~space><%slash>               */ DEADTRANS( L'/'	,0xE690	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><~nbspace><~nbspace><~space>                                 */ DEADTRANS( L' '	,0xE680	,0xE691	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~space><%asterisk>                      */ DEADTRANS( L'*'	,0xE691	,0xE692	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~space><%asterisk><%hash>               */ DEADTRANS( L'#'	,0xE692	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
-/*<!M><~nbspace><~nbspace><~space><%asterisk><~nbspace>            */ DEADTRANS( 0x00A0	,0xE692	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~nbspace><~space><%asterisk><~space>              */ DEADTRANS( L' '	,0xE692	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~nbspace><~space><%backslash>                     */ DEADTRANS( L'\\'	,0xE691	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
-/*<!M><~nbspace><~nbspace><~space><%bar>                           */ DEADTRANS( L'|'	,0xE691	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><~nbspace><~nbspace><~space><%less>                          */ DEADTRANS( L'<'	,0xE691	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
-/*<!M><~nbspace><~nbspace><~space><%slash>                         */ DEADTRANS( L'/'	,0xE691	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
-/*<!M><~nbspace><~nbspace><~space><o>                              */ DEADTRANS( L'o'	,0xE691	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
-/*<!M><~nbspace><~nbspace><~space><~space>                         */ DEADTRANS( L' '	,0xE691	,0xE693	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><~space><~space><%backslash>             */ DEADTRANS( L'\\'	,0xE693	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><~nbspace><~nbspace><~space><~space><%slash>                 */ DEADTRANS( L'/'	,0xE693	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><~nbspace><~space>                                           */ DEADTRANS( L' '	,0xE61B	,0xE694	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%asterisk>                                */ DEADTRANS( L'*'	,0xE694	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
-/*<!M><~nbspace><~space><%backslash>                               */ DEADTRANS( L'\\'	,0xE694	,0xE695	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%backslash><%slash>                       */ DEADTRANS( L'/'	,0xE695	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><~space><%backslash><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE695	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~nbspace><~space><%backslash><~space>                       */ DEADTRANS( L' '	,0xE695	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~nbspace><~space><%bar>                                     */ DEADTRANS( L'|'	,0xE694	,0xE696	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%bar><%bar>                               */ DEADTRANS( L'|'	,0xE696	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~nbspace><~space><%bar><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE696	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~nbspace><~space><%bar><~space>                             */ DEADTRANS( L' '	,0xE696	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~nbspace><~space><%bracketleft>                             */ DEADTRANS( L'['	,0xE694	,0xE697	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%bracketleft><%bracketright>              */ DEADTRANS( L']'	,0xE697	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~space><%bracketleft><%hash>                      */ DEADTRANS( L'#'	,0xE697	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~space><%bracketright>                            */ DEADTRANS( L']'	,0xE694	,0xE698	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%bracketright><%bracketleft>              */ DEADTRANS( L'['	,0xE698	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~nbspace><~space><%colon>                                   */ DEADTRANS( L':'	,0xE694	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><~nbspace><~space><%equal>                                   */ DEADTRANS( L'='	,0xE694	,0xE699	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%equal><%equal>                           */ DEADTRANS( L'='	,0xE699	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
-/*<!M><~nbspace><~space><%greater>                                 */ DEADTRANS( L'>'	,0xE694	,0xE69A	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%greater><%less>                          */ DEADTRANS( L'<'	,0xE69A	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
-/*<!M><~nbspace><~space><%greater><%minus>                         */ DEADTRANS( L'-'	,0xE69A	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
-/*<!M><~nbspace><~space><%hash>                                    */ DEADTRANS( L'#'	,0xE694	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
-/*<!M><~nbspace><~space><%less>                                    */ DEADTRANS( L'<'	,0xE694	,0xE69B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%less><%greater>                          */ DEADTRANS( L'>'	,0xE69B	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
-/*<!M><~nbspace><~space><%less><o>                                 */ DEADTRANS( L'o'	,0xE69B	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
-/*<!M><~nbspace><~space><%minus>                                   */ DEADTRANS( L'-'	,0xE694	,0xE69C	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%minus><%apostrophe>                      */ DEADTRANS( L'\''	,0xE69C	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~space><%minus><%aprightsingquotmark>             */ DEADTRANS( 0x2019	,0xE69C	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~space><%minus><%slash>                           */ DEADTRANS( L'/'	,0xE69C	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
-/*<!M><~nbspace><~space><%period>                                  */ DEADTRANS( L'.'	,0xE694	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
-/*<!M><~nbspace><~space><%semicolon>                               */ DEADTRANS( L';'	,0xE694	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~space><%semsection>                              */ DEADTRANS( 0x00A7	,0xE694	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~space><%slash>                                   */ DEADTRANS( L'/'	,0xE694	,0xE69D	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%slash><%backslash>                       */ DEADTRANS( L'\\'	,0xE69D	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~nbspace><~space><%slash><%minus>                           */ DEADTRANS( L'-'	,0xE69D	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
-/*<!M><~nbspace><~space><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE69D	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~nbspace><~space><%slash><~space>                           */ DEADTRANS( L' '	,0xE69D	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~nbspace><~space><%underscore>                              */ DEADTRANS( L'_'	,0xE694	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
-/*<!M><~nbspace><~space><3>                                        */ DEADTRANS( L'3'	,0xE694	,0xE69E	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><3><%bar>                                  */ DEADTRANS( L'|'	,0xE69E	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~nbspace><~space><8>                                        */ DEADTRANS( L'8'	,0xE694	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
-/*<!M><~nbspace><~space><A>                                        */ DEADTRANS( L'A'	,0xE694	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~nbspace><~space><I>                                        */ DEADTRANS( L'I'	,0xE694	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~space><i>                                        */ DEADTRANS( L'i'	,0xE694	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~space><o>                                        */ DEADTRANS( L'o'	,0xE694	,0xE69F	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><O>                                        */ DEADTRANS( L'O'	,0xE694	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-/*<!M><~nbspace><~space><o><%minus>                                */ DEADTRANS( L'-'	,0xE69F	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
-/*<!M><~nbspace><~space><o><%plus>                                 */ DEADTRANS( L'+'	,0xE69F	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
-/*<!M><~nbspace><~space><T>                                        */ DEADTRANS( L'T'	,0xE694	,0xE6A0	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><T><%backslash>                            */ DEADTRANS( L'\\'	,0xE6A0	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~space><T><%percent>                              */ DEADTRANS( L'%'	,0xE6A0	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~space><T><T>                                     */ DEADTRANS( L'T'	,0xE6A0	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~nbspace><~space><T><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE6A0	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~nbspace><~space><T><~space>                                */ DEADTRANS( L' '	,0xE6A0	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~nbspace><~space><x>                                        */ DEADTRANS( L'x'	,0xE694	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
-/*<!M><~nbspace><~space><~space>                                   */ DEADTRANS( L' '	,0xE694	,0xE6A1	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><~space><%asterisk>                        */ DEADTRANS( L'*'	,0xE6A1	,0xE6A2	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><~space><%asterisk><%hash>                 */ DEADTRANS( L'#'	,0xE6A2	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
-/*<!M><~nbspace><~space><~space><%asterisk><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6A2	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~space><~space><%asterisk><~space>                */ DEADTRANS( L' '	,0xE6A2	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~nbspace><~space><~space><%backslash>                       */ DEADTRANS( L'\\'	,0xE6A1	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
-/*<!M><~nbspace><~space><~space><%bar>                             */ DEADTRANS( L'|'	,0xE6A1	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><~nbspace><~space><~space><%less>                            */ DEADTRANS( L'<'	,0xE6A1	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
-/*<!M><~nbspace><~space><~space><%slash>                           */ DEADTRANS( L'/'	,0xE6A1	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
-/*<!M><~nbspace><~space><~space><o>                                */ DEADTRANS( L'o'	,0xE6A1	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
-/*<!M><~nbspace><~space><~space><~space>                           */ DEADTRANS( L' '	,0xE6A1	,0xE6A3	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><~space><~space><%backslash>               */ DEADTRANS( L'\\'	,0xE6A3	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><~nbspace><~space><~space><~space><%slash>                   */ DEADTRANS( L'/'	,0xE6A3	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
-/*<!M><~nbthinspace>                                               */ DEADTRANS( 0x202F	,0x00A6	,0xE6A4	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbthinspace><~space>                                       */ DEADTRANS( L' '	,0xE6A4	,0x238D	,0x0000), // ' ' ➔ "⎍" U+238D MONOSTABLE SYMBOL
-/*<!M><~space>                                                     */ DEADTRANS( L' '	,0x00A6	,0xE6A5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%ampersand>                                         */ DEADTRANS( L'&'	,0xE6A5	,0xE6A6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%ampersand><%bar>                                   */ DEADTRANS( L'|'	,0xE6A6	,0x20D3	,0x0000), // '|' ➔ "⃓" U+20D3 COMBINING SHORT VERTICAL LINE OVERLAY
-/*<!M><~space><%ampersand><%less>                                  */ DEADTRANS( L'<'	,0xE6A6	,0x20EE	,0x0000), // '<' ➔ "⃮" U+20EE COMBINING LEFT ARROW BELOW
-/*<!M><~space><%ampersand><%minus>                                 */ DEADTRANS( L'-'	,0xE6A6	,0x20EF	,0x0000), // '-' ➔ "⃯" U+20EF COMBINING RIGHT ARROW BELOW
-/*<!M><~space><%apostrophe>                                        */ DEADTRANS( L'\''	,0xE6A5	,0xE6A7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%apostrophe><%equal>                                */ DEADTRANS( L'='	,0xE6A7	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
-/*<!M><~space><%apostrophe><%minus>                                */ DEADTRANS( L'-'	,0xE6A7	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
-/*<!M><~space><%apostrophe><%plus>                                 */ DEADTRANS( L'+'	,0xE6A7	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~space><%aprightsingquotmark>                               */ DEADTRANS( 0x2019	,0xE6A5	,0xE6A8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%aprightsingquotmark><%equal>                       */ DEADTRANS( L'='	,0xE6A8	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
-/*<!M><~space><%aprightsingquotmark><%minus>                       */ DEADTRANS( L'-'	,0xE6A8	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
-/*<!M><~space><%aprightsingquotmark><%plus>                        */ DEADTRANS( L'+'	,0xE6A8	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~space><%asterisk>                                          */ DEADTRANS( L'*'	,0xE6A5	,0xE6A9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%asterisk><%equal>                                  */ DEADTRANS( L'='	,0xE6A9	,0x225B	,0x0000), // '=' ➔ "≛" U+225B STAR EQUALS
-/*<!M><~space><%asterisk><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6A9	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
-/*<!M><~space><%asterisk><~space>                                  */ DEADTRANS( L' '	,0xE6A9	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
-/*<!M><~space><%backslash>                                         */ DEADTRANS( L'\\'	,0xE6A5	,0xE6AA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%backslash><%greater>                               */ DEADTRANS( L'>'	,0xE6AA	,0x292D	,0x0000), // '>' ➔ "⤭" U+292D SOUTH EAST ARROW CROSSING NORTH EAST ARROW
-/*<!M><~space><%backslash><%minus>                                 */ DEADTRANS( L'-'	,0xE6AA	,0x29A3	,0x0000), // '-' ➔ "⦣" U+29A3 REVERSED ANGLE
-/*<!M><~space><%backslash><%slash>                                 */ DEADTRANS( L'/'	,0xE6AA	,0xE6AB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%backslash><%slash><%bar>                           */ DEADTRANS( L'|'	,0xE6AB	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
-/*<!M><~space><%backslash><%slash><%hash>                          */ DEADTRANS( L'#'	,0xE6AB	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
-/*<!M><~space><%backslash><%slash><%underscore>                    */ DEADTRANS( L'_'	,0xE6AB	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
-/*<!M><~space><%backslash><c>                                      */ DEADTRANS( L'c'	,0xE6AA	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
-/*<!M><~space><%backslash><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6AA	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
-/*<!M><~space><%backslash><~space>                                 */ DEADTRANS( L' '	,0xE6AA	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
-/*<!M><~space><%bar>                                               */ DEADTRANS( L'|'	,0xE6A5	,0xE6AC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%backslash>                                   */ DEADTRANS( L'\\'	,0xE6AC	,0xE6AD	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%backslash><%slash>                           */ DEADTRANS( L'/'	,0xE6AD	,0xE6AE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%backslash><%slash><%bar>                     */ DEADTRANS( L'|'	,0xE6AE	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
-/*<!M><~space><%bar><%backslash><%slash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE6AE	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~space><%bar><%backslash><%slash><~space>                   */ DEADTRANS( L' '	,0xE6AE	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~space><%bar><%bar>                                         */ DEADTRANS( L'|'	,0xE6AC	,0xE6AF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%bar><%bar>                                   */ DEADTRANS( L'|'	,0xE6AF	,0xE6B0	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%bar><%bar><%minus>                           */ DEADTRANS( L'-'	,0xE6B0	,0x22AA	,0x0000), // '-' ➔ "⊪" U+22AA TRIPLE VERTICAL BAR RIGHT TURNSTILE
-/*<!M><~space><%bar><%bar><%bar><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE6B0	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~space><%bar><%bar><%bar><~space>                           */ DEADTRANS( L' '	,0xE6B0	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~space><%bar><%bar><%minus>                                 */ DEADTRANS( L'-'	,0xE6AF	,0x22A9	,0x0000), // '-' ➔ "⊩" U+22A9 FORCES
-/*<!M><~space><%bar><%bar><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6AF	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
-/*<!M><~space><%bar><%bar><~space>                                 */ DEADTRANS( L' '	,0xE6AF	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
-/*<!M><~space><%bar><%equal>                                       */ DEADTRANS( L'='	,0xE6AC	,0x29E7	,0x0000), // '=' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~space><%bar><%hash>                                        */ DEADTRANS( L'#'	,0xE6AC	,0x25B6	,0x0000), // '#' ➔ "▶" U+25B6 BLACK RIGHT-POINTING TRIANGLE
-/*<!M><~space><%bar><%minus>                                       */ DEADTRANS( L'-'	,0xE6AC	,0x27CA	,0x0000), // '-' ➔ "⟊" U+27CA VERTICAL BAR WITH HORIZONTAL STROKE
-/*<!M><~space><%bar><%parenright>                                  */ DEADTRANS( L')'	,0xE6AC	,0x2ADD	,0x0000), // ')' ➔ "⫝" U+2ADD NONFORKING
-/*<!M><~space><%bar><%slash>                                       */ DEADTRANS( L'/'	,0xE6AC	,0xE6B1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%slash><%backslash>                           */ DEADTRANS( L'\\'	,0xE6B1	,0xE6B2	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><%slash><%backslash><%bar>                     */ DEADTRANS( L'|'	,0xE6B2	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
-/*<!M><~space><%bar><%slash><%backslash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE6B2	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~space><%bar><%slash><%backslash><~space>                   */ DEADTRANS( L' '	,0xE6B2	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
-/*<!M><~space><%bar><%slash><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6B1	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
-/*<!M><~space><%bar><%slash><~space>                               */ DEADTRANS( L' '	,0xE6B1	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
-/*<!M><~space><%bar><e>                                            */ DEADTRANS( L'e'	,0xE6AC	,0xE6B3	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><e><%backslash>                                */ DEADTRANS( L'\\'	,0xE6B3	,0xE6B4	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><e><%backslash><%comma>                        */ DEADTRANS( L','	,0xE6B4	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><e><%backslash><~nbspace>                      */ DEADTRANS( 0x00A0	,0xE6B4	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><e><%backslash><~space>                        */ DEADTRANS( L' '	,0xE6B4	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><e><e>                                         */ DEADTRANS( L'e'	,0xE6B3	,0xE6B5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><e><e><%comma>                                 */ DEADTRANS( L','	,0xE6B5	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><e><e><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6B5	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><e><e><~space>                                 */ DEADTRANS( L' '	,0xE6B5	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><o>                                            */ DEADTRANS( L'o'	,0xE6AC	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
-/*<!M><~space><%bar><p>                                            */ DEADTRANS( L'p'	,0xE6AC	,0xE6B6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bar><p><%comma>                                    */ DEADTRANS( L','	,0xE6B6	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><p><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6B6	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><p><~space>                                    */ DEADTRANS( L' '	,0xE6B6	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><%bar><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6AC	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
-/*<!M><~space><%bar><~space>                                       */ DEADTRANS( L' '	,0xE6AC	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
-/*<!M><~space><%braceleft>                                         */ DEADTRANS( L'{'	,0xE6A5	,0x2983	,0x0000), // '{' ➔ "⦃" U+2983 LEFT WHITE CURLY BRACKET
-/*<!M><~space><%braceright>                                        */ DEADTRANS( L'}'	,0xE6A5	,0x2984	,0x0000), // '}' ➔ "⦄" U+2984 RIGHT WHITE CURLY BRACKET
-/*<!M><~space><%bracketleft>                                       */ DEADTRANS( L'['	,0xE6A5	,0xE6B7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bracketleft><%bracketleft>                         */ DEADTRANS( L'['	,0xE6B7	,0x27E6	,0x0000), // '[' ➔ "⟦" U+27E6 MATHEMATICAL LEFT WHITE SQUARE BRACKET
-/*<!M><~space><%bracketleft><%bracketright>                        */ DEADTRANS( L']'	,0xE6B7	,0x25FB	,0x0000), // ']' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
-/*<!M><~space><%bracketleft><%hash>                                */ DEADTRANS( L'#'	,0xE6B7	,0x25FC	,0x0000), // '#' ➔ "◼" U+25FC BLACK MEDIUM SQUARE
-/*<!M><~space><%bracketleft><%minus>                               */ DEADTRANS( L'-'	,0xE6B7	,0x2ACD	,0x0000), // '-' ➔ "⫍" U+2ACD SQUARE LEFT OPEN BOX OPERATOR
-/*<!M><~space><%bracketleft><%underscore>                          */ DEADTRANS( L'_'	,0xE6B7	,0x298B	,0x0000), // '_' ➔ "⦋" U+298B LEFT SQUARE BRACKET WITH UNDERBAR
-/*<!M><~space><%bracketleft><a>                                    */ DEADTRANS( L'a'	,0xE6B7	,0x27CE	,0x0000), // 'a' ➔ "⟎" U+27CE SQUARED LOGICAL AND
-/*<!M><~space><%bracketleft><A>                                    */ DEADTRANS( L'A'	,0xE6B7	,0x27CE	,0x0000), // 'A' ➔ "⟎" U+27CE SQUARED LOGICAL AND
-/*<!M><~space><%bracketleft><o>                                    */ DEADTRANS( L'o'	,0xE6B7	,0x29C7	,0x0000), // 'o' ➔ "⧇" U+29C7 SQUARED SMALL CIRCLE
-/*<!M><~space><%bracketleft><v>                                    */ DEADTRANS( L'v'	,0xE6B7	,0xE6B8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bracketleft><V>                                    */ DEADTRANS( L'V'	,0xE6B7	,0xE6B9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bracketleft><v><%bracketright>                     */ DEADTRANS( L']'	,0xE6B8	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><~space><%bracketleft><V><%bracketright>                     */ DEADTRANS( L']'	,0xE6B9	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
-/*<!M><~space><%bracketleft><x>                                    */ DEADTRANS( L'x'	,0xE6B7	,0x22A0	,0x0000), // 'x' ➔ "⊠" U+22A0 SQUARED TIMES
-/*<!M><~space><%bracketleft><X>                                    */ DEADTRANS( L'X'	,0xE6B7	,0x22A0	,0x0000), // 'X' ➔ "⊠" U+22A0 SQUARED TIMES
-/*<!M><~space><%bracketright>                                      */ DEADTRANS( L']'	,0xE6A5	,0xE6BA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%bracketright><%bracketleft>                        */ DEADTRANS( L'['	,0xE6BA	,0x25FB	,0x0000), // '[' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
-/*<!M><~space><%bracketright><%bracketright>                       */ DEADTRANS( L']'	,0xE6BA	,0x27E7	,0x0000), // ']' ➔ "⟧" U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-/*<!M><~space><%bracketright><%underscore>                         */ DEADTRANS( L'_'	,0xE6BA	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
-/*<!M><~space><%circum>                                            */ DEADTRANS( L'^'	,0xE6A5	,0xE6BB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%circum><%circum>                                   */ DEADTRANS( L'^'	,0xE6BB	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~space><%circum><%equal>                                    */ DEADTRANS( L'='	,0xE6BB	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
-/*<!M><~space><%circum><%underscore>                               */ DEADTRANS( L'_'	,0xE6BB	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><~space><%circum><o>                                         */ DEADTRANS( L'o'	,0xE6BB	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-/*<!M><~space><%circum><O>                                         */ DEADTRANS( L'O'	,0xE6BB	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
-/*<!M><~space><%circum><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6BB	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~space><%circum><~space>                                    */ DEADTRANS( L' '	,0xE6BB	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~space><%colon>                                             */ DEADTRANS( L':'	,0xE6A5	,0xE6BC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%colon><%colon>                                     */ DEADTRANS( L':'	,0xE6BC	,0x2237	,0x0000), // ':' ➔ "∷" U+2237 PROPORTION
-/*<!M><~space><%colon><%tilde>                                     */ DEADTRANS( L'~'	,0xE6BC	,0x223B	,0x0000), // '~' ➔ "∻" U+223B HOMOTHETIC
-/*<!M><~space><%colon><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6BC	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
-/*<!M><~space><%colon><~space>                                     */ DEADTRANS( L' '	,0xE6BC	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
-/*<!M><~space><%equal>                                             */ DEADTRANS( L'='	,0xE6A5	,0xE6BD	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%equal><%bar>                                       */ DEADTRANS( L'|'	,0xE6BD	,0xE6BE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%equal><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE6BE	,0x22D5	,0x0000), // '|' ➔ "⋕" U+22D5 EQUAL AND PARALLEL TO
-/*<!M><~space><%equal><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6BE	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~space><%equal><%bar><~space>                               */ DEADTRANS( L' '	,0xE6BE	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
-/*<!M><~space><%equal><%equal>                                     */ DEADTRANS( L'='	,0xE6BD	,0x2A75	,0x0000), // '=' ➔ "⩵" U+2A75 TWO CONSECUTIVE EQUALS SIGNS
-/*<!M><~space><%equal><%greater>                                   */ DEADTRANS( L'>'	,0xE6BD	,0x2A9A	,0x0000), // '>' ➔ "⪚" U+2A9A DOUBLE-LINE EQUAL TO OR GREATER-THAN
-/*<!M><~space><%equal><%minus>                                     */ DEADTRANS( L'-'	,0xE6BD	,0xE6BF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%equal><%minus><%greater>                           */ DEADTRANS( L'>'	,0xE6BF	,0x2971	,0x0000), // '>' ➔ "⥱" U+2971 EQUALS SIGN ABOVE RIGHTWARDS ARROW
-/*<!M><~space><%equal><%minus><%slash>                             */ DEADTRANS( L'/'	,0xE6BF	,0x29E5	,0x0000), // '/' ➔ "⧥" U+29E5 IDENTICAL TO AND SLANTED PARALLEL
-/*<!M><~space><%exclam>                                            */ DEADTRANS( L'!'	,0xE6A5	,0xE6C0	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%exclam><%exclam>                                   */ DEADTRANS( L'!'	,0xE6C0	,0x00A1	,0x0000), // '!' ➔ "¡" U+00A1 INVERTED EXCLAMATION MARK
-/*<!M><~space><%exclam><j>                                         */ DEADTRANS( L'j'	,0xE6C0	,0x297F	,0x0000), // 'j' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~space><%exclam><J>                                         */ DEADTRANS( L'J'	,0xE6C0	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~space><%exclam><Y>                                         */ DEADTRANS( L'Y'	,0xE6C0	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~space><%exclam><y>                                         */ DEADTRANS( L'y'	,0xE6C0	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
-/*<!M><~space><%greater>                                           */ DEADTRANS( L'>'	,0xE6A5	,0xE6C1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%greater><%greater>                                 */ DEADTRANS( L'>'	,0xE6C1	,0xE6C2	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%greater><%greater><%greater>                       */ DEADTRANS( L'>'	,0xE6C2	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
-/*<!M><~space><%greater><%greater><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE6C2	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
-/*<!M><~space><%greater><%greater><~space>                         */ DEADTRANS( L' '	,0xE6C2	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
-/*<!M><~space><%greater><%less>                                    */ DEADTRANS( L'<'	,0xE6C1	,0x2AA4	,0x0000), // '<' ➔ "⪤" U+2AA4 GREATER-THAN OVERLAPPING LESS-THAN
-/*<!M><~space><%greater><%minus>                                   */ DEADTRANS( L'-'	,0xE6C1	,0xE6C3	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%greater><%minus><%greater>                         */ DEADTRANS( L'>'	,0xE6C3	,0x2978	,0x0000), // '>' ➔ "⥸" U+2978 GREATER-THAN ABOVE RIGHTWARDS ARROW
-/*<!M><~space><%greater><%minus><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE6C3	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
-/*<!M><~space><%greater><%minus><~space>                           */ DEADTRANS( L' '	,0xE6C3	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
-/*<!M><~space><%greater><%parenright>                              */ DEADTRANS( L')'	,0xE6C1	,0x2994	,0x0000), // ')' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
-/*<!M><~space><%greater><o>                                        */ DEADTRANS( L'o'	,0xE6C1	,0x2941	,0x0000), // 'o' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~space><%greater><O>                                        */ DEADTRANS( L'O'	,0xE6C1	,0x2941	,0x0000), // 'O' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~space><%greater><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE6C1	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
-/*<!M><~space><%greater><~space>                                   */ DEADTRANS( L' '	,0xE6C1	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
-/*<!M><~space><%hash>                                              */ DEADTRANS( L'#'	,0xE6A5	,0xE6C4	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%hash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE6C4	,0x2A33	,0x0000), // '\' ➔ "⨳" U+2A33 SMASH PRODUCT
-/*<!M><~space><%hash><%percent>                                    */ DEADTRANS( L'%'	,0xE6C4	,0x2A33	,0x0000), // '%' ➔ "⨳" U+2A33 SMASH PRODUCT
-/*<!M><~space><%hash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE6C4	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
-/*<!M><~space><%hash><~space>                                      */ DEADTRANS( L' '	,0xE6C4	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
-/*<!M><~space><%less>                                              */ DEADTRANS( L'<'	,0xE6A5	,0xE6C5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%backslash>                                  */ DEADTRANS( L'\\'	,0xE6C5	,0x2932	,0x0000), // '\' ➔ "⤲" U+2932 NORTH WEST ARROW CROSSING NORTH EAST ARROW
-/*<!M><~space><%less><%equal>                                      */ DEADTRANS( L'='	,0xE6C5	,0xE6C6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%equal><%greater>                            */ DEADTRANS( L'>'	,0xE6C6	,0x2A8B	,0x0000), // '>' ➔ "⪋" U+2A8B LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
-/*<!M><~space><%less><%equal><%slash>                              */ DEADTRANS( L'/'	,0xE6C6	,0x2268	,0x0000), // '/' ➔ "≨" U+2268 LESS-THAN BUT NOT EQUAL TO
-/*<!M><~space><%less><%equal><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6C6	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
-/*<!M><~space><%less><%equal><~space>                              */ DEADTRANS( L' '	,0xE6C6	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
-/*<!M><~space><%less><%exclam>                                     */ DEADTRANS( L'!'	,0xE6C5	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
-/*<!M><~space><%less><%greater>                                    */ DEADTRANS( L'>'	,0xE6C5	,0x22C4	,0x0000), // '>' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~space><%less><%less>                                       */ DEADTRANS( L'<'	,0xE6C5	,0xE6C7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%less><%less>                                */ DEADTRANS( L'<'	,0xE6C7	,0x22D8	,0x0000), // '<' ➔ "⋘" U+22D8 VERY MUCH LESS-THAN
-/*<!M><~space><%less><%less><%minus>                               */ DEADTRANS( L'-'	,0xE6C7	,0xE6C8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%less><%minus><%bar>                         */ DEADTRANS( L'|'	,0xE6C8	,0x2B36	,0x0000), // '|' ➔ "⬶" U+2B36 LEFTWARDS TWO-HEADED ARROW FROM BAR
-/*<!M><~space><%less><%less><%minus><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE6C8	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
-/*<!M><~space><%less><%less><%minus><~space>                       */ DEADTRANS( L' '	,0xE6C8	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
-/*<!M><~space><%less><%less><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6C7	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
-/*<!M><~space><%less><%less><~space>                               */ DEADTRANS( L' '	,0xE6C7	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
-/*<!M><~space><%less><%minus>                                      */ DEADTRANS( L'-'	,0xE6C5	,0xE6C9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%minus><%bar>                                */ DEADTRANS( L'|'	,0xE6C9	,0x21F7	,0x0000), // '|' ➔ "⇷" U+21F7 LEFTWARDS ARROW WITH VERTICAL STROKE
-/*<!M><~space><%less><%minus><%less>                               */ DEADTRANS( L'<'	,0xE6C9	,0x2977	,0x0000), // '<' ➔ "⥷" U+2977 LEFTWARDS ARROW THROUGH LESS-THAN
-/*<!M><~space><%less><%minus><%minus>                              */ DEADTRANS( L'-'	,0xE6C9	,0x27F7	,0x0000), // '-' ➔ "⟷" U+27F7 LONG LEFT RIGHT ARROW
-/*<!M><~space><%less><%minus><%tilde>                              */ DEADTRANS( L'~'	,0xE6C9	,0x2973	,0x0000), // '~' ➔ "⥳" U+2973 LEFTWARDS ARROW ABOVE TILDE OPERATOR
-/*<!M><~space><%less><%minus><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6C9	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
-/*<!M><~space><%less><%minus><~space>                              */ DEADTRANS( L' '	,0xE6C9	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
-/*<!M><~space><%less><%parenleft>                                  */ DEADTRANS( L'('	,0xE6C5	,0x2993	,0x0000), // '(' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
-/*<!M><~space><%less><%parenright>                                 */ DEADTRANS( L')'	,0xE6C5	,0x2AA6	,0x0000), // ')' ➔ "⪦" U+2AA6 LESS-THAN CLOSED BY CURVE
-/*<!M><~space><%less><%slash>                                      */ DEADTRANS( L'/'	,0xE6C5	,0x226E	,0x0000), // '/' ➔ "≮" U+226E NOT LESS-THAN
-/*<!M><~space><%less><%tilde>                                      */ DEADTRANS( L'~'	,0xE6C5	,0xE6CA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%less><%tilde><%greater>                            */ DEADTRANS( L'>'	,0xE6CA	,0x21AD	,0x0000), // '>' ➔ "↭" U+21AD LEFT RIGHT WAVE ARROW
-/*<!M><~space><%less><%tilde><%tilde>                              */ DEADTRANS( L'~'	,0xE6CA	,0x21DC	,0x0000), // '~' ➔ "⇜" U+21DC LEFTWARDS SQUIGGLE ARROW
-/*<!M><~space><%less><%tilde><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6CA	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
-/*<!M><~space><%less><%tilde><~space>                              */ DEADTRANS( L' '	,0xE6CA	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
-/*<!M><~space><%less><3>                                           */ DEADTRANS( L'3'	,0xE6C5	,0x2660	,0x0000), // '3' ➔ "♠" U+2660 BLACK SPADE SUIT
-/*<!M><~space><%less><C>                                           */ DEADTRANS( L'C'	,0xE6C5	,0x293E	,0x0000), // 'C' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
-/*<!M><~space><%less><c>                                           */ DEADTRANS( L'c'	,0xE6C5	,0x293E	,0x0000), // 'c' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
-/*<!M><~space><%less><n>                                           */ DEADTRANS( L'n'	,0xE6C5	,0x21B6	,0x0000), // 'n' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
-/*<!M><~space><%less><o>                                           */ DEADTRANS( L'o'	,0xE6C5	,0x2940	,0x0000), // 'o' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~space><%less><O>                                           */ DEADTRANS( L'O'	,0xE6C5	,0x2940	,0x0000), // 'O' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
-/*<!M><~space><%less><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE6C5	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
-/*<!M><~space><%less><~space>                                      */ DEADTRANS( L' '	,0xE6C5	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
-/*<!M><~space><%minus>                                             */ DEADTRANS( L'-'	,0xE6A5	,0xE6CB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><%apostrophe>                                */ DEADTRANS( L'\''	,0xE6CB	,0xE6CC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><%apostrophe><%minus>                        */ DEADTRANS( L'-'	,0xE6CC	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~space><%minus><%apostrophe><~nbspace>                      */ DEADTRANS( 0x00A0	,0xE6CC	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~space><%minus><%apostrophe><~space>                        */ DEADTRANS( L' '	,0xE6CC	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~space><%minus><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE6CB	,0xE6CD	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><%aprightsingquotmark><%minus>               */ DEADTRANS( L'-'	,0xE6CD	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~space><%minus><%aprightsingquotmark><~nbspace>             */ DEADTRANS( 0x00A0	,0xE6CD	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~space><%minus><%aprightsingquotmark><~space>               */ DEADTRANS( L' '	,0xE6CD	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
-/*<!M><~space><%minus><%bar>                                       */ DEADTRANS( L'|'	,0xE6CB	,0x21F8	,0x0000), // '|' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
-/*<!M><~space><%minus><%bracketleft>                               */ DEADTRANS( L'['	,0xE6CB	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
-/*<!M><~space><%minus><%bracketright>                              */ DEADTRANS( L']'	,0xE6CB	,0xE6CE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><%bracketright><%bracketleft>                */ DEADTRANS( L'['	,0xE6CE	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
-/*<!M><~space><%minus><%bracketright><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE6CE	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
-/*<!M><~space><%minus><%bracketright><~space>                      */ DEADTRANS( L' '	,0xE6CE	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
-/*<!M><~space><%minus><%slash>                                     */ DEADTRANS( L'/'	,0xE6CB	,0x29A2	,0x0000), // '/' ➔ "⦢" U+29A2 TURNED ANGLE
-/*<!M><~space><%minus><e>                                          */ DEADTRANS( L'e'	,0xE6CB	,0x22F2	,0x0000), // 'e' ➔ "⋲" U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE
-/*<!M><~space><%minus><j>                                          */ DEADTRANS( L'j'	,0xE6CB	,0x297D	,0x0000), // 'j' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~space><%minus><J>                                          */ DEADTRANS( L'J'	,0xE6CB	,0x297D	,0x0000), // 'J' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~space><%minus><o>                                          */ DEADTRANS( L'o'	,0xE6CB	,0xE6CF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><O>                                          */ DEADTRANS( L'O'	,0xE6CB	,0x29B1	,0x0000), // 'O' ➔ "⦱" U+29B1 EMPTY SET WITH OVERBAR
-/*<!M><~space><%minus><o><%minus>                                  */ DEADTRANS( L'-'	,0xE6CF	,0x2256	,0x0000), // '-' ➔ "≖" U+2256 RING IN EQUAL TO
-/*<!M><~space><%minus><o><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6CF	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
-/*<!M><~space><%minus><o><~space>                                  */ DEADTRANS( L' '	,0xE6CF	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
-/*<!M><~space><%minus><s>                                          */ DEADTRANS( L's'	,0xE6CB	,0xE6D0	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%minus><S>                                          */ DEADTRANS( L'S'	,0xE6CB	,0x2A1B	,0x0000), // 'S' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~space><%minus><s><%slash>                                  */ DEADTRANS( L'/'	,0xE6D0	,0x299E	,0x0000), // '/' ➔ "⦞" U+299E ANGLE WITH S INSIDE
-/*<!M><~space><%minus><s><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6D0	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~space><%minus><s><~space>                                  */ DEADTRANS( L' '	,0xE6D0	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
-/*<!M><~space><%minus><Y>                                          */ DEADTRANS( L'Y'	,0xE6CB	,0x297D	,0x0000), // 'Y' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~space><%minus><y>                                          */ DEADTRANS( L'y'	,0xE6CB	,0x297D	,0x0000), // 'y' ➔ "⥽" U+297D RIGHT FISH TAIL
-/*<!M><~space><%minus><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6CB	,0x2212	,0x0000), // ' ' ➔ "−" U+2212 MINUS SIGN
-/*<!M><~space><%minus><~space>                                     */ DEADTRANS( L' '	,0xE6CB	,0x2212	,0x0000), // ' ' ➔ "−" U+2212 MINUS SIGN
-/*<!M><~space><%parenleft>                                         */ DEADTRANS( L'('	,0xE6A5	,0xE6D1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%parenleft><%bracketleft>                           */ DEADTRANS( L'['	,0xE6D1	,0x27EE	,0x0000), // '[' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
-/*<!M><~space><%parenleft><%bracketright>                          */ DEADTRANS( L']'	,0xE6D1	,0x27EE	,0x0000), // ']' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
-/*<!M><~space><%parenleft><%equal>                                 */ DEADTRANS( L'='	,0xE6D1	,0x224E	,0x0000), // '=' ➔ "≎" U+224E GEOMETRICALLY EQUIVALENT TO
-/*<!M><~space><%parenleft><%greater>                               */ DEADTRANS( L'>'	,0xE6D1	,0x2AA7	,0x0000), // '>' ➔ "⪧" U+2AA7 GREATER-THAN CLOSED BY CURVE
-/*<!M><~space><%parenleft><%less>                                  */ DEADTRANS( L'<'	,0xE6D1	,0x2993	,0x0000), // '<' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
-/*<!M><~space><%parenleft><%parenleft>                             */ DEADTRANS( L'('	,0xE6D1	,0x2985	,0x0000), // '(' ➔ "⦅" U+2985 LEFT WHITE PARENTHESIS
-/*<!M><~space><%parenleft><8>                                      */ DEADTRANS( L'8'	,0xE6D1	,0x29DD	,0x0000), // '8' ➔ "⧝" U+29DD TIE OVER INFINITY
-/*<!M><~space><%parenleft><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D1	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
-/*<!M><~space><%parenleft><~space>                                 */ DEADTRANS( L' '	,0xE6D1	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
-/*<!M><~space><%parenright>                                        */ DEADTRANS( L')'	,0xE6A5	,0xE6D2	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%parenright><%bracketleft>                          */ DEADTRANS( L'['	,0xE6D2	,0x27EF	,0x0000), // '[' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-/*<!M><~space><%parenright><%bracketright>                         */ DEADTRANS( L']'	,0xE6D2	,0x27EF	,0x0000), // ']' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
-/*<!M><~space><%parenright><%greater>                              */ DEADTRANS( L'>'	,0xE6D2	,0x2994	,0x0000), // '>' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
-/*<!M><~space><%parenright><%parenright>                           */ DEADTRANS( L')'	,0xE6D2	,0x2986	,0x0000), // ')' ➔ "⦆" U+2986 RIGHT WHITE PARENTHESIS
-/*<!M><~space><%period>                                            */ DEADTRANS( L'.'	,0xE6A5	,0xE6D3	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%period><a>                                         */ DEADTRANS( L'a'	,0xE6D3	,0x2A51	,0x0000), // 'a' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~space><%period><A>                                         */ DEADTRANS( L'A'	,0xE6D3	,0x2A51	,0x0000), // 'A' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~space><%period><b>                                         */ DEADTRANS( L'b'	,0xE6D3	,0x2AC4	,0x0000), // 'b' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~space><%period><c>                                         */ DEADTRANS( L'c'	,0xE6D3	,0xE6D4	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%period><c><%backslash>                             */ DEADTRANS( L'\\'	,0xE6D4	,0x2AC4	,0x0000), // '\' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~space><%period><c><%underscore>                            */ DEADTRANS( L'_'	,0xE6D4	,0x2AC3	,0x0000), // '_' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~space><%period><c><c>                                      */ DEADTRANS( L'c'	,0xE6D4	,0x2AC4	,0x0000), // 'c' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-/*<!M><~space><%period><e>                                         */ DEADTRANS( L'e'	,0xE6D3	,0x22F5	,0x0000), // 'e' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
-/*<!M><~space><%period><v>                                         */ DEADTRANS( L'v'	,0xE6D3	,0xE6D5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%period><V>                                         */ DEADTRANS( L'V'	,0xE6D3	,0xE6D6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%period><v><v>                                      */ DEADTRANS( L'v'	,0xE6D5	,0x2A51	,0x0000), // 'v' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~space><%period><V><V>                                      */ DEADTRANS( L'V'	,0xE6D6	,0x2A51	,0x0000), // 'V' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
-/*<!M><~space><%period><v><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D5	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~space><%period><V><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D6	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~space><%period><v><~space>                                 */ DEADTRANS( L' '	,0xE6D5	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~space><%period><V><~space>                                 */ DEADTRANS( L' '	,0xE6D6	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
-/*<!M><~space><%period><x>                                         */ DEADTRANS( L'x'	,0xE6D3	,0x2A30	,0x0000), // 'x' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
-/*<!M><~space><%period><X>                                         */ DEADTRANS( L'X'	,0xE6D3	,0x2A30	,0x0000), // 'X' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
-/*<!M><~space><%period><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6D3	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
-/*<!M><~space><%period><~space>                                    */ DEADTRANS( L' '	,0xE6D3	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
-/*<!M><~space><%plus>                                              */ DEADTRANS( L'+'	,0xE6A5	,0xE6D7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%plus><%apostrophe>                                 */ DEADTRANS( L'\''	,0xE6D7	,0x22B9	,0x0000), // ''' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~space><%plus><%aprightsingquotmark>                        */ DEADTRANS( 0x2019	,0xE6D7	,0x22B9	,0x0000), // '’' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
-/*<!M><~space><%plus><%circum>                                     */ DEADTRANS( L'^'	,0xE6D7	,0x2A28	,0x0000), // '^' ➔ "⨨" U+2A28 PLUS SIGN WITH BLACK TRIANGLE
-/*<!M><~space><%plus><%plus>                                       */ DEADTRANS( L'+'	,0xE6D7	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
-/*<!M><~space><%plus><2>                                           */ DEADTRANS( L'2'	,0xE6D7	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
-/*<!M><~space><%semicolon>                                         */ DEADTRANS( L';'	,0xE6A5	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~space><%semsection>                                        */ DEADTRANS( 0x00A7	,0xE6A5	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~space><%slash>                                             */ DEADTRANS( L'/'	,0xE6A5	,0xE6D8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%backslash>                                 */ DEADTRANS( L'\\'	,0xE6D8	,0xE6D9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%backslash><%bar>                           */ DEADTRANS( L'|'	,0xE6D9	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
-/*<!M><~space><%slash><%backslash><%hash>                          */ DEADTRANS( L'#'	,0xE6D9	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
-/*<!M><~space><%slash><%backslash><%underscore>                    */ DEADTRANS( L'_'	,0xE6D9	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
-/*<!M><~space><%slash><%hash>                                      */ DEADTRANS( L'#'	,0xE6D8	,0xE6DA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%hash><%underscore>                         */ DEADTRANS( L'_'	,0xE6DA	,0xE6DB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%hash><%underscore><%backslash>             */ DEADTRANS( L'\\'	,0xE6DB	,0x25B4	,0x0000), // '\' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
-/*<!M><~space><%slash><%slash>                                     */ DEADTRANS( L'/'	,0xE6D8	,0xE6DC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%slash><%slash>                             */ DEADTRANS( L'/'	,0xE6DC	,0x2AFB	,0x0000), // '/' ➔ "⫻" U+2AFB TRIPLE SOLIDUS BINARY RELATION
-/*<!M><~space><%slash><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6DC	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
-/*<!M><~space><%slash><%slash><~space>                             */ DEADTRANS( L' '	,0xE6DC	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
-/*<!M><~space><%slash><%underscore>                                */ DEADTRANS( L'_'	,0xE6D8	,0xE6DD	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%slash><%underscore><%backslash>                    */ DEADTRANS( L'\\'	,0xE6DD	,0x25B5	,0x0000), // '\' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
-/*<!M><~space><%slash><c>                                          */ DEADTRANS( L'c'	,0xE6D8	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
-/*<!M><~space><%slash><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6D8	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
-/*<!M><~space><%slash><~space>                                     */ DEADTRANS( L' '	,0xE6D8	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
-/*<!M><~space><%tilde>                                             */ DEADTRANS( L'~'	,0xE6A5	,0xE6DE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%tilde><%colon>                                     */ DEADTRANS( L':'	,0xE6DE	,0x223B	,0x0000), // ':' ➔ "∻" U+223B HOMOTHETIC
-/*<!M><~space><%tilde><%equal>                                     */ DEADTRANS( L'='	,0xE6DE	,0xE6DF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%tilde><%equal><%slash>                             */ DEADTRANS( L'/'	,0xE6DF	,0xE6E0	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%tilde><%equal><%slash><%slash>                     */ DEADTRANS( L'/'	,0xE6E0	,0x29E4	,0x0000), // '/' ➔ "⧤" U+29E4 EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-/*<!M><~space><%tilde><%equal><%slash><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE6E0	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-/*<!M><~space><%tilde><%equal><%slash><~space>                     */ DEADTRANS( L' '	,0xE6E0	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-/*<!M><~space><%tilde><%equal><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6DF	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
-/*<!M><~space><%tilde><%equal><~space>                             */ DEADTRANS( L' '	,0xE6DF	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
-/*<!M><~space><%tilde><%greater>                                   */ DEADTRANS( L'>'	,0xE6DE	,0x2A9E	,0x0000), // '>' ➔ "⪞" U+2A9E SIMILAR OR GREATER-THAN
-/*<!M><~space><%tilde><%minus>                                     */ DEADTRANS( L'-'	,0xE6DE	,0x2972	,0x0000), // '-' ➔ "⥲" U+2972 TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-/*<!M><~space><%tilde><%percent>                                   */ DEADTRANS( L'%'	,0xE6DE	,0x2240	,0x0000), // '%' ➔ "≀" U+2240 WREATH PRODUCT
-/*<!M><~space><%tilde><%slash>                                     */ DEADTRANS( L'/'	,0xE6DE	,0xE6E1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%tilde><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E1	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
-/*<!M><~space><%tilde><%slash><~space>                             */ DEADTRANS( L' '	,0xE6E1	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
-/*<!M><~space><%tilde><%tilde>                                     */ DEADTRANS( L'~'	,0xE6DE	,0xE6E2	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%tilde><%tilde><%equal>                             */ DEADTRANS( L'='	,0xE6E2	,0x2A70	,0x0000), // '=' ➔ "⩰" U+2A70 APPROXIMATELY EQUAL OR EQUAL TO
-/*<!M><~space><%tilde><%tilde><%tilde>                             */ DEADTRANS( L'~'	,0xE6E2	,0x224B	,0x0000), // '~' ➔ "≋" U+224B TRIPLE TILDE
-/*<!M><~space><%tilde><%tilde><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E2	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
-/*<!M><~space><%tilde><%tilde><~space>                             */ DEADTRANS( L' '	,0xE6E2	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
-/*<!M><~space><%tilde><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6DE	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
-/*<!M><~space><%tilde><~space>                                     */ DEADTRANS( L' '	,0xE6DE	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
-/*<!M><~space><%underscore>                                        */ DEADTRANS( L'_'	,0xE6A5	,0xE6E3	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><%backslash>                            */ DEADTRANS( L'\\'	,0xE6E3	,0x25BF	,0x0000), // '\' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><~space><%underscore><%hash>                                 */ DEADTRANS( L'#'	,0xE6E3	,0x25BE	,0x0000), // '#' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
-/*<!M><~space><%underscore><%minus>                                */ DEADTRANS( L'-'	,0xE6E3	,0xE6E4	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><%minus><%apostrophe>                   */ DEADTRANS( L'\''	,0xE6E4	,0x296D	,0x0000), // ''' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
-/*<!M><~space><%underscore><%minus><%aprightsingquotmark>          */ DEADTRANS( 0x2019	,0xE6E4	,0x296D	,0x0000), // '’' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
-/*<!M><~space><%underscore><%minus><%slash>                        */ DEADTRANS( L'/'	,0xE6E4	,0x29A4	,0x0000), // '/' ➔ "⦤" U+29A4 ANGLE WITH UNDERBAR
-/*<!M><~space><%underscore><%slash>                                */ DEADTRANS( L'/'	,0xE6E3	,0x25BF	,0x0000), // '/' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
-/*<!M><~space><%underscore><%underscore>                           */ DEADTRANS( L'_'	,0xE6E3	,0xE6E5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><%underscore><v>                        */ DEADTRANS( L'v'	,0xE6E5	,0xE6E6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><%underscore><V>                        */ DEADTRANS( L'V'	,0xE6E5	,0xE6E7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><%underscore><v><%percent>              */ DEADTRANS( L'%'	,0xE6E6	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><%underscore><V><%percent>              */ DEADTRANS( L'%'	,0xE6E7	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><%underscore><v><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6E6	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><%underscore><V><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6E7	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><%underscore><v><~space>                */ DEADTRANS( L' '	,0xE6E6	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><%underscore><V><~space>                */ DEADTRANS( L' '	,0xE6E7	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
-/*<!M><~space><%underscore><a>                                     */ DEADTRANS( L'a'	,0xE6E3	,0x22BC	,0x0000), // 'a' ➔ "⊼" U+22BC NAND
-/*<!M><~space><%underscore><e>                                     */ DEADTRANS( L'e'	,0xE6E3	,0xE6E8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><e><%backslash>                         */ DEADTRANS( L'\\'	,0xE6E8	,0xE6E9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><e><%backslash><%comma>                 */ DEADTRANS( L','	,0xE6E9	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><e><%backslash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE6E9	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><e><%backslash><~space>                 */ DEADTRANS( L' '	,0xE6E9	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><e><%comma>                             */ DEADTRANS( L','	,0xE6E8	,0x22F7	,0x0000), // ',' ➔ "⋷" U+22F7 SMALL ELEMENT OF WITH OVERBAR
-/*<!M><~space><%underscore><e><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E8	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
-/*<!M><~space><%underscore><e><~space>                             */ DEADTRANS( L' '	,0xE6E8	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
-/*<!M><~space><%underscore><n>                                     */ DEADTRANS( L'n'	,0xE6E3	,0x2A43	,0x0000), // 'n' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
-/*<!M><~space><%underscore><N>                                     */ DEADTRANS( L'N'	,0xE6E3	,0x2A43	,0x0000), // 'N' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
-/*<!M><~space><%underscore><p>                                     */ DEADTRANS( L'p'	,0xE6E3	,0xE6EA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><p><%comma>                             */ DEADTRANS( L','	,0xE6EA	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><p><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EA	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><p><~space>                             */ DEADTRANS( L' '	,0xE6EA	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
-/*<!M><~space><%underscore><u>                                     */ DEADTRANS( L'u'	,0xE6E3	,0xE6EB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><U>                                     */ DEADTRANS( L'U'	,0xE6E3	,0xE6EC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><u><%hash>                              */ DEADTRANS( L'#'	,0xE6EB	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-/*<!M><~space><%underscore><U><%hash>                              */ DEADTRANS( L'#'	,0xE6EC	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-/*<!M><~space><%underscore><u><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EB	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~space><%underscore><U><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EC	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~space><%underscore><u><~space>                             */ DEADTRANS( L' '	,0xE6EB	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~space><%underscore><U><~space>                             */ DEADTRANS( L' '	,0xE6EC	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
-/*<!M><~space><%underscore><v>                                     */ DEADTRANS( L'v'	,0xE6E3	,0xE6ED	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><v><v>                                  */ DEADTRANS( L'v'	,0xE6ED	,0x22BC	,0x0000), // 'v' ➔ "⊼" U+22BC NAND
-/*<!M><~space><%underscore><v><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6ED	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
-/*<!M><~space><%underscore><v><~space>                             */ DEADTRANS( L' '	,0xE6ED	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
-/*<!M><~space><%underscore><X>                                     */ DEADTRANS( L'X'	,0xE6E3	,0xE6EE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><x>                                     */ DEADTRANS( L'x'	,0xE6E3	,0xE6EF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><%underscore><X><%hash>                              */ DEADTRANS( L'#'	,0xE6EE	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><~space><%underscore><x><%hash>                              */ DEADTRANS( L'#'	,0xE6EF	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
-/*<!M><~space><%underscore><X><%underscore>                        */ DEADTRANS( L'_'	,0xE6EE	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
-/*<!M><~space><%underscore><x><%underscore>                        */ DEADTRANS( L'_'	,0xE6EF	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
-/*<!M><~space><2>                                                  */ DEADTRANS( L'2'	,0xE6A5	,0xE6F0	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><2><%less>                                           */ DEADTRANS( L'<'	,0xE6F0	,0x2AA3	,0x0000), // '<' ➔ "⪣" U+2AA3 DOUBLE NESTED LESS-THAN WITH UNDERBAR
-/*<!M><~space><2><%minus>                                          */ DEADTRANS( L'-'	,0xE6F0	,0x21C9	,0x0000), // '-' ➔ "⇉" U+21C9 RIGHTWARDS PAIRED ARROWS
-/*<!M><~space><2><V>                                               */ DEADTRANS( L'V'	,0xE6F0	,0x2A54	,0x0000), // 'V' ➔ "⩔" U+2A54 DOUBLE LOGICAL OR
-/*<!M><~space><3>                                                  */ DEADTRANS( L'3'	,0xE6A5	,0xE6F1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><3><%bar>                                            */ DEADTRANS( L'|'	,0xE6F1	,0x2AF4	,0x0000), // '|' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
-/*<!M><~space><3><%minus>                                          */ DEADTRANS( L'-'	,0xE6F1	,0x21F6	,0x0000), // '-' ➔ "⇶" U+21F6 THREE RIGHTWARDS ARROWS
-/*<!M><~space><8>                                                  */ DEADTRANS( L'8'	,0xE6A5	,0x221D	,0x0000), // '8' ➔ "∝" U+221D PROPORTIONAL TO
-/*<!M><~space><A>                                                  */ DEADTRANS( L'A'	,0xE6A5	,0xE6F2	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><a>                                                  */ DEADTRANS( L'a'	,0xE6A5	,0xE6F3	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><A><%minus>                                          */ DEADTRANS( L'-'	,0xE6F2	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
-/*<!M><~space><a><%minus>                                          */ DEADTRANS( L'-'	,0xE6F3	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
-/*<!M><~space><A><%underscore>                                     */ DEADTRANS( L'_'	,0xE6F2	,0xE6F4	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><A><%underscore><%underscore>                        */ DEADTRANS( L'_'	,0xE6F4	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
-/*<!M><~space><A><%underscore><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6F4	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><~space><A><%underscore><~space>                             */ DEADTRANS( L' '	,0xE6F4	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!M><~space><A><A>                                               */ DEADTRANS( L'A'	,0xE6F2	,0x2A07	,0x0000), // 'A' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
-/*<!M><~space><a><a>                                               */ DEADTRANS( L'a'	,0xE6F3	,0x2A55	,0x0000), // 'a' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
-/*<!M><~space><A><V>                                               */ DEADTRANS( L'V'	,0xE6F2	,0x25CA	,0x0000), // 'V' ➔ "◊" U+25CA LOZENGE
-/*<!M><~space><a><v>                                               */ DEADTRANS( L'v'	,0xE6F3	,0x25CA	,0x0000), // 'v' ➔ "◊" U+25CA LOZENGE
-/*<!M><~space><A><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F2	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><~space><A><~space>                                          */ DEADTRANS( L' '	,0xE6F2	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
-/*<!M><~space><b>                                                  */ DEADTRANS( L'b'	,0xE6A5	,0xE6F5	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><B>                                                  */ DEADTRANS( L'B'	,0xE6A5	,0xE6F6	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><b><%slash>                                          */ DEADTRANS( L'/'	,0xE6F5	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~space><b><c>                                               */ DEADTRANS( L'c'	,0xE6F5	,0x2AD7	,0x0000), // 'c' ➔ "⫗" U+2AD7 SUPERSET BESIDE SUBSET
-/*<!M><~space><b><o>                                               */ DEADTRANS( L'o'	,0xE6F5	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~space><b><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F5	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~space><B><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F6	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~space><b><~space>                                          */ DEADTRANS( L' '	,0xE6F5	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~space><B><~space>                                          */ DEADTRANS( L' '	,0xE6F6	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
-/*<!M><~space><c>                                                  */ DEADTRANS( L'c'	,0xE6A5	,0xE6F7	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><c><%backslash>                                      */ DEADTRANS( L'\\'	,0xE6F7	,0xE6F8	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><c><%backslash><%slash>                              */ DEADTRANS( L'/'	,0xE6F8	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~space><c><%backslash><o>                                   */ DEADTRANS( L'o'	,0xE6F8	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~space><c><c>                                               */ DEADTRANS( L'c'	,0xE6F7	,0xE6F9	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><c><c><%slash>                                       */ DEADTRANS( L'/'	,0xE6F9	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
-/*<!M><~space><c><c><o>                                            */ DEADTRANS( L'o'	,0xE6F9	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
-/*<!M><~space><c><c><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6F9	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
-/*<!M><~space><c><c><~space>                                       */ DEADTRANS( L' '	,0xE6F9	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
-/*<!M><~space><c><o>                                               */ DEADTRANS( L'o'	,0xE6F7	,0x27C3	,0x0000), // 'o' ➔ "⟃" U+27C3 OPEN SUBSET
-/*<!M><~space><D>                                                  */ DEADTRANS( L'D'	,0xE6A5	,0x2AD0	,0x0000), // 'D' ➔ "⫐" U+2AD0 CLOSED SUPERSET
-/*<!M><~space><e>                                                  */ DEADTRANS( L'e'	,0xE6A5	,0xE6FA	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><e><e>                                               */ DEADTRANS( L'e'	,0xE6FA	,0xE6FB	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><e><e><%bar>                                         */ DEADTRANS( L'|'	,0xE6FB	,0xE6FC	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><e><e><%bar><%comma>                                 */ DEADTRANS( L','	,0xE6FC	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><e><e><%bar><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6FC	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><e><e><%bar><~space>                                 */ DEADTRANS( L' '	,0xE6FC	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
-/*<!M><~space><e><e><%comma>                                       */ DEADTRANS( L','	,0xE6FB	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
-/*<!M><~space><e><e><%slash>                                       */ DEADTRANS( L'/'	,0xE6FB	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
-/*<!M><~space><e><e><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6FB	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><~space><e><e><~space>                                       */ DEADTRANS( L' '	,0xE6FB	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
-/*<!M><~space><G>                                                  */ DEADTRANS( L'G'	,0xE6A5	,0x27F2	,0x0000), // 'G' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><~space><g>                                                  */ DEADTRANS( L'g'	,0xE6A5	,0x27F2	,0x0000), // 'g' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
-/*<!M><~space><h>                                                  */ DEADTRANS( L'h'	,0xE6A5	,0x266E	,0x0000), // 'h' ➔ "♮" U+266E MUSIC NATURAL SIGN
-/*<!M><~space><H>                                                  */ DEADTRANS( L'H'	,0xE6A5	,0x266E	,0x0000), // 'H' ➔ "♮" U+266E MUSIC NATURAL SIGN
-/*<!M><~space><I>                                                  */ DEADTRANS( L'I'	,0xE6A5	,0x2AE0	,0x0000), // 'I' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~space><K>                                                  */ DEADTRANS( L'K'	,0xE6A5	,0x212A	,0x0000), // 'K' ➔ "K" U+212A KELVIN SIGN
-/*<!M><~space><k>                                                  */ DEADTRANS( L'k'	,0xE6A5	,0x212A	,0x0000), // 'k' ➔ "K" U+212A KELVIN SIGN
-/*<!M><~space><n>                                                  */ DEADTRANS( L'n'	,0xE6A5	,0xE6FD	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><n><%bar>                                            */ DEADTRANS( L'|'	,0xE6FD	,0x2ADB	,0x0000), // '|' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
-/*<!M><~space><o>                                                  */ DEADTRANS( L'o'	,0xE6A5	,0xE6FE	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><O>                                                  */ DEADTRANS( L'O'	,0xE6A5	,0xE6FF	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><O><%backslash>                                      */ DEADTRANS( L'\\'	,0xE6FF	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
-/*<!M><~space><o><%backslash>                                      */ DEADTRANS( L'\\'	,0xE6FE	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
-/*<!M><~space><o><%equal>                                          */ DEADTRANS( L'='	,0xE6FE	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
-/*<!M><~space><O><%equal>                                          */ DEADTRANS( L'='	,0xE6FF	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
-/*<!M><~space><o><%greater>                                        */ DEADTRANS( L'>'	,0xE6FE	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
-/*<!M><~space><o><%minus>                                          */ DEADTRANS( L'-'	,0xE6FE	,0xE700	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><O><%minus>                                          */ DEADTRANS( L'-'	,0xE6FF	,0xE701	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><o><%minus><%greater>                                */ DEADTRANS( L'>'	,0xE700	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
-/*<!M><~space><O><%minus><%greater>                                */ DEADTRANS( L'>'	,0xE701	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
-/*<!M><~space><o><%minus><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE700	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~space><O><%minus><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE701	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~space><o><%minus><~space>                                  */ DEADTRANS( L' '	,0xE700	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~space><O><%minus><~space>                                  */ DEADTRANS( L' '	,0xE701	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
-/*<!M><~space><O><%percent>                                        */ DEADTRANS( L'%'	,0xE6FF	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><~space><o><%percent>                                        */ DEADTRANS( L'%'	,0xE6FE	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
-/*<!M><~space><O><%period>                                         */ DEADTRANS( L'.'	,0xE6FF	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
-/*<!M><~space><o><%period>                                         */ DEADTRANS( L'.'	,0xE6FE	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
-/*<!M><~space><o><%plus>                                           */ DEADTRANS( L'+'	,0xE6FE	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
-/*<!M><~space><o><%semicolon>                                      */ DEADTRANS( L';'	,0xE6FE	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><o><%semsection>                                     */ DEADTRANS( 0x00A7	,0xE6FE	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><o><%slash>                                          */ DEADTRANS( L'/'	,0xE6FE	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
-/*<!M><~space><o><8>                                               */ DEADTRANS( L'8'	,0xE6FE	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
-/*<!M><~space><O><8>                                               */ DEADTRANS( L'8'	,0xE6FF	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
-/*<!M><~space><O><o>                                               */ DEADTRANS( L'o'	,0xE6FF	,0x29BE	,0x0000), // 'o' ➔ "⦾" U+29BE CIRCLED WHITE BULLET
-/*<!M><~space><R>                                                  */ DEADTRANS( L'R'	,0xE6A5	,0xE702	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><r>                                                  */ DEADTRANS( L'r'	,0xE6A5	,0xE703	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><R><%slash>                                          */ DEADTRANS( L'/'	,0xE702	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><~space><r><%slash>                                          */ DEADTRANS( L'/'	,0xE703	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
-/*<!M><~space><S>                                                  */ DEADTRANS( L'S'	,0xE6A5	,0xE704	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><s>                                                  */ DEADTRANS( L's'	,0xE6A5	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
-/*<!M><~space><S><S>                                               */ DEADTRANS( L'S'	,0xE704	,0xE705	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><S><s>                                               */ DEADTRANS( L's'	,0xE704	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
-/*<!M><~space><S><S><%at>                                          */ DEADTRANS( L'@'	,0xE705	,0x2140	,0x0000), // '@' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~space><S><S><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE705	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~space><S><S><~space>                                       */ DEADTRANS( L' '	,0xE705	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
-/*<!M><~space><T>                                                  */ DEADTRANS( L'T'	,0xE6A5	,0xE706	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><T><%percent>                                        */ DEADTRANS( L'%'	,0xE706	,0x2AE0	,0x0000), // '%' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~space><T><T>                                               */ DEADTRANS( L'T'	,0xE706	,0x2AE0	,0x0000), // 'T' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><~space><T><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE706	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~space><T><~space>                                          */ DEADTRANS( L' '	,0xE706	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
-/*<!M><~space><V>                                                  */ DEADTRANS( L'V'	,0xE6A5	,0xE707	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><v>                                                  */ DEADTRANS( L'v'	,0xE6A5	,0x2A56	,0x0000), // 'v' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
-/*<!M><~space><V><V>                                               */ DEADTRANS( L'V'	,0xE707	,0x2A08	,0x0000), // 'V' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
-/*<!M><~space><x>                                                  */ DEADTRANS( L'x'	,0xE6A5	,0x2A2F	,0x0000), // 'x' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
-/*<!M><~space><X>                                                  */ DEADTRANS( L'X'	,0xE6A5	,0x2A2F	,0x0000), // 'X' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
-/*<!M><~space><Y>                                                  */ DEADTRANS( L'Y'	,0xE6A5	,0xE708	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><y>                                                  */ DEADTRANS( L'y'	,0xE6A5	,0xE709	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><Y><%minus>                                          */ DEADTRANS( L'-'	,0xE708	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><~space><y><%minus>                                          */ DEADTRANS( L'-'	,0xE709	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
-/*<!M><~space><z>                                                  */ DEADTRANS( L'z'	,0xE6A5	,0x2A1F	,0x0000), // 'z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><Z>                                                  */ DEADTRANS( L'Z'	,0xE6A5	,0x2A1F	,0x0000), // 'Z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><~nbspace>                                           */ DEADTRANS( 0x00A0	,0xE6A5	,0x237D	,0x0000), // ' ' ➔ "⍽" U+237D SHOULDERED OPEN BOX
-/*<!M><~space><~space>                                             */ DEADTRANS( L' '	,0xE6A5	,0xE70A	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%asterisk>                                  */ DEADTRANS( L'*'	,0xE70A	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
-/*<!M><~space><~space><%backslash>                                 */ DEADTRANS( L'\\'	,0xE70A	,0xE70B	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%backslash><%slash>                         */ DEADTRANS( L'/'	,0xE70B	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~space><~space><%backslash><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE70B	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~space><~space><%backslash><~space>                         */ DEADTRANS( L' '	,0xE70B	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!M><~space><~space><%bar>                                       */ DEADTRANS( L'|'	,0xE70A	,0xE70C	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE70C	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~space><~space><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE70C	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~space><~space><%bar><~space>                               */ DEADTRANS( L' '	,0xE70C	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
-/*<!M><~space><~space><%bracketleft>                               */ DEADTRANS( L'['	,0xE70A	,0xE70D	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%bracketleft><%bracketright>                */ DEADTRANS( L']'	,0xE70D	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~space><~space><%bracketleft><%hash>                        */ DEADTRANS( L'#'	,0xE70D	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
-/*<!M><~space><~space><%bracketright>                              */ DEADTRANS( L']'	,0xE70A	,0xE70E	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%bracketright><%bracketleft>                */ DEADTRANS( L'['	,0xE70E	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
-/*<!M><~space><~space><%colon>                                     */ DEADTRANS( L':'	,0xE70A	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
-/*<!M><~space><~space><%equal>                                     */ DEADTRANS( L'='	,0xE70A	,0xE70F	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%equal><%equal>                             */ DEADTRANS( L'='	,0xE70F	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
-/*<!M><~space><~space><%greater>                                   */ DEADTRANS( L'>'	,0xE70A	,0xE710	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%greater><%less>                            */ DEADTRANS( L'<'	,0xE710	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
-/*<!M><~space><~space><%greater><%minus>                           */ DEADTRANS( L'-'	,0xE710	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
-/*<!M><~space><~space><%hash>                                      */ DEADTRANS( L'#'	,0xE70A	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
-/*<!M><~space><~space><%less>                                      */ DEADTRANS( L'<'	,0xE70A	,0xE711	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%less><%greater>                            */ DEADTRANS( L'>'	,0xE711	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
-/*<!M><~space><~space><%less><o>                                   */ DEADTRANS( L'o'	,0xE711	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
-/*<!M><~space><~space><%minus>                                     */ DEADTRANS( L'-'	,0xE70A	,0xE712	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%minus><%apostrophe>                        */ DEADTRANS( L'\''	,0xE712	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~space><~space><%minus><%aprightsingquotmark>               */ DEADTRANS( 0x2019	,0xE712	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~space><~space><%minus><%slash>                             */ DEADTRANS( L'/'	,0xE712	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
-/*<!M><~space><~space><%period>                                    */ DEADTRANS( L'.'	,0xE70A	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
-/*<!M><~space><~space><%semicolon>                                 */ DEADTRANS( L';'	,0xE70A	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><~space><%semsection>                                */ DEADTRANS( 0x00A7	,0xE70A	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><~space><%slash>                                     */ DEADTRANS( L'/'	,0xE70A	,0xE713	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%slash><%backslash>                         */ DEADTRANS( L'\\'	,0xE713	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
-/*<!M><~space><~space><%slash><%minus>                             */ DEADTRANS( L'-'	,0xE713	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
-/*<!M><~space><~space><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE713	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~space><~space><%slash><~space>                             */ DEADTRANS( L' '	,0xE713	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!M><~space><~space><%underscore>                                */ DEADTRANS( L'_'	,0xE70A	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
-/*<!M><~space><~space><3>                                          */ DEADTRANS( L'3'	,0xE70A	,0xE714	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><3><%bar>                                    */ DEADTRANS( L'|'	,0xE714	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
-/*<!M><~space><~space><8>                                          */ DEADTRANS( L'8'	,0xE70A	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
-/*<!M><~space><~space><A>                                          */ DEADTRANS( L'A'	,0xE70A	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
-/*<!M><~space><~space><I>                                          */ DEADTRANS( L'I'	,0xE70A	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~space><~space><i>                                          */ DEADTRANS( L'i'	,0xE70A	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~space><~space><o>                                          */ DEADTRANS( L'o'	,0xE70A	,0xE715	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><O>                                          */ DEADTRANS( L'O'	,0xE70A	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
-/*<!M><~space><~space><o><%minus>                                  */ DEADTRANS( L'-'	,0xE715	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
-/*<!M><~space><~space><o><%plus>                                   */ DEADTRANS( L'+'	,0xE715	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
-/*<!M><~space><~space><T>                                          */ DEADTRANS( L'T'	,0xE70A	,0xE716	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><T><%backslash>                              */ DEADTRANS( L'\\'	,0xE716	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~space><~space><T><%percent>                                */ DEADTRANS( L'%'	,0xE716	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~space><~space><T><T>                                       */ DEADTRANS( L'T'	,0xE716	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
-/*<!M><~space><~space><T><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE716	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~space><~space><T><~space>                                  */ DEADTRANS( L' '	,0xE716	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
-/*<!M><~space><~space><x>                                          */ DEADTRANS( L'x'	,0xE70A	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
-/*<!M><~space><~space><~space>                                     */ DEADTRANS( L' '	,0xE70A	,0xE717	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><~space><%asterisk>                          */ DEADTRANS( L'*'	,0xE717	,0xE718	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><~space><%asterisk><%hash>                   */ DEADTRANS( L'#'	,0xE718	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
-/*<!M><~space><~space><~space><%asterisk><~nbspace>                */ DEADTRANS( 0x00A0	,0xE718	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~space><~space><~space><%asterisk><~space>                  */ DEADTRANS( L' '	,0xE718	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
-/*<!M><~space><~space><~space><%backslash>                         */ DEADTRANS( L'\\'	,0xE717	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
-/*<!M><~space><~space><~space><%bar>                               */ DEADTRANS( L'|'	,0xE717	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!M><~space><~space><~space><%less>                              */ DEADTRANS( L'<'	,0xE717	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
-/*<!M><~space><~space><~space><%slash>                             */ DEADTRANS( L'/'	,0xE717	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
-/*<!M><~space><~space><~space><o>                                  */ DEADTRANS( L'o'	,0xE717	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
-/*<!M><~space><~space><~space><~space>                             */ DEADTRANS( L' '	,0xE717	,0xE719	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><~space><~space><%backslash>                 */ DEADTRANS( L'\\'	,0xE719	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
-/*<!M><~space><~space><~space><~space><%slash>                     */ DEADTRANS( L'/'	,0xE719	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><eacute>                                                     */ DEADTRANS( 0x00E9	,0x00A6	,0xE49A	,0x0001), // Intermediate multikey chain link
+/*<!M><Eacute>                                                     */ DEADTRANS( 0x00C9	,0x00A6	,0xE49B	,0x0001), // Intermediate multikey chain link
+/*<!M><eacute><a>                                                  */ DEADTRANS( L'a'	,0xE49A	,0x2606	,0x0000), // 'a' ➔ "☆" U+2606 WHITE STAR
+/*<!M><Eacute><a>                                                  */ DEADTRANS( L'a'	,0xE49B	,0x2606	,0x0000), // 'a' ➔ "☆" U+2606 WHITE STAR
+/*<!M><f>                                                          */ DEADTRANS( L'f'	,0x00A6	,0xE49C	,0x0001), // Intermediate multikey chain link
+/*<!M><F>                                                          */ DEADTRANS( L'F'	,0x00A6	,0xE49D	,0x0001), // Intermediate multikey chain link
+/*<!M><f><%at>                                                     */ DEADTRANS( L'@'	,0xE49C	,0x03D5	,0x0000), // '@' ➔ "ϕ" U+03D5 GREEK PHI SYMBOL
+/*<!M><f><%greater>                                                */ DEADTRANS( L'>'	,0xE49C	,0x202D	,0x0000), // '>' ➔ "‭" U+202D LEFT-TO-RIGHT OVERRIDE
+/*<!M><f><%hash>                                                   */ DEADTRANS( L'#'	,0xE49C	,0x266D	,0x0000), // '#' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><f><%less>                                                   */ DEADTRANS( L'<'	,0xE49C	,0x202E	,0x0000), // '<' ➔ "‮" U+202E RIGHT-TO-LEFT OVERRIDE
+/*<!M><f><%slash>                                                  */ DEADTRANS( L'/'	,0xE49C	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><F><%slash>                                                  */ DEADTRANS( L'/'	,0xE49D	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><F><%tilde>                                                  */ DEADTRANS( L'~'	,0xE49D	,0x2131	,0x0000), // '~' ➔ "ℱ" U+2131 SCRIPT CAPITAL F
+/*<!M><f><a>                                                       */ DEADTRANS( L'a'	,0xE49C	,0x213B	,0x0000), // 'a' ➔ "℻" U+213B FACSIMILE SIGN
+/*<!M><F><a>                                                       */ DEADTRANS( L'a'	,0xE49D	,0x213B	,0x0000), // 'a' ➔ "℻" U+213B FACSIMILE SIGN
+/*<!M><F><A>                                                       */ DEADTRANS( L'A'	,0xE49D	,0x213B	,0x0000), // 'A' ➔ "℻" U+213B FACSIMILE SIGN
+/*<!M><f><e>                                                       */ DEADTRANS( L'e'	,0xE49C	,0xE49E	,0x0001), // Intermediate multikey chain link
+/*<!M><f><e><n>                                                    */ DEADTRANS( L'n'	,0xE49E	,0xE49F	,0x0001), // Intermediate multikey chain link
+/*<!M><f><e><n><g>                                                 */ DEADTRANS( L'g'	,0xE49F	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
+/*<!M><F><F>                                                       */ DEADTRANS( L'F'	,0xE49D	,0x20A3	,0x0000), // 'F' ➔ "₣" U+20A3 FRENCH FRANC SIGN
+/*<!M><F><f>                                                       */ DEADTRANS( L'f'	,0xE49D	,0x20A3	,0x0000), // 'f' ➔ "₣" U+20A3 FRENCH FRANC SIGN
+/*<!M><f><f>                                                       */ DEADTRANS( L'f'	,0xE49C	,0x20A3	,0x0000), // 'f' ➔ "₣" U+20A3 FRENCH FRANC SIGN
+/*<!M><f><g>                                                       */ DEADTRANS( L'g'	,0xE49C	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
+/*<!M><f><i>                                                       */ DEADTRANS( L'i'	,0xE49C	,0x21F2	,0x0000), // 'i' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
+/*<!M><F><I>                                                       */ DEADTRANS( L'I'	,0xE49D	,0x21F2	,0x0000), // 'I' ➔ "⇲" U+21F2 SOUTH EAST ARROW TO CORNER
+/*<!M><f><l>                                                       */ DEADTRANS( L'l'	,0xE49C	,0xE4A0	,0x0001), // Intermediate multikey chain link
+/*<!M><F><L>                                                       */ DEADTRANS( L'L'	,0xE49D	,0xE4A1	,0x0001), // Intermediate multikey chain link
+/*<!M><f><l><i>                                                    */ DEADTRANS( L'i'	,0xE4A0	,0x261A	,0x0000), // 'i' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+/*<!M><F><L><I>                                                    */ DEADTRANS( L'I'	,0xE4A1	,0x261A	,0x0000), // 'I' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+/*<!M><f><l><p>                                                    */ DEADTRANS( L'p'	,0xE4A0	,0x204C	,0x0000), // 'p' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
+/*<!M><F><L><P>                                                    */ DEADTRANS( L'P'	,0xE4A1	,0x204C	,0x0000), // 'P' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
+/*<!M><f><l><t>                                                    */ DEADTRANS( L't'	,0xE4A0	,0x25C2	,0x0000), // 't' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
+/*<!M><F><L><T>                                                    */ DEADTRANS( L'T'	,0xE4A1	,0x25C2	,0x0000), // 'T' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
+/*<!M><f><n>                                                       */ DEADTRANS( L'n'	,0xE49C	,0xE4A2	,0x0001), // Intermediate multikey chain link
+/*<!M><f><n><g>                                                    */ DEADTRANS( L'g'	,0xE4A2	,0x02A9	,0x0000), // 'g' ➔ "ʩ" U+02A9 LATIN SMALL LETTER FENG DIGRAPH
+/*<!M><f><r>                                                       */ DEADTRANS( L'r'	,0xE49C	,0xE4A3	,0x0001), // Intermediate multikey chain link
+/*<!M><F><R>                                                       */ DEADTRANS( L'R'	,0xE49D	,0xE4A4	,0x0001), // Intermediate multikey chain link
+/*<!M><f><r><b>                                                    */ DEADTRANS( L'b'	,0xE4A3	,0x220E	,0x0000), // 'b' ➔ "∎" U+220E END OF PROOF
+/*<!M><F><R><B>                                                    */ DEADTRANS( L'B'	,0xE4A4	,0x220E	,0x0000), // 'B' ➔ "∎" U+220E END OF PROOF
+/*<!M><f><r><i>                                                    */ DEADTRANS( L'i'	,0xE4A3	,0x261B	,0x0000), // 'i' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+/*<!M><F><R><I>                                                    */ DEADTRANS( L'I'	,0xE4A4	,0x261B	,0x0000), // 'I' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+/*<!M><f><r><p>                                                    */ DEADTRANS( L'p'	,0xE4A3	,0x204D	,0x0000), // 'p' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
+/*<!M><F><R><P>                                                    */ DEADTRANS( L'P'	,0xE4A4	,0x204D	,0x0000), // 'P' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
+/*<!M><f><r><t>                                                    */ DEADTRANS( L't'	,0xE4A3	,0x2023	,0x0000), // 't' ➔ "‣" U+2023 TRIANGULAR BULLET
+/*<!M><F><R><T>                                                    */ DEADTRANS( L'T'	,0xE4A4	,0x2023	,0x0000), // 'T' ➔ "‣" U+2023 TRIANGULAR BULLET
+/*<!M><f><s>                                                       */ DEADTRANS( L's'	,0xE49C	,0x017F	,0x0000), // 's' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
+/*<!M><f><t>                                                       */ DEADTRANS( L't'	,0xE49C	,0xE4A5	,0x0001), // Intermediate multikey chain link
+/*<!M><F><T>                                                       */ DEADTRANS( L'T'	,0xE49D	,0xE4A6	,0x0001), // Intermediate multikey chain link
+/*<!M><f><t><d>                                                    */ DEADTRANS( L'd'	,0xE4A5	,0x25BE	,0x0000), // 'd' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><F><T><D>                                                    */ DEADTRANS( L'D'	,0xE4A6	,0x25BE	,0x0000), // 'D' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><f><t><u>                                                    */ DEADTRANS( L'u'	,0xE4A5	,0x25B4	,0x0000), // 'u' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><F><T><U>                                                    */ DEADTRANS( L'U'	,0xE4A6	,0x25B4	,0x0000), // 'U' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><g>                                                          */ DEADTRANS( L'g'	,0x00A6	,0xE4A7	,0x0001), // Intermediate multikey chain link
+/*<!M><G>                                                          */ DEADTRANS( L'G'	,0x00A6	,0xE4A8	,0x0001), // Intermediate multikey chain link
+/*<!M><g><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4A7	,0x2137	,0x0000), // '\' ➔ "ℷ" U+2137 GIMEL SYMBOL
+/*<!M><G><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4A8	,0x2137	,0x0000), // '\' ➔ "ℷ" U+2137 GIMEL SYMBOL
+/*<!M><g><%bar>                                                    */ DEADTRANS( L'|'	,0xE4A7	,0x20B2	,0x0000), // '|' ➔ "₲" U+20B2 GUARANI SIGN
+/*<!M><G><%bar>                                                    */ DEADTRANS( L'|'	,0xE4A8	,0x20B2	,0x0000), // '|' ➔ "₲" U+20B2 GUARANI SIGN
+/*<!M><G><%percent>                                                */ DEADTRANS( L'%'	,0xE4A8	,0x2141	,0x0000), // '%' ➔ "⅁" U+2141 TURNED SANS-SERIF CAPITAL G
+/*<!M><G><%slash>                                                  */ DEADTRANS( L'/'	,0xE4A8	,0x20B2	,0x0000), // '/' ➔ "₲" U+20B2 GUARANI SIGN
+/*<!M><g><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4A7	,0x210A	,0x0000), // '~' ➔ "ℊ" U+210A SCRIPT SMALL G
+/*<!M><g><e>                                                       */ DEADTRANS( L'e'	,0xE4A7	,0xE4A9	,0x0001), // Intermediate multikey chain link
+/*<!M><G><E>                                                       */ DEADTRANS( L'E'	,0xE4A8	,0xE4AA	,0x0001), // Intermediate multikey chain link
+/*<!M><g><e><l>                                                    */ DEADTRANS( L'l'	,0xE4A9	,0x20BE	,0x0000), // 'l' ➔ "₾" U+20BE LARI SIGN, Lari GEORGIA
+/*<!M><G><E><L>                                                    */ DEADTRANS( L'L'	,0xE4AA	,0x20BE	,0x0000), // 'L' ➔ "₾" U+20BE LARI SIGN, Lari GEORGIA
+/*<!M><g><e><m>                                                    */ DEADTRANS( L'm'	,0xE4A9	,0xE4AB	,0x0001), // Intermediate multikey chain link
+/*<!M><G><E><M>                                                    */ DEADTRANS( L'M'	,0xE4AA	,0xE4AC	,0x0001), // Intermediate multikey chain link
+/*<!M><g><e><m><e>                                                 */ DEADTRANS( L'e'	,0xE4AB	,0x264A	,0x0000), // 'e' ➔ "♊" U+264A GEMINI emoji
+/*<!M><G><E><M><E>                                                 */ DEADTRANS( L'E'	,0xE4AC	,0x264A	,0x0000), // 'E' ➔ "♊" U+264A GEMINI emoji
+/*<!M><g><e><m><i>                                                 */ DEADTRANS( L'i'	,0xE4AB	,0x264A	,0x0000), // 'i' ➔ "♊" U+264A GEMINI emoji
+/*<!M><G><E><M><I>                                                 */ DEADTRANS( L'I'	,0xE4AC	,0x264A	,0x0000), // 'I' ➔ "♊" U+264A GEMINI emoji
+/*<!M><g><e><n>                                                    */ DEADTRANS( L'n'	,0xE4A9	,0x267A	,0x0000), // 'n' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
+/*<!M><G><E><N>                                                    */ DEADTRANS( L'N'	,0xE4AA	,0x267A	,0x0000), // 'N' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
+/*<!M><g><eacute>                                                  */ DEADTRANS( 0x00E9	,0xE4A7	,0xE4AD	,0x0001), // Intermediate multikey chain link
+/*<!M><G><Eacute>                                                  */ DEADTRANS( 0x00C9	,0xE4A8	,0xE4AE	,0x0001), // Intermediate multikey chain link
+/*<!M><g><eacute><m>                                               */ DEADTRANS( L'm'	,0xE4AD	,0xE4AF	,0x0001), // Intermediate multikey chain link
+/*<!M><G><Eacute><M>                                               */ DEADTRANS( L'M'	,0xE4AE	,0xE4B0	,0x0001), // Intermediate multikey chain link
+/*<!M><g><eacute><m><e>                                            */ DEADTRANS( L'e'	,0xE4AF	,0x264A	,0x0000), // 'e' ➔ "♊" U+264A GEMINI emoji
+/*<!M><G><Eacute><M><E>                                            */ DEADTRANS( L'E'	,0xE4B0	,0x264A	,0x0000), // 'E' ➔ "♊" U+264A GEMINI emoji
+/*<!M><g><g>                                                       */ DEADTRANS( L'g'	,0xE4A7	,0xE4B1	,0x0001), // Intermediate multikey chain link
+/*<!M><G><G>                                                       */ DEADTRANS( L'G'	,0xE4A8	,0xE4B2	,0x0001), // Intermediate multikey chain link
+/*<!M><g><g><%at>                                                  */ DEADTRANS( L'@'	,0xE4B1	,0x213D	,0x0000), // '@' ➔ "ℽ" U+213D DOUBLE-STRUCK SMALL GAMMA
+/*<!M><G><G><%at>                                                  */ DEADTRANS( L'@'	,0xE4B2	,0x213E	,0x0000), // '@' ➔ "ℾ" U+213E DOUBLE-STRUCK CAPITAL GAMMA
+/*<!M><G><H>                                                       */ DEADTRANS( L'H'	,0xE4A8	,0xE4B3	,0x0001), // Intermediate multikey chain link
+/*<!M><g><h>                                                       */ DEADTRANS( L'h'	,0xE4A7	,0xE4B4	,0x0001), // Intermediate multikey chain link
+/*<!M><G><h>                                                       */ DEADTRANS( L'h'	,0xE4A8	,0x01A2	,0x0000), // 'h' ➔ "Ƣ" U+01A2 LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
+/*<!M><g><h><s>                                                    */ DEADTRANS( L's'	,0xE4B4	,0x20B5	,0x0000), // 's' ➔ "₵" U+20B5 CEDI SIGN, Ghana Cedi GHANA
+/*<!M><G><H><S>                                                    */ DEADTRANS( L'S'	,0xE4B3	,0x20B5	,0x0000), // 'S' ➔ "₵" U+20B5 CEDI SIGN, Ghana Cedi GHANA
+/*<!M><G><H><~space>                                               */ DEADTRANS( L' '	,0xE4B3	,0x01A2	,0x0000), // ' ' ➔ "Ƣ" U+01A2 LATIN CAPITAL LETTER OI, LATIN CAPITAL LETTER GHA
+/*<!M><g><h><~space>                                               */ DEADTRANS( L' '	,0xE4B4	,0x01A3	,0x0000), // ' ' ➔ "ƣ" U+01A3 LATIN SMALL LETTER OI, LATIN SMALL LETTER GHA
+/*<!M><G><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4A8	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><g><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4A7	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><G><~space>                                                  */ DEADTRANS( L' '	,0xE4A8	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><g><~space>                                                  */ DEADTRANS( L' '	,0xE4A7	,0x27F3	,0x0000), // ' ' ➔ "⟳" U+27F3 CLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><h>                                                          */ DEADTRANS( L'h'	,0x00A6	,0xE4B5	,0x0001), // Intermediate multikey chain link
+/*<!M><H>                                                          */ DEADTRANS( L'H'	,0x00A6	,0xE4B6	,0x0001), // Intermediate multikey chain link
+/*<!M><H><%hash>                                                   */ DEADTRANS( L'#'	,0xE4B6	,0x210C	,0x0000), // '#' ➔ "ℌ" U+210C BLACK-LETTER CAPITAL H
+/*<!M><h><%hash>                                                   */ DEADTRANS( L'#'	,0xE4B5	,0x266A	,0x0000), // '#' ➔ "♪" U+266A EIGHTH NOTE
+/*<!M><h><%minus>                                                  */ DEADTRANS( L'-'	,0xE4B5	,0x266B	,0x0000), // '-' ➔ "♫" U+266B BEAMED EIGHTH NOTES
+/*<!M><H><%minus>                                                  */ DEADTRANS( L'-'	,0xE4B6	,0x266B	,0x0000), // '-' ➔ "♫" U+266B BEAMED EIGHTH NOTES
+/*<!M><h><%slash>                                                  */ DEADTRANS( L'/'	,0xE4B5	,0xE4B7	,0x0001), // Intermediate multikey chain link
+/*<!M><h><%slash><%slash>                                          */ DEADTRANS( L'/'	,0xE4B7	,0x210F	,0x0000), // '/' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
+/*<!M><h><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE4B7	,0x210E	,0x0000), // ' ' ➔ "ℎ" U+210E PLANCK CONSTANT
+/*<!M><h><%slash><~space>                                          */ DEADTRANS( L' '	,0xE4B7	,0x210E	,0x0000), // ' ' ➔ "ℎ" U+210E PLANCK CONSTANT
+/*<!M><H><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4B6	,0x210B	,0x0000), // '~' ➔ "ℋ" U+210B SCRIPT CAPITAL H
+/*<!M><h><d>                                                       */ DEADTRANS( L'd'	,0xE4B5	,0xE4B8	,0x0001), // Intermediate multikey chain link
+/*<!M><H><D>                                                       */ DEADTRANS( L'D'	,0xE4B6	,0xE4B9	,0x0001), // Intermediate multikey chain link
+/*<!M><h><d><p>                                                    */ DEADTRANS( L'p'	,0xE4B8	,0xE4BA	,0x0001), // Intermediate multikey chain link
+/*<!M><H><D><P>                                                    */ DEADTRANS( L'P'	,0xE4B9	,0xE4BB	,0x0001), // Intermediate multikey chain link
+/*<!M><h><d><p><e>                                                 */ DEADTRANS( L'e'	,0xE4BA	,0x2674	,0x0000), // 'e' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><H><D><P><E>                                                 */ DEADTRANS( L'E'	,0xE4BB	,0x2674	,0x0000), // 'E' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><H><H>                                                       */ DEADTRANS( L'H'	,0xE4B6	,0x210D	,0x0000), // 'H' ➔ "ℍ" U+210D DOUBLE-STRUCK CAPITAL H
+/*<!M><H><N>                                                       */ DEADTRANS( L'N'	,0xE4B6	,0xA726	,0x0000), // 'N' ➔ "Ꜧ" U+A726 LATIN CAPITAL LETTER HENG
+/*<!M><H><n>                                                       */ DEADTRANS( L'n'	,0xE4B6	,0xA726	,0x0000), // 'n' ➔ "Ꜧ" U+A726 LATIN CAPITAL LETTER HENG
+/*<!M><h><n>                                                       */ DEADTRANS( L'n'	,0xE4B5	,0xA727	,0x0000), // 'n' ➔ "ꜧ" U+A727 LATIN SMALL LETTER HENG
+/*<!M><h><o>                                                       */ DEADTRANS( L'o'	,0xE4B5	,0xE4BC	,0x0001), // Intermediate multikey chain link
+/*<!M><H><O>                                                       */ DEADTRANS( L'O'	,0xE4B6	,0xE4BD	,0x0001), // Intermediate multikey chain link
+/*<!M><h><o><m>                                                    */ DEADTRANS( L'm'	,0xE4BC	,0x21F1	,0x0000), // 'm' ➔ "⇱" U+21F1 NORTH WEST ARROW TO CORNER
+/*<!M><H><O><M>                                                    */ DEADTRANS( L'M'	,0xE4BD	,0x21F1	,0x0000), // 'M' ➔ "⇱" U+21F1 NORTH WEST ARROW TO CORNER
+/*<!M><h><v>                                                       */ DEADTRANS( L'v'	,0xE4B5	,0x0195	,0x0000), // 'v' ➔ "ƕ" U+0195 LATIN SMALL LETTER HV
+/*<!M><H><V>                                                       */ DEADTRANS( L'V'	,0xE4B6	,0x01F6	,0x0000), // 'V' ➔ "Ƕ" U+01F6 LATIN CAPITAL LETTER HWAIR
+/*<!M><H><v>                                                       */ DEADTRANS( L'v'	,0xE4B6	,0x01F6	,0x0000), // 'v' ➔ "Ƕ" U+01F6 LATIN CAPITAL LETTER HWAIR
+/*<!M><H><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4B6	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
+/*<!M><h><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4B5	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
+/*<!M><H><~space>                                                  */ DEADTRANS( L' '	,0xE4B6	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
+/*<!M><h><~space>                                                  */ DEADTRANS( L' '	,0xE4B5	,0x2207	,0x0000), // ' ' ➔ "∇" U+2207 NABLA
+/*<!M><i>                                                          */ DEADTRANS( L'i'	,0x00A6	,0xE4BE	,0x0001), // Intermediate multikey chain link
+/*<!M><I>                                                          */ DEADTRANS( L'I'	,0x00A6	,0xE4BF	,0x0001), // Intermediate multikey chain link
+/*<!M><i><%at>                                                     */ DEADTRANS( L'@'	,0xE4BE	,0x2129	,0x0000), // '@' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
+/*<!M><i><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4BE	,0x2129	,0x0000), // '\' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
+/*<!M><i><%bar>                                                    */ DEADTRANS( L'|'	,0xE4BE	,0x2068	,0x0000), // '|' ➔ "⁨" U+2068 FIRST STRONG ISOLATE
+/*<!M><I><%bracketleft>                                            */ DEADTRANS( L'['	,0xE4BF	,0xE4C0	,0x0001), // Intermediate multikey chain link
+/*<!M><I><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE4C0	,0x29EE	,0x0000), // ']' ➔ "⧮" U+29EE ERROR-BARRED WHITE SQUARE
+/*<!M><I><%bracketleft><%hash>                                     */ DEADTRANS( L'#'	,0xE4C0	,0x29EF	,0x0000), // '#' ➔ "⧯" U+29EF ERROR-BARRED BLACK SQUARE
+/*<!M><I><%bracketright>                                           */ DEADTRANS( L']'	,0xE4BF	,0x29EE	,0x0000), // ']' ➔ "⧮" U+29EE ERROR-BARRED WHITE SQUARE
+/*<!M><i><%equal>                                                  */ DEADTRANS( L'='	,0xE4BE	,0x2069	,0x0000), // '=' ➔ "⁩" U+2069 POP DIRECTIONAL ISOLATE
+/*<!M><i><%greater>                                                */ DEADTRANS( L'>'	,0xE4BE	,0x2066	,0x0000), // '>' ➔ "⁦" U+2066 LEFT-TO-RIGHT ISOLATE
+/*<!M><I><%greater>                                                */ DEADTRANS( L'>'	,0xE4BF	,0x29F0	,0x0000), // '>' ➔ "⧰" U+29F0 ERROR-BARRED WHITE DIAMOND
+/*<!M><I><%hash>                                                   */ DEADTRANS( L'#'	,0xE4BF	,0x2111	,0x0000), // '#' ➔ "ℑ" U+2111 BLACK-LETTER CAPITAL I
+/*<!M><I><%less>                                                   */ DEADTRANS( L'<'	,0xE4BF	,0xE4C1	,0x0001), // Intermediate multikey chain link
+/*<!M><i><%less>                                                   */ DEADTRANS( L'<'	,0xE4BE	,0x2067	,0x0000), // '<' ➔ "⁧" U+2067 RIGHT-TO-LEFT ISOLATE
+/*<!M><I><%less><%greater>                                         */ DEADTRANS( L'>'	,0xE4C1	,0x29F0	,0x0000), // '>' ➔ "⧰" U+29F0 ERROR-BARRED WHITE DIAMOND
+/*<!M><I><%less><%hash>                                            */ DEADTRANS( L'#'	,0xE4C1	,0x29F1	,0x0000), // '#' ➔ "⧱" U+29F1 ERROR-BARRED BLACK DIAMOND
+/*<!M><i><%percent>                                                */ DEADTRANS( L'%'	,0xE4BE	,0x2129	,0x0000), // '%' ➔ "℩" U+2129 TURNED GREEK SMALL LETTER IOTA
+/*<!M><I><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4BF	,0x2110	,0x0000), // '~' ➔ "ℐ" U+2110 SCRIPT CAPITAL I
+/*<!M><I><%underscore>                                             */ DEADTRANS( L'_'	,0xE4BF	,0xE4C2	,0x0001), // Intermediate multikey chain link
+/*<!M><I><%underscore><%apostrophe>                                */ DEADTRANS( L'\''	,0xE4C2	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><I><%underscore><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE4C2	,0x2AE0	,0x0000), // '’' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><I><%underscore><%bar>                                       */ DEADTRANS( L'|'	,0xE4C2	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><I><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4C2	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
+/*<!M><I><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE4C2	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
+/*<!M><i><1>                                                       */ DEADTRANS( L'1'	,0xE4BE	,0xA70D	,0x0000), // '1' ➔ "꜍" U+A70D MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+/*<!M><I><1>                                                       */ DEADTRANS( L'1'	,0xE4BF	,0xA70D	,0x0000), // '1' ➔ "꜍" U+A70D MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+/*<!M><i><2>                                                       */ DEADTRANS( L'2'	,0xE4BE	,0xA70E	,0x0000), // '2' ➔ "꜎" U+A70E MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+/*<!M><I><2>                                                       */ DEADTRANS( L'2'	,0xE4BF	,0xA70E	,0x0000), // '2' ➔ "꜎" U+A70E MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+/*<!M><i><3>                                                       */ DEADTRANS( L'3'	,0xE4BE	,0xA70F	,0x0000), // '3' ➔ "꜏" U+A70F MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+/*<!M><I><3>                                                       */ DEADTRANS( L'3'	,0xE4BF	,0xA70F	,0x0000), // '3' ➔ "꜏" U+A70F MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+/*<!M><i><4>                                                       */ DEADTRANS( L'4'	,0xE4BE	,0xA710	,0x0000), // '4' ➔ "꜐" U+A710 MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+/*<!M><I><4>                                                       */ DEADTRANS( L'4'	,0xE4BF	,0xA710	,0x0000), // '4' ➔ "꜐" U+A710 MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+/*<!M><i><5>                                                       */ DEADTRANS( L'5'	,0xE4BE	,0xA711	,0x0000), // '5' ➔ "꜑" U+A711 MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+/*<!M><I><5>                                                       */ DEADTRANS( L'5'	,0xE4BF	,0xA711	,0x0000), // '5' ➔ "꜑" U+A711 MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+/*<!M><i><e>                                                       */ DEADTRANS( L'e'	,0xE4BE	,0xAB61	,0x0000), // 'e' ➔ "ꭡ" U+AB61 LATIN SMALL LETTER IOTIFIED E
+/*<!M><i><i>                                                       */ DEADTRANS( L'i'	,0xE4BE	,0xE4C3	,0x0001), // Intermediate multikey chain link
+/*<!M><I><I>                                                       */ DEADTRANS( L'I'	,0xE4BF	,0x2AFF	,0x0000), // 'I' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><i><i><%slash>                                               */ DEADTRANS( L'/'	,0xE4C3	,0x2148	,0x0000), // '/' ➔ "ⅈ" U+2148 DOUBLE-STRUCK ITALIC SMALL I
+/*<!M><i><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE4C3	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><i><i><~space>                                               */ DEADTRANS( L' '	,0xE4C3	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><I><J>                                                       */ DEADTRANS( L'J'	,0xE4BF	,0x0132	,0x0000), // 'J' ➔ "Ĳ" U+0132 LATIN CAPITAL LIGATURE IJ
+/*<!M><I><j>                                                       */ DEADTRANS( L'j'	,0xE4BF	,0x0132	,0x0000), // 'j' ➔ "Ĳ" U+0132 LATIN CAPITAL LIGATURE IJ
+/*<!M><i><j>                                                       */ DEADTRANS( L'j'	,0xE4BE	,0x0133	,0x0000), // 'j' ➔ "ĳ" U+0133 LATIN SMALL LIGATURE IJ
+/*<!M><i><l>                                                       */ DEADTRANS( L'l'	,0xE4BE	,0xE4C4	,0x0001), // Intermediate multikey chain link
+/*<!M><I><L>                                                       */ DEADTRANS( L'L'	,0xE4BF	,0xE4C5	,0x0001), // Intermediate multikey chain link
+/*<!M><i><l><s>                                                    */ DEADTRANS( L's'	,0xE4C4	,0x20AA	,0x0000), // 's' ➔ "₪" U+20AA NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
+/*<!M><I><L><S>                                                    */ DEADTRANS( L'S'	,0xE4C5	,0x20AA	,0x0000), // 'S' ➔ "₪" U+20AA NEW SHEQEL SIGN, New Israeli Sheqel ISRAEL
+/*<!M><i><n>                                                       */ DEADTRANS( L'n'	,0xE4BE	,0xE4C6	,0x0001), // Intermediate multikey chain link
+/*<!M><I><N>                                                       */ DEADTRANS( L'N'	,0xE4BF	,0xE4C7	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><r>                                                    */ DEADTRANS( L'r'	,0xE4C6	,0x20B9	,0x0000), // 'r' ➔ "₹" U+20B9 INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
+/*<!M><I><N><R>                                                    */ DEADTRANS( L'R'	,0xE4C7	,0x20B9	,0x0000), // 'R' ➔ "₹" U+20B9 INDIAN RUPEE SIGN, Indian Rupee INDIA, BHUTAN
+/*<!M><i><n><t>                                                    */ DEADTRANS( L't'	,0xE4C6	,0xE4C8	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><t><e>                                                 */ DEADTRANS( L'e'	,0xE4C8	,0xE4C9	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><t><e><r>                                              */ DEADTRANS( L'r'	,0xE4C9	,0xE4CA	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><t><e><r><s>                                           */ DEADTRANS( L's'	,0xE4CA	,0xE4CB	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><t><e><r><s><e>                                        */ DEADTRANS( L'e'	,0xE4CB	,0xE4CC	,0x0001), // Intermediate multikey chain link
+/*<!M><i><n><t><e><r><s><e><c>                                     */ DEADTRANS( L'c'	,0xE4CC	,0x2229	,0x0000), // 'c' ➔ "∩" U+2229 INTERSECTION French truncated name
+/*<!M><I><O>                                                       */ DEADTRANS( L'O'	,0xE4BF	,0xE4CD	,0x0001), // Intermediate multikey chain link
+/*<!M><i><o>                                                       */ DEADTRANS( L'o'	,0xE4BE	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><I><o>                                                       */ DEADTRANS( L'o'	,0xE4BF	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><I><O><%hash>                                                */ DEADTRANS( L'#'	,0xE4CD	,0x29F3	,0x0000), // '#' ➔ "⧳" U+29F3 ERROR-BARRED BLACK CIRCLE
+/*<!M><I><O><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE4CD	,0x29F2	,0x0000), // ' ' ➔ "⧲" U+29F2 ERROR-BARRED WHITE CIRCLE
+/*<!M><I><O><~space>                                               */ DEADTRANS( L' '	,0xE4CD	,0x29F2	,0x0000), // ' ' ➔ "⧲" U+29F2 ERROR-BARRED WHITE CIRCLE
+/*<!M><i><p>                                                       */ DEADTRANS( L'p'	,0xE4BE	,0xE4CE	,0x0001), // Intermediate multikey chain link
+/*<!M><I><P>                                                       */ DEADTRANS( L'P'	,0xE4BF	,0xE4CF	,0x0001), // Intermediate multikey chain link
+/*<!M><i><p><d>                                                    */ DEADTRANS( L'd'	,0xE4CE	,0x261B	,0x0000), // 'd' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+/*<!M><I><P><D>                                                    */ DEADTRANS( L'D'	,0xE4CF	,0x261B	,0x0000), // 'D' ➔ "☛" U+261B BLACK RIGHT POINTING INDEX, rightpointer, not U261E WHITE RIGHT POINTING INDEX
+/*<!M><i><p><g>                                                    */ DEADTRANS( L'g'	,0xE4CE	,0x261A	,0x0000), // 'g' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+/*<!M><I><P><G>                                                    */ DEADTRANS( L'G'	,0xE4CF	,0x261A	,0x0000), // 'G' ➔ "☚" U+261A BLACK LEFT POINTING INDEX, leftpointer, not U261C WHITE LEFT POINTING INDEX
+/*<!M><i><q>                                                       */ DEADTRANS( L'q'	,0xE4BE	,0xE4D0	,0x0001), // Intermediate multikey chain link
+/*<!M><I><Q>                                                       */ DEADTRANS( L'Q'	,0xE4BF	,0xE4D1	,0x0001), // Intermediate multikey chain link
+/*<!M><i><q><d>                                                    */ DEADTRANS( L'd'	,0xE4D0	,0x0639	,0x0000), // 'd' ➔ "ع" U+0639 ARABIC LETTER AIN, Iraqi Dinar IRAQ
+/*<!M><I><Q><D>                                                    */ DEADTRANS( L'D'	,0xE4D1	,0x0639	,0x0000), // 'D' ➔ "ع" U+0639 ARABIC LETTER AIN, Iraqi Dinar IRAQ
+/*<!M><i><r>                                                       */ DEADTRANS( L'r'	,0xE4BE	,0xE4D2	,0x0001), // Intermediate multikey chain link
+/*<!M><I><R>                                                       */ DEADTRANS( L'R'	,0xE4BF	,0xE4D3	,0x0001), // Intermediate multikey chain link
+/*<!M><i><r><m>                                                    */ DEADTRANS( L'm'	,0xE4D2	,0xE4D4	,0x0001), // Intermediate multikey chain link
+/*<!M><I><R><M>                                                    */ DEADTRANS( L'M'	,0xE4D3	,0xE4D5	,0x0001), // Intermediate multikey chain link
+/*<!M><i><r><m><p>                                                 */ DEADTRANS( L'p'	,0xE4D4	,0xE4D6	,0x0001), // Intermediate multikey chain link
+/*<!M><I><R><M><P>                                                 */ DEADTRANS( L'P'	,0xE4D5	,0xE4D7	,0x0001), // Intermediate multikey chain link
+/*<!M><i><r><m><p><d>                                              */ DEADTRANS( L'd'	,0xE4D6	,0xDC49	,0x0000), // High surrogate: D83D; 'd' ➔ "👉" U+1F449 WHITE RIGHT POINTING BACKHAND INDEX
+/*<!M><I><R><M><P><D>                                              */ DEADTRANS( L'D'	,0xE4D7	,0xDC49	,0x0000), // High surrogate: D83D; 'D' ➔ "👉" U+1F449 WHITE RIGHT POINTING BACKHAND INDEX
+/*<!M><i><r><m><p><g>                                              */ DEADTRANS( L'g'	,0xE4D6	,0xDC48	,0x0000), // High surrogate: D83D; 'g' ➔ "👈" U+1F448 WHITE LEFT POINTING BACKHAND INDEX
+/*<!M><I><R><M><P><G>                                              */ DEADTRANS( L'G'	,0xE4D7	,0xDC48	,0x0000), // High surrogate: D83D; 'G' ➔ "👈" U+1F448 WHITE LEFT POINTING BACKHAND INDEX
+/*<!M><i><r><r>                                                    */ DEADTRANS( L'r'	,0xE4D2	,0xFDFC	,0x0000), // 'r' ➔ "﷼" U+FDFC RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
+/*<!M><I><R><R>                                                    */ DEADTRANS( L'R'	,0xE4D3	,0xFDFC	,0x0000), // 'R' ➔ "﷼" U+FDFC RIAL SIGN, Iranian Rial ISLAMIC REPUBLIC OF IRAN
+/*<!M><I><S>                                                       */ DEADTRANS( L'S'	,0xE4BF	,0xA76C	,0x0000), // 'S' ➔ "Ꝭ" U+A76C LATIN CAPITAL LETTER IS
+/*<!M><I><s>                                                       */ DEADTRANS( L's'	,0xE4BF	,0xA76C	,0x0000), // 's' ➔ "Ꝭ" U+A76C LATIN CAPITAL LETTER IS
+/*<!M><i><s>                                                       */ DEADTRANS( L's'	,0xE4BE	,0xA76D	,0x0000), // 's' ➔ "ꝭ" U+A76D LATIN SMALL LETTER IS
+/*<!M><j>                                                          */ DEADTRANS( L'j'	,0x00A6	,0xE4D8	,0x0001), // Intermediate multikey chain link
+/*<!M><J>                                                          */ DEADTRANS( L'J'	,0x00A6	,0xE4D9	,0x0001), // Intermediate multikey chain link
+/*<!M><j><%exclam>                                                 */ DEADTRANS( L'!'	,0xE4D8	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
+/*<!M><J><%exclam>                                                 */ DEADTRANS( L'!'	,0xE4D9	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
+/*<!M><j><%greater>                                                */ DEADTRANS( L'>'	,0xE4D8	,0x22B1	,0x0000), // '>' ➔ "⊱" U+22B1 SUCCEEDS UNDER RELATION
+/*<!M><J><%greater>                                                */ DEADTRANS( L'>'	,0xE4D9	,0x22B1	,0x0000), // '>' ➔ "⊱" U+22B1 SUCCEEDS UNDER RELATION
+/*<!M><j><%less>                                                   */ DEADTRANS( L'<'	,0xE4D8	,0x22B0	,0x0000), // '<' ➔ "⊰" U+22B0 PRECEDES UNDER RELATION
+/*<!M><J><%less>                                                   */ DEADTRANS( L'<'	,0xE4D9	,0x22B0	,0x0000), // '<' ➔ "⊰" U+22B0 PRECEDES UNDER RELATION
+/*<!M><j><%minus>                                                  */ DEADTRANS( L'-'	,0xE4D8	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><J><%minus>                                                  */ DEADTRANS( L'-'	,0xE4D9	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><j><a>                                                       */ DEADTRANS( L'a'	,0xE4D8	,0xAB60	,0x0000), // 'a' ➔ "ꭠ" U+AB60 LATIN SMALL LETTER SAKHA YAT
+/*<!M><j><j>                                                       */ DEADTRANS( L'j'	,0xE4D8	,0x2149	,0x0000), // 'j' ➔ "ⅉ" U+2149 DOUBLE-STRUCK ITALIC SMALL J
+/*<!M><j><o>                                                       */ DEADTRANS( L'o'	,0xE4D8	,0xE4DA	,0x0001), // Intermediate multikey chain link
+/*<!M><J><O>                                                       */ DEADTRANS( L'O'	,0xE4D9	,0xE4DB	,0x0001), // Intermediate multikey chain link
+/*<!M><j><p>                                                       */ DEADTRANS( L'p'	,0xE4D8	,0xE4DC	,0x0001), // Intermediate multikey chain link
+/*<!M><J><P>                                                       */ DEADTRANS( L'P'	,0xE4D9	,0xE4DD	,0x0001), // Intermediate multikey chain link
+/*<!M><j><p><y>                                                    */ DEADTRANS( L'y'	,0xE4DC	,0x00A5	,0x0000), // 'y' ➔ "¥" U+00A5 YEN SIGN, Yen JAPAN
+/*<!M><J><P><Y>                                                    */ DEADTRANS( L'Y'	,0xE4DD	,0x00A5	,0x0000), // 'Y' ➔ "¥" U+00A5 YEN SIGN, Yen JAPAN
+/*<!M><k>                                                          */ DEADTRANS( L'k'	,0x00A6	,0xE4DE	,0x0001), // Intermediate multikey chain link
+/*<!M><K>                                                          */ DEADTRANS( L'K'	,0x00A6	,0xE4DF	,0x0001), // Intermediate multikey chain link
+/*<!M><k><%at>                                                     */ DEADTRANS( L'@'	,0xE4DE	,0x03F0	,0x0000), // '@' ➔ "ϰ" U+03F0 GREEK KAPPA SYMBOL
+/*<!M><k><%equal>                                                  */ DEADTRANS( L'='	,0xE4DE	,0x20AD	,0x0000), // '=' ➔ "₭" U+20AD KIP SIGN
+/*<!M><K><%equal>                                                  */ DEADTRANS( L'='	,0xE4DF	,0x20AD	,0x0000), // '=' ➔ "₭" U+20AD KIP SIGN
+/*<!M><k><%minus>                                                  */ DEADTRANS( L'-'	,0xE4DE	,0x20AD	,0x0000), // '-' ➔ "₭" U+20AD KIP SIGN
+/*<!M><K><%minus>                                                  */ DEADTRANS( L'-'	,0xE4DF	,0x20AD	,0x0000), // '-' ➔ "₭" U+20AD KIP SIGN
+/*<!M><k><d>                                                       */ DEADTRANS( L'd'	,0xE4DE	,0x23F7	,0x0000), // 'd' ➔ "⏷" U+23F7 BLACK MEDIUM DOWN-POINTING TRIANGLE
+/*<!M><K><D>                                                       */ DEADTRANS( L'D'	,0xE4DF	,0x23F7	,0x0000), // 'D' ➔ "⏷" U+23F7 BLACK MEDIUM DOWN-POINTING TRIANGLE
+/*<!M><k><g>                                                       */ DEADTRANS( L'g'	,0xE4DE	,0xE4E0	,0x0001), // Intermediate multikey chain link
+/*<!M><K><G>                                                       */ DEADTRANS( L'G'	,0xE4DF	,0xE4E1	,0x0001), // Intermediate multikey chain link
+/*<!M><k><g><s>                                                    */ DEADTRANS( L's'	,0xE4E0	,0x20C0	,0x0000), // 's' ➔ "⃀" U+20C0 SOM SIGN, Som KYRGYZSTAN
+/*<!M><K><G><S>                                                    */ DEADTRANS( L'S'	,0xE4E1	,0x20C0	,0x0000), // 'S' ➔ "⃀" U+20C0 SOM SIGN, Som KYRGYZSTAN
+/*<!M><k><h>                                                       */ DEADTRANS( L'h'	,0xE4DE	,0xE4E2	,0x0001), // Intermediate multikey chain link
+/*<!M><K><H>                                                       */ DEADTRANS( L'H'	,0xE4DF	,0xE4E3	,0x0001), // Intermediate multikey chain link
+/*<!M><k><h><r>                                                    */ DEADTRANS( L'r'	,0xE4E2	,0x17DB	,0x0000), // 'r' ➔ "៛" U+17DB KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
+/*<!M><K><H><R>                                                    */ DEADTRANS( L'R'	,0xE4E3	,0x17DB	,0x0000), // 'R' ➔ "៛" U+17DB KHMER CURRENCY SYMBOL RIEL, Riel CAMBODIA
+/*<!M><k><o>                                                       */ DEADTRANS( L'o'	,0xE4DE	,0xE4E4	,0x0001), // Intermediate multikey chain link
+/*<!M><K><O>                                                       */ DEADTRANS( L'O'	,0xE4DF	,0xE4E5	,0x0001), // Intermediate multikey chain link
+/*<!M><k><o><m>                                                    */ DEADTRANS( L'm'	,0xE4E4	,0x203B	,0x0000), // 'm' ➔ "※" U+203B REFERENCE MARK, Japanese kome
+/*<!M><K><O><M>                                                    */ DEADTRANS( L'M'	,0xE4E5	,0x203B	,0x0000), // 'M' ➔ "※" U+203B REFERENCE MARK, Japanese kome
+/*<!M><k><p>                                                       */ DEADTRANS( L'p'	,0xE4DE	,0xE4E6	,0x0001), // Intermediate multikey chain link
+/*<!M><K><P>                                                       */ DEADTRANS( L'P'	,0xE4DF	,0xE4E7	,0x0001), // Intermediate multikey chain link
+/*<!M><k><p><w>                                                    */ DEADTRANS( L'w'	,0xE4E6	,0x20A9	,0x0000), // 'w' ➔ "₩" U+20A9 WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
+/*<!M><K><P><W>                                                    */ DEADTRANS( L'W'	,0xE4E7	,0x20A9	,0x0000), // 'W' ➔ "₩" U+20A9 WON SIGN, North Korean Won THE DEMOCRATIC PEOPLE’S REPUBLIC OF KOREA
+/*<!M><k><r>                                                       */ DEADTRANS( L'r'	,0xE4DE	,0xE4E8	,0x0001), // Intermediate multikey chain link
+/*<!M><K><R>                                                       */ DEADTRANS( L'R'	,0xE4DF	,0xE4E9	,0x0001), // Intermediate multikey chain link
+/*<!M><k><r><w>                                                    */ DEADTRANS( L'w'	,0xE4E8	,0x20A9	,0x0000), // 'w' ➔ "₩" U+20A9 WON SIGN, Won KOREA (THE REPUBLIC OF)
+/*<!M><K><R><W>                                                    */ DEADTRANS( L'W'	,0xE4E9	,0x20A9	,0x0000), // 'W' ➔ "₩" U+20A9 WON SIGN, Won KOREA (THE REPUBLIC OF)
+/*<!M><k><u>                                                       */ DEADTRANS( L'u'	,0xE4DE	,0x23F6	,0x0000), // 'u' ➔ "⏶" U+23F6 BLACK MEDIUM UP-POINTING TRIANGLE
+/*<!M><K><U>                                                       */ DEADTRANS( L'U'	,0xE4DF	,0x23F6	,0x0000), // 'U' ➔ "⏶" U+23F6 BLACK MEDIUM UP-POINTING TRIANGLE
+/*<!M><k><w>                                                       */ DEADTRANS( L'w'	,0xE4DE	,0xE4EA	,0x0001), // Intermediate multikey chain link
+/*<!M><K><W>                                                       */ DEADTRANS( L'W'	,0xE4DF	,0xE4EB	,0x0001), // Intermediate multikey chain link
+/*<!M><k><z>                                                       */ DEADTRANS( L'z'	,0xE4DE	,0xE4EC	,0x0001), // Intermediate multikey chain link
+/*<!M><K><Z>                                                       */ DEADTRANS( L'Z'	,0xE4DF	,0xE4ED	,0x0001), // Intermediate multikey chain link
+/*<!M><k><z><t>                                                    */ DEADTRANS( L't'	,0xE4EC	,0x20B8	,0x0000), // 't' ➔ "₸" U+20B8 TENGE SIGN, Tenge KAZAKHSTAN
+/*<!M><K><Z><T>                                                    */ DEADTRANS( L'T'	,0xE4ED	,0x20B8	,0x0000), // 'T' ➔ "₸" U+20B8 TENGE SIGN, Tenge KAZAKHSTAN
+/*<!M><l>                                                          */ DEADTRANS( L'l'	,0x00A6	,0xE4EE	,0x0001), // Intermediate multikey chain link
+/*<!M><L>                                                          */ DEADTRANS( L'L'	,0x00A6	,0xE4EF	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4EF	,0xE4F0	,0x0001), // Intermediate multikey chain link
+/*<!M><l><%backslash>                                              */ DEADTRANS( L'\\'	,0xE4EE	,0xE4F1	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%backslash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE4F0	,0xE4F2	,0x0001), // Intermediate multikey chain link
+/*<!M><l><%backslash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE4F1	,0xE4F3	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%backslash><%backslash><%period>                         */ DEADTRANS( L'.'	,0xE4F2	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><l><%backslash><%backslash><%period>                         */ DEADTRANS( L'.'	,0xE4F3	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><L><%backslash><%period>                                     */ DEADTRANS( L'.'	,0xE4F0	,0x27D3	,0x0000), // '.' ➔ "⟓" U+27D3 LOWER RIGHT CORNER WITH DOT
+/*<!M><l><%backslash><%period>                                     */ DEADTRANS( L'.'	,0xE4F1	,0x27D3	,0x0000), // '.' ➔ "⟓" U+27D3 LOWER RIGHT CORNER WITH DOT
+/*<!M><L><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE4F0	,0x2143	,0x0000), // ' ' ➔ "⅃" U+2143 REVERSED SANS-SERIF CAPITAL L
+/*<!M><L><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE4F0	,0x2143	,0x0000), // ' ' ➔ "⅃" U+2143 REVERSED SANS-SERIF CAPITAL L
+/*<!M><L><%bracketright>                                           */ DEADTRANS( L']'	,0xE4EF	,0x299C	,0x0000), // ']' ➔ "⦜" U+299C RIGHT ANGLE VARIANT WITH SQUARE
+/*<!M><l><%bracketright>                                           */ DEADTRANS( L']'	,0xE4EE	,0x299C	,0x0000), // ']' ➔ "⦜" U+299C RIGHT ANGLE VARIANT WITH SQUARE
+/*<!M><L><%equal>                                                  */ DEADTRANS( L'='	,0xE4EF	,0x20A4	,0x0000), // '=' ➔ "₤" U+20A4 LIRA SIGN
+/*<!M><l><%minus>                                                  */ DEADTRANS( L'-'	,0xE4EE	,0x00A3	,0x0000), // '-' ➔ "£" U+00A3 POUND SIGN
+/*<!M><L><%minus>                                                  */ DEADTRANS( L'-'	,0xE4EF	,0x00A3	,0x0000), // '-' ➔ "£" U+00A3 POUND SIGN
+/*<!M><L><%parenright>                                             */ DEADTRANS( L')'	,0xE4EF	,0xE4F4	,0x0001), // Intermediate multikey chain link
+/*<!M><l><%parenright>                                             */ DEADTRANS( L')'	,0xE4EE	,0xE4F5	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%parenright><%period>                                    */ DEADTRANS( L'.'	,0xE4F4	,0x299D	,0x0000), // '.' ➔ "⦝" U+299D MEASURED RIGHT ANGLE WITH DOT
+/*<!M><l><%parenright><%period>                                    */ DEADTRANS( L'.'	,0xE4F5	,0x299D	,0x0000), // '.' ➔ "⦝" U+299D MEASURED RIGHT ANGLE WITH DOT
+/*<!M><L><%parenright><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4F4	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
+/*<!M><l><%parenright><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE4F5	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
+/*<!M><L><%parenright><~space>                                     */ DEADTRANS( L' '	,0xE4F4	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
+/*<!M><l><%parenright><~space>                                     */ DEADTRANS( L' '	,0xE4F5	,0x22BE	,0x0000), // ' ' ➔ "⊾" U+22BE RIGHT ANGLE WITH ARC
+/*<!M><L><%percent>                                                */ DEADTRANS( L'%'	,0xE4EF	,0xE4F6	,0x0001), // Intermediate multikey chain link
+/*<!M><l><%percent>                                                */ DEADTRANS( L'%'	,0xE4EE	,0xE4F7	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE4F6	,0xE4F8	,0x0001), // Intermediate multikey chain link
+/*<!M><l><%percent><%percent>                                      */ DEADTRANS( L'%'	,0xE4F7	,0xE4F9	,0x0001), // Intermediate multikey chain link
+/*<!M><L><%percent><%percent><%period>                             */ DEADTRANS( L'.'	,0xE4F8	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><l><%percent><%percent><%period>                             */ DEADTRANS( L'.'	,0xE4F9	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><L><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE4F6	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><l><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE4F7	,0x27D4	,0x0000), // '.' ➔ "⟔" U+27D4 UPPER LEFT CORNER WITH DOT
+/*<!M><L><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE4F6	,0x2142	,0x0000), // ' ' ➔ "⅂" U+2142 TURNED SANS-SERIF CAPITAL L
+/*<!M><L><%percent><~space>                                        */ DEADTRANS( L' '	,0xE4F6	,0x2142	,0x0000), // ' ' ➔ "⅂" U+2142 TURNED SANS-SERIF CAPITAL L
+/*<!M><L><%period>                                                 */ DEADTRANS( L'.'	,0xE4EF	,0x013F	,0x0000), // '.' ➔ "Ŀ" U+013F LATIN CAPITAL LETTER L WITH MIDDLE DOT
+/*<!M><l><%period>                                                 */ DEADTRANS( L'.'	,0xE4EE	,0x0140	,0x0000), // '.' ➔ "ŀ" U+0140 LATIN SMALL LETTER L WITH MIDDLE DOT
+/*<!M><L><%slash>                                                  */ DEADTRANS( L'/'	,0xE4EF	,0x27C0	,0x0000), // '/' ➔ "⟀" U+27C0 THREE DIMENSIONAL ANGLE
+/*<!M><l><%slash>                                                  */ DEADTRANS( L'/'	,0xE4EE	,0x27C0	,0x0000), // '/' ➔ "⟀" U+27C0 THREE DIMENSIONAL ANGLE
+/*<!M><L><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4EF	,0x2112	,0x0000), // '~' ➔ "ℒ" U+2112 SCRIPT CAPITAL L
+/*<!M><l><%tilde>                                                  */ DEADTRANS( L'~'	,0xE4EE	,0x2113	,0x0000), // '~' ➔ "ℓ" U+2113 SCRIPT SMALL L
+/*<!M><l><2>                                                       */ DEADTRANS( L'2'	,0xE4EE	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
+/*<!M><L><2>                                                       */ DEADTRANS( L'2'	,0xE4EF	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
+/*<!M><l><3>                                                       */ DEADTRANS( L'3'	,0xE4EE	,0x026E	,0x0000), // '3' ➔ "ɮ" U+026E LATIN SMALL LETTER LEZH
+/*<!M><L><3>                                                       */ DEADTRANS( L'3'	,0xE4EF	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
+/*<!M><l><5>                                                       */ DEADTRANS( L'5'	,0xE4EE	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
+/*<!M><L><5>                                                       */ DEADTRANS( L'5'	,0xE4EF	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
+/*<!M><l><a>                                                       */ DEADTRANS( L'a'	,0xE4EE	,0xE4FA	,0x0001), // Intermediate multikey chain link
+/*<!M><L><A>                                                       */ DEADTRANS( L'A'	,0xE4EF	,0xE4FB	,0x0001), // Intermediate multikey chain link
+/*<!M><l><a><k>                                                    */ DEADTRANS( L'k'	,0xE4FA	,0x20AD	,0x0000), // 'k' ➔ "₭" U+20AD KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
+/*<!M><L><A><K>                                                    */ DEADTRANS( L'K'	,0xE4FB	,0x20AD	,0x0000), // 'K' ➔ "₭" U+20AD KIP SIGN, Lao Kip THE LAO PEOPLE’S DEMOCRATIC REPUBLIC
+/*<!M><l><b>                                                       */ DEADTRANS( L'b'	,0xE4EE	,0xE4FC	,0x0001), // Intermediate multikey chain link
+/*<!M><L><B>                                                       */ DEADTRANS( L'B'	,0xE4EF	,0xE4FD	,0x0001), // Intermediate multikey chain link
+/*<!M><l><b><%minus>                                               */ DEADTRANS( L'-'	,0xE4FC	,0x2114	,0x0000), // '-' ➔ "℔" U+2114 L B BAR SYMBOL
+/*<!M><l><d>                                                       */ DEADTRANS( L'd'	,0xE4EE	,0xE4FE	,0x0001), // Intermediate multikey chain link
+/*<!M><L><D>                                                       */ DEADTRANS( L'D'	,0xE4EF	,0xE4FF	,0x0001), // Intermediate multikey chain link
+/*<!M><l><d><p>                                                    */ DEADTRANS( L'p'	,0xE4FE	,0xE500	,0x0001), // Intermediate multikey chain link
+/*<!M><L><D><P>                                                    */ DEADTRANS( L'P'	,0xE4FF	,0xE501	,0x0001), // Intermediate multikey chain link
+/*<!M><l><d><p><e>                                                 */ DEADTRANS( L'e'	,0xE500	,0x2676	,0x0000), // 'e' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><L><D><P><E>                                                 */ DEADTRANS( L'E'	,0xE501	,0x2676	,0x0000), // 'E' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><l><e>                                                       */ DEADTRANS( L'e'	,0xE4EE	,0xE502	,0x0001), // Intermediate multikey chain link
+/*<!M><L><E>                                                       */ DEADTRANS( L'E'	,0xE4EF	,0xE503	,0x0001), // Intermediate multikey chain link
+/*<!M><l><e><o>                                                    */ DEADTRANS( L'o'	,0xE502	,0x264C	,0x0000), // 'o' ➔ "♌" U+264C LEO emoji
+/*<!M><L><E><O>                                                    */ DEADTRANS( L'O'	,0xE503	,0x264C	,0x0000), // 'O' ➔ "♌" U+264C LEO emoji
+/*<!M><l><e><z>                                                    */ DEADTRANS( L'z'	,0xE502	,0xE504	,0x0001), // Intermediate multikey chain link
+/*<!M><l><e><z><h>                                                 */ DEADTRANS( L'h'	,0xE504	,0x026E	,0x0000), // 'h' ➔ "ɮ" U+026E LATIN SMALL LETTER LEZH
+/*<!M><l><f>                                                       */ DEADTRANS( L'f'	,0xE4EE	,0x21B4	,0x0000), // 'f' ➔ "↴" U+21B4 RIGHTWARDS ARROW WITH CORNER DOWNWARDS
+/*<!M><L><F>                                                       */ DEADTRANS( L'F'	,0xE4EF	,0x21B4	,0x0000), // 'F' ➔ "↴" U+21B4 RIGHTWARDS ARROW WITH CORNER DOWNWARDS
+/*<!M><l><i>                                                       */ DEADTRANS( L'i'	,0xE4EE	,0xE505	,0x0001), // Intermediate multikey chain link
+/*<!M><L><I>                                                       */ DEADTRANS( L'I'	,0xE4EF	,0xE506	,0x0001), // Intermediate multikey chain link
+/*<!M><l><i><b>                                                    */ DEADTRANS( L'b'	,0xE505	,0xE507	,0x0001), // Intermediate multikey chain link
+/*<!M><L><I><B>                                                    */ DEADTRANS( L'B'	,0xE506	,0xE508	,0x0001), // Intermediate multikey chain link
+/*<!M><l><i><b><r>                                                 */ DEADTRANS( L'r'	,0xE507	,0x264E	,0x0000), // 'r' ➔ "♎" U+264E LIBRA emoji
+/*<!M><L><I><B><R>                                                 */ DEADTRANS( L'R'	,0xE508	,0x264E	,0x0000), // 'R' ➔ "♎" U+264E LIBRA emoji
+/*<!M><l><i><o>                                                    */ DEADTRANS( L'o'	,0xE505	,0xE509	,0x0001), // Intermediate multikey chain link
+/*<!M><L><I><O>                                                    */ DEADTRANS( L'O'	,0xE506	,0xE50A	,0x0001), // Intermediate multikey chain link
+/*<!M><l><i><o><n>                                                 */ DEADTRANS( L'n'	,0xE509	,0x264C	,0x0000), // 'n' ➔ "♌" U+264C LEO emoji
+/*<!M><L><I><O><N>                                                 */ DEADTRANS( L'N'	,0xE50A	,0x264C	,0x0000), // 'N' ➔ "♌" U+264C LEO emoji
+/*<!M><L><J>                                                       */ DEADTRANS( L'J'	,0xE4EF	,0x01C7	,0x0000), // 'J' ➔ "Ǉ" U+01C7 LATIN CAPITAL LETTER LJ
+/*<!M><L><j>                                                       */ DEADTRANS( L'j'	,0xE4EF	,0x01C8	,0x0000), // 'j' ➔ "ǈ" U+01C8 LATIN CAPITAL LETTER L WITH SMALL LETTER J
+/*<!M><l><j>                                                       */ DEADTRANS( L'j'	,0xE4EE	,0x01C9	,0x0000), // 'j' ➔ "ǉ" U+01C9 LATIN SMALL LETTER LJ
+/*<!M><L><L>                                                       */ DEADTRANS( L'L'	,0xE4EF	,0x1EFA	,0x0000), // 'L' ➔ "Ỻ" U+1EFA LATIN CAPITAL LETTER MIDDLE-WELSH LL
+/*<!M><L><l>                                                       */ DEADTRANS( L'l'	,0xE4EF	,0x1EFA	,0x0000), // 'l' ➔ "Ỻ" U+1EFA LATIN CAPITAL LETTER MIDDLE-WELSH LL
+/*<!M><l><l>                                                       */ DEADTRANS( L'l'	,0xE4EE	,0x1EFB	,0x0000), // 'l' ➔ "ỻ" U+1EFB LATIN SMALL LETTER MIDDLE-WELSH LL
+/*<!M><L><N>                                                       */ DEADTRANS( L'N'	,0xE4EF	,0x237C	,0x0000), // 'N' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
+/*<!M><l><n>                                                       */ DEADTRANS( L'n'	,0xE4EE	,0x237C	,0x0000), // 'n' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
+/*<!M><L><p>                                                       */ DEADTRANS( L'p'	,0xE4EF	,0xE50B	,0x0001), // Intermediate multikey chain link
+/*<!M><L><P>                                                       */ DEADTRANS( L'P'	,0xE4EF	,0x214A	,0x0000), // 'P' ➔ "⅊" U+214A PROPERTY LINE
+/*<!M><l><p>                                                       */ DEADTRANS( L'p'	,0xE4EE	,0x214A	,0x0000), // 'p' ➔ "⅊" U+214A PROPERTY LINE
+/*<!M><L><p><a>                                                    */ DEADTRANS( L'a'	,0xE50B	,0xE50C	,0x0001), // Intermediate multikey chain link
+/*<!M><L><p><a><r>                                                 */ DEADTRANS( L'r'	,0xE50C	,0xE50D	,0x0001), // Intermediate multikey chain link
+/*<!M><L><p><a><r><e>                                              */ DEADTRANS( L'e'	,0xE50D	,0xE50E	,0x0001), // Intermediate multikey chain link
+/*<!M><L><p><a><r><e><n>                                           */ DEADTRANS( L'n'	,0xE50E	,0xE50F	,0x0001), // Intermediate multikey chain link
+/*<!M><L><p><a><r><e><n><g>                                        */ DEADTRANS( L'g'	,0xE50F	,0xE510	,0x0001), // Intermediate multikey chain link
+/*<!M><L><p><a><r><e><n><g><t>                                     */ DEADTRANS( L't'	,0xE510	,0x2995	,0x0000), // 't' ➔ "⦕" U+2995 DOUBLE LEFT ARC GREATER-THAN BRACKET TeX + HTML under max 9 keysym constraint
+/*<!M><l><r>                                                       */ DEADTRANS( L'r'	,0xE4EE	,0xE511	,0x0001), // Intermediate multikey chain link
+/*<!M><L><R>                                                       */ DEADTRANS( L'R'	,0xE4EF	,0xE512	,0x0001), // Intermediate multikey chain link
+/*<!M><l><r><e>                                                    */ DEADTRANS( L'e'	,0xE511	,0xE513	,0x0001), // Intermediate multikey chain link
+/*<!M><L><R><E>                                                    */ DEADTRANS( L'E'	,0xE512	,0xE514	,0x0001), // Intermediate multikey chain link
+/*<!M><l><r><e><t>                                                 */ DEADTRANS( L't'	,0xE513	,0x2BA0	,0x0000), // 't' ➔ "⮠" U+2BA0 DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
+/*<!M><L><R><E><T>                                                 */ DEADTRANS( L'T'	,0xE514	,0x2BA0	,0x0000), // 'T' ➔ "⮠" U+2BA0 DOWNWARDS TRIANGLE-HEADED ARROW WITH LONG TIP LEFTWARDS
+/*<!M><l><s>                                                       */ DEADTRANS( L's'	,0xE4EE	,0x02AA	,0x0000), // 's' ➔ "ʪ" U+02AA LATIN SMALL LETTER LS DIGRAPH
+/*<!M><l><u>                                                       */ DEADTRANS( L'u'	,0xE4EE	,0xA772	,0x0000), // 'u' ➔ "ꝲ" U+A772 LATIN SMALL LETTER LUM
+/*<!M><l><z>                                                       */ DEADTRANS( L'z'	,0xE4EE	,0x02AB	,0x0000), // 'z' ➔ "ʫ" U+02AB LATIN SMALL LETTER LZ DIGRAPH
+/*<!M><L><Z>                                                       */ DEADTRANS( L'Z'	,0xE4EF	,0x237C	,0x0000), // 'Z' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
+/*<!M><L><z>                                                       */ DEADTRANS( L'z'	,0xE4EF	,0x237C	,0x0000), // 'z' ➔ "⍼" U+237C RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW
+/*<!M><L><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4EF	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
+/*<!M><l><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE4EE	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
+/*<!M><L><~space>                                                  */ DEADTRANS( L' '	,0xE4EF	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
+/*<!M><l><~space>                                                  */ DEADTRANS( L' '	,0xE4EE	,0x221F	,0x0000), // ' ' ➔ "∟" U+221F RIGHT ANGLE
+/*<!M><m>                                                          */ DEADTRANS( L'm'	,0x00A6	,0xE515	,0x0001), // Intermediate multikey chain link
+/*<!M><M>                                                          */ DEADTRANS( L'M'	,0x00A6	,0xE516	,0x0001), // Intermediate multikey chain link
+/*<!M><m><%backslash>                                              */ DEADTRANS( L'\\'	,0xE515	,0x29E2	,0x0000), // '\' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
+/*<!M><m><%equal>                                                  */ DEADTRANS( L'='	,0xE515	,0x225E	,0x0000), // '=' ➔ "≞" U+225E MEASURED BY
+/*<!M><M><%equal>                                                  */ DEADTRANS( L'='	,0xE516	,0x225E	,0x0000), // '=' ➔ "≞" U+225E MEASURED BY
+/*<!M><m><%greater>                                                */ DEADTRANS( L'>'	,0xE515	,0x200E	,0x0000), // '>' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
+/*<!M><m><%less>                                                   */ DEADTRANS( L'<'	,0xE515	,0x200F	,0x0000), // '<' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
+/*<!M><m><%percent>                                                */ DEADTRANS( L'%'	,0xE515	,0x29E2	,0x0000), // '%' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
+/*<!M><m><%slash>                                                  */ DEADTRANS( L'/'	,0xE515	,0x20A5	,0x0000), // '/' ➔ "₥" U+20A5 MILL SIGN
+/*<!M><M><%tilde>                                                  */ DEADTRANS( L'~'	,0xE516	,0x2133	,0x0000), // '~' ➔ "ℳ" U+2133 SCRIPT CAPITAL M
+/*<!M><m><c>                                                       */ DEADTRANS( L'c'	,0xE515	,0xDD6A	,0x0000), // High surrogate: D83C; 'c' ➔ "🅪" U+1F16A RAISED MC SIGN
+/*<!M><M><C>                                                       */ DEADTRANS( L'C'	,0xE516	,0xDD6A	,0x0000), // High surrogate: D83C; 'C' ➔ "🅪" U+1F16A RAISED MC SIGN
+/*<!M><m><d>                                                       */ DEADTRANS( L'd'	,0xE515	,0xDD6B	,0x0000), // High surrogate: D83C; 'd' ➔ "🅫" U+1F16B RAISED MD SIGN
+/*<!M><M><D>                                                       */ DEADTRANS( L'D'	,0xE516	,0xDD6B	,0x0000), // High surrogate: D83C; 'D' ➔ "🅫" U+1F16B RAISED MD SIGN
+/*<!M><m><h>                                                       */ DEADTRANS( L'h'	,0xE515	,0x2127	,0x0000), // 'h' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><M><h>                                                       */ DEADTRANS( L'h'	,0xE516	,0x2127	,0x0000), // 'h' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><M><H>                                                       */ DEADTRANS( L'H'	,0xE516	,0x2127	,0x0000), // 'H' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><m><k>                                                       */ DEADTRANS( L'k'	,0xE515	,0xE517	,0x0001), // Intermediate multikey chain link
+/*<!M><M><K>                                                       */ DEADTRANS( L'K'	,0xE516	,0xE518	,0x0001), // Intermediate multikey chain link
+/*<!M><m><n>                                                       */ DEADTRANS( L'n'	,0xE515	,0xE519	,0x0001), // Intermediate multikey chain link
+/*<!M><M><N>                                                       */ DEADTRANS( L'N'	,0xE516	,0xE51A	,0x0001), // Intermediate multikey chain link
+/*<!M><m><n><t>                                                    */ DEADTRANS( L't'	,0xE519	,0x20AE	,0x0000), // 't' ➔ "₮" U+20AE TUGRIK SIGN, Tugrik MONGOLIA
+/*<!M><M><N><T>                                                    */ DEADTRANS( L'T'	,0xE51A	,0x20AE	,0x0000), // 'T' ➔ "₮" U+20AE TUGRIK SIGN, Tugrik MONGOLIA
+/*<!M><m><r>                                                       */ DEADTRANS( L'r'	,0xE515	,0xDD6C	,0x0000), // High surrogate: D83C; 'r' ➔ "🅬" U+1F16C RAISED MR SIGN
+/*<!M><M><R>                                                       */ DEADTRANS( L'R'	,0xE516	,0xDD6C	,0x0000), // High surrogate: D83C; 'R' ➔ "🅬" U+1F16C RAISED MR SIGN
+/*<!M><m><s>                                                       */ DEADTRANS( L's'	,0xE515	,0x2120	,0x0000), // 's' ➔ "℠" U+2120 SERVICE MARK
+/*<!M><M><S>                                                       */ DEADTRANS( L'S'	,0xE516	,0x2120	,0x0000), // 'S' ➔ "℠" U+2120 SERVICE MARK
+/*<!M><m><t>                                                       */ DEADTRANS( L't'	,0xE515	,0x2122	,0x0000), // 't' ➔ "™" U+2122 TRADE MARK SIGN emoji
+/*<!M><M><T>                                                       */ DEADTRANS( L'T'	,0xE516	,0x2122	,0x0000), // 'T' ➔ "™" U+2122 TRADE MARK SIGN emoji
+/*<!M><m><u>                                                       */ DEADTRANS( L'u'	,0xE515	,0xE51B	,0x0001), // Intermediate multikey chain link
+/*<!M><M><U>                                                       */ DEADTRANS( L'U'	,0xE516	,0xE51C	,0x0001), // Intermediate multikey chain link
+/*<!M><m><u><l>                                                    */ DEADTRANS( L'l'	,0xE51B	,0x00A6	,0x0000), // 'l' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
+/*<!M><M><U><L>                                                    */ DEADTRANS( L'L'	,0xE51C	,0x00A6	,0x0000), // 'L' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
+/*<!M><m><u><r>                                                    */ DEADTRANS( L'r'	,0xE51B	,0x20A8	,0x0000), // 'r' ➔ "₨" U+20A8 RUPEE SIGN, Mauritius Rupee MAURITIUS
+/*<!M><M><U><R>                                                    */ DEADTRANS( L'R'	,0xE51C	,0x20A8	,0x0000), // 'R' ➔ "₨" U+20A8 RUPEE SIGN, Mauritius Rupee MAURITIUS
+/*<!M><m><u><~space>                                               */ DEADTRANS( L' '	,0xE51B	,0xA773	,0x0000), // ' ' ➔ "ꝳ" U+A773 LATIN SMALL LETTER MUM
+/*<!M><m><v>                                                       */ DEADTRANS( L'v'	,0xE515	,0xE51D	,0x0001), // Intermediate multikey chain link
+/*<!M><M><V>                                                       */ DEADTRANS( L'V'	,0xE516	,0xE51E	,0x0001), // Intermediate multikey chain link
+/*<!M><m><v><r>                                                    */ DEADTRANS( L'r'	,0xE51D	,0x0783	,0x0000), // 'r' ➔ "ރ" U+0783 THAANA LETTER RAA, Rufiyaa MALDIVES
+/*<!M><M><V><R>                                                    */ DEADTRANS( L'R'	,0xE51E	,0x0783	,0x0000), // 'R' ➔ "ރ" U+0783 THAANA LETTER RAA, Rufiyaa MALDIVES
+/*<!M><m><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE515	,0x29E2	,0x0000), // ' ' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
+/*<!M><m><~space>                                                  */ DEADTRANS( L' '	,0xE515	,0x29E2	,0x0000), // ' ' ➔ "⧢" U+29E2 SHUFFLE PRODUCT
+/*<!M><multiply>                                                   */ DEADTRANS( 0x00D7	,0x00A6	,0xE51F	,0x0001), // Intermediate multikey chain link
+/*<!M><multiply><division>                                         */ DEADTRANS( 0x00F7	,0xE51F	,0x22C7	,0x0000), // '÷' ➔ "⋇" U+22C7 DIVISION TIMES
+/*<!M><N>                                                          */ DEADTRANS( L'N'	,0x00A6	,0xE520	,0x0001), // Intermediate multikey chain link
+/*<!M><n>                                                          */ DEADTRANS( L'n'	,0x00A6	,0xE521	,0x0001), // Intermediate multikey chain link
+/*<!M><n><%bar>                                                    */ DEADTRANS( L'|'	,0xE521	,0x22D4	,0x0000), // '|' ➔ "⋔" U+22D4 PITCHFORK
+/*<!M><n><%bracketleft>                                            */ DEADTRANS( L'['	,0xE521	,0x2293	,0x0000), // '[' ➔ "⊓" U+2293 SQUARE CAP
+/*<!M><N><%bracketleft>                                            */ DEADTRANS( L'['	,0xE520	,0x2A05	,0x0000), // '[' ➔ "⨅" U+2A05 N-ARY SQUARE INTERSECTION OPERATOR
+/*<!M><n><%bracketright>                                           */ DEADTRANS( L']'	,0xE521	,0x2293	,0x0000), // ']' ➔ "⊓" U+2293 SQUARE CAP
+/*<!M><N><%bracketright>                                           */ DEADTRANS( L']'	,0xE520	,0x2A05	,0x0000), // ']' ➔ "⨅" U+2A05 N-ARY SQUARE INTERSECTION OPERATOR
+/*<!M><n><%circum>                                                 */ DEADTRANS( L'^'	,0xE521	,0x2A44	,0x0000), // '^' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><N><%circum>                                                 */ DEADTRANS( L'^'	,0xE520	,0x2A44	,0x0000), // '^' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><N><%equal>                                                  */ DEADTRANS( L'='	,0xE520	,0x20A6	,0x0000), // '=' ➔ "₦" U+20A6 NAIRA SIGN
+/*<!M><n><%equal>                                                  */ DEADTRANS( L'='	,0xE521	,0x266C	,0x0000), // '=' ➔ "♬" U+266C BEAMED SIXTEENTH NOTES
+/*<!M><N><%greater>                                                */ DEADTRANS( L'>'	,0xE520	,0x21AF	,0x0000), // '>' ➔ "↯" U+21AF DOWNWARDS ZIGZAG ARROW
+/*<!M><n><%greater>                                                */ DEADTRANS( L'>'	,0xE521	,0x21B7	,0x0000), // '>' ➔ "↷" U+21B7 CLOCKWISE TOP SEMICIRCLE ARROW
+/*<!M><n><%hash>                                                   */ DEADTRANS( L'#'	,0xE521	,0x266E	,0x0000), // '#' ➔ "♮" U+266E MUSIC NATURAL SIGN
+/*<!M><n><%less>                                                   */ DEADTRANS( L'<'	,0xE521	,0x21B6	,0x0000), // '<' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
+/*<!M><n><%period>                                                 */ DEADTRANS( L'.'	,0xE521	,0x2A40	,0x0000), // '.' ➔ "⩀" U+2A40 INTERSECTION WITH DOT
+/*<!M><N><%period>                                                 */ DEADTRANS( L'.'	,0xE520	,0x2A40	,0x0000), // '.' ➔ "⩀" U+2A40 INTERSECTION WITH DOT
+/*<!M><n><%underscore>                                             */ DEADTRANS( L'_'	,0xE521	,0xE522	,0x0001), // Intermediate multikey chain link
+/*<!M><N><%underscore>                                             */ DEADTRANS( L'_'	,0xE520	,0xE523	,0x0001), // Intermediate multikey chain link
+/*<!M><n><%underscore><u>                                          */ DEADTRANS( L'u'	,0xE522	,0x2A49	,0x0000), // 'u' ➔ "⩉" U+2A49 INTERSECTION ABOVE BAR ABOVE UNION
+/*<!M><N><%underscore><U>                                          */ DEADTRANS( L'U'	,0xE523	,0x2A49	,0x0000), // 'U' ➔ "⩉" U+2A49 INTERSECTION ABOVE BAR ABOVE UNION
+/*<!M><n><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE522	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
+/*<!M><N><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE523	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
+/*<!M><n><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE522	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
+/*<!M><N><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE523	,0x2A4D	,0x0000), // ' ' ➔ "⩍" U+2A4D CLOSED INTERSECTION WITH SERIFS
+/*<!M><n><2>                                                       */ DEADTRANS( L'2'	,0xE521	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
+/*<!M><N><2>                                                       */ DEADTRANS( L'2'	,0xE520	,0x21E7	,0x0000), // '2' ➔ "⇧" U+21E7 UPWARDS WHITE ARROW, shift
+/*<!M><n><3>                                                       */ DEADTRANS( L'3'	,0xE521	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
+/*<!M><N><3>                                                       */ DEADTRANS( L'3'	,0xE520	,0x21EE	,0x0000), // '3' ➔ "⇮" U+21EE UPWARDS WHITE DOUBLE ARROW, level-3 select
+/*<!M><n><4>                                                       */ DEADTRANS( L'4'	,0xE521	,0x2669	,0x0000), // '4' ➔ "♩" U+2669 QUARTER NOTE
+/*<!M><N><4>                                                       */ DEADTRANS( L'4'	,0xE520	,0x2669	,0x0000), // '4' ➔ "♩" U+2669 QUARTER NOTE
+/*<!M><n><5>                                                       */ DEADTRANS( L'5'	,0xE521	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
+/*<!M><N><5>                                                       */ DEADTRANS( L'5'	,0xE520	,0x27F0	,0x0000), // '5' ➔ "⟰" U+27F0 UPWARDS QUADRUPLE ARROW
+/*<!M><n><8>                                                       */ DEADTRANS( L'8'	,0xE521	,0x266A	,0x0000), // '8' ➔ "♪" U+266A EIGHTH NOTE
+/*<!M><N><8>                                                       */ DEADTRANS( L'8'	,0xE520	,0x266A	,0x0000), // '8' ➔ "♪" U+266A EIGHTH NOTE
+/*<!M><n><a>                                                       */ DEADTRANS( L'a'	,0xE521	,0xE524	,0x0001), // Intermediate multikey chain link
+/*<!M><N><A>                                                       */ DEADTRANS( L'A'	,0xE520	,0xE525	,0x0001), // Intermediate multikey chain link
+/*<!M><n><a><n>                                                    */ DEADTRANS( L'n'	,0xE524	,0x22BC	,0x0000), // 'n' ➔ "⊼" U+22BC NAND
+/*<!M><N><A><N>                                                    */ DEADTRANS( L'N'	,0xE525	,0x22BC	,0x0000), // 'N' ➔ "⊼" U+22BC NAND
+/*<!M><n><a><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE524	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><N><A><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE525	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><n><a><~space>                                               */ DEADTRANS( L' '	,0xE524	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><N><A><~space>                                               */ DEADTRANS( L' '	,0xE525	,0x2A44	,0x0000), // ' ' ➔ "⩄" U+2A44 INTERSECTION WITH LOGICAL AND
+/*<!M><n><b>                                                       */ DEADTRANS( L'b'	,0xE521	,0xE526	,0x0001), // Intermediate multikey chain link
+/*<!M><N><B>                                                       */ DEADTRANS( L'B'	,0xE520	,0xE527	,0x0001), // Intermediate multikey chain link
+/*<!M><n><b><s>                                                    */ DEADTRANS( L's'	,0xE526	,0x25BF	,0x0000), // 's' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><N><B><S>                                                    */ DEADTRANS( L'S'	,0xE527	,0x25BF	,0x0000), // 'S' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><n><b><t>                                                    */ DEADTRANS( L't'	,0xE526	,0x25BE	,0x0000), // 't' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><N><B><T>                                                    */ DEADTRANS( L'T'	,0xE527	,0x25BE	,0x0000), // 'T' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><n><e>                                                       */ DEADTRANS( L'e'	,0xE521	,0xE528	,0x0001), // Intermediate multikey chain link
+/*<!M><N><E>                                                       */ DEADTRANS( L'E'	,0xE520	,0xE529	,0x0001), // Intermediate multikey chain link
+/*<!M><n><e><i>                                                    */ DEADTRANS( L'i'	,0xE528	,0x2744	,0x0000), // 'i' ➔ "❄" U+2744 SNOWFLAKE emoji
+/*<!M><N><E><I>                                                    */ DEADTRANS( L'I'	,0xE529	,0x2744	,0x0000), // 'I' ➔ "❄" U+2744 SNOWFLAKE emoji
+/*<!M><N><G>                                                       */ DEADTRANS( L'G'	,0xE520	,0xE52A	,0x0001), // Intermediate multikey chain link
+/*<!M><n><g>                                                       */ DEADTRANS( L'g'	,0xE521	,0xE52B	,0x0001), // Intermediate multikey chain link
+/*<!M><N><g>                                                       */ DEADTRANS( L'g'	,0xE520	,0x014A	,0x0000), // 'g' ➔ "Ŋ" U+014A LATIN CAPITAL LETTER ENG
+/*<!M><n><g><n>                                                    */ DEADTRANS( L'n'	,0xE52B	,0x20A6	,0x0000), // 'n' ➔ "₦" U+20A6 NAIRA SIGN, Naira NIGERIA
+/*<!M><N><G><N>                                                    */ DEADTRANS( L'N'	,0xE52A	,0x20A6	,0x0000), // 'N' ➔ "₦" U+20A6 NAIRA SIGN, Naira NIGERIA
+/*<!M><N><G><~space>                                               */ DEADTRANS( L' '	,0xE52A	,0x014A	,0x0000), // ' ' ➔ "Ŋ" U+014A LATIN CAPITAL LETTER ENG
+/*<!M><n><g><~space>                                               */ DEADTRANS( L' '	,0xE52B	,0x014B	,0x0000), // ' ' ➔ "ŋ" U+014B LATIN SMALL LETTER ENG
+/*<!M><n><I>                                                       */ DEADTRANS( L'I'	,0xE521	,0x2ADB	,0x0000), // 'I' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
+/*<!M><N><J>                                                       */ DEADTRANS( L'J'	,0xE520	,0x01CA	,0x0000), // 'J' ➔ "Ǌ" U+01CA LATIN CAPITAL LETTER NJ
+/*<!M><N><j>                                                       */ DEADTRANS( L'j'	,0xE520	,0x01CB	,0x0000), // 'j' ➔ "ǋ" U+01CB LATIN CAPITAL LETTER N WITH SMALL LETTER J
+/*<!M><n><j>                                                       */ DEADTRANS( L'j'	,0xE521	,0x01CC	,0x0000), // 'j' ➔ "ǌ" U+01CC LATIN SMALL LETTER NJ
+/*<!M><n><m>                                                       */ DEADTRANS( L'm'	,0xE521	,0xE52C	,0x0001), // Intermediate multikey chain link
+/*<!M><N><M>                                                       */ DEADTRANS( L'M'	,0xE520	,0xE52D	,0x0001), // Intermediate multikey chain link
+/*<!M><n><m><l>                                                    */ DEADTRANS( L'l'	,0xE52C	,0x21ED	,0x0000), // 'l' ➔ "⇭" U+21ED UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
+/*<!M><N><M><L>                                                    */ DEADTRANS( L'L'	,0xE52D	,0x21ED	,0x0000), // 'L' ➔ "⇭" U+21ED UPWARDS WHITE ARROW ON PEDESTAL WITH VERTICAL BAR, numeric lock
+/*<!M><N><N>                                                       */ DEADTRANS( L'N'	,0xE520	,0x2115	,0x0000), // 'N' ➔ "ℕ" U+2115 DOUBLE-STRUCK CAPITAL N
+/*<!M><n><n>                                                       */ DEADTRANS( L'n'	,0xE521	,0x2A4B	,0x0000), // 'n' ➔ "⩋" U+2A4B INTERSECTION BESIDE AND JOINED WITH INTERSECTION
+/*<!M><n><o>                                                       */ DEADTRANS( L'o'	,0xE521	,0xE52E	,0x0001), // Intermediate multikey chain link
+/*<!M><N><O>                                                       */ DEADTRANS( L'O'	,0xE520	,0xE52F	,0x0001), // Intermediate multikey chain link
+/*<!M><N><o>                                                       */ DEADTRANS( L'o'	,0xE520	,0x2116	,0x0000), // 'o' ➔ "№" U+2116 NUMERO SIGN
+/*<!M><n><O>                                                       */ DEADTRANS( L'O'	,0xE521	,0x2116	,0x0000), // 'O' ➔ "№" U+2116 NUMERO SIGN
+/*<!M><n><o><%underscore>                                          */ DEADTRANS( L'_'	,0xE52E	,0x2116	,0x0000), // '_' ➔ "№" U+2116 NUMERO SIGN
+/*<!M><N><O><%underscore>                                          */ DEADTRANS( L'_'	,0xE52F	,0x2116	,0x0000), // '_' ➔ "№" U+2116 NUMERO SIGN
+/*<!M><n><o><r>                                                    */ DEADTRANS( L'r'	,0xE52E	,0x22BD	,0x0000), // 'r' ➔ "⊽" U+22BD NOR
+/*<!M><N><O><R>                                                    */ DEADTRANS( L'R'	,0xE52F	,0x22BD	,0x0000), // 'R' ➔ "⊽" U+22BD NOR
+/*<!M><n><p>                                                       */ DEADTRANS( L'p'	,0xE521	,0xE530	,0x0001), // Intermediate multikey chain link
+/*<!M><N><P>                                                       */ DEADTRANS( L'P'	,0xE520	,0xE531	,0x0001), // Intermediate multikey chain link
+/*<!M><n><s>                                                       */ DEADTRANS( L's'	,0xE521	,0x20AA	,0x0000), // 's' ➔ "₪" U+20AA NEW SHEQEL SIGN
+/*<!M><N><S>                                                       */ DEADTRANS( L'S'	,0xE520	,0x20AA	,0x0000), // 'S' ➔ "₪" U+20AA NEW SHEQEL SIGN
+/*<!M><n><u>                                                       */ DEADTRANS( L'u'	,0xE521	,0xE532	,0x0001), // Intermediate multikey chain link
+/*<!M><N><U>                                                       */ DEADTRANS( L'U'	,0xE520	,0xE533	,0x0001), // Intermediate multikey chain link
+/*<!M><n><u><m>                                                    */ DEADTRANS( L'm'	,0xE532	,0xA774	,0x0000), // 'm' ➔ "ꝴ" U+A774 LATIN SMALL LETTER NUM
+/*<!M><n><u><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE532	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
+/*<!M><N><U><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE533	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
+/*<!M><n><u><~space>                                               */ DEADTRANS( L' '	,0xE532	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
+/*<!M><N><U><~space>                                               */ DEADTRANS( L' '	,0xE533	,0x2A47	,0x0000), // ' ' ➔ "⩇" U+2A47 INTERSECTION ABOVE UNION
+/*<!M><n><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE521	,0x2229	,0x0000), // ' ' ➔ "∩" U+2229 INTERSECTION
+/*<!M><N><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE520	,0x22C2	,0x0000), // ' ' ➔ "⋂" U+22C2 N-ARY INTERSECTION
+/*<!M><n><~space>                                                  */ DEADTRANS( L' '	,0xE521	,0x2229	,0x0000), // ' ' ➔ "∩" U+2229 INTERSECTION
+/*<!M><N><~space>                                                  */ DEADTRANS( L' '	,0xE520	,0x22C2	,0x0000), // ' ' ➔ "⋂" U+22C2 N-ARY INTERSECTION
+/*<!M><o>                                                          */ DEADTRANS( L'o'	,0x00A6	,0xE534	,0x0001), // Intermediate multikey chain link
+/*<!M><O>                                                          */ DEADTRANS( L'O'	,0x00A6	,0xE535	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%asterisk>                                               */ DEADTRANS( L'*'	,0xE534	,0x229B	,0x0000), // '*' ➔ "⊛" U+229B CIRCLED ASTERISK OPERATOR
+/*<!M><O><%asterisk>                                               */ DEADTRANS( L'*'	,0xE535	,0x229B	,0x0000), // '*' ➔ "⊛" U+229B CIRCLED ASTERISK OPERATOR
+/*<!M><o><%backslash>                                              */ DEADTRANS( L'\\'	,0xE534	,0xE536	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%backslash>                                              */ DEADTRANS( L'\\'	,0xE535	,0xE537	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%backslash><c>                                           */ DEADTRANS( L'c'	,0xE536	,0xDD6E	,0x0000), // High surrogate: D83C; 'c' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
+/*<!M><o><%backslash><C>                                           */ DEADTRANS( L'C'	,0xE536	,0xDD6E	,0x0000), // High surrogate: D83C; 'C' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
+/*<!M><O><%backslash><C>                                           */ DEADTRANS( L'C'	,0xE537	,0xDD6E	,0x0000), // High surrogate: D83C; 'C' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
+/*<!M><O><%backslash><c>                                           */ DEADTRANS( L'c'	,0xE537	,0xDD6E	,0x0000), // High surrogate: D83C; 'c' ➔ "🅮" U+1F16E CIRCLED C WITH OVERLAID BACKSLASH
+/*<!M><O><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE537	,0x29B8	,0x0000), // ' ' ➔ "⦸" U+29B8 CIRCLED REVERSE SOLIDUS
+/*<!M><o><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE536	,0x29F5	,0x0000), // ' ' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><O><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE537	,0x29B8	,0x0000), // ' ' ➔ "⦸" U+29B8 CIRCLED REVERSE SOLIDUS
+/*<!M><o><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE536	,0x29F5	,0x0000), // ' ' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><o><%bar>                                                    */ DEADTRANS( L'|'	,0xE534	,0xE538	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%bar>                                                    */ DEADTRANS( L'|'	,0xE535	,0xE539	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%bar><%bar>                                              */ DEADTRANS( L'|'	,0xE539	,0x29B7	,0x0000), // '|' ➔ "⦷" U+29B7 CIRCLED PARALLEL
+/*<!M><o><%bar><%bar>                                              */ DEADTRANS( L'|'	,0xE538	,0x29B7	,0x0000), // '|' ➔ "⦷" U+29B7 CIRCLED PARALLEL
+/*<!M><o><%bar><%hash>                                             */ DEADTRANS( L'#'	,0xE538	,0x25D1	,0x0000), // '#' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
+/*<!M><O><%bar><%hash>                                             */ DEADTRANS( L'#'	,0xE539	,0x25D1	,0x0000), // '#' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
+/*<!M><o><%bar><%underscore>                                       */ DEADTRANS( L'_'	,0xE538	,0x27DF	,0x0000), // '_' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><O><%bar><%underscore>                                       */ DEADTRANS( L'_'	,0xE539	,0x29B9	,0x0000), // '_' ➔ "⦹" U+29B9 CIRCLED PERPENDICULAR
+/*<!M><O><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE539	,0x29B6	,0x0000), // ' ' ➔ "⦶" U+29B6 CIRCLED VERTICAL BAR
+/*<!M><o><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE538	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
+/*<!M><O><%bar><~space>                                            */ DEADTRANS( L' '	,0xE539	,0x29B6	,0x0000), // ' ' ➔ "⦶" U+29B6 CIRCLED VERTICAL BAR
+/*<!M><o><%bar><~space>                                            */ DEADTRANS( L' '	,0xE538	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
+/*<!M><o><%circum>                                                 */ DEADTRANS( L'^'	,0xE534	,0x2A22	,0x0000), // '^' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
+/*<!M><o><%colon>                                                  */ DEADTRANS( L':'	,0xE534	,0xE53A	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%colon>                                                  */ DEADTRANS( L':'	,0xE535	,0xE53B	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%colon><%minus>                                          */ DEADTRANS( L'-'	,0xE53B	,0x2A38	,0x0000), // '-' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
+/*<!M><o><%colon><%minus>                                          */ DEADTRANS( L'-'	,0xE53A	,0x2A38	,0x0000), // '-' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
+/*<!M><O><%colon><%slash>                                          */ DEADTRANS( L'/'	,0xE53B	,0x29BC	,0x0000), // '/' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><o><%colon><%slash>                                          */ DEADTRANS( L'/'	,0xE53A	,0x29BC	,0x0000), // '/' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><o><%colon><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE53A	,0x2982	,0x0000), // ' ' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><o><%colon><~space>                                          */ DEADTRANS( L' '	,0xE53A	,0x2982	,0x0000), // ' ' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><o><%equal>                                                  */ DEADTRANS( L'='	,0xE534	,0x2257	,0x0000), // '=' ➔ "≗" U+2257 RING EQUAL TO
+/*<!M><O><%equal>                                                  */ DEADTRANS( L'='	,0xE535	,0x29C3	,0x0000), // '=' ➔ "⧃" U+29C3 CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
+/*<!M><O><%exclam>                                                 */ DEADTRANS( L'!'	,0xE535	,0x29EC	,0x0000), // '!' ➔ "⧬" U+29EC WHITE CIRCLE WITH DOWN ARROW
+/*<!M><o><%greater>                                                */ DEADTRANS( L'>'	,0xE534	,0x2941	,0x0000), // '>' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><O><%greater>                                                */ DEADTRANS( L'>'	,0xE535	,0x29C1	,0x0000), // '>' ➔ "⧁" U+29C1 CIRCLED GREATER-THAN
+/*<!M><o><%hash>                                                   */ DEADTRANS( L'#'	,0xE534	,0xE53C	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%hash>                                                   */ DEADTRANS( L'#'	,0xE535	,0xE53D	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%hash><%bar>                                             */ DEADTRANS( L'|'	,0xE53C	,0x25D0	,0x0000), // '|' ➔ "◐" U+25D0 CIRCLE WITH LEFT HALF BLACK
+/*<!M><O><%hash><%bar>                                             */ DEADTRANS( L'|'	,0xE53D	,0x25D0	,0x0000), // '|' ➔ "◐" U+25D0 CIRCLE WITH LEFT HALF BLACK
+/*<!M><O><%hash><%exclam>                                          */ DEADTRANS( L'!'	,0xE53D	,0x29ED	,0x0000), // '!' ➔ "⧭" U+29ED BLACK CIRCLE WITH DOWN ARROW
+/*<!M><o><%hash><%minus>                                           */ DEADTRANS( L'-'	,0xE53C	,0x25D3	,0x0000), // '-' ➔ "◓" U+25D3 CIRCLE WITH UPPER HALF BLACK
+/*<!M><O><%hash><%minus>                                           */ DEADTRANS( L'-'	,0xE53D	,0x25D3	,0x0000), // '-' ➔ "◓" U+25D3 CIRCLE WITH UPPER HALF BLACK
+/*<!M><o><%hash><e>                                                */ DEADTRANS( L'e'	,0xE53C	,0xAB62	,0x0000), // 'e' ➔ "ꭢ" U+AB62 LATIN SMALL LETTER OPEN OE
+/*<!M><o><%hash><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53C	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><O><%hash><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53D	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><o><%hash><~space>                                           */ DEADTRANS( L' '	,0xE53C	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><O><%hash><~space>                                           */ DEADTRANS( L' '	,0xE53D	,0x25CF	,0x0000), // ' ' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><O><%less>                                                   */ DEADTRANS( L'<'	,0xE535	,0xE53E	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%less>                                                   */ DEADTRANS( L'<'	,0xE534	,0x2940	,0x0000), // '<' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><O><%less><%exclam>                                          */ DEADTRANS( L'!'	,0xE53E	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
+/*<!M><O><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE53E	,0x29C0	,0x0000), // ' ' ➔ "⧀" U+29C0 CIRCLED LESS-THAN
+/*<!M><O><%less><~space>                                           */ DEADTRANS( L' '	,0xE53E	,0x29C0	,0x0000), // ' ' ➔ "⧀" U+29C0 CIRCLED LESS-THAN
+/*<!M><o><%minus>                                                  */ DEADTRANS( L'-'	,0xE534	,0xE53F	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%minus>                                                  */ DEADTRANS( L'-'	,0xE535	,0xE540	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%minus><%bar>                                            */ DEADTRANS( L'|'	,0xE540	,0x29BA	,0x0000), // '|' ➔ "⦺" U+29BA CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
+/*<!M><O><%minus><%colon>                                          */ DEADTRANS( L':'	,0xE540	,0x2A38	,0x0000), // ':' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
+/*<!M><o><%minus><%colon>                                          */ DEADTRANS( L':'	,0xE53F	,0x2A38	,0x0000), // ':' ➔ "⨸" U+2A38 CIRCLED DIVISION SIGN
+/*<!M><o><%minus><%greater>                                        */ DEADTRANS( L'>'	,0xE53F	,0x21AC	,0x0000), // '>' ➔ "↬" U+21AC RIGHTWARDS ARROW WITH LOOP
+/*<!M><O><%minus><%greater>                                        */ DEADTRANS( L'>'	,0xE540	,0x21AC	,0x0000), // '>' ➔ "↬" U+21AC RIGHTWARDS ARROW WITH LOOP
+/*<!M><o><%minus><%hash>                                           */ DEADTRANS( L'#'	,0xE53F	,0x25D2	,0x0000), // '#' ➔ "◒" U+25D2 CIRCLE WITH LOWER HALF BLACK
+/*<!M><O><%minus><%hash>                                           */ DEADTRANS( L'#'	,0xE540	,0x25D2	,0x0000), // '#' ➔ "◒" U+25D2 CIRCLE WITH LOWER HALF BLACK
+/*<!M><o><%minus><%minus>                                          */ DEADTRANS( L'-'	,0xE53F	,0x229D	,0x0000), // '-' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><O><%minus><%minus>                                          */ DEADTRANS( L'-'	,0xE540	,0x229D	,0x0000), // '-' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><o><%minus><%period>                                         */ DEADTRANS( L'.'	,0xE53F	,0x22B6	,0x0000), // '.' ➔ "⊶" U+22B6 ORIGINAL OF
+/*<!M><o><%minus><o>                                               */ DEADTRANS( L'o'	,0xE53F	,0x29DF	,0x0000), // 'o' ➔ "⧟" U+29DF DOUBLE-ENDED MULTIMAP
+/*<!M><o><%minus><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE53F	,0x2296	,0x0000), // ' ' ➔ "⊖" U+2296 CIRCLED MINUS
+/*<!M><O><%minus><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE540	,0x29B5	,0x0000), // ' ' ➔ "⦵" U+29B5 CIRCLE WITH HORIZONTAL BAR
+/*<!M><o><%minus><~space>                                          */ DEADTRANS( L' '	,0xE53F	,0x2296	,0x0000), // ' ' ➔ "⊖" U+2296 CIRCLED MINUS
+/*<!M><O><%minus><~space>                                          */ DEADTRANS( L' '	,0xE540	,0x29B5	,0x0000), // ' ' ➔ "⦵" U+29B5 CIRCLE WITH HORIZONTAL BAR
+/*<!M><o><%parenright>                                             */ DEADTRANS( L')'	,0xE534	,0x29DC	,0x0000), // ')' ➔ "⧜" U+29DC INCOMPLETE INFINITY
+/*<!M><O><%parenright>                                             */ DEADTRANS( L')'	,0xE535	,0x29DC	,0x0000), // ')' ➔ "⧜" U+29DC INCOMPLETE INFINITY
+/*<!M><O><%percent>                                                */ DEADTRANS( L'%'	,0xE535	,0xE541	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%percent>                                                */ DEADTRANS( L'%'	,0xE534	,0x2127	,0x0000), // '%' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><O><%percent><C>                                             */ DEADTRANS( L'C'	,0xE541	,0xDD2F	,0x0000), // High surrogate: D83C; 'C' ➔ "🄯" U+1F12F COPYLEFT SYMBOL
+/*<!M><O><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE541	,0x2127	,0x0000), // ' ' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><O><%percent><~space>                                        */ DEADTRANS( L' '	,0xE541	,0x2127	,0x0000), // ' ' ➔ "℧" U+2127 INVERTED OHM SIGN
+/*<!M><o><%period>                                                 */ DEADTRANS( L'.'	,0xE534	,0x2299	,0x0000), // '.' ➔ "⊙" U+2299 CIRCLED DOT OPERATOR
+/*<!M><O><%period>                                                 */ DEADTRANS( L'.'	,0xE535	,0x2A00	,0x0000), // '.' ➔ "⨀" U+2A00 N-ARY CIRCLED DOT OPERATOR
+/*<!M><o><%plus>                                                   */ DEADTRANS( L'+'	,0xE534	,0xE542	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%plus>                                                   */ DEADTRANS( L'+'	,0xE535	,0xE543	,0x0001), // Intermediate multikey chain link
+/*<!M><o><%plus><%minus>                                           */ DEADTRANS( L'-'	,0xE542	,0x27F4	,0x0000), // '-' ➔ "⟴" U+27F4 RIGHT ARROW WITH CIRCLED PLUS
+/*<!M><O><%plus><%minus>                                           */ DEADTRANS( L'-'	,0xE543	,0x27F4	,0x0000), // '-' ➔ "⟴" U+27F4 RIGHT ARROW WITH CIRCLED PLUS
+/*<!M><o><%plus><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE542	,0x2295	,0x0000), // ' ' ➔ "⊕" U+2295 CIRCLED PLUS
+/*<!M><O><%plus><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE543	,0x2A01	,0x0000), // ' ' ➔ "⨁" U+2A01 N-ARY CIRCLED PLUS OPERATOR
+/*<!M><o><%plus><~space>                                           */ DEADTRANS( L' '	,0xE542	,0x2295	,0x0000), // ' ' ➔ "⊕" U+2295 CIRCLED PLUS
+/*<!M><O><%plus><~space>                                           */ DEADTRANS( L' '	,0xE543	,0x2A01	,0x0000), // ' ' ➔ "⨁" U+2A01 N-ARY CIRCLED PLUS OPERATOR
+/*<!M><o><%semicolon>                                              */ DEADTRANS( L';'	,0xE534	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><o><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE534	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><o><%slash>                                                  */ DEADTRANS( L'/'	,0xE534	,0xE544	,0x0001), // Intermediate multikey chain link
+/*<!M><O><%slash>                                                  */ DEADTRANS( L'/'	,0xE535	,0x2205	,0x0000), // '/' ➔ "∅" U+2205 EMPTY SET
+/*<!M><o><%slash><%greater>                                        */ DEADTRANS( L'>'	,0xE544	,0x2642	,0x0000), // '>' ➔ "♂" U+2642 MALE SIGN
+/*<!M><o><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE544	,0x2300	,0x0000), // ' ' ➔ "⌀" U+2300 DIAMETER SIGN
+/*<!M><o><%slash><~space>                                          */ DEADTRANS( L' '	,0xE544	,0x2300	,0x0000), // ' ' ➔ "⌀" U+2300 DIAMETER SIGN
+/*<!M><o><%tilde>                                                  */ DEADTRANS( L'~'	,0xE534	,0x2134	,0x0000), // '~' ➔ "ℴ" U+2134 SCRIPT SMALL O
+/*<!M><o><%underscore>                                             */ DEADTRANS( L'_'	,0xE534	,0x00BA	,0x0000), // '_' ➔ "º" U+00BA MASCULINE ORDINAL INDICATOR
+/*<!M><O><%underscore>                                             */ DEADTRANS( L'_'	,0xE535	,0x00BA	,0x0000), // '_' ➔ "º" U+00BA MASCULINE ORDINAL INDICATOR
+/*<!M><o><0>                                                       */ DEADTRANS( L'0'	,0xE534	,0x2469	,0x0000), // '0' ➔ "⑩" U+2469 CIRCLED NUMBER TEN
+/*<!M><O><0>                                                       */ DEADTRANS( L'0'	,0xE535	,0x2469	,0x0000), // '0' ➔ "⑩" U+2469 CIRCLED NUMBER TEN
+/*<!M><o><1>                                                       */ DEADTRANS( L'1'	,0xE534	,0x2460	,0x0000), // '1' ➔ "①" U+2460 CIRCLED DIGIT ONE
+/*<!M><O><1>                                                       */ DEADTRANS( L'1'	,0xE535	,0x2460	,0x0000), // '1' ➔ "①" U+2460 CIRCLED DIGIT ONE
+/*<!M><o><2>                                                       */ DEADTRANS( L'2'	,0xE534	,0x2461	,0x0000), // '2' ➔ "②" U+2461 CIRCLED DIGIT TWO
+/*<!M><O><2>                                                       */ DEADTRANS( L'2'	,0xE535	,0x2461	,0x0000), // '2' ➔ "②" U+2461 CIRCLED DIGIT TWO
+/*<!M><o><3>                                                       */ DEADTRANS( L'3'	,0xE534	,0x2462	,0x0000), // '3' ➔ "③" U+2462 CIRCLED DIGIT THREE
+/*<!M><O><3>                                                       */ DEADTRANS( L'3'	,0xE535	,0x2462	,0x0000), // '3' ➔ "③" U+2462 CIRCLED DIGIT THREE
+/*<!M><o><4>                                                       */ DEADTRANS( L'4'	,0xE534	,0x2463	,0x0000), // '4' ➔ "④" U+2463 CIRCLED DIGIT FOUR
+/*<!M><O><4>                                                       */ DEADTRANS( L'4'	,0xE535	,0x2463	,0x0000), // '4' ➔ "④" U+2463 CIRCLED DIGIT FOUR
+/*<!M><o><5>                                                       */ DEADTRANS( L'5'	,0xE534	,0x2464	,0x0000), // '5' ➔ "⑤" U+2464 CIRCLED DIGIT FIVE
+/*<!M><O><5>                                                       */ DEADTRANS( L'5'	,0xE535	,0x2464	,0x0000), // '5' ➔ "⑤" U+2464 CIRCLED DIGIT FIVE
+/*<!M><o><6>                                                       */ DEADTRANS( L'6'	,0xE534	,0x2465	,0x0000), // '6' ➔ "⑥" U+2465 CIRCLED DIGIT SIX
+/*<!M><O><6>                                                       */ DEADTRANS( L'6'	,0xE535	,0x2465	,0x0000), // '6' ➔ "⑥" U+2465 CIRCLED DIGIT SIX
+/*<!M><o><7>                                                       */ DEADTRANS( L'7'	,0xE534	,0x2466	,0x0000), // '7' ➔ "⑦" U+2466 CIRCLED DIGIT SEVEN
+/*<!M><O><7>                                                       */ DEADTRANS( L'7'	,0xE535	,0x2466	,0x0000), // '7' ➔ "⑦" U+2466 CIRCLED DIGIT SEVEN
+/*<!M><o><8>                                                       */ DEADTRANS( L'8'	,0xE534	,0x2467	,0x0000), // '8' ➔ "⑧" U+2467 CIRCLED DIGIT EIGHT
+/*<!M><O><8>                                                       */ DEADTRANS( L'8'	,0xE535	,0x2467	,0x0000), // '8' ➔ "⑧" U+2467 CIRCLED DIGIT EIGHT
+/*<!M><o><9>                                                       */ DEADTRANS( L'9'	,0xE534	,0x2468	,0x0000), // '9' ➔ "⑨" U+2468 CIRCLED DIGIT NINE
+/*<!M><O><9>                                                       */ DEADTRANS( L'9'	,0xE535	,0x2468	,0x0000), // '9' ➔ "⑨" U+2468 CIRCLED DIGIT NINE
+/*<!M><o><A>                                                       */ DEADTRANS( L'A'	,0xE534	,0x212B	,0x0000), // 'A' ➔ "Å" U+212B ANGSTROM SIGN
+/*<!M><o><a>                                                       */ DEADTRANS( L'a'	,0xE534	,0x212B	,0x0000), // 'a' ➔ "Å" U+212B ANGSTROM SIGN
+/*<!M><O><A>                                                       */ DEADTRANS( L'A'	,0xE535	,0x212B	,0x0000), // 'A' ➔ "Å" U+212B ANGSTROM SIGN
+/*<!M><O><a>                                                       */ DEADTRANS( L'a'	,0xE535	,0x212B	,0x0000), // 'a' ➔ "Å" U+212B ANGSTROM SIGN
+/*<!M><o><b>                                                       */ DEADTRANS( L'b'	,0xE534	,0xDD6F	,0x0000), // High surrogate: D83C; 'b' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
+/*<!M><O><b>                                                       */ DEADTRANS( L'b'	,0xE535	,0xDD6F	,0x0000), // High surrogate: D83C; 'b' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
+/*<!M><O><B>                                                       */ DEADTRANS( L'B'	,0xE535	,0xDD6F	,0x0000), // High surrogate: D83C; 'B' ➔ "🅯" U+1F16F CIRCLED HUMAN FIGURE
+/*<!M><o><c>                                                       */ DEADTRANS( L'c'	,0xE534	,0x00A9	,0x0000), // 'c' ➔ "©" U+00A9 COPYRIGHT SIGN emoji
+/*<!M><O><c>                                                       */ DEADTRANS( L'c'	,0xE535	,0x00A9	,0x0000), // 'c' ➔ "©" U+00A9 COPYRIGHT SIGN emoji
+/*<!M><o><C>                                                       */ DEADTRANS( L'C'	,0xE534	,0xDD6D	,0x0000), // High surrogate: D83C; 'C' ➔ "🅭" U+1F16D CIRCLED CC
+/*<!M><O><C>                                                       */ DEADTRANS( L'C'	,0xE535	,0xDD6D	,0x0000), // High surrogate: D83C; 'C' ➔ "🅭" U+1F16D CIRCLED CC
+/*<!M><O><E>                                                       */ DEADTRANS( L'E'	,0xE535	,0x0152	,0x0000), // 'E' ➔ "Œ" U+0152 LATIN CAPITAL LIGATURE OE
+/*<!M><O><e>                                                       */ DEADTRANS( L'e'	,0xE535	,0x0152	,0x0000), // 'e' ➔ "Œ" U+0152 LATIN CAPITAL LIGATURE OE
+/*<!M><o><e>                                                       */ DEADTRANS( L'e'	,0xE534	,0x0153	,0x0000), // 'e' ➔ "œ" U+0153 LATIN SMALL LIGATURE OE
+/*<!M><o><h>                                                       */ DEADTRANS( L'h'	,0xE534	,0x2126	,0x0000), // 'h' ➔ "Ω" U+2126 OHM SIGN
+/*<!M><O><h>                                                       */ DEADTRANS( L'h'	,0xE535	,0x2126	,0x0000), // 'h' ➔ "Ω" U+2126 OHM SIGN
+/*<!M><O><H>                                                       */ DEADTRANS( L'H'	,0xE535	,0x2126	,0x0000), // 'H' ➔ "Ω" U+2126 OHM SIGN
+/*<!M><o><i>                                                       */ DEADTRANS( L'i'	,0xE534	,0xE545	,0x0001), // Intermediate multikey chain link
+/*<!M><O><I>                                                       */ DEADTRANS( L'I'	,0xE535	,0x23FB	,0x0000), // 'I' ➔ "⏻" U+23FB POWER SYMBOL
+/*<!M><o><I>                                                       */ DEADTRANS( L'I'	,0xE534	,0x2AEF	,0x0000), // 'I' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
+/*<!M><o><i><n>                                                    */ DEADTRANS( L'n'	,0xE545	,0xE546	,0x0001), // Intermediate multikey chain link
+/*<!M><o><i><n><f>                                                 */ DEADTRANS( L'f'	,0xE546	,0x1D17	,0x0000), // 'f' ➔ "ᴗ" U+1D17 LATIN SMALL LETTER BOTTOM HALF O
+/*<!M><o><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE545	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
+/*<!M><o><i><~space>                                               */ DEADTRANS( L' '	,0xE545	,0x2AEF	,0x0000), // ' ' ➔ "⫯" U+2AEF VERTICAL LINE WITH CIRCLE ABOVE
+/*<!M><o><m>                                                       */ DEADTRANS( L'm'	,0xE534	,0xE547	,0x0001), // Intermediate multikey chain link
+/*<!M><O><M>                                                       */ DEADTRANS( L'M'	,0xE535	,0xE548	,0x0001), // Intermediate multikey chain link
+/*<!M><O><o>                                                       */ DEADTRANS( L'o'	,0xE535	,0xE549	,0x0001), // Intermediate multikey chain link
+/*<!M><o><O>                                                       */ DEADTRANS( L'O'	,0xE534	,0x29B2	,0x0000), // 'O' ➔ "⦲" U+29B2 EMPTY SET WITH SMALL CIRCLE ABOVE
+/*<!M><O><O>                                                       */ DEADTRANS( L'O'	,0xE535	,0xA74E	,0x0000), // 'O' ➔ "Ꝏ" U+A74E LATIN CAPITAL LETTER OO
+/*<!M><o><o>                                                       */ DEADTRANS( L'o'	,0xE534	,0xA74F	,0x0000), // 'o' ➔ "ꝏ" U+A74F LATIN SMALL LETTER OO
+/*<!M><O><o><x>                                                    */ DEADTRANS( L'x'	,0xE549	,0x2A37	,0x0000), // 'x' ➔ "⨷" U+2A37 MULTIPLICATION SIGN IN DOUBLE CIRCLE
+/*<!M><O><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE549	,0x229A	,0x0000), // ' ' ➔ "⊚" U+229A CIRCLED RING OPERATOR
+/*<!M><O><o><~space>                                               */ DEADTRANS( L' '	,0xE549	,0x229A	,0x0000), // ' ' ➔ "⊚" U+229A CIRCLED RING OPERATOR
+/*<!M><o><p>                                                       */ DEADTRANS( L'p'	,0xE534	,0xE54A	,0x0001), // Intermediate multikey chain link
+/*<!M><O><P>                                                       */ DEADTRANS( L'P'	,0xE535	,0xE54B	,0x0001), // Intermediate multikey chain link
+/*<!M><o><P>                                                       */ DEADTRANS( L'P'	,0xE534	,0x2117	,0x0000), // 'P' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
+/*<!M><O><p>                                                       */ DEADTRANS( L'p'	,0xE535	,0x2117	,0x0000), // 'p' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
+/*<!M><o><p><h>                                                    */ DEADTRANS( L'h'	,0xE54A	,0x26CE	,0x0000), // 'h' ➔ "⛎" U+26CE OPHIUCHUS emoji
+/*<!M><O><P><H>                                                    */ DEADTRANS( L'H'	,0xE54B	,0x26CE	,0x0000), // 'H' ➔ "⛎" U+26CE OPHIUCHUS emoji
+/*<!M><o><p><t>                                                    */ DEADTRANS( L't'	,0xE54A	,0x2325	,0x0000), // 't' ➔ "⌥" U+2325 OPTION KEY
+/*<!M><O><P><T>                                                    */ DEADTRANS( L'T'	,0xE54B	,0x2325	,0x0000), // 'T' ➔ "⌥" U+2325 OPTION KEY
+/*<!M><o><R>                                                       */ DEADTRANS( L'R'	,0xE534	,0x00AE	,0x0000), // 'R' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><O><r>                                                       */ DEADTRANS( L'r'	,0xE535	,0x00AE	,0x0000), // 'r' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><o><r>                                                       */ DEADTRANS( L'r'	,0xE534	,0x2228	,0x0000), // 'r' ➔ "∨" U+2228 LOGICAL OR
+/*<!M><O><R>                                                       */ DEADTRANS( L'R'	,0xE535	,0x2228	,0x0000), // 'R' ➔ "∨" U+2228 LOGICAL OR
+/*<!M><o><s>                                                       */ DEADTRANS( L's'	,0xE534	,0xE54C	,0x0001), // Intermediate multikey chain link
+/*<!M><O><S>                                                       */ DEADTRANS( L'S'	,0xE535	,0x2606	,0x0000), // 'S' ➔ "☆" U+2606 WHITE STAR
+/*<!M><o><S>                                                       */ DEADTRANS( L'S'	,0xE534	,0x2A0A	,0x0000), // 'S' ➔ "⨊" U+2A0A MODULO TWO SUM
+/*<!M><o><s><t>                                                    */ DEADTRANS( L't'	,0xE54C	,0x2606	,0x0000), // 't' ➔ "☆" U+2606 WHITE STAR
+/*<!M><o><s><u>                                                    */ DEADTRANS( L'u'	,0xE54C	,0xE54D	,0x0001), // Intermediate multikey chain link
+/*<!M><o><s><u><p>                                                 */ DEADTRANS( L'p'	,0xE54D	,0x1D16	,0x0000), // 'p' ➔ "ᴖ" U+1D16 LATIN SMALL LETTER TOP HALF O
+/*<!M><o><t>                                                       */ DEADTRANS( L't'	,0xE534	,0xE54E	,0x0001), // Intermediate multikey chain link
+/*<!M><O><T>                                                       */ DEADTRANS( L'T'	,0xE535	,0xE54F	,0x0001), // Intermediate multikey chain link
+/*<!M><o><T>                                                       */ DEADTRANS( L'T'	,0xE534	,0xE550	,0x0001), // Intermediate multikey chain link
+/*<!M><o><T><%backslash>                                           */ DEADTRANS( L'\\'	,0xE550	,0x27DF	,0x0000), // '\' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><t><%backslash>                                           */ DEADTRANS( L'\\'	,0xE54E	,0x27DF	,0x0000), // '\' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><T><%percent>                                             */ DEADTRANS( L'%'	,0xE550	,0x27DF	,0x0000), // '%' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><t><%percent>                                             */ DEADTRANS( L'%'	,0xE54E	,0x27DF	,0x0000), // '%' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><t><d>                                                    */ DEADTRANS( L'd'	,0xE54E	,0x25BF	,0x0000), // 'd' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><O><T><D>                                                    */ DEADTRANS( L'D'	,0xE54F	,0x25BF	,0x0000), // 'D' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><o><t><h>                                                    */ DEADTRANS( L'h'	,0xE54E	,0x2679	,0x0000), // 'h' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><O><T><H>                                                    */ DEADTRANS( L'H'	,0xE54F	,0x2679	,0x0000), // 'H' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><o><t><r>                                                    */ DEADTRANS( L'r'	,0xE54E	,0x2679	,0x0000), // 'r' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><O><T><R>                                                    */ DEADTRANS( L'R'	,0xE54F	,0x2679	,0x0000), // 'R' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><o><T><T>                                                    */ DEADTRANS( L'T'	,0xE550	,0x27DF	,0x0000), // 'T' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><t><t>                                                    */ DEADTRANS( L't'	,0xE54E	,0x27DF	,0x0000), // 't' ➔ "⟟" U+27DF UP TACK WITH CIRCLE ABOVE
+/*<!M><o><t><u>                                                    */ DEADTRANS( L'u'	,0xE54E	,0x25B5	,0x0000), // 'u' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><O><T><U>                                                    */ DEADTRANS( L'U'	,0xE54F	,0x25B5	,0x0000), // 'U' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><O><U>                                                       */ DEADTRANS( L'U'	,0xE535	,0x0222	,0x0000), // 'U' ➔ "Ȣ" U+0222 LATIN CAPITAL LETTER OU
+/*<!M><O><u>                                                       */ DEADTRANS( L'u'	,0xE535	,0x0222	,0x0000), // 'u' ➔ "Ȣ" U+0222 LATIN CAPITAL LETTER OU
+/*<!M><o><u>                                                       */ DEADTRANS( L'u'	,0xE534	,0x0223	,0x0000), // 'u' ➔ "ȣ" U+0223 LATIN SMALL LETTER OU
+/*<!M><o><x>                                                       */ DEADTRANS( L'x'	,0xE534	,0x2297	,0x0000), // 'x' ➔ "⊗" U+2297 CIRCLED TIMES
+/*<!M><O><X>                                                       */ DEADTRANS( L'X'	,0xE535	,0x29BB	,0x0000), // 'X' ➔ "⦻" U+29BB CIRCLE WITH SUPERIMPOSED X
+/*<!M><O><x>                                                       */ DEADTRANS( L'x'	,0xE535	,0x2A02	,0x0000), // 'x' ➔ "⨂" U+2A02 N-ARY CIRCLED TIMES OPERATOR
+/*<!M><o><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE534	,0x2218	,0x0000), // ' ' ➔ "∘" U+2218 RING OPERATOR
+/*<!M><O><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE535	,0x25CB	,0x0000), // ' ' ➔ "○" U+25CB WHITE CIRCLE
+/*<!M><o><~space>                                                  */ DEADTRANS( L' '	,0xE534	,0x2218	,0x0000), // ' ' ➔ "∘" U+2218 RING OPERATOR
+/*<!M><O><~space>                                                  */ DEADTRANS( L' '	,0xE535	,0x25CB	,0x0000), // ' ' ➔ "○" U+25CB WHITE CIRCLE
+/*<!M><p>                                                          */ DEADTRANS( L'p'	,0x00A6	,0xE551	,0x0001), // Intermediate multikey chain link
+/*<!M><P>                                                          */ DEADTRANS( L'P'	,0x00A6	,0xE552	,0x0001), // Intermediate multikey chain link
+/*<!M><P><%backslash>                                              */ DEADTRANS( L'\\'	,0xE552	,0x2210	,0x0000), // '\' ➔ "∐" U+2210 N-ARY COPRODUCT
+/*<!M><p><%backslash>                                              */ DEADTRANS( L'\\'	,0xE551	,0x2A3F	,0x0000), // '\' ➔ "⨿" U+2A3F AMALGAMATION OR COPRODUCT
+/*<!M><p><%bar>                                                    */ DEADTRANS( L'|'	,0xE551	,0xE553	,0x0001), // Intermediate multikey chain link
+/*<!M><p><%bar><%comma>                                            */ DEADTRANS( L','	,0xE553	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><p><%bar><~nbspace>                                          */ DEADTRANS( 0x00A0	,0xE553	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><p><%bar><~space>                                            */ DEADTRANS( L' '	,0xE553	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><p><%comma>                                                  */ DEADTRANS( L','	,0xE551	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
+/*<!M><p><%equal>                                                  */ DEADTRANS( L'='	,0xE551	,0x20B1	,0x0000), // '=' ➔ "₱" U+20B1 PESO SIGN
+/*<!M><P><%equal>                                                  */ DEADTRANS( L'='	,0xE552	,0x20B1	,0x0000), // '=' ➔ "₱" U+20B1 PESO SIGN
+/*<!M><p><%exclam>                                                 */ DEADTRANS( L'!'	,0xE551	,0x00B6	,0x0000), // '!' ➔ "¶" U+00B6 PILCROW SIGN
+/*<!M><P><%exclam>                                                 */ DEADTRANS( L'!'	,0xE552	,0x00B6	,0x0000), // '!' ➔ "¶" U+00B6 PILCROW SIGN
+/*<!M><p><%greater>                                                */ DEADTRANS( L'>'	,0xE551	,0x202C	,0x0000), // '>' ➔ "‬" U+202C POP DIRECTIONAL FORMATTING
+/*<!M><p><%less>                                                   */ DEADTRANS( L'<'	,0xE551	,0x202C	,0x0000), // '<' ➔ "‬" U+202C POP DIRECTIONAL FORMATTING
+/*<!M><P><%minus>                                                  */ DEADTRANS( L'-'	,0xE552	,0x20B1	,0x0000), // '-' ➔ "₱" U+20B1 PESO SIGN
+/*<!M><p><%minus>                                                  */ DEADTRANS( L'-'	,0xE551	,0x22FA	,0x0000), // '-' ➔ "⋺" U+22FA CONTAINS WITH LONG HORIZONTAL STROKE
+/*<!M><P><%percent>                                                */ DEADTRANS( L'%'	,0xE552	,0x2210	,0x0000), // '%' ➔ "∐" U+2210 N-ARY COPRODUCT
+/*<!M><p><%percent>                                                */ DEADTRANS( L'%'	,0xE551	,0x2A3F	,0x0000), // '%' ➔ "⨿" U+2A3F AMALGAMATION OR COPRODUCT
+/*<!M><p><%slash>                                                  */ DEADTRANS( L'/'	,0xE551	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
+/*<!M><P><%tilde>                                                  */ DEADTRANS( L'~'	,0xE552	,0x2118	,0x0000), // '~' ➔ "℘" U+2118 SCRIPT CAPITAL P
+/*<!M><P><2>                                                       */ DEADTRANS( L'2'	,0xE552	,0x210F	,0x0000), // '2' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
+/*<!M><p><2>                                                       */ DEADTRANS( L'2'	,0xE551	,0x210F	,0x0000), // '2' ➔ "ℏ" U+210F PLANCK CONSTANT OVER TWO PI
+/*<!M><p><a>                                                       */ DEADTRANS( L'a'	,0xE551	,0xE554	,0x0001), // Intermediate multikey chain link
+/*<!M><P><A>                                                       */ DEADTRANS( L'A'	,0xE552	,0xE555	,0x0001), // Intermediate multikey chain link
+/*<!M><p><a><c>                                                    */ DEADTRANS( L'c'	,0xE554	,0xE556	,0x0001), // Intermediate multikey chain link
+/*<!M><P><A><C>                                                    */ DEADTRANS( L'C'	,0xE555	,0xE557	,0x0001), // Intermediate multikey chain link
+/*<!M><p><a><c><a>                                                 */ DEADTRANS( L'a'	,0xE556	,0x25AB	,0x0000), // 'a' ➔ "▫" U+25AB WHITE SMALL SQUARE
+/*<!M><P><A><C><A>                                                 */ DEADTRANS( L'A'	,0xE557	,0x25AB	,0x0000), // 'A' ➔ "▫" U+25AB WHITE SMALL SQUARE
+/*<!M><p><a><c><d>                                                 */ DEADTRANS( L'd'	,0xE556	,0x25E6	,0x0000), // 'd' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><P><A><C><D>                                                 */ DEADTRANS( L'D'	,0xE557	,0x25E6	,0x0000), // 'D' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><p><a><r>                                                    */ DEADTRANS( L'r'	,0xE554	,0xE558	,0x0001), // Intermediate multikey chain link
+/*<!M><P><A><R>                                                    */ DEADTRANS( L'R'	,0xE555	,0xE559	,0x0001), // Intermediate multikey chain link
+/*<!M><p><a><r><c>                                                 */ DEADTRANS( L'c'	,0xE558	,0x25AD	,0x0000), // 'c' ➔ "▭" U+25AD WHITE RECTANGLE
+/*<!M><P><A><R><C>                                                 */ DEADTRANS( L'C'	,0xE559	,0x25AD	,0x0000), // 'C' ➔ "▭" U+25AD WHITE RECTANGLE
+/*<!M><p><a><r><o>                                                 */ DEADTRANS( L'o'	,0xE558	,0x25E6	,0x0000), // 'o' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><P><A><R><O>                                                 */ DEADTRANS( L'O'	,0xE559	,0x25E6	,0x0000), // 'O' ➔ "◦" U+25E6 WHITE BULLET
+/*<!M><p><a><t>                                                    */ DEADTRANS( L't'	,0xE554	,0xE55A	,0x0001), // Intermediate multikey chain link
+/*<!M><P><A><T>                                                    */ DEADTRANS( L'T'	,0xE555	,0xE55B	,0x0001), // Intermediate multikey chain link
+/*<!M><p><a><t><b>                                                 */ DEADTRANS( L'b'	,0xE55A	,0x25BF	,0x0000), // 'b' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><P><A><T><B>                                                 */ DEADTRANS( L'B'	,0xE55B	,0x25BF	,0x0000), // 'B' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><p><a><t><h>                                                 */ DEADTRANS( L'h'	,0xE55A	,0x25B5	,0x0000), // 'h' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><P><A><T><H>                                                 */ DEADTRANS( L'H'	,0xE55B	,0x25B5	,0x0000), // 'H' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><p><d>                                                       */ DEADTRANS( L'd'	,0xE551	,0xE55C	,0x0001), // Intermediate multikey chain link
+/*<!M><p><d><i>                                                    */ DEADTRANS( L'i'	,0xE55C	,0x2069	,0x0000), // 'i' ➔ "⁩" U+2069 POP DIRECTIONAL ISOLATE
+/*<!M><p><e>                                                       */ DEADTRANS( L'e'	,0xE551	,0xE55D	,0x0001), // Intermediate multikey chain link
+/*<!M><P><e>                                                       */ DEADTRANS( L'e'	,0xE552	,0xE55E	,0x0001), // Intermediate multikey chain link
+/*<!M><P><E>                                                       */ DEADTRANS( L'E'	,0xE552	,0xE55F	,0x0001), // Intermediate multikey chain link
+/*<!M><p><e><h>                                                    */ DEADTRANS( L'h'	,0xE55D	,0xE560	,0x0001), // Intermediate multikey chain link
+/*<!M><P><E><H>                                                    */ DEADTRANS( L'H'	,0xE55F	,0xE561	,0x0001), // Intermediate multikey chain link
+/*<!M><p><e><h><d>                                                 */ DEADTRANS( L'd'	,0xE560	,0x2674	,0x0000), // 'd' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><P><E><H><D>                                                 */ DEADTRANS( L'D'	,0xE561	,0x2674	,0x0000), // 'D' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><p><e><l>                                                    */ DEADTRANS( L'l'	,0xE55D	,0xE562	,0x0001), // Intermediate multikey chain link
+/*<!M><P><E><L>                                                    */ DEADTRANS( L'L'	,0xE55F	,0xE563	,0x0001), // Intermediate multikey chain link
+/*<!M><p><e><l><d>                                                 */ DEADTRANS( L'd'	,0xE562	,0x2676	,0x0000), // 'd' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><P><E><L><D>                                                 */ DEADTRANS( L'D'	,0xE563	,0x2676	,0x0000), // 'D' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><p><e><r>                                                    */ DEADTRANS( L'r'	,0xE55D	,0x214C	,0x0000), // 'r' ➔ "⅌" U+214C PER SIGN
+/*<!M><P><e><r>                                                    */ DEADTRANS( L'r'	,0xE55E	,0x214C	,0x0000), // 'r' ➔ "⅌" U+214C PER SIGN
+/*<!M><P><E><R>                                                    */ DEADTRANS( L'R'	,0xE55F	,0x214C	,0x0000), // 'R' ➔ "⅌" U+214C PER SIGN
+/*<!M><p><e><t>                                                    */ DEADTRANS( L't'	,0xE55D	,0x2673	,0x0000), // 't' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+/*<!M><P><E><T>                                                    */ DEADTRANS( L'T'	,0xE55F	,0x2673	,0x0000), // 'T' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+/*<!M><P><f>                                                       */ DEADTRANS( L'f'	,0xE552	,0x20B0	,0x0000), // 'f' ➔ "₰" U+20B0 GERMAN PENNY SIGN
+/*<!M><p><h>                                                       */ DEADTRANS( L'h'	,0xE551	,0xE564	,0x0001), // Intermediate multikey chain link
+/*<!M><P><H>                                                       */ DEADTRANS( L'H'	,0xE552	,0xE565	,0x0001), // Intermediate multikey chain link
+/*<!M><p><h><p>                                                    */ DEADTRANS( L'p'	,0xE564	,0x20B1	,0x0000), // 'p' ➔ "₱" U+20B1 PESO SIGN, Philippine Peso THE PHILIPPINES
+/*<!M><P><H><P>                                                    */ DEADTRANS( L'P'	,0xE565	,0x20B1	,0x0000), // 'P' ➔ "₱" U+20B1 PESO SIGN, Philippine Peso THE PHILIPPINES
+/*<!M><p><i>                                                       */ DEADTRANS( L'i'	,0xE551	,0xE566	,0x0001), // Intermediate multikey chain link
+/*<!M><P><I>                                                       */ DEADTRANS( L'I'	,0xE552	,0xE567	,0x0001), // Intermediate multikey chain link
+/*<!M><p><i><s>                                                    */ DEADTRANS( L's'	,0xE566	,0xE568	,0x0001), // Intermediate multikey chain link
+/*<!M><P><I><S>                                                    */ DEADTRANS( L'S'	,0xE567	,0xE569	,0x0001), // Intermediate multikey chain link
+/*<!M><p><i><s><c>                                                 */ DEADTRANS( L'c'	,0xE568	,0x2653	,0x0000), // 'c' ➔ "♓" U+2653 PISCES emoji
+/*<!M><P><I><S><C>                                                 */ DEADTRANS( L'C'	,0xE569	,0x2653	,0x0000), // 'C' ➔ "♓" U+2653 PISCES emoji
+/*<!M><p><i><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE566	,0x03C0	,0x0000), // ' ' ➔ "π" U+03C0 GREEK SMALL LETTER PI
+/*<!M><p><i><~space>                                               */ DEADTRANS( L' '	,0xE566	,0x03C0	,0x0000), // ' ' ➔ "π" U+03C0 GREEK SMALL LETTER PI
+/*<!M><p><l>                                                       */ DEADTRANS( L'l'	,0xE551	,0xE56A	,0x0001), // Intermediate multikey chain link
+/*<!M><P><L>                                                       */ DEADTRANS( L'L'	,0xE552	,0xE56B	,0x0001), // Intermediate multikey chain link
+/*<!M><P><l>                                                       */ DEADTRANS( L'l'	,0xE552	,0xE56C	,0x0001), // Intermediate multikey chain link
+/*<!M><P><L><A>                                                    */ DEADTRANS( L'A'	,0xE56B	,0x210E	,0x0000), // 'A' ➔ "ℎ" U+210E PLANCK CONSTANT
+/*<!M><P><l><a>                                                    */ DEADTRANS( L'a'	,0xE56C	,0x210E	,0x0000), // 'a' ➔ "ℎ" U+210E PLANCK CONSTANT
+/*<!M><p><l><a>                                                    */ DEADTRANS( L'a'	,0xE56A	,0x210E	,0x0000), // 'a' ➔ "ℎ" U+210E PLANCK CONSTANT
+/*<!M><p><o>                                                       */ DEADTRANS( L'o'	,0xE551	,0xE56D	,0x0001), // Intermediate multikey chain link
+/*<!M><P><O>                                                       */ DEADTRANS( L'O'	,0xE552	,0xE56E	,0x0001), // Intermediate multikey chain link
+/*<!M><P><o>                                                       */ DEADTRANS( L'o'	,0xE552	,0x2117	,0x0000), // 'o' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
+/*<!M><p><O>                                                       */ DEADTRANS( L'O'	,0xE551	,0x2117	,0x0000), // 'O' ➔ "℗" U+2117 SOUND RECORDING COPYRIGHT
+/*<!M><p><o><i>                                                    */ DEADTRANS( L'i'	,0xE56D	,0xE56F	,0x0001), // Intermediate multikey chain link
+/*<!M><P><O><I>                                                    */ DEADTRANS( L'I'	,0xE56E	,0xE570	,0x0001), // Intermediate multikey chain link
+/*<!M><p><o><i><s>                                                 */ DEADTRANS( L's'	,0xE56F	,0x2653	,0x0000), // 's' ➔ "♓" U+2653 PISCES emoji
+/*<!M><P><O><I><S>                                                 */ DEADTRANS( L'S'	,0xE570	,0x2653	,0x0000), // 'S' ➔ "♓" U+2653 PISCES emoji
+/*<!M><p><p>                                                       */ DEADTRANS( L'p'	,0xE551	,0xE571	,0x0001), // Intermediate multikey chain link
+/*<!M><P><P>                                                       */ DEADTRANS( L'P'	,0xE552	,0xE572	,0x0001), // Intermediate multikey chain link
+/*<!M><p><p><%at>                                                  */ DEADTRANS( L'@'	,0xE571	,0x213C	,0x0000), // '@' ➔ "ℼ" U+213C DOUBLE-STRUCK SMALL PI
+/*<!M><P><P><%at>                                                  */ DEADTRANS( L'@'	,0xE572	,0x213F	,0x0000), // '@' ➔ "ℿ" U+213F DOUBLE-STRUCK CAPITAL PI
+/*<!M><p><p><c>                                                    */ DEADTRANS( L'c'	,0xE571	,0xE573	,0x0001), // Intermediate multikey chain link
+/*<!M><P><P><C>                                                    */ DEADTRANS( L'C'	,0xE572	,0xE574	,0x0001), // Intermediate multikey chain link
+/*<!M><p><p><c><a>                                                 */ DEADTRANS( L'a'	,0xE573	,0x25AA	,0x0000), // 'a' ➔ "▪" U+25AA BLACK SMALL SQUARE
+/*<!M><P><P><C><A>                                                 */ DEADTRANS( L'A'	,0xE574	,0x25AA	,0x0000), // 'A' ➔ "▪" U+25AA BLACK SMALL SQUARE
+/*<!M><p><p><c><c>                                                 */ DEADTRANS( L'c'	,0xE573	,0x25CF	,0x0000), // 'c' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><P><P><C><C>                                                 */ DEADTRANS( L'C'	,0xE574	,0x25CF	,0x0000), // 'C' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><p><p><c><d>                                                 */ DEADTRANS( L'd'	,0xE573	,0x2022	,0x0000), // 'd' ➔ "•" U+2022 BULLET
+/*<!M><P><P><C><D>                                                 */ DEADTRANS( L'D'	,0xE574	,0x2022	,0x0000), // 'D' ➔ "•" U+2022 BULLET
+/*<!M><p><p><m>                                                    */ DEADTRANS( L'm'	,0xE571	,0xE575	,0x0001), // Intermediate multikey chain link
+/*<!M><P><P><M>                                                    */ DEADTRANS( L'M'	,0xE572	,0xE576	,0x0001), // Intermediate multikey chain link
+/*<!M><p><p><m><d>                                                 */ DEADTRANS( L'd'	,0xE575	,0x204D	,0x0000), // 'd' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
+/*<!M><P><P><M><D>                                                 */ DEADTRANS( L'D'	,0xE576	,0x204D	,0x0000), // 'D' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
+/*<!M><p><p><m><g>                                                 */ DEADTRANS( L'g'	,0xE575	,0x204C	,0x0000), // 'g' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
+/*<!M><P><P><M><G>                                                 */ DEADTRANS( L'G'	,0xE576	,0x204C	,0x0000), // 'G' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
+/*<!M><p><p><p>                                                    */ DEADTRANS( L'p'	,0xE571	,0x2677	,0x0000), // 'p' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+/*<!M><P><P><P>                                                    */ DEADTRANS( L'P'	,0xE572	,0x2677	,0x0000), // 'P' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+/*<!M><p><p><r>                                                    */ DEADTRANS( L'r'	,0xE571	,0xE577	,0x0001), // Intermediate multikey chain link
+/*<!M><P><P><R>                                                    */ DEADTRANS( L'R'	,0xE572	,0xE578	,0x0001), // Intermediate multikey chain link
+/*<!M><p><p><r><c>                                                 */ DEADTRANS( L'c'	,0xE577	,0x25AC	,0x0000), // 'c' ➔ "▬" U+25AC BLACK RECTANGLE
+/*<!M><P><P><R><C>                                                 */ DEADTRANS( L'C'	,0xE578	,0x25AC	,0x0000), // 'C' ➔ "▬" U+25AC BLACK RECTANGLE
+/*<!M><p><p><r><d>                                                 */ DEADTRANS( L'd'	,0xE577	,0x25AE	,0x0000), // 'd' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
+/*<!M><P><P><R><D>                                                 */ DEADTRANS( L'D'	,0xE578	,0x25AE	,0x0000), // 'D' ➔ "▮" U+25AE BLACK VERTICAL RECTANGLE
+/*<!M><p><p><r><e>                                                 */ DEADTRANS( L'e'	,0xE577	,0x220E	,0x0000), // 'e' ➔ "∎" U+220E END OF PROOF
+/*<!M><P><P><R><E>                                                 */ DEADTRANS( L'E'	,0xE578	,0x220E	,0x0000), // 'E' ➔ "∎" U+220E END OF PROOF
+/*<!M><p><p><r><o>                                                 */ DEADTRANS( L'o'	,0xE577	,0x2022	,0x0000), // 'o' ➔ "•" U+2022 BULLET
+/*<!M><P><P><R><O>                                                 */ DEADTRANS( L'O'	,0xE578	,0x2022	,0x0000), // 'O' ➔ "•" U+2022 BULLET
+/*<!M><p><p><t>                                                    */ DEADTRANS( L't'	,0xE571	,0xE579	,0x0001), // Intermediate multikey chain link
+/*<!M><P><P><T>                                                    */ DEADTRANS( L'T'	,0xE572	,0xE57A	,0x0001), // Intermediate multikey chain link
+/*<!M><p><p><t><b>                                                 */ DEADTRANS( L'b'	,0xE579	,0x25BE	,0x0000), // 'b' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><P><P><T><B>                                                 */ DEADTRANS( L'B'	,0xE57A	,0x25BE	,0x0000), // 'B' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><p><p><t><d>                                                 */ DEADTRANS( L'd'	,0xE579	,0x2023	,0x0000), // 'd' ➔ "‣" U+2023 TRIANGULAR BULLET
+/*<!M><P><P><T><D>                                                 */ DEADTRANS( L'D'	,0xE57A	,0x2023	,0x0000), // 'D' ➔ "‣" U+2023 TRIANGULAR BULLET
+/*<!M><p><p><t><g>                                                 */ DEADTRANS( L'g'	,0xE579	,0x25C2	,0x0000), // 'g' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
+/*<!M><P><P><T><G>                                                 */ DEADTRANS( L'G'	,0xE57A	,0x25C2	,0x0000), // 'G' ➔ "◂" U+25C2 BLACK LEFT-POINTING SMALL TRIANGLE
+/*<!M><p><p><t><h>                                                 */ DEADTRANS( L'h'	,0xE579	,0x25B4	,0x0000), // 'h' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><P><P><T><H>                                                 */ DEADTRANS( L'H'	,0xE57A	,0x25B4	,0x0000), // 'H' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><P><P><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE572	,0x2119	,0x0000), // ' ' ➔ "ℙ" U+2119 DOUBLE-STRUCK CAPITAL P
+/*<!M><P><P><~space>                                               */ DEADTRANS( L' '	,0xE572	,0x2119	,0x0000), // ' ' ➔ "ℙ" U+2119 DOUBLE-STRUCK CAPITAL P
+/*<!M><p><s>                                                       */ DEADTRANS( L's'	,0xE551	,0x2678	,0x0000), // 's' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+/*<!M><P><S>                                                       */ DEADTRANS( L'S'	,0xE552	,0x2678	,0x0000), // 'S' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+/*<!M><p><t>                                                       */ DEADTRANS( L't'	,0xE551	,0xE57B	,0x0001), // Intermediate multikey chain link
+/*<!M><P><T>                                                       */ DEADTRANS( L'T'	,0xE552	,0xE57C	,0x0001), // Intermediate multikey chain link
+/*<!M><P><t>                                                       */ DEADTRANS( L't'	,0xE552	,0x20A7	,0x0000), // 't' ➔ "₧" U+20A7 PESETA SIGN
+/*<!M><p><t><0>                                                    */ DEADTRANS( L'0'	,0xE57B	,0x2672	,0x0000), // '0' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><P><T><0>                                                    */ DEADTRANS( L'0'	,0xE57C	,0x2672	,0x0000), // '0' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><p><t><1>                                                    */ DEADTRANS( L'1'	,0xE57B	,0x2673	,0x0000), // '1' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+/*<!M><P><T><1>                                                    */ DEADTRANS( L'1'	,0xE57C	,0x2673	,0x0000), // '1' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
+/*<!M><p><t><2>                                                    */ DEADTRANS( L'2'	,0xE57B	,0x2674	,0x0000), // '2' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><P><T><2>                                                    */ DEADTRANS( L'2'	,0xE57C	,0x2674	,0x0000), // '2' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
+/*<!M><p><t><3>                                                    */ DEADTRANS( L'3'	,0xE57B	,0x2675	,0x0000), // '3' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+/*<!M><P><T><3>                                                    */ DEADTRANS( L'3'	,0xE57C	,0x2675	,0x0000), // '3' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+/*<!M><p><t><4>                                                    */ DEADTRANS( L'4'	,0xE57B	,0x2676	,0x0000), // '4' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><P><T><4>                                                    */ DEADTRANS( L'4'	,0xE57C	,0x2676	,0x0000), // '4' ➔ "♶" U+2676 RECYCLING SYMBOL FOR TYPE-4 PLASTICS
+/*<!M><p><t><5>                                                    */ DEADTRANS( L'5'	,0xE57B	,0x2677	,0x0000), // '5' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+/*<!M><P><T><5>                                                    */ DEADTRANS( L'5'	,0xE57C	,0x2677	,0x0000), // '5' ➔ "♷" U+2677 RECYCLING SYMBOL FOR TYPE-5 PLASTICS
+/*<!M><p><t><6>                                                    */ DEADTRANS( L'6'	,0xE57B	,0x2678	,0x0000), // '6' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+/*<!M><P><T><6>                                                    */ DEADTRANS( L'6'	,0xE57C	,0x2678	,0x0000), // '6' ➔ "♸" U+2678 RECYCLING SYMBOL FOR TYPE-6 PLASTICS
+/*<!M><p><t><7>                                                    */ DEADTRANS( L'7'	,0xE57B	,0x2679	,0x0000), // '7' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><P><T><7>                                                    */ DEADTRANS( L'7'	,0xE57C	,0x2679	,0x0000), // '7' ➔ "♹" U+2679 RECYCLING SYMBOL FOR TYPE-7 PLASTICS
+/*<!M><p><t><8>                                                    */ DEADTRANS( L'8'	,0xE57B	,0x267A	,0x0000), // '8' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
+/*<!M><P><T><8>                                                    */ DEADTRANS( L'8'	,0xE57C	,0x267A	,0x0000), // '8' ➔ "♺" U+267A RECYCLING SYMBOL FOR GENERIC MATERIALS
+/*<!M><p><t><9>                                                    */ DEADTRANS( L'9'	,0xE57B	,0x267B	,0x0000), // '9' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><P><T><9>                                                    */ DEADTRANS( L'9'	,0xE57C	,0x267B	,0x0000), // '9' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><p><v>                                                       */ DEADTRANS( L'v'	,0xE551	,0xE57D	,0x0001), // Intermediate multikey chain link
+/*<!M><P><V>                                                       */ DEADTRANS( L'V'	,0xE552	,0xE57E	,0x0001), // Intermediate multikey chain link
+/*<!M><p><v><c>                                                    */ DEADTRANS( L'c'	,0xE57D	,0x2675	,0x0000), // 'c' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+/*<!M><P><V><C>                                                    */ DEADTRANS( L'C'	,0xE57E	,0x2675	,0x0000), // 'C' ➔ "♵" U+2675 RECYCLING SYMBOL FOR TYPE-3 PLASTICS
+/*<!M><p><y>                                                       */ DEADTRANS( L'y'	,0xE551	,0xE57F	,0x0001), // Intermediate multikey chain link
+/*<!M><P><Y>                                                       */ DEADTRANS( L'Y'	,0xE552	,0xE580	,0x0001), // Intermediate multikey chain link
+/*<!M><p><y><g>                                                    */ DEADTRANS( L'g'	,0xE57F	,0x20B2	,0x0000), // 'g' ➔ "₲" U+20B2 GUARANI SIGN, Guarani PARAGUAY
+/*<!M><P><Y><G>                                                    */ DEADTRANS( L'G'	,0xE580	,0x20B2	,0x0000), // 'G' ➔ "₲" U+20B2 GUARANI SIGN, Guarani PARAGUAY
+/*<!M><p><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE551	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><P><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE552	,0x220F	,0x0000), // ' ' ➔ "∏" U+220F N-ARY PRODUCT
+/*<!M><p><~space>                                                  */ DEADTRANS( L' '	,0xE551	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><P><~space>                                                  */ DEADTRANS( L' '	,0xE552	,0x220F	,0x0000), // ' ' ➔ "∏" U+220F N-ARY PRODUCT
+/*<!M><q>                                                          */ DEADTRANS( L'q'	,0x00A6	,0xE581	,0x0001), // Intermediate multikey chain link
+/*<!M><Q>                                                          */ DEADTRANS( L'Q'	,0x00A6	,0xE582	,0x0001), // Intermediate multikey chain link
+/*<!M><q><%hash>                                                   */ DEADTRANS( L'#'	,0xE581	,0x2669	,0x0000), // '#' ➔ "♩" U+2669 QUARTER NOTE
+/*<!M><Q><%hash>                                                   */ DEADTRANS( L'#'	,0xE582	,0x2669	,0x0000), // '#' ➔ "♩" U+2669 QUARTER NOTE
+/*<!M><Q><0>                                                       */ DEADTRANS( L'0'	,0xE582	,0x25CB	,0x0000), // '0' ➔ "○" U+25CB WHITE CIRCLE
+/*<!M><q><0>                                                       */ DEADTRANS( L'0'	,0xE581	,0x25CB	,0x0000), // '0' ➔ "○" U+25CB WHITE CIRCLE
+/*<!M><Q><1>                                                       */ DEADTRANS( L'1'	,0xE582	,0x25D4	,0x0000), // '1' ➔ "◔" U+25D4 CIRCLE WITH UPPER RIGHT QUADRANT BLACK
+/*<!M><q><1>                                                       */ DEADTRANS( L'1'	,0xE581	,0x25F7	,0x0000), // '1' ➔ "◷" U+25F7 WHITE CIRCLE WITH UPPER RIGHT QUADRANT
+/*<!M><Q><2>                                                       */ DEADTRANS( L'2'	,0xE582	,0x25D1	,0x0000), // '2' ➔ "◑" U+25D1 CIRCLE WITH RIGHT HALF BLACK
+/*<!M><q><2>                                                       */ DEADTRANS( L'2'	,0xE581	,0x25F6	,0x0000), // '2' ➔ "◶" U+25F6 WHITE CIRCLE WITH LOWER RIGHT QUADRANT
+/*<!M><Q><3>                                                       */ DEADTRANS( L'3'	,0xE582	,0x25D5	,0x0000), // '3' ➔ "◕" U+25D5 CIRCLE WITH ALL BUT UPPER LEFT QUADRANT BLACK
+/*<!M><q><3>                                                       */ DEADTRANS( L'3'	,0xE581	,0x25F5	,0x0000), // '3' ➔ "◵" U+25F5 WHITE CIRCLE WITH LOWER LEFT QUADRANT
+/*<!M><Q><4>                                                       */ DEADTRANS( L'4'	,0xE582	,0x25CF	,0x0000), // '4' ➔ "●" U+25CF BLACK CIRCLE
+/*<!M><q><4>                                                       */ DEADTRANS( L'4'	,0xE581	,0x25F4	,0x0000), // '4' ➔ "◴" U+25F4 WHITE CIRCLE WITH UPPER LEFT QUADRANT
+/*<!M><q><a>                                                       */ DEADTRANS( L'a'	,0xE581	,0xE583	,0x0001), // Intermediate multikey chain link
+/*<!M><Q><A>                                                       */ DEADTRANS( L'A'	,0xE582	,0xE584	,0x0001), // Intermediate multikey chain link
+/*<!M><q><e>                                                       */ DEADTRANS( L'e'	,0xE581	,0x220E	,0x0000), // 'e' ➔ "∎" U+220E END OF PROOF
+/*<!M><Q><E>                                                       */ DEADTRANS( L'E'	,0xE582	,0x220E	,0x0000), // 'E' ➔ "∎" U+220E END OF PROOF
+/*<!M><q><p>                                                       */ DEADTRANS( L'p'	,0xE581	,0x0239	,0x0000), // 'p' ➔ "ȹ" U+0239 LATIN SMALL LETTER QP DIGRAPH
+/*<!M><Q><Q>                                                       */ DEADTRANS( L'Q'	,0xE582	,0x211A	,0x0000), // 'Q' ➔ "ℚ" U+211A DOUBLE-STRUCK CAPITAL Q
+/*<!M><r>                                                          */ DEADTRANS( L'r'	,0x00A6	,0xE585	,0x0001), // Intermediate multikey chain link
+/*<!M><R>                                                          */ DEADTRANS( L'R'	,0x00A6	,0xE586	,0x0001), // Intermediate multikey chain link
+/*<!M><r><%at>                                                     */ DEADTRANS( L'@'	,0xE585	,0x03F1	,0x0000), // '@' ➔ "ϱ" U+03F1 GREEK RHO SYMBOL
+/*<!M><r><%equal>                                                  */ DEADTRANS( L'='	,0xE585	,0x20B9	,0x0000), // '=' ➔ "₹" U+20B9 INDIAN RUPEE SIGN
+/*<!M><R><%equal>                                                  */ DEADTRANS( L'='	,0xE586	,0x20B9	,0x0000), // '=' ➔ "₹" U+20B9 INDIAN RUPEE SIGN
+/*<!M><R><%hash>                                                   */ DEADTRANS( L'#'	,0xE586	,0x211C	,0x0000), // '#' ➔ "ℜ" U+211C BLACK-LETTER CAPITAL R
+/*<!M><R><%minus>                                                  */ DEADTRANS( L'-'	,0xE586	,0x211E	,0x0000), // '-' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><r><%minus>                                                  */ DEADTRANS( L'-'	,0xE585	,0x211E	,0x0000), // '-' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><r><%parenleft>                                              */ DEADTRANS( L'('	,0xE585	,0xAB45	,0x0000), // '(' ➔ "ꭅ" U+AB45 LATIN SMALL LETTER STIRRUP R
+/*<!M><R><%parenleft>                                              */ DEADTRANS( L'('	,0xE586	,0xAB45	,0x0000), // '(' ➔ "ꭅ" U+AB45 LATIN SMALL LETTER STIRRUP R
+/*<!M><R><%slash>                                                  */ DEADTRANS( L'/'	,0xE586	,0x211F	,0x0000), // '/' ➔ "℟" U+211F RESPONSE
+/*<!M><r><%slash>                                                  */ DEADTRANS( L'/'	,0xE585	,0x211F	,0x0000), // '/' ➔ "℟" U+211F RESPONSE
+/*<!M><R><%tilde>                                                  */ DEADTRANS( L'~'	,0xE586	,0x211B	,0x0000), // '~' ➔ "ℛ" U+211B SCRIPT CAPITAL R
+/*<!M><R><C>                                                       */ DEADTRANS( L'C'	,0xE586	,0xE587	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C>                                                    */ DEADTRANS( L'C'	,0xE587	,0xE588	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C><C>                                                 */ DEADTRANS( L'C'	,0xE588	,0xE589	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C><C><D>                                              */ DEADTRANS( L'D'	,0xE589	,0xE58A	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C><C><D><D>                                           */ DEADTRANS( L'D'	,0xE58A	,0xE58B	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C><C><D><D><D>                                        */ DEADTRANS( L'D'	,0xE58B	,0x2188	,0x0000), // 'D' ➔ "ↈ" U+2188 ROMAN NUMERAL ONE HUNDRED THOUSAND
+/*<!M><R><C><C><D>                                                 */ DEADTRANS( L'D'	,0xE588	,0xE58C	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><C><D><D>                                              */ DEADTRANS( L'D'	,0xE58C	,0x2182	,0x0000), // 'D' ➔ "ↂ" U+2182 ROMAN NUMERAL TEN THOUSAND
+/*<!M><R><C><D>                                                    */ DEADTRANS( L'D'	,0xE587	,0x2180	,0x0000), // 'D' ➔ "ↀ" U+2180 ROMAN NUMERAL ONE THOUSAND C D
+/*<!M><R><C><V>                                                    */ DEADTRANS( L'V'	,0xE587	,0xE58D	,0x0001), // Intermediate multikey chain link
+/*<!M><R><C><V><I>                                                 */ DEADTRANS( L'I'	,0xE58D	,0x2185	,0x0000), // 'I' ➔ "ↅ" U+2185 ROMAN NUMERAL SIX LATE FORM
+/*<!M><R><D>                                                       */ DEADTRANS( L'D'	,0xE586	,0xE58E	,0x0001), // Intermediate multikey chain link
+/*<!M><R><D><D>                                                    */ DEADTRANS( L'D'	,0xE58E	,0xE58F	,0x0001), // Intermediate multikey chain link
+/*<!M><R><D><D><D>                                                 */ DEADTRANS( L'D'	,0xE58F	,0x2187	,0x0000), // 'D' ➔ "ↇ" U+2187 ROMAN NUMERAL FIFTY THOUSAND
+/*<!M><R><D><D><~space>                                            */ DEADTRANS( L' '	,0xE58F	,0x2181	,0x0000), // ' ' ➔ "ↁ" U+2181 ROMAN NUMERAL FIVE THOUSAND
+/*<!M><r><e>                                                       */ DEADTRANS( L'e'	,0xE585	,0xE590	,0x0001), // Intermediate multikey chain link
+/*<!M><R><E>                                                       */ DEADTRANS( L'E'	,0xE586	,0xE591	,0x0001), // Intermediate multikey chain link
+/*<!M><r><e><c>                                                    */ DEADTRANS( L'c'	,0xE590	,0xE592	,0x0001), // Intermediate multikey chain link
+/*<!M><R><E><C>                                                    */ DEADTRANS( L'C'	,0xE591	,0xE593	,0x0001), // Intermediate multikey chain link
+/*<!M><r><e><c><a>                                                 */ DEADTRANS( L'a'	,0xE592	,0x2672	,0x0000), // 'a' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><R><E><C><A>                                                 */ DEADTRANS( L'A'	,0xE593	,0x2672	,0x0000), // 'A' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><r><e><c><e>                                                 */ DEADTRANS( L'e'	,0xE592	,0x2672	,0x0000), // 'e' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><R><E><C><E>                                                 */ DEADTRANS( L'E'	,0xE593	,0x2672	,0x0000), // 'E' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><r><e><c><f>                                                 */ DEADTRANS( L'f'	,0xE592	,0x267B	,0x0000), // 'f' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><R><E><C><F>                                                 */ DEADTRANS( L'F'	,0xE593	,0x267B	,0x0000), // 'F' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><r><e><c><g>                                                 */ DEADTRANS( L'g'	,0xE592	,0x267B	,0x0000), // 'g' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><R><E><C><G>                                                 */ DEADTRANS( L'G'	,0xE593	,0x267B	,0x0000), // 'G' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><r><e><c><i>                                                 */ DEADTRANS( L'i'	,0xE592	,0x267B	,0x0000), // 'i' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><R><E><C><I>                                                 */ DEADTRANS( L'I'	,0xE593	,0x267B	,0x0000), // 'I' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><r><e><c><o>                                                 */ DEADTRANS( L'o'	,0xE592	,0x2672	,0x0000), // 'o' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><R><E><C><O>                                                 */ DEADTRANS( L'O'	,0xE593	,0x2672	,0x0000), // 'O' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><r><e><c><p>                                                 */ DEADTRANS( L'p'	,0xE592	,0x267B	,0x0000), // 'p' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><R><E><C><P>                                                 */ DEADTRANS( L'P'	,0xE593	,0x267B	,0x0000), // 'P' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><r><e><c><u>                                                 */ DEADTRANS( L'u'	,0xE592	,0x2672	,0x0000), // 'u' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><R><E><C><U>                                                 */ DEADTRANS( L'U'	,0xE593	,0x2672	,0x0000), // 'U' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
+/*<!M><r><e><c><v>                                                 */ DEADTRANS( L'v'	,0xE592	,0x267B	,0x0000), // 'v' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><R><E><C><V>                                                 */ DEADTRANS( L'V'	,0xE593	,0x267B	,0x0000), // 'V' ➔ "♻" U+267B BLACK UNIVERSAL RECYCLING SYMBOL emoji
+/*<!M><r><e><t>                                                    */ DEADTRANS( L't'	,0xE590	,0x21B5	,0x0000), // 't' ➔ "↵" U+21B5 DOWNWARDS ARROW WITH CORNER LEFTWARDS
+/*<!M><R><E><T>                                                    */ DEADTRANS( L'T'	,0xE591	,0x23CE	,0x0000), // 'T' ➔ "⏎" U+23CE RETURN SYMBOL
+/*<!M><R><L>                                                       */ DEADTRANS( L'L'	,0xE586	,0xE594	,0x0001), // Intermediate multikey chain link
+/*<!M><R><L><L>                                                    */ DEADTRANS( L'L'	,0xE594	,0x2186	,0x0000), // 'L' ➔ "ↆ" U+2186 ROMAN NUMERAL FIFTY EARLY FORM
+/*<!M><r><m>                                                       */ DEADTRANS( L'm'	,0xE585	,0xDD6C	,0x0000), // High surrogate: D83C; 'm' ➔ "🅬" U+1F16C RAISED MR SIGN
+/*<!M><R><M>                                                       */ DEADTRANS( L'M'	,0xE586	,0xDD6C	,0x0000), // High surrogate: D83C; 'M' ➔ "🅬" U+1F16C RAISED MR SIGN
+/*<!M><r><o>                                                       */ DEADTRANS( L'o'	,0xE585	,0x00AE	,0x0000), // 'o' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><R><O>                                                       */ DEADTRANS( L'O'	,0xE586	,0x00AE	,0x0000), // 'O' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><R><p>                                                       */ DEADTRANS( L'p'	,0xE586	,0xE595	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a>                                                    */ DEADTRANS( L'a'	,0xE595	,0xE596	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a><r>                                                 */ DEADTRANS( L'r'	,0xE596	,0xE597	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a><r><e>                                              */ DEADTRANS( L'e'	,0xE597	,0xE598	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a><r><e><n>                                           */ DEADTRANS( L'n'	,0xE598	,0xE599	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a><r><e><n><l>                                        */ DEADTRANS( L'l'	,0xE599	,0xE59A	,0x0001), // Intermediate multikey chain link
+/*<!M><R><p><a><r><e><n><l><t>                                     */ DEADTRANS( L't'	,0xE59A	,0x2996	,0x0000), // 't' ➔ "⦖" U+2996 DOUBLE RIGHT ARC LESS-THAN BRACKET TeX + HTML under max 9 keysym constraint
+/*<!M><R><R>                                                       */ DEADTRANS( L'R'	,0xE586	,0x211D	,0x0000), // 'R' ➔ "ℝ" U+211D DOUBLE-STRUCK CAPITAL R
+/*<!M><r><r>                                                       */ DEADTRANS( L'r'	,0xE585	,0xAB48	,0x0000), // 'r' ➔ "ꭈ" U+AB48 LATIN SMALL LETTER DOUBLE R
+/*<!M><R><s>                                                       */ DEADTRANS( L's'	,0xE586	,0x20A8	,0x0000), // 's' ➔ "₨" U+20A8 RUPEE SIGN
+/*<!M><R><U>                                                       */ DEADTRANS( L'U'	,0xE586	,0xE59B	,0x0001), // Intermediate multikey chain link
+/*<!M><R><u>                                                       */ DEADTRANS( L'u'	,0xE586	,0xE59C	,0x0001), // Intermediate multikey chain link
+/*<!M><r><u>                                                       */ DEADTRANS( L'u'	,0xE585	,0xE59D	,0x0001), // Intermediate multikey chain link
+/*<!M><r><u><b>                                                    */ DEADTRANS( L'b'	,0xE59D	,0x20BD	,0x0000), // 'b' ➔ "₽" U+20BD RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
+/*<!M><R><U><B>                                                    */ DEADTRANS( L'B'	,0xE59B	,0x20BD	,0x0000), // 'B' ➔ "₽" U+20BD RUBLE SIGN, Russian Ruble THE RUSSIAN FEDERATION
+/*<!M><r><u><m>                                                    */ DEADTRANS( L'm'	,0xE59D	,0xA775	,0x0000), // 'm' ➔ "ꝵ" U+A775 LATIN SMALL LETTER RUM
+/*<!M><R><U><M>                                                    */ DEADTRANS( L'M'	,0xE59B	,0xA776	,0x0000), // 'M' ➔ "ꝶ" U+A776 LATIN LETTER SMALL CAPITAL RUM
+/*<!M><R><u><m>                                                    */ DEADTRANS( L'm'	,0xE59C	,0xA776	,0x0000), // 'm' ➔ "ꝶ" U+A776 LATIN LETTER SMALL CAPITAL RUM
+/*<!M><R><U><R>                                                    */ DEADTRANS( L'R'	,0xE59B	,0xA75C	,0x0000), // 'R' ➔ "Ꝝ" U+A75C LATIN CAPITAL LETTER RUM ROTUNDA
+/*<!M><R><u><r>                                                    */ DEADTRANS( L'r'	,0xE59C	,0xA75C	,0x0000), // 'r' ➔ "Ꝝ" U+A75C LATIN CAPITAL LETTER RUM ROTUNDA
+/*<!M><r><u><r>                                                    */ DEADTRANS( L'r'	,0xE59D	,0xA75D	,0x0000), // 'r' ➔ "ꝝ" U+A75D LATIN SMALL LETTER RUM ROTUNDA
+/*<!M><s>                                                          */ DEADTRANS( L's'	,0x00A6	,0xE59E	,0x0001), // Intermediate multikey chain link
+/*<!M><S>                                                          */ DEADTRANS( L'S'	,0x00A6	,0xE59F	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%backslash>                                              */ DEADTRANS( L'\\'	,0xE59E	,0xE5A0	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%backslash>                                              */ DEADTRANS( L'\\'	,0xE59F	,0xE5A1	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%backslash><%percent>                                    */ DEADTRANS( L'%'	,0xE5A0	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
+/*<!M><S><%backslash><%percent>                                    */ DEADTRANS( L'%'	,0xE5A1	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
+/*<!M><s><%backslash><%slash>                                      */ DEADTRANS( L'/'	,0xE5A0	,0x29CC	,0x0000), // '/' ➔ "⧌" U+29CC S IN TRIANGLE
+/*<!M><s><%braceleft>                                              */ DEADTRANS( L'{'	,0xE59E	,0x27C5	,0x0000), // '{' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><S><%braceleft>                                              */ DEADTRANS( L'{'	,0xE59F	,0x27C5	,0x0000), // '{' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><s><%braceright>                                             */ DEADTRANS( L'}'	,0xE59E	,0x27C6	,0x0000), // '}' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><S><%braceright>                                             */ DEADTRANS( L'}'	,0xE59F	,0x27C6	,0x0000), // '}' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><s><%bracketleft>                                            */ DEADTRANS( L'['	,0xE59E	,0xE5A2	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%bracketleft>                                            */ DEADTRANS( L'['	,0xE59F	,0xE5A3	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE5A2	,0x2A16	,0x0000), // ']' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
+/*<!M><S><%bracketleft><%bracketright>                             */ DEADTRANS( L']'	,0xE5A3	,0x2A16	,0x0000), // ']' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
+/*<!M><s><%bracketleft><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE5A2	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><S><%bracketleft><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE5A3	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><s><%bracketleft><~space>                                    */ DEADTRANS( L' '	,0xE5A2	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><S><%bracketleft><~space>                                    */ DEADTRANS( L' '	,0xE5A3	,0x27C5	,0x0000), // ' ' ➔ "⟅" U+27C5 LEFT S-SHAPED BAG DELIMITER
+/*<!M><s><%bracketright>                                           */ DEADTRANS( L']'	,0xE59E	,0xE5A4	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%bracketright>                                           */ DEADTRANS( L']'	,0xE59F	,0xE5A5	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%bracketright><%bracketleft>                             */ DEADTRANS( L'['	,0xE5A4	,0x2A16	,0x0000), // '[' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
+/*<!M><S><%bracketright><%bracketleft>                             */ DEADTRANS( L'['	,0xE5A5	,0x2A16	,0x0000), // '[' ➔ "⨖" U+2A16 QUATERNION INTEGRAL OPERATOR
+/*<!M><s><%bracketright><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE5A4	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><S><%bracketright><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE5A5	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><s><%bracketright><~space>                                   */ DEADTRANS( L' '	,0xE5A4	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><S><%bracketright><~space>                                   */ DEADTRANS( L' '	,0xE5A5	,0x27C6	,0x0000), // ' ' ➔ "⟆" U+27C6 RIGHT S-SHAPED BAG DELIMITER
+/*<!M><S><%equal>                                                  */ DEADTRANS( L'='	,0xE59F	,0x20B4	,0x0000), // '=' ➔ "₴" U+20B4 HRYVNIA SIGN
+/*<!M><s><%equal>                                                  */ DEADTRANS( L'='	,0xE59E	,0x2A0E	,0x0000), // '=' ➔ "⨎" U+2A0E INTEGRAL WITH DOUBLE STROKE
+/*<!M><s><%exclam>                                                 */ DEADTRANS( L'!'	,0xE59E	,0x00A7	,0x0000), // '!' ➔ "§" U+00A7 SECTION SIGN
+/*<!M><S><%exclam>                                                 */ DEADTRANS( L'!'	,0xE59F	,0x00A7	,0x0000), // '!' ➔ "§" U+00A7 SECTION SIGN
+/*<!M><S><%hash>                                                   */ DEADTRANS( L'#'	,0xE59F	,0x266C	,0x0000), // '#' ➔ "♬" U+266C BEAMED SIXTEENTH NOTES
+/*<!M><s><%hash>                                                   */ DEADTRANS( L'#'	,0xE59E	,0x266F	,0x0000), // '#' ➔ "♯" U+266F MUSIC SHARP SIGN
+/*<!M><s><%less>                                                   */ DEADTRANS( L'<'	,0xE59E	,0xE5A6	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%less>                                                   */ DEADTRANS( L'<'	,0xE59F	,0xE5A7	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE5A6	,0x2A17	,0x0000), // '-' ➔ "⨗" U+2A17 INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
+/*<!M><S><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE5A7	,0x2A17	,0x0000), // '-' ➔ "⨗" U+2A17 INTEGRAL WITH LEFTWARDS ARROW WITH HOOK
+/*<!M><S><%minus>                                                  */ DEADTRANS( L'-'	,0xE59F	,0x20B4	,0x0000), // '-' ➔ "₴" U+20B4 HRYVNIA SIGN
+/*<!M><s><%minus>                                                  */ DEADTRANS( L'-'	,0xE59E	,0x2A0D	,0x0000), // '-' ➔ "⨍" U+2A0D FINITE PART INTEGRAL
+/*<!M><s><%parenleft>                                              */ DEADTRANS( L'('	,0xE59E	,0x2231	,0x0000), // '(' ➔ "∱" U+2231 CLOCKWISE INTEGRAL
+/*<!M><S><%parenleft>                                              */ DEADTRANS( L'('	,0xE59F	,0x2231	,0x0000), // '(' ➔ "∱" U+2231 CLOCKWISE INTEGRAL
+/*<!M><s><%parenright>                                             */ DEADTRANS( L')'	,0xE59E	,0x2A11	,0x0000), // ')' ➔ "⨑" U+2A11 ANTICLOCKWISE INTEGRATION
+/*<!M><S><%parenright>                                             */ DEADTRANS( L')'	,0xE59F	,0x2A11	,0x0000), // ')' ➔ "⨑" U+2A11 ANTICLOCKWISE INTEGRATION
+/*<!M><s><%percent>                                                */ DEADTRANS( L'%'	,0xE59E	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
+/*<!M><S><%percent>                                                */ DEADTRANS( L'%'	,0xE59F	,0x223E	,0x0000), // '%' ➔ "∾" U+223E INVERTED LAZY S
+/*<!M><s><%period>                                                 */ DEADTRANS( L'.'	,0xE59E	,0xE5A8	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%period>                                                 */ DEADTRANS( L'.'	,0xE59F	,0xE5A9	,0x0001), // Intermediate multikey chain link
+/*<!M><s><%period><%bracketright>                                  */ DEADTRANS( L']'	,0xE5A8	,0x2A12	,0x0000), // ']' ➔ "⨒" U+2A12 LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
+/*<!M><S><%period><%bracketright>                                  */ DEADTRANS( L']'	,0xE5A9	,0x2A12	,0x0000), // ']' ➔ "⨒" U+2A12 LINE INTEGRATION WITH RECTANGULAR PATH AROUND POLE
+/*<!M><s><%period><%parenright>                                    */ DEADTRANS( L')'	,0xE5A8	,0x2A13	,0x0000), // ')' ➔ "⨓" U+2A13 LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
+/*<!M><S><%period><%parenright>                                    */ DEADTRANS( L')'	,0xE5A9	,0x2A13	,0x0000), // ')' ➔ "⨓" U+2A13 LINE INTEGRATION WITH SEMICIRCULAR PATH AROUND POLE
+/*<!M><s><%period><o>                                              */ DEADTRANS( L'o'	,0xE5A8	,0x2A14	,0x0000), // 'o' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
+/*<!M><S><%period><o>                                              */ DEADTRANS( L'o'	,0xE5A9	,0x2A14	,0x0000), // 'o' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
+/*<!M><S><%period><O>                                              */ DEADTRANS( L'O'	,0xE5A9	,0x2A14	,0x0000), // 'O' ➔ "⨔" U+2A14 LINE INTEGRATION NOT INCLUDING THE POLE
+/*<!M><s><%slash>                                                  */ DEADTRANS( L'/'	,0xE59E	,0xE5AA	,0x0001), // Intermediate multikey chain link
+/*<!M><S><%slash>                                                  */ DEADTRANS( L'/'	,0xE59F	,0x2A0F	,0x0000), // '/' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
+/*<!M><s><%slash><%backslash>                                      */ DEADTRANS( L'\\'	,0xE5AA	,0x29CC	,0x0000), // '\' ➔ "⧌" U+29CC S IN TRIANGLE
+/*<!M><s><%slash><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE5AA	,0x2A0F	,0x0000), // ' ' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
+/*<!M><s><%slash><~space>                                          */ DEADTRANS( L' '	,0xE5AA	,0x2A0F	,0x0000), // ' ' ➔ "⨏" U+2A0F INTEGRAL AVERAGE WITH SLASH
+/*<!M><s><%underscore>                                             */ DEADTRANS( L'_'	,0xE59E	,0x2A1C	,0x0000), // '_' ➔ "⨜" U+2A1C INTEGRAL WITH UNDERBAR
+/*<!M><S><%underscore>                                             */ DEADTRANS( L'_'	,0xE59F	,0x2A1C	,0x0000), // '_' ➔ "⨜" U+2A1C INTEGRAL WITH UNDERBAR
+/*<!M><s><a>                                                       */ DEADTRANS( L'a'	,0xE59E	,0xE5AB	,0x0001), // Intermediate multikey chain link
+/*<!M><S><a>                                                       */ DEADTRANS( L'a'	,0xE59F	,0xE5AC	,0x0001), // Intermediate multikey chain link
+/*<!M><S><A>                                                       */ DEADTRANS( L'A'	,0xE59F	,0xE5AD	,0x0001), // Intermediate multikey chain link
+/*<!M><s><a><g>                                                    */ DEADTRANS( L'g'	,0xE5AB	,0xE5AE	,0x0001), // Intermediate multikey chain link
+/*<!M><S><A><G>                                                    */ DEADTRANS( L'G'	,0xE5AD	,0xE5AF	,0x0001), // Intermediate multikey chain link
+/*<!M><s><a><g><i>                                                 */ DEADTRANS( L'i'	,0xE5AE	,0x2650	,0x0000), // 'i' ➔ "♐" U+2650 SAGITTARIUS emoji
+/*<!M><S><A><G><I>                                                 */ DEADTRANS( L'I'	,0xE5AF	,0x2650	,0x0000), // 'I' ➔ "♐" U+2650 SAGITTARIUS emoji
+/*<!M><s><a><m>                                                    */ DEADTRANS( L'm'	,0xE5AB	,0x214F	,0x0000), // 'm' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
+/*<!M><S><a><m>                                                    */ DEADTRANS( L'm'	,0xE5AC	,0x214F	,0x0000), // 'm' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
+/*<!M><S><A><M>                                                    */ DEADTRANS( L'M'	,0xE5AD	,0x214F	,0x0000), // 'M' ➔ "⅏" U+214F SYMBOL FOR SAMARITAN SOURCE
+/*<!M><s><c>                                                       */ DEADTRANS( L'c'	,0xE59E	,0xE5B0	,0x0001), // Intermediate multikey chain link
+/*<!M><S><c>                                                       */ DEADTRANS( L'c'	,0xE59F	,0xE5B1	,0x0001), // Intermediate multikey chain link
+/*<!M><S><C>                                                       */ DEADTRANS( L'C'	,0xE59F	,0xE5B2	,0x0001), // Intermediate multikey chain link
+/*<!M><s><c><o>                                                    */ DEADTRANS( L'o'	,0xE5B0	,0xE5B3	,0x0001), // Intermediate multikey chain link
+/*<!M><S><C><O>                                                    */ DEADTRANS( L'O'	,0xE5B2	,0xE5B4	,0x0001), // Intermediate multikey chain link
+/*<!M><s><c><o><r>                                                 */ DEADTRANS( L'r'	,0xE5B3	,0x264F	,0x0000), // 'r' ➔ "♏" U+264F SCORPIUS emoji
+/*<!M><S><C><O><R>                                                 */ DEADTRANS( L'R'	,0xE5B4	,0x264F	,0x0000), // 'R' ➔ "♏" U+264F SCORPIUS emoji
+/*<!M><s><c><r>                                                    */ DEADTRANS( L'r'	,0xE5B0	,0x2108	,0x0000), // 'r' ➔ "℈" U+2108 SCRUPLE
+/*<!M><S><c><r>                                                    */ DEADTRANS( L'r'	,0xE5B1	,0x2108	,0x0000), // 'r' ➔ "℈" U+2108 SCRUPLE
+/*<!M><S><C><R>                                                    */ DEADTRANS( L'R'	,0xE5B2	,0x2108	,0x0000), // 'R' ➔ "℈" U+2108 SCRUPLE
+/*<!M><s><c><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B0	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><S><c><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B1	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><S><C><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5B2	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><s><c><~space>                                               */ DEADTRANS( L' '	,0xE5B0	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><S><c><~space>                                               */ DEADTRANS( L' '	,0xE5B1	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><S><C><~space>                                               */ DEADTRANS( L' '	,0xE5B2	,0x2A10	,0x0000), // ' ' ➔ "⨐" U+2A10 CIRCULATION FUNCTION
+/*<!M><s><d>                                                       */ DEADTRANS( L'd'	,0xE59E	,0xE5B5	,0x0001), // Intermediate multikey chain link
+/*<!M><S><D>                                                       */ DEADTRANS( L'D'	,0xE59F	,0xE5B6	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e>                                                       */ DEADTRANS( L'e'	,0xE59E	,0xE5B7	,0x0001), // Intermediate multikey chain link
+/*<!M><S><E>                                                       */ DEADTRANS( L'E'	,0xE59F	,0xE5B8	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><r>                                                    */ DEADTRANS( L'r'	,0xE5B7	,0x26CE	,0x0000), // 'r' ➔ "⛎" U+26CE OPHIUCHUS emoji
+/*<!M><S><E><R>                                                    */ DEADTRANS( L'R'	,0xE5B8	,0x26CE	,0x0000), // 'R' ➔ "⛎" U+26CE OPHIUCHUS emoji
+/*<!M><s><e><t>                                                    */ DEADTRANS( L't'	,0xE5B7	,0xE5B9	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><t><m>                                                 */ DEADTRANS( L'm'	,0xE5B9	,0xE5BA	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><t><m><i>                                              */ DEADTRANS( L'i'	,0xE5BA	,0xE5BB	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><t><m><i><n>                                           */ DEADTRANS( L'n'	,0xE5BB	,0xE5BC	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><t><m><i><n><u>                                        */ DEADTRANS( L'u'	,0xE5BC	,0xE5BD	,0x0001), // Intermediate multikey chain link
+/*<!M><s><e><t><m><i><n><u><s>                                     */ DEADTRANS( L's'	,0xE5BD	,0x2216	,0x0000), // 's' ➔ "∖" U+2216 SET MINUS
+/*<!M><S><H>                                                       */ DEADTRANS( L'H'	,0xE59F	,0x01A9	,0x0000), // 'H' ➔ "Ʃ" U+01A9 LATIN CAPITAL LETTER ESH
+/*<!M><S><h>                                                       */ DEADTRANS( L'h'	,0xE59F	,0x01A9	,0x0000), // 'h' ➔ "Ʃ" U+01A9 LATIN CAPITAL LETTER ESH
+/*<!M><s><h>                                                       */ DEADTRANS( L'h'	,0xE59E	,0x0283	,0x0000), // 'h' ➔ "ʃ" U+0283 LATIN SMALL LETTER ESH
+/*<!M><s><i>                                                       */ DEADTRANS( L'i'	,0xE59E	,0xE5BE	,0x0001), // Intermediate multikey chain link
+/*<!M><S><I>                                                       */ DEADTRANS( L'I'	,0xE59F	,0xE5BF	,0x0001), // Intermediate multikey chain link
+/*<!M><s><i><n>                                                    */ DEADTRANS( L'n'	,0xE5BE	,0x223F	,0x0000), // 'n' ➔ "∿" U+223F SINE WAVE
+/*<!M><S><I><N>                                                    */ DEADTRANS( L'N'	,0xE5BF	,0x223F	,0x0000), // 'N' ➔ "∿" U+223F SINE WAVE
+/*<!M><s><l>                                                       */ DEADTRANS( L'l'	,0xE59E	,0x017F	,0x0000), // 'l' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
+/*<!M><s><m>                                                       */ DEADTRANS( L'm'	,0xE59E	,0x2120	,0x0000), // 'm' ➔ "℠" U+2120 SERVICE MARK
+/*<!M><S><M>                                                       */ DEADTRANS( L'M'	,0xE59F	,0x2120	,0x0000), // 'M' ➔ "℠" U+2120 SERVICE MARK
+/*<!M><s><n>                                                       */ DEADTRANS( L'n'	,0xE59E	,0xE5C0	,0x0001), // Intermediate multikey chain link
+/*<!M><S><N>                                                       */ DEADTRANS( L'N'	,0xE59F	,0xE5C1	,0x0001), // Intermediate multikey chain link
+/*<!M><S><n>                                                       */ DEADTRANS( L'n'	,0xE59F	,0x2A19	,0x0000), // 'n' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
+/*<!M><s><n><o>                                                    */ DEADTRANS( L'o'	,0xE5C0	,0x2744	,0x0000), // 'o' ➔ "❄" U+2744 SNOWFLAKE emoji
+/*<!M><S><N><O>                                                    */ DEADTRANS( L'O'	,0xE5C1	,0x2744	,0x0000), // 'O' ➔ "❄" U+2744 SNOWFLAKE emoji
+/*<!M><s><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C0	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
+/*<!M><S><N><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C1	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
+/*<!M><s><n><~space>                                               */ DEADTRANS( L' '	,0xE5C0	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
+/*<!M><S><N><~space>                                               */ DEADTRANS( L' '	,0xE5C1	,0x2A19	,0x0000), // ' ' ➔ "⨙" U+2A19 INTEGRAL WITH INTERSECTION
+/*<!M><s><o>                                                       */ DEADTRANS( L'o'	,0xE59E	,0xE5C2	,0x0001), // Intermediate multikey chain link
+/*<!M><S><O>                                                       */ DEADTRANS( L'O'	,0xE59F	,0xE5C3	,0x0001), // Intermediate multikey chain link
+/*<!M><S><o>                                                       */ DEADTRANS( L'o'	,0xE59F	,0xE5C4	,0x0001), // Intermediate multikey chain link
+/*<!M><s><o><%greater>                                             */ DEADTRANS( L'>'	,0xE5C2	,0x2232	,0x0000), // '>' ➔ "∲" U+2232 CLOCKWISE CONTOUR INTEGRAL
+/*<!M><S><o><%greater>                                             */ DEADTRANS( L'>'	,0xE5C4	,0x2232	,0x0000), // '>' ➔ "∲" U+2232 CLOCKWISE CONTOUR INTEGRAL
+/*<!M><s><o><%less>                                                */ DEADTRANS( L'<'	,0xE5C2	,0x2233	,0x0000), // '<' ➔ "∳" U+2233 ANTICLOCKWISE CONTOUR INTEGRAL
+/*<!M><S><o><%less>                                                */ DEADTRANS( L'<'	,0xE5C4	,0x2233	,0x0000), // '<' ➔ "∳" U+2233 ANTICLOCKWISE CONTOUR INTEGRAL
+/*<!M><s><o><%period>                                              */ DEADTRANS( L'.'	,0xE5C2	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
+/*<!M><S><o><%period>                                              */ DEADTRANS( L'.'	,0xE5C4	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
+/*<!M><S><O><%period>                                              */ DEADTRANS( L'.'	,0xE5C3	,0x2A15	,0x0000), // '.' ➔ "⨕" U+2A15 INTEGRAL AROUND A POINT OPERATOR
+/*<!M><s><o><l>                                                    */ DEADTRANS( L'l'	,0xE5C2	,0x2600	,0x0000), // 'l' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
+/*<!M><S><O><L>                                                    */ DEADTRANS( L'L'	,0xE5C3	,0x2600	,0x0000), // 'L' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
+/*<!M><s><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C2	,0x222E	,0x0000), // ' ' ➔ "∮" U+222E CONTOUR INTEGRAL
+/*<!M><S><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C4	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
+/*<!M><S><O><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C3	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
+/*<!M><s><o><~space>                                               */ DEADTRANS( L' '	,0xE5C2	,0x222E	,0x0000), // ' ' ➔ "∮" U+222E CONTOUR INTEGRAL
+/*<!M><S><o><~space>                                               */ DEADTRANS( L' '	,0xE5C4	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
+/*<!M><S><O><~space>                                               */ DEADTRANS( L' '	,0xE5C3	,0x2A0A	,0x0000), // ' ' ➔ "⨊" U+2A0A MODULO TWO SUM
+/*<!M><s><p>                                                       */ DEADTRANS( L'p'	,0xE59E	,0x2423	,0x0000), // 'p' ➔ "␣" U+2423 OPEN BOX
+/*<!M><S><P>                                                       */ DEADTRANS( L'P'	,0xE59F	,0x2423	,0x0000), // 'P' ➔ "␣" U+2423 OPEN BOX
+/*<!M><s><S>                                                       */ DEADTRANS( L'S'	,0xE59E	,0x00A7	,0x0000), // 'S' ➔ "§" U+00A7 SECTION SIGN
+/*<!M><s><s>                                                       */ DEADTRANS( L's'	,0xE59E	,0x00DF	,0x0000), // 's' ➔ "ß" U+00DF LATIN SMALL LETTER SHARP S
+/*<!M><S><S>                                                       */ DEADTRANS( L'S'	,0xE59F	,0x1E9E	,0x0000), // 'S' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
+/*<!M><S><s>                                                       */ DEADTRANS( L's'	,0xE59F	,0x1E9E	,0x0000), // 's' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
+/*<!M><s><u>                                                       */ DEADTRANS( L'u'	,0xE59E	,0xE5C5	,0x0001), // Intermediate multikey chain link
+/*<!M><S><U>                                                       */ DEADTRANS( L'U'	,0xE59F	,0xE5C6	,0x0001), // Intermediate multikey chain link
+/*<!M><S><u>                                                       */ DEADTRANS( L'u'	,0xE59F	,0x2A1A	,0x0000), // 'u' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
+/*<!M><s><u><n>                                                    */ DEADTRANS( L'n'	,0xE5C5	,0x2600	,0x0000), // 'n' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
+/*<!M><S><U><N>                                                    */ DEADTRANS( L'N'	,0xE5C6	,0x2600	,0x0000), // 'N' ➔ "☀" U+2600 BLACK SUN WITH RAYS emoji
+/*<!M><s><u><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C5	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
+/*<!M><S><U><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5C6	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
+/*<!M><s><u><~space>                                               */ DEADTRANS( L' '	,0xE5C5	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
+/*<!M><S><U><~space>                                               */ DEADTRANS( L' '	,0xE5C6	,0x2A1A	,0x0000), // ' ' ➔ "⨚" U+2A1A INTEGRAL WITH UNION
+/*<!M><s><v>                                                       */ DEADTRANS( L'v'	,0xE59E	,0xE5C7	,0x0001), // Intermediate multikey chain link
+/*<!M><S><V>                                                       */ DEADTRANS( L'V'	,0xE59F	,0xE5C8	,0x0001), // Intermediate multikey chain link
+/*<!M><s><v><c>                                                    */ DEADTRANS( L'c'	,0xE5C7	,0x20A1	,0x0000), // 'c' ➔ "₡" U+20A1 COLON SIGN, El Salvador Colon EL SALVADOR
+/*<!M><S><V><C>                                                    */ DEADTRANS( L'C'	,0xE5C8	,0x20A1	,0x0000), // 'C' ➔ "₡" U+20A1 COLON SIGN, El Salvador Colon EL SALVADOR
+/*<!M><s><x>                                                       */ DEADTRANS( L'x'	,0xE59E	,0x2A18	,0x0000), // 'x' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
+/*<!M><S><x>                                                       */ DEADTRANS( L'x'	,0xE59F	,0x2A18	,0x0000), // 'x' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
+/*<!M><S><X>                                                       */ DEADTRANS( L'X'	,0xE59F	,0x2A18	,0x0000), // 'X' ➔ "⨘" U+2A18 INTEGRAL WITH TIMES SIGN
+/*<!M><s><z>                                                       */ DEADTRANS( L'z'	,0xE59E	,0x00DF	,0x0000), // 'z' ➔ "ß" U+00DF LATIN SMALL LETTER SHARP S
+/*<!M><S><Z>                                                       */ DEADTRANS( L'Z'	,0xE59F	,0x1E9E	,0x0000), // 'Z' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
+/*<!M><S><z>                                                       */ DEADTRANS( L'z'	,0xE59F	,0x1E9E	,0x0000), // 'z' ➔ "ẞ" U+1E9E LATIN CAPITAL LETTER SHARP S
+/*<!M><S><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE59F	,0x2211	,0x0000), // ' ' ➔ "∑" U+2211 N-ARY SUMMATION
+/*<!M><s><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE59E	,0x222B	,0x0000), // ' ' ➔ "∫" U+222B INTEGRAL
+/*<!M><S><~space>                                                  */ DEADTRANS( L' '	,0xE59F	,0x2211	,0x0000), // ' ' ➔ "∑" U+2211 N-ARY SUMMATION
+/*<!M><s><~space>                                                  */ DEADTRANS( L' '	,0xE59E	,0x222B	,0x0000), // ' ' ➔ "∫" U+222B INTEGRAL
+/*<!M><T>                                                          */ DEADTRANS( L'T'	,0x00A6	,0xE5C9	,0x0001), // Intermediate multikey chain link
+/*<!M><t>                                                          */ DEADTRANS( L't'	,0x00A6	,0xE5CA	,0x0001), // Intermediate multikey chain link
+/*<!M><T><%apostrophe>                                             */ DEADTRANS( L'\''	,0xE5C9	,0x2ADF	,0x0000), // ''' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><T><%aprightsingquotmark>                                    */ DEADTRANS( 0x2019	,0xE5C9	,0x2ADF	,0x0000), // '’' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><T><%at>                                                     */ DEADTRANS( L'@'	,0xE5C9	,0x03F4	,0x0000), // '@' ➔ "ϴ" U+03F4 GREEK CAPITAL THETA SYMBOL
+/*<!M><t><%at>                                                     */ DEADTRANS( L'@'	,0xE5CA	,0x03D1	,0x0000), // '@' ➔ "ϑ" U+03D1 GREEK THETA SYMBOL
+/*<!M><T><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5C9	,0xE5CB	,0x0001), // Intermediate multikey chain link
+/*<!M><T><%backslash><%apostrophe>                                 */ DEADTRANS( L'\''	,0xE5CB	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><%backslash><%aprightsingquotmark>                        */ DEADTRANS( 0x2019	,0xE5CB	,0x2AE0	,0x0000), // '’' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><%backslash><%bar>                                        */ DEADTRANS( L'|'	,0xE5CB	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><T><%bar>                                                    */ DEADTRANS( L'|'	,0xE5C9	,0x27D9	,0x0000), // '|' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><t><%equal>                                                  */ DEADTRANS( L'='	,0xE5CA	,0x20AE	,0x0000), // '=' ➔ "₮" U+20AE TUGRIK SIGN
+/*<!M><T><%equal>                                                  */ DEADTRANS( L'='	,0xE5C9	,0x20AE	,0x0000), // '=' ➔ "₮" U+20AE TUGRIK SIGN
+/*<!M><T><%greater>                                                */ DEADTRANS( L'>'	,0xE5C9	,0xE5CC	,0x0001), // Intermediate multikey chain link
+/*<!M><T><%greater><%apostrophe>                                   */ DEADTRANS( L'\''	,0xE5CC	,0x22A6	,0x0000), // ''' ➔ "⊦" U+22A6 ASSERTION
+/*<!M><T><%greater><%aprightsingquotmark>                          */ DEADTRANS( 0x2019	,0xE5CC	,0x22A6	,0x0000), // '’' ➔ "⊦" U+22A6 ASSERTION
+/*<!M><T><%greater><%bar>                                          */ DEADTRANS( L'|'	,0xE5CC	,0x27DD	,0x0000), // '|' ➔ "⟝" U+27DD LONG RIGHT TACK
+/*<!M><T><%greater><%less>                                         */ DEADTRANS( L'<'	,0xE5CC	,0x27DB	,0x0000), // '<' ➔ "⟛" U+27DB LEFT AND RIGHT TACK
+/*<!M><T><%greater><%slash>                                        */ DEADTRANS( L'/'	,0xE5CC	,0x22AC	,0x0000), // '/' ➔ "⊬" U+22AC DOES NOT PROVE
+/*<!M><T><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5CC	,0x22A2	,0x0000), // ' ' ➔ "⊢" U+22A2 RIGHT TACK
+/*<!M><T><%greater><~space>                                        */ DEADTRANS( L' '	,0xE5CC	,0x22A2	,0x0000), // ' ' ➔ "⊢" U+22A2 RIGHT TACK
+/*<!M><T><%less>                                                   */ DEADTRANS( L'<'	,0xE5C9	,0xE5CD	,0x0001), // Intermediate multikey chain link
+/*<!M><t><%less>                                                   */ DEADTRANS( L'<'	,0xE5CA	,0x2ADE	,0x0000), // '<' ➔ "⫞" U+2ADE SHORT LEFT TACK
+/*<!M><T><%less><%apostrophe>                                      */ DEADTRANS( L'\''	,0xE5CD	,0x2ADE	,0x0000), // ''' ➔ "⫞" U+2ADE SHORT LEFT TACK
+/*<!M><T><%less><%aprightsingquotmark>                             */ DEADTRANS( 0x2019	,0xE5CD	,0x2ADE	,0x0000), // '’' ➔ "⫞" U+2ADE SHORT LEFT TACK
+/*<!M><T><%less><%bar>                                             */ DEADTRANS( L'|'	,0xE5CD	,0x27DE	,0x0000), // '|' ➔ "⟞" U+27DE LONG LEFT TACK
+/*<!M><T><%less><%greater>                                         */ DEADTRANS( L'>'	,0xE5CD	,0x27DB	,0x0000), // '>' ➔ "⟛" U+27DB LEFT AND RIGHT TACK
+/*<!M><T><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE5CD	,0x22A3	,0x0000), // ' ' ➔ "⊣" U+22A3 LEFT TACK
+/*<!M><T><%less><~space>                                           */ DEADTRANS( L' '	,0xE5CD	,0x22A3	,0x0000), // ' ' ➔ "⊣" U+22A3 LEFT TACK
+/*<!M><t><%minus>                                                  */ DEADTRANS( L'-'	,0xE5CA	,0x20AE	,0x0000), // '-' ➔ "₮" U+20AE TUGRIK SIGN
+/*<!M><T><%minus>                                                  */ DEADTRANS( L'-'	,0xE5C9	,0x20AE	,0x0000), // '-' ➔ "₮" U+20AE TUGRIK SIGN
+/*<!M><T><%percent>                                                */ DEADTRANS( L'%'	,0xE5C9	,0xE5CE	,0x0001), // Intermediate multikey chain link
+/*<!M><T><%percent><%apostrophe>                                   */ DEADTRANS( L'\''	,0xE5CE	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><%percent><%aprightsingquotmark>                          */ DEADTRANS( 0x2019	,0xE5CE	,0x2AE0	,0x0000), // '’' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><%percent><%bar>                                          */ DEADTRANS( L'|'	,0xE5CE	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><T><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5CE	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
+/*<!M><T><%percent><~space>                                        */ DEADTRANS( L' '	,0xE5CE	,0x22A5	,0x0000), // ' ' ➔ "⊥" U+22A5 UP TACK
+/*<!M><t><1>                                                       */ DEADTRANS( L'1'	,0xE5CA	,0xA716	,0x0000), // '1' ➔ "꜖" U+A716 MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+/*<!M><T><1>                                                       */ DEADTRANS( L'1'	,0xE5C9	,0xA716	,0x0000), // '1' ➔ "꜖" U+A716 MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+/*<!M><T><2>                                                       */ DEADTRANS( L'2'	,0xE5C9	,0xE5CF	,0x0001), // Intermediate multikey chain link
+/*<!M><t><2>                                                       */ DEADTRANS( L'2'	,0xE5CA	,0xA715	,0x0000), // '2' ➔ "꜕" U+A715 MODIFIER LETTER LOW LEFT-STEM TONE BAR
+/*<!M><T><2><%backslash>                                           */ DEADTRANS( L'\\'	,0xE5CF	,0x2AEB	,0x0000), // '\' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><2><%greater>                                             */ DEADTRANS( L'>'	,0xE5CF	,0xE5D0	,0x0001), // Intermediate multikey chain link
+/*<!M><T><2><%greater><%apostrophe>                                */ DEADTRANS( L'\''	,0xE5D0	,0x22A7	,0x0000), // ''' ➔ "⊧" U+22A7 MODELS
+/*<!M><T><2><%greater><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE5D0	,0x22A7	,0x0000), // '’' ➔ "⊧" U+22A7 MODELS
+/*<!M><T><2><%greater><%less>                                      */ DEADTRANS( L'<'	,0xE5D0	,0x27DA	,0x0000), // '<' ➔ "⟚" U+27DA LEFT AND RIGHT DOUBLE TURNSTILE
+/*<!M><T><2><%greater><%slash>                                     */ DEADTRANS( L'/'	,0xE5D0	,0x22AD	,0x0000), // '/' ➔ "⊭" U+22AD NOT TRUE
+/*<!M><T><2><%greater><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5D0	,0x22A8	,0x0000), // ' ' ➔ "⊨" U+22A8 TRUE
+/*<!M><T><2><%greater><~space>                                     */ DEADTRANS( L' '	,0xE5D0	,0x22A8	,0x0000), // ' ' ➔ "⊨" U+22A8 TRUE
+/*<!M><T><2><%less>                                                */ DEADTRANS( L'<'	,0xE5CF	,0xE5D1	,0x0001), // Intermediate multikey chain link
+/*<!M><T><2><%less><%greater>                                      */ DEADTRANS( L'>'	,0xE5D1	,0x27DA	,0x0000), // '>' ➔ "⟚" U+27DA LEFT AND RIGHT DOUBLE TURNSTILE
+/*<!M><T><2><%less><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5D1	,0x2AE4	,0x0000), // ' ' ➔ "⫤" U+2AE4 VERTICAL BAR DOUBLE LEFT TURNSTILE
+/*<!M><T><2><%less><~space>                                        */ DEADTRANS( L' '	,0xE5D1	,0x2AE4	,0x0000), // ' ' ➔ "⫤" U+2AE4 VERTICAL BAR DOUBLE LEFT TURNSTILE
+/*<!M><T><2><%percent>                                             */ DEADTRANS( L'%'	,0xE5CF	,0x2AEB	,0x0000), // '%' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><2><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5CF	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
+/*<!M><T><2><~space>                                               */ DEADTRANS( L' '	,0xE5CF	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
+/*<!M><T><3>                                                       */ DEADTRANS( L'3'	,0xE5C9	,0xE5D2	,0x0001), // Intermediate multikey chain link
+/*<!M><t><3>                                                       */ DEADTRANS( L'3'	,0xE5CA	,0xA714	,0x0000), // '3' ➔ "꜔" U+A714 MODIFIER LETTER MID LEFT-STEM TONE BAR
+/*<!M><T><3><%greater>                                             */ DEADTRANS( L'>'	,0xE5D2	,0x2AE2	,0x0000), // '>' ➔ "⫢" U+2AE2 VERTICAL BAR TRIPLE RIGHT TURNSTILE
+/*<!M><t><4>                                                       */ DEADTRANS( L'4'	,0xE5CA	,0xA713	,0x0000), // '4' ➔ "꜓" U+A713 MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+/*<!M><T><4>                                                       */ DEADTRANS( L'4'	,0xE5C9	,0xA713	,0x0000), // '4' ➔ "꜓" U+A713 MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+/*<!M><t><5>                                                       */ DEADTRANS( L'5'	,0xE5CA	,0xA712	,0x0000), // '5' ➔ "꜒" U+A712 MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+/*<!M><T><5>                                                       */ DEADTRANS( L'5'	,0xE5C9	,0xA712	,0x0000), // '5' ➔ "꜒" U+A712 MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+/*<!M><t><a>                                                       */ DEADTRANS( L'a'	,0xE5CA	,0xE5D3	,0x0001), // Intermediate multikey chain link
+/*<!M><T><A>                                                       */ DEADTRANS( L'A'	,0xE5C9	,0xE5D4	,0x0001), // Intermediate multikey chain link
+/*<!M><t><a><b>                                                    */ DEADTRANS( L'b'	,0xE5D3	,0x21B9	,0x0000), // 'b' ➔ "↹" U+21B9 LEFTWARDS ARROW TO BAR OVER RIGHTWARDS ARROW TO BAR, tab with shift tab
+/*<!M><T><A><B>                                                    */ DEADTRANS( L'B'	,0xE5D4	,0x2B7E	,0x0000), // 'B' ➔ "⭾" U+2B7E HORIZONTAL TAB KEY
+/*<!M><t><a><i>                                                    */ DEADTRANS( L'i'	,0xE5D3	,0x25C9	,0x0000), // 'i' ➔ "◉" U+25C9 FISHEYE, Japanese tainome, bullet
+/*<!M><T><A><I>                                                    */ DEADTRANS( L'I'	,0xE5D4	,0x25C9	,0x0000), // 'I' ➔ "◉" U+25C9 FISHEYE, Japanese tainome, bullet
+/*<!M><t><a><u>                                                    */ DEADTRANS( L'u'	,0xE5D3	,0xE5D5	,0x0001), // Intermediate multikey chain link
+/*<!M><T><A><U>                                                    */ DEADTRANS( L'U'	,0xE5D4	,0xE5D6	,0x0001), // Intermediate multikey chain link
+/*<!M><t><a><u><r>                                                 */ DEADTRANS( L'r'	,0xE5D5	,0x2649	,0x0000), // 'r' ➔ "♉" U+2649 TAURUS emoji
+/*<!M><T><A><U><R>                                                 */ DEADTRANS( L'R'	,0xE5D6	,0x2649	,0x0000), // 'R' ➔ "♉" U+2649 TAURUS emoji
+/*<!M><t><c>                                                       */ DEADTRANS( L'c'	,0xE5CA	,0x02A8	,0x0000), // 'c' ➔ "ʨ" U+02A8 LATIN SMALL LETTER TC DIGRAPH WITH CURL
+/*<!M><t><e>                                                       */ DEADTRANS( L'e'	,0xE5CA	,0xE5D7	,0x0001), // Intermediate multikey chain link
+/*<!M><T><E>                                                       */ DEADTRANS( L'E'	,0xE5C9	,0x2121	,0x0000), // 'E' ➔ "℡" U+2121 TELEPHONE SIGN
+/*<!M><T><e>                                                       */ DEADTRANS( L'e'	,0xE5C9	,0x2121	,0x0000), // 'e' ➔ "℡" U+2121 TELEPHONE SIGN
+/*<!M><t><e><c>                                                    */ DEADTRANS( L'c'	,0xE5D7	,0x02A7	,0x0000), // 'c' ➔ "ʧ" U+02A7 LATIN SMALL LETTER TESH DIGRAPH
+/*<!M><t><e><l>                                                    */ DEADTRANS( L'l'	,0xE5D7	,0x2121	,0x0000), // 'l' ➔ "℡" U+2121 TELEPHONE SIGN
+/*<!M><t><e><s>                                                    */ DEADTRANS( L's'	,0xE5D7	,0x02A7	,0x0000), // 's' ➔ "ʧ" U+02A7 LATIN SMALL LETTER TESH DIGRAPH
+/*<!M><T><H>                                                       */ DEADTRANS( L'H'	,0xE5C9	,0xE5D8	,0x0001), // Intermediate multikey chain link
+/*<!M><t><h>                                                       */ DEADTRANS( L'h'	,0xE5CA	,0xE5D9	,0x0001), // Intermediate multikey chain link
+/*<!M><T><h>                                                       */ DEADTRANS( L'h'	,0xE5C9	,0x00DE	,0x0000), // 'h' ➔ "Þ" U+00DE LATIN CAPITAL LETTER THORN
+/*<!M><t><h><%slash>                                               */ DEADTRANS( L'/'	,0xE5D9	,0x1D7A	,0x0000), // '/' ➔ "ᵺ" U+1D7A LATIN SMALL LETTER TH WITH STRIKETHROUGH
+/*<!M><t><h><b>                                                    */ DEADTRANS( L'b'	,0xE5D9	,0x0E3F	,0x0000), // 'b' ➔ "฿" U+0E3F THAI CURRENCY SYMBOL BAHT, Baht THAILAND
+/*<!M><T><H><B>                                                    */ DEADTRANS( L'B'	,0xE5D8	,0x0E3F	,0x0000), // 'B' ➔ "฿" U+0E3F THAI CURRENCY SYMBOL BAHT, Baht THAILAND
+/*<!M><T><H><~space>                                               */ DEADTRANS( L' '	,0xE5D8	,0x00DE	,0x0000), // ' ' ➔ "Þ" U+00DE LATIN CAPITAL LETTER THORN
+/*<!M><t><h><~space>                                               */ DEADTRANS( L' '	,0xE5D9	,0x00FE	,0x0000), // ' ' ➔ "þ" U+00FE LATIN SMALL LETTER THORN
+/*<!M><t><m>                                                       */ DEADTRANS( L'm'	,0xE5CA	,0x2122	,0x0000), // 'm' ➔ "™" U+2122 TRADE MARK SIGN emoji
+/*<!M><T><M>                                                       */ DEADTRANS( L'M'	,0xE5C9	,0x2122	,0x0000), // 'M' ➔ "™" U+2122 TRADE MARK SIGN emoji
+/*<!M><t><n>                                                       */ DEADTRANS( L'n'	,0xE5CA	,0xE5DA	,0x0001), // Intermediate multikey chain link
+/*<!M><T><N>                                                       */ DEADTRANS( L'N'	,0xE5C9	,0xE5DB	,0x0001), // Intermediate multikey chain link
+/*<!M><T><n>                                                       */ DEADTRANS( L'n'	,0xE5C9	,0x2ADA	,0x0000), // 'n' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
+/*<!M><t><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5DA	,0x2ADA	,0x0000), // ' ' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
+/*<!M><t><n><~space>                                               */ DEADTRANS( L' '	,0xE5DA	,0x2ADA	,0x0000), // ' ' ➔ "⫚" U+2ADA PITCHFORK WITH TEE TOP
+/*<!M><t><o>                                                       */ DEADTRANS( L'o'	,0xE5CA	,0xE5DC	,0x0001), // Intermediate multikey chain link
+/*<!M><T><O>                                                       */ DEADTRANS( L'O'	,0xE5C9	,0xE5DD	,0x0001), // Intermediate multikey chain link
+/*<!M><T><o>                                                       */ DEADTRANS( L'o'	,0xE5C9	,0x2AF1	,0x0000), // 'o' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><t><o><x>                                                    */ DEADTRANS( L'x'	,0xE5DC	,0x2620	,0x0000), // 'x' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
+/*<!M><T><O><X>                                                    */ DEADTRANS( L'X'	,0xE5DD	,0x2620	,0x0000), // 'X' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
+/*<!M><t><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5DC	,0x2AF1	,0x0000), // ' ' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><t><o><~space>                                               */ DEADTRANS( L' '	,0xE5DC	,0x2AF1	,0x0000), // ' ' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><t><r>                                                       */ DEADTRANS( L'r'	,0xE5CA	,0xE5DE	,0x0001), // Intermediate multikey chain link
+/*<!M><T><R>                                                       */ DEADTRANS( L'R'	,0xE5C9	,0xE5DF	,0x0001), // Intermediate multikey chain link
+/*<!M><t><r><y>                                                    */ DEADTRANS( L'y'	,0xE5DE	,0x20BA	,0x0000), // 'y' ➔ "₺" U+20BA TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
+/*<!M><T><R><Y>                                                    */ DEADTRANS( L'Y'	,0xE5DF	,0x20BA	,0x0000), // 'Y' ➔ "₺" U+20BA TURKISH LIRA SIGN, Turkish Lira TÜRKİYE
+/*<!M><t><s>                                                       */ DEADTRANS( L's'	,0xE5CA	,0x02A6	,0x0000), // 's' ➔ "ʦ" U+02A6 LATIN SMALL LETTER TS DIGRAPH
+/*<!M><T><T>                                                       */ DEADTRANS( L'T'	,0xE5C9	,0xE5E0	,0x0001), // Intermediate multikey chain link
+/*<!M><t><t>                                                       */ DEADTRANS( L't'	,0xE5CA	,0xE5E1	,0x0001), // Intermediate multikey chain link
+/*<!M><t><t>                                                       */ DEADTRANS( L't'	,0xE5CA	,0x2AE0	,0x0000), // 't' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><T><%apostrophe>                                          */ DEADTRANS( L'\''	,0xE5E0	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><T><%aprightsingquotmark>                                 */ DEADTRANS( 0x2019	,0xE5E0	,0x2AE0	,0x0000), // '’' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><T><T><%backslash>                                           */ DEADTRANS( L'\\'	,0xE5E0	,0xE5E2	,0x0001), // Intermediate multikey chain link
+/*<!M><t><t><%backslash>                                           */ DEADTRANS( L'\\'	,0xE5E1	,0x2AE9	,0x0000), // '\' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%backslash><%apostrophe>                              */ DEADTRANS( L'\''	,0xE5E2	,0x2AE9	,0x0000), // ''' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%backslash><%aprightsingquotmark>                     */ DEADTRANS( 0x2019	,0xE5E2	,0x2AE9	,0x0000), // '’' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%backslash><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE5E2	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><T><%backslash><~space>                                   */ DEADTRANS( L' '	,0xE5E2	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><T><%bar>                                                 */ DEADTRANS( L'|'	,0xE5E0	,0x27D8	,0x0000), // '|' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><T><T><%percent>                                             */ DEADTRANS( L'%'	,0xE5E0	,0xE5E3	,0x0001), // Intermediate multikey chain link
+/*<!M><t><t><%percent>                                             */ DEADTRANS( L'%'	,0xE5E1	,0x2AE9	,0x0000), // '%' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%percent><%apostrophe>                                */ DEADTRANS( L'\''	,0xE5E3	,0x2AE9	,0x0000), // ''' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%percent><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE5E3	,0x2AE9	,0x0000), // '’' ➔ "⫩" U+2AE9 SHORT UP TACK ABOVE SHORT DOWN TACK
+/*<!M><T><T><%percent><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5E3	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><T><%percent><~space>                                     */ DEADTRANS( L' '	,0xE5E3	,0x2AEB	,0x0000), // ' ' ➔ "⫫" U+2AEB DOUBLE UP TACK
+/*<!M><T><T><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E0	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
+/*<!M><T><T><~space>                                               */ DEADTRANS( L' '	,0xE5E0	,0x2AEA	,0x0000), // ' ' ➔ "⫪" U+2AEA DOUBLE DOWN TACK
+/*<!M><t><u>                                                       */ DEADTRANS( L'u'	,0xE5CA	,0xA777	,0x0000), // 'u' ➔ "ꝷ" U+A777 LATIN SMALL LETTER TUM
+/*<!M><T><Z>                                                       */ DEADTRANS( L'Z'	,0xE5C9	,0xA728	,0x0000), // 'Z' ➔ "Ꜩ" U+A728 LATIN CAPITAL LETTER TZ
+/*<!M><T><z>                                                       */ DEADTRANS( L'z'	,0xE5C9	,0xA728	,0x0000), // 'z' ➔ "Ꜩ" U+A728 LATIN CAPITAL LETTER TZ
+/*<!M><t><z>                                                       */ DEADTRANS( L'z'	,0xE5CA	,0xA729	,0x0000), // 'z' ➔ "ꜩ" U+A729 LATIN SMALL LETTER TZ
+/*<!M><T><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5C9	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
+/*<!M><t><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CA	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
+/*<!M><t><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CA	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><T><~space>                                                  */ DEADTRANS( L' '	,0xE5C9	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
+/*<!M><t><~space>                                                  */ DEADTRANS( L' '	,0xE5CA	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
+/*<!M><t><~space>                                                  */ DEADTRANS( L' '	,0xE5CA	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><u>                                                          */ DEADTRANS( L'u'	,0x00A6	,0xE5E4	,0x0001), // Intermediate multikey chain link
+/*<!M><U>                                                          */ DEADTRANS( L'U'	,0x00A6	,0xE5E5	,0x0001), // Intermediate multikey chain link
+/*<!M><U><%at>                                                     */ DEADTRANS( L'@'	,0xE5E5	,0x03F4	,0x0000), // '@' ➔ "ϴ" U+03F4 GREEK CAPITAL THETA SYMBOL
+/*<!M><u><%at>                                                     */ DEADTRANS( L'@'	,0xE5E4	,0x03D1	,0x0000), // '@' ➔ "ϑ" U+03D1 GREEK THETA SYMBOL
+/*<!M><u><%bracketleft>                                            */ DEADTRANS( L'['	,0xE5E4	,0x2294	,0x0000), // '[' ➔ "⊔" U+2294 SQUARE CUP
+/*<!M><U><%bracketleft>                                            */ DEADTRANS( L'['	,0xE5E5	,0x2A06	,0x0000), // '[' ➔ "⨆" U+2A06 N-ARY SQUARE UNION OPERATOR
+/*<!M><u><%bracketright>                                           */ DEADTRANS( L']'	,0xE5E4	,0x2294	,0x0000), // ']' ➔ "⊔" U+2294 SQUARE CUP
+/*<!M><U><%bracketright>                                           */ DEADTRANS( L']'	,0xE5E5	,0x2A06	,0x0000), // ']' ➔ "⨆" U+2A06 N-ARY SQUARE UNION OPERATOR
+/*<!M><u><%less>                                                   */ DEADTRANS( L'<'	,0xE5E4	,0x228C	,0x0000), // '<' ➔ "⊌" U+228C MULTISET
+/*<!M><U><%less>                                                   */ DEADTRANS( L'<'	,0xE5E5	,0x228C	,0x0000), // '<' ➔ "⊌" U+228C MULTISET
+/*<!M><u><%minus>                                                  */ DEADTRANS( L'-'	,0xE5E4	,0x2A41	,0x0000), // '-' ➔ "⩁" U+2A41 UNION WITH MINUS SIGN
+/*<!M><U><%minus>                                                  */ DEADTRANS( L'-'	,0xE5E5	,0x2A41	,0x0000), // '-' ➔ "⩁" U+2A41 UNION WITH MINUS SIGN
+/*<!M><u><%period>                                                 */ DEADTRANS( L'.'	,0xE5E4	,0x228D	,0x0000), // '.' ➔ "⊍" U+228D MULTISET MULTIPLICATION
+/*<!M><U><%period>                                                 */ DEADTRANS( L'.'	,0xE5E5	,0x2A03	,0x0000), // '.' ➔ "⨃" U+2A03 N-ARY UNION OPERATOR WITH DOT
+/*<!M><u><%plus>                                                   */ DEADTRANS( L'+'	,0xE5E4	,0x228E	,0x0000), // '+' ➔ "⊎" U+228E MULTISET UNION
+/*<!M><U><%plus>                                                   */ DEADTRANS( L'+'	,0xE5E5	,0x2A04	,0x0000), // '+' ➔ "⨄" U+2A04 N-ARY UNION OPERATOR WITH PLUS
+/*<!M><u><%underscore>                                             */ DEADTRANS( L'_'	,0xE5E4	,0x2A48	,0x0000), // '_' ➔ "⩈" U+2A48 UNION ABOVE BAR ABOVE INTERSECTION
+/*<!M><U><%underscore>                                             */ DEADTRANS( L'_'	,0xE5E5	,0x2A48	,0x0000), // '_' ➔ "⩈" U+2A48 UNION ABOVE BAR ABOVE INTERSECTION
+/*<!M><u><a>                                                       */ DEADTRANS( L'a'	,0xE5E4	,0xE5E6	,0x0001), // Intermediate multikey chain link
+/*<!M><U><A>                                                       */ DEADTRANS( L'A'	,0xE5E5	,0xE5E7	,0x0001), // Intermediate multikey chain link
+/*<!M><u><a><h>                                                    */ DEADTRANS( L'h'	,0xE5E6	,0x20B4	,0x0000), // 'h' ➔ "₴" U+20B4 HRYVNIA SIGN, Hryvnia UKRAINE
+/*<!M><U><A><H>                                                    */ DEADTRANS( L'H'	,0xE5E7	,0x20B4	,0x0000), // 'H' ➔ "₴" U+20B4 HRYVNIA SIGN, Hryvnia UKRAINE
+/*<!M><u><e>                                                       */ DEADTRANS( L'e'	,0xE5E4	,0x1D6B	,0x0000), // 'e' ➔ "ᵫ" U+1D6B LATIN SMALL LETTER UE
+/*<!M><u><i>                                                       */ DEADTRANS( L'i'	,0xE5E4	,0xAB50	,0x0000), // 'i' ➔ "ꭐ" U+AB50 LATIN SMALL LETTER UI
+/*<!M><u><m>                                                       */ DEADTRANS( L'm'	,0xE5E4	,0xA778	,0x0000), // 'm' ➔ "ꝸ" U+A778 LATIN SMALL LETTER UM
+/*<!M><u><n>                                                       */ DEADTRANS( L'n'	,0xE5E4	,0xE5E8	,0x0001), // Intermediate multikey chain link
+/*<!M><U><N>                                                       */ DEADTRANS( L'N'	,0xE5E5	,0xE5E9	,0x0001), // Intermediate multikey chain link
+/*<!M><u><n><i>                                                    */ DEADTRANS( L'i'	,0xE5E8	,0xE5EA	,0x0001), // Intermediate multikey chain link
+/*<!M><u><n><i><o>                                                 */ DEADTRANS( L'o'	,0xE5EA	,0xE5EB	,0x0001), // Intermediate multikey chain link
+/*<!M><u><n><i><o><n>                                              */ DEADTRANS( L'n'	,0xE5EB	,0x222A	,0x0000), // 'n' ➔ "∪" U+222A UNION French name
+/*<!M><u><n><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E8	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
+/*<!M><U><N><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xE5E9	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
+/*<!M><u><n><~space>                                               */ DEADTRANS( L' '	,0xE5E8	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
+/*<!M><U><N><~space>                                               */ DEADTRANS( L' '	,0xE5E9	,0x2A46	,0x0000), // ' ' ➔ "⩆" U+2A46 UNION ABOVE INTERSECTION
+/*<!M><u><o>                                                       */ DEADTRANS( L'o'	,0xE5E4	,0xAB63	,0x0000), // 'o' ➔ "ꭣ" U+AB63 LATIN SMALL LETTER UO
+/*<!M><u><u>                                                       */ DEADTRANS( L'u'	,0xE5E4	,0x2A4A	,0x0000), // 'u' ➔ "⩊" U+2A4A UNION BESIDE AND JOINED WITH UNION
+/*<!M><U><U>                                                       */ DEADTRANS( L'U'	,0xE5E5	,0x2A4A	,0x0000), // 'U' ➔ "⩊" U+2A4A UNION BESIDE AND JOINED WITH UNION
+/*<!M><u><v>                                                       */ DEADTRANS( L'v'	,0xE5E4	,0x2A45	,0x0000), // 'v' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
+/*<!M><U><V>                                                       */ DEADTRANS( L'V'	,0xE5E5	,0x2A45	,0x0000), // 'V' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
+/*<!M><u><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5E4	,0x222A	,0x0000), // ' ' ➔ "∪" U+222A UNION
+/*<!M><U><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5E5	,0x22C3	,0x0000), // ' ' ➔ "⋃" U+22C3 N-ARY UNION
+/*<!M><u><~space>                                                  */ DEADTRANS( L' '	,0xE5E4	,0x222A	,0x0000), // ' ' ➔ "∪" U+222A UNION
+/*<!M><U><~space>                                                  */ DEADTRANS( L' '	,0xE5E5	,0x22C3	,0x0000), // ' ' ➔ "⋃" U+22C3 N-ARY UNION
+/*<!M><V>                                                          */ DEADTRANS( L'V'	,0x00A6	,0xE5EC	,0x0001), // Intermediate multikey chain link
+/*<!M><v>                                                          */ DEADTRANS( L'v'	,0x00A6	,0xE5ED	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5ED	,0xE5EE	,0x0001), // Intermediate multikey chain link
+/*<!M><V><%backslash>                                              */ DEADTRANS( L'\\'	,0xE5EC	,0x22C0	,0x0000), // '\' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><v><%backslash><%bar>                                        */ DEADTRANS( L'|'	,0xE5EE	,0x2A5A	,0x0000), // '|' ➔ "⩚" U+2A5A LOGICAL AND WITH MIDDLE STEM
+/*<!M><v><%backslash><%minus>                                      */ DEADTRANS( L'-'	,0xE5EE	,0x2A5C	,0x0000), // '-' ➔ "⩜" U+2A5C LOGICAL AND WITH HORIZONTAL DASH
+/*<!M><v><%backslash><%parenleft>                                  */ DEADTRANS( L'('	,0xE5EE	,0xE5EF	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%backslash><%parenleft><%parenright>                     */ DEADTRANS( L')'	,0xE5EF	,0x22CF	,0x0000), // ')' ➔ "⋏" U+22CF CURLY LOGICAL AND
+/*<!M><v><%backslash><%parenright>                                 */ DEADTRANS( L')'	,0xE5EE	,0xE5F0	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%backslash><%parenright><%parenleft>                     */ DEADTRANS( L'('	,0xE5F0	,0x22CF	,0x0000), // '(' ➔ "⋏" U+22CF CURLY LOGICAL AND
+/*<!M><v><%backslash><%underscore>                                 */ DEADTRANS( L'_'	,0xE5EE	,0xE5F1	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%backslash><%underscore><%underscore>                    */ DEADTRANS( L'_'	,0xE5F1	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
+/*<!M><v><%backslash><%underscore><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE5F1	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><v><%backslash><%underscore><~space>                         */ DEADTRANS( L' '	,0xE5F1	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><v><%backslash><v>                                           */ DEADTRANS( L'v'	,0xE5EE	,0x2A59	,0x0000), // 'v' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
+/*<!M><v><%backslash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE5EE	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><v><%backslash><~space>                                      */ DEADTRANS( L' '	,0xE5EE	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><v><%bar>                                                    */ DEADTRANS( L'|'	,0xE5ED	,0x2A5B	,0x0000), // '|' ➔ "⩛" U+2A5B LOGICAL OR WITH MIDDLE STEM
+/*<!M><V><%bar>                                                    */ DEADTRANS( L'|'	,0xE5EC	,0x2A5B	,0x0000), // '|' ➔ "⩛" U+2A5B LOGICAL OR WITH MIDDLE STEM
+/*<!M><v><%bracketright>                                           */ DEADTRANS( L']'	,0xE5ED	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><V><%bracketright>                                           */ DEADTRANS( L']'	,0xE5EC	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><v><%equal>                                                  */ DEADTRANS( L'='	,0xE5ED	,0x225A	,0x0000), // '=' ➔ "≚" U+225A EQUIANGULAR TO
+/*<!M><V><%equal>                                                  */ DEADTRANS( L'='	,0xE5EC	,0x225A	,0x0000), // '=' ➔ "≚" U+225A EQUIANGULAR TO
+/*<!M><v><%minus>                                                  */ DEADTRANS( L'-'	,0xE5ED	,0x2A5D	,0x0000), // '-' ➔ "⩝" U+2A5D LOGICAL OR WITH HORIZONTAL DASH
+/*<!M><V><%minus>                                                  */ DEADTRANS( L'-'	,0xE5EC	,0x2A5D	,0x0000), // '-' ➔ "⩝" U+2A5D LOGICAL OR WITH HORIZONTAL DASH
+/*<!M><v><%parenleft>                                              */ DEADTRANS( L'('	,0xE5ED	,0xE5F2	,0x0001), // Intermediate multikey chain link
+/*<!M><V><%parenleft>                                              */ DEADTRANS( L'('	,0xE5EC	,0xE5F3	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%parenleft><%parenright>                                 */ DEADTRANS( L')'	,0xE5F2	,0x22CE	,0x0000), // ')' ➔ "⋎" U+22CE CURLY LOGICAL OR
+/*<!M><V><%parenleft><%parenright>                                 */ DEADTRANS( L')'	,0xE5F3	,0x22CE	,0x0000), // ')' ➔ "⋎" U+22CE CURLY LOGICAL OR
+/*<!M><v><%parenright>                                             */ DEADTRANS( L')'	,0xE5ED	,0xE5F4	,0x0001), // Intermediate multikey chain link
+/*<!M><V><%parenright>                                             */ DEADTRANS( L')'	,0xE5EC	,0xE5F5	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%parenright><%parenleft>                                 */ DEADTRANS( L'('	,0xE5F4	,0x22CE	,0x0000), // '(' ➔ "⋎" U+22CE CURLY LOGICAL OR
+/*<!M><V><%parenright><%parenleft>                                 */ DEADTRANS( L'('	,0xE5F5	,0x22CE	,0x0000), // '(' ➔ "⋎" U+22CE CURLY LOGICAL OR
+/*<!M><v><%percent>                                                */ DEADTRANS( L'%'	,0xE5ED	,0xE5F6	,0x0001), // Intermediate multikey chain link
+/*<!M><V><%percent>                                                */ DEADTRANS( L'%'	,0xE5EC	,0x22C0	,0x0000), // '%' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><v><%percent><%bar>                                          */ DEADTRANS( L'|'	,0xE5F6	,0x2A5A	,0x0000), // '|' ➔ "⩚" U+2A5A LOGICAL AND WITH MIDDLE STEM
+/*<!M><v><%percent><%bracketright>                                 */ DEADTRANS( L']'	,0xE5F6	,0x27CE	,0x0000), // ']' ➔ "⟎" U+27CE SQUARED LOGICAL AND
+/*<!M><v><%percent><%minus>                                        */ DEADTRANS( L'-'	,0xE5F6	,0x2A5C	,0x0000), // '-' ➔ "⩜" U+2A5C LOGICAL AND WITH HORIZONTAL DASH
+/*<!M><v><%percent><%parenleft>                                    */ DEADTRANS( L'('	,0xE5F6	,0xE5F7	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%percent><%parenleft><%parenright>                       */ DEADTRANS( L')'	,0xE5F7	,0x22CF	,0x0000), // ')' ➔ "⋏" U+22CF CURLY LOGICAL AND
+/*<!M><v><%percent><%parenright>                                   */ DEADTRANS( L')'	,0xE5F6	,0xE5F8	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%percent><%parenright><%parenleft>                       */ DEADTRANS( L'('	,0xE5F8	,0x22CF	,0x0000), // '(' ➔ "⋏" U+22CF CURLY LOGICAL AND
+/*<!M><v><%percent><%period>                                       */ DEADTRANS( L'.'	,0xE5F6	,0x27D1	,0x0000), // '.' ➔ "⟑" U+27D1 AND WITH DOT
+/*<!M><v><%percent><%underscore>                                   */ DEADTRANS( L'_'	,0xE5F6	,0xE5F9	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%percent><%underscore><%underscore>                      */ DEADTRANS( L'_'	,0xE5F9	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
+/*<!M><v><%percent><%underscore><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE5F9	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><v><%percent><%underscore><~space>                           */ DEADTRANS( L' '	,0xE5F9	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><v><%percent><v>                                             */ DEADTRANS( L'v'	,0xE5F6	,0x2A59	,0x0000), // 'v' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
+/*<!M><v><%percent><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE5F6	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><v><%percent><~space>                                        */ DEADTRANS( L' '	,0xE5F6	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><v><%period>                                                 */ DEADTRANS( L'.'	,0xE5ED	,0x27C7	,0x0000), // '.' ➔ "⟇" U+27C7 OR WITH DOT INSIDE
+/*<!M><V><%period>                                                 */ DEADTRANS( L'.'	,0xE5EC	,0x27C7	,0x0000), // '.' ➔ "⟇" U+27C7 OR WITH DOT INSIDE
+/*<!M><V><%slash>                                                  */ DEADTRANS( L'/'	,0xE5EC	,0x2123	,0x0000), // '/' ➔ "℣" U+2123 VERSICLE
+/*<!M><v><%slash>                                                  */ DEADTRANS( L'/'	,0xE5ED	,0x2123	,0x0000), // '/' ➔ "℣" U+2123 VERSICLE
+/*<!M><v><%underscore>                                             */ DEADTRANS( L'_'	,0xE5ED	,0xE5FA	,0x0001), // Intermediate multikey chain link
+/*<!M><v><%underscore><%comma>                                     */ DEADTRANS( L','	,0xE5FA	,0x2A61	,0x0000), // ',' ➔ "⩡" U+2A61 SMALL VEE WITH UNDERBAR
+/*<!M><v><%underscore><%underscore>                                */ DEADTRANS( L'_'	,0xE5FA	,0x2A63	,0x0000), // '_' ➔ "⩣" U+2A63 LOGICAL OR WITH DOUBLE UNDERBAR
+/*<!M><v><%underscore><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE5FA	,0x22BB	,0x0000), // ' ' ➔ "⊻" U+22BB XOR
+/*<!M><v><%underscore><~space>                                     */ DEADTRANS( L' '	,0xE5FA	,0x22BB	,0x0000), // ' ' ➔ "⊻" U+22BB XOR
+/*<!M><v><2>                                                       */ DEADTRANS( L'2'	,0xE5ED	,0x221A	,0x0000), // '2' ➔ "√" U+221A SQUARE ROOT
+/*<!M><V><2>                                                       */ DEADTRANS( L'2'	,0xE5EC	,0x221A	,0x0000), // '2' ➔ "√" U+221A SQUARE ROOT
+/*<!M><v><3>                                                       */ DEADTRANS( L'3'	,0xE5ED	,0x221B	,0x0000), // '3' ➔ "∛" U+221B CUBE ROOT
+/*<!M><V><3>                                                       */ DEADTRANS( L'3'	,0xE5EC	,0x221B	,0x0000), // '3' ➔ "∛" U+221B CUBE ROOT
+/*<!M><v><4>                                                       */ DEADTRANS( L'4'	,0xE5ED	,0x221C	,0x0000), // '4' ➔ "∜" U+221C FOURTH ROOT
+/*<!M><V><4>                                                       */ DEADTRANS( L'4'	,0xE5EC	,0x221C	,0x0000), // '4' ➔ "∜" U+221C FOURTH ROOT
+/*<!M><v><a>                                                       */ DEADTRANS( L'a'	,0xE5ED	,0x2A59	,0x0000), // 'a' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
+/*<!M><v><A>                                                       */ DEADTRANS( L'A'	,0xE5ED	,0x2A59	,0x0000), // 'A' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
+/*<!M><V><A>                                                       */ DEADTRANS( L'A'	,0xE5EC	,0x2A59	,0x0000), // 'A' ➔ "⩙" U+2A59 LOGICAL OR OVERLAPPING LOGICAL AND
+/*<!M><v><e>                                                       */ DEADTRANS( L'e'	,0xE5ED	,0xE5FB	,0x0001), // Intermediate multikey chain link
+/*<!M><V><E>                                                       */ DEADTRANS( L'E'	,0xE5EC	,0xE5FC	,0x0001), // Intermediate multikey chain link
+/*<!M><v><e><r>                                                    */ DEADTRANS( L'r'	,0xE5FB	,0xE5FD	,0x0001), // Intermediate multikey chain link
+/*<!M><V><E><R>                                                    */ DEADTRANS( L'R'	,0xE5FC	,0xE5FE	,0x0001), // Intermediate multikey chain link
+/*<!M><v><e><r><s>                                                 */ DEADTRANS( L's'	,0xE5FD	,0x2652	,0x0000), // 's' ➔ "♒" U+2652 AQUARIUS emoji
+/*<!M><V><E><R><S>                                                 */ DEADTRANS( L'S'	,0xE5FE	,0x2652	,0x0000), // 'S' ➔ "♒" U+2652 AQUARIUS emoji
+/*<!M><v><i>                                                       */ DEADTRANS( L'i'	,0xE5ED	,0xE5FF	,0x0001), // Intermediate multikey chain link
+/*<!M><V><I>                                                       */ DEADTRANS( L'I'	,0xE5EC	,0xE600	,0x0001), // Intermediate multikey chain link
+/*<!M><v><i><e>                                                    */ DEADTRANS( L'e'	,0xE5FF	,0xE601	,0x0001), // Intermediate multikey chain link
+/*<!M><V><I><E>                                                    */ DEADTRANS( L'E'	,0xE600	,0xE602	,0x0001), // Intermediate multikey chain link
+/*<!M><v><i><e><r>                                                 */ DEADTRANS( L'r'	,0xE601	,0x264D	,0x0000), // 'r' ➔ "♍" U+264D VIRGO emoji
+/*<!M><V><I><E><R>                                                 */ DEADTRANS( L'R'	,0xE602	,0x264D	,0x0000), // 'R' ➔ "♍" U+264D VIRGO emoji
+/*<!M><v><i><r>                                                    */ DEADTRANS( L'r'	,0xE5FF	,0xE603	,0x0001), // Intermediate multikey chain link
+/*<!M><V><I><R>                                                    */ DEADTRANS( L'R'	,0xE600	,0xE604	,0x0001), // Intermediate multikey chain link
+/*<!M><v><i><r><g>                                                 */ DEADTRANS( L'g'	,0xE603	,0x264D	,0x0000), // 'g' ➔ "♍" U+264D VIRGO emoji
+/*<!M><V><I><R><G>                                                 */ DEADTRANS( L'G'	,0xE604	,0x264D	,0x0000), // 'G' ➔ "♍" U+264D VIRGO emoji
+/*<!M><v><n>                                                       */ DEADTRANS( L'n'	,0xE5ED	,0xE605	,0x0001), // Intermediate multikey chain link
+/*<!M><V><N>                                                       */ DEADTRANS( L'N'	,0xE5EC	,0xE606	,0x0001), // Intermediate multikey chain link
+/*<!M><v><n><d>                                                    */ DEADTRANS( L'd'	,0xE605	,0x20AB	,0x0000), // 'd' ➔ "₫" U+20AB DONG SIGN, Dong VIET NAM
+/*<!M><V><N><D>                                                    */ DEADTRANS( L'D'	,0xE606	,0x20AB	,0x0000), // 'D' ➔ "₫" U+20AB DONG SIGN, Dong VIET NAM
+/*<!M><v><u>                                                       */ DEADTRANS( L'u'	,0xE5ED	,0x2A45	,0x0000), // 'u' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
+/*<!M><V><U>                                                       */ DEADTRANS( L'U'	,0xE5EC	,0x2A45	,0x0000), // 'U' ➔ "⩅" U+2A45 UNION WITH LOGICAL OR
+/*<!M><v><v>                                                       */ DEADTRANS( L'v'	,0xE5ED	,0xE607	,0x0001), // Intermediate multikey chain link
+/*<!M><V><V>                                                       */ DEADTRANS( L'V'	,0xE5EC	,0xE608	,0x0001), // Intermediate multikey chain link
+/*<!M><v><v><%equal>                                               */ DEADTRANS( L'='	,0xE607	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
+/*<!M><V><V><%equal>                                               */ DEADTRANS( L'='	,0xE608	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
+/*<!M><V><Y>                                                       */ DEADTRANS( L'Y'	,0xE5EC	,0xA760	,0x0000), // 'Y' ➔ "Ꝡ" U+A760 LATIN CAPITAL LETTER VY
+/*<!M><V><y>                                                       */ DEADTRANS( L'y'	,0xE5EC	,0xA760	,0x0000), // 'y' ➔ "Ꝡ" U+A760 LATIN CAPITAL LETTER VY
+/*<!M><v><y>                                                       */ DEADTRANS( L'y'	,0xE5ED	,0xA761	,0x0000), // 'y' ➔ "ꝡ" U+A761 LATIN SMALL LETTER VY
+/*<!M><v><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5ED	,0x2228	,0x0000), // ' ' ➔ "∨" U+2228 LOGICAL OR
+/*<!M><V><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5EC	,0x22C1	,0x0000), // ' ' ➔ "⋁" U+22C1 N-ARY LOGICAL OR
+/*<!M><v><~space>                                                  */ DEADTRANS( L' '	,0xE5ED	,0x2228	,0x0000), // ' ' ➔ "∨" U+2228 LOGICAL OR
+/*<!M><V><~space>                                                  */ DEADTRANS( L' '	,0xE5EC	,0x22C1	,0x0000), // ' ' ➔ "⋁" U+22C1 N-ARY LOGICAL OR
+/*<!M><w>                                                          */ DEADTRANS( L'w'	,0x00A6	,0xE609	,0x0001), // Intermediate multikey chain link
+/*<!M><W>                                                          */ DEADTRANS( L'W'	,0x00A6	,0xE60A	,0x0001), // Intermediate multikey chain link
+/*<!M><w><%backslash>                                              */ DEADTRANS( L'\\'	,0xE609	,0x2A55	,0x0000), // '\' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
+/*<!M><w><%bracketleft>                                            */ DEADTRANS( L'['	,0xE609	,0x29D8	,0x0000), // '[' ➔ "⧘" U+29D8 LEFT WIGGLY FENCE
+/*<!M><W><%bracketleft>                                            */ DEADTRANS( L'['	,0xE60A	,0x29D8	,0x0000), // '[' ➔ "⧘" U+29D8 LEFT WIGGLY FENCE
+/*<!M><w><%bracketright>                                           */ DEADTRANS( L']'	,0xE609	,0x29D9	,0x0000), // ']' ➔ "⧙" U+29D9 RIGHT WIGGLY FENCE
+/*<!M><W><%bracketright>                                           */ DEADTRANS( L']'	,0xE60A	,0x29D9	,0x0000), // ']' ➔ "⧙" U+29D9 RIGHT WIGGLY FENCE
+/*<!M><w><%equal>                                                  */ DEADTRANS( L'='	,0xE609	,0x20A9	,0x0000), // '=' ➔ "₩" U+20A9 WON SIGN
+/*<!M><W><%equal>                                                  */ DEADTRANS( L'='	,0xE60A	,0x20A9	,0x0000), // '=' ➔ "₩" U+20A9 WON SIGN
+/*<!M><W><%percent>                                                */ DEADTRANS( L'%'	,0xE60A	,0x2A07	,0x0000), // '%' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
+/*<!M><w><%percent>                                                */ DEADTRANS( L'%'	,0xE609	,0x2A55	,0x0000), // '%' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
+/*<!M><w><l>                                                       */ DEADTRANS( L'l'	,0xE609	,0x2307	,0x0000), // 'l' ➔ "⌇" U+2307 WAVY LINE
+/*<!M><W><L>                                                       */ DEADTRANS( L'L'	,0xE60A	,0x2307	,0x0000), // 'L' ➔ "⌇" U+2307 WAVY LINE
+/*<!M><w><v>                                                       */ DEADTRANS( L'v'	,0xE609	,0x2AFF	,0x0000), // 'v' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><W><V>                                                       */ DEADTRANS( L'V'	,0xE60A	,0x2AFF	,0x0000), // 'V' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><w><w>                                                       */ DEADTRANS( L'w'	,0xE609	,0xE60B	,0x0001), // Intermediate multikey chain link
+/*<!M><W><W>                                                       */ DEADTRANS( L'W'	,0xE60A	,0xE60C	,0x0001), // Intermediate multikey chain link
+/*<!M><w><w><%bracketleft>                                         */ DEADTRANS( L'['	,0xE60B	,0x29DA	,0x0000), // '[' ➔ "⧚" U+29DA LEFT DOUBLE WIGGLY FENCE
+/*<!M><W><W><%bracketleft>                                         */ DEADTRANS( L'['	,0xE60C	,0x29DA	,0x0000), // '[' ➔ "⧚" U+29DA LEFT DOUBLE WIGGLY FENCE
+/*<!M><w><w><%bracketright>                                        */ DEADTRANS( L']'	,0xE60B	,0x29DB	,0x0000), // ']' ➔ "⧛" U+29DB RIGHT DOUBLE WIGGLY FENCE
+/*<!M><W><W><%bracketright>                                        */ DEADTRANS( L']'	,0xE60C	,0x29DB	,0x0000), // ']' ➔ "⧛" U+29DB RIGHT DOUBLE WIGGLY FENCE
+/*<!M><w><z>                                                       */ DEADTRANS( L'z'	,0xE609	,0xDD2E	,0x0000), // High surrogate: D83C; 'z' ➔ "🄮" U+1F12E CIRCLED WZ
+/*<!M><W><Z>                                                       */ DEADTRANS( L'Z'	,0xE60A	,0xDD2E	,0x0000), // High surrogate: D83C; 'Z' ➔ "🄮" U+1F12E CIRCLED WZ
+/*<!M><W><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE60A	,0x2A08	,0x0000), // ' ' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
+/*<!M><w><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE609	,0x2A56	,0x0000), // ' ' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
+/*<!M><W><~space>                                                  */ DEADTRANS( L' '	,0xE60A	,0x2A08	,0x0000), // ' ' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
+/*<!M><w><~space>                                                  */ DEADTRANS( L' '	,0xE609	,0x2A56	,0x0000), // ' ' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
+/*<!M><X>                                                          */ DEADTRANS( L'X'	,0x00A6	,0xE60D	,0x0001), // Intermediate multikey chain link
+/*<!M><x>                                                          */ DEADTRANS( L'x'	,0x00A6	,0xE60E	,0x0001), // Intermediate multikey chain link
+/*<!M><x><%colon>                                                  */ DEADTRANS( L':'	,0xE60E	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
+/*<!M><X><%colon>                                                  */ DEADTRANS( L':'	,0xE60D	,0x22C7	,0x0000), // ':' ➔ "⋇" U+22C7 DIVISION TIMES
+/*<!M><X><%hash>                                                   */ DEADTRANS( L'#'	,0xE60D	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><x><%hash>                                                   */ DEADTRANS( L'#'	,0xE60E	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><x><%minus>                                                  */ DEADTRANS( L'-'	,0xE60E	,0x2947	,0x0000), // '-' ➔ "⥇" U+2947 RIGHTWARDS ARROW THROUGH X
+/*<!M><X><%minus>                                                  */ DEADTRANS( L'-'	,0xE60D	,0x2947	,0x0000), // '-' ➔ "⥇" U+2947 RIGHTWARDS ARROW THROUGH X
+/*<!M><x><%parenright>                                             */ DEADTRANS( L')'	,0xE60E	,0x2A35	,0x0000), // ')' ➔ "⨵" U+2A35 MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
+/*<!M><X><%parenright>                                             */ DEADTRANS( L')'	,0xE60D	,0x2A35	,0x0000), // ')' ➔ "⨵" U+2A35 MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
+/*<!M><x><%period>                                                 */ DEADTRANS( L'.'	,0xE60E	,0x22C7	,0x0000), // '.' ➔ "⋇" U+22C7 DIVISION TIMES
+/*<!M><X><%period>                                                 */ DEADTRANS( L'.'	,0xE60D	,0x22C7	,0x0000), // '.' ➔ "⋇" U+22C7 DIVISION TIMES
+/*<!M><X><%underscore>                                             */ DEADTRANS( L'_'	,0xE60D	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
+/*<!M><x><%underscore>                                             */ DEADTRANS( L'_'	,0xE60E	,0x2A31	,0x0000), // '_' ➔ "⨱" U+2A31 MULTIPLICATION SIGN WITH UNDERBAR
+/*<!M><x><o>                                                       */ DEADTRANS( L'o'	,0xE60E	,0xE60F	,0x0001), // Intermediate multikey chain link
+/*<!M><X><O>                                                       */ DEADTRANS( L'O'	,0xE60D	,0xE610	,0x0001), // Intermediate multikey chain link
+/*<!M><X><o>                                                       */ DEADTRANS( L'o'	,0xE60D	,0x00A4	,0x0000), // 'o' ➔ "¤" U+00A4 CURRENCY SIGN
+/*<!M><x><O>                                                       */ DEADTRANS( L'O'	,0xE60E	,0x00A4	,0x0000), // 'O' ➔ "¤" U+00A4 CURRENCY SIGN
+/*<!M><x><o><r>                                                    */ DEADTRANS( L'r'	,0xE60F	,0x22BB	,0x0000), // 'r' ➔ "⊻" U+22BB XOR
+/*<!M><X><O><R>                                                    */ DEADTRANS( L'R'	,0xE610	,0x22BB	,0x0000), // 'R' ➔ "⊻" U+22BB XOR
+/*<!M><X><R>                                                       */ DEADTRANS( L'R'	,0xE60D	,0x2627	,0x0000), // 'R' ➔ "☧" U+2627 CHI RHO
+/*<!M><x><R>                                                       */ DEADTRANS( L'R'	,0xE60E	,0x2627	,0x0000), // 'R' ➔ "☧" U+2627 CHI RHO
+/*<!M><X><r>                                                       */ DEADTRANS( L'r'	,0xE60D	,0x2627	,0x0000), // 'r' ➔ "☧" U+2627 CHI RHO
+/*<!M><x><r>                                                       */ DEADTRANS( L'r'	,0xE60E	,0x2627	,0x0000), // 'r' ➔ "☧" U+2627 CHI RHO
+/*<!M><x><t>                                                       */ DEADTRANS( L't'	,0xE60E	,0xE611	,0x0001), // Intermediate multikey chain link
+/*<!M><X><T>                                                       */ DEADTRANS( L'T'	,0xE60D	,0xE612	,0x0001), // Intermediate multikey chain link
+/*<!M><x><t><l>                                                    */ DEADTRANS( L'l'	,0xE611	,0x232B	,0x0000), // 'l' ➔ "⌫" U+232B ERASE TO THE LEFT
+/*<!M><X><T><L>                                                    */ DEADTRANS( L'L'	,0xE612	,0x232B	,0x0000), // 'L' ➔ "⌫" U+232B ERASE TO THE LEFT
+/*<!M><x><t><r>                                                    */ DEADTRANS( L'r'	,0xE611	,0x2326	,0x0000), // 'r' ➔ "⌦" U+2326 ERASE TO THE RIGHT
+/*<!M><X><T><R>                                                    */ DEADTRANS( L'R'	,0xE612	,0x2326	,0x0000), // 'R' ➔ "⌦" U+2326 ERASE TO THE RIGHT
+/*<!M><x><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE60E	,0x00D7	,0x0000), // ' ' ➔ "×" U+00D7 MULTIPLICATION SIGN
+/*<!M><X><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE60D	,0x2A09	,0x0000), // ' ' ➔ "⨉" U+2A09 N-ARY TIMES OPERATOR
+/*<!M><x><~space>                                                  */ DEADTRANS( L' '	,0xE60E	,0x00D7	,0x0000), // ' ' ➔ "×" U+00D7 MULTIPLICATION SIGN
+/*<!M><X><~space>                                                  */ DEADTRANS( L' '	,0xE60D	,0x2A09	,0x0000), // ' ' ➔ "⨉" U+2A09 N-ARY TIMES OPERATOR
+/*<!M><y>                                                          */ DEADTRANS( L'y'	,0x00A6	,0xE613	,0x0001), // Intermediate multikey chain link
+/*<!M><Y>                                                          */ DEADTRANS( L'Y'	,0x00A6	,0xE614	,0x0001), // Intermediate multikey chain link
+/*<!M><Y><%at>                                                     */ DEADTRANS( L'@'	,0xE614	,0x03D2	,0x0000), // '@' ➔ "ϒ" U+03D2 GREEK UPSILON WITH HOOK SYMBOL
+/*<!M><Y><%backslash>                                              */ DEADTRANS( L'\\'	,0xE614	,0x2144	,0x0000), // '\' ➔ "⅄" U+2144 TURNED SANS-SERIF CAPITAL Y
+/*<!M><y><%equal>                                                  */ DEADTRANS( L'='	,0xE613	,0x00A5	,0x0000), // '=' ➔ "¥" U+00A5 YEN SIGN
+/*<!M><Y><%equal>                                                  */ DEADTRANS( L'='	,0xE614	,0x00A5	,0x0000), // '=' ➔ "¥" U+00A5 YEN SIGN
+/*<!M><Y><%exclam>                                                 */ DEADTRANS( L'!'	,0xE614	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
+/*<!M><y><%exclam>                                                 */ DEADTRANS( L'!'	,0xE613	,0x297E	,0x0000), // '!' ➔ "⥾" U+297E UP FISH TAIL
+/*<!M><y><%minus>                                                  */ DEADTRANS( L'-'	,0xE613	,0x00A5	,0x0000), // '-' ➔ "¥" U+00A5 YEN SIGN
+/*<!M><Y><%minus>                                                  */ DEADTRANS( L'-'	,0xE614	,0x00A5	,0x0000), // '-' ➔ "¥" U+00A5 YEN SIGN
+/*<!M><Y><%percent>                                                */ DEADTRANS( L'%'	,0xE614	,0x2144	,0x0000), // '%' ➔ "⅄" U+2144 TURNED SANS-SERIF CAPITAL Y
+/*<!M><y><e>                                                       */ DEADTRANS( L'e'	,0xE613	,0xE615	,0x0001), // Intermediate multikey chain link
+/*<!M><Y><E>                                                       */ DEADTRANS( L'E'	,0xE614	,0xE616	,0x0001), // Intermediate multikey chain link
+/*<!M><y><e><r>                                                    */ DEADTRANS( L'r'	,0xE615	,0xFDFC	,0x0000), // 'r' ➔ "﷼" U+FDFC RIAL SIGN, Yemeni Rial YEMEN
+/*<!M><Y><E><R>                                                    */ DEADTRANS( L'R'	,0xE616	,0xFDFC	,0x0000), // 'R' ➔ "﷼" U+FDFC RIAL SIGN, Yemeni Rial YEMEN
+/*<!M><z>                                                          */ DEADTRANS( L'z'	,0x00A6	,0xE617	,0x0001), // Intermediate multikey chain link
+/*<!M><Z>                                                          */ DEADTRANS( L'Z'	,0x00A6	,0xE618	,0x0001), // Intermediate multikey chain link
+/*<!M><z><%bar>                                                    */ DEADTRANS( L'|'	,0xE617	,0x2A65	,0x0000), // '|' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
+/*<!M><Z><%bar>                                                    */ DEADTRANS( L'|'	,0xE618	,0x2A65	,0x0000), // '|' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
+/*<!M><z><%colon>                                                  */ DEADTRANS( L':'	,0xE617	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><Z><%colon>                                                  */ DEADTRANS( L':'	,0xE618	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE617	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
+/*<!M><Z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE618	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
+/*<!M><z><%greater>                                                */ DEADTRANS( L'>'	,0xE617	,0xE619	,0x0001), // Intermediate multikey chain link
+/*<!M><Z><%greater>                                                */ DEADTRANS( L'>'	,0xE618	,0xE61A	,0x0001), // Intermediate multikey chain link
+/*<!M><z><%greater><%greater>                                      */ DEADTRANS( L'>'	,0xE619	,0x2A20	,0x0000), // '>' ➔ "⨠" U+2A20 Z NOTATION SCHEMA PIPING
+/*<!M><Z><%greater><%greater>                                      */ DEADTRANS( L'>'	,0xE61A	,0x2A20	,0x0000), // '>' ➔ "⨠" U+2A20 Z NOTATION SCHEMA PIPING
+/*<!M><z><%greater><%minus>                                        */ DEADTRANS( L'-'	,0xE619	,0x2A65	,0x0000), // '-' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
+/*<!M><Z><%greater><%minus>                                        */ DEADTRANS( L'-'	,0xE61A	,0x2A65	,0x0000), // '-' ➔ "⩥" U+2A65 Z NOTATION RANGE ANTIRESTRICTION
+/*<!M><z><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE619	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
+/*<!M><Z><%greater><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE61A	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
+/*<!M><z><%greater><~space>                                        */ DEADTRANS( L' '	,0xE619	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
+/*<!M><Z><%greater><~space>                                        */ DEADTRANS( L' '	,0xE61A	,0x298A	,0x0000), // ' ' ➔ "⦊" U+298A Z NOTATION RIGHT BINDING BRACKET
+/*<!M><Z><%hash>                                                   */ DEADTRANS( L'#'	,0xE618	,0x2128	,0x0000), // '#' ➔ "ℨ" U+2128 BLACK-LETTER CAPITAL Z
+/*<!M><z><%less>                                                   */ DEADTRANS( L'<'	,0xE617	,0xE61B	,0x0001), // Intermediate multikey chain link
+/*<!M><Z><%less>                                                   */ DEADTRANS( L'<'	,0xE618	,0xE61C	,0x0001), // Intermediate multikey chain link
+/*<!M><z><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE61B	,0x2A64	,0x0000), // '-' ➔ "⩤" U+2A64 Z NOTATION DOMAIN ANTIRESTRICTION
+/*<!M><Z><%less><%minus>                                           */ DEADTRANS( L'-'	,0xE61C	,0x2A64	,0x0000), // '-' ➔ "⩤" U+2A64 Z NOTATION DOMAIN ANTIRESTRICTION
+/*<!M><z><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE61B	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
+/*<!M><Z><%less><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE61C	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
+/*<!M><z><%less><~space>                                           */ DEADTRANS( L' '	,0xE61B	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
+/*<!M><Z><%less><~space>                                           */ DEADTRANS( L' '	,0xE61C	,0x2989	,0x0000), // ' ' ➔ "⦉" U+2989 Z NOTATION LEFT BINDING BRACKET
+/*<!M><z><%parenleft>                                              */ DEADTRANS( L'('	,0xE617	,0x2987	,0x0000), // '(' ➔ "⦇" U+2987 Z NOTATION LEFT IMAGE BRACKET
+/*<!M><Z><%parenleft>                                              */ DEADTRANS( L'('	,0xE618	,0x2987	,0x0000), // '(' ➔ "⦇" U+2987 Z NOTATION LEFT IMAGE BRACKET
+/*<!M><z><%parenright>                                             */ DEADTRANS( L')'	,0xE617	,0x2988	,0x0000), // ')' ➔ "⦈" U+2988 Z NOTATION RIGHT IMAGE BRACKET
+/*<!M><Z><%parenright>                                             */ DEADTRANS( L')'	,0xE618	,0x2988	,0x0000), // ')' ➔ "⦈" U+2988 Z NOTATION RIGHT IMAGE BRACKET
+/*<!M><z><%period>                                                 */ DEADTRANS( L'.'	,0xE617	,0x2981	,0x0000), // '.' ➔ "⦁" U+2981 Z NOTATION SPOT
+/*<!M><Z><%period>                                                 */ DEADTRANS( L'.'	,0xE618	,0x2981	,0x0000), // '.' ➔ "⦁" U+2981 Z NOTATION SPOT
+/*<!M><z><%semicolon>                                              */ DEADTRANS( L';'	,0xE617	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><Z><%semicolon>                                              */ DEADTRANS( L';'	,0xE618	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE617	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><Z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE618	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><z><1>                                                       */ DEADTRANS( L'1'	,0xE617	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
+/*<!M><Z><1>                                                       */ DEADTRANS( L'1'	,0xE618	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
+/*<!M><Z><2>                                                       */ DEADTRANS( L'2'	,0xE618	,0x01A7	,0x0000), // '2' ➔ "Ƨ" U+01A7 LATIN CAPITAL LETTER TONE TWO
+/*<!M><z><2>                                                       */ DEADTRANS( L'2'	,0xE617	,0x01A8	,0x0000), // '2' ➔ "ƨ" U+01A8 LATIN SMALL LETTER TONE TWO
+/*<!M><Z><3>                                                       */ DEADTRANS( L'3'	,0xE618	,0x0417	,0x0000), // '3' ➔ "З" U+0417 CYRILLIC CAPITAL LETTER ZE
+/*<!M><z><3>                                                       */ DEADTRANS( L'3'	,0xE617	,0x0437	,0x0000), // '3' ➔ "з" U+0437 CYRILLIC SMALL LETTER ZE
+/*<!M><Z><4>                                                       */ DEADTRANS( L'4'	,0xE618	,0x0427	,0x0000), // '4' ➔ "Ч" U+0427 CYRILLIC CAPITAL LETTER CHE
+/*<!M><z><4>                                                       */ DEADTRANS( L'4'	,0xE617	,0x0447	,0x0000), // '4' ➔ "ч" U+0447 CYRILLIC SMALL LETTER CHE
+/*<!M><Z><5>                                                       */ DEADTRANS( L'5'	,0xE618	,0x01BC	,0x0000), // '5' ➔ "Ƽ" U+01BC LATIN CAPITAL LETTER TONE FIVE
+/*<!M><z><5>                                                       */ DEADTRANS( L'5'	,0xE617	,0x01BD	,0x0000), // '5' ➔ "ƽ" U+01BD LATIN SMALL LETTER TONE FIVE
+/*<!M><Z><6>                                                       */ DEADTRANS( L'6'	,0xE618	,0x0184	,0x0000), // '6' ➔ "Ƅ" U+0184 LATIN CAPITAL LETTER TONE SIX
+/*<!M><z><6>                                                       */ DEADTRANS( L'6'	,0xE617	,0x0185	,0x0000), // '6' ➔ "ƅ" U+0185 LATIN SMALL LETTER TONE SIX
+/*<!M><z><e>                                                       */ DEADTRANS( L'e'	,0xE617	,0x22FF	,0x0000), // 'e' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
+/*<!M><Z><e>                                                       */ DEADTRANS( L'e'	,0xE618	,0x22FF	,0x0000), // 'e' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
+/*<!M><z><E>                                                       */ DEADTRANS( L'E'	,0xE617	,0x22FF	,0x0000), // 'E' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
+/*<!M><Z><E>                                                       */ DEADTRANS( L'E'	,0xE618	,0x22FF	,0x0000), // 'E' ➔ "⋿" U+22FF Z NOTATION BAG MEMBERSHIP
+/*<!M><Z><H>                                                       */ DEADTRANS( L'H'	,0xE618	,0x01B7	,0x0000), // 'H' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
+/*<!M><Z><h>                                                       */ DEADTRANS( L'h'	,0xE618	,0x01B7	,0x0000), // 'h' ➔ "Ʒ" U+01B7 LATIN CAPITAL LETTER EZH
+/*<!M><z><h>                                                       */ DEADTRANS( L'h'	,0xE617	,0x0292	,0x0000), // 'h' ➔ "ʒ" U+0292 LATIN SMALL LETTER EZH
+/*<!M><z><w>                                                       */ DEADTRANS( L'w'	,0xE617	,0xDD2E	,0x0000), // High surrogate: D83C; 'w' ➔ "🄮" U+1F12E CIRCLED WZ
+/*<!M><Z><W>                                                       */ DEADTRANS( L'W'	,0xE618	,0xDD2E	,0x0000), // High surrogate: D83C; 'W' ➔ "🄮" U+1F12E CIRCLED WZ
+/*<!M><Z><Z>                                                       */ DEADTRANS( L'Z'	,0xE618	,0x2124	,0x0000), // 'Z' ➔ "ℤ" U+2124 DOUBLE-STRUCK CAPITAL Z
+/*<!M><z><z>                                                       */ DEADTRANS( L'z'	,0xE617	,0x2125	,0x0000), // 'z' ➔ "℥" U+2125 OUNCE SIGN
+/*<!M><Z><z>                                                       */ DEADTRANS( L'z'	,0xE618	,0x2125	,0x0000), // 'z' ➔ "℥" U+2125 OUNCE SIGN
+/*<!M><z><Z>                                                       */ DEADTRANS( L'Z'	,0xE617	,0x2125	,0x0000), // 'Z' ➔ "℥" U+2125 OUNCE SIGN
+/*<!M><~nbspace>                                                   */ DEADTRANS( 0x00A0	,0x00A6	,0xE61D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%ampersand>                                       */ DEADTRANS( L'&'	,0xE61D	,0xE61E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%ampersand><%bar>                                 */ DEADTRANS( L'|'	,0xE61E	,0x20D3	,0x0000), // '|' ➔ "⃓" U+20D3 COMBINING SHORT VERTICAL LINE OVERLAY
+/*<!M><~nbspace><%ampersand><%less>                                */ DEADTRANS( L'<'	,0xE61E	,0x20EE	,0x0000), // '<' ➔ "⃮" U+20EE COMBINING LEFT ARROW BELOW
+/*<!M><~nbspace><%ampersand><%minus>                               */ DEADTRANS( L'-'	,0xE61E	,0x20EF	,0x0000), // '-' ➔ "⃯" U+20EF COMBINING RIGHT ARROW BELOW
+/*<!M><~nbspace><%apostrophe>                                      */ DEADTRANS( L'\''	,0xE61D	,0xE61F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%apostrophe><%equal>                              */ DEADTRANS( L'='	,0xE61F	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
+/*<!M><~nbspace><%apostrophe><%minus>                              */ DEADTRANS( L'-'	,0xE61F	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
+/*<!M><~nbspace><%apostrophe><%plus>                               */ DEADTRANS( L'+'	,0xE61F	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~nbspace><%aprightsingquotmark>                             */ DEADTRANS( 0x2019	,0xE61D	,0xE620	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%aprightsingquotmark><%equal>                     */ DEADTRANS( L'='	,0xE620	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
+/*<!M><~nbspace><%aprightsingquotmark><%minus>                     */ DEADTRANS( L'-'	,0xE620	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
+/*<!M><~nbspace><%aprightsingquotmark><%plus>                      */ DEADTRANS( L'+'	,0xE620	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~nbspace><%asterisk>                                        */ DEADTRANS( L'*'	,0xE61D	,0xE621	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%asterisk><%equal>                                */ DEADTRANS( L'='	,0xE621	,0x225B	,0x0000), // '=' ➔ "≛" U+225B STAR EQUALS
+/*<!M><~nbspace><%asterisk><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE621	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
+/*<!M><~nbspace><%asterisk><~space>                                */ DEADTRANS( L' '	,0xE621	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
+/*<!M><~nbspace><%backslash>                                       */ DEADTRANS( L'\\'	,0xE61D	,0xE622	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%backslash><%greater>                             */ DEADTRANS( L'>'	,0xE622	,0x292D	,0x0000), // '>' ➔ "⤭" U+292D SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+/*<!M><~nbspace><%backslash><%minus>                               */ DEADTRANS( L'-'	,0xE622	,0x29A3	,0x0000), // '-' ➔ "⦣" U+29A3 REVERSED ANGLE
+/*<!M><~nbspace><%backslash><%slash>                               */ DEADTRANS( L'/'	,0xE622	,0xE623	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%backslash><%slash><%bar>                         */ DEADTRANS( L'|'	,0xE623	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
+/*<!M><~nbspace><%backslash><%slash><%hash>                        */ DEADTRANS( L'#'	,0xE623	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><%backslash><%slash><%underscore>                  */ DEADTRANS( L'_'	,0xE623	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
+/*<!M><~nbspace><%backslash><c>                                    */ DEADTRANS( L'c'	,0xE622	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
+/*<!M><~nbspace><%backslash><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE622	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
+/*<!M><~nbspace><%backslash><~space>                               */ DEADTRANS( L' '	,0xE622	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
+/*<!M><~nbspace><%bar>                                             */ DEADTRANS( L'|'	,0xE61D	,0xE624	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%backslash>                                 */ DEADTRANS( L'\\'	,0xE624	,0xE625	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%backslash><%slash>                         */ DEADTRANS( L'/'	,0xE625	,0xE626	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%backslash><%slash><%bar>                   */ DEADTRANS( L'|'	,0xE626	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
+/*<!M><~nbspace><%bar><%backslash><%slash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE626	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~nbspace><%bar><%backslash><%slash><~space>                 */ DEADTRANS( L' '	,0xE626	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~nbspace><%bar><%bar>                                       */ DEADTRANS( L'|'	,0xE624	,0xE627	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE627	,0xE628	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%bar><%bar><%minus>                         */ DEADTRANS( L'-'	,0xE628	,0x22AA	,0x0000), // '-' ➔ "⊪" U+22AA TRIPLE VERTICAL BAR RIGHT TURNSTILE
+/*<!M><~nbspace><%bar><%bar><%bar><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE628	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~nbspace><%bar><%bar><%bar><~space>                         */ DEADTRANS( L' '	,0xE628	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~nbspace><%bar><%bar><%minus>                               */ DEADTRANS( L'-'	,0xE627	,0x22A9	,0x0000), // '-' ➔ "⊩" U+22A9 FORCES
+/*<!M><~nbspace><%bar><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE627	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
+/*<!M><~nbspace><%bar><%bar><~space>                               */ DEADTRANS( L' '	,0xE627	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
+/*<!M><~nbspace><%bar><%equal>                                     */ DEADTRANS( L'='	,0xE624	,0x29E7	,0x0000), // '=' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~nbspace><%bar><%hash>                                      */ DEADTRANS( L'#'	,0xE624	,0x25B6	,0x0000), // '#' ➔ "▶" U+25B6 BLACK RIGHT-POINTING TRIANGLE
+/*<!M><~nbspace><%bar><%minus>                                     */ DEADTRANS( L'-'	,0xE624	,0x27CA	,0x0000), // '-' ➔ "⟊" U+27CA VERTICAL BAR WITH HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><%parenright>                                */ DEADTRANS( L')'	,0xE624	,0x2ADD	,0x0000), // ')' ➔ "⫝" U+2ADD NONFORKING
+/*<!M><~nbspace><%bar><%slash>                                     */ DEADTRANS( L'/'	,0xE624	,0xE629	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%slash><%backslash>                         */ DEADTRANS( L'\\'	,0xE629	,0xE62A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><%slash><%backslash><%bar>                   */ DEADTRANS( L'|'	,0xE62A	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
+/*<!M><~nbspace><%bar><%slash><%backslash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE62A	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~nbspace><%bar><%slash><%backslash><~space>                 */ DEADTRANS( L' '	,0xE62A	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~nbspace><%bar><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE629	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
+/*<!M><~nbspace><%bar><%slash><~space>                             */ DEADTRANS( L' '	,0xE629	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
+/*<!M><~nbspace><%bar><e>                                          */ DEADTRANS( L'e'	,0xE624	,0xE62B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><e><%backslash>                              */ DEADTRANS( L'\\'	,0xE62B	,0xE62C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><e><%backslash><%comma>                      */ DEADTRANS( L','	,0xE62C	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><e><%backslash><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE62C	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><e><%backslash><~space>                      */ DEADTRANS( L' '	,0xE62C	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><e><e>                                       */ DEADTRANS( L'e'	,0xE62B	,0xE62D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><e><e><%comma>                               */ DEADTRANS( L','	,0xE62D	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><e><e><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE62D	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><e><e><~space>                               */ DEADTRANS( L' '	,0xE62D	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><o>                                          */ DEADTRANS( L'o'	,0xE624	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><~nbspace><%bar><O>                                          */ DEADTRANS( L'O'	,0xE624	,0x2AF0	,0x0000), // 'O' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><~nbspace><%bar><p>                                          */ DEADTRANS( L'p'	,0xE624	,0xE62E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bar><p><%comma>                                  */ DEADTRANS( L','	,0xE62E	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><p><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE62E	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><p><~space>                                  */ DEADTRANS( L' '	,0xE62E	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><%bar><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE624	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
+/*<!M><~nbspace><%bar><~space>                                     */ DEADTRANS( L' '	,0xE624	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
+/*<!M><~nbspace><%braceleft>                                       */ DEADTRANS( L'{'	,0xE61D	,0x2983	,0x0000), // '{' ➔ "⦃" U+2983 LEFT WHITE CURLY BRACKET
+/*<!M><~nbspace><%braceright>                                      */ DEADTRANS( L'}'	,0xE61D	,0x2984	,0x0000), // '}' ➔ "⦄" U+2984 RIGHT WHITE CURLY BRACKET
+/*<!M><~nbspace><%bracketleft>                                     */ DEADTRANS( L'['	,0xE61D	,0xE62F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bracketleft><%bracketleft>                       */ DEADTRANS( L'['	,0xE62F	,0x27E6	,0x0000), // '[' ➔ "⟦" U+27E6 MATHEMATICAL LEFT WHITE SQUARE BRACKET
+/*<!M><~nbspace><%bracketleft><%bracketright>                      */ DEADTRANS( L']'	,0xE62F	,0x25FB	,0x0000), // ']' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
+/*<!M><~nbspace><%bracketleft><%hash>                              */ DEADTRANS( L'#'	,0xE62F	,0x25FC	,0x0000), // '#' ➔ "◼" U+25FC BLACK MEDIUM SQUARE
+/*<!M><~nbspace><%bracketleft><%minus>                             */ DEADTRANS( L'-'	,0xE62F	,0x2ACD	,0x0000), // '-' ➔ "⫍" U+2ACD SQUARE LEFT OPEN BOX OPERATOR
+/*<!M><~nbspace><%bracketleft><%underscore>                        */ DEADTRANS( L'_'	,0xE62F	,0x298B	,0x0000), // '_' ➔ "⦋" U+298B LEFT SQUARE BRACKET WITH UNDERBAR
+/*<!M><~nbspace><%bracketleft><a>                                  */ DEADTRANS( L'a'	,0xE62F	,0x27CE	,0x0000), // 'a' ➔ "⟎" U+27CE SQUARED LOGICAL AND
+/*<!M><~nbspace><%bracketleft><A>                                  */ DEADTRANS( L'A'	,0xE62F	,0x27CE	,0x0000), // 'A' ➔ "⟎" U+27CE SQUARED LOGICAL AND
+/*<!M><~nbspace><%bracketleft><o>                                  */ DEADTRANS( L'o'	,0xE62F	,0x29C7	,0x0000), // 'o' ➔ "⧇" U+29C7 SQUARED SMALL CIRCLE
+/*<!M><~nbspace><%bracketleft><v>                                  */ DEADTRANS( L'v'	,0xE62F	,0xE630	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bracketleft><V>                                  */ DEADTRANS( L'V'	,0xE62F	,0xE631	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bracketleft><v><%bracketright>                   */ DEADTRANS( L']'	,0xE630	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><~nbspace><%bracketleft><V><%bracketright>                   */ DEADTRANS( L']'	,0xE631	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><~nbspace><%bracketleft><x>                                  */ DEADTRANS( L'x'	,0xE62F	,0x22A0	,0x0000), // 'x' ➔ "⊠" U+22A0 SQUARED TIMES
+/*<!M><~nbspace><%bracketleft><X>                                  */ DEADTRANS( L'X'	,0xE62F	,0x22A0	,0x0000), // 'X' ➔ "⊠" U+22A0 SQUARED TIMES
+/*<!M><~nbspace><%bracketright>                                    */ DEADTRANS( L']'	,0xE61D	,0xE632	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%bracketright><%bracketleft>                      */ DEADTRANS( L'['	,0xE632	,0x25FB	,0x0000), // '[' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
+/*<!M><~nbspace><%bracketright><%bracketright>                     */ DEADTRANS( L']'	,0xE632	,0x27E7	,0x0000), // ']' ➔ "⟧" U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+/*<!M><~nbspace><%bracketright><%underscore>                       */ DEADTRANS( L'_'	,0xE632	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
+/*<!M><~nbspace><%circum>                                          */ DEADTRANS( L'^'	,0xE61D	,0xE633	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%circum><%circum>                                 */ DEADTRANS( L'^'	,0xE633	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
+/*<!M><~nbspace><%circum><%equal>                                  */ DEADTRANS( L'='	,0xE633	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
+/*<!M><~nbspace><%circum><%underscore>                             */ DEADTRANS( L'_'	,0xE633	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%circum><o>                                       */ DEADTRANS( L'o'	,0xE633	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!M><~nbspace><%circum><O>                                       */ DEADTRANS( L'O'	,0xE633	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!M><~nbspace><%circum><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE633	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~nbspace><%circum><~space>                                  */ DEADTRANS( L' '	,0xE633	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~nbspace><%colon>                                           */ DEADTRANS( L':'	,0xE61D	,0xE634	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%colon><%colon>                                   */ DEADTRANS( L':'	,0xE634	,0x2237	,0x0000), // ':' ➔ "∷" U+2237 PROPORTION
+/*<!M><~nbspace><%colon><%tilde>                                   */ DEADTRANS( L'~'	,0xE634	,0x223B	,0x0000), // '~' ➔ "∻" U+223B HOMOTHETIC
+/*<!M><~nbspace><%colon><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE634	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
+/*<!M><~nbspace><%colon><~space>                                   */ DEADTRANS( L' '	,0xE634	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
+/*<!M><~nbspace><%equal>                                           */ DEADTRANS( L'='	,0xE61D	,0xE635	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%equal><%bar>                                     */ DEADTRANS( L'|'	,0xE635	,0xE636	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%equal><%bar><%bar>                               */ DEADTRANS( L'|'	,0xE636	,0x22D5	,0x0000), // '|' ➔ "⋕" U+22D5 EQUAL AND PARALLEL TO
+/*<!M><~nbspace><%equal><%bar><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE636	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~nbspace><%equal><%bar><~space>                             */ DEADTRANS( L' '	,0xE636	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~nbspace><%equal><%equal>                                   */ DEADTRANS( L'='	,0xE635	,0x2A75	,0x0000), // '=' ➔ "⩵" U+2A75 TWO CONSECUTIVE EQUALS SIGNS
+/*<!M><~nbspace><%equal><%greater>                                 */ DEADTRANS( L'>'	,0xE635	,0x2A9A	,0x0000), // '>' ➔ "⪚" U+2A9A DOUBLE-LINE EQUAL TO OR GREATER-THAN
+/*<!M><~nbspace><%equal><%minus>                                   */ DEADTRANS( L'-'	,0xE635	,0xE637	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%equal><%minus><%greater>                         */ DEADTRANS( L'>'	,0xE637	,0x2971	,0x0000), // '>' ➔ "⥱" U+2971 EQUALS SIGN ABOVE RIGHTWARDS ARROW
+/*<!M><~nbspace><%equal><%minus><%slash>                           */ DEADTRANS( L'/'	,0xE637	,0x29E5	,0x0000), // '/' ➔ "⧥" U+29E5 IDENTICAL TO AND SLANTED PARALLEL
+/*<!M><~nbspace><%exclam>                                          */ DEADTRANS( L'!'	,0xE61D	,0xE638	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%exclam><%exclam>                                 */ DEADTRANS( L'!'	,0xE638	,0x00A1	,0x0000), // '!' ➔ "¡" U+00A1 INVERTED EXCLAMATION MARK
+/*<!M><~nbspace><%exclam><j>                                       */ DEADTRANS( L'j'	,0xE638	,0x297F	,0x0000), // 'j' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~nbspace><%exclam><J>                                       */ DEADTRANS( L'J'	,0xE638	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~nbspace><%exclam><Y>                                       */ DEADTRANS( L'Y'	,0xE638	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~nbspace><%exclam><y>                                       */ DEADTRANS( L'y'	,0xE638	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~nbspace><%greater>                                         */ DEADTRANS( L'>'	,0xE61D	,0xE639	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%greater><%greater>                               */ DEADTRANS( L'>'	,0xE639	,0xE63A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%greater><%greater><%greater>                     */ DEADTRANS( L'>'	,0xE63A	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
+/*<!M><~nbspace><%greater><%greater><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE63A	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
+/*<!M><~nbspace><%greater><%greater><~space>                       */ DEADTRANS( L' '	,0xE63A	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
+/*<!M><~nbspace><%greater><%less>                                  */ DEADTRANS( L'<'	,0xE639	,0x2AA4	,0x0000), // '<' ➔ "⪤" U+2AA4 GREATER-THAN OVERLAPPING LESS-THAN
+/*<!M><~nbspace><%greater><%minus>                                 */ DEADTRANS( L'-'	,0xE639	,0xE63B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%greater><%minus><%greater>                       */ DEADTRANS( L'>'	,0xE63B	,0x2978	,0x0000), // '>' ➔ "⥸" U+2978 GREATER-THAN ABOVE RIGHTWARDS ARROW
+/*<!M><~nbspace><%greater><%minus><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE63B	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
+/*<!M><~nbspace><%greater><%minus><~space>                         */ DEADTRANS( L' '	,0xE63B	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
+/*<!M><~nbspace><%greater><%parenright>                            */ DEADTRANS( L')'	,0xE639	,0x2994	,0x0000), // ')' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
+/*<!M><~nbspace><%greater><o>                                      */ DEADTRANS( L'o'	,0xE639	,0x2941	,0x0000), // 'o' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~nbspace><%greater><O>                                      */ DEADTRANS( L'O'	,0xE639	,0x2941	,0x0000), // 'O' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~nbspace><%greater><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE639	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
+/*<!M><~nbspace><%greater><~space>                                 */ DEADTRANS( L' '	,0xE639	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
+/*<!M><~nbspace><%hash>                                            */ DEADTRANS( L'#'	,0xE61D	,0xE63C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%hash><%backslash>                                */ DEADTRANS( L'\\'	,0xE63C	,0x2A33	,0x0000), // '\' ➔ "⨳" U+2A33 SMASH PRODUCT
+/*<!M><~nbspace><%hash><%percent>                                  */ DEADTRANS( L'%'	,0xE63C	,0x2A33	,0x0000), // '%' ➔ "⨳" U+2A33 SMASH PRODUCT
+/*<!M><~nbspace><%hash><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE63C	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
+/*<!M><~nbspace><%hash><~space>                                    */ DEADTRANS( L' '	,0xE63C	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
+/*<!M><~nbspace><%less>                                            */ DEADTRANS( L'<'	,0xE61D	,0xE63D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%backslash>                                */ DEADTRANS( L'\\'	,0xE63D	,0x2932	,0x0000), // '\' ➔ "⤲" U+2932 NORTH WEST ARROW CROSSING NORTH EAST ARROW
+/*<!M><~nbspace><%less><%equal>                                    */ DEADTRANS( L'='	,0xE63D	,0xE63E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%equal><%greater>                          */ DEADTRANS( L'>'	,0xE63E	,0x2A8B	,0x0000), // '>' ➔ "⪋" U+2A8B LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
+/*<!M><~nbspace><%less><%equal><%slash>                            */ DEADTRANS( L'/'	,0xE63E	,0x2268	,0x0000), // '/' ➔ "≨" U+2268 LESS-THAN BUT NOT EQUAL TO
+/*<!M><~nbspace><%less><%equal><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE63E	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
+/*<!M><~nbspace><%less><%equal><~space>                            */ DEADTRANS( L' '	,0xE63E	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
+/*<!M><~nbspace><%less><%exclam>                                   */ DEADTRANS( L'!'	,0xE63D	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
+/*<!M><~nbspace><%less><%greater>                                  */ DEADTRANS( L'>'	,0xE63D	,0x22C4	,0x0000), // '>' ➔ "⋄" U+22C4 DIAMOND OPERATOR
+/*<!M><~nbspace><%less><%less>                                     */ DEADTRANS( L'<'	,0xE63D	,0xE63F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%less><%less>                              */ DEADTRANS( L'<'	,0xE63F	,0x22D8	,0x0000), // '<' ➔ "⋘" U+22D8 VERY MUCH LESS-THAN
+/*<!M><~nbspace><%less><%less><%minus>                             */ DEADTRANS( L'-'	,0xE63F	,0xE640	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%less><%minus><%bar>                       */ DEADTRANS( L'|'	,0xE640	,0x2B36	,0x0000), // '|' ➔ "⬶" U+2B36 LEFTWARDS TWO-HEADED ARROW FROM BAR
+/*<!M><~nbspace><%less><%less><%minus><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE640	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
+/*<!M><~nbspace><%less><%less><%minus><~space>                     */ DEADTRANS( L' '	,0xE640	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
+/*<!M><~nbspace><%less><%less><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE63F	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
+/*<!M><~nbspace><%less><%less><~space>                             */ DEADTRANS( L' '	,0xE63F	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
+/*<!M><~nbspace><%less><%minus>                                    */ DEADTRANS( L'-'	,0xE63D	,0xE641	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%minus><%bar>                              */ DEADTRANS( L'|'	,0xE641	,0x21F7	,0x0000), // '|' ➔ "⇷" U+21F7 LEFTWARDS ARROW WITH VERTICAL STROKE
+/*<!M><~nbspace><%less><%minus><%less>                             */ DEADTRANS( L'<'	,0xE641	,0x2977	,0x0000), // '<' ➔ "⥷" U+2977 LEFTWARDS ARROW THROUGH LESS-THAN
+/*<!M><~nbspace><%less><%minus><%minus>                            */ DEADTRANS( L'-'	,0xE641	,0x27F7	,0x0000), // '-' ➔ "⟷" U+27F7 LONG LEFT RIGHT ARROW
+/*<!M><~nbspace><%less><%minus><%tilde>                            */ DEADTRANS( L'~'	,0xE641	,0x2973	,0x0000), // '~' ➔ "⥳" U+2973 LEFTWARDS ARROW ABOVE TILDE OPERATOR
+/*<!M><~nbspace><%less><%minus><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE641	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
+/*<!M><~nbspace><%less><%minus><~space>                            */ DEADTRANS( L' '	,0xE641	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
+/*<!M><~nbspace><%less><%parenleft>                                */ DEADTRANS( L'('	,0xE63D	,0x2993	,0x0000), // '(' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
+/*<!M><~nbspace><%less><%parenright>                               */ DEADTRANS( L')'	,0xE63D	,0x2AA6	,0x0000), // ')' ➔ "⪦" U+2AA6 LESS-THAN CLOSED BY CURVE
+/*<!M><~nbspace><%less><%slash>                                    */ DEADTRANS( L'/'	,0xE63D	,0x226E	,0x0000), // '/' ➔ "≮" U+226E NOT LESS-THAN
+/*<!M><~nbspace><%less><%tilde>                                    */ DEADTRANS( L'~'	,0xE63D	,0xE642	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%less><%tilde><%greater>                          */ DEADTRANS( L'>'	,0xE642	,0x21AD	,0x0000), // '>' ➔ "↭" U+21AD LEFT RIGHT WAVE ARROW
+/*<!M><~nbspace><%less><%tilde><%tilde>                            */ DEADTRANS( L'~'	,0xE642	,0x21DC	,0x0000), // '~' ➔ "⇜" U+21DC LEFTWARDS SQUIGGLE ARROW
+/*<!M><~nbspace><%less><%tilde><~nbspace>                          */ DEADTRANS( 0x00A0	,0xE642	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
+/*<!M><~nbspace><%less><%tilde><~space>                            */ DEADTRANS( L' '	,0xE642	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
+/*<!M><~nbspace><%less><3>                                         */ DEADTRANS( L'3'	,0xE63D	,0x2660	,0x0000), // '3' ➔ "♠" U+2660 BLACK SPADE SUIT
+/*<!M><~nbspace><%less><C>                                         */ DEADTRANS( L'C'	,0xE63D	,0x293E	,0x0000), // 'C' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+/*<!M><~nbspace><%less><c>                                         */ DEADTRANS( L'c'	,0xE63D	,0x293E	,0x0000), // 'c' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+/*<!M><~nbspace><%less><n>                                         */ DEADTRANS( L'n'	,0xE63D	,0x21B6	,0x0000), // 'n' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
+/*<!M><~nbspace><%less><o>                                         */ DEADTRANS( L'o'	,0xE63D	,0x2940	,0x0000), // 'o' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~nbspace><%less><O>                                         */ DEADTRANS( L'O'	,0xE63D	,0x2940	,0x0000), // 'O' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~nbspace><%less><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE63D	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
+/*<!M><~nbspace><%less><~space>                                    */ DEADTRANS( L' '	,0xE63D	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
+/*<!M><~nbspace><%minus>                                           */ DEADTRANS( L'-'	,0xE61D	,0xE643	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><%apostrophe>                              */ DEADTRANS( L'\''	,0xE643	,0xE644	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><%apostrophe><%minus>                      */ DEADTRANS( L'-'	,0xE644	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~nbspace><%minus><%apostrophe><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE644	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~nbspace><%minus><%apostrophe><~space>                      */ DEADTRANS( L' '	,0xE644	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~nbspace><%minus><%aprightsingquotmark>                     */ DEADTRANS( 0x2019	,0xE643	,0xE645	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><%aprightsingquotmark><%minus>             */ DEADTRANS( L'-'	,0xE645	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~nbspace><%minus><%aprightsingquotmark><~nbspace>           */ DEADTRANS( 0x00A0	,0xE645	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~nbspace><%minus><%aprightsingquotmark><~space>             */ DEADTRANS( L' '	,0xE645	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~nbspace><%minus><%bar>                                     */ DEADTRANS( L'|'	,0xE643	,0x21F8	,0x0000), // '|' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
+/*<!M><~nbspace><%minus><%bracketleft>                             */ DEADTRANS( L'['	,0xE643	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
+/*<!M><~nbspace><%minus><%bracketright>                            */ DEADTRANS( L']'	,0xE643	,0xE646	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><%bracketright><%bracketleft>              */ DEADTRANS( L'['	,0xE646	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
+/*<!M><~nbspace><%minus><%bracketright><~nbspace>                  */ DEADTRANS( 0x00A0	,0xE646	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
+/*<!M><~nbspace><%minus><%bracketright><~space>                    */ DEADTRANS( L' '	,0xE646	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
+/*<!M><~nbspace><%minus><%slash>                                   */ DEADTRANS( L'/'	,0xE643	,0x29A2	,0x0000), // '/' ➔ "⦢" U+29A2 TURNED ANGLE
+/*<!M><~nbspace><%minus><e>                                        */ DEADTRANS( L'e'	,0xE643	,0x22F2	,0x0000), // 'e' ➔ "⋲" U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE
+/*<!M><~nbspace><%minus><j>                                        */ DEADTRANS( L'j'	,0xE643	,0x297D	,0x0000), // 'j' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~nbspace><%minus><J>                                        */ DEADTRANS( L'J'	,0xE643	,0x297D	,0x0000), // 'J' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~nbspace><%minus><o>                                        */ DEADTRANS( L'o'	,0xE643	,0xE647	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><O>                                        */ DEADTRANS( L'O'	,0xE643	,0x29B1	,0x0000), // 'O' ➔ "⦱" U+29B1 EMPTY SET WITH OVERBAR
+/*<!M><~nbspace><%minus><o><%minus>                                */ DEADTRANS( L'-'	,0xE647	,0x2256	,0x0000), // '-' ➔ "≖" U+2256 RING IN EQUAL TO
+/*<!M><~nbspace><%minus><o><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE647	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
+/*<!M><~nbspace><%minus><o><~space>                                */ DEADTRANS( L' '	,0xE647	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
+/*<!M><~nbspace><%minus><s>                                        */ DEADTRANS( L's'	,0xE643	,0xE648	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%minus><S>                                        */ DEADTRANS( L'S'	,0xE643	,0x2A1B	,0x0000), // 'S' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~nbspace><%minus><s><%slash>                                */ DEADTRANS( L'/'	,0xE648	,0x299E	,0x0000), // '/' ➔ "⦞" U+299E ANGLE WITH S INSIDE
+/*<!M><~nbspace><%minus><s><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE648	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~nbspace><%minus><s><~space>                                */ DEADTRANS( L' '	,0xE648	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~nbspace><%minus><Y>                                        */ DEADTRANS( L'Y'	,0xE643	,0x297D	,0x0000), // 'Y' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~nbspace><%minus><y>                                        */ DEADTRANS( L'y'	,0xE643	,0x297D	,0x0000), // 'y' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~nbspace><%parenleft>                                       */ DEADTRANS( L'('	,0xE61D	,0xE649	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%parenleft><%bracketleft>                         */ DEADTRANS( L'['	,0xE649	,0x27EE	,0x0000), // '[' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
+/*<!M><~nbspace><%parenleft><%bracketright>                        */ DEADTRANS( L']'	,0xE649	,0x27EE	,0x0000), // ']' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
+/*<!M><~nbspace><%parenleft><%equal>                               */ DEADTRANS( L'='	,0xE649	,0x224E	,0x0000), // '=' ➔ "≎" U+224E GEOMETRICALLY EQUIVALENT TO
+/*<!M><~nbspace><%parenleft><%greater>                             */ DEADTRANS( L'>'	,0xE649	,0x2AA7	,0x0000), // '>' ➔ "⪧" U+2AA7 GREATER-THAN CLOSED BY CURVE
+/*<!M><~nbspace><%parenleft><%less>                                */ DEADTRANS( L'<'	,0xE649	,0x2993	,0x0000), // '<' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
+/*<!M><~nbspace><%parenleft><%parenleft>                           */ DEADTRANS( L'('	,0xE649	,0x2985	,0x0000), // '(' ➔ "⦅" U+2985 LEFT WHITE PARENTHESIS
+/*<!M><~nbspace><%parenleft><8>                                    */ DEADTRANS( L'8'	,0xE649	,0x29DD	,0x0000), // '8' ➔ "⧝" U+29DD TIE OVER INFINITY
+/*<!M><~nbspace><%parenright>                                      */ DEADTRANS( L')'	,0xE61D	,0xE64A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%parenright><%bracketleft>                        */ DEADTRANS( L'['	,0xE64A	,0x27EF	,0x0000), // '[' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+/*<!M><~nbspace><%parenright><%bracketright>                       */ DEADTRANS( L']'	,0xE64A	,0x27EF	,0x0000), // ']' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+/*<!M><~nbspace><%parenright><%greater>                            */ DEADTRANS( L'>'	,0xE64A	,0x2994	,0x0000), // '>' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
+/*<!M><~nbspace><%parenright><%parenright>                         */ DEADTRANS( L')'	,0xE64A	,0x2986	,0x0000), // ')' ➔ "⦆" U+2986 RIGHT WHITE PARENTHESIS
+/*<!M><~nbspace><%period>                                          */ DEADTRANS( L'.'	,0xE61D	,0xE64B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%period><a>                                       */ DEADTRANS( L'a'	,0xE64B	,0x2A51	,0x0000), // 'a' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~nbspace><%period><A>                                       */ DEADTRANS( L'A'	,0xE64B	,0x2A51	,0x0000), // 'A' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~nbspace><%period><b>                                       */ DEADTRANS( L'b'	,0xE64B	,0x2AC4	,0x0000), // 'b' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~nbspace><%period><c>                                       */ DEADTRANS( L'c'	,0xE64B	,0xE64C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%period><c><%backslash>                           */ DEADTRANS( L'\\'	,0xE64C	,0x2AC4	,0x0000), // '\' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~nbspace><%period><c><%underscore>                          */ DEADTRANS( L'_'	,0xE64C	,0x2AC3	,0x0000), // '_' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~nbspace><%period><c><c>                                    */ DEADTRANS( L'c'	,0xE64C	,0x2AC4	,0x0000), // 'c' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~nbspace><%period><e>                                       */ DEADTRANS( L'e'	,0xE64B	,0x22F5	,0x0000), // 'e' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
+/*<!M><~nbspace><%period><v>                                       */ DEADTRANS( L'v'	,0xE64B	,0xE64D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%period><V>                                       */ DEADTRANS( L'V'	,0xE64B	,0xE64E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%period><v><v>                                    */ DEADTRANS( L'v'	,0xE64D	,0x2A51	,0x0000), // 'v' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~nbspace><%period><V><V>                                    */ DEADTRANS( L'V'	,0xE64E	,0x2A51	,0x0000), // 'V' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~nbspace><%period><v><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE64D	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~nbspace><%period><V><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE64E	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~nbspace><%period><v><~space>                               */ DEADTRANS( L' '	,0xE64D	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~nbspace><%period><V><~space>                               */ DEADTRANS( L' '	,0xE64E	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~nbspace><%period><x>                                       */ DEADTRANS( L'x'	,0xE64B	,0x2A30	,0x0000), // 'x' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
+/*<!M><~nbspace><%period><X>                                       */ DEADTRANS( L'X'	,0xE64B	,0x2A30	,0x0000), // 'X' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
+/*<!M><~nbspace><%period><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE64B	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
+/*<!M><~nbspace><%period><~space>                                  */ DEADTRANS( L' '	,0xE64B	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
+/*<!M><~nbspace><%plus>                                            */ DEADTRANS( L'+'	,0xE61D	,0xE64F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%plus><%apostrophe>                               */ DEADTRANS( L'\''	,0xE64F	,0x22B9	,0x0000), // ''' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~nbspace><%plus><%aprightsingquotmark>                      */ DEADTRANS( 0x2019	,0xE64F	,0x22B9	,0x0000), // '’' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~nbspace><%plus><%circum>                                   */ DEADTRANS( L'^'	,0xE64F	,0x2A28	,0x0000), // '^' ➔ "⨨" U+2A28 PLUS SIGN WITH BLACK TRIANGLE
+/*<!M><~nbspace><%plus><%plus>                                     */ DEADTRANS( L'+'	,0xE64F	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
+/*<!M><~nbspace><%plus><2>                                         */ DEADTRANS( L'2'	,0xE64F	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
+/*<!M><~nbspace><%semicolon>                                       */ DEADTRANS( L';'	,0xE61D	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><~nbspace><%semsection>                                      */ DEADTRANS( 0x00A7	,0xE61D	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><~nbspace><%slash>                                           */ DEADTRANS( L'/'	,0xE61D	,0xE650	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%backslash>                               */ DEADTRANS( L'\\'	,0xE650	,0xE651	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%backslash><%bar>                         */ DEADTRANS( L'|'	,0xE651	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
+/*<!M><~nbspace><%slash><%backslash><%hash>                        */ DEADTRANS( L'#'	,0xE651	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><%slash><%backslash><%underscore>                  */ DEADTRANS( L'_'	,0xE651	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
+/*<!M><~nbspace><%slash><%hash>                                    */ DEADTRANS( L'#'	,0xE650	,0xE652	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%hash><%underscore>                       */ DEADTRANS( L'_'	,0xE652	,0xE653	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%hash><%underscore><%backslash>           */ DEADTRANS( L'\\'	,0xE653	,0x25B4	,0x0000), // '\' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%slash><%slash>                                   */ DEADTRANS( L'/'	,0xE650	,0xE654	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%slash><%slash>                           */ DEADTRANS( L'/'	,0xE654	,0x2AFB	,0x0000), // '/' ➔ "⫻" U+2AFB TRIPLE SOLIDUS BINARY RELATION
+/*<!M><~nbspace><%slash><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE654	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
+/*<!M><~nbspace><%slash><%slash><~space>                           */ DEADTRANS( L' '	,0xE654	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
+/*<!M><~nbspace><%slash><%underscore>                              */ DEADTRANS( L'_'	,0xE650	,0xE655	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%slash><%underscore><%backslash>                  */ DEADTRANS( L'\\'	,0xE655	,0x25B5	,0x0000), // '\' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%slash><c>                                        */ DEADTRANS( L'c'	,0xE650	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
+/*<!M><~nbspace><%slash><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE650	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
+/*<!M><~nbspace><%slash><~space>                                   */ DEADTRANS( L' '	,0xE650	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
+/*<!M><~nbspace><%tilde>                                           */ DEADTRANS( L'~'	,0xE61D	,0xE656	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%tilde><%colon>                                   */ DEADTRANS( L':'	,0xE656	,0x223B	,0x0000), // ':' ➔ "∻" U+223B HOMOTHETIC
+/*<!M><~nbspace><%tilde><%equal>                                   */ DEADTRANS( L'='	,0xE656	,0xE657	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%tilde><%equal><%slash>                           */ DEADTRANS( L'/'	,0xE657	,0xE658	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%tilde><%equal><%slash><%slash>                   */ DEADTRANS( L'/'	,0xE658	,0x29E4	,0x0000), // '/' ➔ "⧤" U+29E4 EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+/*<!M><~nbspace><%tilde><%equal><%slash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE658	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+/*<!M><~nbspace><%tilde><%equal><%slash><~space>                   */ DEADTRANS( L' '	,0xE658	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+/*<!M><~nbspace><%tilde><%equal><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE657	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
+/*<!M><~nbspace><%tilde><%equal><~space>                           */ DEADTRANS( L' '	,0xE657	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
+/*<!M><~nbspace><%tilde><%greater>                                 */ DEADTRANS( L'>'	,0xE656	,0x2A9E	,0x0000), // '>' ➔ "⪞" U+2A9E SIMILAR OR GREATER-THAN
+/*<!M><~nbspace><%tilde><%minus>                                   */ DEADTRANS( L'-'	,0xE656	,0x2972	,0x0000), // '-' ➔ "⥲" U+2972 TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+/*<!M><~nbspace><%tilde><%percent>                                 */ DEADTRANS( L'%'	,0xE656	,0x2240	,0x0000), // '%' ➔ "≀" U+2240 WREATH PRODUCT
+/*<!M><~nbspace><%tilde><%slash>                                   */ DEADTRANS( L'/'	,0xE656	,0xE659	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%tilde><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE659	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
+/*<!M><~nbspace><%tilde><%slash><~space>                           */ DEADTRANS( L' '	,0xE659	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
+/*<!M><~nbspace><%tilde><%tilde>                                   */ DEADTRANS( L'~'	,0xE656	,0xE65A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%tilde><%tilde><%equal>                           */ DEADTRANS( L'='	,0xE65A	,0x2A70	,0x0000), // '=' ➔ "⩰" U+2A70 APPROXIMATELY EQUAL OR EQUAL TO
+/*<!M><~nbspace><%tilde><%tilde><%tilde>                           */ DEADTRANS( L'~'	,0xE65A	,0x224B	,0x0000), // '~' ➔ "≋" U+224B TRIPLE TILDE
+/*<!M><~nbspace><%tilde><%tilde><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE65A	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
+/*<!M><~nbspace><%tilde><%tilde><~space>                           */ DEADTRANS( L' '	,0xE65A	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
+/*<!M><~nbspace><%tilde><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE656	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
+/*<!M><~nbspace><%tilde><~space>                                   */ DEADTRANS( L' '	,0xE656	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
+/*<!M><~nbspace><%underscore>                                      */ DEADTRANS( L'_'	,0xE61D	,0xE65B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><%backslash>                          */ DEADTRANS( L'\\'	,0xE65B	,0x25BF	,0x0000), // '\' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%underscore><%hash>                               */ DEADTRANS( L'#'	,0xE65B	,0x25BE	,0x0000), // '#' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%underscore><%minus>                              */ DEADTRANS( L'-'	,0xE65B	,0xE65C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><%minus><%apostrophe>                 */ DEADTRANS( L'\''	,0xE65C	,0x296D	,0x0000), // ''' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
+/*<!M><~nbspace><%underscore><%minus><%aprightsingquotmark>        */ DEADTRANS( 0x2019	,0xE65C	,0x296D	,0x0000), // '’' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
+/*<!M><~nbspace><%underscore><%minus><%slash>                      */ DEADTRANS( L'/'	,0xE65C	,0x29A4	,0x0000), // '/' ➔ "⦤" U+29A4 ANGLE WITH UNDERBAR
+/*<!M><~nbspace><%underscore><%slash>                              */ DEADTRANS( L'/'	,0xE65B	,0x25BF	,0x0000), // '/' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><~nbspace><%underscore><%underscore>                         */ DEADTRANS( L'_'	,0xE65B	,0xE65D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><%underscore><v>                      */ DEADTRANS( L'v'	,0xE65D	,0xE65E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><%underscore><V>                      */ DEADTRANS( L'V'	,0xE65D	,0xE65F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><%underscore><v><%backslash>          */ DEADTRANS( L'\\'	,0xE65E	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><V><%backslash>          */ DEADTRANS( L'\\'	,0xE65F	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><v><%percent>            */ DEADTRANS( L'%'	,0xE65E	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><V><%percent>            */ DEADTRANS( L'%'	,0xE65F	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><v><~nbspace>            */ DEADTRANS( 0x00A0	,0xE65E	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><V><~nbspace>            */ DEADTRANS( 0x00A0	,0xE65F	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><v><~space>              */ DEADTRANS( L' '	,0xE65E	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><%underscore><V><~space>              */ DEADTRANS( L' '	,0xE65F	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~nbspace><%underscore><a>                                   */ DEADTRANS( L'a'	,0xE65B	,0x22BC	,0x0000), // 'a' ➔ "⊼" U+22BC NAND
+/*<!M><~nbspace><%underscore><e>                                   */ DEADTRANS( L'e'	,0xE65B	,0xE660	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><e><%backslash>                       */ DEADTRANS( L'\\'	,0xE660	,0xE661	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><e><%backslash><%comma>               */ DEADTRANS( L','	,0xE661	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><e><%backslash><~nbspace>             */ DEADTRANS( 0x00A0	,0xE661	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><e><%backslash><~space>               */ DEADTRANS( L' '	,0xE661	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><e><%comma>                           */ DEADTRANS( L','	,0xE660	,0x22F7	,0x0000), // ',' ➔ "⋷" U+22F7 SMALL ELEMENT OF WITH OVERBAR
+/*<!M><~nbspace><%underscore><e><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE660	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
+/*<!M><~nbspace><%underscore><e><~space>                           */ DEADTRANS( L' '	,0xE660	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
+/*<!M><~nbspace><%underscore><n>                                   */ DEADTRANS( L'n'	,0xE65B	,0x2A43	,0x0000), // 'n' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
+/*<!M><~nbspace><%underscore><N>                                   */ DEADTRANS( L'N'	,0xE65B	,0x2A43	,0x0000), // 'N' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
+/*<!M><~nbspace><%underscore><p>                                   */ DEADTRANS( L'p'	,0xE65B	,0xE662	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><p><%comma>                           */ DEADTRANS( L','	,0xE662	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><p><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE662	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><p><~space>                           */ DEADTRANS( L' '	,0xE662	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~nbspace><%underscore><u>                                   */ DEADTRANS( L'u'	,0xE65B	,0xE663	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><U>                                   */ DEADTRANS( L'U'	,0xE65B	,0xE664	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><u><%hash>                            */ DEADTRANS( L'#'	,0xE663	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+/*<!M><~nbspace><%underscore><U><%hash>                            */ DEADTRANS( L'#'	,0xE664	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+/*<!M><~nbspace><%underscore><u><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE663	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~nbspace><%underscore><U><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE664	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~nbspace><%underscore><u><~space>                           */ DEADTRANS( L' '	,0xE663	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~nbspace><%underscore><U><~space>                           */ DEADTRANS( L' '	,0xE664	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~nbspace><%underscore><v>                                   */ DEADTRANS( L'v'	,0xE65B	,0xE665	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><v><v>                                */ DEADTRANS( L'v'	,0xE665	,0x22BC	,0x0000), // 'v' ➔ "⊼" U+22BC NAND
+/*<!M><~nbspace><%underscore><v><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE665	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
+/*<!M><~nbspace><%underscore><v><~space>                           */ DEADTRANS( L' '	,0xE665	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
+/*<!M><~nbspace><%underscore><X>                                   */ DEADTRANS( L'X'	,0xE65B	,0xE666	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><x>                                   */ DEADTRANS( L'x'	,0xE65B	,0xE667	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><%underscore><X><%hash>                            */ DEADTRANS( L'#'	,0xE666	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><~nbspace><%underscore><x><%hash>                            */ DEADTRANS( L'#'	,0xE667	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><~nbspace><%underscore><X><%underscore>                      */ DEADTRANS( L'_'	,0xE666	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
+/*<!M><~nbspace><%underscore><x><%underscore>                      */ DEADTRANS( L'_'	,0xE667	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
+/*<!M><~nbspace><2>                                                */ DEADTRANS( L'2'	,0xE61D	,0xE668	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><2><%less>                                         */ DEADTRANS( L'<'	,0xE668	,0x2AA3	,0x0000), // '<' ➔ "⪣" U+2AA3 DOUBLE NESTED LESS-THAN WITH UNDERBAR
+/*<!M><~nbspace><2><%minus>                                        */ DEADTRANS( L'-'	,0xE668	,0x21C9	,0x0000), // '-' ➔ "⇉" U+21C9 RIGHTWARDS PAIRED ARROWS
+/*<!M><~nbspace><2><V>                                             */ DEADTRANS( L'V'	,0xE668	,0x2A54	,0x0000), // 'V' ➔ "⩔" U+2A54 DOUBLE LOGICAL OR
+/*<!M><~nbspace><3>                                                */ DEADTRANS( L'3'	,0xE61D	,0xE669	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><3><%bar>                                          */ DEADTRANS( L'|'	,0xE669	,0x2AF4	,0x0000), // '|' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~nbspace><3><%minus>                                        */ DEADTRANS( L'-'	,0xE669	,0x21F6	,0x0000), // '-' ➔ "⇶" U+21F6 THREE RIGHTWARDS ARROWS
+/*<!M><~nbspace><8>                                                */ DEADTRANS( L'8'	,0xE61D	,0x221D	,0x0000), // '8' ➔ "∝" U+221D PROPORTIONAL TO
+/*<!M><~nbspace><A>                                                */ DEADTRANS( L'A'	,0xE61D	,0xE66A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><a>                                                */ DEADTRANS( L'a'	,0xE61D	,0xE66B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><A><%minus>                                        */ DEADTRANS( L'-'	,0xE66A	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
+/*<!M><~nbspace><a><%minus>                                        */ DEADTRANS( L'-'	,0xE66B	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
+/*<!M><~nbspace><A><%underscore>                                   */ DEADTRANS( L'_'	,0xE66A	,0xE66C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><A><%underscore><%underscore>                      */ DEADTRANS( L'_'	,0xE66C	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
+/*<!M><~nbspace><A><%underscore><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE66C	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><~nbspace><A><%underscore><~space>                           */ DEADTRANS( L' '	,0xE66C	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><~nbspace><A><A>                                             */ DEADTRANS( L'A'	,0xE66A	,0x2A07	,0x0000), // 'A' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
+/*<!M><~nbspace><a><a>                                             */ DEADTRANS( L'a'	,0xE66B	,0x2A55	,0x0000), // 'a' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
+/*<!M><~nbspace><A><V>                                             */ DEADTRANS( L'V'	,0xE66A	,0x25CA	,0x0000), // 'V' ➔ "◊" U+25CA LOZENGE
+/*<!M><~nbspace><a><v>                                             */ DEADTRANS( L'v'	,0xE66B	,0x25CA	,0x0000), // 'v' ➔ "◊" U+25CA LOZENGE
+/*<!M><~nbspace><A><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE66A	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><~nbspace><A><~space>                                        */ DEADTRANS( L' '	,0xE66A	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><~nbspace><b>                                                */ DEADTRANS( L'b'	,0xE61D	,0xE66D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><B>                                                */ DEADTRANS( L'B'	,0xE61D	,0xE66E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><b><%slash>                                        */ DEADTRANS( L'/'	,0xE66D	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~nbspace><b><c>                                             */ DEADTRANS( L'c'	,0xE66D	,0x2AD7	,0x0000), // 'c' ➔ "⫗" U+2AD7 SUPERSET BESIDE SUBSET
+/*<!M><~nbspace><b><o>                                             */ DEADTRANS( L'o'	,0xE66D	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~nbspace><b><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE66D	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~nbspace><B><~nbspace>                                      */ DEADTRANS( 0x00A0	,0xE66E	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~nbspace><b><~space>                                        */ DEADTRANS( L' '	,0xE66D	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~nbspace><B><~space>                                        */ DEADTRANS( L' '	,0xE66E	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~nbspace><c>                                                */ DEADTRANS( L'c'	,0xE61D	,0xE66F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><c><%backslash>                                    */ DEADTRANS( L'\\'	,0xE66F	,0xE670	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><c><%backslash><%slash>                            */ DEADTRANS( L'/'	,0xE670	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~nbspace><c><%backslash><o>                                 */ DEADTRANS( L'o'	,0xE670	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~nbspace><c><c>                                             */ DEADTRANS( L'c'	,0xE66F	,0xE671	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><c><c><%slash>                                     */ DEADTRANS( L'/'	,0xE671	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~nbspace><c><c><o>                                          */ DEADTRANS( L'o'	,0xE671	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~nbspace><c><c><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE671	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
+/*<!M><~nbspace><c><c><~space>                                     */ DEADTRANS( L' '	,0xE671	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
+/*<!M><~nbspace><c><o>                                             */ DEADTRANS( L'o'	,0xE66F	,0x27C3	,0x0000), // 'o' ➔ "⟃" U+27C3 OPEN SUBSET
+/*<!M><~nbspace><D>                                                */ DEADTRANS( L'D'	,0xE61D	,0x2AD0	,0x0000), // 'D' ➔ "⫐" U+2AD0 CLOSED SUPERSET
+/*<!M><~nbspace><e>                                                */ DEADTRANS( L'e'	,0xE61D	,0xE672	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><e><%backslash>                                    */ DEADTRANS( L'\\'	,0xE672	,0x2AD9	,0x0000), // '\' ➔ "⫙" U+2AD9 ELEMENT OF OPENING DOWNWARDS
+/*<!M><~nbspace><e><%percent>                                      */ DEADTRANS( L'%'	,0xE672	,0x2AD9	,0x0000), // '%' ➔ "⫙" U+2AD9 ELEMENT OF OPENING DOWNWARDS
+/*<!M><~nbspace><e><e>                                             */ DEADTRANS( L'e'	,0xE672	,0xE673	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><e><e><%bar>                                       */ DEADTRANS( L'|'	,0xE673	,0xE674	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><e><e><%bar><%comma>                               */ DEADTRANS( L','	,0xE674	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><e><e><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE674	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><e><e><%bar><~space>                               */ DEADTRANS( L' '	,0xE674	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~nbspace><e><e><%comma>                                     */ DEADTRANS( L','	,0xE673	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
+/*<!M><~nbspace><e><e><%slash>                                     */ DEADTRANS( L'/'	,0xE673	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
+/*<!M><~nbspace><e><e><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE673	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><~nbspace><e><e><~space>                                     */ DEADTRANS( L' '	,0xE673	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><~nbspace><G>                                                */ DEADTRANS( L'G'	,0xE61D	,0x27F2	,0x0000), // 'G' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><~nbspace><g>                                                */ DEADTRANS( L'g'	,0xE61D	,0x27F2	,0x0000), // 'g' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><~nbspace><h>                                                */ DEADTRANS( L'h'	,0xE61D	,0x266E	,0x0000), // 'h' ➔ "♮" U+266E MUSIC NATURAL SIGN
+/*<!M><~nbspace><H>                                                */ DEADTRANS( L'H'	,0xE61D	,0x266E	,0x0000), // 'H' ➔ "♮" U+266E MUSIC NATURAL SIGN
+/*<!M><~nbspace><I>                                                */ DEADTRANS( L'I'	,0xE61D	,0x2AE0	,0x0000), // 'I' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~nbspace><K>                                                */ DEADTRANS( L'K'	,0xE61D	,0x212A	,0x0000), // 'K' ➔ "K" U+212A KELVIN SIGN
+/*<!M><~nbspace><k>                                                */ DEADTRANS( L'k'	,0xE61D	,0x212A	,0x0000), // 'k' ➔ "K" U+212A KELVIN SIGN
+/*<!M><~nbspace><n>                                                */ DEADTRANS( L'n'	,0xE61D	,0xE675	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><n><%bar>                                          */ DEADTRANS( L'|'	,0xE675	,0x2ADB	,0x0000), // '|' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
+/*<!M><~nbspace><o>                                                */ DEADTRANS( L'o'	,0xE61D	,0xE676	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><O>                                                */ DEADTRANS( L'O'	,0xE61D	,0xE677	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><O><%backslash>                                    */ DEADTRANS( L'\\'	,0xE677	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
+/*<!M><~nbspace><o><%backslash>                                    */ DEADTRANS( L'\\'	,0xE676	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
+/*<!M><~nbspace><o><%equal>                                        */ DEADTRANS( L'='	,0xE676	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~nbspace><O><%equal>                                        */ DEADTRANS( L'='	,0xE677	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~nbspace><o><%greater>                                      */ DEADTRANS( L'>'	,0xE676	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><O><%greater>                                      */ DEADTRANS( L'>'	,0xE677	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><o><%minus>                                        */ DEADTRANS( L'-'	,0xE676	,0xE678	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><O><%minus>                                        */ DEADTRANS( L'-'	,0xE677	,0xE679	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><o><%minus><%greater>                              */ DEADTRANS( L'>'	,0xE678	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
+/*<!M><~nbspace><O><%minus><%greater>                              */ DEADTRANS( L'>'	,0xE679	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
+/*<!M><~nbspace><o><%minus><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE678	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~nbspace><O><%minus><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE679	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~nbspace><o><%minus><~space>                                */ DEADTRANS( L' '	,0xE678	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~nbspace><O><%minus><~space>                                */ DEADTRANS( L' '	,0xE679	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~nbspace><O><%percent>                                      */ DEADTRANS( L'%'	,0xE677	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><~nbspace><o><%percent>                                      */ DEADTRANS( L'%'	,0xE676	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><~nbspace><O><%period>                                       */ DEADTRANS( L'.'	,0xE677	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
+/*<!M><~nbspace><o><%period>                                       */ DEADTRANS( L'.'	,0xE676	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
+/*<!M><~nbspace><o><%plus>                                         */ DEADTRANS( L'+'	,0xE676	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
+/*<!M><~nbspace><o><%semicolon>                                    */ DEADTRANS( L';'	,0xE676	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><o><%semsection>                                   */ DEADTRANS( 0x00A7	,0xE676	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><o><%slash>                                        */ DEADTRANS( L'/'	,0xE676	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
+/*<!M><~nbspace><o><8>                                             */ DEADTRANS( L'8'	,0xE676	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
+/*<!M><~nbspace><O><8>                                             */ DEADTRANS( L'8'	,0xE677	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
+/*<!M><~nbspace><O><o>                                             */ DEADTRANS( L'o'	,0xE677	,0x29BE	,0x0000), // 'o' ➔ "⦾" U+29BE CIRCLED WHITE BULLET
+/*<!M><~nbspace><R>                                                */ DEADTRANS( L'R'	,0xE61D	,0xE67A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><r>                                                */ DEADTRANS( L'r'	,0xE61D	,0xE67B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><R><%slash>                                        */ DEADTRANS( L'/'	,0xE67A	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><~nbspace><r><%slash>                                        */ DEADTRANS( L'/'	,0xE67B	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><~nbspace><S>                                                */ DEADTRANS( L'S'	,0xE61D	,0xE67C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><s>                                                */ DEADTRANS( L's'	,0xE61D	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
+/*<!M><~nbspace><S><S>                                             */ DEADTRANS( L'S'	,0xE67C	,0xE67D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><S><s>                                             */ DEADTRANS( L's'	,0xE67C	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
+/*<!M><~nbspace><S><S><%at>                                        */ DEADTRANS( L'@'	,0xE67D	,0x2140	,0x0000), // '@' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~nbspace><S><S><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE67D	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~nbspace><S><S><~space>                                     */ DEADTRANS( L' '	,0xE67D	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~nbspace><T>                                                */ DEADTRANS( L'T'	,0xE61D	,0xE67E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><T><%backslash>                                    */ DEADTRANS( L'\\'	,0xE67E	,0x2AE0	,0x0000), // '\' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~nbspace><T><%percent>                                      */ DEADTRANS( L'%'	,0xE67E	,0x2AE0	,0x0000), // '%' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~nbspace><T><T>                                             */ DEADTRANS( L'T'	,0xE67E	,0x2AE0	,0x0000), // 'T' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~nbspace><V>                                                */ DEADTRANS( L'V'	,0xE61D	,0xE67F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><v>                                                */ DEADTRANS( L'v'	,0xE61D	,0x2A56	,0x0000), // 'v' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
+/*<!M><~nbspace><V><V>                                             */ DEADTRANS( L'V'	,0xE67F	,0x2A08	,0x0000), // 'V' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
+/*<!M><~nbspace><x>                                                */ DEADTRANS( L'x'	,0xE61D	,0x2A2F	,0x0000), // 'x' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
+/*<!M><~nbspace><X>                                                */ DEADTRANS( L'X'	,0xE61D	,0x2A2F	,0x0000), // 'X' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
+/*<!M><~nbspace><Y>                                                */ DEADTRANS( L'Y'	,0xE61D	,0xE680	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><y>                                                */ DEADTRANS( L'y'	,0xE61D	,0xE681	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><Y><%minus>                                        */ DEADTRANS( L'-'	,0xE680	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><~nbspace><y><%minus>                                        */ DEADTRANS( L'-'	,0xE681	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><~nbspace><z>                                                */ DEADTRANS( L'z'	,0xE61D	,0x2A1F	,0x0000), // 'z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><Z>                                                */ DEADTRANS( L'Z'	,0xE61D	,0x2A1F	,0x0000), // 'Z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><~nbspace>                                         */ DEADTRANS( 0x00A0	,0xE61D	,0xE682	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%asterisk>                              */ DEADTRANS( L'*'	,0xE682	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
+/*<!M><~nbspace><~nbspace><%backslash>                             */ DEADTRANS( L'\\'	,0xE682	,0xE683	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%backslash><%slash>                     */ DEADTRANS( L'/'	,0xE683	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><~nbspace><%backslash><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE683	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~nbspace><~nbspace><%backslash><~space>                     */ DEADTRANS( L' '	,0xE683	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~nbspace><~nbspace><%bar>                                   */ DEADTRANS( L'|'	,0xE682	,0xE684	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%bar><%bar>                             */ DEADTRANS( L'|'	,0xE684	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~nbspace><~nbspace><%bar><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE684	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~nbspace><~nbspace><%bar><~space>                           */ DEADTRANS( L' '	,0xE684	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~nbspace><~nbspace><%bracketleft>                           */ DEADTRANS( L'['	,0xE682	,0xE685	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%bracketleft><%bracketright>            */ DEADTRANS( L']'	,0xE685	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~nbspace><%bracketleft><%hash>                    */ DEADTRANS( L'#'	,0xE685	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~nbspace><%bracketright>                          */ DEADTRANS( L']'	,0xE682	,0xE686	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%bracketright><%bracketleft>            */ DEADTRANS( L'['	,0xE686	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~nbspace><%colon>                                 */ DEADTRANS( L':'	,0xE682	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><~nbspace><~nbspace><%equal>                                 */ DEADTRANS( L'='	,0xE682	,0xE687	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%equal><%equal>                         */ DEADTRANS( L'='	,0xE687	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~nbspace><~nbspace><%greater>                               */ DEADTRANS( L'>'	,0xE682	,0xE688	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%greater><%less>                        */ DEADTRANS( L'<'	,0xE688	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
+/*<!M><~nbspace><~nbspace><%greater><%minus>                       */ DEADTRANS( L'-'	,0xE688	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
+/*<!M><~nbspace><~nbspace><%hash>                                  */ DEADTRANS( L'#'	,0xE682	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
+/*<!M><~nbspace><~nbspace><%less>                                  */ DEADTRANS( L'<'	,0xE682	,0xE689	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%less><%greater>                        */ DEADTRANS( L'>'	,0xE689	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
+/*<!M><~nbspace><~nbspace><%less><o>                               */ DEADTRANS( L'o'	,0xE689	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><~nbspace><%less><O>                               */ DEADTRANS( L'O'	,0xE689	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><~nbspace><%minus>                                 */ DEADTRANS( L'-'	,0xE682	,0xE68A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%minus><%apostrophe>                    */ DEADTRANS( L'\''	,0xE68A	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~nbspace><%minus><%aprightsingquotmark>           */ DEADTRANS( 0x2019	,0xE68A	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~nbspace><%minus><%slash>                         */ DEADTRANS( L'/'	,0xE68A	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
+/*<!M><~nbspace><~nbspace><%period>                                */ DEADTRANS( L'.'	,0xE682	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
+/*<!M><~nbspace><~nbspace><%semicolon>                             */ DEADTRANS( L';'	,0xE682	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><~nbspace><%semsection>                            */ DEADTRANS( 0x00A7	,0xE682	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><~nbspace><%slash>                                 */ DEADTRANS( L'/'	,0xE682	,0xE68B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><%slash><%backslash>                     */ DEADTRANS( L'\\'	,0xE68B	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><~nbspace><%slash><%minus>                         */ DEADTRANS( L'-'	,0xE68B	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
+/*<!M><~nbspace><~nbspace><%slash><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE68B	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~nbspace><~nbspace><%slash><~space>                         */ DEADTRANS( L' '	,0xE68B	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~nbspace><~nbspace><%underscore>                            */ DEADTRANS( L'_'	,0xE682	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
+/*<!M><~nbspace><~nbspace><3>                                      */ DEADTRANS( L'3'	,0xE682	,0xE68C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><3><%bar>                                */ DEADTRANS( L'|'	,0xE68C	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~nbspace><~nbspace><8>                                      */ DEADTRANS( L'8'	,0xE682	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
+/*<!M><~nbspace><~nbspace><A>                                      */ DEADTRANS( L'A'	,0xE682	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~nbspace><~nbspace><I>                                      */ DEADTRANS( L'I'	,0xE682	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~nbspace><i>                                      */ DEADTRANS( L'i'	,0xE682	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~nbspace><o>                                      */ DEADTRANS( L'o'	,0xE682	,0xE68D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><O>                                      */ DEADTRANS( L'O'	,0xE682	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+/*<!M><~nbspace><~nbspace><o><%minus>                              */ DEADTRANS( L'-'	,0xE68D	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
+/*<!M><~nbspace><~nbspace><o><%plus>                               */ DEADTRANS( L'+'	,0xE68D	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
+/*<!M><~nbspace><~nbspace><T>                                      */ DEADTRANS( L'T'	,0xE682	,0xE68E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><T><%backslash>                          */ DEADTRANS( L'\\'	,0xE68E	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~nbspace><T><%percent>                            */ DEADTRANS( L'%'	,0xE68E	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~nbspace><T><T>                                   */ DEADTRANS( L'T'	,0xE68E	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~nbspace><T><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE68E	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~nbspace><~nbspace><T><~space>                              */ DEADTRANS( L' '	,0xE68E	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~nbspace><~nbspace><x>                                      */ DEADTRANS( L'x'	,0xE682	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
+/*<!M><~nbspace><~nbspace><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE682	,0xE68F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~nbspace><%asterisk>                    */ DEADTRANS( L'*'	,0xE68F	,0xE690	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><%hash>             */ DEADTRANS( L'#'	,0xE690	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
+/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><~nbspace>          */ DEADTRANS( 0x00A0	,0xE690	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~nbspace><~nbspace><%asterisk><~space>            */ DEADTRANS( L' '	,0xE690	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~nbspace><~nbspace><%backslash>                   */ DEADTRANS( L'\\'	,0xE68F	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
+/*<!M><~nbspace><~nbspace><~nbspace><%bar>                         */ DEADTRANS( L'|'	,0xE68F	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><~nbspace><~nbspace><~nbspace><%less>                        */ DEADTRANS( L'<'	,0xE68F	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
+/*<!M><~nbspace><~nbspace><~nbspace><%slash>                       */ DEADTRANS( L'/'	,0xE68F	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
+/*<!M><~nbspace><~nbspace><~nbspace><o>                            */ DEADTRANS( L'o'	,0xE68F	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~nbspace><~nbspace><O>                            */ DEADTRANS( L'O'	,0xE68F	,0xDEF0	,0x0000), // High surrogate: D833; 'O' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~nbspace><~nbspace><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE68F	,0xE691	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~nbspace><~nbspace><%backslash>         */ DEADTRANS( L'\\'	,0xE691	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><~nbspace><~nbspace><~nbspace><~nbspace><%slash>             */ DEADTRANS( L'/'	,0xE691	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><~nbspace><~nbspace><~nbspace><~space>                       */ DEADTRANS( L' '	,0xE68F	,0xE692	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~nbspace><~space><%backslash>           */ DEADTRANS( L'\\'	,0xE692	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><~nbspace><~nbspace><~nbspace><~space><%slash>               */ DEADTRANS( L'/'	,0xE692	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><~nbspace><~nbspace><~space>                                 */ DEADTRANS( L' '	,0xE682	,0xE693	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~space><%asterisk>                      */ DEADTRANS( L'*'	,0xE693	,0xE694	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~space><%asterisk><%hash>               */ DEADTRANS( L'#'	,0xE694	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
+/*<!M><~nbspace><~nbspace><~space><%asterisk><~nbspace>            */ DEADTRANS( 0x00A0	,0xE694	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~nbspace><~space><%asterisk><~space>              */ DEADTRANS( L' '	,0xE694	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~nbspace><~space><%backslash>                     */ DEADTRANS( L'\\'	,0xE693	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
+/*<!M><~nbspace><~nbspace><~space><%bar>                           */ DEADTRANS( L'|'	,0xE693	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><~nbspace><~nbspace><~space><%less>                          */ DEADTRANS( L'<'	,0xE693	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
+/*<!M><~nbspace><~nbspace><~space><%slash>                         */ DEADTRANS( L'/'	,0xE693	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
+/*<!M><~nbspace><~nbspace><~space><o>                              */ DEADTRANS( L'o'	,0xE693	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~nbspace><~space><O>                              */ DEADTRANS( L'O'	,0xE693	,0xDEF0	,0x0000), // High surrogate: D833; 'O' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~nbspace><~space><~space>                         */ DEADTRANS( L' '	,0xE693	,0xE695	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~nbspace><~space><~space><%backslash>             */ DEADTRANS( L'\\'	,0xE695	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><~nbspace><~nbspace><~space><~space><%slash>                 */ DEADTRANS( L'/'	,0xE695	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><~nbspace><~space>                                           */ DEADTRANS( L' '	,0xE61D	,0xE696	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%asterisk>                                */ DEADTRANS( L'*'	,0xE696	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
+/*<!M><~nbspace><~space><%backslash>                               */ DEADTRANS( L'\\'	,0xE696	,0xE697	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%backslash><%slash>                       */ DEADTRANS( L'/'	,0xE697	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><~space><%backslash><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE697	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~nbspace><~space><%backslash><~space>                       */ DEADTRANS( L' '	,0xE697	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~nbspace><~space><%bar>                                     */ DEADTRANS( L'|'	,0xE696	,0xE698	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%bar><%bar>                               */ DEADTRANS( L'|'	,0xE698	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~nbspace><~space><%bar><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE698	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~nbspace><~space><%bar><~space>                             */ DEADTRANS( L' '	,0xE698	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~nbspace><~space><%bracketleft>                             */ DEADTRANS( L'['	,0xE696	,0xE699	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%bracketleft><%bracketright>              */ DEADTRANS( L']'	,0xE699	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~space><%bracketleft><%hash>                      */ DEADTRANS( L'#'	,0xE699	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~space><%bracketright>                            */ DEADTRANS( L']'	,0xE696	,0xE69A	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%bracketright><%bracketleft>              */ DEADTRANS( L'['	,0xE69A	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~nbspace><~space><%colon>                                   */ DEADTRANS( L':'	,0xE696	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><~nbspace><~space><%equal>                                   */ DEADTRANS( L'='	,0xE696	,0xE69B	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%equal><%equal>                           */ DEADTRANS( L'='	,0xE69B	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~nbspace><~space><%greater>                                 */ DEADTRANS( L'>'	,0xE696	,0xE69C	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%greater><%less>                          */ DEADTRANS( L'<'	,0xE69C	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
+/*<!M><~nbspace><~space><%greater><%minus>                         */ DEADTRANS( L'-'	,0xE69C	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
+/*<!M><~nbspace><~space><%hash>                                    */ DEADTRANS( L'#'	,0xE696	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
+/*<!M><~nbspace><~space><%less>                                    */ DEADTRANS( L'<'	,0xE696	,0xE69D	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%less><%greater>                          */ DEADTRANS( L'>'	,0xE69D	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
+/*<!M><~nbspace><~space><%less><o>                                 */ DEADTRANS( L'o'	,0xE69D	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><~space><%less><O>                                 */ DEADTRANS( L'O'	,0xE69D	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~nbspace><~space><%minus>                                   */ DEADTRANS( L'-'	,0xE696	,0xE69E	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%minus><%apostrophe>                      */ DEADTRANS( L'\''	,0xE69E	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~space><%minus><%aprightsingquotmark>             */ DEADTRANS( 0x2019	,0xE69E	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~space><%minus><%slash>                           */ DEADTRANS( L'/'	,0xE69E	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
+/*<!M><~nbspace><~space><%period>                                  */ DEADTRANS( L'.'	,0xE696	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
+/*<!M><~nbspace><~space><%semicolon>                               */ DEADTRANS( L';'	,0xE696	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><~space><%semsection>                              */ DEADTRANS( 0x00A7	,0xE696	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~nbspace><~space><%slash>                                   */ DEADTRANS( L'/'	,0xE696	,0xE69F	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><%slash><%backslash>                       */ DEADTRANS( L'\\'	,0xE69F	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~nbspace><~space><%slash><%minus>                           */ DEADTRANS( L'-'	,0xE69F	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
+/*<!M><~nbspace><~space><%slash><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE69F	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~nbspace><~space><%slash><~space>                           */ DEADTRANS( L' '	,0xE69F	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~nbspace><~space><%underscore>                              */ DEADTRANS( L'_'	,0xE696	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
+/*<!M><~nbspace><~space><3>                                        */ DEADTRANS( L'3'	,0xE696	,0xE6A0	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><3><%bar>                                  */ DEADTRANS( L'|'	,0xE6A0	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~nbspace><~space><8>                                        */ DEADTRANS( L'8'	,0xE696	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
+/*<!M><~nbspace><~space><A>                                        */ DEADTRANS( L'A'	,0xE696	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~nbspace><~space><I>                                        */ DEADTRANS( L'I'	,0xE696	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~space><i>                                        */ DEADTRANS( L'i'	,0xE696	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~space><o>                                        */ DEADTRANS( L'o'	,0xE696	,0xE6A1	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><O>                                        */ DEADTRANS( L'O'	,0xE696	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+/*<!M><~nbspace><~space><o><%minus>                                */ DEADTRANS( L'-'	,0xE6A1	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
+/*<!M><~nbspace><~space><o><%plus>                                 */ DEADTRANS( L'+'	,0xE6A1	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
+/*<!M><~nbspace><~space><T>                                        */ DEADTRANS( L'T'	,0xE696	,0xE6A2	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><T><%backslash>                            */ DEADTRANS( L'\\'	,0xE6A2	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~space><T><%percent>                              */ DEADTRANS( L'%'	,0xE6A2	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~space><T><T>                                     */ DEADTRANS( L'T'	,0xE6A2	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~nbspace><~space><T><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE6A2	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~nbspace><~space><T><~space>                                */ DEADTRANS( L' '	,0xE6A2	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~nbspace><~space><x>                                        */ DEADTRANS( L'x'	,0xE696	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
+/*<!M><~nbspace><~space><~space>                                   */ DEADTRANS( L' '	,0xE696	,0xE6A3	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><~space><%asterisk>                        */ DEADTRANS( L'*'	,0xE6A3	,0xE6A4	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><~space><%asterisk><%hash>                 */ DEADTRANS( L'#'	,0xE6A4	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
+/*<!M><~nbspace><~space><~space><%asterisk><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6A4	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~space><~space><%asterisk><~space>                */ DEADTRANS( L' '	,0xE6A4	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~nbspace><~space><~space><%backslash>                       */ DEADTRANS( L'\\'	,0xE6A3	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
+/*<!M><~nbspace><~space><~space><%bar>                             */ DEADTRANS( L'|'	,0xE6A3	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><~nbspace><~space><~space><%less>                            */ DEADTRANS( L'<'	,0xE6A3	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
+/*<!M><~nbspace><~space><~space><%slash>                           */ DEADTRANS( L'/'	,0xE6A3	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
+/*<!M><~nbspace><~space><~space><o>                                */ DEADTRANS( L'o'	,0xE6A3	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~space><~space><O>                                */ DEADTRANS( L'O'	,0xE6A3	,0xDEF0	,0x0000), // High surrogate: D833; 'O' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~nbspace><~space><~space><~space>                           */ DEADTRANS( L' '	,0xE6A3	,0xE6A5	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbspace><~space><~space><~space><%backslash>               */ DEADTRANS( L'\\'	,0xE6A5	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><~nbspace><~space><~space><~space><%slash>                   */ DEADTRANS( L'/'	,0xE6A5	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!M><~nbthinspace>                                               */ DEADTRANS( 0x202F	,0x00A6	,0xE6A6	,0x0001), // Intermediate multikey chain link
+/*<!M><~nbthinspace><~space>                                       */ DEADTRANS( L' '	,0xE6A6	,0x238D	,0x0000), // ' ' ➔ "⎍" U+238D MONOSTABLE SYMBOL
+/*<!M><~space>                                                     */ DEADTRANS( L' '	,0x00A6	,0xE6A7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%ampersand>                                         */ DEADTRANS( L'&'	,0xE6A7	,0xE6A8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%ampersand><%bar>                                   */ DEADTRANS( L'|'	,0xE6A8	,0x20D3	,0x0000), // '|' ➔ "⃓" U+20D3 COMBINING SHORT VERTICAL LINE OVERLAY
+/*<!M><~space><%ampersand><%less>                                  */ DEADTRANS( L'<'	,0xE6A8	,0x20EE	,0x0000), // '<' ➔ "⃮" U+20EE COMBINING LEFT ARROW BELOW
+/*<!M><~space><%ampersand><%minus>                                 */ DEADTRANS( L'-'	,0xE6A8	,0x20EF	,0x0000), // '-' ➔ "⃯" U+20EF COMBINING RIGHT ARROW BELOW
+/*<!M><~space><%apostrophe>                                        */ DEADTRANS( L'\''	,0xE6A7	,0xE6A9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%apostrophe><%equal>                                */ DEADTRANS( L'='	,0xE6A9	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
+/*<!M><~space><%apostrophe><%minus>                                */ DEADTRANS( L'-'	,0xE6A9	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
+/*<!M><~space><%apostrophe><%plus>                                 */ DEADTRANS( L'+'	,0xE6A9	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~space><%aprightsingquotmark>                               */ DEADTRANS( 0x2019	,0xE6A7	,0xE6AA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%aprightsingquotmark><%equal>                       */ DEADTRANS( L'='	,0xE6AA	,0x2AED	,0x0000), // '=' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
+/*<!M><~space><%aprightsingquotmark><%minus>                       */ DEADTRANS( L'-'	,0xE6AA	,0x2A3D	,0x0000), // '-' ➔ "⨽" U+2A3D RIGHTHAND INTERIOR PRODUCT
+/*<!M><~space><%aprightsingquotmark><%plus>                        */ DEADTRANS( L'+'	,0xE6AA	,0x22B9	,0x0000), // '+' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~space><%asterisk>                                          */ DEADTRANS( L'*'	,0xE6A7	,0xE6AB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%asterisk><%equal>                                  */ DEADTRANS( L'='	,0xE6AB	,0x225B	,0x0000), // '=' ➔ "≛" U+225B STAR EQUALS
+/*<!M><~space><%asterisk><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6AB	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
+/*<!M><~space><%asterisk><~space>                                  */ DEADTRANS( L' '	,0xE6AB	,0x2217	,0x0000), // ' ' ➔ "∗" U+2217 ASTERISK OPERATOR
+/*<!M><~space><%backslash>                                         */ DEADTRANS( L'\\'	,0xE6A7	,0xE6AC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%backslash><%greater>                               */ DEADTRANS( L'>'	,0xE6AC	,0x292D	,0x0000), // '>' ➔ "⤭" U+292D SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+/*<!M><~space><%backslash><%minus>                                 */ DEADTRANS( L'-'	,0xE6AC	,0x29A3	,0x0000), // '-' ➔ "⦣" U+29A3 REVERSED ANGLE
+/*<!M><~space><%backslash><%slash>                                 */ DEADTRANS( L'/'	,0xE6AC	,0xE6AD	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%backslash><%slash><%bar>                           */ DEADTRANS( L'|'	,0xE6AD	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
+/*<!M><~space><%backslash><%slash><%hash>                          */ DEADTRANS( L'#'	,0xE6AD	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
+/*<!M><~space><%backslash><%slash><%underscore>                    */ DEADTRANS( L'_'	,0xE6AD	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
+/*<!M><~space><%backslash><c>                                      */ DEADTRANS( L'c'	,0xE6AC	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
+/*<!M><~space><%backslash><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6AC	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
+/*<!M><~space><%backslash><~space>                                 */ DEADTRANS( L' '	,0xE6AC	,0x2216	,0x0000), // ' ' ➔ "∖" U+2216 SET MINUS
+/*<!M><~space><%bar>                                               */ DEADTRANS( L'|'	,0xE6A7	,0xE6AE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%backslash>                                   */ DEADTRANS( L'\\'	,0xE6AE	,0xE6AF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%backslash><%slash>                           */ DEADTRANS( L'/'	,0xE6AF	,0xE6B0	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%backslash><%slash><%bar>                     */ DEADTRANS( L'|'	,0xE6B0	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
+/*<!M><~space><%bar><%backslash><%slash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE6B0	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~space><%bar><%backslash><%slash><~space>                   */ DEADTRANS( L' '	,0xE6B0	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~space><%bar><%bar>                                         */ DEADTRANS( L'|'	,0xE6AE	,0xE6B1	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%bar><%bar>                                   */ DEADTRANS( L'|'	,0xE6B1	,0xE6B2	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%bar><%bar><%minus>                           */ DEADTRANS( L'-'	,0xE6B2	,0x22AA	,0x0000), // '-' ➔ "⊪" U+22AA TRIPLE VERTICAL BAR RIGHT TURNSTILE
+/*<!M><~space><%bar><%bar><%bar><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE6B2	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~space><%bar><%bar><%bar><~space>                           */ DEADTRANS( L' '	,0xE6B2	,0x2AF4	,0x0000), // ' ' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~space><%bar><%bar><%minus>                                 */ DEADTRANS( L'-'	,0xE6B1	,0x22A9	,0x0000), // '-' ➔ "⊩" U+22A9 FORCES
+/*<!M><~space><%bar><%bar><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6B1	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
+/*<!M><~space><%bar><%bar><~space>                                 */ DEADTRANS( L' '	,0xE6B1	,0x2225	,0x0000), // ' ' ➔ "∥" U+2225 PARALLEL TO
+/*<!M><~space><%bar><%equal>                                       */ DEADTRANS( L'='	,0xE6AE	,0x29E7	,0x0000), // '=' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~space><%bar><%hash>                                        */ DEADTRANS( L'#'	,0xE6AE	,0x25B6	,0x0000), // '#' ➔ "▶" U+25B6 BLACK RIGHT-POINTING TRIANGLE
+/*<!M><~space><%bar><%minus>                                       */ DEADTRANS( L'-'	,0xE6AE	,0x27CA	,0x0000), // '-' ➔ "⟊" U+27CA VERTICAL BAR WITH HORIZONTAL STROKE
+/*<!M><~space><%bar><%parenright>                                  */ DEADTRANS( L')'	,0xE6AE	,0x2ADD	,0x0000), // ')' ➔ "⫝" U+2ADD NONFORKING
+/*<!M><~space><%bar><%slash>                                       */ DEADTRANS( L'/'	,0xE6AE	,0xE6B3	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%slash><%backslash>                           */ DEADTRANS( L'\\'	,0xE6B3	,0xE6B4	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><%slash><%backslash><%bar>                     */ DEADTRANS( L'|'	,0xE6B4	,0x2A1D	,0x0000), // '|' ➔ "⨝" U+2A1D JOIN
+/*<!M><~space><%bar><%slash><%backslash><~nbspace>                 */ DEADTRANS( 0x00A0	,0xE6B4	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~space><%bar><%slash><%backslash><~space>                   */ DEADTRANS( L' '	,0xE6B4	,0x25B7	,0x0000), // ' ' ➔ "▷" U+25B7 WHITE RIGHT-POINTING TRIANGLE
+/*<!M><~space><%bar><%slash><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6B3	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
+/*<!M><~space><%bar><%slash><~space>                               */ DEADTRANS( L' '	,0xE6B3	,0x2A57	,0x0000), // ' ' ➔ "⩗" U+2A57 SLOPING LARGE OR
+/*<!M><~space><%bar><e>                                            */ DEADTRANS( L'e'	,0xE6AE	,0xE6B5	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><e><%backslash>                                */ DEADTRANS( L'\\'	,0xE6B5	,0xE6B6	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><e><%backslash><%comma>                        */ DEADTRANS( L','	,0xE6B6	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><e><%backslash><~nbspace>                      */ DEADTRANS( 0x00A0	,0xE6B6	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><e><%backslash><~space>                        */ DEADTRANS( L' '	,0xE6B6	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><e><e>                                         */ DEADTRANS( L'e'	,0xE6B5	,0xE6B7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><e><e><%comma>                                 */ DEADTRANS( L','	,0xE6B7	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><e><e><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6B7	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><e><e><~space>                                 */ DEADTRANS( L' '	,0xE6B7	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><o>                                            */ DEADTRANS( L'o'	,0xE6AE	,0x2AF0	,0x0000), // 'o' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><~space><%bar><O>                                            */ DEADTRANS( L'O'	,0xE6AE	,0x2AF0	,0x0000), // 'O' ➔ "⫰" U+2AF0 VERTICAL LINE WITH CIRCLE BELOW
+/*<!M><~space><%bar><p>                                            */ DEADTRANS( L'p'	,0xE6AE	,0xE6B8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bar><p><%comma>                                    */ DEADTRANS( L','	,0xE6B8	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><p><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6B8	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><p><~space>                                    */ DEADTRANS( L' '	,0xE6B8	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><%bar><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6AE	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
+/*<!M><~space><%bar><~space>                                       */ DEADTRANS( L' '	,0xE6AE	,0x2223	,0x0000), // ' ' ➔ "∣" U+2223 DIVIDES
+/*<!M><~space><%braceleft>                                         */ DEADTRANS( L'{'	,0xE6A7	,0x2983	,0x0000), // '{' ➔ "⦃" U+2983 LEFT WHITE CURLY BRACKET
+/*<!M><~space><%braceright>                                        */ DEADTRANS( L'}'	,0xE6A7	,0x2984	,0x0000), // '}' ➔ "⦄" U+2984 RIGHT WHITE CURLY BRACKET
+/*<!M><~space><%bracketleft>                                       */ DEADTRANS( L'['	,0xE6A7	,0xE6B9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bracketleft><%bracketleft>                         */ DEADTRANS( L'['	,0xE6B9	,0x27E6	,0x0000), // '[' ➔ "⟦" U+27E6 MATHEMATICAL LEFT WHITE SQUARE BRACKET
+/*<!M><~space><%bracketleft><%bracketright>                        */ DEADTRANS( L']'	,0xE6B9	,0x25FB	,0x0000), // ']' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
+/*<!M><~space><%bracketleft><%hash>                                */ DEADTRANS( L'#'	,0xE6B9	,0x25FC	,0x0000), // '#' ➔ "◼" U+25FC BLACK MEDIUM SQUARE
+/*<!M><~space><%bracketleft><%minus>                               */ DEADTRANS( L'-'	,0xE6B9	,0x2ACD	,0x0000), // '-' ➔ "⫍" U+2ACD SQUARE LEFT OPEN BOX OPERATOR
+/*<!M><~space><%bracketleft><%underscore>                          */ DEADTRANS( L'_'	,0xE6B9	,0x298B	,0x0000), // '_' ➔ "⦋" U+298B LEFT SQUARE BRACKET WITH UNDERBAR
+/*<!M><~space><%bracketleft><a>                                    */ DEADTRANS( L'a'	,0xE6B9	,0x27CE	,0x0000), // 'a' ➔ "⟎" U+27CE SQUARED LOGICAL AND
+/*<!M><~space><%bracketleft><A>                                    */ DEADTRANS( L'A'	,0xE6B9	,0x27CE	,0x0000), // 'A' ➔ "⟎" U+27CE SQUARED LOGICAL AND
+/*<!M><~space><%bracketleft><o>                                    */ DEADTRANS( L'o'	,0xE6B9	,0x29C7	,0x0000), // 'o' ➔ "⧇" U+29C7 SQUARED SMALL CIRCLE
+/*<!M><~space><%bracketleft><v>                                    */ DEADTRANS( L'v'	,0xE6B9	,0xE6BA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bracketleft><V>                                    */ DEADTRANS( L'V'	,0xE6B9	,0xE6BB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bracketleft><v><%bracketright>                     */ DEADTRANS( L']'	,0xE6BA	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><~space><%bracketleft><V><%bracketright>                     */ DEADTRANS( L']'	,0xE6BB	,0x27CF	,0x0000), // ']' ➔ "⟏" U+27CF SQUARED LOGICAL OR
+/*<!M><~space><%bracketleft><x>                                    */ DEADTRANS( L'x'	,0xE6B9	,0x22A0	,0x0000), // 'x' ➔ "⊠" U+22A0 SQUARED TIMES
+/*<!M><~space><%bracketleft><X>                                    */ DEADTRANS( L'X'	,0xE6B9	,0x22A0	,0x0000), // 'X' ➔ "⊠" U+22A0 SQUARED TIMES
+/*<!M><~space><%bracketright>                                      */ DEADTRANS( L']'	,0xE6A7	,0xE6BC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%bracketright><%bracketleft>                        */ DEADTRANS( L'['	,0xE6BC	,0x25FB	,0x0000), // '[' ➔ "◻" U+25FB WHITE MEDIUM SQUARE
+/*<!M><~space><%bracketright><%bracketright>                       */ DEADTRANS( L']'	,0xE6BC	,0x27E7	,0x0000), // ']' ➔ "⟧" U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+/*<!M><~space><%bracketright><%underscore>                         */ DEADTRANS( L'_'	,0xE6BC	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
+/*<!M><~space><%circum>                                            */ DEADTRANS( L'^'	,0xE6A7	,0xE6BD	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%circum><%circum>                                   */ DEADTRANS( L'^'	,0xE6BD	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
+/*<!M><~space><%circum><%equal>                                    */ DEADTRANS( L'='	,0xE6BD	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
+/*<!M><~space><%circum><%underscore>                               */ DEADTRANS( L'_'	,0xE6BD	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><~space><%circum><o>                                         */ DEADTRANS( L'o'	,0xE6BD	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!M><~space><%circum><O>                                         */ DEADTRANS( L'O'	,0xE6BD	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
+/*<!M><~space><%circum><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6BD	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~space><%circum><~space>                                    */ DEADTRANS( L' '	,0xE6BD	,0x2227	,0x0000), // ' ' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~space><%colon>                                             */ DEADTRANS( L':'	,0xE6A7	,0xE6BE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%colon><%colon>                                     */ DEADTRANS( L':'	,0xE6BE	,0x2237	,0x0000), // ':' ➔ "∷" U+2237 PROPORTION
+/*<!M><~space><%colon><%tilde>                                     */ DEADTRANS( L'~'	,0xE6BE	,0x223B	,0x0000), // '~' ➔ "∻" U+223B HOMOTHETIC
+/*<!M><~space><%colon><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6BE	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
+/*<!M><~space><%colon><~space>                                     */ DEADTRANS( L' '	,0xE6BE	,0x2236	,0x0000), // ' ' ➔ "∶" U+2236 RATIO
+/*<!M><~space><%equal>                                             */ DEADTRANS( L'='	,0xE6A7	,0xE6BF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%equal><%bar>                                       */ DEADTRANS( L'|'	,0xE6BF	,0xE6C0	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%equal><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE6C0	,0x22D5	,0x0000), // '|' ➔ "⋕" U+22D5 EQUAL AND PARALLEL TO
+/*<!M><~space><%equal><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6C0	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~space><%equal><%bar><~space>                               */ DEADTRANS( L' '	,0xE6C0	,0x29E7	,0x0000), // ' ' ➔ "⧧" U+29E7 THERMODYNAMIC
+/*<!M><~space><%equal><%equal>                                     */ DEADTRANS( L'='	,0xE6BF	,0x2A75	,0x0000), // '=' ➔ "⩵" U+2A75 TWO CONSECUTIVE EQUALS SIGNS
+/*<!M><~space><%equal><%greater>                                   */ DEADTRANS( L'>'	,0xE6BF	,0x2A9A	,0x0000), // '>' ➔ "⪚" U+2A9A DOUBLE-LINE EQUAL TO OR GREATER-THAN
+/*<!M><~space><%equal><%minus>                                     */ DEADTRANS( L'-'	,0xE6BF	,0xE6C1	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%equal><%minus><%greater>                           */ DEADTRANS( L'>'	,0xE6C1	,0x2971	,0x0000), // '>' ➔ "⥱" U+2971 EQUALS SIGN ABOVE RIGHTWARDS ARROW
+/*<!M><~space><%equal><%minus><%slash>                             */ DEADTRANS( L'/'	,0xE6C1	,0x29E5	,0x0000), // '/' ➔ "⧥" U+29E5 IDENTICAL TO AND SLANTED PARALLEL
+/*<!M><~space><%exclam>                                            */ DEADTRANS( L'!'	,0xE6A7	,0xE6C2	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%exclam><%exclam>                                   */ DEADTRANS( L'!'	,0xE6C2	,0x00A1	,0x0000), // '!' ➔ "¡" U+00A1 INVERTED EXCLAMATION MARK
+/*<!M><~space><%exclam><j>                                         */ DEADTRANS( L'j'	,0xE6C2	,0x297F	,0x0000), // 'j' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~space><%exclam><J>                                         */ DEADTRANS( L'J'	,0xE6C2	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~space><%exclam><Y>                                         */ DEADTRANS( L'Y'	,0xE6C2	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~space><%exclam><y>                                         */ DEADTRANS( L'y'	,0xE6C2	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~space><%greater>                                           */ DEADTRANS( L'>'	,0xE6A7	,0xE6C3	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%greater><%greater>                                 */ DEADTRANS( L'>'	,0xE6C3	,0xE6C4	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%greater><%greater><%greater>                       */ DEADTRANS( L'>'	,0xE6C4	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
+/*<!M><~space><%greater><%greater><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE6C4	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
+/*<!M><~space><%greater><%greater><~space>                         */ DEADTRANS( L' '	,0xE6C4	,0x226B	,0x0000), // ' ' ➔ "≫" U+226B MUCH GREATER-THAN
+/*<!M><~space><%greater><%less>                                    */ DEADTRANS( L'<'	,0xE6C3	,0x2AA4	,0x0000), // '<' ➔ "⪤" U+2AA4 GREATER-THAN OVERLAPPING LESS-THAN
+/*<!M><~space><%greater><%minus>                                   */ DEADTRANS( L'-'	,0xE6C3	,0xE6C5	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%greater><%minus><%greater>                         */ DEADTRANS( L'>'	,0xE6C5	,0x2978	,0x0000), // '>' ➔ "⥸" U+2978 GREATER-THAN ABOVE RIGHTWARDS ARROW
+/*<!M><~space><%greater><%minus><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE6C5	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
+/*<!M><~space><%greater><%minus><~space>                           */ DEADTRANS( L' '	,0xE6C5	,0x2AAB	,0x0000), // ' ' ➔ "⪫" U+2AAB LARGER THAN
+/*<!M><~space><%greater><%parenright>                              */ DEADTRANS( L')'	,0xE6C3	,0x2994	,0x0000), // ')' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
+/*<!M><~space><%greater><o>                                        */ DEADTRANS( L'o'	,0xE6C3	,0x2941	,0x0000), // 'o' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~space><%greater><O>                                        */ DEADTRANS( L'O'	,0xE6C3	,0x2941	,0x0000), // 'O' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~space><%greater><~nbspace>                                 */ DEADTRANS( 0x00A0	,0xE6C3	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
+/*<!M><~space><%greater><~space>                                   */ DEADTRANS( L' '	,0xE6C3	,0x200E	,0x0000), // ' ' ➔ "‎" U+200E LEFT-TO-RIGHT MARK
+/*<!M><~space><%hash>                                              */ DEADTRANS( L'#'	,0xE6A7	,0xE6C6	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%hash><%backslash>                                  */ DEADTRANS( L'\\'	,0xE6C6	,0x2A33	,0x0000), // '\' ➔ "⨳" U+2A33 SMASH PRODUCT
+/*<!M><~space><%hash><%percent>                                    */ DEADTRANS( L'%'	,0xE6C6	,0x2A33	,0x0000), // '%' ➔ "⨳" U+2A33 SMASH PRODUCT
+/*<!M><~space><%hash><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE6C6	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
+/*<!M><~space><%hash><~space>                                      */ DEADTRANS( L' '	,0xE6C6	,0x266F	,0x0000), // ' ' ➔ "♯" U+266F MUSIC SHARP SIGN
+/*<!M><~space><%less>                                              */ DEADTRANS( L'<'	,0xE6A7	,0xE6C7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%backslash>                                  */ DEADTRANS( L'\\'	,0xE6C7	,0x2932	,0x0000), // '\' ➔ "⤲" U+2932 NORTH WEST ARROW CROSSING NORTH EAST ARROW
+/*<!M><~space><%less><%equal>                                      */ DEADTRANS( L'='	,0xE6C7	,0xE6C8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%equal><%greater>                            */ DEADTRANS( L'>'	,0xE6C8	,0x2A8B	,0x0000), // '>' ➔ "⪋" U+2A8B LESS-THAN ABOVE DOUBLE-LINE EQUAL ABOVE GREATER-THAN
+/*<!M><~space><%less><%equal><%slash>                              */ DEADTRANS( L'/'	,0xE6C8	,0x2268	,0x0000), // '/' ➔ "≨" U+2268 LESS-THAN BUT NOT EQUAL TO
+/*<!M><~space><%less><%equal><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6C8	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
+/*<!M><~space><%less><%equal><~space>                              */ DEADTRANS( L' '	,0xE6C8	,0x2266	,0x0000), // ' ' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
+/*<!M><~space><%less><%exclam>                                     */ DEADTRANS( L'!'	,0xE6C7	,0x29BD	,0x0000), // '!' ➔ "⦽" U+29BD UP ARROW THROUGH CIRCLE
+/*<!M><~space><%less><%greater>                                    */ DEADTRANS( L'>'	,0xE6C7	,0x22C4	,0x0000), // '>' ➔ "⋄" U+22C4 DIAMOND OPERATOR
+/*<!M><~space><%less><%less>                                       */ DEADTRANS( L'<'	,0xE6C7	,0xE6C9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%less><%less>                                */ DEADTRANS( L'<'	,0xE6C9	,0x22D8	,0x0000), // '<' ➔ "⋘" U+22D8 VERY MUCH LESS-THAN
+/*<!M><~space><%less><%less><%minus>                               */ DEADTRANS( L'-'	,0xE6C9	,0xE6CA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%less><%minus><%bar>                         */ DEADTRANS( L'|'	,0xE6CA	,0x2B36	,0x0000), // '|' ➔ "⬶" U+2B36 LEFTWARDS TWO-HEADED ARROW FROM BAR
+/*<!M><~space><%less><%less><%minus><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE6CA	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
+/*<!M><~space><%less><%less><%minus><~space>                       */ DEADTRANS( L' '	,0xE6CA	,0x2976	,0x0000), // ' ' ➔ "⥶" U+2976 LESS-THAN ABOVE LEFTWARDS ARROW
+/*<!M><~space><%less><%less><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE6C9	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
+/*<!M><~space><%less><%less><~space>                               */ DEADTRANS( L' '	,0xE6C9	,0x226A	,0x0000), // ' ' ➔ "≪" U+226A MUCH LESS-THAN
+/*<!M><~space><%less><%minus>                                      */ DEADTRANS( L'-'	,0xE6C7	,0xE6CB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%minus><%bar>                                */ DEADTRANS( L'|'	,0xE6CB	,0x21F7	,0x0000), // '|' ➔ "⇷" U+21F7 LEFTWARDS ARROW WITH VERTICAL STROKE
+/*<!M><~space><%less><%minus><%less>                               */ DEADTRANS( L'<'	,0xE6CB	,0x2977	,0x0000), // '<' ➔ "⥷" U+2977 LEFTWARDS ARROW THROUGH LESS-THAN
+/*<!M><~space><%less><%minus><%minus>                              */ DEADTRANS( L'-'	,0xE6CB	,0x27F7	,0x0000), // '-' ➔ "⟷" U+27F7 LONG LEFT RIGHT ARROW
+/*<!M><~space><%less><%minus><%tilde>                              */ DEADTRANS( L'~'	,0xE6CB	,0x2973	,0x0000), // '~' ➔ "⥳" U+2973 LEFTWARDS ARROW ABOVE TILDE OPERATOR
+/*<!M><~space><%less><%minus><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6CB	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
+/*<!M><~space><%less><%minus><~space>                              */ DEADTRANS( L' '	,0xE6CB	,0x2AAA	,0x0000), // ' ' ➔ "⪪" U+2AAA SMALLER THAN
+/*<!M><~space><%less><%parenleft>                                  */ DEADTRANS( L'('	,0xE6C7	,0x2993	,0x0000), // '(' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
+/*<!M><~space><%less><%parenright>                                 */ DEADTRANS( L')'	,0xE6C7	,0x2AA6	,0x0000), // ')' ➔ "⪦" U+2AA6 LESS-THAN CLOSED BY CURVE
+/*<!M><~space><%less><%slash>                                      */ DEADTRANS( L'/'	,0xE6C7	,0x226E	,0x0000), // '/' ➔ "≮" U+226E NOT LESS-THAN
+/*<!M><~space><%less><%tilde>                                      */ DEADTRANS( L'~'	,0xE6C7	,0xE6CC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%less><%tilde><%greater>                            */ DEADTRANS( L'>'	,0xE6CC	,0x21AD	,0x0000), // '>' ➔ "↭" U+21AD LEFT RIGHT WAVE ARROW
+/*<!M><~space><%less><%tilde><%tilde>                              */ DEADTRANS( L'~'	,0xE6CC	,0x21DC	,0x0000), // '~' ➔ "⇜" U+21DC LEFTWARDS SQUIGGLE ARROW
+/*<!M><~space><%less><%tilde><~nbspace>                            */ DEADTRANS( 0x00A0	,0xE6CC	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
+/*<!M><~space><%less><%tilde><~space>                              */ DEADTRANS( L' '	,0xE6CC	,0x2272	,0x0000), // ' ' ➔ "≲" U+2272 LESS-THAN OR EQUIVALENT TO
+/*<!M><~space><%less><3>                                           */ DEADTRANS( L'3'	,0xE6C7	,0x2660	,0x0000), // '3' ➔ "♠" U+2660 BLACK SPADE SUIT
+/*<!M><~space><%less><C>                                           */ DEADTRANS( L'C'	,0xE6C7	,0x293E	,0x0000), // 'C' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+/*<!M><~space><%less><c>                                           */ DEADTRANS( L'c'	,0xE6C7	,0x293E	,0x0000), // 'c' ➔ "⤾" U+293E LOWER RIGHT SEMICIRCULAR CLOCKWISE ARROW
+/*<!M><~space><%less><n>                                           */ DEADTRANS( L'n'	,0xE6C7	,0x21B6	,0x0000), // 'n' ➔ "↶" U+21B6 ANTICLOCKWISE TOP SEMICIRCLE ARROW
+/*<!M><~space><%less><o>                                           */ DEADTRANS( L'o'	,0xE6C7	,0x2940	,0x0000), // 'o' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~space><%less><O>                                           */ DEADTRANS( L'O'	,0xE6C7	,0x2940	,0x0000), // 'O' ➔ "⥀" U+2940 ANTICLOCKWISE CLOSED CIRCLE ARROW
+/*<!M><~space><%less><~nbspace>                                    */ DEADTRANS( 0x00A0	,0xE6C7	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
+/*<!M><~space><%less><~space>                                      */ DEADTRANS( L' '	,0xE6C7	,0x200F	,0x0000), // ' ' ➔ "‏" U+200F RIGHT-TO-LEFT MARK
+/*<!M><~space><%minus>                                             */ DEADTRANS( L'-'	,0xE6A7	,0xE6CD	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><%apostrophe>                                */ DEADTRANS( L'\''	,0xE6CD	,0xE6CE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><%apostrophe><%minus>                        */ DEADTRANS( L'-'	,0xE6CE	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~space><%minus><%apostrophe><~nbspace>                      */ DEADTRANS( 0x00A0	,0xE6CE	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~space><%minus><%apostrophe><~space>                        */ DEADTRANS( L' '	,0xE6CE	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~space><%minus><%aprightsingquotmark>                       */ DEADTRANS( 0x2019	,0xE6CD	,0xE6CF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><%aprightsingquotmark><%minus>               */ DEADTRANS( L'-'	,0xE6CF	,0x2ADF	,0x0000), // '-' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~space><%minus><%aprightsingquotmark><~nbspace>             */ DEADTRANS( 0x00A0	,0xE6CF	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~space><%minus><%aprightsingquotmark><~space>               */ DEADTRANS( L' '	,0xE6CF	,0x2A3C	,0x0000), // ' ' ➔ "⨼" U+2A3C INTERIOR PRODUCT
+/*<!M><~space><%minus><%bar>                                       */ DEADTRANS( L'|'	,0xE6CD	,0x21F8	,0x0000), // '|' ➔ "⇸" U+21F8 RIGHTWARDS ARROW WITH VERTICAL STROKE
+/*<!M><~space><%minus><%bracketleft>                               */ DEADTRANS( L'['	,0xE6CD	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
+/*<!M><~space><%minus><%bracketright>                              */ DEADTRANS( L']'	,0xE6CD	,0xE6D0	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><%bracketright><%bracketleft>                */ DEADTRANS( L'['	,0xE6D0	,0x27E4	,0x0000), // '[' ➔ "⟤" U+27E4 WHITE SQUARE WITH LEFTWARDS TICK
+/*<!M><~space><%minus><%bracketright><~nbspace>                    */ DEADTRANS( 0x00A0	,0xE6D0	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
+/*<!M><~space><%minus><%bracketright><~space>                      */ DEADTRANS( L' '	,0xE6D0	,0x2ACE	,0x0000), // ' ' ➔ "⫎" U+2ACE SQUARE RIGHT OPEN BOX OPERATOR
+/*<!M><~space><%minus><%slash>                                     */ DEADTRANS( L'/'	,0xE6CD	,0x29A2	,0x0000), // '/' ➔ "⦢" U+29A2 TURNED ANGLE
+/*<!M><~space><%minus><e>                                          */ DEADTRANS( L'e'	,0xE6CD	,0x22F2	,0x0000), // 'e' ➔ "⋲" U+22F2 ELEMENT OF WITH LONG HORIZONTAL STROKE
+/*<!M><~space><%minus><j>                                          */ DEADTRANS( L'j'	,0xE6CD	,0x297D	,0x0000), // 'j' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~space><%minus><J>                                          */ DEADTRANS( L'J'	,0xE6CD	,0x297D	,0x0000), // 'J' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~space><%minus><o>                                          */ DEADTRANS( L'o'	,0xE6CD	,0xE6D1	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><O>                                          */ DEADTRANS( L'O'	,0xE6CD	,0x29B1	,0x0000), // 'O' ➔ "⦱" U+29B1 EMPTY SET WITH OVERBAR
+/*<!M><~space><%minus><o><%minus>                                  */ DEADTRANS( L'-'	,0xE6D1	,0x2256	,0x0000), // '-' ➔ "≖" U+2256 RING IN EQUAL TO
+/*<!M><~space><%minus><o><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6D1	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
+/*<!M><~space><%minus><o><~space>                                  */ DEADTRANS( L' '	,0xE6D1	,0x22B8	,0x0000), // ' ' ➔ "⊸" U+22B8 MULTIMAP
+/*<!M><~space><%minus><s>                                          */ DEADTRANS( L's'	,0xE6CD	,0xE6D2	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%minus><S>                                          */ DEADTRANS( L'S'	,0xE6CD	,0x2A1B	,0x0000), // 'S' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~space><%minus><s><%slash>                                  */ DEADTRANS( L'/'	,0xE6D2	,0x299E	,0x0000), // '/' ➔ "⦞" U+299E ANGLE WITH S INSIDE
+/*<!M><~space><%minus><s><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE6D2	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~space><%minus><s><~space>                                  */ DEADTRANS( L' '	,0xE6D2	,0x2A1B	,0x0000), // ' ' ➔ "⨛" U+2A1B INTEGRAL WITH OVERBAR
+/*<!M><~space><%minus><Y>                                          */ DEADTRANS( L'Y'	,0xE6CD	,0x297D	,0x0000), // 'Y' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~space><%minus><y>                                          */ DEADTRANS( L'y'	,0xE6CD	,0x297D	,0x0000), // 'y' ➔ "⥽" U+297D RIGHT FISH TAIL
+/*<!M><~space><%minus><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6CD	,0x2212	,0x0000), // ' ' ➔ "−" U+2212 MINUS SIGN
+/*<!M><~space><%minus><~space>                                     */ DEADTRANS( L' '	,0xE6CD	,0x2212	,0x0000), // ' ' ➔ "−" U+2212 MINUS SIGN
+/*<!M><~space><%parenleft>                                         */ DEADTRANS( L'('	,0xE6A7	,0xE6D3	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%parenleft><%bracketleft>                           */ DEADTRANS( L'['	,0xE6D3	,0x27EE	,0x0000), // '[' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
+/*<!M><~space><%parenleft><%bracketright>                          */ DEADTRANS( L']'	,0xE6D3	,0x27EE	,0x0000), // ']' ➔ "⟮" U+27EE MATHEMATICAL LEFT FLATTENED PARENTHESIS
+/*<!M><~space><%parenleft><%equal>                                 */ DEADTRANS( L'='	,0xE6D3	,0x224E	,0x0000), // '=' ➔ "≎" U+224E GEOMETRICALLY EQUIVALENT TO
+/*<!M><~space><%parenleft><%greater>                               */ DEADTRANS( L'>'	,0xE6D3	,0x2AA7	,0x0000), // '>' ➔ "⪧" U+2AA7 GREATER-THAN CLOSED BY CURVE
+/*<!M><~space><%parenleft><%less>                                  */ DEADTRANS( L'<'	,0xE6D3	,0x2993	,0x0000), // '<' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
+/*<!M><~space><%parenleft><%parenleft>                             */ DEADTRANS( L'('	,0xE6D3	,0x2985	,0x0000), // '(' ➔ "⦅" U+2985 LEFT WHITE PARENTHESIS
+/*<!M><~space><%parenleft><8>                                      */ DEADTRANS( L'8'	,0xE6D3	,0x29DD	,0x0000), // '8' ➔ "⧝" U+29DD TIE OVER INFINITY
+/*<!M><~space><%parenleft><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D3	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
+/*<!M><~space><%parenleft><~space>                                 */ DEADTRANS( L' '	,0xE6D3	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
+/*<!M><~space><%parenright>                                        */ DEADTRANS( L')'	,0xE6A7	,0xE6D4	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%parenright><%bracketleft>                          */ DEADTRANS( L'['	,0xE6D4	,0x27EF	,0x0000), // '[' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+/*<!M><~space><%parenright><%bracketright>                         */ DEADTRANS( L']'	,0xE6D4	,0x27EF	,0x0000), // ']' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
+/*<!M><~space><%parenright><%greater>                              */ DEADTRANS( L'>'	,0xE6D4	,0x2994	,0x0000), // '>' ➔ "⦔" U+2994 RIGHT ARC GREATER-THAN BRACKET
+/*<!M><~space><%parenright><%parenright>                           */ DEADTRANS( L')'	,0xE6D4	,0x2986	,0x0000), // ')' ➔ "⦆" U+2986 RIGHT WHITE PARENTHESIS
+/*<!M><~space><%period>                                            */ DEADTRANS( L'.'	,0xE6A7	,0xE6D5	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%period><a>                                         */ DEADTRANS( L'a'	,0xE6D5	,0x2A51	,0x0000), // 'a' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~space><%period><A>                                         */ DEADTRANS( L'A'	,0xE6D5	,0x2A51	,0x0000), // 'A' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~space><%period><b>                                         */ DEADTRANS( L'b'	,0xE6D5	,0x2AC4	,0x0000), // 'b' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~space><%period><c>                                         */ DEADTRANS( L'c'	,0xE6D5	,0xE6D6	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%period><c><%backslash>                             */ DEADTRANS( L'\\'	,0xE6D6	,0x2AC4	,0x0000), // '\' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~space><%period><c><%underscore>                            */ DEADTRANS( L'_'	,0xE6D6	,0x2AC3	,0x0000), // '_' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~space><%period><c><c>                                      */ DEADTRANS( L'c'	,0xE6D6	,0x2AC4	,0x0000), // 'c' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!M><~space><%period><e>                                         */ DEADTRANS( L'e'	,0xE6D5	,0x22F5	,0x0000), // 'e' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
+/*<!M><~space><%period><v>                                         */ DEADTRANS( L'v'	,0xE6D5	,0xE6D7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%period><V>                                         */ DEADTRANS( L'V'	,0xE6D5	,0xE6D8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%period><v><v>                                      */ DEADTRANS( L'v'	,0xE6D7	,0x2A51	,0x0000), // 'v' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~space><%period><V><V>                                      */ DEADTRANS( L'V'	,0xE6D8	,0x2A51	,0x0000), // 'V' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
+/*<!M><~space><%period><v><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D7	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~space><%period><V><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6D8	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~space><%period><v><~space>                                 */ DEADTRANS( L' '	,0xE6D7	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~space><%period><V><~space>                                 */ DEADTRANS( L' '	,0xE6D8	,0x2A52	,0x0000), // ' ' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
+/*<!M><~space><%period><x>                                         */ DEADTRANS( L'x'	,0xE6D5	,0x2A30	,0x0000), // 'x' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
+/*<!M><~space><%period><X>                                         */ DEADTRANS( L'X'	,0xE6D5	,0x2A30	,0x0000), // 'X' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
+/*<!M><~space><%period><~nbspace>                                  */ DEADTRANS( 0x00A0	,0xE6D5	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
+/*<!M><~space><%period><~space>                                    */ DEADTRANS( L' '	,0xE6D5	,0x22C5	,0x0000), // ' ' ➔ "⋅" U+22C5 DOT OPERATOR
+/*<!M><~space><%plus>                                              */ DEADTRANS( L'+'	,0xE6A7	,0xE6D9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%plus><%apostrophe>                                 */ DEADTRANS( L'\''	,0xE6D9	,0x22B9	,0x0000), // ''' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~space><%plus><%aprightsingquotmark>                        */ DEADTRANS( 0x2019	,0xE6D9	,0x22B9	,0x0000), // '’' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
+/*<!M><~space><%plus><%circum>                                     */ DEADTRANS( L'^'	,0xE6D9	,0x2A28	,0x0000), // '^' ➔ "⨨" U+2A28 PLUS SIGN WITH BLACK TRIANGLE
+/*<!M><~space><%plus><%plus>                                       */ DEADTRANS( L'+'	,0xE6D9	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
+/*<!M><~space><%plus><2>                                           */ DEADTRANS( L'2'	,0xE6D9	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
+/*<!M><~space><%semicolon>                                         */ DEADTRANS( L';'	,0xE6A7	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><~space><%semsection>                                        */ DEADTRANS( 0x00A7	,0xE6A7	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><~space><%slash>                                             */ DEADTRANS( L'/'	,0xE6A7	,0xE6DA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%backslash>                                 */ DEADTRANS( L'\\'	,0xE6DA	,0xE6DB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%backslash><%bar>                           */ DEADTRANS( L'|'	,0xE6DB	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
+/*<!M><~space><%slash><%backslash><%hash>                          */ DEADTRANS( L'#'	,0xE6DB	,0x25C0	,0x0000), // '#' ➔ "◀" U+25C0 BLACK LEFT-POINTING TRIANGLE
+/*<!M><~space><%slash><%backslash><%underscore>                    */ DEADTRANS( L'_'	,0xE6DB	,0x29CD	,0x0000), // '_' ➔ "⧍" U+29CD TRIANGLE WITH SERIFS AT BOTTOM
+/*<!M><~space><%slash><%hash>                                      */ DEADTRANS( L'#'	,0xE6DA	,0xE6DC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%hash><%underscore>                         */ DEADTRANS( L'_'	,0xE6DC	,0xE6DD	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%hash><%underscore><%backslash>             */ DEADTRANS( L'\\'	,0xE6DD	,0x25B4	,0x0000), // '\' ➔ "▴" U+25B4 BLACK UP-POINTING SMALL TRIANGLE
+/*<!M><~space><%slash><%slash>                                     */ DEADTRANS( L'/'	,0xE6DA	,0xE6DE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%slash><%slash>                             */ DEADTRANS( L'/'	,0xE6DE	,0x2AFB	,0x0000), // '/' ➔ "⫻" U+2AFB TRIPLE SOLIDUS BINARY RELATION
+/*<!M><~space><%slash><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6DE	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
+/*<!M><~space><%slash><%slash><~space>                             */ DEADTRANS( L' '	,0xE6DE	,0x2AFD	,0x0000), // ' ' ➔ "⫽" U+2AFD DOUBLE SOLIDUS OPERATOR
+/*<!M><~space><%slash><%underscore>                                */ DEADTRANS( L'_'	,0xE6DA	,0xE6DF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%slash><%underscore><%backslash>                    */ DEADTRANS( L'\\'	,0xE6DF	,0x25B5	,0x0000), // '\' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
+/*<!M><~space><%slash><c>                                          */ DEADTRANS( L'c'	,0xE6DA	,0x27C8	,0x0000), // 'c' ➔ "⟈" U+27C8 REVERSE SOLIDUS PRECEDING SUBSET
+/*<!M><~space><%slash><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6DA	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
+/*<!M><~space><%slash><~space>                                     */ DEADTRANS( L' '	,0xE6DA	,0x2215	,0x0000), // ' ' ➔ "∕" U+2215 DIVISION SLASH
+/*<!M><~space><%tilde>                                             */ DEADTRANS( L'~'	,0xE6A7	,0xE6E0	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%tilde><%colon>                                     */ DEADTRANS( L':'	,0xE6E0	,0x223B	,0x0000), // ':' ➔ "∻" U+223B HOMOTHETIC
+/*<!M><~space><%tilde><%equal>                                     */ DEADTRANS( L'='	,0xE6E0	,0xE6E1	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%tilde><%equal><%slash>                             */ DEADTRANS( L'/'	,0xE6E1	,0xE6E2	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%tilde><%equal><%slash><%slash>                     */ DEADTRANS( L'/'	,0xE6E2	,0x29E4	,0x0000), // '/' ➔ "⧤" U+29E4 EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+/*<!M><~space><%tilde><%equal><%slash><~nbspace>                   */ DEADTRANS( 0x00A0	,0xE6E2	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+/*<!M><~space><%tilde><%equal><%slash><~space>                     */ DEADTRANS( L' '	,0xE6E2	,0x2246	,0x0000), // ' ' ➔ "≆" U+2246 APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+/*<!M><~space><%tilde><%equal><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E1	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
+/*<!M><~space><%tilde><%equal><~space>                             */ DEADTRANS( L' '	,0xE6E1	,0x2245	,0x0000), // ' ' ➔ "≅" U+2245 APPROXIMATELY EQUAL TO
+/*<!M><~space><%tilde><%greater>                                   */ DEADTRANS( L'>'	,0xE6E0	,0x2A9E	,0x0000), // '>' ➔ "⪞" U+2A9E SIMILAR OR GREATER-THAN
+/*<!M><~space><%tilde><%minus>                                     */ DEADTRANS( L'-'	,0xE6E0	,0x2972	,0x0000), // '-' ➔ "⥲" U+2972 TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+/*<!M><~space><%tilde><%percent>                                   */ DEADTRANS( L'%'	,0xE6E0	,0x2240	,0x0000), // '%' ➔ "≀" U+2240 WREATH PRODUCT
+/*<!M><~space><%tilde><%slash>                                     */ DEADTRANS( L'/'	,0xE6E0	,0xE6E3	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%tilde><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E3	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
+/*<!M><~space><%tilde><%slash><~space>                             */ DEADTRANS( L' '	,0xE6E3	,0x2241	,0x0000), // ' ' ➔ "≁" U+2241 NOT TILDE
+/*<!M><~space><%tilde><%tilde>                                     */ DEADTRANS( L'~'	,0xE6E0	,0xE6E4	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%tilde><%tilde><%equal>                             */ DEADTRANS( L'='	,0xE6E4	,0x2A70	,0x0000), // '=' ➔ "⩰" U+2A70 APPROXIMATELY EQUAL OR EQUAL TO
+/*<!M><~space><%tilde><%tilde><%tilde>                             */ DEADTRANS( L'~'	,0xE6E4	,0x224B	,0x0000), // '~' ➔ "≋" U+224B TRIPLE TILDE
+/*<!M><~space><%tilde><%tilde><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6E4	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
+/*<!M><~space><%tilde><%tilde><~space>                             */ DEADTRANS( L' '	,0xE6E4	,0x2248	,0x0000), // ' ' ➔ "≈" U+2248 ALMOST EQUAL TO
+/*<!M><~space><%tilde><~nbspace>                                   */ DEADTRANS( 0x00A0	,0xE6E0	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
+/*<!M><~space><%tilde><~space>                                     */ DEADTRANS( L' '	,0xE6E0	,0x223C	,0x0000), // ' ' ➔ "∼" U+223C TILDE OPERATOR
+/*<!M><~space><%underscore>                                        */ DEADTRANS( L'_'	,0xE6A7	,0xE6E5	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><%backslash>                            */ DEADTRANS( L'\\'	,0xE6E5	,0x25BF	,0x0000), // '\' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><~space><%underscore><%hash>                                 */ DEADTRANS( L'#'	,0xE6E5	,0x25BE	,0x0000), // '#' ➔ "▾" U+25BE BLACK DOWN-POINTING SMALL TRIANGLE
+/*<!M><~space><%underscore><%minus>                                */ DEADTRANS( L'-'	,0xE6E5	,0xE6E6	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><%minus><%apostrophe>                   */ DEADTRANS( L'\''	,0xE6E6	,0x296D	,0x0000), // ''' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
+/*<!M><~space><%underscore><%minus><%aprightsingquotmark>          */ DEADTRANS( 0x2019	,0xE6E6	,0x296D	,0x0000), // '’' ➔ "⥭" U+296D RIGHTWARDS HARPOON WITH BARB DOWN BELOW LONG DASH
+/*<!M><~space><%underscore><%minus><%slash>                        */ DEADTRANS( L'/'	,0xE6E6	,0x29A4	,0x0000), // '/' ➔ "⦤" U+29A4 ANGLE WITH UNDERBAR
+/*<!M><~space><%underscore><%slash>                                */ DEADTRANS( L'/'	,0xE6E5	,0x25BF	,0x0000), // '/' ➔ "▿" U+25BF WHITE DOWN-POINTING SMALL TRIANGLE
+/*<!M><~space><%underscore><%underscore>                           */ DEADTRANS( L'_'	,0xE6E5	,0xE6E7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><%underscore><v>                        */ DEADTRANS( L'v'	,0xE6E7	,0xE6E8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><%underscore><V>                        */ DEADTRANS( L'V'	,0xE6E7	,0xE6E9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><%underscore><v><%backslash>            */ DEADTRANS( L'\\'	,0xE6E8	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><V><%backslash>            */ DEADTRANS( L'\\'	,0xE6E9	,0x2A5E	,0x0000), // '\' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><v><%percent>              */ DEADTRANS( L'%'	,0xE6E8	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><V><%percent>              */ DEADTRANS( L'%'	,0xE6E9	,0x2A5E	,0x0000), // '%' ➔ "⩞" U+2A5E LOGICAL AND WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><v><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6E8	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><V><~nbspace>              */ DEADTRANS( 0x00A0	,0xE6E9	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><v><~space>                */ DEADTRANS( L' '	,0xE6E8	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><%underscore><V><~space>                */ DEADTRANS( L' '	,0xE6E9	,0x2A62	,0x0000), // ' ' ➔ "⩢" U+2A62 LOGICAL OR WITH DOUBLE OVERBAR
+/*<!M><~space><%underscore><a>                                     */ DEADTRANS( L'a'	,0xE6E5	,0x22BC	,0x0000), // 'a' ➔ "⊼" U+22BC NAND
+/*<!M><~space><%underscore><e>                                     */ DEADTRANS( L'e'	,0xE6E5	,0xE6EA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><e><%backslash>                         */ DEADTRANS( L'\\'	,0xE6EA	,0xE6EB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><e><%backslash><%comma>                 */ DEADTRANS( L','	,0xE6EB	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><e><%backslash><~nbspace>               */ DEADTRANS( 0x00A0	,0xE6EB	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><e><%backslash><~space>                 */ DEADTRANS( L' '	,0xE6EB	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><e><%comma>                             */ DEADTRANS( L','	,0xE6EA	,0x22F7	,0x0000), // ',' ➔ "⋷" U+22F7 SMALL ELEMENT OF WITH OVERBAR
+/*<!M><~space><%underscore><e><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EA	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
+/*<!M><~space><%underscore><e><~space>                             */ DEADTRANS( L' '	,0xE6EA	,0x22F6	,0x0000), // ' ' ➔ "⋶" U+22F6 ELEMENT OF WITH OVERBAR
+/*<!M><~space><%underscore><n>                                     */ DEADTRANS( L'n'	,0xE6E5	,0x2A43	,0x0000), // 'n' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
+/*<!M><~space><%underscore><N>                                     */ DEADTRANS( L'N'	,0xE6E5	,0x2A43	,0x0000), // 'N' ➔ "⩃" U+2A43 INTERSECTION WITH OVERBAR
+/*<!M><~space><%underscore><p>                                     */ DEADTRANS( L'p'	,0xE6E5	,0xE6EC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><p><%comma>                             */ DEADTRANS( L','	,0xE6EC	,0x22FE	,0x0000), // ',' ➔ "⋾" U+22FE SMALL CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><p><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EC	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><p><~space>                             */ DEADTRANS( L' '	,0xE6EC	,0x22FD	,0x0000), // ' ' ➔ "⋽" U+22FD CONTAINS WITH OVERBAR
+/*<!M><~space><%underscore><u>                                     */ DEADTRANS( L'u'	,0xE6E5	,0xE6ED	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><U>                                     */ DEADTRANS( L'U'	,0xE6E5	,0xE6EE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><u><%hash>                              */ DEADTRANS( L'#'	,0xE6ED	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+/*<!M><~space><%underscore><U><%hash>                              */ DEADTRANS( L'#'	,0xE6EE	,0x2A50	,0x0000), // '#' ➔ "⩐" U+2A50 CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+/*<!M><~space><%underscore><u><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6ED	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~space><%underscore><U><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EE	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~space><%underscore><u><~space>                             */ DEADTRANS( L' '	,0xE6ED	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~space><%underscore><U><~space>                             */ DEADTRANS( L' '	,0xE6EE	,0x2A42	,0x0000), // ' ' ➔ "⩂" U+2A42 UNION WITH OVERBAR
+/*<!M><~space><%underscore><v>                                     */ DEADTRANS( L'v'	,0xE6E5	,0xE6EF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><v><v>                                  */ DEADTRANS( L'v'	,0xE6EF	,0x22BC	,0x0000), // 'v' ➔ "⊼" U+22BC NAND
+/*<!M><~space><%underscore><v><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6EF	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
+/*<!M><~space><%underscore><v><~space>                             */ DEADTRANS( L' '	,0xE6EF	,0x22BD	,0x0000), // ' ' ➔ "⊽" U+22BD NOR
+/*<!M><~space><%underscore><X>                                     */ DEADTRANS( L'X'	,0xE6E5	,0xE6F0	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><x>                                     */ DEADTRANS( L'x'	,0xE6E5	,0xE6F1	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><%underscore><X><%hash>                              */ DEADTRANS( L'#'	,0xE6F0	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><~space><%underscore><x><%hash>                              */ DEADTRANS( L'#'	,0xE6F1	,0x29D7	,0x0000), // '#' ➔ "⧗" U+29D7 BLACK HOURGLASS
+/*<!M><~space><%underscore><X><%underscore>                        */ DEADTRANS( L'_'	,0xE6F0	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
+/*<!M><~space><%underscore><x><%underscore>                        */ DEADTRANS( L'_'	,0xE6F1	,0x29D6	,0x0000), // '_' ➔ "⧖" U+29D6 WHITE HOURGLASS
+/*<!M><~space><2>                                                  */ DEADTRANS( L'2'	,0xE6A7	,0xE6F2	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><2><%less>                                           */ DEADTRANS( L'<'	,0xE6F2	,0x2AA3	,0x0000), // '<' ➔ "⪣" U+2AA3 DOUBLE NESTED LESS-THAN WITH UNDERBAR
+/*<!M><~space><2><%minus>                                          */ DEADTRANS( L'-'	,0xE6F2	,0x21C9	,0x0000), // '-' ➔ "⇉" U+21C9 RIGHTWARDS PAIRED ARROWS
+/*<!M><~space><2><V>                                               */ DEADTRANS( L'V'	,0xE6F2	,0x2A54	,0x0000), // 'V' ➔ "⩔" U+2A54 DOUBLE LOGICAL OR
+/*<!M><~space><3>                                                  */ DEADTRANS( L'3'	,0xE6A7	,0xE6F3	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><3><%bar>                                            */ DEADTRANS( L'|'	,0xE6F3	,0x2AF4	,0x0000), // '|' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
+/*<!M><~space><3><%minus>                                          */ DEADTRANS( L'-'	,0xE6F3	,0x21F6	,0x0000), // '-' ➔ "⇶" U+21F6 THREE RIGHTWARDS ARROWS
+/*<!M><~space><8>                                                  */ DEADTRANS( L'8'	,0xE6A7	,0x221D	,0x0000), // '8' ➔ "∝" U+221D PROPORTIONAL TO
+/*<!M><~space><A>                                                  */ DEADTRANS( L'A'	,0xE6A7	,0xE6F4	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><a>                                                  */ DEADTRANS( L'a'	,0xE6A7	,0xE6F5	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><A><%minus>                                          */ DEADTRANS( L'-'	,0xE6F4	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
+/*<!M><~space><a><%minus>                                          */ DEADTRANS( L'-'	,0xE6F5	,0x2A3A	,0x0000), // '-' ➔ "⨺" U+2A3A MINUS SIGN IN TRIANGLE
+/*<!M><~space><A><%underscore>                                     */ DEADTRANS( L'_'	,0xE6F4	,0xE6F6	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><A><%underscore><%underscore>                        */ DEADTRANS( L'_'	,0xE6F6	,0x2A60	,0x0000), // '_' ➔ "⩠" U+2A60 LOGICAL AND WITH DOUBLE UNDERBAR
+/*<!M><~space><A><%underscore><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE6F6	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><~space><A><%underscore><~space>                             */ DEADTRANS( L' '	,0xE6F6	,0x2A5F	,0x0000), // ' ' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
+/*<!M><~space><A><A>                                               */ DEADTRANS( L'A'	,0xE6F4	,0x2A07	,0x0000), // 'A' ➔ "⨇" U+2A07 TWO LOGICAL AND OPERATOR
+/*<!M><~space><a><a>                                               */ DEADTRANS( L'a'	,0xE6F5	,0x2A55	,0x0000), // 'a' ➔ "⩕" U+2A55 TWO INTERSECTING LOGICAL AND
+/*<!M><~space><A><V>                                               */ DEADTRANS( L'V'	,0xE6F4	,0x25CA	,0x0000), // 'V' ➔ "◊" U+25CA LOZENGE
+/*<!M><~space><a><v>                                               */ DEADTRANS( L'v'	,0xE6F5	,0x25CA	,0x0000), // 'v' ➔ "◊" U+25CA LOZENGE
+/*<!M><~space><A><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F4	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><~space><A><~space>                                          */ DEADTRANS( L' '	,0xE6F4	,0x22C0	,0x0000), // ' ' ➔ "⋀" U+22C0 N-ARY LOGICAL AND
+/*<!M><~space><b>                                                  */ DEADTRANS( L'b'	,0xE6A7	,0xE6F7	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><B>                                                  */ DEADTRANS( L'B'	,0xE6A7	,0xE6F8	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><b><%slash>                                          */ DEADTRANS( L'/'	,0xE6F7	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~space><b><c>                                               */ DEADTRANS( L'c'	,0xE6F7	,0x2AD7	,0x0000), // 'c' ➔ "⫗" U+2AD7 SUPERSET BESIDE SUBSET
+/*<!M><~space><b><o>                                               */ DEADTRANS( L'o'	,0xE6F7	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~space><b><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F7	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~space><B><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE6F8	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~space><b><~space>                                          */ DEADTRANS( L' '	,0xE6F7	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~space><B><~space>                                          */ DEADTRANS( L' '	,0xE6F8	,0x266D	,0x0000), // ' ' ➔ "♭" U+266D MUSIC FLAT SIGN
+/*<!M><~space><c>                                                  */ DEADTRANS( L'c'	,0xE6A7	,0xE6F9	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><c><%backslash>                                      */ DEADTRANS( L'\\'	,0xE6F9	,0xE6FA	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><c><%backslash><%slash>                              */ DEADTRANS( L'/'	,0xE6FA	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~space><c><%backslash><o>                                   */ DEADTRANS( L'o'	,0xE6FA	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~space><c><c>                                               */ DEADTRANS( L'c'	,0xE6F9	,0xE6FB	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><c><c><%slash>                                       */ DEADTRANS( L'/'	,0xE6FB	,0x27C9	,0x0000), // '/' ➔ "⟉" U+27C9 SUPERSET PRECEDING SOLIDUS
+/*<!M><~space><c><c><o>                                            */ DEADTRANS( L'o'	,0xE6FB	,0x27C4	,0x0000), // 'o' ➔ "⟄" U+27C4 OPEN SUPERSET
+/*<!M><~space><c><c><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6FB	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
+/*<!M><~space><c><c><~space>                                       */ DEADTRANS( L' '	,0xE6FB	,0x2AD5	,0x0000), // ' ' ➔ "⫕" U+2AD5 SUBSET ABOVE SUBSET
+/*<!M><~space><c><o>                                               */ DEADTRANS( L'o'	,0xE6F9	,0x27C3	,0x0000), // 'o' ➔ "⟃" U+27C3 OPEN SUBSET
+/*<!M><~space><D>                                                  */ DEADTRANS( L'D'	,0xE6A7	,0x2AD0	,0x0000), // 'D' ➔ "⫐" U+2AD0 CLOSED SUPERSET
+/*<!M><~space><e>                                                  */ DEADTRANS( L'e'	,0xE6A7	,0xE6FC	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><e><%backslash>                                      */ DEADTRANS( L'\\'	,0xE6FC	,0x2AD9	,0x0000), // '\' ➔ "⫙" U+2AD9 ELEMENT OF OPENING DOWNWARDS
+/*<!M><~space><e><%percent>                                        */ DEADTRANS( L'%'	,0xE6FC	,0x2AD9	,0x0000), // '%' ➔ "⫙" U+2AD9 ELEMENT OF OPENING DOWNWARDS
+/*<!M><~space><e><e>                                               */ DEADTRANS( L'e'	,0xE6FC	,0xE6FD	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><e><e><%bar>                                         */ DEADTRANS( L'|'	,0xE6FD	,0xE6FE	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><e><e><%bar><%comma>                                 */ DEADTRANS( L','	,0xE6FE	,0x22FC	,0x0000), // ',' ➔ "⋼" U+22FC SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><e><e><%bar><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE6FE	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><e><e><%bar><~space>                                 */ DEADTRANS( L' '	,0xE6FE	,0x22FB	,0x0000), // ' ' ➔ "⋻" U+22FB CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+/*<!M><~space><e><e><%comma>                                       */ DEADTRANS( L','	,0xE6FD	,0x220D	,0x0000), // ',' ➔ "∍" U+220D SMALL CONTAINS AS MEMBER
+/*<!M><~space><e><e><%slash>                                       */ DEADTRANS( L'/'	,0xE6FD	,0x220C	,0x0000), // '/' ➔ "∌" U+220C DOES NOT CONTAIN AS MEMBER
+/*<!M><~space><e><e><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE6FD	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><~space><e><e><~space>                                       */ DEADTRANS( L' '	,0xE6FD	,0x220B	,0x0000), // ' ' ➔ "∋" U+220B CONTAINS AS MEMBER
+/*<!M><~space><G>                                                  */ DEADTRANS( L'G'	,0xE6A7	,0x27F2	,0x0000), // 'G' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><~space><g>                                                  */ DEADTRANS( L'g'	,0xE6A7	,0x27F2	,0x0000), // 'g' ➔ "⟲" U+27F2 ANTICLOCKWISE GAPPED CIRCLE ARROW
+/*<!M><~space><h>                                                  */ DEADTRANS( L'h'	,0xE6A7	,0x266E	,0x0000), // 'h' ➔ "♮" U+266E MUSIC NATURAL SIGN
+/*<!M><~space><H>                                                  */ DEADTRANS( L'H'	,0xE6A7	,0x266E	,0x0000), // 'H' ➔ "♮" U+266E MUSIC NATURAL SIGN
+/*<!M><~space><I>                                                  */ DEADTRANS( L'I'	,0xE6A7	,0x2AE0	,0x0000), // 'I' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~space><K>                                                  */ DEADTRANS( L'K'	,0xE6A7	,0x212A	,0x0000), // 'K' ➔ "K" U+212A KELVIN SIGN
+/*<!M><~space><k>                                                  */ DEADTRANS( L'k'	,0xE6A7	,0x212A	,0x0000), // 'k' ➔ "K" U+212A KELVIN SIGN
+/*<!M><~space><n>                                                  */ DEADTRANS( L'n'	,0xE6A7	,0xE6FF	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><n><%bar>                                            */ DEADTRANS( L'|'	,0xE6FF	,0x2ADB	,0x0000), // '|' ➔ "⫛" U+2ADB TRANSVERSAL INTERSECTION
+/*<!M><~space><o>                                                  */ DEADTRANS( L'o'	,0xE6A7	,0xE700	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><O>                                                  */ DEADTRANS( L'O'	,0xE6A7	,0xE701	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><O><%backslash>                                      */ DEADTRANS( L'\\'	,0xE701	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
+/*<!M><~space><o><%backslash>                                      */ DEADTRANS( L'\\'	,0xE700	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
+/*<!M><~space><o><%equal>                                          */ DEADTRANS( L'='	,0xE700	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~space><O><%equal>                                          */ DEADTRANS( L'='	,0xE701	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~space><o><%greater>                                        */ DEADTRANS( L'>'	,0xE700	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
+/*<!M><~space><O><%greater>                                        */ DEADTRANS( L'>'	,0xE701	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
+/*<!M><~space><o><%minus>                                          */ DEADTRANS( L'-'	,0xE700	,0xE702	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><O><%minus>                                          */ DEADTRANS( L'-'	,0xE701	,0xE703	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><o><%minus><%greater>                                */ DEADTRANS( L'>'	,0xE702	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
+/*<!M><~space><O><%minus><%greater>                                */ DEADTRANS( L'>'	,0xE703	,0x21F4	,0x0000), // '>' ➔ "⇴" U+21F4 RIGHT ARROW WITH SMALL CIRCLE
+/*<!M><~space><o><%minus><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE702	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~space><O><%minus><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE703	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~space><o><%minus><~space>                                  */ DEADTRANS( L' '	,0xE702	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~space><O><%minus><~space>                                  */ DEADTRANS( L' '	,0xE703	,0x229D	,0x0000), // ' ' ➔ "⊝" U+229D CIRCLED DASH
+/*<!M><~space><O><%percent>                                        */ DEADTRANS( L'%'	,0xE701	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><~space><o><%percent>                                        */ DEADTRANS( L'%'	,0xE700	,0x29BC	,0x0000), // '%' ➔ "⦼" U+29BC CIRCLED ANTICLOCKWISE-ROTATED DIVISION SIGN
+/*<!M><~space><O><%period>                                         */ DEADTRANS( L'.'	,0xE701	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
+/*<!M><~space><o><%period>                                         */ DEADTRANS( L'.'	,0xE700	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
+/*<!M><~space><o><%plus>                                           */ DEADTRANS( L'+'	,0xE700	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
+/*<!M><~space><o><%semicolon>                                      */ DEADTRANS( L';'	,0xE700	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><o><%semsection>                                     */ DEADTRANS( 0x00A7	,0xE700	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><o><%slash>                                          */ DEADTRANS( L'/'	,0xE700	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
+/*<!M><~space><o><8>                                               */ DEADTRANS( L'8'	,0xE700	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
+/*<!M><~space><O><8>                                               */ DEADTRANS( L'8'	,0xE701	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
+/*<!M><~space><O><o>                                               */ DEADTRANS( L'o'	,0xE701	,0x29BE	,0x0000), // 'o' ➔ "⦾" U+29BE CIRCLED WHITE BULLET
+/*<!M><~space><R>                                                  */ DEADTRANS( L'R'	,0xE6A7	,0xE704	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><r>                                                  */ DEADTRANS( L'r'	,0xE6A7	,0xE705	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><R><%slash>                                          */ DEADTRANS( L'/'	,0xE704	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><~space><r><%slash>                                          */ DEADTRANS( L'/'	,0xE705	,0x211E	,0x0000), // '/' ➔ "℞" U+211E PRESCRIPTION TAKE
+/*<!M><~space><S>                                                  */ DEADTRANS( L'S'	,0xE6A7	,0xE706	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><s>                                                  */ DEADTRANS( L's'	,0xE6A7	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
+/*<!M><~space><S><S>                                               */ DEADTRANS( L'S'	,0xE706	,0xE707	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><S><s>                                               */ DEADTRANS( L's'	,0xE706	,0x2A0B	,0x0000), // 's' ➔ "⨋" U+2A0B SUMMATION WITH INTEGRAL
+/*<!M><~space><S><S><%at>                                          */ DEADTRANS( L'@'	,0xE707	,0x2140	,0x0000), // '@' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~space><S><S><~nbspace>                                     */ DEADTRANS( 0x00A0	,0xE707	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~space><S><S><~space>                                       */ DEADTRANS( L' '	,0xE707	,0x2140	,0x0000), // ' ' ➔ "⅀" U+2140 DOUBLE-STRUCK N-ARY SUMMATION
+/*<!M><~space><T>                                                  */ DEADTRANS( L'T'	,0xE6A7	,0xE708	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><T><%backslash>                                      */ DEADTRANS( L'\\'	,0xE708	,0x2AE0	,0x0000), // '\' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~space><T><%percent>                                        */ DEADTRANS( L'%'	,0xE708	,0x2AE0	,0x0000), // '%' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~space><T><T>                                               */ DEADTRANS( L'T'	,0xE708	,0x2AE0	,0x0000), // 'T' ➔ "⫠" U+2AE0 SHORT UP TACK
+/*<!M><~space><T><~nbspace>                                        */ DEADTRANS( 0x00A0	,0xE708	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~space><T><~space>                                          */ DEADTRANS( L' '	,0xE708	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
+/*<!M><~space><V>                                                  */ DEADTRANS( L'V'	,0xE6A7	,0xE709	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><v>                                                  */ DEADTRANS( L'v'	,0xE6A7	,0x2A56	,0x0000), // 'v' ➔ "⩖" U+2A56 TWO INTERSECTING LOGICAL OR
+/*<!M><~space><V><V>                                               */ DEADTRANS( L'V'	,0xE709	,0x2A08	,0x0000), // 'V' ➔ "⨈" U+2A08 TWO LOGICAL OR OPERATOR
+/*<!M><~space><x>                                                  */ DEADTRANS( L'x'	,0xE6A7	,0x2A2F	,0x0000), // 'x' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
+/*<!M><~space><X>                                                  */ DEADTRANS( L'X'	,0xE6A7	,0x2A2F	,0x0000), // 'X' ➔ "⨯" U+2A2F VECTOR OR CROSS PRODUCT
+/*<!M><~space><Y>                                                  */ DEADTRANS( L'Y'	,0xE6A7	,0xE70A	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><y>                                                  */ DEADTRANS( L'y'	,0xE6A7	,0xE70B	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><Y><%minus>                                          */ DEADTRANS( L'-'	,0xE70A	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><~space><y><%minus>                                          */ DEADTRANS( L'-'	,0xE70B	,0x297C	,0x0000), // '-' ➔ "⥼" U+297C LEFT FISH TAIL
+/*<!M><~space><z>                                                  */ DEADTRANS( L'z'	,0xE6A7	,0x2A1F	,0x0000), // 'z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><Z>                                                  */ DEADTRANS( L'Z'	,0xE6A7	,0x2A1F	,0x0000), // 'Z' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><~nbspace>                                           */ DEADTRANS( 0x00A0	,0xE6A7	,0x237D	,0x0000), // ' ' ➔ "⍽" U+237D SHOULDERED OPEN BOX
+/*<!M><~space><~space>                                             */ DEADTRANS( L' '	,0xE6A7	,0xE70C	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%asterisk>                                  */ DEADTRANS( L'*'	,0xE70C	,0x22C6	,0x0000), // '*' ➔ "⋆" U+22C6 STAR OPERATOR
+/*<!M><~space><~space><%backslash>                                 */ DEADTRANS( L'\\'	,0xE70C	,0xE70D	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%backslash><%slash>                         */ DEADTRANS( L'/'	,0xE70D	,0x25C1	,0x0000), // '/' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~space><~space><%backslash><~nbspace>                       */ DEADTRANS( 0x00A0	,0xE70D	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~space><~space><%backslash><~space>                         */ DEADTRANS( L' '	,0xE70D	,0x29F9	,0x0000), // ' ' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!M><~space><~space><%bar>                                       */ DEADTRANS( L'|'	,0xE70C	,0xE70E	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%bar><%bar>                                 */ DEADTRANS( L'|'	,0xE70E	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~space><~space><%bar><~nbspace>                             */ DEADTRANS( 0x00A0	,0xE70E	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~space><~space><%bar><~space>                               */ DEADTRANS( L' '	,0xE70E	,0x2AFE	,0x0000), // ' ' ➔ "⫾" U+2AFE WHITE VERTICAL BAR
+/*<!M><~space><~space><%bracketleft>                               */ DEADTRANS( L'['	,0xE70C	,0xE70F	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%bracketleft><%bracketright>                */ DEADTRANS( L']'	,0xE70F	,0x25FD	,0x0000), // ']' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~space><~space><%bracketleft><%hash>                        */ DEADTRANS( L'#'	,0xE70F	,0x25FE	,0x0000), // '#' ➔ "◾" U+25FE BLACK MEDIUM SMALL SQUARE
+/*<!M><~space><~space><%bracketright>                              */ DEADTRANS( L']'	,0xE70C	,0xE710	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%bracketright><%bracketleft>                */ DEADTRANS( L'['	,0xE710	,0x25FD	,0x0000), // '[' ➔ "◽" U+25FD WHITE MEDIUM SMALL SQUARE
+/*<!M><~space><~space><%colon>                                     */ DEADTRANS( L':'	,0xE70C	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
+/*<!M><~space><~space><%equal>                                     */ DEADTRANS( L'='	,0xE70C	,0xE711	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%equal><%equal>                             */ DEADTRANS( L'='	,0xE711	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~space><~space><%greater>                                   */ DEADTRANS( L'>'	,0xE70C	,0xE712	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%greater><%less>                            */ DEADTRANS( L'<'	,0xE712	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
+/*<!M><~space><~space><%greater><%minus>                           */ DEADTRANS( L'-'	,0xE712	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
+/*<!M><~space><~space><%hash>                                      */ DEADTRANS( L'#'	,0xE70C	,0x29E3	,0x0000), // '#' ➔ "⧣" U+29E3 EQUALS SIGN AND SLANTED PARALLEL
+/*<!M><~space><~space><%less>                                      */ DEADTRANS( L'<'	,0xE70C	,0xE713	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%less><%greater>                            */ DEADTRANS( L'>'	,0xE713	,0x25C7	,0x0000), // '>' ➔ "◇" U+25C7 WHITE DIAMOND
+/*<!M><~space><~space><%less><o>                                   */ DEADTRANS( L'o'	,0xE713	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~space><~space><%less><O>                                   */ DEADTRANS( L'O'	,0xE713	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
+/*<!M><~space><~space><%minus>                                     */ DEADTRANS( L'-'	,0xE70C	,0xE714	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%minus><%apostrophe>                        */ DEADTRANS( L'\''	,0xE714	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~space><~space><%minus><%aprightsingquotmark>               */ DEADTRANS( 0x2019	,0xE714	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~space><~space><%minus><%slash>                             */ DEADTRANS( L'/'	,0xE714	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
+/*<!M><~space><~space><%period>                                    */ DEADTRANS( L'.'	,0xE70C	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
+/*<!M><~space><~space><%semicolon>                                 */ DEADTRANS( L';'	,0xE70C	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><~space><%semsection>                                */ DEADTRANS( 0x00A7	,0xE70C	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
+/*<!M><~space><~space><%slash>                                     */ DEADTRANS( L'/'	,0xE70C	,0xE715	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><%slash><%backslash>                         */ DEADTRANS( L'\\'	,0xE715	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
+/*<!M><~space><~space><%slash><%minus>                             */ DEADTRANS( L'-'	,0xE715	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
+/*<!M><~space><~space><%slash><~nbspace>                           */ DEADTRANS( 0x00A0	,0xE715	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~space><~space><%slash><~space>                             */ DEADTRANS( L' '	,0xE715	,0x29F8	,0x0000), // ' ' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!M><~space><~space><%underscore>                                */ DEADTRANS( L'_'	,0xE70C	,0x2A4C	,0x0000), // '_' ➔ "⩌" U+2A4C CLOSED UNION WITH SERIFS
+/*<!M><~space><~space><3>                                          */ DEADTRANS( L'3'	,0xE70C	,0xE716	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><3><%bar>                                    */ DEADTRANS( L'|'	,0xE716	,0x2AFC	,0x0000), // '|' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
+/*<!M><~space><~space><8>                                          */ DEADTRANS( L'8'	,0xE70C	,0x29DC	,0x0000), // '8' ➔ "⧜" U+29DC INCOMPLETE INFINITY
+/*<!M><~space><~space><A>                                          */ DEADTRANS( L'A'	,0xE70C	,0x2227	,0x0000), // 'A' ➔ "∧" U+2227 LOGICAL AND
+/*<!M><~space><~space><I>                                          */ DEADTRANS( L'I'	,0xE70C	,0x27D8	,0x0000), // 'I' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~space><~space><i>                                          */ DEADTRANS( L'i'	,0xE70C	,0x27D8	,0x0000), // 'i' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~space><~space><o>                                          */ DEADTRANS( L'o'	,0xE70C	,0xE717	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><O>                                          */ DEADTRANS( L'O'	,0xE70C	,0x29C2	,0x0000), // 'O' ➔ "⧂" U+29C2 CIRCLE WITH SMALL CIRCLE TO THE RIGHT
+/*<!M><~space><~space><o><%minus>                                  */ DEADTRANS( L'-'	,0xE717	,0x27DC	,0x0000), // '-' ➔ "⟜" U+27DC LEFT MULTIMAP
+/*<!M><~space><~space><o><%plus>                                   */ DEADTRANS( L'+'	,0xE717	,0x2A22	,0x0000), // '+' ➔ "⨢" U+2A22 PLUS SIGN WITH SMALL CIRCLE ABOVE
+/*<!M><~space><~space><T>                                          */ DEADTRANS( L'T'	,0xE70C	,0xE718	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><T><%backslash>                              */ DEADTRANS( L'\\'	,0xE718	,0x27D8	,0x0000), // '\' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~space><~space><T><%percent>                                */ DEADTRANS( L'%'	,0xE718	,0x27D8	,0x0000), // '%' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~space><~space><T><T>                                       */ DEADTRANS( L'T'	,0xE718	,0x27D8	,0x0000), // 'T' ➔ "⟘" U+27D8 LARGE UP TACK
+/*<!M><~space><~space><T><~nbspace>                                */ DEADTRANS( 0x00A0	,0xE718	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~space><~space><T><~space>                                  */ DEADTRANS( L' '	,0xE718	,0x27D9	,0x0000), // ' ' ➔ "⟙" U+27D9 LARGE DOWN TACK
+/*<!M><~space><~space><x>                                          */ DEADTRANS( L'x'	,0xE70C	,0x0445	,0x0000), // 'x' ➔ "х" U+0445 CYRILLIC SMALL LETTER HA
+/*<!M><~space><~space><~space>                                     */ DEADTRANS( L' '	,0xE70C	,0xE719	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><~space><%asterisk>                          */ DEADTRANS( L'*'	,0xE719	,0xE71A	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><~space><%asterisk><%hash>                   */ DEADTRANS( L'#'	,0xE71A	,0x2605	,0x0000), // '#' ➔ "★" U+2605 BLACK STAR
+/*<!M><~space><~space><~space><%asterisk><~nbspace>                */ DEADTRANS( 0x00A0	,0xE71A	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~space><~space><~space><%asterisk><~space>                  */ DEADTRANS( L' '	,0xE71A	,0x2606	,0x0000), // ' ' ➔ "☆" U+2606 WHITE STAR
+/*<!M><~space><~space><~space><%backslash>                         */ DEADTRANS( L'\\'	,0xE719	,0x27CD	,0x0000), // '\' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
+/*<!M><~space><~space><~space><%bar>                               */ DEADTRANS( L'|'	,0xE719	,0x2AFF	,0x0000), // '|' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
+/*<!M><~space><~space><~space><%less>                              */ DEADTRANS( L'<'	,0xE719	,0x2662	,0x0000), // '<' ➔ "♢" U+2662 WHITE DIAMOND SUIT
+/*<!M><~space><~space><~space><%slash>                             */ DEADTRANS( L'/'	,0xE719	,0x27CB	,0x0000), // '/' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
+/*<!M><~space><~space><~space><o>                                  */ DEADTRANS( L'o'	,0xE719	,0xDEF0	,0x0000), // High surrogate: D833; 'o' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~space><~space><~space><O>                                  */ DEADTRANS( L'O'	,0xE719	,0xDEF0	,0x0000), // High surrogate: D833; 'O' ➔ "𜻰" U+1CEF0 MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+/*<!M><~space><~space><~space><~space>                             */ DEADTRANS( L' '	,0xE719	,0xE71B	,0x0001), // Intermediate multikey chain link
+/*<!M><~space><~space><~space><~space><%backslash>                 */ DEADTRANS( L'\\'	,0xE71B	,0x29F5	,0x0000), // '\' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!M><~space><~space><~space><~space><%slash>                     */ DEADTRANS( L'/'	,0xE71B	,0x2044	,0x0000), // '/' ➔ "⁄" U+2044 FRACTION SLASH

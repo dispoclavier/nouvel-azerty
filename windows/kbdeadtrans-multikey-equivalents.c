@@ -8,7 +8,8 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
-* Debug by appending multikey cbain links  6.1.6.1.0 Fri 2026-01-02T1245+0100
+* Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2222+0100
+* Debug by appending multikey chain links  6.1.6.1.0 Fri 2026-01-02T1245+0100
 * Debug, sync dead chars, discard chained  6.1.6.0.0 Fri 2026-01-02T0902+0100
 * Update annotations                       6.1.5.3.0 Wed 2025-12-31T0619+0100
 * Update annotations after test failed     6.1.5.2.1 Wed 2025-12-31T0334+0100
