@@ -24,6 +24,11 @@ Complétion des séquences de touches mortes spécifiques à Windows.
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows avant 2018.
 
+* Composition :
+	* Corriger la séquence de "🣘" U+1F8D8. compose-1.yml [ec2586a](https://github.com/dispoclavier/nouvel-azerty/commit/ec2586ad2757336f4ceb1367da68da88366d0e5d)
+	* Simplifier la saisie des séquences de "⟒" U+27D2, "⩕" U+2A55, "⩙" U+2A59, "⩚" U+2A5A, "⩜" U+2A5C, "⩞" U+2A5E, "⩟" U+2A5F, "⩠" U+2A60, "⩹" U+2A79, "⩺" U+2A7A, "⫙" U+2AD9, "⫞" U+2ADE, "⫟" U+2ADF, "⫠" U+2AE0, "⫨" U+2AE8, "⫩" U+2AE9, "⫫" U+2AEB, "⫰" U+2AF0, "⫱" U+2AF1, "⬾" U+2B3E, "𜻰" U+1CEF0, "🣖" U+1F8D6. ibidem
+* Builds : 6.1.7.0
+
 ## 6.1.6 (2026-01-02)
 
 Prise en charge sous Windows des équivalents en composition des touches mortes simples.
