@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.6.2" # See #   End of line comments
+<UEFA0>                     : "version 6.1.7.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -5426,7 +5426,9 @@
 #   Various lengths (short, long) are supported by leading space or by trailing
 #   additional transforms: "'" for short tacks, "|" for long tacks, at the very
 #   end of the sequence (unless space termination is required, but mostly it is
-#   not, then).
+#   not, then). Alternatively, short tacks may also use lowercase "t" instead,
+#   if this does not conflict with tone bars.
+#   See #^# Tone bars
 #
 #   Tacks with a multiple-line head have a leading digit (typically 2 or 3) in
 #   their sequence, and those with multiple stems (again 2 or 3) have a digit
@@ -7532,8 +7534,8 @@
 <Multi_key><a><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><A><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><v><percent><period>                                                                    : "⟑" U27D1 # AND WITH DOT
-<Multi_key><e><percent>                                                                    <space> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
-<Multi_key><e><percent>                                                             <nobreakspace> : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
+<Multi_key><e><percent>                                                                            : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
+<Multi_key><e><backslash>                                                                          : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
 <Multi_key><L><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><l><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><L><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
@@ -8823,6 +8825,7 @@
 #   therefore lowercase rather than leading space.
 #
 <Multi_key><w><percent>                                                                            : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
+<Multi_key><w><backslash>                                                                          : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><space><a><a>                                                                           : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><nobreakspace><a><a>                                                                    : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><w>                                                                             <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
@@ -8840,9 +8843,11 @@
 <Multi_key><v><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><V><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><v><percent><v>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><v><backslash><v>                                                                       : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><a><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><A><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
+<Multi_key><v><backslash><bar>                                                                     : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><V><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><A><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
@@ -8850,27 +8855,37 @@
 <Multi_key><a><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><a><minus>                                                               <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><v><backslash><minus>                                                                   : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><underscore><underscore><A>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><underscore><underscore><a>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><underscore><underscore><v><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><v><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><v><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><v><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><underscore><underscore><V><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><V><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><V><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><V><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><a>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><v><backslash>                                                            : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><V><backslash>                                                            : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><nobreakspace><A><underscore>                                            <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><v><backslash><underscore>                                                      <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><v><backslash><underscore>                                               <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore><underscore>                                                      : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><nobreakspace><A><underscore><underscore>                                               : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><v><backslash><underscore><underscore>                                                  : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
 #   "⩡" U2A61 looks like a small "⊻" U22BB and thus qualifies for a sequence
 #   with trailing comma.
@@ -8933,8 +8948,13 @@
 <Multi_key><space><space><less><o>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
 <Multi_key><nobreakspace><space><less><o>                                                          : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
 <Multi_key><nobreakspace><nobreakspace><less><o>                                                   : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><space><space><less><O>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><space><less><O>                                                          : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><nobreakspace><less><O>                                                   : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
 <Multi_key><space><o><greater>                                                                     : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
 <Multi_key><nobreakspace><o><greater>                                                              : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
+<Multi_key><space><O><greater>                                                                     : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><O><greater>                                                              : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
 <Multi_key><question><less>                                                                        : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
 <Multi_key><question><greater>                                                                     : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
 <Multi_key><less><underscore><grave>                                                               : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
@@ -9141,7 +9161,10 @@
 <Multi_key><space><b><c>                                                                           : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><nobreakspace><b><c>                                                                    : "⫗" U2AD7 # SUPERSET BESIDE SUBSET
 <Multi_key><b><minus><c>                                                                           : "⫘" U2AD8 # SUPERSET BESIDE AND JOINED BY DASH WITH SUBSET
-<Multi_key><e><percent><percent>                                                                   : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><space><e><percent>                                                                     : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><nobreakspace><e><percent>                                                              : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><space><e><backslash>                                                                   : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><nobreakspace><e><backslash>                                                            : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><T><n>                                                                                  : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                          <space> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                   <nobreakspace> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
@@ -9159,8 +9182,11 @@
 <Multi_key><nobreakspace><bar><parenright>                                                         : "⫝" U2ADD # NONFORKING
 <Multi_key><minus><bar>                                                                    <space> : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><minus><bar>                                                             <nobreakspace> : "⫞" U2ADE # SHORT LEFT TACK
+<Multi_key><t><less>                                                                               : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><less><apostrophe>                                                                   : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><less><rightsinglequotemark>                                                         : "⫞" U2ADE # SHORT LEFT TACK
+<Multi_key><t>                                                                             <space> : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><t>                                                                      <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><T><apostrophe>                                                                         : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><T><rightsinglequotemark>                                                               : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                                      <space> : "⫟" U2ADF # SHORT DOWN TACK
@@ -9169,13 +9195,21 @@
 <Multi_key><nobreakspace><minus><apostrophe><minus>                                                : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><minus><rightsinglequotemark><minus>                                             : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><nobreakspace><minus><rightsinglequotemark><minus>                                      : "⫟" U2ADF # SHORT DOWN TACK
+<Multi_key><t><t>                                                                                  : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><T><apostrophe>                                                                      : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><T><rightsinglequotemark>                                                            : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><T><T>                                                                           : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><nobreakspace><T><T>                                                                    : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><percent><apostrophe>                                                                : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><percent><rightsinglequotemark>                                                      : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><backslash><apostrophe>                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><backslash><rightsinglequotemark>                                                    : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><T><percent>                                                                     : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><nobreakspace><T><percent>                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><T><backslash>                                                                   : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><nobreakspace><T><backslash>                                                            : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><I><underscore><apostrophe>                                                             : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><I><underscore><rightsinglequotemark>                                                   : "⫠" U2AE0 # SHORT UP TACK
 #Multi_key><space><I><underscore>                                                                  : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><I>                                                                              : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><nobreakspace><I>                                                                       : "⫠" U2AE0 # SHORT UP TACK
@@ -9215,10 +9249,14 @@
 #Multi_key><2><T><percent><apostrophe>                                                             : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><2><T><percent>                                                                         : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><KP_2><T><percent>                                                                      : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
-#Multi_key><T><percent><percent><apostrophe>                                                       : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
-<Multi_key><T><percent><percent>                                                                   : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><2><T><backslash>                                                                       : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><KP_2><T><backslash>                                                                    : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><t><t><percent>                                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><percent><apostrophe>                                                             : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><percent><rightsinglequotemark>                                                   : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><t><t><backslash>                                                                       : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><backslash><apostrophe>                                                           : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><backslash><rightsinglequotemark>                                                 : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><apostrophe><equal><apostrophe>                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><rightsinglequotemark><equal><rightsinglequotemark>                                     : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T>                                                                          <space> : "⫪" U2AEA # DOUBLE DOWN TACK
@@ -9229,8 +9267,12 @@
 <Multi_key><T><KP_2>                                                                <nobreakspace> : "⫪" U2AEA # DOUBLE DOWN TACK
 <Multi_key><T><T><percent>                                                                 <space> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><T><percent>                                                          <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><T><backslash>                                                               <space> : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><T><backslash>                                                        <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><2><percent>                                                                         : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><KP_2><percent>                                                                      : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><2><backslash>                                                                       : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><KP_2><backslash>                                                                    : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><equal><apostrophe>                                                             <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                                   <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
@@ -9250,11 +9292,15 @@
 <Multi_key><I><o>                                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><space><bar><o>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><nobreakspace><bar><o>                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><space><bar><O>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><nobreakspace><bar><O>                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><T><o>                                                                                  : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><bar><exclam><o>                                                                        : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><minus><bar><o>                                                                         : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><bar><exclam><O>                                                                        : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
+<Multi_key><minus><bar><O>                                                                         : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><bar><minus><bar>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><minus><bar>                                                        <nobreakspace> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><bar><minus>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
@@ -9387,6 +9433,7 @@
 <Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 #   Mirror of U2947.
 <Multi_key><less><minus><x>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
+<Multi_key><less><minus><X>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 #   Mirror of U2933.
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
@@ -9473,11 +9520,21 @@
 #   This is new to Unicode 17.0.
 #   https://www.unicode.org/charts/PDF/Unicode-17.0/U170-1CEC0.pdf
 #
+#   Although the circle is small, the letter may also be uppercase, so as to
+#   streamline the user experience by not requiring pointless precision, given
+#   the full casing pair is available with a triple leading space.
+#   See #   Leading space
+#   See #   Streamlining
+#
 #Multi_key><space><space><space><o><minus>                            (literal removed for syntax color) U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
 <Multi_key><space><space><space><o>                                                                : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
 <Multi_key><nobreakspace><space><space><o>                                                         : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
 <Multi_key><nobreakspace><nobreakspace><space><o>                                                  : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><o>                                           : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+<Multi_key><space><space><space><O>                                                                : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+<Multi_key><nobreakspace><space><space><O>                                                         : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+<Multi_key><nobreakspace><nobreakspace><space><O>                                                  : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><O>                                           : "𜻰" U1CEF0 # MEDIUM SMALL WHITE CIRCLE WITH HORIZONTAL BAR
 #
 #
 # # Supplemental Arrows-C in block U1F800 used in chemistry
@@ -9529,11 +9586,13 @@
 <Multi_key><rightsinglequotemark><minus><comma>                                                    : "🣕" U1F8D5 # SHORT LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON
 #Multi_key><minus><x><minus><greater>                                 (literal removed for syntax color) U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
 <Multi_key><minus><x><minus>                                                                       : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
+<Multi_key><minus><X><minus>                                                                       : "🣖" U1F8D6 # LONG RIGHTWARDS ARROW THROUGH X
 #Multi_key><minus><slash><slash><minus><greater>                      (literal removed for syntax color) U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 <Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 #Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 <Multi_key><less><minus><O><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
-<Multi_key><less><minus><KP_O><minus>                                                              : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><0><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><KP_0><minus>                                                              : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 <Multi_key><less><minus><comma><minus>                                                             : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 #
 #
