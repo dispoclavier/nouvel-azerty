@@ -27,7 +27,13 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows avant
 * Composition :
 	* Corriger la séquence de "🣘" U+1F8D8. compose-1.yml [ec2586a](https://github.com/dispoclavier/nouvel-azerty/commit/ec2586ad2757336f4ceb1367da68da88366d0e5d)
 	* Simplifier la saisie des séquences de "⟒" U+27D2, "⩕" U+2A55, "⩙" U+2A59, "⩚" U+2A5A, "⩜" U+2A5C, "⩞" U+2A5E, "⩟" U+2A5F, "⩠" U+2A60, "⩹" U+2A79, "⩺" U+2A7A, "⫙" U+2AD9, "⫞" U+2ADE, "⫟" U+2ADF, "⫠" U+2AE0, "⫨" U+2AE8, "⫩" U+2AE9, "⫫" U+2AEB, "⫰" U+2AF0, "⫱" U+2AF1, "⬾" U+2B3E, "𜻰" U+1CEF0, "🣖" U+1F8D6. ibidem
-* Builds : 6.1.7.0
+* Transformations :
+	* Compléter les demi-codets hauts par U+D833 pour la nouvelle flèche mathématique "𜻰" U+1CEF0. kbdeadtrans.c [e532b8f](https://github.com/dispoclavier/nouvel-azerty/commit/e532b8fd422729b3bd13526f769dd8b4d7471e6c)
+	* Simplifier le transpilateur. dead-key-convert.pl [79f87b9](https://github.com/dispoclavier/nouvel-azerty/commit/79f87b9d9f11c30e43045b5c658aeb639f6279dd), kbdeadtrans.c, kbdeadtrans-deadkeys.c [](), kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [a424b2f](https://github.com/dispoclavier/nouvel-azerty/commit/a424b2fb91424fcaa751dbf2457d4eaa1b38d9b8)
+* Documentation : Corriger ou ajouter des annotations. compose-1.yml [ec2586a](https://github.com/dispoclavier/nouvel-azerty/commit/ec2586ad2757336f4ceb1367da68da88366d0e5d)
+* Builds :
+	* 6.1.7.0 [a424b2f](https://github.com/dispoclavier/nouvel-azerty/commit/a424b2fb91424fcaa751dbf2457d4eaa1b38d9b8)
+	* 6.1.7.1 [e532b8f](https://github.com/dispoclavier/nouvel-azerty/commit/e532b8fd422729b3bd13526f769dd8b4d7471e6c)
 
 ## 6.1.6 (2026-01-02)
 
