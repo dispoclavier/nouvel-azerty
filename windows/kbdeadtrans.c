@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Add D833 High surrogate for math arrows  6.1.7.1.0 Sat 2026-01-03T2311+0100
 * Include a subset of multikey equivalents 6.1.6.0.0 Fri 2026-01-02T0912+0100
 * Exclude multikey equivalents             6.1.5.3.0 Wed 2025-12-31T0627+0100
 * Include debugged multikey equivalents    6.1.5.2.0 Tue 2025-12-30T1622+0100
@@ -106,7 +107,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_bar>          */ DEADTRANS( 0x200B ,0x024D ,0xD837 ,0x0000 ), // High surrogate for Latin
 /*<!dead_belowcomma>   */ DEADTRANS( 0x200B ,0x0219 ,0xD837 ,0x0000 ), // High surrogate for Latin
 /*<!dead_belowdot>     */ DEADTRANS( 0x200B ,0x1E05 ,0xD837 ,0x0000 ), // High surrogate for Latin
-/*<!dead_breve>        */ DEADTRANS( 0x200B ,0x0115 ,0xD837 ,0x0000 ), // High surrogate for Latin
+/*<!dead_breve>        */ DEADTRANS( 0x200B ,0x0115 ,0xD833 ,0x0000 ), // High surrogate for mathematical arrows
 /*<!dead_caron>        */ DEADTRANS( 0x200B ,0x021F ,0xD837 ,0x0000 ), // High surrogate for Latin
 /*<!dead_cedilla>      */ DEADTRANS( 0x200B ,0x00E7 ,0xD837 ,0x0000 ), // High surrogate for Latin
 /*<!dead_circumflex>   */ DEADTRANS( 0x200B ,0x00EA ,0xD83D ,0x0000 ), // High surrogate for ornamental quotation marks
