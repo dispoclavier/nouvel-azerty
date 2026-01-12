@@ -1,4 +1,4 @@
-//                       Date: 2025-10-23T0053+0200
+//                       Date: 2026-01-12T1903+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -55,9 +55,9 @@
 //                             https://manpages.debian.org/jessie/keyboard-configuration/keyboard.5.en.html
 //
 //                                 # KEYBOARD CONFIGURATION FILE
-//                                 
+//
 //                                 # Consult the keyboard(5) manual page.
-//                                 
+//
 //                                 XKBMODEL="pc105"
 //                                 XKBLAYOUT="dispocla"
 //                                 XKBVARIANT="kbfrFRs"
@@ -632,7 +632,7 @@ xkb_symbols "kbfrFRs" {
 	// "Français France disposition de clavier semi-automatique"
 
 	// Include files from the symbols/ directory:
-	
+
 	include "pc(pc105)"   // Basic functionality.
 	include "inet(evdev)" // Easy access and internet keys.
 
@@ -756,6 +756,13 @@ xkb_symbols "kbfrFRs" {
 	// consistently advocated, due to the frequency and usefulness of both the
 	// punctuation apostrophe and the ASCII apostrophe.
 	// https://listengine.tuxfamily.org/ergodis.org/discussions/2016/11/msg00152.html
+	//
+	// So, while the ASCII apostrophe on key E04 is replaced with the typographic
+	// apostrophe rightsinglequotemark to enhance UX, the ASCII apostrophe is on
+	// an unshifted key again (either E12 on the base layout, or E07 on the
+	// remapped variant), to account for its extensive usage, both in wiki syntax
+	// and in article text according to Wikipedia’s Manual of Style.
+	// https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Apostrophes
 	//
 	//
 	// ## Level-5 numpad
@@ -1011,7 +1018,7 @@ xkb_symbols "kbfrFRs" {
 	// If subscript digits must be in French mode too, rather than in ASCII mode
 	// only, for usability and as a way to mitigate a bug on Windows deactivating
 	// the level 7 while Kana Lock is on. key AE01 would have no room for the
-	// backward compatible ampersand, due to a constraint limiting the number of 
+	// backward compatible ampersand, due to a constraint limiting the number of
 	// keysyms per key and per group to a maximum of eight.
 	//
 	// However, for backward compatibility and for cross-platform consistency the
