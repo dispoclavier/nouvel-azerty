@@ -9,6 +9,7 @@
 # 2025-08-14T1938+0200
 # 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
+# 2026-01-12T1834+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -20,6 +21,7 @@
 # of partial tables:
 #
 #     # # Composed letters for languages in Togo
+#     # # COUNTRY_FLAGS
 #     ### Space and symbol groups
 #     ### Letter groups
 #     ### Greek with diacritics
@@ -157,6 +159,7 @@ while ( my $line = <INPUT> ) {
 	if ( $parse_on ) {
 		if ( $line =~ /^#\*# /
 			|| $line =~ /^# # Composed letters for languages in Togo/
+			|| $line =~ /^# # COUNTRY_FLAGS/
 			|| $line =~ /^### Space and symbol groups/
 			|| $line =~ /^### Letter groups/
 			|| $line =~ /^### Greek with diacritics/
@@ -387,7 +390,6 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) emoji with skin tone support/$1 émoji avec prise en charge de la couleur de peau/g;
 				$line =~ s/( # .*) engaged, betrothed, wedding ring/$1 fiancé, fiancée, alliance/g;
 				$line =~ s/( # .*) ergonomic mapping/$1 disposition ergonomique/g;
-				$line =~ s/( # .*) Esperanto/$1 espéranto/g;
 				$line =~ s/( # .*) fast down button/$1 bouton de diminution rapide/g;
 				$line =~ s/( # .*) fast reverse button/$1 bouton de retour rapide/g;
 				$line =~ s/( # .*) fast up button/$1 bouton d’augmentation rapide/g;
