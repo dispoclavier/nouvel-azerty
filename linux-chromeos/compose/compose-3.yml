@@ -1648,7 +1648,7 @@
 #   in groups 11 and 12 are used for "∣" U2223 DIVIDES, negated as "∤" U2224, and
 #   "∥" U2225 PARALLEL TO, negated as "∦" U2226. As of "‖" U2016 DOUBLE VERTICAL
 #   LINE, it is in the same group of colon, preventing a potential accessibility
-#   bias fostering misuse of "∥" U2225 as "‖" U2016.
+#   bias leading to misuse "∥" U2225 as "‖" U2016.
 #   See # # STROKE&GROUP_1
 #   See # # STROKE&GROUP_2
 #   See # # STROKE&GROUP_11
@@ -2634,6 +2634,1046 @@
 <Multi_key><numbersign><2>                                                          <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
 <UEFD0><KP_2>                                                                       <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
 <Multi_key><numbersign><KP_2>                                                       <nobreakspace> : "　" U3000 # IDEOGRAPHIC SPACE
+#
+#
+# # COUNTRY_FLAGS
+#
+#   These have been moved to part 3 in compose-3.yml when part 2 exceeded the
+#   2048kB github.com file size limit, so as to avoid splitting part 2 at the
+#   expense of traceability.
+#
+<UEFD7><UEFD7>                                                                              <A><C> : "🇦🇨" # Ascension Island
+<Multi_key><equal><equal>                                                                   <A><C> : "🇦🇨" # Ascension Island
+<UEFD7><UEFD7>                                                                              <a><c> : "🇦🇨" # Ascension Island
+<Multi_key><equal><equal>                                                                   <a><c> : "🇦🇨" # Ascension Island
+<UEFD7><UEFD7>                                                                              <A><D> : "🇦🇩" # Andorra
+<Multi_key><equal><equal>                                                                   <A><D> : "🇦🇩" # Andorra
+<UEFD7><UEFD7>                                                                              <a><d> : "🇦🇩" # Andorra
+<Multi_key><equal><equal>                                                                   <a><d> : "🇦🇩" # Andorra
+<UEFD7><UEFD7>                                                                              <A><E> : "🇦🇪" # United Arab Emirates
+<Multi_key><equal><equal>                                                                   <A><E> : "🇦🇪" # United Arab Emirates
+<UEFD7><UEFD7>                                                                              <a><e> : "🇦🇪" # United Arab Emirates
+<Multi_key><equal><equal>                                                                   <a><e> : "🇦🇪" # United Arab Emirates
+<UEFD7><UEFD7>                                                                              <A><F> : "🇦🇫" # Afghanistan
+<Multi_key><equal><equal>                                                                   <A><F> : "🇦🇫" # Afghanistan
+<UEFD7><UEFD7>                                                                              <a><f> : "🇦🇫" # Afghanistan
+<Multi_key><equal><equal>                                                                   <a><f> : "🇦🇫" # Afghanistan
+<UEFD7><UEFD7>                                                                              <A><G> : "🇦🇬" # Antigua & Barbuda
+<Multi_key><equal><equal>                                                                   <A><G> : "🇦🇬" # Antigua & Barbuda
+<UEFD7><UEFD7>                                                                              <a><g> : "🇦🇬" # Antigua & Barbuda
+<Multi_key><equal><equal>                                                                   <a><g> : "🇦🇬" # Antigua & Barbuda
+<UEFD7><UEFD7>                                                                              <A><I> : "🇦🇮" # Anguilla
+<Multi_key><equal><equal>                                                                   <A><I> : "🇦🇮" # Anguilla
+<UEFD7><UEFD7>                                                                              <a><i> : "🇦🇮" # Anguilla
+<Multi_key><equal><equal>                                                                   <a><i> : "🇦🇮" # Anguilla
+<UEFD7><UEFD7>                                                                              <A><L> : "🇦🇱" # Albania
+<Multi_key><equal><equal>                                                                   <A><L> : "🇦🇱" # Albania
+<UEFD7><UEFD7>                                                                              <a><l> : "🇦🇱" # Albania
+<Multi_key><equal><equal>                                                                   <a><l> : "🇦🇱" # Albania
+<UEFD7><UEFD7>                                                                              <A><M> : "🇦🇲" # Armenia
+<Multi_key><equal><equal>                                                                   <A><M> : "🇦🇲" # Armenia
+<UEFD7><UEFD7>                                                                              <a><m> : "🇦🇲" # Armenia
+<Multi_key><equal><equal>                                                                   <a><m> : "🇦🇲" # Armenia
+<UEFD7><UEFD7>                                                                              <A><O> : "🇦🇴" # Angola
+<Multi_key><equal><equal>                                                                   <A><O> : "🇦🇴" # Angola
+<UEFD7><UEFD7>                                                                              <a><o> : "🇦🇴" # Angola
+<Multi_key><equal><equal>                                                                   <a><o> : "🇦🇴" # Angola
+<UEFD7><UEFD7>                                                                              <A><Q> : "🇦🇶" # Antarctica
+<Multi_key><equal><equal>                                                                   <A><Q> : "🇦🇶" # Antarctica
+<UEFD7><UEFD7>                                                                              <a><q> : "🇦🇶" # Antarctica
+<Multi_key><equal><equal>                                                                   <a><q> : "🇦🇶" # Antarctica
+<UEFD7><UEFD7>                                                                              <A><R> : "🇦🇷" # Argentina
+<Multi_key><equal><equal>                                                                   <A><R> : "🇦🇷" # Argentina
+<UEFD7><UEFD7>                                                                              <a><r> : "🇦🇷" # Argentina
+<Multi_key><equal><equal>                                                                   <a><r> : "🇦🇷" # Argentina
+<UEFD7><UEFD7>                                                                              <A><S> : "🇦🇸" # American Samoa
+<Multi_key><equal><equal>                                                                   <A><S> : "🇦🇸" # American Samoa
+<UEFD7><UEFD7>                                                                              <a><s> : "🇦🇸" # American Samoa
+<Multi_key><equal><equal>                                                                   <a><s> : "🇦🇸" # American Samoa
+<UEFD7><UEFD7>                                                                              <A><T> : "🇦🇹" # Austria
+<Multi_key><equal><equal>                                                                   <A><T> : "🇦🇹" # Austria
+<UEFD7><UEFD7>                                                                              <a><t> : "🇦🇹" # Austria
+<Multi_key><equal><equal>                                                                   <a><t> : "🇦🇹" # Austria
+<UEFD7><UEFD7>                                                                              <A><U> : "🇦🇺" # Australia
+<Multi_key><equal><equal>                                                                   <A><U> : "🇦🇺" # Australia
+<UEFD7><UEFD7>                                                                              <a><u> : "🇦🇺" # Australia
+<Multi_key><equal><equal>                                                                   <a><u> : "🇦🇺" # Australia
+<UEFD7><UEFD7>                                                                              <A><W> : "🇦🇼" # Aruba
+<Multi_key><equal><equal>                                                                   <A><W> : "🇦🇼" # Aruba
+<UEFD7><UEFD7>                                                                              <a><w> : "🇦🇼" # Aruba
+<Multi_key><equal><equal>                                                                   <a><w> : "🇦🇼" # Aruba
+<UEFD7><UEFD7>                                                                              <A><X> : "🇦🇽" # Åland Islands
+<Multi_key><equal><equal>                                                                   <A><X> : "🇦🇽" # Åland Islands
+<UEFD7><UEFD7>                                                                              <a><x> : "🇦🇽" # Åland Islands
+<Multi_key><equal><equal>                                                                   <a><x> : "🇦🇽" # Åland Islands
+<UEFD7><UEFD7>                                                                              <A><Z> : "🇦🇿" # Azerbaijan
+<Multi_key><equal><equal>                                                                   <A><Z> : "🇦🇿" # Azerbaijan
+<UEFD7><UEFD7>                                                                              <a><z> : "🇦🇿" # Azerbaijan
+<Multi_key><equal><equal>                                                                   <a><z> : "🇦🇿" # Azerbaijan
+<UEFD7><UEFD7>                                                                              <B><A> : "🇧🇦" # Bosnia & Herzegovina
+<Multi_key><equal><equal>                                                                   <B><A> : "🇧🇦" # Bosnia & Herzegovina
+<UEFD7><UEFD7>                                                                              <b><a> : "🇧🇦" # Bosnia & Herzegovina
+<Multi_key><equal><equal>                                                                   <b><a> : "🇧🇦" # Bosnia & Herzegovina
+<UEFD7><UEFD7>                                                                              <B><B> : "🇧🇧" # Barbados
+<Multi_key><equal><equal>                                                                   <B><B> : "🇧🇧" # Barbados
+<UEFD7><UEFD7>                                                                              <b><b> : "🇧🇧" # Barbados
+<Multi_key><equal><equal>                                                                   <b><b> : "🇧🇧" # Barbados
+<UEFD7><UEFD7>                                                                              <B><D> : "🇧🇩" # Bangladesh
+<Multi_key><equal><equal>                                                                   <B><D> : "🇧🇩" # Bangladesh
+<UEFD7><UEFD7>                                                                              <b><d> : "🇧🇩" # Bangladesh
+<Multi_key><equal><equal>                                                                   <b><d> : "🇧🇩" # Bangladesh
+<UEFD7><UEFD7>                                                                              <B><E> : "🇧🇪" # Belgium
+<Multi_key><equal><equal>                                                                   <B><E> : "🇧🇪" # Belgium
+<UEFD7><UEFD7>                                                                              <b><e> : "🇧🇪" # Belgium
+<Multi_key><equal><equal>                                                                   <b><e> : "🇧🇪" # Belgium
+<UEFD7><UEFD7>                                                                              <B><F> : "🇧🇫" # Burkina Faso
+<Multi_key><equal><equal>                                                                   <B><F> : "🇧🇫" # Burkina Faso
+<UEFD7><UEFD7>                                                                              <b><f> : "🇧🇫" # Burkina Faso
+<Multi_key><equal><equal>                                                                   <b><f> : "🇧🇫" # Burkina Faso
+<UEFD7><UEFD7>                                                                              <B><G> : "🇧🇬" # Bulgaria
+<Multi_key><equal><equal>                                                                   <B><G> : "🇧🇬" # Bulgaria
+<UEFD7><UEFD7>                                                                              <b><g> : "🇧🇬" # Bulgaria
+<Multi_key><equal><equal>                                                                   <b><g> : "🇧🇬" # Bulgaria
+<UEFD7><UEFD7>                                                                              <B><H> : "🇧🇭" # Bahrain
+<Multi_key><equal><equal>                                                                   <B><H> : "🇧🇭" # Bahrain
+<UEFD7><UEFD7>                                                                              <b><h> : "🇧🇭" # Bahrain
+<Multi_key><equal><equal>                                                                   <b><h> : "🇧🇭" # Bahrain
+<UEFD7><UEFD7>                                                                              <B><I> : "🇧🇮" # Burundi
+<Multi_key><equal><equal>                                                                   <B><I> : "🇧🇮" # Burundi
+<UEFD7><UEFD7>                                                                              <b><i> : "🇧🇮" # Burundi
+<Multi_key><equal><equal>                                                                   <b><i> : "🇧🇮" # Burundi
+<UEFD7><UEFD7>                                                                              <B><J> : "🇧🇯" # Benin
+<Multi_key><equal><equal>                                                                   <B><J> : "🇧🇯" # Benin
+<UEFD7><UEFD7>                                                                              <b><j> : "🇧🇯" # Benin
+<Multi_key><equal><equal>                                                                   <b><j> : "🇧🇯" # Benin
+<UEFD7><UEFD7>                                                                              <B><L> : "🇧🇱" # St. Barthélemy
+<Multi_key><equal><equal>                                                                   <B><L> : "🇧🇱" # St. Barthélemy
+<UEFD7><UEFD7>                                                                              <b><l> : "🇧🇱" # St. Barthélemy
+<Multi_key><equal><equal>                                                                   <b><l> : "🇧🇱" # St. Barthélemy
+<UEFD7><UEFD7>                                                                              <B><M> : "🇧🇲" # Bermuda
+<Multi_key><equal><equal>                                                                   <B><M> : "🇧🇲" # Bermuda
+<UEFD7><UEFD7>                                                                              <b><m> : "🇧🇲" # Bermuda
+<Multi_key><equal><equal>                                                                   <b><m> : "🇧🇲" # Bermuda
+<UEFD7><UEFD7>                                                                              <B><N> : "🇧🇳" # Brunei
+<Multi_key><equal><equal>                                                                   <B><N> : "🇧🇳" # Brunei
+<UEFD7><UEFD7>                                                                              <b><n> : "🇧🇳" # Brunei
+<Multi_key><equal><equal>                                                                   <b><n> : "🇧🇳" # Brunei
+<UEFD7><UEFD7>                                                                              <B><O> : "🇧🇴" # Bolivia
+<Multi_key><equal><equal>                                                                   <B><O> : "🇧🇴" # Bolivia
+<UEFD7><UEFD7>                                                                              <b><o> : "🇧🇴" # Bolivia
+<Multi_key><equal><equal>                                                                   <b><o> : "🇧🇴" # Bolivia
+<UEFD7><UEFD7>                                                                              <B><Q> : "🇧🇶" # Caribbean Netherlands
+<Multi_key><equal><equal>                                                                   <B><Q> : "🇧🇶" # Caribbean Netherlands
+<UEFD7><UEFD7>                                                                              <b><q> : "🇧🇶" # Caribbean Netherlands
+<Multi_key><equal><equal>                                                                   <b><q> : "🇧🇶" # Caribbean Netherlands
+<UEFD7><UEFD7>                                                                              <B><R> : "🇧🇷" # Brazil
+<Multi_key><equal><equal>                                                                   <B><R> : "🇧🇷" # Brazil
+<UEFD7><UEFD7>                                                                              <b><r> : "🇧🇷" # Brazil
+<Multi_key><equal><equal>                                                                   <b><r> : "🇧🇷" # Brazil
+<UEFD7><UEFD7>                                                                              <B><S> : "🇧🇸" # Bahamas
+<Multi_key><equal><equal>                                                                   <B><S> : "🇧🇸" # Bahamas
+<UEFD7><UEFD7>                                                                              <b><s> : "🇧🇸" # Bahamas
+<Multi_key><equal><equal>                                                                   <b><s> : "🇧🇸" # Bahamas
+<UEFD7><UEFD7>                                                                              <B><T> : "🇧🇹" # Bhutan
+<Multi_key><equal><equal>                                                                   <B><T> : "🇧🇹" # Bhutan
+<UEFD7><UEFD7>                                                                              <b><t> : "🇧🇹" # Bhutan
+<Multi_key><equal><equal>                                                                   <b><t> : "🇧🇹" # Bhutan
+<UEFD7><UEFD7>                                                                              <B><V> : "🇧🇻" # Bouvet Island
+<Multi_key><equal><equal>                                                                   <B><V> : "🇧🇻" # Bouvet Island
+<UEFD7><UEFD7>                                                                              <b><v> : "🇧🇻" # Bouvet Island
+<Multi_key><equal><equal>                                                                   <b><v> : "🇧🇻" # Bouvet Island
+<UEFD7><UEFD7>                                                                              <B><W> : "🇧🇼" # Botswana
+<Multi_key><equal><equal>                                                                   <B><W> : "🇧🇼" # Botswana
+<UEFD7><UEFD7>                                                                              <b><w> : "🇧🇼" # Botswana
+<Multi_key><equal><equal>                                                                   <b><w> : "🇧🇼" # Botswana
+<UEFD7><UEFD7>                                                                              <B><Y> : "🇧🇾" # Belarus
+<Multi_key><equal><equal>                                                                   <B><Y> : "🇧🇾" # Belarus
+<UEFD7><UEFD7>                                                                              <b><y> : "🇧🇾" # Belarus
+<Multi_key><equal><equal>                                                                   <b><y> : "🇧🇾" # Belarus
+<UEFD7><UEFD7>                                                                              <B><Z> : "🇧🇿" # Belize
+<Multi_key><equal><equal>                                                                   <B><Z> : "🇧🇿" # Belize
+<UEFD7><UEFD7>                                                                              <b><z> : "🇧🇿" # Belize
+<Multi_key><equal><equal>                                                                   <b><z> : "🇧🇿" # Belize
+<UEFD7><UEFD7>                                                                              <C><A> : "🇨🇦" # Canada
+<Multi_key><equal><equal>                                                                   <C><A> : "🇨🇦" # Canada
+<UEFD7><UEFD7>                                                                              <c><a> : "🇨🇦" # Canada
+<Multi_key><equal><equal>                                                                   <c><a> : "🇨🇦" # Canada
+<UEFD7><UEFD7>                                                                              <C><C> : "🇨🇨" # Cocos (Keeling) Islands
+<Multi_key><equal><equal>                                                                   <C><C> : "🇨🇨" # Cocos (Keeling) Islands
+<UEFD7><UEFD7>                                                                              <c><c> : "🇨🇨" # Cocos (Keeling) Islands
+<Multi_key><equal><equal>                                                                   <c><c> : "🇨🇨" # Cocos (Keeling) Islands
+<UEFD7><UEFD7>                                                                              <C><D> : "🇨🇩" # Congo - Kinshasa
+<Multi_key><equal><equal>                                                                   <C><D> : "🇨🇩" # Congo - Kinshasa
+<UEFD7><UEFD7>                                                                              <c><d> : "🇨🇩" # Congo - Kinshasa
+<Multi_key><equal><equal>                                                                   <c><d> : "🇨🇩" # Congo - Kinshasa
+<UEFD7><UEFD7>                                                                              <C><F> : "🇨🇫" # Central African Republic
+<Multi_key><equal><equal>                                                                   <C><F> : "🇨🇫" # Central African Republic
+<UEFD7><UEFD7>                                                                              <c><f> : "🇨🇫" # Central African Republic
+<Multi_key><equal><equal>                                                                   <c><f> : "🇨🇫" # Central African Republic
+<UEFD7><UEFD7>                                                                              <C><G> : "🇨🇬" # Congo - Brazzaville
+<Multi_key><equal><equal>                                                                   <C><G> : "🇨🇬" # Congo - Brazzaville
+<UEFD7><UEFD7>                                                                              <c><g> : "🇨🇬" # Congo - Brazzaville
+<Multi_key><equal><equal>                                                                   <c><g> : "🇨🇬" # Congo - Brazzaville
+<UEFD7><UEFD7>                                                                              <C><H> : "🇨🇭" # Switzerland
+<Multi_key><equal><equal>                                                                   <C><H> : "🇨🇭" # Switzerland
+<UEFD7><UEFD7>                                                                              <c><h> : "🇨🇭" # Switzerland
+<Multi_key><equal><equal>                                                                   <c><h> : "🇨🇭" # Switzerland
+<UEFD7><UEFD7>                                                                              <C><I> : "🇨🇮" # Côte d’Ivoire
+<Multi_key><equal><equal>                                                                   <C><I> : "🇨🇮" # Côte d’Ivoire
+<UEFD7><UEFD7>                                                                              <c><i> : "🇨🇮" # Côte d’Ivoire
+<Multi_key><equal><equal>                                                                   <c><i> : "🇨🇮" # Côte d’Ivoire
+<UEFD7><UEFD7>                                                                              <C><K> : "🇨🇰" # Cook Islands
+<Multi_key><equal><equal>                                                                   <C><K> : "🇨🇰" # Cook Islands
+<UEFD7><UEFD7>                                                                              <c><k> : "🇨🇰" # Cook Islands
+<Multi_key><equal><equal>                                                                   <c><k> : "🇨🇰" # Cook Islands
+<UEFD7><UEFD7>                                                                              <C><L> : "🇨🇱" # Chile
+<Multi_key><equal><equal>                                                                   <C><L> : "🇨🇱" # Chile
+<UEFD7><UEFD7>                                                                              <c><l> : "🇨🇱" # Chile
+<Multi_key><equal><equal>                                                                   <c><l> : "🇨🇱" # Chile
+<UEFD7><UEFD7>                                                                              <C><M> : "🇨🇲" # Cameroon
+<Multi_key><equal><equal>                                                                   <C><M> : "🇨🇲" # Cameroon
+<UEFD7><UEFD7>                                                                              <c><m> : "🇨🇲" # Cameroon
+<Multi_key><equal><equal>                                                                   <c><m> : "🇨🇲" # Cameroon
+<UEFD7><UEFD7>                                                                              <C><N> : "🇨🇳" # China
+<Multi_key><equal><equal>                                                                   <C><N> : "🇨🇳" # China
+<UEFD7><UEFD7>                                                                              <c><n> : "🇨🇳" # China
+<Multi_key><equal><equal>                                                                   <c><n> : "🇨🇳" # China
+<UEFD7><UEFD7>                                                                              <C><O> : "🇨🇴" # Colombia
+<Multi_key><equal><equal>                                                                   <C><O> : "🇨🇴" # Colombia
+<UEFD7><UEFD7>                                                                              <c><o> : "🇨🇴" # Colombia
+<Multi_key><equal><equal>                                                                   <c><o> : "🇨🇴" # Colombia
+<UEFD7><UEFD7>                                                                              <C><P> : "🇨🇵" # Clipperton Island
+<Multi_key><equal><equal>                                                                   <C><P> : "🇨🇵" # Clipperton Island
+<UEFD7><UEFD7>                                                                              <c><p> : "🇨🇵" # Clipperton Island
+<Multi_key><equal><equal>                                                                   <c><p> : "🇨🇵" # Clipperton Island
+<UEFD7><UEFD7>                                                                              <C><R> : "🇨🇷" # Costa Rica
+<Multi_key><equal><equal>                                                                   <C><R> : "🇨🇷" # Costa Rica
+<UEFD7><UEFD7>                                                                              <c><r> : "🇨🇷" # Costa Rica
+<Multi_key><equal><equal>                                                                   <c><r> : "🇨🇷" # Costa Rica
+<UEFD7><UEFD7>                                                                              <C><U> : "🇨🇺" # Cuba
+<Multi_key><equal><equal>                                                                   <C><U> : "🇨🇺" # Cuba
+<UEFD7><UEFD7>                                                                              <c><u> : "🇨🇺" # Cuba
+<Multi_key><equal><equal>                                                                   <c><u> : "🇨🇺" # Cuba
+<UEFD7><UEFD7>                                                                              <C><V> : "🇨🇻" # Cape Verde
+<Multi_key><equal><equal>                                                                   <C><V> : "🇨🇻" # Cape Verde
+<UEFD7><UEFD7>                                                                              <c><v> : "🇨🇻" # Cape Verde
+<Multi_key><equal><equal>                                                                   <c><v> : "🇨🇻" # Cape Verde
+<UEFD7><UEFD7>                                                                              <C><W> : "🇨🇼" # Curaçao
+<Multi_key><equal><equal>                                                                   <C><W> : "🇨🇼" # Curaçao
+<UEFD7><UEFD7>                                                                              <c><w> : "🇨🇼" # Curaçao
+<Multi_key><equal><equal>                                                                   <c><w> : "🇨🇼" # Curaçao
+<UEFD7><UEFD7>                                                                              <C><X> : "🇨🇽" # Christmas Island
+<Multi_key><equal><equal>                                                                   <C><X> : "🇨🇽" # Christmas Island
+<UEFD7><UEFD7>                                                                              <c><x> : "🇨🇽" # Christmas Island
+<Multi_key><equal><equal>                                                                   <c><x> : "🇨🇽" # Christmas Island
+<UEFD7><UEFD7>                                                                              <C><Y> : "🇨🇾" # Cyprus
+<Multi_key><equal><equal>                                                                   <C><Y> : "🇨🇾" # Cyprus
+<UEFD7><UEFD7>                                                                              <c><y> : "🇨🇾" # Cyprus
+<Multi_key><equal><equal>                                                                   <c><y> : "🇨🇾" # Cyprus
+<UEFD7><UEFD7>                                                                              <C><Z> : "🇨🇿" # Czechia
+<Multi_key><equal><equal>                                                                   <C><Z> : "🇨🇿" # Czechia
+<UEFD7><UEFD7>                                                                              <c><z> : "🇨🇿" # Czechia
+<Multi_key><equal><equal>                                                                   <c><z> : "🇨🇿" # Czechia
+<UEFD7><UEFD7>                                                                              <D><E> : "🇩🇪" # Germany
+<Multi_key><equal><equal>                                                                   <D><E> : "🇩🇪" # Germany
+<UEFD7><UEFD7>                                                                              <d><e> : "🇩🇪" # Germany
+<Multi_key><equal><equal>                                                                   <d><e> : "🇩🇪" # Germany
+<UEFD7><UEFD7>                                                                              <D><G> : "🇩🇬" # Diego Garcia
+<Multi_key><equal><equal>                                                                   <D><G> : "🇩🇬" # Diego Garcia
+<UEFD7><UEFD7>                                                                              <d><g> : "🇩🇬" # Diego Garcia
+<Multi_key><equal><equal>                                                                   <d><g> : "🇩🇬" # Diego Garcia
+<UEFD7><UEFD7>                                                                              <D><J> : "🇩🇯" # Djibouti
+<Multi_key><equal><equal>                                                                   <D><J> : "🇩🇯" # Djibouti
+<UEFD7><UEFD7>                                                                              <d><j> : "🇩🇯" # Djibouti
+<Multi_key><equal><equal>                                                                   <d><j> : "🇩🇯" # Djibouti
+<UEFD7><UEFD7>                                                                              <D><K> : "🇩🇰" # Denmark
+<Multi_key><equal><equal>                                                                   <D><K> : "🇩🇰" # Denmark
+<UEFD7><UEFD7>                                                                              <d><k> : "🇩🇰" # Denmark
+<Multi_key><equal><equal>                                                                   <d><k> : "🇩🇰" # Denmark
+<UEFD7><UEFD7>                                                                              <D><M> : "🇩🇲" # Dominica
+<Multi_key><equal><equal>                                                                   <D><M> : "🇩🇲" # Dominica
+<UEFD7><UEFD7>                                                                              <d><m> : "🇩🇲" # Dominica
+<Multi_key><equal><equal>                                                                   <d><m> : "🇩🇲" # Dominica
+<UEFD7><UEFD7>                                                                              <D><O> : "🇩🇴" # Dominican Republic
+<Multi_key><equal><equal>                                                                   <D><O> : "🇩🇴" # Dominican Republic
+<UEFD7><UEFD7>                                                                              <d><o> : "🇩🇴" # Dominican Republic
+<Multi_key><equal><equal>                                                                   <d><o> : "🇩🇴" # Dominican Republic
+<UEFD7><UEFD7>                                                                              <D><Z> : "🇩🇿" # Algeria
+<Multi_key><equal><equal>                                                                   <D><Z> : "🇩🇿" # Algeria
+<UEFD7><UEFD7>                                                                              <d><z> : "🇩🇿" # Algeria
+<Multi_key><equal><equal>                                                                   <d><z> : "🇩🇿" # Algeria
+<UEFD7><UEFD7>                                                                              <E><A> : "🇪🇦" # Ceuta & Melilla
+<Multi_key><equal><equal>                                                                   <E><A> : "🇪🇦" # Ceuta & Melilla
+<UEFD7><UEFD7>                                                                              <e><a> : "🇪🇦" # Ceuta & Melilla
+<Multi_key><equal><equal>                                                                   <e><a> : "🇪🇦" # Ceuta & Melilla
+<UEFD7><UEFD7>                                                                              <E><C> : "🇪🇨" # Ecuador
+<Multi_key><equal><equal>                                                                   <E><C> : "🇪🇨" # Ecuador
+<UEFD7><UEFD7>                                                                              <e><c> : "🇪🇨" # Ecuador
+<Multi_key><equal><equal>                                                                   <e><c> : "🇪🇨" # Ecuador
+<UEFD7><UEFD7>                                                                              <E><E> : "🇪🇪" # Estonia
+<Multi_key><equal><equal>                                                                   <E><E> : "🇪🇪" # Estonia
+<UEFD7><UEFD7>                                                                              <e><e> : "🇪🇪" # Estonia
+<Multi_key><equal><equal>                                                                   <e><e> : "🇪🇪" # Estonia
+<UEFD7><UEFD7>                                                                              <E><G> : "🇪🇬" # Egypt
+<Multi_key><equal><equal>                                                                   <E><G> : "🇪🇬" # Egypt
+<UEFD7><UEFD7>                                                                              <e><g> : "🇪🇬" # Egypt
+<Multi_key><equal><equal>                                                                   <e><g> : "🇪🇬" # Egypt
+<UEFD7><UEFD7>                                                                              <E><H> : "🇪🇭" # Western Sahara
+<Multi_key><equal><equal>                                                                   <E><H> : "🇪🇭" # Western Sahara
+<UEFD7><UEFD7>                                                                              <e><h> : "🇪🇭" # Western Sahara
+<Multi_key><equal><equal>                                                                   <e><h> : "🇪🇭" # Western Sahara
+<UEFD7><UEFD7>                                                                              <E><R> : "🇪🇷" # Eritrea
+<Multi_key><equal><equal>                                                                   <E><R> : "🇪🇷" # Eritrea
+<UEFD7><UEFD7>                                                                              <e><r> : "🇪🇷" # Eritrea
+<Multi_key><equal><equal>                                                                   <e><r> : "🇪🇷" # Eritrea
+<UEFD7><UEFD7>                                                                              <E><S> : "🇪🇸" # Spain
+<Multi_key><equal><equal>                                                                   <E><S> : "🇪🇸" # Spain
+<UEFD7><UEFD7>                                                                              <e><s> : "🇪🇸" # Spain
+<Multi_key><equal><equal>                                                                   <e><s> : "🇪🇸" # Spain
+<UEFD7><UEFD7>                                                                              <E><T> : "🇪🇹" # Ethiopia
+<Multi_key><equal><equal>                                                                   <E><T> : "🇪🇹" # Ethiopia
+<UEFD7><UEFD7>                                                                              <e><t> : "🇪🇹" # Ethiopia
+<Multi_key><equal><equal>                                                                   <e><t> : "🇪🇹" # Ethiopia
+<UEFD7><UEFD7>                                                                              <E><U> : "🇪🇺" # European Union
+<Multi_key><equal><equal>                                                                   <E><U> : "🇪🇺" # European Union
+<UEFD7><UEFD7>                                                                              <e><u> : "🇪🇺" # European Union
+<Multi_key><equal><equal>                                                                   <e><u> : "🇪🇺" # European Union
+<UEFD7><UEFD7>                                                                              <F><I> : "🇫🇮" # Finland
+<Multi_key><equal><equal>                                                                   <F><I> : "🇫🇮" # Finland
+<UEFD7><UEFD7>                                                                              <f><i> : "🇫🇮" # Finland
+<Multi_key><equal><equal>                                                                   <f><i> : "🇫🇮" # Finland
+<UEFD7><UEFD7>                                                                              <F><J> : "🇫🇯" # Fiji
+<Multi_key><equal><equal>                                                                   <F><J> : "🇫🇯" # Fiji
+<UEFD7><UEFD7>                                                                              <f><j> : "🇫🇯" # Fiji
+<Multi_key><equal><equal>                                                                   <f><j> : "🇫🇯" # Fiji
+<UEFD7><UEFD7>                                                                              <F><K> : "🇫🇰" # Falkland Islands
+<Multi_key><equal><equal>                                                                   <F><K> : "🇫🇰" # Falkland Islands
+<UEFD7><UEFD7>                                                                              <f><k> : "🇫🇰" # Falkland Islands
+<Multi_key><equal><equal>                                                                   <f><k> : "🇫🇰" # Falkland Islands
+<UEFD7><UEFD7>                                                                              <F><M> : "🇫🇲" # Micronesia
+<Multi_key><equal><equal>                                                                   <F><M> : "🇫🇲" # Micronesia
+<UEFD7><UEFD7>                                                                              <f><m> : "🇫🇲" # Micronesia
+<Multi_key><equal><equal>                                                                   <f><m> : "🇫🇲" # Micronesia
+<UEFD7><UEFD7>                                                                              <F><O> : "🇫🇴" # Faroe Islands
+<Multi_key><equal><equal>                                                                   <F><O> : "🇫🇴" # Faroe Islands
+<UEFD7><UEFD7>                                                                              <f><o> : "🇫🇴" # Faroe Islands
+<Multi_key><equal><equal>                                                                   <f><o> : "🇫🇴" # Faroe Islands
+<UEFD7><UEFD7>                                                                              <F><R> : "🇫🇷" # France
+<Multi_key><equal><equal>                                                                   <F><R> : "🇫🇷" # France
+<UEFD7><UEFD7>                                                                              <f><r> : "🇫🇷" # France
+<Multi_key><equal><equal>                                                                   <f><r> : "🇫🇷" # France
+<UEFD7><UEFD7>                                                                              <G><A> : "🇬🇦" # Gabon
+<Multi_key><equal><equal>                                                                   <G><A> : "🇬🇦" # Gabon
+<UEFD7><UEFD7>                                                                              <g><a> : "🇬🇦" # Gabon
+<Multi_key><equal><equal>                                                                   <g><a> : "🇬🇦" # Gabon
+<UEFD7><UEFD7>                                                                              <G><B> : "🇬🇧" # United Kingdom
+<Multi_key><equal><equal>                                                                   <G><B> : "🇬🇧" # United Kingdom
+<UEFD7><UEFD7>                                                                              <g><b> : "🇬🇧" # United Kingdom
+<Multi_key><equal><equal>                                                                   <g><b> : "🇬🇧" # United Kingdom
+<UEFD7><UEFD7>                                                                              <G><D> : "🇬🇩" # Grenada
+<Multi_key><equal><equal>                                                                   <G><D> : "🇬🇩" # Grenada
+<UEFD7><UEFD7>                                                                              <g><d> : "🇬🇩" # Grenada
+<Multi_key><equal><equal>                                                                   <g><d> : "🇬🇩" # Grenada
+<UEFD7><UEFD7>                                                                              <G><E> : "🇬🇪" # Georgia
+<Multi_key><equal><equal>                                                                   <G><E> : "🇬🇪" # Georgia
+<UEFD7><UEFD7>                                                                              <g><e> : "🇬🇪" # Georgia
+<Multi_key><equal><equal>                                                                   <g><e> : "🇬🇪" # Georgia
+<UEFD7><UEFD7>                                                                              <G><F> : "🇬🇫" # French Guiana
+<Multi_key><equal><equal>                                                                   <G><F> : "🇬🇫" # French Guiana
+<UEFD7><UEFD7>                                                                              <g><f> : "🇬🇫" # French Guiana
+<Multi_key><equal><equal>                                                                   <g><f> : "🇬🇫" # French Guiana
+<UEFD7><UEFD7>                                                                              <G><G> : "🇬🇬" # Guernsey
+<Multi_key><equal><equal>                                                                   <G><G> : "🇬🇬" # Guernsey
+<UEFD7><UEFD7>                                                                              <g><g> : "🇬🇬" # Guernsey
+<Multi_key><equal><equal>                                                                   <g><g> : "🇬🇬" # Guernsey
+<UEFD7><UEFD7>                                                                              <G><H> : "🇬🇭" # Ghana
+<Multi_key><equal><equal>                                                                   <G><H> : "🇬🇭" # Ghana
+<UEFD7><UEFD7>                                                                              <g><h> : "🇬🇭" # Ghana
+<Multi_key><equal><equal>                                                                   <g><h> : "🇬🇭" # Ghana
+<UEFD7><UEFD7>                                                                              <G><I> : "🇬🇮" # Gibraltar
+<Multi_key><equal><equal>                                                                   <G><I> : "🇬🇮" # Gibraltar
+<UEFD7><UEFD7>                                                                              <g><i> : "🇬🇮" # Gibraltar
+<Multi_key><equal><equal>                                                                   <g><i> : "🇬🇮" # Gibraltar
+<UEFD7><UEFD7>                                                                              <G><L> : "🇬🇱" # Greenland
+<Multi_key><equal><equal>                                                                   <G><L> : "🇬🇱" # Greenland
+<UEFD7><UEFD7>                                                                              <g><l> : "🇬🇱" # Greenland
+<Multi_key><equal><equal>                                                                   <g><l> : "🇬🇱" # Greenland
+<UEFD7><UEFD7>                                                                              <G><M> : "🇬🇲" # Gambia
+<Multi_key><equal><equal>                                                                   <G><M> : "🇬🇲" # Gambia
+<UEFD7><UEFD7>                                                                              <g><m> : "🇬🇲" # Gambia
+<Multi_key><equal><equal>                                                                   <g><m> : "🇬🇲" # Gambia
+<UEFD7><UEFD7>                                                                              <G><N> : "🇬🇳" # Guinea
+<Multi_key><equal><equal>                                                                   <G><N> : "🇬🇳" # Guinea
+<UEFD7><UEFD7>                                                                              <g><n> : "🇬🇳" # Guinea
+<Multi_key><equal><equal>                                                                   <g><n> : "🇬🇳" # Guinea
+<UEFD7><UEFD7>                                                                              <G><P> : "🇬🇵" # Guadeloupe
+<Multi_key><equal><equal>                                                                   <G><P> : "🇬🇵" # Guadeloupe
+<UEFD7><UEFD7>                                                                              <g><p> : "🇬🇵" # Guadeloupe
+<Multi_key><equal><equal>                                                                   <g><p> : "🇬🇵" # Guadeloupe
+<UEFD7><UEFD7>                                                                              <G><Q> : "🇬🇶" # Equatorial Guinea
+<Multi_key><equal><equal>                                                                   <G><Q> : "🇬🇶" # Equatorial Guinea
+<UEFD7><UEFD7>                                                                              <g><q> : "🇬🇶" # Equatorial Guinea
+<Multi_key><equal><equal>                                                                   <g><q> : "🇬🇶" # Equatorial Guinea
+<UEFD7><UEFD7>                                                                              <G><R> : "🇬🇷" # Greece
+<Multi_key><equal><equal>                                                                   <G><R> : "🇬🇷" # Greece
+<UEFD7><UEFD7>                                                                              <g><r> : "🇬🇷" # Greece
+<Multi_key><equal><equal>                                                                   <g><r> : "🇬🇷" # Greece
+<UEFD7><UEFD7>                                                                              <G><S> : "🇬🇸" # South Georgia & South Sandwich Islands
+<Multi_key><equal><equal>                                                                   <G><S> : "🇬🇸" # South Georgia & South Sandwich Islands
+<UEFD7><UEFD7>                                                                              <g><s> : "🇬🇸" # South Georgia & South Sandwich Islands
+<Multi_key><equal><equal>                                                                   <g><s> : "🇬🇸" # South Georgia & South Sandwich Islands
+<UEFD7><UEFD7>                                                                              <G><T> : "🇬🇹" # Guatemala
+<Multi_key><equal><equal>                                                                   <G><T> : "🇬🇹" # Guatemala
+<UEFD7><UEFD7>                                                                              <g><t> : "🇬🇹" # Guatemala
+<Multi_key><equal><equal>                                                                   <g><t> : "🇬🇹" # Guatemala
+<UEFD7><UEFD7>                                                                              <G><U> : "🇬🇺" # Guam
+<Multi_key><equal><equal>                                                                   <G><U> : "🇬🇺" # Guam
+<UEFD7><UEFD7>                                                                              <g><u> : "🇬🇺" # Guam
+<Multi_key><equal><equal>                                                                   <g><u> : "🇬🇺" # Guam
+<UEFD7><UEFD7>                                                                              <G><W> : "🇬🇼" # Guinea-Bissau
+<Multi_key><equal><equal>                                                                   <G><W> : "🇬🇼" # Guinea-Bissau
+<UEFD7><UEFD7>                                                                              <g><w> : "🇬🇼" # Guinea-Bissau
+<Multi_key><equal><equal>                                                                   <g><w> : "🇬🇼" # Guinea-Bissau
+<UEFD7><UEFD7>                                                                              <G><Y> : "🇬🇾" # Guyana
+<Multi_key><equal><equal>                                                                   <G><Y> : "🇬🇾" # Guyana
+<UEFD7><UEFD7>                                                                              <g><y> : "🇬🇾" # Guyana
+<Multi_key><equal><equal>                                                                   <g><y> : "🇬🇾" # Guyana
+<UEFD7><UEFD7>                                                                              <H><K> : "🇭🇰" # Hong Kong SAR China
+<Multi_key><equal><equal>                                                                   <H><K> : "🇭🇰" # Hong Kong SAR China
+<UEFD7><UEFD7>                                                                              <h><k> : "🇭🇰" # Hong Kong SAR China
+<Multi_key><equal><equal>                                                                   <h><k> : "🇭🇰" # Hong Kong SAR China
+<UEFD7><UEFD7>                                                                              <H><M> : "🇭🇲" # Heard & McDonald Islands
+<Multi_key><equal><equal>                                                                   <H><M> : "🇭🇲" # Heard & McDonald Islands
+<UEFD7><UEFD7>                                                                              <h><m> : "🇭🇲" # Heard & McDonald Islands
+<Multi_key><equal><equal>                                                                   <h><m> : "🇭🇲" # Heard & McDonald Islands
+<UEFD7><UEFD7>                                                                              <H><N> : "🇭🇳" # Honduras
+<Multi_key><equal><equal>                                                                   <H><N> : "🇭🇳" # Honduras
+<UEFD7><UEFD7>                                                                              <h><n> : "🇭🇳" # Honduras
+<Multi_key><equal><equal>                                                                   <h><n> : "🇭🇳" # Honduras
+<UEFD7><UEFD7>                                                                              <H><R> : "🇭🇷" # Croatia
+<Multi_key><equal><equal>                                                                   <H><R> : "🇭🇷" # Croatia
+<UEFD7><UEFD7>                                                                              <h><r> : "🇭🇷" # Croatia
+<Multi_key><equal><equal>                                                                   <h><r> : "🇭🇷" # Croatia
+<UEFD7><UEFD7>                                                                              <H><T> : "🇭🇹" # Haiti
+<Multi_key><equal><equal>                                                                   <H><T> : "🇭🇹" # Haiti
+<UEFD7><UEFD7>                                                                              <h><t> : "🇭🇹" # Haiti
+<Multi_key><equal><equal>                                                                   <h><t> : "🇭🇹" # Haiti
+<UEFD7><UEFD7>                                                                              <H><U> : "🇭🇺" # Hungary
+<Multi_key><equal><equal>                                                                   <H><U> : "🇭🇺" # Hungary
+<UEFD7><UEFD7>                                                                              <h><u> : "🇭🇺" # Hungary
+<Multi_key><equal><equal>                                                                   <h><u> : "🇭🇺" # Hungary
+<UEFD7><UEFD7>                                                                              <I><C> : "🇮🇨" # Canary Islands
+<Multi_key><equal><equal>                                                                   <I><C> : "🇮🇨" # Canary Islands
+<UEFD7><UEFD7>                                                                              <i><c> : "🇮🇨" # Canary Islands
+<Multi_key><equal><equal>                                                                   <i><c> : "🇮🇨" # Canary Islands
+<UEFD7><UEFD7>                                                                              <I><D> : "🇮🇩" # Indonesia
+<Multi_key><equal><equal>                                                                   <I><D> : "🇮🇩" # Indonesia
+<UEFD7><UEFD7>                                                                              <i><d> : "🇮🇩" # Indonesia
+<Multi_key><equal><equal>                                                                   <i><d> : "🇮🇩" # Indonesia
+<UEFD7><UEFD7>                                                                              <I><E> : "🇮🇪" # Ireland
+<Multi_key><equal><equal>                                                                   <I><E> : "🇮🇪" # Ireland
+<UEFD7><UEFD7>                                                                              <i><e> : "🇮🇪" # Ireland
+<Multi_key><equal><equal>                                                                   <i><e> : "🇮🇪" # Ireland
+<UEFD7><UEFD7>                                                                              <I><L> : "🇮🇱" # Israel
+<Multi_key><equal><equal>                                                                   <I><L> : "🇮🇱" # Israel
+<UEFD7><UEFD7>                                                                              <i><l> : "🇮🇱" # Israel
+<Multi_key><equal><equal>                                                                   <i><l> : "🇮🇱" # Israel
+<UEFD7><UEFD7>                                                                              <I><M> : "🇮🇲" # Isle of Man
+<Multi_key><equal><equal>                                                                   <I><M> : "🇮🇲" # Isle of Man
+<UEFD7><UEFD7>                                                                              <i><m> : "🇮🇲" # Isle of Man
+<Multi_key><equal><equal>                                                                   <i><m> : "🇮🇲" # Isle of Man
+<UEFD7><UEFD7>                                                                              <I><N> : "🇮🇳" # India
+<Multi_key><equal><equal>                                                                   <I><N> : "🇮🇳" # India
+<UEFD7><UEFD7>                                                                              <i><n> : "🇮🇳" # India
+<Multi_key><equal><equal>                                                                   <i><n> : "🇮🇳" # India
+<UEFD7><UEFD7>                                                                              <I><O> : "🇮🇴" # British Indian Ocean Territory
+<Multi_key><equal><equal>                                                                   <I><O> : "🇮🇴" # British Indian Ocean Territory
+<UEFD7><UEFD7>                                                                              <i><o> : "🇮🇴" # British Indian Ocean Territory
+<Multi_key><equal><equal>                                                                   <i><o> : "🇮🇴" # British Indian Ocean Territory
+<UEFD7><UEFD7>                                                                              <I><Q> : "🇮🇶" # Iraq
+<Multi_key><equal><equal>                                                                   <I><Q> : "🇮🇶" # Iraq
+<UEFD7><UEFD7>                                                                              <i><q> : "🇮🇶" # Iraq
+<Multi_key><equal><equal>                                                                   <i><q> : "🇮🇶" # Iraq
+<UEFD7><UEFD7>                                                                              <I><R> : "🇮🇷" # Iran
+<Multi_key><equal><equal>                                                                   <I><R> : "🇮🇷" # Iran
+<UEFD7><UEFD7>                                                                              <i><r> : "🇮🇷" # Iran
+<Multi_key><equal><equal>                                                                   <i><r> : "🇮🇷" # Iran
+<UEFD7><UEFD7>                                                                              <I><S> : "🇮🇸" # Iceland
+<Multi_key><equal><equal>                                                                   <I><S> : "🇮🇸" # Iceland
+<UEFD7><UEFD7>                                                                              <i><s> : "🇮🇸" # Iceland
+<Multi_key><equal><equal>                                                                   <i><s> : "🇮🇸" # Iceland
+<UEFD7><UEFD7>                                                                              <I><T> : "🇮🇹" # Italy
+<Multi_key><equal><equal>                                                                   <I><T> : "🇮🇹" # Italy
+<UEFD7><UEFD7>                                                                              <i><t> : "🇮🇹" # Italy
+<Multi_key><equal><equal>                                                                   <i><t> : "🇮🇹" # Italy
+<UEFD7><UEFD7>                                                                              <J><E> : "🇯🇪" # Jersey
+<Multi_key><equal><equal>                                                                   <J><E> : "🇯🇪" # Jersey
+<UEFD7><UEFD7>                                                                              <j><e> : "🇯🇪" # Jersey
+<Multi_key><equal><equal>                                                                   <j><e> : "🇯🇪" # Jersey
+<UEFD7><UEFD7>                                                                              <J><M> : "🇯🇲" # Jamaica
+<Multi_key><equal><equal>                                                                   <J><M> : "🇯🇲" # Jamaica
+<UEFD7><UEFD7>                                                                              <j><m> : "🇯🇲" # Jamaica
+<Multi_key><equal><equal>                                                                   <j><m> : "🇯🇲" # Jamaica
+<UEFD7><UEFD7>                                                                              <J><O> : "🇯🇴" # Jordan
+<Multi_key><equal><equal>                                                                   <J><O> : "🇯🇴" # Jordan
+<UEFD7><UEFD7>                                                                              <j><o> : "🇯🇴" # Jordan
+<Multi_key><equal><equal>                                                                   <j><o> : "🇯🇴" # Jordan
+<UEFD7><UEFD7>                                                                              <J><P> : "🇯🇵" # Japan
+<Multi_key><equal><equal>                                                                   <J><P> : "🇯🇵" # Japan
+<UEFD7><UEFD7>                                                                              <j><p> : "🇯🇵" # Japan
+<Multi_key><equal><equal>                                                                   <j><p> : "🇯🇵" # Japan
+<UEFD7><UEFD7>                                                                              <K><E> : "🇰🇪" # Kenya
+<Multi_key><equal><equal>                                                                   <K><E> : "🇰🇪" # Kenya
+<UEFD7><UEFD7>                                                                              <k><e> : "🇰🇪" # Kenya
+<Multi_key><equal><equal>                                                                   <k><e> : "🇰🇪" # Kenya
+<UEFD7><UEFD7>                                                                              <K><G> : "🇰🇬" # Kyrgyzstan
+<Multi_key><equal><equal>                                                                   <K><G> : "🇰🇬" # Kyrgyzstan
+<UEFD7><UEFD7>                                                                              <k><g> : "🇰🇬" # Kyrgyzstan
+<Multi_key><equal><equal>                                                                   <k><g> : "🇰🇬" # Kyrgyzstan
+<UEFD7><UEFD7>                                                                              <K><H> : "🇰🇭" # Cambodia
+<Multi_key><equal><equal>                                                                   <K><H> : "🇰🇭" # Cambodia
+<UEFD7><UEFD7>                                                                              <k><h> : "🇰🇭" # Cambodia
+<Multi_key><equal><equal>                                                                   <k><h> : "🇰🇭" # Cambodia
+<UEFD7><UEFD7>                                                                              <K><I> : "🇰🇮" # Kiribati
+<Multi_key><equal><equal>                                                                   <K><I> : "🇰🇮" # Kiribati
+<UEFD7><UEFD7>                                                                              <k><i> : "🇰🇮" # Kiribati
+<Multi_key><equal><equal>                                                                   <k><i> : "🇰🇮" # Kiribati
+<UEFD7><UEFD7>                                                                              <K><M> : "🇰🇲" # Comoros
+<Multi_key><equal><equal>                                                                   <K><M> : "🇰🇲" # Comoros
+<UEFD7><UEFD7>                                                                              <k><m> : "🇰🇲" # Comoros
+<Multi_key><equal><equal>                                                                   <k><m> : "🇰🇲" # Comoros
+<UEFD7><UEFD7>                                                                              <K><N> : "🇰🇳" # St. Kitts & Nevis
+<Multi_key><equal><equal>                                                                   <K><N> : "🇰🇳" # St. Kitts & Nevis
+<UEFD7><UEFD7>                                                                              <k><n> : "🇰🇳" # St. Kitts & Nevis
+<Multi_key><equal><equal>                                                                   <k><n> : "🇰🇳" # St. Kitts & Nevis
+<UEFD7><UEFD7>                                                                              <K><P> : "🇰🇵" # North Korea
+<Multi_key><equal><equal>                                                                   <K><P> : "🇰🇵" # North Korea
+<UEFD7><UEFD7>                                                                              <k><p> : "🇰🇵" # North Korea
+<Multi_key><equal><equal>                                                                   <k><p> : "🇰🇵" # North Korea
+<UEFD7><UEFD7>                                                                              <K><R> : "🇰🇷" # South Korea
+<Multi_key><equal><equal>                                                                   <K><R> : "🇰🇷" # South Korea
+<UEFD7><UEFD7>                                                                              <k><r> : "🇰🇷" # South Korea
+<Multi_key><equal><equal>                                                                   <k><r> : "🇰🇷" # South Korea
+<UEFD7><UEFD7>                                                                              <K><W> : "🇰🇼" # Kuwait
+<Multi_key><equal><equal>                                                                   <K><W> : "🇰🇼" # Kuwait
+<UEFD7><UEFD7>                                                                              <k><w> : "🇰🇼" # Kuwait
+<Multi_key><equal><equal>                                                                   <k><w> : "🇰🇼" # Kuwait
+<UEFD7><UEFD7>                                                                              <K><Y> : "🇰🇾" # Cayman Islands
+<Multi_key><equal><equal>                                                                   <K><Y> : "🇰🇾" # Cayman Islands
+<UEFD7><UEFD7>                                                                              <k><y> : "🇰🇾" # Cayman Islands
+<Multi_key><equal><equal>                                                                   <k><y> : "🇰🇾" # Cayman Islands
+<UEFD7><UEFD7>                                                                              <K><Z> : "🇰🇿" # Kazakhstan
+<Multi_key><equal><equal>                                                                   <K><Z> : "🇰🇿" # Kazakhstan
+<UEFD7><UEFD7>                                                                              <k><z> : "🇰🇿" # Kazakhstan
+<Multi_key><equal><equal>                                                                   <k><z> : "🇰🇿" # Kazakhstan
+<UEFD7><UEFD7>                                                                              <L><A> : "🇱🇦" # Laos
+<Multi_key><equal><equal>                                                                   <L><A> : "🇱🇦" # Laos
+<UEFD7><UEFD7>                                                                              <l><a> : "🇱🇦" # Laos
+<Multi_key><equal><equal>                                                                   <l><a> : "🇱🇦" # Laos
+<UEFD7><UEFD7>                                                                              <L><B> : "🇱🇧" # Lebanon
+<Multi_key><equal><equal>                                                                   <L><B> : "🇱🇧" # Lebanon
+<UEFD7><UEFD7>                                                                              <l><b> : "🇱🇧" # Lebanon
+<Multi_key><equal><equal>                                                                   <l><b> : "🇱🇧" # Lebanon
+<UEFD7><UEFD7>                                                                              <L><C> : "🇱🇨" # St. Lucia
+<Multi_key><equal><equal>                                                                   <L><C> : "🇱🇨" # St. Lucia
+<UEFD7><UEFD7>                                                                              <l><c> : "🇱🇨" # St. Lucia
+<Multi_key><equal><equal>                                                                   <l><c> : "🇱🇨" # St. Lucia
+<UEFD7><UEFD7>                                                                              <L><I> : "🇱🇮" # Liechtenstein
+<Multi_key><equal><equal>                                                                   <L><I> : "🇱🇮" # Liechtenstein
+<UEFD7><UEFD7>                                                                              <l><i> : "🇱🇮" # Liechtenstein
+<Multi_key><equal><equal>                                                                   <l><i> : "🇱🇮" # Liechtenstein
+<UEFD7><UEFD7>                                                                              <L><K> : "🇱🇰" # Sri Lanka
+<Multi_key><equal><equal>                                                                   <L><K> : "🇱🇰" # Sri Lanka
+<UEFD7><UEFD7>                                                                              <l><k> : "🇱🇰" # Sri Lanka
+<Multi_key><equal><equal>                                                                   <l><k> : "🇱🇰" # Sri Lanka
+<UEFD7><UEFD7>                                                                              <L><R> : "🇱🇷" # Liberia
+<Multi_key><equal><equal>                                                                   <L><R> : "🇱🇷" # Liberia
+<UEFD7><UEFD7>                                                                              <l><r> : "🇱🇷" # Liberia
+<Multi_key><equal><equal>                                                                   <l><r> : "🇱🇷" # Liberia
+<UEFD7><UEFD7>                                                                              <L><S> : "🇱🇸" # Lesotho
+<Multi_key><equal><equal>                                                                   <L><S> : "🇱🇸" # Lesotho
+<UEFD7><UEFD7>                                                                              <l><s> : "🇱🇸" # Lesotho
+<Multi_key><equal><equal>                                                                   <l><s> : "🇱🇸" # Lesotho
+<UEFD7><UEFD7>                                                                              <L><T> : "🇱🇹" # Lithuania
+<Multi_key><equal><equal>                                                                   <L><T> : "🇱🇹" # Lithuania
+<UEFD7><UEFD7>                                                                              <l><t> : "🇱🇹" # Lithuania
+<Multi_key><equal><equal>                                                                   <l><t> : "🇱🇹" # Lithuania
+<UEFD7><UEFD7>                                                                              <L><U> : "🇱🇺" # Luxembourg
+<Multi_key><equal><equal>                                                                   <L><U> : "🇱🇺" # Luxembourg
+<UEFD7><UEFD7>                                                                              <l><u> : "🇱🇺" # Luxembourg
+<Multi_key><equal><equal>                                                                   <l><u> : "🇱🇺" # Luxembourg
+<UEFD7><UEFD7>                                                                              <L><V> : "🇱🇻" # Latvia
+<Multi_key><equal><equal>                                                                   <L><V> : "🇱🇻" # Latvia
+<UEFD7><UEFD7>                                                                              <l><v> : "🇱🇻" # Latvia
+<Multi_key><equal><equal>                                                                   <l><v> : "🇱🇻" # Latvia
+<UEFD7><UEFD7>                                                                              <L><Y> : "🇱🇾" # Libya
+<Multi_key><equal><equal>                                                                   <L><Y> : "🇱🇾" # Libya
+<UEFD7><UEFD7>                                                                              <l><y> : "🇱🇾" # Libya
+<Multi_key><equal><equal>                                                                   <l><y> : "🇱🇾" # Libya
+<UEFD7><UEFD7>                                                                              <M><A> : "🇲🇦" # Morocco
+<Multi_key><equal><equal>                                                                   <M><A> : "🇲🇦" # Morocco
+<UEFD7><UEFD7>                                                                              <m><a> : "🇲🇦" # Morocco
+<Multi_key><equal><equal>                                                                   <m><a> : "🇲🇦" # Morocco
+<UEFD7><UEFD7>                                                                              <M><C> : "🇲🇨" # Monaco
+<Multi_key><equal><equal>                                                                   <M><C> : "🇲🇨" # Monaco
+<UEFD7><UEFD7>                                                                              <m><c> : "🇲🇨" # Monaco
+<Multi_key><equal><equal>                                                                   <m><c> : "🇲🇨" # Monaco
+<UEFD7><UEFD7>                                                                              <M><D> : "🇲🇩" # Moldova
+<Multi_key><equal><equal>                                                                   <M><D> : "🇲🇩" # Moldova
+<UEFD7><UEFD7>                                                                              <m><d> : "🇲🇩" # Moldova
+<Multi_key><equal><equal>                                                                   <m><d> : "🇲🇩" # Moldova
+<UEFD7><UEFD7>                                                                              <M><E> : "🇲🇪" # Montenegro
+<Multi_key><equal><equal>                                                                   <M><E> : "🇲🇪" # Montenegro
+<UEFD7><UEFD7>                                                                              <m><e> : "🇲🇪" # Montenegro
+<Multi_key><equal><equal>                                                                   <m><e> : "🇲🇪" # Montenegro
+<UEFD7><UEFD7>                                                                              <M><F> : "🇲🇫" # St. Martin
+<Multi_key><equal><equal>                                                                   <M><F> : "🇲🇫" # St. Martin
+<UEFD7><UEFD7>                                                                              <m><f> : "🇲🇫" # St. Martin
+<Multi_key><equal><equal>                                                                   <m><f> : "🇲🇫" # St. Martin
+<UEFD7><UEFD7>                                                                              <M><G> : "🇲🇬" # Madagascar
+<Multi_key><equal><equal>                                                                   <M><G> : "🇲🇬" # Madagascar
+<UEFD7><UEFD7>                                                                              <m><g> : "🇲🇬" # Madagascar
+<Multi_key><equal><equal>                                                                   <m><g> : "🇲🇬" # Madagascar
+<UEFD7><UEFD7>                                                                              <M><H> : "🇲🇭" # Marshall Islands
+<Multi_key><equal><equal>                                                                   <M><H> : "🇲🇭" # Marshall Islands
+<UEFD7><UEFD7>                                                                              <m><h> : "🇲🇭" # Marshall Islands
+<Multi_key><equal><equal>                                                                   <m><h> : "🇲🇭" # Marshall Islands
+<UEFD7><UEFD7>                                                                              <M><K> : "🇲🇰" # North Macedonia
+<Multi_key><equal><equal>                                                                   <M><K> : "🇲🇰" # North Macedonia
+<UEFD7><UEFD7>                                                                              <m><k> : "🇲🇰" # North Macedonia
+<Multi_key><equal><equal>                                                                   <m><k> : "🇲🇰" # North Macedonia
+<UEFD7><UEFD7>                                                                              <M><L> : "🇲🇱" # Mali
+<Multi_key><equal><equal>                                                                   <M><L> : "🇲🇱" # Mali
+<UEFD7><UEFD7>                                                                              <m><l> : "🇲🇱" # Mali
+<Multi_key><equal><equal>                                                                   <m><l> : "🇲🇱" # Mali
+<UEFD7><UEFD7>                                                                              <M><M> : "🇲🇲" # Myanmar (Burma)
+<Multi_key><equal><equal>                                                                   <M><M> : "🇲🇲" # Myanmar (Burma)
+<UEFD7><UEFD7>                                                                              <m><m> : "🇲🇲" # Myanmar (Burma)
+<Multi_key><equal><equal>                                                                   <m><m> : "🇲🇲" # Myanmar (Burma)
+<UEFD7><UEFD7>                                                                              <M><N> : "🇲🇳" # Mongolia
+<Multi_key><equal><equal>                                                                   <M><N> : "🇲🇳" # Mongolia
+<UEFD7><UEFD7>                                                                              <m><n> : "🇲🇳" # Mongolia
+<Multi_key><equal><equal>                                                                   <m><n> : "🇲🇳" # Mongolia
+<UEFD7><UEFD7>                                                                              <M><O> : "🇲🇴" # Macao SAR China
+<Multi_key><equal><equal>                                                                   <M><O> : "🇲🇴" # Macao SAR China
+<UEFD7><UEFD7>                                                                              <m><o> : "🇲🇴" # Macao SAR China
+<Multi_key><equal><equal>                                                                   <m><o> : "🇲🇴" # Macao SAR China
+<UEFD7><UEFD7>                                                                              <M><P> : "🇲🇵" # Northern Mariana Islands
+<Multi_key><equal><equal>                                                                   <M><P> : "🇲🇵" # Northern Mariana Islands
+<UEFD7><UEFD7>                                                                              <m><p> : "🇲🇵" # Northern Mariana Islands
+<Multi_key><equal><equal>                                                                   <m><p> : "🇲🇵" # Northern Mariana Islands
+<UEFD7><UEFD7>                                                                              <M><Q> : "🇲🇶" # Martinique
+<Multi_key><equal><equal>                                                                   <M><Q> : "🇲🇶" # Martinique
+<UEFD7><UEFD7>                                                                              <m><q> : "🇲🇶" # Martinique
+<Multi_key><equal><equal>                                                                   <m><q> : "🇲🇶" # Martinique
+<UEFD7><UEFD7>                                                                              <M><R> : "🇲🇷" # Mauritania
+<Multi_key><equal><equal>                                                                   <M><R> : "🇲🇷" # Mauritania
+<UEFD7><UEFD7>                                                                              <m><r> : "🇲🇷" # Mauritania
+<Multi_key><equal><equal>                                                                   <m><r> : "🇲🇷" # Mauritania
+<UEFD7><UEFD7>                                                                              <M><S> : "🇲🇸" # Montserrat
+<Multi_key><equal><equal>                                                                   <M><S> : "🇲🇸" # Montserrat
+<UEFD7><UEFD7>                                                                              <m><s> : "🇲🇸" # Montserrat
+<Multi_key><equal><equal>                                                                   <m><s> : "🇲🇸" # Montserrat
+<UEFD7><UEFD7>                                                                              <M><T> : "🇲🇹" # Malta
+<Multi_key><equal><equal>                                                                   <M><T> : "🇲🇹" # Malta
+<UEFD7><UEFD7>                                                                              <m><t> : "🇲🇹" # Malta
+<Multi_key><equal><equal>                                                                   <m><t> : "🇲🇹" # Malta
+<UEFD7><UEFD7>                                                                              <M><U> : "🇲🇺" # Mauritius
+<Multi_key><equal><equal>                                                                   <M><U> : "🇲🇺" # Mauritius
+<UEFD7><UEFD7>                                                                              <m><u> : "🇲🇺" # Mauritius
+<Multi_key><equal><equal>                                                                   <m><u> : "🇲🇺" # Mauritius
+<UEFD7><UEFD7>                                                                              <M><V> : "🇲🇻" # Maldives
+<Multi_key><equal><equal>                                                                   <M><V> : "🇲🇻" # Maldives
+<UEFD7><UEFD7>                                                                              <m><v> : "🇲🇻" # Maldives
+<Multi_key><equal><equal>                                                                   <m><v> : "🇲🇻" # Maldives
+<UEFD7><UEFD7>                                                                              <M><W> : "🇲🇼" # Malawi
+<Multi_key><equal><equal>                                                                   <M><W> : "🇲🇼" # Malawi
+<UEFD7><UEFD7>                                                                              <m><w> : "🇲🇼" # Malawi
+<Multi_key><equal><equal>                                                                   <m><w> : "🇲🇼" # Malawi
+<UEFD7><UEFD7>                                                                              <M><X> : "🇲🇽" # Mexico
+<Multi_key><equal><equal>                                                                   <M><X> : "🇲🇽" # Mexico
+<UEFD7><UEFD7>                                                                              <m><x> : "🇲🇽" # Mexico
+<Multi_key><equal><equal>                                                                   <m><x> : "🇲🇽" # Mexico
+<UEFD7><UEFD7>                                                                              <M><Y> : "🇲🇾" # Malaysia
+<Multi_key><equal><equal>                                                                   <M><Y> : "🇲🇾" # Malaysia
+<UEFD7><UEFD7>                                                                              <m><y> : "🇲🇾" # Malaysia
+<Multi_key><equal><equal>                                                                   <m><y> : "🇲🇾" # Malaysia
+<UEFD7><UEFD7>                                                                              <M><Z> : "🇲🇿" # Mozambique
+<Multi_key><equal><equal>                                                                   <M><Z> : "🇲🇿" # Mozambique
+<UEFD7><UEFD7>                                                                              <m><z> : "🇲🇿" # Mozambique
+<Multi_key><equal><equal>                                                                   <m><z> : "🇲🇿" # Mozambique
+<UEFD7><UEFD7>                                                                              <N><A> : "🇳🇦" # Namibia
+<Multi_key><equal><equal>                                                                   <N><A> : "🇳🇦" # Namibia
+<UEFD7><UEFD7>                                                                              <n><a> : "🇳🇦" # Namibia
+<Multi_key><equal><equal>                                                                   <n><a> : "🇳🇦" # Namibia
+<UEFD7><UEFD7>                                                                              <N><C> : "🇳🇨" # New Caledonia
+<Multi_key><equal><equal>                                                                   <N><C> : "🇳🇨" # New Caledonia
+<UEFD7><UEFD7>                                                                              <n><c> : "🇳🇨" # New Caledonia
+<Multi_key><equal><equal>                                                                   <n><c> : "🇳🇨" # New Caledonia
+<UEFD7><UEFD7>                                                                              <N><E> : "🇳🇪" # Niger
+<Multi_key><equal><equal>                                                                   <N><E> : "🇳🇪" # Niger
+<UEFD7><UEFD7>                                                                              <n><e> : "🇳🇪" # Niger
+<Multi_key><equal><equal>                                                                   <n><e> : "🇳🇪" # Niger
+<UEFD7><UEFD7>                                                                              <N><F> : "🇳🇫" # Norfolk Island
+<Multi_key><equal><equal>                                                                   <N><F> : "🇳🇫" # Norfolk Island
+<UEFD7><UEFD7>                                                                              <n><f> : "🇳🇫" # Norfolk Island
+<Multi_key><equal><equal>                                                                   <n><f> : "🇳🇫" # Norfolk Island
+<UEFD7><UEFD7>                                                                              <N><G> : "🇳🇬" # Nigeria
+<Multi_key><equal><equal>                                                                   <N><G> : "🇳🇬" # Nigeria
+<UEFD7><UEFD7>                                                                              <n><g> : "🇳🇬" # Nigeria
+<Multi_key><equal><equal>                                                                   <n><g> : "🇳🇬" # Nigeria
+<UEFD7><UEFD7>                                                                              <N><I> : "🇳🇮" # Nicaragua
+<Multi_key><equal><equal>                                                                   <N><I> : "🇳🇮" # Nicaragua
+<UEFD7><UEFD7>                                                                              <n><i> : "🇳🇮" # Nicaragua
+<Multi_key><equal><equal>                                                                   <n><i> : "🇳🇮" # Nicaragua
+<UEFD7><UEFD7>                                                                              <N><L> : "🇳🇱" # Netherlands
+<Multi_key><equal><equal>                                                                   <N><L> : "🇳🇱" # Netherlands
+<UEFD7><UEFD7>                                                                              <n><l> : "🇳🇱" # Netherlands
+<Multi_key><equal><equal>                                                                   <n><l> : "🇳🇱" # Netherlands
+<UEFD7><UEFD7>                                                                              <N><O> : "🇳🇴" # Norway
+<Multi_key><equal><equal>                                                                   <N><O> : "🇳🇴" # Norway
+<UEFD7><UEFD7>                                                                              <n><o> : "🇳🇴" # Norway
+<Multi_key><equal><equal>                                                                   <n><o> : "🇳🇴" # Norway
+<UEFD7><UEFD7>                                                                              <N><P> : "🇳🇵" # Nepal
+<Multi_key><equal><equal>                                                                   <N><P> : "🇳🇵" # Nepal
+<UEFD7><UEFD7>                                                                              <n><p> : "🇳🇵" # Nepal
+<Multi_key><equal><equal>                                                                   <n><p> : "🇳🇵" # Nepal
+<UEFD7><UEFD7>                                                                              <N><R> : "🇳🇷" # Nauru
+<Multi_key><equal><equal>                                                                   <N><R> : "🇳🇷" # Nauru
+<UEFD7><UEFD7>                                                                              <n><r> : "🇳🇷" # Nauru
+<Multi_key><equal><equal>                                                                   <n><r> : "🇳🇷" # Nauru
+<UEFD7><UEFD7>                                                                              <N><U> : "🇳🇺" # Niue
+<Multi_key><equal><equal>                                                                   <N><U> : "🇳🇺" # Niue
+<UEFD7><UEFD7>                                                                              <n><u> : "🇳🇺" # Niue
+<Multi_key><equal><equal>                                                                   <n><u> : "🇳🇺" # Niue
+<UEFD7><UEFD7>                                                                              <N><Z> : "🇳🇿" # New Zealand
+<Multi_key><equal><equal>                                                                   <N><Z> : "🇳🇿" # New Zealand
+<UEFD7><UEFD7>                                                                              <n><z> : "🇳🇿" # New Zealand
+<Multi_key><equal><equal>                                                                   <n><z> : "🇳🇿" # New Zealand
+<UEFD7><UEFD7>                                                                              <O><M> : "🇴🇲" # Oman
+<Multi_key><equal><equal>                                                                   <O><M> : "🇴🇲" # Oman
+<UEFD7><UEFD7>                                                                              <o><m> : "🇴🇲" # Oman
+<Multi_key><equal><equal>                                                                   <o><m> : "🇴🇲" # Oman
+<UEFD7><UEFD7>                                                                              <P><A> : "🇵🇦" # Panama
+<Multi_key><equal><equal>                                                                   <P><A> : "🇵🇦" # Panama
+<UEFD7><UEFD7>                                                                              <p><a> : "🇵🇦" # Panama
+<Multi_key><equal><equal>                                                                   <p><a> : "🇵🇦" # Panama
+<UEFD7><UEFD7>                                                                              <P><E> : "🇵🇪" # Peru
+<Multi_key><equal><equal>                                                                   <P><E> : "🇵🇪" # Peru
+<UEFD7><UEFD7>                                                                              <p><e> : "🇵🇪" # Peru
+<Multi_key><equal><equal>                                                                   <p><e> : "🇵🇪" # Peru
+<UEFD7><UEFD7>                                                                              <P><F> : "🇵🇫" # French Polynesia
+<Multi_key><equal><equal>                                                                   <P><F> : "🇵🇫" # French Polynesia
+<UEFD7><UEFD7>                                                                              <p><f> : "🇵🇫" # French Polynesia
+<Multi_key><equal><equal>                                                                   <p><f> : "🇵🇫" # French Polynesia
+<UEFD7><UEFD7>                                                                              <P><G> : "🇵🇬" # Papua New Guinea
+<Multi_key><equal><equal>                                                                   <P><G> : "🇵🇬" # Papua New Guinea
+<UEFD7><UEFD7>                                                                              <p><g> : "🇵🇬" # Papua New Guinea
+<Multi_key><equal><equal>                                                                   <p><g> : "🇵🇬" # Papua New Guinea
+<UEFD7><UEFD7>                                                                              <P><H> : "🇵🇭" # Philippines
+<Multi_key><equal><equal>                                                                   <P><H> : "🇵🇭" # Philippines
+<UEFD7><UEFD7>                                                                              <p><h> : "🇵🇭" # Philippines
+<Multi_key><equal><equal>                                                                   <p><h> : "🇵🇭" # Philippines
+<UEFD7><UEFD7>                                                                              <P><K> : "🇵🇰" # Pakistan
+<Multi_key><equal><equal>                                                                   <P><K> : "🇵🇰" # Pakistan
+<UEFD7><UEFD7>                                                                              <p><k> : "🇵🇰" # Pakistan
+<Multi_key><equal><equal>                                                                   <p><k> : "🇵🇰" # Pakistan
+<UEFD7><UEFD7>                                                                              <P><L> : "🇵🇱" # Poland
+<Multi_key><equal><equal>                                                                   <P><L> : "🇵🇱" # Poland
+<UEFD7><UEFD7>                                                                              <p><l> : "🇵🇱" # Poland
+<Multi_key><equal><equal>                                                                   <p><l> : "🇵🇱" # Poland
+<UEFD7><UEFD7>                                                                              <P><M> : "🇵🇲" # St. Pierre & Miquelon
+<Multi_key><equal><equal>                                                                   <P><M> : "🇵🇲" # St. Pierre & Miquelon
+<UEFD7><UEFD7>                                                                              <p><m> : "🇵🇲" # St. Pierre & Miquelon
+<Multi_key><equal><equal>                                                                   <p><m> : "🇵🇲" # St. Pierre & Miquelon
+<UEFD7><UEFD7>                                                                              <P><N> : "🇵🇳" # Pitcairn Islands
+<Multi_key><equal><equal>                                                                   <P><N> : "🇵🇳" # Pitcairn Islands
+<UEFD7><UEFD7>                                                                              <p><n> : "🇵🇳" # Pitcairn Islands
+<Multi_key><equal><equal>                                                                   <p><n> : "🇵🇳" # Pitcairn Islands
+<UEFD7><UEFD7>                                                                              <P><R> : "🇵🇷" # Puerto Rico
+<Multi_key><equal><equal>                                                                   <P><R> : "🇵🇷" # Puerto Rico
+<UEFD7><UEFD7>                                                                              <p><r> : "🇵🇷" # Puerto Rico
+<Multi_key><equal><equal>                                                                   <p><r> : "🇵🇷" # Puerto Rico
+<UEFD7><UEFD7>                                                                              <P><S> : "🇵🇸" # Palestinian Territories
+<Multi_key><equal><equal>                                                                   <P><S> : "🇵🇸" # Palestinian Territories
+<UEFD7><UEFD7>                                                                              <p><s> : "🇵🇸" # Palestinian Territories
+<Multi_key><equal><equal>                                                                   <p><s> : "🇵🇸" # Palestinian Territories
+<UEFD7><UEFD7>                                                                              <P><T> : "🇵🇹" # Portugal
+<Multi_key><equal><equal>                                                                   <P><T> : "🇵🇹" # Portugal
+<UEFD7><UEFD7>                                                                              <p><t> : "🇵🇹" # Portugal
+<Multi_key><equal><equal>                                                                   <p><t> : "🇵🇹" # Portugal
+<UEFD7><UEFD7>                                                                              <P><W> : "🇵🇼" # Palau
+<Multi_key><equal><equal>                                                                   <P><W> : "🇵🇼" # Palau
+<UEFD7><UEFD7>                                                                              <p><w> : "🇵🇼" # Palau
+<Multi_key><equal><equal>                                                                   <p><w> : "🇵🇼" # Palau
+<UEFD7><UEFD7>                                                                              <P><Y> : "🇵🇾" # Paraguay
+<Multi_key><equal><equal>                                                                   <P><Y> : "🇵🇾" # Paraguay
+<UEFD7><UEFD7>                                                                              <p><y> : "🇵🇾" # Paraguay
+<Multi_key><equal><equal>                                                                   <p><y> : "🇵🇾" # Paraguay
+<UEFD7><UEFD7>                                                                              <Q><A> : "🇶🇦" # Qatar
+<Multi_key><equal><equal>                                                                   <Q><A> : "🇶🇦" # Qatar
+<UEFD7><UEFD7>                                                                              <q><a> : "🇶🇦" # Qatar
+<Multi_key><equal><equal>                                                                   <q><a> : "🇶🇦" # Qatar
+<UEFD7><UEFD7>                                                                              <R><E> : "🇷🇪" # Réunion
+<Multi_key><equal><equal>                                                                   <R><E> : "🇷🇪" # Réunion
+<UEFD7><UEFD7>                                                                              <r><e> : "🇷🇪" # Réunion
+<Multi_key><equal><equal>                                                                   <r><e> : "🇷🇪" # Réunion
+<UEFD7><UEFD7>                                                                              <R><O> : "🇷🇴" # Romania
+<Multi_key><equal><equal>                                                                   <R><O> : "🇷🇴" # Romania
+<UEFD7><UEFD7>                                                                              <r><o> : "🇷🇴" # Romania
+<Multi_key><equal><equal>                                                                   <r><o> : "🇷🇴" # Romania
+<UEFD7><UEFD7>                                                                              <R><S> : "🇷🇸" # Serbia
+<Multi_key><equal><equal>                                                                   <R><S> : "🇷🇸" # Serbia
+<UEFD7><UEFD7>                                                                              <r><s> : "🇷🇸" # Serbia
+<Multi_key><equal><equal>                                                                   <r><s> : "🇷🇸" # Serbia
+<UEFD7><UEFD7>                                                                              <R><U> : "🇷🇺" # Russia
+<Multi_key><equal><equal>                                                                   <R><U> : "🇷🇺" # Russia
+<UEFD7><UEFD7>                                                                              <r><u> : "🇷🇺" # Russia
+<Multi_key><equal><equal>                                                                   <r><u> : "🇷🇺" # Russia
+<UEFD7><UEFD7>                                                                              <R><W> : "🇷🇼" # Rwanda
+<Multi_key><equal><equal>                                                                   <R><W> : "🇷🇼" # Rwanda
+<UEFD7><UEFD7>                                                                              <r><w> : "🇷🇼" # Rwanda
+<Multi_key><equal><equal>                                                                   <r><w> : "🇷🇼" # Rwanda
+<UEFD7><UEFD7>                                                                              <S><A> : "🇸🇦" # Saudi Arabia
+<Multi_key><equal><equal>                                                                   <S><A> : "🇸🇦" # Saudi Arabia
+<UEFD7><UEFD7>                                                                              <s><a> : "🇸🇦" # Saudi Arabia
+<Multi_key><equal><equal>                                                                   <s><a> : "🇸🇦" # Saudi Arabia
+<UEFD7><UEFD7>                                                                              <S><B> : "🇸🇧" # Solomon Islands
+<Multi_key><equal><equal>                                                                   <S><B> : "🇸🇧" # Solomon Islands
+<UEFD7><UEFD7>                                                                              <s><b> : "🇸🇧" # Solomon Islands
+<Multi_key><equal><equal>                                                                   <s><b> : "🇸🇧" # Solomon Islands
+<UEFD7><UEFD7>                                                                              <S><C> : "🇸🇨" # Seychelles
+<Multi_key><equal><equal>                                                                   <S><C> : "🇸🇨" # Seychelles
+<UEFD7><UEFD7>                                                                              <s><c> : "🇸🇨" # Seychelles
+<Multi_key><equal><equal>                                                                   <s><c> : "🇸🇨" # Seychelles
+<UEFD7><UEFD7>                                                                              <S><D> : "🇸🇩" # Sudan
+<Multi_key><equal><equal>                                                                   <S><D> : "🇸🇩" # Sudan
+<UEFD7><UEFD7>                                                                              <s><d> : "🇸🇩" # Sudan
+<Multi_key><equal><equal>                                                                   <s><d> : "🇸🇩" # Sudan
+<UEFD7><UEFD7>                                                                              <S><E> : "🇸🇪" # Sweden
+<Multi_key><equal><equal>                                                                   <S><E> : "🇸🇪" # Sweden
+<UEFD7><UEFD7>                                                                              <s><e> : "🇸🇪" # Sweden
+<Multi_key><equal><equal>                                                                   <s><e> : "🇸🇪" # Sweden
+<UEFD7><UEFD7>                                                                              <S><G> : "🇸🇬" # Singapore
+<Multi_key><equal><equal>                                                                   <S><G> : "🇸🇬" # Singapore
+<UEFD7><UEFD7>                                                                              <s><g> : "🇸🇬" # Singapore
+<Multi_key><equal><equal>                                                                   <s><g> : "🇸🇬" # Singapore
+<UEFD7><UEFD7>                                                                              <S><H> : "🇸🇭" # St. Helena
+<Multi_key><equal><equal>                                                                   <S><H> : "🇸🇭" # St. Helena
+<UEFD7><UEFD7>                                                                              <s><h> : "🇸🇭" # St. Helena
+<Multi_key><equal><equal>                                                                   <s><h> : "🇸🇭" # St. Helena
+<UEFD7><UEFD7>                                                                              <S><I> : "🇸🇮" # Slovenia
+<Multi_key><equal><equal>                                                                   <S><I> : "🇸🇮" # Slovenia
+<UEFD7><UEFD7>                                                                              <s><i> : "🇸🇮" # Slovenia
+<Multi_key><equal><equal>                                                                   <s><i> : "🇸🇮" # Slovenia
+<UEFD7><UEFD7>                                                                              <S><J> : "🇸🇯" # Svalbard & Jan Mayen
+<Multi_key><equal><equal>                                                                   <S><J> : "🇸🇯" # Svalbard & Jan Mayen
+<UEFD7><UEFD7>                                                                              <s><j> : "🇸🇯" # Svalbard & Jan Mayen
+<Multi_key><equal><equal>                                                                   <s><j> : "🇸🇯" # Svalbard & Jan Mayen
+<UEFD7><UEFD7>                                                                              <S><K> : "🇸🇰" # Slovakia
+<Multi_key><equal><equal>                                                                   <S><K> : "🇸🇰" # Slovakia
+<UEFD7><UEFD7>                                                                              <s><k> : "🇸🇰" # Slovakia
+<Multi_key><equal><equal>                                                                   <s><k> : "🇸🇰" # Slovakia
+<UEFD7><UEFD7>                                                                              <S><L> : "🇸🇱" # Sierra Leone
+<Multi_key><equal><equal>                                                                   <S><L> : "🇸🇱" # Sierra Leone
+<UEFD7><UEFD7>                                                                              <s><l> : "🇸🇱" # Sierra Leone
+<Multi_key><equal><equal>                                                                   <s><l> : "🇸🇱" # Sierra Leone
+<UEFD7><UEFD7>                                                                              <S><M> : "🇸🇲" # San Marino
+<Multi_key><equal><equal>                                                                   <S><M> : "🇸🇲" # San Marino
+<UEFD7><UEFD7>                                                                              <s><m> : "🇸🇲" # San Marino
+<Multi_key><equal><equal>                                                                   <s><m> : "🇸🇲" # San Marino
+<UEFD7><UEFD7>                                                                              <S><N> : "🇸🇳" # Senegal
+<Multi_key><equal><equal>                                                                   <S><N> : "🇸🇳" # Senegal
+<UEFD7><UEFD7>                                                                              <s><n> : "🇸🇳" # Senegal
+<Multi_key><equal><equal>                                                                   <s><n> : "🇸🇳" # Senegal
+<UEFD7><UEFD7>                                                                              <S><O> : "🇸🇴" # Somalia
+<Multi_key><equal><equal>                                                                   <S><O> : "🇸🇴" # Somalia
+<UEFD7><UEFD7>                                                                              <s><o> : "🇸🇴" # Somalia
+<Multi_key><equal><equal>                                                                   <s><o> : "🇸🇴" # Somalia
+<UEFD7><UEFD7>                                                                              <S><R> : "🇸🇷" # Suriname
+<Multi_key><equal><equal>                                                                   <S><R> : "🇸🇷" # Suriname
+<UEFD7><UEFD7>                                                                              <s><r> : "🇸🇷" # Suriname
+<Multi_key><equal><equal>                                                                   <s><r> : "🇸🇷" # Suriname
+<UEFD7><UEFD7>                                                                              <S><S> : "🇸🇸" # South Sudan
+<Multi_key><equal><equal>                                                                   <S><S> : "🇸🇸" # South Sudan
+<UEFD7><UEFD7>                                                                              <s><s> : "🇸🇸" # South Sudan
+<Multi_key><equal><equal>                                                                   <s><s> : "🇸🇸" # South Sudan
+<UEFD7><UEFD7>                                                                              <S><T> : "🇸🇹" # São Tomé & Príncipe
+<Multi_key><equal><equal>                                                                   <S><T> : "🇸🇹" # São Tomé & Príncipe
+<UEFD7><UEFD7>                                                                              <s><t> : "🇸🇹" # São Tomé & Príncipe
+<Multi_key><equal><equal>                                                                   <s><t> : "🇸🇹" # São Tomé & Príncipe
+<UEFD7><UEFD7>                                                                              <S><V> : "🇸🇻" # El Salvador
+<Multi_key><equal><equal>                                                                   <S><V> : "🇸🇻" # El Salvador
+<UEFD7><UEFD7>                                                                              <s><v> : "🇸🇻" # El Salvador
+<Multi_key><equal><equal>                                                                   <s><v> : "🇸🇻" # El Salvador
+<UEFD7><UEFD7>                                                                              <S><X> : "🇸🇽" # Sint Maarten
+<Multi_key><equal><equal>                                                                   <S><X> : "🇸🇽" # Sint Maarten
+<UEFD7><UEFD7>                                                                              <s><x> : "🇸🇽" # Sint Maarten
+<Multi_key><equal><equal>                                                                   <s><x> : "🇸🇽" # Sint Maarten
+<UEFD7><UEFD7>                                                                              <S><Y> : "🇸🇾" # Syria
+<Multi_key><equal><equal>                                                                   <S><Y> : "🇸🇾" # Syria
+<UEFD7><UEFD7>                                                                              <s><y> : "🇸🇾" # Syria
+<Multi_key><equal><equal>                                                                   <s><y> : "🇸🇾" # Syria
+<UEFD7><UEFD7>                                                                              <S><Z> : "🇸🇿" # Eswatini
+<Multi_key><equal><equal>                                                                   <S><Z> : "🇸🇿" # Eswatini
+<UEFD7><UEFD7>                                                                              <s><z> : "🇸🇿" # Eswatini
+<Multi_key><equal><equal>                                                                   <s><z> : "🇸🇿" # Eswatini
+<UEFD7><UEFD7>                                                                              <T><A> : "🇹🇦" # Tristan da Cunha
+<Multi_key><equal><equal>                                                                   <T><A> : "🇹🇦" # Tristan da Cunha
+<UEFD7><UEFD7>                                                                              <t><a> : "🇹🇦" # Tristan da Cunha
+<Multi_key><equal><equal>                                                                   <t><a> : "🇹🇦" # Tristan da Cunha
+<UEFD7><UEFD7>                                                                              <T><C> : "🇹🇨" # Turks & Caicos Islands
+<Multi_key><equal><equal>                                                                   <T><C> : "🇹🇨" # Turks & Caicos Islands
+<UEFD7><UEFD7>                                                                              <t><c> : "🇹🇨" # Turks & Caicos Islands
+<Multi_key><equal><equal>                                                                   <t><c> : "🇹🇨" # Turks & Caicos Islands
+<UEFD7><UEFD7>                                                                              <T><D> : "🇹🇩" # Chad
+<Multi_key><equal><equal>                                                                   <T><D> : "🇹🇩" # Chad
+<UEFD7><UEFD7>                                                                              <t><d> : "🇹🇩" # Chad
+<Multi_key><equal><equal>                                                                   <t><d> : "🇹🇩" # Chad
+<UEFD7><UEFD7>                                                                              <T><F> : "🇹🇫" # French Southern Territories
+<Multi_key><equal><equal>                                                                   <T><F> : "🇹🇫" # French Southern Territories
+<UEFD7><UEFD7>                                                                              <t><f> : "🇹🇫" # French Southern Territories
+<Multi_key><equal><equal>                                                                   <t><f> : "🇹🇫" # French Southern Territories
+<UEFD7><UEFD7>                                                                              <T><G> : "🇹🇬" # Togo
+<Multi_key><equal><equal>                                                                   <T><G> : "🇹🇬" # Togo
+<UEFD7><UEFD7>                                                                              <t><g> : "🇹🇬" # Togo
+<Multi_key><equal><equal>                                                                   <t><g> : "🇹🇬" # Togo
+<UEFD7><UEFD7>                                                                              <T><H> : "🇹🇭" # Thailand
+<Multi_key><equal><equal>                                                                   <T><H> : "🇹🇭" # Thailand
+<UEFD7><UEFD7>                                                                              <t><h> : "🇹🇭" # Thailand
+<Multi_key><equal><equal>                                                                   <t><h> : "🇹🇭" # Thailand
+<UEFD7><UEFD7>                                                                              <T><J> : "🇹🇯" # Tajikistan
+<Multi_key><equal><equal>                                                                   <T><J> : "🇹🇯" # Tajikistan
+<UEFD7><UEFD7>                                                                              <t><j> : "🇹🇯" # Tajikistan
+<Multi_key><equal><equal>                                                                   <t><j> : "🇹🇯" # Tajikistan
+<UEFD7><UEFD7>                                                                              <T><K> : "🇹🇰" # Tokelau
+<Multi_key><equal><equal>                                                                   <T><K> : "🇹🇰" # Tokelau
+<UEFD7><UEFD7>                                                                              <t><k> : "🇹🇰" # Tokelau
+<Multi_key><equal><equal>                                                                   <t><k> : "🇹🇰" # Tokelau
+<UEFD7><UEFD7>                                                                              <T><L> : "🇹🇱" # Timor-Leste
+<Multi_key><equal><equal>                                                                   <T><L> : "🇹🇱" # Timor-Leste
+<UEFD7><UEFD7>                                                                              <t><l> : "🇹🇱" # Timor-Leste
+<Multi_key><equal><equal>                                                                   <t><l> : "🇹🇱" # Timor-Leste
+<UEFD7><UEFD7>                                                                              <T><M> : "🇹🇲" # Turkmenistan
+<Multi_key><equal><equal>                                                                   <T><M> : "🇹🇲" # Turkmenistan
+<UEFD7><UEFD7>                                                                              <t><m> : "🇹🇲" # Turkmenistan
+<Multi_key><equal><equal>                                                                   <t><m> : "🇹🇲" # Turkmenistan
+<UEFD7><UEFD7>                                                                              <T><N> : "🇹🇳" # Tunisia
+<Multi_key><equal><equal>                                                                   <T><N> : "🇹🇳" # Tunisia
+<UEFD7><UEFD7>                                                                              <t><n> : "🇹🇳" # Tunisia
+<Multi_key><equal><equal>                                                                   <t><n> : "🇹🇳" # Tunisia
+<UEFD7><UEFD7>                                                                              <T><O> : "🇹🇴" # Tonga
+<Multi_key><equal><equal>                                                                   <T><O> : "🇹🇴" # Tonga
+<UEFD7><UEFD7>                                                                              <t><o> : "🇹🇴" # Tonga
+<Multi_key><equal><equal>                                                                   <t><o> : "🇹🇴" # Tonga
+<UEFD7><UEFD7>                                                                              <T><R> : "🇹🇷" # Turkey
+<Multi_key><equal><equal>                                                                   <T><R> : "🇹🇷" # Turkey
+<UEFD7><UEFD7>                                                                              <t><r> : "🇹🇷" # Turkey
+<Multi_key><equal><equal>                                                                   <t><r> : "🇹🇷" # Turkey
+<UEFD7><UEFD7>                                                                              <T><T> : "🇹🇹" # Trinidad & Tobago
+<Multi_key><equal><equal>                                                                   <T><T> : "🇹🇹" # Trinidad & Tobago
+<UEFD7><UEFD7>                                                                              <t><t> : "🇹🇹" # Trinidad & Tobago
+<Multi_key><equal><equal>                                                                   <t><t> : "🇹🇹" # Trinidad & Tobago
+<UEFD7><UEFD7>                                                                              <T><V> : "🇹🇻" # Tuvalu
+<Multi_key><equal><equal>                                                                   <T><V> : "🇹🇻" # Tuvalu
+<UEFD7><UEFD7>                                                                              <t><v> : "🇹🇻" # Tuvalu
+<Multi_key><equal><equal>                                                                   <t><v> : "🇹🇻" # Tuvalu
+<UEFD7><UEFD7>                                                                              <T><W> : "🇹🇼" # Taiwan
+<Multi_key><equal><equal>                                                                   <T><W> : "🇹🇼" # Taiwan
+<UEFD7><UEFD7>                                                                              <t><w> : "🇹🇼" # Taiwan
+<Multi_key><equal><equal>                                                                   <t><w> : "🇹🇼" # Taiwan
+<UEFD7><UEFD7>                                                                              <T><Z> : "🇹🇿" # Tanzania
+<Multi_key><equal><equal>                                                                   <T><Z> : "🇹🇿" # Tanzania
+<UEFD7><UEFD7>                                                                              <t><z> : "🇹🇿" # Tanzania
+<Multi_key><equal><equal>                                                                   <t><z> : "🇹🇿" # Tanzania
+<UEFD7><UEFD7>                                                                              <U><A> : "🇺🇦" # Ukraine
+<Multi_key><equal><equal>                                                                   <U><A> : "🇺🇦" # Ukraine
+<UEFD7><UEFD7>                                                                              <u><a> : "🇺🇦" # Ukraine
+<Multi_key><equal><equal>                                                                   <u><a> : "🇺🇦" # Ukraine
+<UEFD7><UEFD7>                                                                              <U><G> : "🇺🇬" # Uganda
+<Multi_key><equal><equal>                                                                   <U><G> : "🇺🇬" # Uganda
+<UEFD7><UEFD7>                                                                              <u><g> : "🇺🇬" # Uganda
+<Multi_key><equal><equal>                                                                   <u><g> : "🇺🇬" # Uganda
+<UEFD7><UEFD7>                                                                              <U><M> : "🇺🇲" # U.S. Outlying Islands
+<Multi_key><equal><equal>                                                                   <U><M> : "🇺🇲" # U.S. Outlying Islands
+<UEFD7><UEFD7>                                                                              <u><m> : "🇺🇲" # U.S. Outlying Islands
+<Multi_key><equal><equal>                                                                   <u><m> : "🇺🇲" # U.S. Outlying Islands
+<UEFD7><UEFD7>                                                                              <U><N> : "🇺🇳" # United Nations
+<Multi_key><equal><equal>                                                                   <U><N> : "🇺🇳" # United Nations
+<UEFD7><UEFD7>                                                                              <u><n> : "🇺🇳" # United Nations
+<Multi_key><equal><equal>                                                                   <u><n> : "🇺🇳" # United Nations
+<UEFD7><UEFD7>                                                                              <U><S> : "🇺🇸" # United States
+<Multi_key><equal><equal>                                                                   <U><S> : "🇺🇸" # United States
+<UEFD7><UEFD7>                                                                              <u><s> : "🇺🇸" # United States
+<Multi_key><equal><equal>                                                                   <u><s> : "🇺🇸" # United States
+<UEFD7><UEFD7>                                                                              <U><Y> : "🇺🇾" # Uruguay
+<Multi_key><equal><equal>                                                                   <U><Y> : "🇺🇾" # Uruguay
+<UEFD7><UEFD7>                                                                              <u><y> : "🇺🇾" # Uruguay
+<Multi_key><equal><equal>                                                                   <u><y> : "🇺🇾" # Uruguay
+<UEFD7><UEFD7>                                                                              <U><Z> : "🇺🇿" # Uzbekistan
+<Multi_key><equal><equal>                                                                   <U><Z> : "🇺🇿" # Uzbekistan
+<UEFD7><UEFD7>                                                                              <u><z> : "🇺🇿" # Uzbekistan
+<Multi_key><equal><equal>                                                                   <u><z> : "🇺🇿" # Uzbekistan
+<UEFD7><UEFD7>                                                                              <V><A> : "🇻🇦" # Vatican City
+<Multi_key><equal><equal>                                                                   <V><A> : "🇻🇦" # Vatican City
+<UEFD7><UEFD7>                                                                              <v><a> : "🇻🇦" # Vatican City
+<Multi_key><equal><equal>                                                                   <v><a> : "🇻🇦" # Vatican City
+<UEFD7><UEFD7>                                                                              <V><C> : "🇻🇨" # St. Vincent & Grenadines
+<Multi_key><equal><equal>                                                                   <V><C> : "🇻🇨" # St. Vincent & Grenadines
+<UEFD7><UEFD7>                                                                              <v><c> : "🇻🇨" # St. Vincent & Grenadines
+<Multi_key><equal><equal>                                                                   <v><c> : "🇻🇨" # St. Vincent & Grenadines
+<UEFD7><UEFD7>                                                                              <V><E> : "🇻🇪" # Venezuela
+<Multi_key><equal><equal>                                                                   <V><E> : "🇻🇪" # Venezuela
+<UEFD7><UEFD7>                                                                              <v><e> : "🇻🇪" # Venezuela
+<Multi_key><equal><equal>                                                                   <v><e> : "🇻🇪" # Venezuela
+<UEFD7><UEFD7>                                                                              <V><G> : "🇻🇬" # British Virgin Islands
+<Multi_key><equal><equal>                                                                   <V><G> : "🇻🇬" # British Virgin Islands
+<UEFD7><UEFD7>                                                                              <v><g> : "🇻🇬" # British Virgin Islands
+<Multi_key><equal><equal>                                                                   <v><g> : "🇻🇬" # British Virgin Islands
+<UEFD7><UEFD7>                                                                              <V><I> : "🇻🇮" # U.S. Virgin Islands
+<Multi_key><equal><equal>                                                                   <V><I> : "🇻🇮" # U.S. Virgin Islands
+<UEFD7><UEFD7>                                                                              <v><i> : "🇻🇮" # U.S. Virgin Islands
+<Multi_key><equal><equal>                                                                   <v><i> : "🇻🇮" # U.S. Virgin Islands
+<UEFD7><UEFD7>                                                                              <V><N> : "🇻🇳" # Vietnam
+<Multi_key><equal><equal>                                                                   <V><N> : "🇻🇳" # Vietnam
+<UEFD7><UEFD7>                                                                              <v><n> : "🇻🇳" # Vietnam
+<Multi_key><equal><equal>                                                                   <v><n> : "🇻🇳" # Vietnam
+<UEFD7><UEFD7>                                                                              <V><U> : "🇻🇺" # Vanuatu
+<Multi_key><equal><equal>                                                                   <V><U> : "🇻🇺" # Vanuatu
+<UEFD7><UEFD7>                                                                              <v><u> : "🇻🇺" # Vanuatu
+<Multi_key><equal><equal>                                                                   <v><u> : "🇻🇺" # Vanuatu
+<UEFD7><UEFD7>                                                                              <W><F> : "🇼🇫" # Wallis & Futuna
+<Multi_key><equal><equal>                                                                   <W><F> : "🇼🇫" # Wallis & Futuna
+<UEFD7><UEFD7>                                                                              <w><f> : "🇼🇫" # Wallis & Futuna
+<Multi_key><equal><equal>                                                                   <w><f> : "🇼🇫" # Wallis & Futuna
+<UEFD7><UEFD7>                                                                              <W><S> : "🇼🇸" # Samoa
+<Multi_key><equal><equal>                                                                   <W><S> : "🇼🇸" # Samoa
+<UEFD7><UEFD7>                                                                              <w><s> : "🇼🇸" # Samoa
+<Multi_key><equal><equal>                                                                   <w><s> : "🇼🇸" # Samoa
+<UEFD7><UEFD7>                                                                              <X><K> : "🇽🇰" # Kosovo
+<Multi_key><equal><equal>                                                                   <X><K> : "🇽🇰" # Kosovo
+<UEFD7><UEFD7>                                                                              <x><k> : "🇽🇰" # Kosovo
+<Multi_key><equal><equal>                                                                   <x><k> : "🇽🇰" # Kosovo
+<UEFD7><UEFD7>                                                                              <Y><E> : "🇾🇪" # Yemen
+<Multi_key><equal><equal>                                                                   <Y><E> : "🇾🇪" # Yemen
+<UEFD7><UEFD7>                                                                              <y><e> : "🇾🇪" # Yemen
+<Multi_key><equal><equal>                                                                   <y><e> : "🇾🇪" # Yemen
+<UEFD7><UEFD7>                                                                              <Y><T> : "🇾🇹" # Mayotte
+<Multi_key><equal><equal>                                                                   <Y><T> : "🇾🇹" # Mayotte
+<UEFD7><UEFD7>                                                                              <y><t> : "🇾🇹" # Mayotte
+<Multi_key><equal><equal>                                                                   <y><t> : "🇾🇹" # Mayotte
+<UEFD7><UEFD7>                                                                              <Z><A> : "🇿🇦" # South Africa
+<Multi_key><equal><equal>                                                                   <Z><A> : "🇿🇦" # South Africa
+<UEFD7><UEFD7>                                                                              <z><a> : "🇿🇦" # South Africa
+<Multi_key><equal><equal>                                                                   <z><a> : "🇿🇦" # South Africa
+<UEFD7><UEFD7>                                                                              <Z><M> : "🇿🇲" # Zambia
+<Multi_key><equal><equal>                                                                   <Z><M> : "🇿🇲" # Zambia
+<UEFD7><UEFD7>                                                                              <z><m> : "🇿🇲" # Zambia
+<Multi_key><equal><equal>                                                                   <z><m> : "🇿🇲" # Zambia
+<UEFD7><UEFD7>                                                                              <Z><W> : "🇿🇼" # Zimbabwe
+<Multi_key><equal><equal>                                                                   <Z><W> : "🇿🇼" # Zimbabwe
+<UEFD7><UEFD7>                                                                              <z><w> : "🇿🇼" # Zimbabwe
+<Multi_key><equal><equal>                                                                   <z><w> : "🇿🇼" # Zimbabwe
 #
 #
 # # EMOJI_READY

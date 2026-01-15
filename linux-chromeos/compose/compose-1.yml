@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.1.7.0" # See #   End of line comments
+<UEFA0>                     : "version 6.1.7.2" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -478,7 +478,7 @@
 #   opposed to U2002, U2003, consistently with TeX, where \qquad and \quad are
 #   breaking, while \emspace, \enspace and \thinspace are no-break. Although
 #   this difference does not seem to be documented, it was obviously well known
-#   and fostered the original typographical space range design.
+#   and informed the design of the original typographical space range.
 #   https://ctan.org/tex-archive/systems/knuth/dist/tex/texbook.tex
 #   https://unicode.org/mail-arch/unicode-ml/Archives-Old/UML023/0536.html
 #
@@ -1329,8 +1329,13 @@
 #   a pair of leading parentheses is proposed consistently: « ¦()C », « ¦()R »,
 #   « ¦()P ».
 #
-#   Order may matter as for "©" U00A9 COPYRIGHT SIGN by « ¦oc » or « ¦Oc », as
-#   opposed to "℅" U2105 CARE OF by « ¦co », « ¦Co », « ¦CO » or « ¦cO ».
+#   Due to conflicts with "∨" U2228, all-lowercase « ¦or » and all-uppercase
+#   « ¦OR » sequences do not work for "®" U00AE, but mixed-case and reverse
+#   sequences do.
+#
+#   Order matters for "©" U00A9 COPYRIGHT SIGN, too, by « ¦oc » or « ¦Oc » (but
+#   not « ¦OC » nor « ¦oC », used for "🅭" U1F16D), as opposed to
+#   "℅" U2105 CARE OF by « ¦co », « ¦Co », « ¦CO » or « ¦cO ».
 #
 #   Case may matter as for "⅍" U214D AKTIESELSKAB versus "℁" U2101 ADDRESSED TO
 #   THE SUBJECT, "🄯" U1F12F COPYLEFT SYMBOL versus "℄" U2104 CENTRE LINE SYMBOL.
@@ -1494,6 +1499,8 @@
 <Multi_key><O><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><R><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><r><O>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><R><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><parenleft><parenright><r>                                                              : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><parenleft><parenright><R>                                                              : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><s><m>                                                                                  : "℠" U2120 # SERVICE MARK
@@ -2182,7 +2189,7 @@
 #   See # # Combining Diacritical Marks for Symbols used in mathematics
 #
 #   In the sequence for "᷐" U1DD0, the trailing "s" is skipped as non-critical,
-#   for efficiency and an improved user experience.
+#   for efficiency and a streamlined user experience.
 #   See # # Design of multikey sequences
 #
 <Multi_key><ampersand><a><e>                                                                       : "ᷔ" U1DD4 # COMBINING LATIN SMALL LETTER AE
@@ -2279,11 +2286,12 @@
 #
 #   Interrobang
 #
-#   Supported by multikey only, the interrobang could be fully sideways
+#   Supported by multikey, the interrobang could be fully sideways
 #   compatible with en_US.UTF-8/Compose if not taking into account that
 #   French AZERTY maps the question and exclamation marks the other way around
 #   compared to US-QWERTY. Hence the need to adjust the input order to the map
 #   parsed from left to right, for a predictable, consistent user experience.
+#   See #*# CIRCUMFLEX
 #
 #   Final
 <Multi_key><question><exclam>                                                                      : "‽" U203D # INTERROBANG
@@ -4348,6 +4356,7 @@
 #   repurposed by lack of an unsuccessful symbol in L2/10-351.
 #   https://unicode.org/L2/L2010/10351-n3897-jtc1sc35n1579.pdf
 #
+#Multi_key><n><b><t><s><p>                                                                         : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><n><b><t>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><N><B><T>                                                                               : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><U202F><space>                                                                          : "⎍" U238D # MONOSTABLE SYMBOL
@@ -7535,7 +7544,6 @@
 <Multi_key><A><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><v><percent><period>                                                                    : "⟑" U27D1 # AND WITH DOT
 <Multi_key><e><percent>                                                                            : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
-<Multi_key><e><backslash>                                                                          : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
 <Multi_key><L><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><l><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><L><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
@@ -9185,8 +9193,6 @@
 <Multi_key><t><less>                                                                               : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><less><apostrophe>                                                                   : "⫞" U2ADE # SHORT LEFT TACK
 <Multi_key><T><less><rightsinglequotemark>                                                         : "⫞" U2ADE # SHORT LEFT TACK
-<Multi_key><t>                                                                             <space> : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><t>                                                                      <nobreakspace> : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><T><apostrophe>                                                                         : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><T><rightsinglequotemark>                                                               : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><T>                                                                      <space> : "⫟" U2ADF # SHORT DOWN TACK
@@ -9195,7 +9201,6 @@
 <Multi_key><nobreakspace><minus><apostrophe><minus>                                                : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><space><minus><rightsinglequotemark><minus>                                             : "⫟" U2ADF # SHORT DOWN TACK
 <Multi_key><nobreakspace><minus><rightsinglequotemark><minus>                                      : "⫟" U2ADF # SHORT DOWN TACK
-<Multi_key><t><t>                                                                                  : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><T><apostrophe>                                                                      : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><T><rightsinglequotemark>                                                            : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><T><T>                                                                           : "⫠" U2AE0 # SHORT UP TACK
@@ -9591,8 +9596,8 @@
 <Multi_key><minus><slash><slash>                                                                   : "🣗" U1F8D7 # LONG RIGHTWARDS ARROW WITH DOUBLE SLASH
 #Multi_key><less><minus><O><minus><greater>                           (literal removed for syntax color) U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 <Multi_key><less><minus><O><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
-<Multi_key><less><minus><0><minus>                                                                 : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
-<Multi_key><less><minus><KP_0><minus>                                                              : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><0><minus><greater>                                                        : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+<Multi_key><less><minus><KP_0><minus><greater>                                                     : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 <Multi_key><less><minus><comma><minus>                                                             : "🣘" U1F8D8 # LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 #
 #
@@ -13426,11 +13431,6 @@
 # # GREEK_OR_CIRCLED&DIAERESIS&DOUBLEACUTE
 #   Dialytika tonos
 #
-#   Multikey does not work the way dead_diaeresis-dead_doubleacute-dead_greek,
-#   so as to prevent a conflict with "„" U201E DOUBLE LOW-9 QUOTATION MARK.
-#   See # # Quotation mark input method
-#   See # # Multikey equivalents
-#
 <dead_greek><dead_diaeresis><dead_doubleacute>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><at><colon><quotedbl>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><at><colon><EuroSign>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
@@ -13444,8 +13444,8 @@
 <Multi_key><quotedbl><at><colon>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<Multi_key><colon><quotedbl><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<Multi_key><colon><EuroSign><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <space> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
@@ -13462,8 +13462,8 @@
 <Multi_key><quotedbl><at><colon>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                             <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<Multi_key><colon><quotedbl><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
+<Multi_key><colon><EuroSign><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <U200B> : "̈́" U0344 # COMBINING GREEK DIALYTIKA TONOS
@@ -13480,8 +13480,8 @@
 <Multi_key><quotedbl><at><colon>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                      <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                              <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                              <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<Multi_key><colon><quotedbl><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<Multi_key><colon><EuroSign><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                      <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                    <nobreakspace> : "΅" U0385 # GREEK DIALYTIKA TONOS
@@ -13498,8 +13498,8 @@
 <Multi_key><quotedbl><at><colon>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><at><colon>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                             <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
-#   Multikey conflicts with "„" U201E.                                                     <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<Multi_key><colon><quotedbl><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
+<Multi_key><colon><EuroSign><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                             <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><quotedbl><colon><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
 <Multi_key><EuroSign><colon><at>                                                           <U202F> : "΅" U0385 # GREEK DIALYTIKA TONOS
@@ -13516,8 +13516,8 @@
 <Multi_key><quotedbl><at><colon>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><at><colon>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                                 <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
-#   Multikey conflicts with "„" U201E.                                                         <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
-#   Multikey conflicts with "„" U201E.                                                         <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+<Multi_key><colon><quotedbl><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+<Multi_key><colon><EuroSign><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                                 <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><colon><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><colon><at>                                                               <i> : "ΐ" U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
@@ -13534,8 +13534,8 @@
 <Multi_key><quotedbl><at><colon>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><at><colon>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <dead_diaeresis><dead_doubleacute><dead_greek>                                                 <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
-#   Multikey conflicts with "„" U201E.                                                         <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
-#   Multikey conflicts with "„" U201E.                                                         <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+<Multi_key><colon><quotedbl><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+<Multi_key><colon><EuroSign><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <dead_doubleacute><dead_diaeresis><dead_greek>                                                 <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><quotedbl><colon><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 <Multi_key><EuroSign><colon><at>                                                               <y> : "ΰ" U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
@@ -13714,11 +13714,11 @@
 #   is documented in an extra table rather than in the regular table dedicated
 #   to the Greek or circled dead key. Indeed, polytonic Greek is supported only
 #   in an attempt to meet eventual user expectations raised by the extensive
-#   dead key coverage, for completeness, for diplomatic reasons fostering an
+#   dead key coverage, for completeness, for diplomatic reasons requiring an
 #   undiscriminatory support policy, and with respect to the work ethos banning
 #   half measures and lazy excuses for not doing the job. In the context of a
-#   fully comprehensive coverage of Latin script, and given the fact that
-#   polytonic Greek is part of our Western civilisation, unsupporting polytonic
+#   fully comprehensive coverage of the Latin script, and given the fact that
+#   polytonic Greek is part of the Western civilisation, unsupporting polytonic
 #   Greek is not an option.
 #   See # # Notes about documentation
 #
@@ -13726,6 +13726,6 @@
 #   END_GREEK
 #
 #
-#   See part 2 in compose-2.yml.
-#   See part 3 in compose-3.yml.
+#   See part 2 in compose-2.yml
+#   See part 3 in compose-3.yml
 #
