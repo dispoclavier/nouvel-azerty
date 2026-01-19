@@ -20,13 +20,13 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
-## 6.1.7 (projet)
+Portage sous Linux de raccourcis à touche morte développés sous Windows.
+
+## 6.1.7 (2026-01-20)
 
 Simplification de la saisie des symboles mathématiques.
 
-Correction du contenu des touches mortes Exposant et Indice.
-
-Portage sous Linux de raccourcis à touche morte développés sous Windows.
+Correction du contenu des touches mortes.
 
 * Composition :
 	* Corriger des séquences de "🣘" U+1F8D8. compose-1.yml [ec2586a](https://github.com/dispoclavier/nouvel-azerty/commit/ec2586ad2757336f4ceb1367da68da88366d0e5d), [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
@@ -59,6 +59,8 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows.
 			* Redonder "᫁" U+1AC1 par "(" à la place de "᪻" U+1ABB, qui va par "|" et par "1". compose-2.yml [0713be1](https://github.com/dispoclavier/nouvel-azerty/commit/0713be1119b9a6ad9fa60ecb132bbce271cb4b0a)
 			* Redonder "᫂" U+1AC2 par ")" à la place de "᪼" U+1ABC, qui va par "$", et par "2" à la place de "᪳" U+1AB3, qui va par "^", et par "W" à la place de "ᷱ" U+1DF1, qui est par "w". ibidem
 			* Redonder "̅" U+0305 par "_" à la place de "﹋" U+FE4B, qui vadans Exposant par "~". ibidem
+			* Redonder "͑" U+0351 par "D" à la place de "᫙" U+1AD9, qui est par "#". compose-2.yml [b2f2b6a](https://github.com/dispoclavier/nouvel-azerty/commit/b2f2b6a09af6deea6f4105358ef3b660ffece713)
+			* Redonder "͗" U+0357 par "F" à la place de "᫫" U+1AEB, qui va par "%". ibidem
 			* Groupe 1 : Redonder "᫩" U+1AE9 par "[" et "]". compose-2.yml [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
 	* Tilde : Redonder "❬" U+276C, "❭" U+276D par "[", "]" à la place de "❰" U+2770, "❱" U+2771, qui sont par "<", ">" et par "{", "}". ibidem
 	* Accent aigu :
@@ -73,10 +75,17 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows.
 		* Redonder "͍" U+034D par "5". compose-2.yml [0713be1](https://github.com/dispoclavier/nouvel-azerty/commit/0713be1119b9a6ad9fa60ecb132bbce271cb4b0a)
 		* Redonder "᪷" U+1AB7 par "o". ibidem
 		* Redonder "᪸" U+1AB8 par "O". ibidem
-		* Redonder "᫃" U+1AC3 par "(" à la place de "᪽" U+1ABD, qui va par "|" et par "$", et par "1" à la place de "͎" U+034E, qui va par "7" et par "9". ibidem
+		* Redonder "᫃" U+1AC3 par "(" à la place de "᪽" U+1ABD, qui va par "|" et par "$", et par "1" à la place de "͎" U+034E, qui va par "9". ibidem
 		* Redonder "᫄" U+1AC4 par ")" à la place de "᪽" U+1ABD. ibidem
 		* Redonder "᷂" U+1DC2 par "S". ibidem
 		* Redonder "᷐" U+1DD0 par "I". ibidem
+		* Redonder "̞" U+031E par "2" et par "t". compose-2.yml [b2f2b6a](https://github.com/dispoclavier/nouvel-azerty/commit/b2f2b6a09af6deea6f4105358ef3b660ffece713)
+		* Redonder "̘" U+0318 par "4". ibidem
+		* Redonder "̙" U+0319 par "6". ibidem
+		* Redonder "̝" U+031D par "7" et par "T". ibidem
+		* Redonder "̲" U+0332 par "_" à la place de "͢" U+0362, qui va par "%". ibidem
+		* Redonder "̜" U+031C par "d" et "D". ibidem
+		* Redonder "̹" U+0339 par "f" et "F". ibidem
 	* Ogonek : Redonder "᷎" U+1DCE par "'". compose-2.yml [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
 	* Accent circonflexe :
 		* Redonder "‧" U+2027 par ";". ibidem
@@ -95,6 +104,7 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows.
 	* 6.1.7.0 [a424b2f](https://github.com/dispoclavier/nouvel-azerty/commit/a424b2fb91424fcaa751dbf2457d4eaa1b38d9b8)
 	* 6.1.7.1 [e532b8f](https://github.com/dispoclavier/nouvel-azerty/commit/e532b8fd422729b3bd13526f769dd8b4d7471e6c)
 	* 6.1.7.2 [bfb38b5](https://github.com/dispoclavier/nouvel-azerty/commit/bfb38b5bee560b9a9f94c0a7a0e962d875b4179d)
+	* 6.1.7.3 [76d47db](https://github.com/dispoclavier/nouvel-azerty/commit/76d47db4dae22f2d7999a4012154d539ba70a0b8)
 
 ## 6.1.6 (2026-01-02)
 
@@ -1796,7 +1806,7 @@ Permutation du liant et de l’antiliant, plus fréquent et désormais plus faci
 	* Indice : Souscrit :
 		* Ajouter "͎" U+034E et "͍" U+034D par "1" et "2". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
 		* Ajouter "᪸" U+1AB8 par "J". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
-		* Ajouter ""͢" U+0362 par "_". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
+		* Ajouter "͢" U+0362 par "_". compose-2.yml [efd6db5](https://github.com/dispoclavier/nouvel-azerty/commit/efd6db58f7ef1fa17388962602f8a0d6eda04bd4)
 		* Ajouter "᪽" U+1ABD à la place de "̜" U+031C et "̹" U+0339, qui sont dans le groupe 5 de D et F. compose-2.yml [6b97616](https://github.com/dispoclavier/nouvel-azerty/commit/6b97616a40b931df209afcb96ebaf19ac2a2cf7b)
 	* Macron :
 		* Corriger les séquences de "͞" U+035E. compose-2.yml [2fa4753](https://github.com/dispoclavier/nouvel-azerty/commit/2fa4753fd064af7f415af4c9ea575e5bf44ca3aa), [99871f5](https://github.com/dispoclavier/nouvel-azerty/commit/99871f5da91216609c0c8ff460e676628ac84ef2), [f948ed2](https://github.com/dispoclavier/nouvel-azerty/commit/f948ed2ec1274c967845d8a360e7507cd5687b9c)
