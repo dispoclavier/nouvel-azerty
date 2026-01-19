@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-03T2208+0100
+# 2026-01-19T0708+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -123,17 +123,19 @@ my $support_all_multikey_equivalents = !1;
 # dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
 # most dead keys, at level 4 of the space bar in French mode.
 #
-# The 7 required high surrogates are:
+# The 8 required high surrogates are:
 #
 #     D801, D807,
-#     D835, D837, D83C, D83D, D83E.
+#     D833, D835, D837,
+#     D83C, D83D, D83E.
 #
 # These are dispatched among dead keys:
 #
 #     D801 dead_superscript (modifier letters)
 #     D807 dead_turned (U+11FB0 "𑾰" LISU LETTER YHA)
+#     D833 dead_breve (mathematical arrows)
 #     D835 dead_group (mathematical alphanumeric symbols)
-#     D837 dead_bar; dead_breve; dead_hook; dead_retroflexhook; others (Latin)
+#     D837 dead_bar; dead_hook; dead_retroflexhook; others (Latin)
 #     D83C dead_flag; dead_greek (flag letters, squared letters)
 #     D83D dead_doubleacute; dead_acute; others (ornamental quotation marks)
 #     D83E dead_stroke; dead_group 11 and 12 as built-in (wide-headed arrows)
@@ -274,11 +276,13 @@ sub dekeysym {
 	$keysym =~ s/~nbthinspace/202F/;
 	$keysym =~ s/%exclam/!/;
 	$keysym =~ s/%quotedbl/"/;
+	$keysym =~ s/%quotEuroSign/20AC/;
 	$keysym =~ s/%hash/#/;
 	$keysym =~ s/%dollar/\$/;
 	$keysym =~ s/%percent/%/;
 	$keysym =~ s/%ampersand/&/;
 	$keysym =~ s/%apostrophe/\\'/;
+	$keysym =~ s/%aprightsingquotmark/2019/;
 	$keysym =~ s/%parenleft/(/;
 	$keysym =~ s/%parenright/)/;
 	$keysym =~ s/%asterisk/*/;
@@ -289,6 +293,7 @@ sub dekeysym {
 	$keysym =~ s/%slash/\//;
 	$keysym =~ s/%colon/:/;
 	$keysym =~ s/%semicolon/;/;
+	$keysym =~ s/%semsection/00A7/;
 	$keysym =~ s/%less/</;
 	$keysym =~ s/%equal/=/;
 	$keysym =~ s/%greater/>/;
@@ -304,9 +309,6 @@ sub dekeysym {
 	$keysym =~ s/%bar/|/;
 	$keysym =~ s/%braceright/}/;
 	$keysym =~ s/%tilde/~/;
-	$keysym =~ s/%aprightsingquotmark/2019/;
-	$keysym =~ s/%semsection/00A7/;
-	$keysym =~ s/%quotEuroSign/20AC/;
 	$keysym =~ s/paragraph/00A7/;
 	$keysym =~ s/guillemotleft/00AB/;
 	$keysym =~ s/guillemotright/00BB/;
