@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0718+0100
 * Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2220+0100
 * Debug multikey equivalents               6.1.6.2.0 Fri 2026-01-02T1411+0100
 * Update to 6.1.6.1                        6.1.6.1.0 Fri 2026-01-02T1241+0100
@@ -1012,7 +1013,7 @@
 /*<!M><%less><%minus><%underscore>                                 */ DEADTRANS( L'_'	,0xE2E1	,0x2AAC	,0x0000), // '_' ➔ "⪬" U+2AAC SMALLER THAN OR EQUAL TO
 /*<!M><%less><%minus><0>                                           */ DEADTRANS( L'0'	,0xE2E1	,0xE2ED	,0x0001), // Intermediate multikey chain link
 /*<!M><%less><%minus><0><%minus>                                   */ DEADTRANS( L'-'	,0xE2ED	,0xE2EE	,0x0001), // Intermediate multikey chain link
-/*<!M><%less><%minus><0><%minus>                                   */ DEADTRANS( L'-'	,0xE2ED	,0xDCD8	,0x0000), // High surrogate: D83E; '-' ➔ "🣘" U+1F8D8 LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
+/*<!M><%less><%minus><0><%minus><%greater>                         */ DEADTRANS( L'>'	,0xE2EE	,0xDCD8	,0x0000), // High surrogate: D83E; '>' ➔ "🣘" U+1F8D8 LONG LEFT RIGHT ARROW WITH DEPENDENT LOBE
 /*<!M><%less><%minus><0><%minus><0>                                */ DEADTRANS( L'0'	,0xE2EE	,0x290E	,0x0000), // '0' ➔ "⤎" U+290E LEFTWARDS TRIPLE DASH ARROW
 /*<!M><%less><%minus><0><%minus><~nbspace>                         */ DEADTRANS( 0x00A0	,0xE2EE	,0x290C	,0x0000), // ' ' ➔ "⤌" U+290C LEFTWARDS DOUBLE DASH ARROW
 /*<!M><%less><%minus><0><%minus><~space>                           */ DEADTRANS( L' '	,0xE2EE	,0x290C	,0x0000), // ' ' ➔ "⤌" U+290C LEFTWARDS DOUBLE DASH ARROW
@@ -2728,7 +2729,6 @@
 /*<!M><e><%at>                                                     */ DEADTRANS( L'@'	,0xE47E	,0x03F5	,0x0000), // '@' ➔ "ϵ" U+03F5 GREEK LUNATE EPSILON SYMBOL
 /*<!M><E><%at>                                                     */ DEADTRANS( L'@'	,0xE47D	,0x03F6	,0x0000), // '@' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash>                                              */ DEADTRANS( L'\\'	,0xE47E	,0xE47F	,0x0001), // Intermediate multikey chain link
-/*<!M><e><%backslash>                                              */ DEADTRANS( L'\\'	,0xE47E	,0x27D2	,0x0000), // '\' ➔ "⟒" U+27D2 ELEMENT OF OPENING UPWARDS
 /*<!M><e><%backslash><!greek>                                      */ DEADTRANS( 0x03B5	,0xE47F	,0x03F6	,0x0000), // 'ε' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash><%at>                                         */ DEADTRANS( L'@'	,0xE47F	,0x03F6	,0x0000), // '@' ➔ "϶" U+03F6 GREEK REVERSED LUNATE EPSILON SYMBOL
 /*<!M><e><%backslash><%bar>                                        */ DEADTRANS( L'|'	,0xE47F	,0xE480	,0x0001), // Intermediate multikey chain link
@@ -3792,6 +3792,8 @@
 /*<!M><R><M>                                                       */ DEADTRANS( L'M'	,0xE586	,0xDD6C	,0x0000), // High surrogate: D83C; 'M' ➔ "🅬" U+1F16C RAISED MR SIGN
 /*<!M><r><o>                                                       */ DEADTRANS( L'o'	,0xE585	,0x00AE	,0x0000), // 'o' ➔ "®" U+00AE REGISTERED SIGN emoji
 /*<!M><R><O>                                                       */ DEADTRANS( L'O'	,0xE586	,0x00AE	,0x0000), // 'O' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><r><O>                                                       */ DEADTRANS( L'O'	,0xE585	,0x00AE	,0x0000), // 'O' ➔ "®" U+00AE REGISTERED SIGN emoji
+/*<!M><R><o>                                                       */ DEADTRANS( L'o'	,0xE586	,0x00AE	,0x0000), // 'o' ➔ "®" U+00AE REGISTERED SIGN emoji
 /*<!M><R><p>                                                       */ DEADTRANS( L'p'	,0xE586	,0xE595	,0x0001), // Intermediate multikey chain link
 /*<!M><R><p><a>                                                    */ DEADTRANS( L'a'	,0xE595	,0xE596	,0x0001), // Intermediate multikey chain link
 /*<!M><R><p><a><r>                                                 */ DEADTRANS( L'r'	,0xE596	,0xE597	,0x0001), // Intermediate multikey chain link
@@ -4087,7 +4089,6 @@
 /*<!M><t><s>                                                       */ DEADTRANS( L's'	,0xE5CA	,0x02A6	,0x0000), // 's' ➔ "ʦ" U+02A6 LATIN SMALL LETTER TS DIGRAPH
 /*<!M><T><T>                                                       */ DEADTRANS( L'T'	,0xE5C9	,0xE5E0	,0x0001), // Intermediate multikey chain link
 /*<!M><t><t>                                                       */ DEADTRANS( L't'	,0xE5CA	,0xE5E1	,0x0001), // Intermediate multikey chain link
-/*<!M><t><t>                                                       */ DEADTRANS( L't'	,0xE5CA	,0x2AE0	,0x0000), // 't' ➔ "⫠" U+2AE0 SHORT UP TACK
 /*<!M><T><T><%apostrophe>                                          */ DEADTRANS( L'\''	,0xE5E0	,0x2AE0	,0x0000), // ''' ➔ "⫠" U+2AE0 SHORT UP TACK
 /*<!M><T><T><%aprightsingquotmark>                                 */ DEADTRANS( 0x2019	,0xE5E0	,0x2AE0	,0x0000), // '’' ➔ "⫠" U+2AE0 SHORT UP TACK
 /*<!M><T><T><%backslash>                                           */ DEADTRANS( L'\\'	,0xE5E0	,0xE5E2	,0x0001), // Intermediate multikey chain link
@@ -4111,10 +4112,8 @@
 /*<!M><t><z>                                                       */ DEADTRANS( L'z'	,0xE5CA	,0xA729	,0x0000), // 'z' ➔ "ꜩ" U+A729 LATIN SMALL LETTER TZ
 /*<!M><T><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5C9	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
 /*<!M><t><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CA	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
-/*<!M><t><~nbspace>                                                */ DEADTRANS( 0x00A0	,0xE5CA	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
 /*<!M><T><~space>                                                  */ DEADTRANS( L' '	,0xE5C9	,0x22A4	,0x0000), // ' ' ➔ "⊤" U+22A4 DOWN TACK
 /*<!M><t><~space>                                                  */ DEADTRANS( L' '	,0xE5CA	,0x22BA	,0x0000), // ' ' ➔ "⊺" U+22BA INTERCALATE
-/*<!M><t><~space>                                                  */ DEADTRANS( L' '	,0xE5CA	,0x2ADF	,0x0000), // ' ' ➔ "⫟" U+2ADF SHORT DOWN TACK
 /*<!M><u>                                                          */ DEADTRANS( L'u'	,0x00A6	,0xE5E4	,0x0001), // Intermediate multikey chain link
 /*<!M><U>                                                          */ DEADTRANS( L'U'	,0x00A6	,0xE5E5	,0x0001), // Intermediate multikey chain link
 /*<!M><U><%at>                                                     */ DEADTRANS( L'@'	,0xE5E5	,0x03F4	,0x0000), // '@' ➔ "ϴ" U+03F4 GREEK CAPITAL THETA SYMBOL

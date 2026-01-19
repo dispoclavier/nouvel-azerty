@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0719+0100
 * Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2222+0100
 * Debug by appending multikey chain links  6.1.6.1.0 Fri 2026-01-02T1245+0100
 * Debug, sync dead chars, discard chained  6.1.6.0.0 Fri 2026-01-02T0902+0100
@@ -69,7 +70,6 @@
 \*****************************************************************************/
 
 /*<!M><%apostrophe><%ampersand>                                    */ DEADTRANS( L'&'	,0x00E1	,0x0317	,0x0000), // '&' ➔ "̗" U+0317 COMBINING ACUTE ACCENT BELOW
-/*<!M><%apostrophe><%apostrophe>                                   */ DEADTRANS( L'\''	,0x00E1	,0x2019	,0x0000), // ''' ➔ "’" U+2019 RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!M><%apostrophe><%aprightsingquotmark>                          */ DEADTRANS( 0x2019	,0x00E1	,0x2019	,0x0000), // '’' ➔ "’" U+2019 RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 /*<!M><%apostrophe><%backslash>                                    */ DEADTRANS( L'\\'	,0x00E1	,0x27E7	,0x0000), // '\' ➔ "⟧" U+27E7 MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 /*<!M><%apostrophe><%bracketright>                                 */ DEADTRANS( L']'	,0x00E1	,0x2750	,0x0000), // ']' ➔ "❐" U+2750 UPPER RIGHT DROP-SHADOWED WHITE SQUARE
@@ -458,6 +458,7 @@
 /*<!M><%braceright><~nbthinspace>                                  */ DEADTRANS( 0x202F	,0x0273	,0x02FE	,0x0000), // ' ' ➔ "˾" U+02FE MODIFIER LETTER OPEN SHELF
 /*<!M><%braceright><~space>                                        */ DEADTRANS( L' '	,0x0273	,0x0322	,0x0000), // ' ' ➔ "̢" U+0322 COMBINING RETROFLEX HOOK BELOW
 /*<!M><%braceright><~spacezerowidth>                               */ DEADTRANS( 0x200B	,0x0273	,0x0322	,0x0000), // '​' ➔ "̢" U+0322 COMBINING RETROFLEX HOOK BELOW
+/*<!M><%bracketleft><%aprightsingquotmark>                         */ DEADTRANS( 0x2019	,0x01EB	,0x1DCE	,0x0000), // '’' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
 /*<!M><%bracketleft><0>                                            */ DEADTRANS( L'0'	,0x01EB	,0x2789	,0x0000), // '0' ➔ "➉" U+2789 DINGBAT CIRCLED SANS-SERIF NUMBER TEN
 /*<!M><%bracketleft><1>                                            */ DEADTRANS( L'1'	,0x01EB	,0x2780	,0x0000), // '1' ➔ "➀" U+2780 DINGBAT CIRCLED SANS-SERIF DIGIT ONE
 /*<!M><%bracketleft><2>                                            */ DEADTRANS( L'2'	,0x01EB	,0x2781	,0x0000), // '2' ➔ "➁" U+2781 DINGBAT CIRCLED SANS-SERIF DIGIT TWO
@@ -508,8 +509,8 @@
 /*<!M><%bracketright><~nbthinspace>                                */ DEADTRANS( 0x202F	,0x1EBB	,0x02BF	,0x0000), // ' ' ➔ "ʿ" U+02BF MODIFIER LETTER LEFT HALF RING
 /*<!M><%bracketright><~space>                                      */ DEADTRANS( L' '	,0x1EBB	,0x0309	,0x0000), // ' ' ➔ "̉" U+0309 COMBINING HOOK ABOVE
 /*<!M><%bracketright><~spacezerowidth>                             */ DEADTRANS( 0x200B	,0x1EBB	,0x0309	,0x0000), // '​' ➔ "̉" U+0309 COMBINING HOOK ABOVE
-/*<!M><%circum><%apostrophe>                                       */ DEADTRANS( L'\''	,0x005E	,0x2019	,0x0000), // ''' ➔ "’" U+2019 RIGHT SINGLE QUOTATION MARK, single comma quotation mark
-/*<!M><%circum><%aprightsingquotmark>                              */ DEADTRANS( 0x2019	,0x005E	,0x2019	,0x0000), // '’' ➔ "’" U+2019 RIGHT SINGLE QUOTATION MARK, single comma quotation mark
+/*<!M><%circum><%apostrophe>                                       */ DEADTRANS( L'\''	,0x005E	,0x02C8	,0x0000), // ''' ➔ "ˈ" U+02C8 MODIFIER LETTER VERTICAL LINE
+/*<!M><%circum><%aprightsingquotmark>                              */ DEADTRANS( 0x2019	,0x005E	,0x02C8	,0x0000), // '’' ➔ "ˈ" U+02C8 MODIFIER LETTER VERTICAL LINE
 /*<!M><%circum><%asterisk>                                         */ DEADTRANS( L'*'	,0x005E	,0x2042	,0x0000), // '*' ➔ "⁂" U+2042 ASTERISM
 /*<!M><%circum><%comma>                                            */ DEADTRANS( L','	,0x005E	,0x1DD7	,0x0000), // ',' ➔ "ᷗ" U+1DD7 COMBINING LATIN SMALL LETTER C CEDILLA
 /*<!M><%circum><%equal>                                            */ DEADTRANS( L'='	,0x005E	,0x207C	,0x0000), // '=' ➔ "⁼" U+207C SUPERSCRIPT EQUALS SIGN
@@ -518,8 +519,8 @@
 /*<!M><%circum><%less>                                             */ DEADTRANS( L'<'	,0x005E	,0xA71B	,0x0000), // '<' ➔ "ꜛ" U+A71B MODIFIER LETTER RAISED UP ARROW
 /*<!M><%circum><%parenleft>                                        */ DEADTRANS( L'('	,0x005E	,0x207D	,0x0000), // '(' ➔ "⁽" U+207D SUPERSCRIPT LEFT PARENTHESIS
 /*<!M><%circum><%period>                                           */ DEADTRANS( L'.'	,0x005E	,0x00B7	,0x0000), // '.' ➔ "·" U+00B7 MIDDLE DOT
-/*<!M><%circum><%quotedbl>                                         */ DEADTRANS( L'"'	,0x005E	,0x201D	,0x0000), // '"' ➔ "”" U+201D RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
-/*<!M><%circum><%quotEuroSign>                                     */ DEADTRANS( 0x20AC	,0x005E	,0x201D	,0x0000), // '€' ➔ "”" U+201D RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
+/*<!M><%circum><%quotedbl>                                         */ DEADTRANS( L'"'	,0x005E	,0x02EE	,0x0000), // '"' ➔ "ˮ" U+02EE MODIFIER LETTER DOUBLE APOSTROPHE
+/*<!M><%circum><%quotEuroSign>                                     */ DEADTRANS( 0x20AC	,0x005E	,0x02EE	,0x0000), // '€' ➔ "ˮ" U+02EE MODIFIER LETTER DOUBLE APOSTROPHE
 /*<!M><%circum><%slash>                                            */ DEADTRANS( L'/'	,0x005E	,0xDFA2	,0x0000), // High surrogate: D801; '/' ➔ "𐞢" U+107A2 MODIFIER LETTER SMALL O WITH STROKE
 /*<!M><%circum><0>                                                 */ DEADTRANS( L'0'	,0x005E	,0x2070	,0x0000), // '0' ➔ "⁰" U+2070 SUPERSCRIPT ZERO
 /*<!M><%circum><1>                                                 */ DEADTRANS( L'1'	,0x005E	,0x00B9	,0x0000), // '1' ➔ "¹" U+00B9 SUPERSCRIPT ONE
@@ -557,6 +558,7 @@
 /*<!M><%circum><L>                                                 */ DEADTRANS( L'L'	,0x005E	,0x1D38	,0x0000), // 'L' ➔ "ᴸ" U+1D38 MODIFIER LETTER CAPITAL L
 /*<!M><%circum><M>                                                 */ DEADTRANS( L'M'	,0x005E	,0x1D39	,0x0000), // 'M' ➔ "ᴹ" U+1D39 MODIFIER LETTER CAPITAL M
 /*<!M><%circum><m>                                                 */ DEADTRANS( L'm'	,0x005E	,0x1D50	,0x0000), // 'm' ➔ "ᵐ" U+1D50 MODIFIER LETTER SMALL M
+/*<!M><%circum><multiply>                                          */ DEADTRANS( 0x00D7	,0x005E	,0x033D	,0x0000), // '×' ➔ "̽" U+033D COMBINING X ABOVE
 /*<!M><%circum><N>                                                 */ DEADTRANS( L'N'	,0x005E	,0x1D3A	,0x0000), // 'N' ➔ "ᴺ" U+1D3A MODIFIER LETTER CAPITAL N
 /*<!M><%circum><n>                                                 */ DEADTRANS( L'n'	,0x005E	,0x207F	,0x0000), // 'n' ➔ "ⁿ" U+207F SUPERSCRIPT LATIN SMALL LETTER N
 /*<!M><%circum><O>                                                 */ DEADTRANS( L'O'	,0x005E	,0x1D3C	,0x0000), // 'O' ➔ "ᴼ" U+1D3C MODIFIER LETTER CAPITAL O
@@ -589,8 +591,6 @@
 /*<!M><%circum><~spacezerowidth>                                   */ DEADTRANS( 0x200B	,0x005E	,0x0305	,0x0000), // '​' ➔ "̅" U+0305 COMBINING OVERLINE
 /*<!M><%colon><%aprightsingquotmark>                               */ DEADTRANS( 0x2019	,0x00EB	,0x201A	,0x0000), // '’' ➔ "‚" U+201A SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 /*<!M><%colon><%backslash>                                         */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000), // '\' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
-/*<!M><%colon><%quotedbl>                                          */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000), // '"' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
-/*<!M><%colon><%quotEuroSign>                                      */ DEADTRANS( 0x20AC	,0x00EB	,0x201E	,0x0000), // '€' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!M><%colon><%slash>                                             */ DEADTRANS( L'/'	,0x00EB	,0x2016	,0x0000), // '/' ➔ "‖" U+2016 DOUBLE VERTICAL LINE
 /*<!M><%colon><0>                                                  */ DEADTRANS( L'0'	,0x00EB	,0x2070	,0x0000), // '0' ➔ "⁰" U+2070 SUPERSCRIPT ZERO
 /*<!M><%colon><1>                                                  */ DEADTRANS( L'1'	,0x00EB	,0x00B9	,0x0000), // '1' ➔ "¹" U+00B9 SUPERSCRIPT ONE
@@ -1020,18 +1020,21 @@
 /*<!M><%hash><~space>                                              */ DEADTRANS( L' '	,0x2460	,0x2003	,0x0000), // ' ' ➔ " " U+2003 EM SPACE
 /*<!M><%less><%aprightsingquotmark>                                */ DEADTRANS( 0x2019	,0x00EA	,0x2018	,0x0000), // '’' ➔ "‘" U+2018 LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!M><%less><%asterisk>                                           */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000), // '*' ➔ "⁂" U+2042 ASTERISM
+/*<!M><%less><%braceright>                                         */ DEADTRANS( L'}'	,0x00EA	,0x27E9	,0x0000), // '}' ➔ "⟩" U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET
 /*<!M><%less><%comma>                                              */ DEADTRANS( L','	,0x00EA	,0x02BC	,0x0000), // ',' ➔ "ʼ" U+02BC MODIFIER LETTER APOSTROPHE
 /*<!M><%less><%dollar>                                             */ DEADTRANS( L'$'	,0x00EA	,0x1DCD	,0x0000), // '$' ➔ "᷍" U+1DCD COMBINING DOUBLE CIRCUMFLEX ABOVE
 /*<!M><%less><%percent>                                            */ DEADTRANS( L'%'	,0x00EA	,0x2030	,0x0000), // '%' ➔ "‰" U+2030 PER MILLE SIGN
 /*<!M><%less><%plus>                                               */ DEADTRANS( L'+'	,0x00EA	,0x2A23	,0x0000), // '+' ➔ "⨣" U+2A23 PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
+/*<!M><%less><%question>                                           */ DEADTRANS( L'?'	,0x00EA	,0x203D	,0x0000), // '?' ➔ "‽" U+203D INTERROBANG
 /*<!M><%less><%quotedbl>                                           */ DEADTRANS( L'"'	,0x00EA	,0x201C	,0x0000), // '"' ➔ "“" U+201C LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
 /*<!M><%less><%quotEuroSign>                                       */ DEADTRANS( 0x20AC	,0x00EA	,0x201C	,0x0000), // '€' ➔ "“" U+201C LEFT DOUBLE QUOTATION MARK, double turned comma quotation mark
+/*<!M><%less><%semicolon>                                          */ DEADTRANS( L';'	,0x00EA	,0x2027	,0x0000), // ';' ➔ "‧" U+2027 HYPHENATION POINT
 /*<!M><%less><A>                                                   */ DEADTRANS( L'A'	,0x00EA	,0x00C2	,0x0000), // 'A' ➔ "Â" U+00C2 LATIN CAPITAL LETTER A WITH CIRCUMFLEX
 /*<!M><%less><a>                                                   */ DEADTRANS( L'a'	,0x00EA	,0x00E2	,0x0000), // 'a' ➔ "â" U+00E2 LATIN SMALL LETTER A WITH CIRCUMFLEX
 /*<!M><%less><Agrave>                                              */ DEADTRANS( 0x00C0	,0x00EA	,0x1EA6	,0x0000), // 'À' ➔ "Ầ" U+1EA6 LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND GRAVE
 /*<!M><%less><agrave>                                              */ DEADTRANS( 0x00E0	,0x00EA	,0x1EA7	,0x0000), // 'à' ➔ "ầ" U+1EA7 LATIN SMALL LETTER A WITH CIRCUMFLEX AND GRAVE
-/*<!M><%less><B>                                                   */ DEADTRANS( L'B'	,0x00EA	,0x016C	,0x0000), // 'B' ➔ "Ŭ" U+016C LATIN CAPITAL LETTER U WITH BREVE: Esperanto
-/*<!M><%less><b>                                                   */ DEADTRANS( L'b'	,0x00EA	,0x016D	,0x0000), // 'b' ➔ "ŭ" U+016D LATIN SMALL LETTER U WITH BREVE: Esperanto
+/*<!M><%less><B>                                                   */ DEADTRANS( L'B'	,0x00EA	,0x016C	,0x0000), // 'B' ➔ "Ŭ" U+016C LATIN CAPITAL LETTER U WITH BREVE
+/*<!M><%less><b>                                                   */ DEADTRANS( L'b'	,0x00EA	,0x016D	,0x0000), // 'b' ➔ "ŭ" U+016D LATIN SMALL LETTER U WITH BREVE
 /*<!M><%less><C>                                                   */ DEADTRANS( L'C'	,0x00EA	,0x0108	,0x0000), // 'C' ➔ "Ĉ" U+0108 LATIN CAPITAL LETTER C WITH CIRCUMFLEX
 /*<!M><%less><c>                                                   */ DEADTRANS( L'c'	,0x00EA	,0x0109	,0x0000), // 'c' ➔ "ĉ" U+0109 LATIN SMALL LETTER C WITH CIRCUMFLEX
 /*<!M><%less><Ccedilla>                                            */ DEADTRANS( 0x00C7	,0x00EA	,0x00D1	,0x0000), // 'Ç' ➔ "Ñ" U+00D1 LATIN CAPITAL LETTER N WITH TILDE
@@ -1529,7 +1532,8 @@
 /*<!M><%slash><~space>                                             */ DEADTRANS( L' '	,0x00F8	,0x0338	,0x0000), // ' ' ➔ "̸" U+0338 COMBINING LONG SOLIDUS OVERLAY
 /*<!M><%slash><~spacezerowidth>                                    */ DEADTRANS( 0x200B	,0x00F8	,0x0338	,0x0000), // '​' ➔ "̸" U+0338 COMBINING LONG SOLIDUS OVERLAY
 /*<!M><%tilde><%asterisk>                                          */ DEADTRANS( L'*'	,0x00F5	,0x2051	,0x0000), // '*' ➔ "⁑" U+2051 TWO ASTERISKS ALIGNED VERTICALLY
-/*<!M><%tilde><%bracketright>                                      */ DEADTRANS( L']'	,0x00F5	,0x2771	,0x0000), // ']' ➔ "❱" U+2771 HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+/*<!M><%tilde><%braceright>                                        */ DEADTRANS( L'}'	,0x00F5	,0x2771	,0x0000), // '}' ➔ "❱" U+2771 HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+/*<!M><%tilde><%bracketright>                                      */ DEADTRANS( L']'	,0x00F5	,0x276D	,0x0000), // ']' ➔ "❭" U+276D MEDIUM RIGHT-POINTING ANGLE BRACKET ORNAMENT
 /*<!M><%tilde><%dollar>                                            */ DEADTRANS( L'$'	,0x00F5	,0x0360	,0x0000), // '$' ➔ "͠" U+0360 COMBINING DOUBLE TILDE
 /*<!M><%tilde><%equal>                                             */ DEADTRANS( L'='	,0x00F5	,0x034C	,0x0000), // '=' ➔ "͌" U+034C COMBINING ALMOST EQUAL TO ABOVE
 /*<!M><%tilde><%parenleft>                                         */ DEADTRANS( L'('	,0x00F5	,0x034F	,0x0000), // '(' ➔ "͏" U+034F COMBINING GRAPHEME JOINER
