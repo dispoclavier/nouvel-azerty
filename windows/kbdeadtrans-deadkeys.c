@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update to 6.1.7.3                        6.1.7.3.0 Mon 2026-01-19T2315+0100
 * Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0714+0100
 * Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2219+0100
 * Update to 6.1.6.1                        6.1.6.1.0 Fri 2026-01-02T1241+0100
@@ -8734,20 +8735,27 @@
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'<'	,0x2017	,0x0354	,0x0000), // '<' ➔ "͔" U+0354 COMBINING LEFT ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'('	,0x2017	,0x1AC3	,0x0000), // '(' ➔ "᫃" U+1AC3 COMBINING LEFT PARENTHESIS BELOW LEFT
 /*<!subscript><!subscript>                                         */ DEADTRANS( L')'	,0x2017	,0x1AC4	,0x0000), // ')' ➔ "᫄" U+1AC4 COMBINING RIGHT PARENTHESIS BELOW RIGHT
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'%'	,0x2017	,0x0362	,0x0000), // '%' ➔ "͢" U+0362 COMBINING DOUBLE RIGHTWARDS ARROW BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'.'	,0x2017	,0x1ABA	,0x0000), // '.' ➔ "᪺" U+1ABA COMBINING STRONG CENTRALIZATION STROKE BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'+'	,0x2017	,0x031F	,0x0000), // '+' ➔ "̟" U+031F COMBINING PLUS SIGN BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'"'	,0x2017	,0x0348	,0x0000), // '"' ➔ "͈" U+0348 COMBINING DOUBLE VERTICAL LINE BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( 0x20AC	,0x2017	,0x0348	,0x0000), // '€' ➔ "͈" U+0348 COMBINING DOUBLE VERTICAL LINE BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'/'	,0x2017	,0x1AB9	,0x0000), // '/' ➔ "᪹" U+1AB9 COMBINING LIGHT CENTRALIZATION STROKE BELOW
-/*<!subscript><!subscript>                                         */ DEADTRANS( L'_'	,0x2017	,0x0362	,0x0000), // '_' ➔ "͢" U+0362 COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'_'	,0x2017	,0x0332	,0x0000), // '_' ➔ "̲" U+0332 COMBINING LOW LINE
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'1'	,0x2017	,0x1ABD	,0x0000), // '1' ➔ "᪽" U+1ABD COMBINING PARENTHESES BELOW
-/*<!subscript><!subscript>                                         */ DEADTRANS( L'2'	,0x2017	,0x034D	,0x0000), // '2' ➔ "͍" U+034D COMBINING LEFT RIGHT ARROW BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'2'	,0x2017	,0x031E	,0x0000), // '2' ➔ "̞" U+031E COMBINING DOWN TACK BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'4'	,0x2017	,0x0318	,0x0000), // '4' ➔ "̘" U+0318 COMBINING LEFT TACK BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'5'	,0x2017	,0x034D	,0x0000), // '5' ➔ "͍" U+034D COMBINING LEFT RIGHT ARROW BELOW
-/*<!subscript><!subscript>                                         */ DEADTRANS( L'7'	,0x2017	,0x034E	,0x0000), // '7' ➔ "͎" U+034E COMBINING UPWARDS ARROW BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'6'	,0x2017	,0x0319	,0x0000), // '6' ➔ "̙" U+0319 COMBINING RIGHT TACK BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'7'	,0x2017	,0x031D	,0x0000), // '7' ➔ "̝" U+031D COMBINING UP TACK BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'8'	,0x2017	,0x035A	,0x0000), // '8' ➔ "͚" U+035A COMBINING DOUBLE RING BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'9'	,0x2017	,0x034E	,0x0000), // '9' ➔ "͎" U+034E COMBINING UPWARDS ARROW BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'A'	,0x2017	,0x0349	,0x0000), // 'A' ➔ "͉" U+0349 COMBINING LEFT ANGLE BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'a'	,0x2017	,0x0349	,0x0000), // 'a' ➔ "͉" U+0349 COMBINING LEFT ANGLE BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'D'	,0x2017	,0x031C	,0x0000), // 'D' ➔ "̜" U+031C COMBINING LEFT HALF RING BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'd'	,0x2017	,0x031C	,0x0000), // 'd' ➔ "̜" U+031C COMBINING LEFT HALF RING BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'F'	,0x2017	,0x0339	,0x0000), // 'F' ➔ "̹" U+0339 COMBINING RIGHT HALF RING BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'f'	,0x2017	,0x0339	,0x0000), // 'f' ➔ "̹" U+0339 COMBINING RIGHT HALF RING BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'I'	,0x2017	,0x1DD0	,0x0000), // 'I' ➔ "᷐" U+1DD0 COMBINING IS BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'i'	,0x2017	,0x1DD0	,0x0000), // 'i' ➔ "᷐" U+1DD0 COMBINING IS BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'j'	,0x2017	,0x1AB7	,0x0000), // 'j' ➔ "᪷" U+1AB7 COMBINING OPEN MARK BELOW
@@ -8761,6 +8769,8 @@
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'r'	,0x2017	,0x1DCA	,0x0000), // 'r' ➔ "᷊" U+1DCA COMBINING LATIN SMALL LETTER R BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'S'	,0x2017	,0x1DC2	,0x0000), // 'S' ➔ "᷂" U+1DC2 COMBINING SNAKE BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L's'	,0x2017	,0x1DC2	,0x0000), // 's' ➔ "᷂" U+1DC2 COMBINING SNAKE BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L'T'	,0x2017	,0x031D	,0x0000), // 'T' ➔ "̝" U+031D COMBINING UP TACK BELOW
+/*<!subscript><!subscript>                                         */ DEADTRANS( L't'	,0x2017	,0x031E	,0x0000), // 't' ➔ "̞" U+031E COMBINING DOWN TACK BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'v'	,0x2017	,0x033C	,0x0000), // 'v' ➔ "̼" U+033C COMBINING SEAGULL BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'V'	,0x2017	,0x1DFF	,0x0000), // 'V' ➔ "᷿" U+1DFF COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
 /*<!subscript><!subscript>                                         */ DEADTRANS( L'W'	,0x2017	,0x1AB6	,0x0000), // 'W' ➔ "᪶" U+1AB6 COMBINING WIGGLY LINE BELOW
@@ -9188,6 +9198,7 @@
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'-'	,0xFE4C	,0x1AE2	,0x0000), // '-' ➔ "᫢" U+1AE2 COMBINING MINUS SIGN ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'('	,0xFE4C	,0x1AC1	,0x0000), // '(' ➔ "᫁" U+1AC1 COMBINING LEFT PARENTHESIS ABOVE LEFT
 /*<!superscript><!superscript>                                     */ DEADTRANS( L')'	,0xFE4C	,0x1AC2	,0x0000), // ')' ➔ "᫂" U+1AC2 COMBINING RIGHT PARENTHESIS ABOVE RIGHT
+/*<!superscript><!superscript>                                     */ DEADTRANS( L'%'	,0xFE4C	,0x1AEB	,0x0000), // '%' ➔ "᫫" U+1AEB COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'.'	,0xFE4C	,0x0307	,0x0000), // '.' ➔ "̇" U+0307 COMBINING DOT ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'+'	,0xFE4C	,0x1AC8	,0x0000), // '+' ➔ "᫈" U+1AC8 COMBINING PLUS SIGN ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'"'	,0xFE4C	,0x030E	,0x0000), // '"' ➔ "̎" U+030E COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
@@ -9214,15 +9225,15 @@
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'C'	,0xFE4C	,0x1AE4	,0x0000), // 'C' ➔ "᫤" U+1AE4 COMBINING SQUARE ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00E7	,0xFE4C	,0x1DD7	,0x0000), // 'ç' ➔ "ᷗ" U+1DD7 COMBINING LATIN SMALL LETTER C CEDILLA
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00C7	,0xFE4C	,0x1DD7	,0x0000), // 'Ç' ➔ "ᷗ" U+1DD7 COMBINING LATIN SMALL LETTER C CEDILLA
+/*<!superscript><!superscript>                                     */ DEADTRANS( L'D'	,0xFE4C	,0x0351	,0x0000), // 'D' ➔ "͑" U+0351 COMBINING LEFT HALF RING ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'd'	,0xFE4C	,0x0369	,0x0000), // 'd' ➔ "ͩ" U+0369 COMBINING LATIN SMALL LETTER D
-/*<!superscript><!superscript>                                     */ DEADTRANS( L'D'	,0xFE4C	,0x1AD9	,0x0000), // 'D' ➔ "᫙" U+1AD9 COMBINING SHARP SIGN
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'E'	,0xFE4C	,0x0364	,0x0000), // 'E' ➔ "ͤ" U+0364 COMBINING LATIN SMALL LETTER E
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'e'	,0xFE4C	,0x0364	,0x0000), // 'e' ➔ "ͤ" U+0364 COMBINING LATIN SMALL LETTER E
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00E9	,0xFE4C	,0x1DF2	,0x0000), // 'é' ➔ "ᷲ" U+1DF2 COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00C9	,0xFE4C	,0x1DF2	,0x0000), // 'É' ➔ "ᷲ" U+1DF2 COMBINING LATIN SMALL LETTER A WITH DIAERESIS
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00E8	,0xFE4C	,0x1DF4	,0x0000), // 'è' ➔ "ᷴ" U+1DF4 COMBINING LATIN SMALL LETTER U WITH DIAERESIS
 /*<!superscript><!superscript>                                     */ DEADTRANS( 0x00C8	,0xFE4C	,0x1DF4	,0x0000), // 'È' ➔ "ᷴ" U+1DF4 COMBINING LATIN SMALL LETTER U WITH DIAERESIS
-/*<!superscript><!superscript>                                     */ DEADTRANS( L'F'	,0xFE4C	,0x1AEB	,0x0000), // 'F' ➔ "᫫" U+1AEB COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
+/*<!superscript><!superscript>                                     */ DEADTRANS( L'F'	,0xFE4C	,0x0357	,0x0000), // 'F' ➔ "͗" U+0357 COMBINING RIGHT HALF RING ABOVE
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'f'	,0xFE4C	,0x1DEB	,0x0000), // 'f' ➔ "ᷫ" U+1DEB COMBINING LATIN SMALL LETTER F
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'g'	,0xFE4C	,0x1DDA	,0x0000), // 'g' ➔ "ᷚ" U+1DDA COMBINING LATIN SMALL LETTER G
 /*<!superscript><!superscript>                                     */ DEADTRANS( L'G'	,0xFE4C	,0x1DDB	,0x0000), // 'G' ➔ "ᷛ" U+1DDB COMBINING LATIN LETTER SMALL CAPITAL G

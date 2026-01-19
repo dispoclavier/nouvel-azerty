@@ -8,6 +8,7 @@
 * 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update to 6.1.7.3                        6.1.7.3.0 Mon 2026-01-19T2317+0100
 * Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0719+0100
 * Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2222+0100
 * Debug by appending multikey chain links  6.1.6.1.0 Fri 2026-01-02T1245+0100
