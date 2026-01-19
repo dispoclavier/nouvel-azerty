@@ -3740,7 +3740,7 @@
 #   "y" for an alphabetic alternative with a slight shape-based mnemonic.
 #
 #
-#   Vertical lines
+#   Vertical lines above
 #
 #   Single and double vertical lines above use apostrophe and quotedbl and
 #   their aliases rightsinglequotemark and EuroSign as straightforward base
@@ -3749,23 +3749,36 @@
 #   See "̎" U030E
 #
 #
-#   Tacks
+#   Half rings above
 #
-#   The most longstanding combining tack above is supported by mnemonic "T":
+#   The left half ring above "͑" U0351 and the right half ring above "͗" U0357
+#   have "D" and "F" as base characters consistently with their counterparts
+#   below "̜" U031C and "̹" U0339 and with the ASCII map parenleft and
+#   parenright.
+#   See #   Half rings below
+#
+#
+#   Tacks above
+#
+#   The most longstanding combining tack above is supported by "T", although
+#   the mnemonic works upside down:
 #
 #       T   "᷵" U1DF5 COMBINING UP TACK ABOVE
 #
-#   Additionally to the up tack, the other tacks are also supported as they
-#   were added to Unicode for version 17.0. The base characters are digits 4, 6
-#   and 0, along the lines of what is done for the spacing tacks "˔" U02D4,
-#   "˕" U02D5, "꭪" UAB6A, "꭫" UAB6B in dead_tilde.
+#   Additionally to the up tack, the other tacks are supported as they were
+#   added to Unicode for version 17.0. The base characters are digits 4 and 6
+#   on a regular basis, and 0 because 2 is used for "᪼" U1ABC for the sake of
+#   the "double" mnemonic.
 #   https://www.unicode.org/charts/PDF/Unicode-17.0/U170-1AB0.pdf
-#   See #*# TILDE
-#   See #   Tacks
 #
-#       4   "᫠" U1AE0 # COMBINING LEFT TACK ABOVE
-#       6   "᫡" U1AE1 # COMBINING RIGHT TACK ABOVE
-#       0   "᫛" U1ADB # COMBINING DOWN TACK ABOVE
+#       4   "᫠" U1AE0 COMBINING LEFT TACK ABOVE
+#       6   "᫡" U1AE1 COMBINING RIGHT TACK ABOVE
+#       0   "᫛" U1ADB COMBINING DOWN TACK ABOVE
+#
+#   Tacks by digits work along the lines of what is done for the spacing tacks
+#   "˔" U02D4, "˕" U02D5, "꭪" UAB6A, "꭫" UAB6B in dead_tilde.
+#   See #*# TILDE
+#   See #   Tacks in dead_tilde
 #
 #
 #   Small punctuation
@@ -3856,6 +3869,8 @@
 <Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                       <asciicircum> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
 <Multi_key><asciicircum><asciicircum>                                                <asciicircum> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
+<UEFD1><UEFD1>                                                                           <percent> : "᫫" U1AEB # COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
+<Multi_key><asciicircum><asciicircum>                                                    <percent> : "᫫" U1AEB # COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
 <UEFD1><UEFD1>                                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><asciicircum><asciicircum>                                                   <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <UEFD1><UEFD1>                                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
@@ -3946,16 +3961,16 @@
 <Multi_key><asciicircum><asciicircum>                                                          <C> : "᫤" U1AE4 # COMBINING SQUARE ABOVE
 <UEFD1><UEFD1>                                                                                 <c> : "ͨ" U0368 # COMBINING LATIN SMALL LETTER C
 <Multi_key><asciicircum><asciicircum>                                                          <c> : "ͨ" U0368 # COMBINING LATIN SMALL LETTER C
-<UEFD1><UEFD1>                                                                                 <D> : "᫙" U1AD9 # COMBINING SHARP SIGN
-<Multi_key><asciicircum><asciicircum>                                                          <D> : "᫙" U1AD9 # COMBINING SHARP SIGN
+<UEFD1><UEFD1>                                                                                 <D> : "͑" U0351 # COMBINING LEFT HALF RING ABOVE
+<Multi_key><asciicircum><asciicircum>                                                          <D> : "͑" U0351 # COMBINING LEFT HALF RING ABOVE
 <UEFD1><UEFD1>                                                                                 <d> : "ͩ" U0369 # COMBINING LATIN SMALL LETTER D
 <Multi_key><asciicircum><asciicircum>                                                          <d> : "ͩ" U0369 # COMBINING LATIN SMALL LETTER D
 <UEFD1><UEFD1>                                                                                 <E> : "ͤ" U0364 # COMBINING LATIN SMALL LETTER E
 <Multi_key><asciicircum><asciicircum>                                                          <E> : "ͤ" U0364 # COMBINING LATIN SMALL LETTER E
 <UEFD1><UEFD1>                                                                                 <e> : "ͤ" U0364 # COMBINING LATIN SMALL LETTER E
 <Multi_key><asciicircum><asciicircum>                                                          <e> : "ͤ" U0364 # COMBINING LATIN SMALL LETTER E
-<UEFD1><UEFD1>                                                                                 <F> : "᫫" U1AEB # COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
-<Multi_key><asciicircum><asciicircum>                                                          <F> : "᫫" U1AEB # COMBINING DOUBLE RIGHTWARDS ARROW ABOVE
+<UEFD1><UEFD1>                                                                                 <F> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
+<Multi_key><asciicircum><asciicircum>                                                          <F> : "͗" U0357 # COMBINING RIGHT HALF RING ABOVE
 <UEFD1><UEFD1>                                                                                 <f> : "ᷫ" U1DEB # COMBINING LATIN SMALL LETTER F
 <Multi_key><asciicircum><asciicircum>                                                          <f> : "ᷫ" U1DEB # COMBINING LATIN SMALL LETTER F
 <UEFD1><UEFD1>                                                                                 <G> : "ᷛ" U1DDB # COMBINING LATIN LETTER SMALL CAPITAL G
@@ -5459,7 +5474,7 @@
 #   turned dagger by 5.
 #
 #
-#   Tacks
+#   Tacks in dead_tilde
 #
 #   The remaining digits are used for the four tack modifier letters, still for
 #   the sake of alphabetic-graphic mnemonics based on "T". These letters are
@@ -12357,13 +12372,45 @@
 #   See #^# COMBINING_ABOVE
 #
 #
-#   Vertical lines
+#   Vertical lines below
 #
 #   Single and double vertical lines below use apostrophe and quotedbl and
 #   their aliases rightsinglequotemark and EuroSign as straightforward base
 #   characters.
 #   See "̩" U0329
 #   See "͈" U0348
+#
+#
+#   Half rings below
+#
+#   The left half ring below "̜" U031C and the right half ring below "̹" U0339
+#   have "D" and "F" as base characters consistently with their counterparts
+#   above "͑" U0351 and "͗" U0357 and with the ASCII map parenleft and
+#   parenright. Below, "D" and "F" are case insensitive.
+#   See #   Half rings above
+#
+#
+#   Tacks below
+#
+#   Consistently with the tacks above, their older counterparts below have
+#   digits and "T", "t" as base characters, with graphic, modifier key and
+#   numpad mnemonics.
+#   See #   Tacks above
+#
+#       T   "̝" U031D COMBINING UP TACK BELOW
+#       t   "̞" U031E COMBINING DOWN TACK BELOW
+#
+#       2   "̞" U031E COMBINING DOWN TACK BELOW
+#       4   "̘" U0318 COMBINING LEFT TACK BELOW
+#       6   "̙" U0319 COMBINING RIGHT TACK BELOW
+#       7   "̝" U031D COMBINING UP TACK BELOW
+#
+#   Digit 7 is used for the up tack because 8 is used for "͚" U035A.
+#
+#   Tacks by digits work along the lines of what is done for the spacing tacks
+#   "˔" U02D4, "˕" U02D5, "꭪" UAB6A, "꭫" UAB6B in dead_tilde.
+#   See #*# TILDE
+#   See #   Tacks in dead_tilde
 #
 #
 #   Centralization strokes
@@ -12404,7 +12451,8 @@
 #
 #   Symbols by letters
 #
-#   Additional diacritics are dispatched on available letters:
+#   One of these ("͉" U0349) and some additional diacritics are dispatched on
+#   available letters:
 #
 #       A, a, L, l   "͉" U0349 COMBINING LEFT ANGLE BELOW
 #             I, i   "᷐" U1DD0 COMBINING IS BELOW
@@ -12439,6 +12487,8 @@
 <Multi_key><underscore><underscore>                                                        <U202F> : "‗" U2017 # DOUBLE LOW LINE
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
+<UEFD2><UEFD2>                                                                           <percent> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+<Multi_key><underscore><underscore>                                                      <percent> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <UEFD2><UEFD2>                                                                          <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
@@ -12455,8 +12505,8 @@
 <Multi_key><underscore><underscore>                                                   <parenright> : "᫄" U1AC4 # COMBINING RIGHT PARENTHESIS BELOW RIGHT
 <UEFD2><UEFD2>                                                                              <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
 <Multi_key><underscore><underscore>                                                         <plus> : "̟" U031F # COMBINING PLUS SIGN BELOW
-<UEFD2><UEFD2>                                                                        <underscore> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
-<Multi_key><underscore><underscore>                                                   <underscore> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+<UEFD2><UEFD2>                                                                        <underscore> : "̲" U0332 # COMBINING LOW LINE
+<Multi_key><underscore><underscore>                                                   <underscore> : "̲" U0332 # COMBINING LOW LINE
 <UEFD2><UEFD2>                                                                       <bracketleft> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
 <Multi_key><underscore><underscore>                                                  <bracketleft> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
 <UEFD2><UEFD2>                                                                      <bracketright> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
@@ -12477,18 +12527,26 @@
 <Multi_key><underscore><underscore>                                                            <1> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
 <UEFD2><UEFD2>                                                                              <KP_1> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
 <Multi_key><underscore><underscore>                                                         <KP_1> : "᪽" U1ABD # COMBINING PARENTHESES BELOW
-<UEFD2><UEFD2>                                                                                 <2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
-<Multi_key><underscore><underscore>                                                            <2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
-<UEFD2><UEFD2>                                                                              <KP_2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
-<Multi_key><underscore><underscore>                                                         <KP_2> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
+<UEFD2><UEFD2>                                                                                 <2> : "̞" U031E # COMBINING DOWN TACK BELOW
+<Multi_key><underscore><underscore>                                                            <2> : "̞" U031E # COMBINING DOWN TACK BELOW
+<UEFD2><UEFD2>                                                                              <KP_2> : "̞" U031E # COMBINING DOWN TACK BELOW
+<Multi_key><underscore><underscore>                                                         <KP_2> : "̞" U031E # COMBINING DOWN TACK BELOW
+<UEFD2><UEFD2>                                                                                 <4> : "̘" U0318 # COMBINING LEFT TACK BELOW
+<Multi_key><underscore><underscore>                                                            <4> : "̘" U0318 # COMBINING LEFT TACK BELOW
+<UEFD2><UEFD2>                                                                              <KP_4> : "̘" U0318 # COMBINING LEFT TACK BELOW
+<Multi_key><underscore><underscore>                                                         <KP_4> : "̘" U0318 # COMBINING LEFT TACK BELOW
 <UEFD2><UEFD2>                                                                                 <5> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
 <Multi_key><underscore><underscore>                                                            <5> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
 <UEFD2><UEFD2>                                                                              <KP_5> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
 <Multi_key><underscore><underscore>                                                         <KP_5> : "͍" U034D # COMBINING LEFT RIGHT ARROW BELOW
-<UEFD2><UEFD2>                                                                                 <7> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
-<Multi_key><underscore><underscore>                                                            <7> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
-<UEFD2><UEFD2>                                                                              <KP_7> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
-<Multi_key><underscore><underscore>                                                         <KP_7> : "͎" U034E # COMBINING UPWARDS ARROW BELOW
+<UEFD2><UEFD2>                                                                                 <6> : "̙" U0319 # COMBINING RIGHT TACK BELOW
+<Multi_key><underscore><underscore>                                                            <6> : "̙" U0319 # COMBINING RIGHT TACK BELOW
+<UEFD2><UEFD2>                                                                              <KP_6> : "̙" U0319 # COMBINING RIGHT TACK BELOW
+<Multi_key><underscore><underscore>                                                         <KP_6> : "̙" U0319 # COMBINING RIGHT TACK BELOW
+<UEFD2><UEFD2>                                                                                 <7> : "̝" U031D # COMBINING UP TACK BELOW
+<Multi_key><underscore><underscore>                                                            <7> : "̝" U031D # COMBINING UP TACK BELOW
+<UEFD2><UEFD2>                                                                              <KP_7> : "̝" U031D # COMBINING UP TACK BELOW
+<Multi_key><underscore><underscore>                                                         <KP_7> : "̝" U031D # COMBINING UP TACK BELOW
 <UEFD2><UEFD2>                                                                                 <8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <Multi_key><underscore><underscore>                                                            <8> : "͚" U035A # COMBINING DOUBLE RING BELOW
 <UEFD2><UEFD2>                                                                              <KP_8> : "͚" U035A # COMBINING DOUBLE RING BELOW
@@ -12501,6 +12559,14 @@
 #   Multikey conflicts with "⩞" U2A5E.                                                         <A> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
 <UEFD2><UEFD2>                                                                                 <a> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
 #   Multikey conflicts with "⩞" U2A5E.                                                         <a> : "͉" U0349 # COMBINING LEFT ANGLE BELOW
+<UEFD2><UEFD2>                                                                                 <D> : "̜" U031C # COMBINING LEFT HALF RING BELOW
+<Multi_key><underscore><underscore>                                                            <D> : "̜" U031C # COMBINING LEFT HALF RING BELOW
+<UEFD2><UEFD2>                                                                                 <d> : "̜" U031C # COMBINING LEFT HALF RING BELOW
+<Multi_key><underscore><underscore>                                                            <d> : "̜" U031C # COMBINING LEFT HALF RING BELOW
+<UEFD2><UEFD2>                                                                                 <F> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
+<Multi_key><underscore><underscore>                                                            <F> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
+<UEFD2><UEFD2>                                                                                 <f> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
+<Multi_key><underscore><underscore>                                                            <f> : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
 <UEFD2><UEFD2>                                                                                 <I> : "᷐" U1DD0 # COMBINING IS BELOW
 <Multi_key><underscore><underscore>                                                            <I> : "᷐" U1DD0 # COMBINING IS BELOW
 <UEFD2><UEFD2>                                                                                 <i> : "᷐" U1DD0 # COMBINING IS BELOW
@@ -12527,6 +12593,10 @@
 <Multi_key><underscore><underscore>                                                            <S> : "᷂" U1DC2 # COMBINING SNAKE BELOW
 <UEFD2><UEFD2>                                                                                 <s> : "᷂" U1DC2 # COMBINING SNAKE BELOW
 <Multi_key><underscore><underscore>                                                            <s> : "᷂" U1DC2 # COMBINING SNAKE BELOW
+<UEFD2><UEFD2>                                                                                 <T> : "̝" U031D # COMBINING UP TACK BELOW
+<Multi_key><underscore><underscore>                                                            <T> : "̝" U031D # COMBINING UP TACK BELOW
+<UEFD2><UEFD2>                                                                                 <t> : "̞" U031E # COMBINING DOWN TACK BELOW
+<Multi_key><underscore><underscore>                                                            <t> : "̞" U031E # COMBINING DOWN TACK BELOW
 <UEFD2><UEFD2>                                                                                 <V> : "᷿" U1DFF # COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                            <V> : "᷿" U1DFF # COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                                 <v> : "̼" U033C # COMBINING SEAGULL BELOW
