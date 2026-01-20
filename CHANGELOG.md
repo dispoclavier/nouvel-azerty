@@ -107,6 +107,7 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows.
 	* 6.1.7.1 [e532b8f](https://github.com/dispoclavier/nouvel-azerty/commit/e532b8fd422729b3bd13526f769dd8b4d7471e6c)
 	* 6.1.7.2 [bfb38b5](https://github.com/dispoclavier/nouvel-azerty/commit/bfb38b5bee560b9a9f94c0a7a0e962d875b4179d)
 	* 6.1.7.3 [76d47db](https://github.com/dispoclavier/nouvel-azerty/commit/76d47db4dae22f2d7999a4012154d539ba70a0b8)
+	* 6.1.7.4 [c1352e8](https://github.com/dispoclavier/nouvel-azerty/commit/c1352e8a2e54a29964c19ced8e8ac9fcc50c86a0)
 
 ## 6.1.6 (2026-01-02)
 
