@@ -5,9 +5,10 @@
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation pro parte
-* 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update                                   6.1.7.4.0 Tue 2026-01-20T0337+0100
 * Update to 6.1.7.3                        6.1.7.3.0 Mon 2026-01-19T2316+0100
 * Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0718+0100
 * Update to 6.1.7.0                        6.1.7.0.0 Sat 2026-01-03T2220+0100

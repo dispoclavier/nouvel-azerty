@@ -4,7 +4,7 @@
 * Ligatures made of multiple code units.
 *
 * Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright (c) 2014-2026, Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
 * Remove padding zero in version number    6.0.9.7.0 Thu 2025-10-02T0335+0200
@@ -26,7 +26,7 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '1', '.', '7', '.', '3', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '1', '.', '7', '.', '4', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
