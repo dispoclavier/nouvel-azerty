@@ -1,4 +1,4 @@
-Copyright 2014–2025 Marcel Schneider dev[arobase]dispoclavier.com
+Copyright 2014–2026 Marcel Schneider dev[arobase]dispoclavier.com
 
 Le contenu de ce dossier est placé sous licence Apache, Version 2.0
 (la « Licence »), et doit être utilisé uniquement en conformité avec

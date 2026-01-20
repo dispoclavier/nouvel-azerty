@@ -24,9 +24,11 @@ Portage sous Linux de raccourcis à touche morte développés sous Windows.
 
 ## 6.1.7 (2026-01-20)
 
+Correction du contenu des touches mortes.
+
 Simplification de la saisie des symboles mathématiques.
 
-Correction du contenu des touches mortes.
+Portage sous Linux de raccourcis à touche morte développés sous Windows.
 
 * Composition :
 	* Corriger des séquences de "🣘" U+1F8D8. compose-1.yml [ec2586a](https://github.com/dispoclavier/nouvel-azerty/commit/ec2586ad2757336f4ceb1367da68da88366d0e5d), [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
@@ -34,7 +36,7 @@ Correction du contenu des touches mortes.
 * Transformations :
 	* Pour Windows :
 		* Compléter les demi-codets hauts par U+D833 dans Brève sur "F" pour la nouvelle flèche mathématique "𜻰" U+1CEF0. kbdeadtrans.c [e532b8f](https://github.com/dispoclavier/nouvel-azerty/commit/e532b8fd422729b3bd13526f769dd8b4d7471e6c)
-		* Simplifier le transpilateur. dead-key-convert.pl [79f87b9](https://github.com/dispoclavier/nouvel-azerty/commit/79f87b9d9f11c30e43045b5c658aeb639f6279dd), [ffe5563](https://github.com/dispoclavier/nouvel-azerty/commit/ffe5563b5c5bfb74817069b4cb2339097bf24906), kbdeadtrans.c, kbdeadtrans-deadkeys.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [a424b2f](https://github.com/dispoclavier/nouvel-azerty/commit/a424b2fb91424fcaa751dbf2457d4eaa1b38d9b8)
+		* Simplifier le transpilateur. dead-key-convert.pl [79f87b9](https://github.com/dispoclavier/nouvel-azerty/commit/79f87b9d9f11c30e43045b5c658aeb639f6279dd), [ffe5563](https://github.com/dispoclavier/nouvel-azerty/commit/ffe5563b5c5bfb74817069b4cb2339097bf24906), [26276ae](https://github.com/dispoclavier/nouvel-azerty/commit/26276ae4c59fa55732d5cc90ff556c5d1c9f9575), kbdeadtrans.c, kbdeadtrans-deadkeys.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [a424b2f](https://github.com/dispoclavier/nouvel-azerty/commit/a424b2fb91424fcaa751dbf2457d4eaa1b38d9b8)
 	* Exposant :
 		* Redonder "̽" U+033D par "×" U+00D7. compose-2.yml [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
 		* Redonder "ˈ" U+02C8 par "'" à la place de "’" U+2019, qui est par accent aigu. ibidem
