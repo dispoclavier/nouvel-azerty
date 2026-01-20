@@ -83,9 +83,9 @@ Correction du contenu des touches mortes.
 		* Redonder "̘" U+0318 par "4". ibidem
 		* Redonder "̙" U+0319 par "6". ibidem
 		* Redonder "̝" U+031D par "7" et par "T". ibidem
-		* Redonder "̲" U+0332 par "_" à la place de "͢" U+0362, qui va par "%". ibidem
 		* Redonder "̜" U+031C par "d" et "D". ibidem
 		* Redonder "̹" U+0339 par "f" et "F". ibidem
+		* Redonder "̲" U+0332 par "_" à la place de "͢" U+0362, qui va par "%". ibidem, [d467621](https://github.com/dispoclavier/nouvel-azerty/commit/d4676215228e9c6fd03d03e1cfcfbea50f79018c)
 	* Ogonek : Redonder "᷎" U+1DCE par "'". compose-2.yml [a804301](https://github.com/dispoclavier/nouvel-azerty/commit/a80430158606b9407183edd38f89805112b63460)
 	* Accent circonflexe :
 		* Redonder "‧" U+2027 par ";". ibidem
