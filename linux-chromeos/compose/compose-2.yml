@@ -3813,6 +3813,11 @@
 #   Also, less and greater yield the arrowheads "᷾" U1DFE and "͐" U0350, while
 #   equal has now "᫨" U1AE8 as a "͇" U0347 counterpart above.
 #
+#   The COMBINING DOUBLE RIGHTWARDS ARROW ABOVE "᫫" U1AEB has percent as a base
+#   character, with a mnemonic using the percent sign as carrying a "double"
+#   mnemonic, consistently with its counterpart below, "͢" U0362.
+#   https://en.wikipedia.org/wiki/Percent_sign
+#
 #
 #   Other symbols
 #
@@ -12443,16 +12448,20 @@
 #   character asciicircum consistent with its second part. By contrast,
 #   "᷿" U1DFF COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW is by "V".
 #
-#   Underscore yields "͢" U0362.
+#   The COMBINING DOUBLE RIGHTWARDS ARROW BELOW "͢" U0362 has percent as a base
+#   character, with a mnemonic using the percent sign as carrying a "double"
+#   mnemonic, consistently with its counterpart above, "᫫" U1AEB.
+#   https://en.wikipedia.org/wiki/Percent_sign
 #
-#   "͍" U034D is by "2" and "5", while "͎" U034E is by "7" and "9", because
-#   "8" is used for "͚" U035A COMBINING DOUBLE RING BELOW.
+#   "͍" U034D is by "5" consistently with the arrow layout used in this project
+#   when using the numeric keypad, while "͎" U034E is by "9", because "8" is
+#   used for "͚" U035A COMBINING DOUBLE RING BELOW with a shape-based mnemonic.
 #
 #
 #   Symbols by letters
 #
-#   One of these ("͉" U0349) and some additional diacritics are dispatched on
-#   available letters:
+#   One of the above ("͉" U0349) and some additional diacritics are dispatched
+#   on available letters:
 #
 #       A, a, L, l   "͉" U0349 COMBINING LEFT ANGLE BELOW
 #             I, i   "᷐" U1DD0 COMBINING IS BELOW
@@ -12488,7 +12497,7 @@
 <UEFD2><UEFD2>                                                                       <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <Multi_key><underscore><underscore>                                                  <asciicircum> : "͖" U0356 # COMBINING RIGHT ARROWHEAD AND UP ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                           <percent> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
-<Multi_key><underscore><underscore>                                                      <percent> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
+#   Multikey conflicts with "ᫀ" U1AC0.                                                    <percent> : "͢" U0362 # COMBINING DOUBLE RIGHTWARDS ARROW BELOW
 <UEFD2><UEFD2>                                                                          <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <Multi_key><underscore><underscore>                                                     <quotedbl> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
 <UEFD2><UEFD2>                                                                          <EuroSign> : "͈" U0348 # COMBINING DOUBLE VERTICAL LINE BELOW
