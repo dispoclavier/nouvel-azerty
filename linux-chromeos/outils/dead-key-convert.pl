@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-19T0708+0100
+# 2026-01-20T0320+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -239,11 +239,13 @@ my $dead_dec          = 57856;
 my @multikey_parsed   = ();
 my @multikey_complete = ();
 my @multikey_out      = ();
+my $multikey_count    = 0;
 my @multikey_dchars   = ();
 my @multikey_print    = ();
 my @mk_equiv_parsed   = ();
 my @mk_equiv_complete = ();
 my @mk_equiv_out      = ();
+my $mk_equiv_count    = 0;
 my @mk_equiv_print    = ();
 my ( $chain, $comment, $deadchar, $deadkey, $full_chain, $high_out, $high_su, $input, $input_string, $length,
 		$output_code, $output_string, $preceding, $print, $uplus_output );
@@ -1699,6 +1701,7 @@ foreach my $line ( @multikey_out ) {
 			$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
 							. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
 							. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
+			++$multikey_count;
 		}
 	} else {
 		if ( $line =~ /^<.+>$/ ) {
@@ -1799,6 +1802,7 @@ foreach my $line ( @mk_equiv_out ) {
 				$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
 								. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
 								. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
+				++$mk_equiv_count;
 			}
 		}
 	} else {
@@ -1908,10 +1912,10 @@ print( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print CONSOLE ( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print( "  $multichar unsupported multicharacter input/output dead key sequences not processed.\n" );
 print CONSOLE ( "  $multichar unsupported multicharacter input/output dead key sequences not processed.\n" );
-print( '  ' . @multikey_print . " potential multikey-only sequences in $multikey_path.\n" );
-print CONSOLE ( '  ' . @multikey_print . " potential multikey-only sequences in $multikey_path.\n" );
-print( '  ' . @mk_equiv_print . " dead key multikey equivalent sequences in $equivalents_path.\n" );
-print CONSOLE ( '  ' . @mk_equiv_print . " dead key multikey equivalent sequences in $equivalents_path.\n" );
+print( "  $multikey_count potential multikey-only sequences in $multikey_path.\n" );
+print CONSOLE ( "  $multikey_count potential multikey-only sequences in $multikey_path.\n" );
+print( "  $mk_equiv_count dead key multikey equivalent sequences in $equivalents_path.\n" );
+print CONSOLE ( "  $mk_equiv_count dead key multikey equivalent sequences in $equivalents_path.\n" );
 unless ( @unsupported == 0 ) {
 	if ( @unsupported == 1 ) {
 		print( "  The unsupported chain is listed in $report_path.\n" );
