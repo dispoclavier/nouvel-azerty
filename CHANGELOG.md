@@ -25,8 +25,8 @@ Complétion des séquences de touches mortes spécifiques à Windows.
 Portage sous Linux de raccourcis à touche morte développés sous Windows.
 
 * Transformations :
-	* Cornu > Traversant : Ajouter pour les diacritiques traversants ou entourants, à la place du raccourci pour l’accent circonflexe souscrit, qui va dans accent circonflexe et rond en chef. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317)
-	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. ibidem
+	* Cornu > Traversant : Ajouter pour les diacritiques traversants ou entourants "⃞" U+20DE, "⃟" U+20DF, "⃠" U+20E0, "⃢" U+20E2, "⃣" U+20E3, "⃤" U+20E4, "⃧" U+20E7, "⃪" U+20EA, à la place du raccourci pour l’accent circonflexe souscrit, qui va dans accent circonflexe et rond en chef. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317)
+	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. ibidem, dead-key-convert.pl [a0a44b1](https://github.com/dispoclavier/nouvel-azerty/commit/a0a44b13d19be38623a008dbbe043b7e1bf397d5)
 
 ## 6.1.7 (2026-01-20)
 
