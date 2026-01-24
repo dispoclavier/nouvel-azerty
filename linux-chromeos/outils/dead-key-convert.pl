@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-20T0320+0100
+# 2026-01-24T2237+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -639,7 +639,9 @@ my @dead_key_characters = (
 	'<!horn><!acute>➔1EDB',#<dead_horn><dead_acute>
 	'<!horn><!belowdot>➔1EE3',#<dead_horn><dead_belowdot>
 	'<!horn><!grave>➔1EDD',#<dead_horn><dead_grave>
-	'<!horn><!horn>➔1E18',#<dead_horn><dead_horn>
+	'<!horn><!horn>➔29FA',#<dead_horn><dead_horn>
+	'<!abovering><!circumflex>➔1E18',#<dead_abovering><dead_circumflex>
+	'<!circumflex><!abovering>➔1E18',#<dead_circumflex><dead_abovering>
 	'<!horn><!tilde>➔1EE1',#<dead_horn><dead_tilde>
 	'<!invertedbreve><!group>➔02A9',#<dead_invertedbreve><UEFD0>
 	'<!invertedbreve><!group><!group>➔0238',#<dead_invertedbreve><UEFD0><UEFD0>
