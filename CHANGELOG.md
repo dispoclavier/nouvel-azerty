@@ -18,9 +18,15 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 ## 6.1.8 (projet)
 
+Touche morte virtuelle Traversant rétablie.
+
 Complétion des séquences de touches mortes spécifiques à Windows.
 
 Portage sous Linux de raccourcis à touche morte développés sous Windows.
+
+* Transformations :
+	* Cornu > Traversant : Ajouter pour les diacritiques traversants ou entourants, à la place du raccourci pour l’accent circonflexe souscrit, qui va dans accent circonflexe et rond en chef. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317)
+	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. ibidem
 
 ## 6.1.7 (2026-01-20)
 
