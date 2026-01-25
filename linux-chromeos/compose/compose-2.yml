@@ -11938,7 +11938,7 @@
 #
 #   Consistently with COMBINING_ABOVE in *dead_superscript, and COMBINING_BELOW
 #   in *dead_subscript, crossing or surrounding diacritics without an intuitive
-#   input method in a dedicated dead key are supported together in this virtual 
+#   input method in a dedicated dead key are supported together in this virtual
 #   dead key on double press of dead_horn, thanks to its availability and to an
 #   intuitive mnemonic based on dead_horn’s longstanding multikey equivalent in
 #   en_US.UTF-8/Compose.
@@ -11953,22 +11953,52 @@
 <Multi_key><plus><plus>                                                                    <U202F> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <dead_horn><dead_horn>                                                               <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <Multi_key><plus><plus>                                                              <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
-<dead_horn><dead_horn>                                                                 <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
-<Multi_key><plus><plus>                                                                <backslash> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
+<dead_horn><dead_horn>                                                                 <backslash> : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
+<Multi_key><plus><plus>                                                                <backslash> : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
+<dead_horn><dead_horn>                                                                <asciitilde> : "̴" U0334 # COMBINING TILDE OVERLAY
+<Multi_key><plus><plus>                                                               <asciitilde> : "̴" U0334 # COMBINING TILDE OVERLAY
+<dead_horn><dead_horn>                                                                <apostrophe> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
+<Multi_key><plus><plus>                                                               <apostrophe> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
+<dead_horn><dead_horn>                                                      <rightsinglequotemark> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
+<Multi_key><plus><plus>                                                     <rightsinglequotemark> : "⃓" U20D3 # COMBINING SHORT VERTICAL LINE OVERLAY
+<dead_horn><dead_horn>                                                                <braceright> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
+<Multi_key><plus><plus>                                                               <braceright> : "⃠" U20E0 # COMBINING ENCLOSING CIRCLE BACKSLASH
+<dead_horn><dead_horn>                                                                    <dollar> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<Multi_key><plus><plus>                                                                   <dollar> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<dead_horn><dead_horn>                                                                 <parenleft> : "᪾" U1ABE # COMBINING PARENTHESES OVERLAY
+<Multi_key><plus><plus>                                                                <parenleft> : "᪾" U1ABE # COMBINING PARENTHESES OVERLAY
 <dead_horn><dead_horn>                                                                <parenright> : "⃢" U20E2 # COMBINING ENCLOSING SCREEN
 <Multi_key><plus><plus>                                                               <parenright> : "⃢" U20E2 # COMBINING ENCLOSING SCREEN
+<dead_horn><dead_horn>                                                                     <minus> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
+<Multi_key><plus><plus>                                                                    <minus> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
+<dead_horn><dead_horn>                                                                <underscore> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
+<Multi_key><plus><plus>                                                               <underscore> : "̶" U0336 # COMBINING LONG STROKE OVERLAY
 <dead_horn><dead_horn>                                                               <bracketleft> : "⃞" U20DE # COMBINING ENCLOSING SQUARE
 <Multi_key><plus><plus>                                                              <bracketleft> : "⃞" U20DE # COMBINING ENCLOSING SQUARE
 <dead_horn><dead_horn>                                                              <bracketright> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <Multi_key><plus><plus>                                                             <bracketright> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<dead_horn><dead_horn>                                                                       <bar> : "⃒" U20D2 # COMBINING LONG VERTICAL LINE OVERLAY
+<Multi_key><plus><plus>                                                                      <bar> : "⃒" U20D2 # COMBINING LONG VERTICAL LINE OVERLAY
+<dead_horn><dead_horn>                                                                     <slash> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
+<Multi_key><plus><plus>                                                                    <slash> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_horn><dead_horn>                                                                      <less> : "⃪" U20EA # COMBINING LEFTWARDS ARROW OVERLAY
 <Multi_key><plus><plus>                                                                     <less> : "⃪" U20EA # COMBINING LEFTWARDS ARROW OVERLAY
 <dead_horn><dead_horn>                                                                   <greater> : "⃟" U20DF # COMBINING ENCLOSING DIAMOND
 <Multi_key><plus><plus>                                                                  <greater> : "⃟" U20DF # COMBINING ENCLOSING DIAMOND
+<dead_horn><dead_horn>                                                                     <equal> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<Multi_key><plus><plus>                                                                    <equal> : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
+<dead_horn><dead_horn>                                                                     <grave> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<Multi_key><plus><plus>                                                                    <grave> : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_horn><dead_horn>                                                                         <A> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <Multi_key><plus><plus>                                                                        <A> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <dead_horn><dead_horn>                                                                         <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <Multi_key><plus><plus>                                                                        <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
+<dead_horn><dead_horn>                                                                         <o> : "⃘" U20D8 # COMBINING RING OVERLAY
+<Multi_key><plus><plus>                                                                        <o> : "⃘" U20D8 # COMBINING RING OVERLAY
+<dead_horn><dead_horn>                                                                         <O> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
+<Multi_key><plus><plus>                                                                        <O> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
+<dead_horn><dead_horn>                                                                         <Q> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><plus><plus>                                                                        <Q> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 #
 #
 #*# SUBSCRIPT
