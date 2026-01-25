@@ -27,7 +27,7 @@ Portage sous Linux de la touche morte virtuelle traversant développée sous Win
 Correction du contenu des touches mortes.
 
 * Transformations :
-	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/, dead-key-convert.pl [a0a44b1](https://github.com/dispoclavier/nouvel-azerty/commit/a0a44b13d19be38623a008dbbe043b7e1bf397d5)
+	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317), dead-key-convert.pl [a0a44b1](https://github.com/dispoclavier/nouvel-azerty/commit/a0a44b13d19be38623a008dbbe043b7e1bf397d5)
 	* Cornu :
 		* Redonder "¶" U+00B6 par "Q". compose-2.yml [5d7233c](https://github.com/dispoclavier/nouvel-azerty/commit/5d7233c292796e68866f74e57588135deee32785)
 		* Redonder "⁋" U+204B par "P". ibidem
