@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
+* Update                                   6.1.8.0.0 Sun 2026-01-25T0534+0100
 * Update                                   6.1.7.4.0 Tue 2026-01-20T0336+0100
 * Update to 6.1.7.3                        6.1.7.3.0 Mon 2026-01-19T2317+0100
 * Update to 6.1.7.2                        6.1.7.2.0 Mon 2026-01-19T0719+0100
@@ -1021,7 +1022,6 @@
 /*<!M><%hash><~nbthinspace>                                        */ DEADTRANS( 0x202F	,0x2460	,0x200A	,0x0000), // ' ' ➔ " " U+200A HAIR SPACE
 /*<!M><%hash><~space>                                              */ DEADTRANS( L' '	,0x2460	,0x2003	,0x0000), // ' ' ➔ " " U+2003 EM SPACE
 /*<!M><%less><%aprightsingquotmark>                                */ DEADTRANS( 0x2019	,0x00EA	,0x2018	,0x0000), // '’' ➔ "‘" U+2018 LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
-/*<!M><%less><%asterisk>                                           */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000), // '*' ➔ "⁂" U+2042 ASTERISM
 /*<!M><%less><%braceright>                                         */ DEADTRANS( L'}'	,0x00EA	,0x27E9	,0x0000), // '}' ➔ "⟩" U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET
 /*<!M><%less><%comma>                                              */ DEADTRANS( L','	,0x00EA	,0x02BC	,0x0000), // ',' ➔ "ʼ" U+02BC MODIFIER LETTER APOSTROPHE
 /*<!M><%less><%dollar>                                             */ DEADTRANS( L'$'	,0x00EA	,0x1DCD	,0x0000), // '$' ➔ "᷍" U+1DCD COMBINING DOUBLE CIRCUMFLEX ABOVE
@@ -1353,10 +1353,10 @@
 /*<!M><%plus><n>                                                   */ DEADTRANS( L'n'	,0x01A1	,0xA791	,0x0000), // 'n' ➔ "ꞑ" U+A791 LATIN SMALL LETTER N WITH DESCENDER
 /*<!M><%plus><O>                                                   */ DEADTRANS( L'O'	,0x01A1	,0x01A0	,0x0000), // 'O' ➔ "Ơ" U+01A0 LATIN CAPITAL LETTER O WITH HORN
 /*<!M><%plus><o>                                                   */ DEADTRANS( L'o'	,0x01A1	,0x01A1	,0x0000), // 'o' ➔ "ơ" U+01A1 LATIN SMALL LETTER O WITH HORN
-/*<!M><%plus><P>                                                   */ DEADTRANS( L'P'	,0x01A1	,0x02D6	,0x0000), // 'P' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
-/*<!M><%plus><p>                                                   */ DEADTRANS( L'p'	,0x01A1	,0x02D6	,0x0000), // 'p' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
-/*<!M><%plus><Q>                                                   */ DEADTRANS( L'Q'	,0x01A1	,0x02D6	,0x0000), // 'Q' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
-/*<!M><%plus><q>                                                   */ DEADTRANS( L'q'	,0x01A1	,0x02D6	,0x0000), // 'q' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
+/*<!M><%plus><P>                                                   */ DEADTRANS( L'P'	,0x01A1	,0x204B	,0x0000), // 'P' ➔ "⁋" U+204B REVERSED PILCROW SIGN
+/*<!M><%plus><p>                                                   */ DEADTRANS( L'p'	,0x01A1	,0x204D	,0x0000), // 'p' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
+/*<!M><%plus><Q>                                                   */ DEADTRANS( L'Q'	,0x01A1	,0x00B6	,0x0000), // 'Q' ➔ "¶" U+00B6 PILCROW SIGN
+/*<!M><%plus><q>                                                   */ DEADTRANS( L'q'	,0x01A1	,0x204C	,0x0000), // 'q' ➔ "⁌" U+204C BLACK LEFTWARDS BULLET
 /*<!M><%plus><R>                                                   */ DEADTRANS( L'R'	,0x01A1	,0x02D6	,0x0000), // 'R' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
 /*<!M><%plus><r>                                                   */ DEADTRANS( L'r'	,0x01A1	,0x02D6	,0x0000), // 'r' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
 /*<!M><%plus><S>                                                   */ DEADTRANS( L'S'	,0x01A1	,0x02D6	,0x0000), // 'S' ➔ "˖" U+02D6 MODIFIER LETTER PLUS SIGN
