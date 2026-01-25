@@ -20,7 +20,7 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
-## 6.1.8 (projet)
+## 6.1.8 (2026-01-25)
 
 Portage sous Linux de la touche morte virtuelle traversant développée sous Windows.
 
@@ -38,8 +38,8 @@ Correction du contenu des touches mortes.
 			* Ajouter ou redonder "̴" U+0334, "̵" U+0335, "̶" U+0336, "̷" U+0337, "̸" U+0338, "᪾" U+1ABE, "⃒" U+20D2, "⃓" U+20D3, "⃘" U+20D8, "⃙" U+20D9, "⃚" U+20DA, "⃥" U+20E5, "⃦" U+20E6, "⃪" U+20EA, "⃫" U+20EB. compose-2.yml [1a70009](https://github.com/dispoclavier/nouvel-azerty/commit/1a7000904372e86f1e75f65d0e9ca02ff9577b7a)
 			* Redonder "⃦" U+20E6 par "\"" et "€" U+20AC. compose-2.yml [c128b97](https://github.com/dispoclavier/nouvel-azerty/commit/c128b97fdf1cd94f9b106704414df42851ed1936)
 			* Redonder "⃣" U+20E3 par "k", "K", "t" et "T". ibidem
-* Documentation :
-	* Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml [5d7233c](https://github.com/dispoclavier/nouvel-azerty/commit/5d7233c292796e68866f74e57588135deee32785)
+* Documentation : Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml [5d7233c](https://github.com/dispoclavier/nouvel-azerty/commit/5d7233c292796e68866f74e57588135deee32785)
+* Build : 6.1.8.0 [9af2eac](https://github.com/dispoclavier/nouvel-azerty/commit/9af2eacb6a0bf364bcb159424c3fc1b1689da3c3)
 
 ## 6.1.7 (2026-01-20)
 
