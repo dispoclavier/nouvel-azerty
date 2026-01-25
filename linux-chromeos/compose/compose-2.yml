@@ -11953,6 +11953,10 @@
 <Multi_key><plus><plus>                                                                    <U202F> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <dead_horn><dead_horn>                                                               <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
 <Multi_key><plus><plus>                                                              <asciicircum> : "⃤" U20E4 # COMBINING ENCLOSING UPWARD POINTING TRIANGLE
+<dead_horn><dead_horn>                                                                  <quotedbl> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<Multi_key><plus><plus>                                                                 <quotedbl> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<dead_horn><dead_horn>                                                                  <EuroSign> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
+<Multi_key><plus><plus>                                                                 <EuroSign> : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
 <dead_horn><dead_horn>                                                                 <backslash> : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
 <Multi_key><plus><plus>                                                                <backslash> : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
 <dead_horn><dead_horn>                                                                <asciitilde> : "̴" U0334 # COMBINING TILDE OVERLAY
@@ -11993,12 +11997,20 @@
 <Multi_key><plus><plus>                                                                        <A> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <dead_horn><dead_horn>                                                                         <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
 <Multi_key><plus><plus>                                                                        <a> : "⃧" U20E7 # COMBINING ANNUITY SYMBOL
+<dead_horn><dead_horn>                                                                         <K> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><plus><plus>                                                                        <K> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<dead_horn><dead_horn>                                                                         <k> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><plus><plus>                                                                        <k> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 <dead_horn><dead_horn>                                                                         <o> : "⃘" U20D8 # COMBINING RING OVERLAY
 <Multi_key><plus><plus>                                                                        <o> : "⃘" U20D8 # COMBINING RING OVERLAY
 <dead_horn><dead_horn>                                                                         <O> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <Multi_key><plus><plus>                                                                        <O> : "⃙" U20D9 # COMBINING CLOCKWISE RING OVERLAY
 <dead_horn><dead_horn>                                                                         <Q> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><plus><plus>                                                                        <Q> : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<dead_horn><dead_horn>                                                                         <T> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><plus><plus>                                                                        <T> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<dead_horn><dead_horn>                                                                         <t> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
+<Multi_key><plus><plus>                                                                        <t> : "⃣" U20E3 # COMBINING ENCLOSING KEYCAP
 #
 #
 #*# SUBSCRIPT
