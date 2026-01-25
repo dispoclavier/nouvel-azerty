@@ -16,17 +16,30 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
+## 6.1.9 (projet)
+
+Complétion des séquences de touches mortes spécifiques à Windows.
+
 ## 6.1.8 (projet)
 
 Portage sous Linux de la touche morte virtuelle traversant développée sous Windows.
 
-Complétion des séquences de touches mortes spécifiques à Windows.
+Correction du contenu des touches mortes.
 
 * Transformations :
-	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. ibidem, dead-key-convert.pl [a0a44b1](https://github.com/dispoclavier/nouvel-azerty/commit/a0a44b13d19be38623a008dbbe043b7e1bf397d5)
-	* Cornu > Traversant :
-		* Ajouter pour les diacritiques traversants ou entourants "⃞" U+20DE, "⃟" U+20DF, "⃠" U+20E0, "⃢" U+20E2, "⃣" U+20E3, "⃤" U+20E4, "⃧" U+20E7, "⃪" U+20EA, à la place du raccourci pour l’accent circonflexe souscrit, qui va dans accent circonflexe et rond en chef. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317)
-		* Ajouter ou redonder "̴" U+0334, "̵" U+0335, "̶" U+0336, "̷" U+0337, "̸" U+0338, "᪾" U+1ABE, "⃒" U+20D2, "⃓" U+20D3, "⃘" U+20D8, "⃙" U+20D9, "⃚" U+20DA, "⃥" U+20E5, "⃦" U+20E6, "⃪" U+20EA, "⃫" U+20EB. compose-2.yml [1a70009](https://github.com/dispoclavier/nouvel-azerty/commit/1a7000904372e86f1e75f65d0e9ca02ff9577b7a)
+	* Accent circonflexe et rond en chef : Ajouter comme raccourci pour l’accent circonflexe souscrit. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/, dead-key-convert.pl [a0a44b1](https://github.com/dispoclavier/nouvel-azerty/commit/a0a44b13d19be38623a008dbbe043b7e1bf397d5)
+	* Cornu :
+		* Redonder "¶" U+00B6 par "Q". compose-2.yml [5d7233c](https://github.com/dispoclavier/nouvel-azerty/commit/5d7233c292796e68866f74e57588135deee32785)
+		* Redonder "⁋" U+204B par "P". ibidem
+		* Redonder "⁌" U+204C par "q". ibidem
+		* Redonder "⁍" U+204D par "p". ibidem
+		* Traversant :
+			* Ajouter en double frappe pour les diacritiques traversants ou entourants "⃞" U+20DE, "⃟" U+20DF, "⃠" U+20E0, "⃢" U+20E2, "⃣" U+20E3, "⃤" U+20E4, "⃧" U+20E7, "⃪" U+20EA, à la place du raccourci pour l’accent circonflexe souscrit, qui va dans accent circonflexe et rond en chef. compose-2.yml [4110edd](https://github.com/dispoclavier/nouvel-azerty/commit/4110edd799564331df667712671f3286020b8317)
+			* Ajouter ou redonder "̴" U+0334, "̵" U+0335, "̶" U+0336, "̷" U+0337, "̸" U+0338, "᪾" U+1ABE, "⃒" U+20D2, "⃓" U+20D3, "⃘" U+20D8, "⃙" U+20D9, "⃚" U+20DA, "⃥" U+20E5, "⃦" U+20E6, "⃪" U+20EA, "⃫" U+20EB. compose-2.yml [1a70009](https://github.com/dispoclavier/nouvel-azerty/commit/1a7000904372e86f1e75f65d0e9ca02ff9577b7a)
+			* Redonder "⃦" U+20E6 par "\"" et "€" U+20AC. compose-2.yml [c128b97](https://github.com/dispoclavier/nouvel-azerty/commit/c128b97fdf1cd94f9b106704414df42851ed1936)
+			* Redonder "⃣" U+20E3 par "k", "K", "t" et "T". ibidem
+* Documentation :
+	* Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml [5d7233c](https://github.com/dispoclavier/nouvel-azerty/commit/5d7233c292796e68866f74e57588135deee32785)
 
 ## 6.1.7 (2026-01-20)
 
