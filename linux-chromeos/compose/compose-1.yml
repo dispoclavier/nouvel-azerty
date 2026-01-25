@@ -3362,7 +3362,7 @@
 <Multi_key><I><R><M><P><D>                                                                         : "👉" U1F449 # WHITE RIGHT POINTING BACKHAND INDEX
 #
 #
-#   Pilcrow bullets
+#   “Pilcrow bullets”
 #
 #   "⁌" U204C and "⁍" U204D match "¶" U00B6 and "⁋" U204B. These bullets are
 #   part of the signature marks and are considered general punctuation.
@@ -3371,16 +3371,18 @@
 #   https://github.com/psb1558/Junicode-font/discussions/93
 #   https://en.wikipedia.org/wiki/Signature_mark
 #
-#   Filled leftwards pilcrow bullet
+#   Filled leftwards “pilcrow bullet”
+#Multi_key><f><l><p><b>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><f><l><p>                                                                               : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><F><L><P>                                                                               : "⁌" U204C # BLACK LEFTWARDS BULLET
-#   Puce pied-de-mouche gauche
+#   “Puce pied-de-mouche” gauche
 <Multi_key><p><p><m><g>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
 <Multi_key><P><P><M><G>                                                                            : "⁌" U204C # BLACK LEFTWARDS BULLET
-#   Filled rightwards pilcrow bullet
+#   Filled rightwards “pilcrow bullet”
+#Multi_key><f><r><p><b>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><f><r><p>                                                                               : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><F><R><P>                                                                               : "⁍" U204D # BLACK RIGHTWARDS BULLET
-#   Puce pied-de-mouche droite
+#   “Puce pied-de-mouche” droite
 <Multi_key><p><p><m><d>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 <Multi_key><P><P><M><D>                                                                            : "⁍" U204D # BLACK RIGHTWARDS BULLET
 #

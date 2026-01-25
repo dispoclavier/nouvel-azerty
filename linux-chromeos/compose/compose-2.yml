@@ -5113,7 +5113,7 @@
 #   See #*# TURNED
 #   See #+# GROUP_1
 #
-#   The two pilcrow bullets "⁌" U204C BLACK LEFTWARDS BULLET and "⁍" U204D
+#   The two “pilcrow bullets” "⁌" U204C BLACK LEFTWARDS BULLET and "⁍" U204D
 #   BLACK RIGHTWARDS BULLET are supported by case insensitive "b" and "d",
 #   thanks to the fact that these lowercase letters are the reversed
 #   counterpart of each other and would thus be missing from the reversed
@@ -11648,8 +11648,26 @@
 #
 #   Another mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
 #   SIGN, based on the horn’s multikey equivalent, is supported by other base
-#   letters: case insensitive P as the most mnemonic, but also by all other
-#   fully available base letters for a streamlined user experience.
+#   letters: not case insensitive P, as this is used for pilcrow signs and
+#   bullets, but all other fully available base letters for a streamlined user
+#   experience.
+#
+#
+#   Pilcrow signs and bullets
+#
+#   Thanks to the availability of both "p" and "q", dead_horn is also used for
+#   intuitive shortcuts to pilcrow signs and “pilcrow bullets,” both of which
+#   come in two symmetric forms, the reversed of each other, with the bullets
+#   used as signature marks. They may also have bracketing, opening and closing
+#   semantics:
+#
+#       Q  "¶" U00B6 PILCROW SIGN
+#       q  "⁌" U204C BLACK LEFTWARDS BULLET
+#       P  "⁋" U204B REVERSED PILCROW SIGN
+#       p  "⁍" U204D BLACK RIGHTWARDS BULLET
+#
+#   See #   “Pilcrow bullets”
+#   See #^# Abbreviations, Units and Legal Symbols
 #
 #
 #   Math symbols
@@ -11782,14 +11800,14 @@
 <Multi_key><plus>                                                                              <O> : "Ơ" U01A0 # LATIN CAPITAL LETTER O WITH HORN
 <dead_horn>                                                                                    <o> : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
 <Multi_key><plus>                                                                              <o> : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
-<dead_horn>                                                                                    <P> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <P> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                    <p> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <p> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                    <Q> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <Q> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                    <q> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <q> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                                    <P> : "⁋" U204B # REVERSED PILCROW SIGN
+<Multi_key><plus>                                                                              <P> : "⁋" U204B # REVERSED PILCROW SIGN
+<dead_horn>                                                                                    <p> : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<Multi_key><plus>                                                                              <p> : "⁍" U204D # BLACK RIGHTWARDS BULLET
+<dead_horn>                                                                                    <Q> : "¶" U00B6 # PILCROW SIGN
+<Multi_key><plus>                                                                              <Q> : "¶" U00B6 # PILCROW SIGN
+<dead_horn>                                                                                    <q> : "⁌" U204C # BLACK LEFTWARDS BULLET
+<Multi_key><plus>                                                                              <q> : "⁌" U204C # BLACK LEFTWARDS BULLET
 <dead_horn>                                                                                    <R> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                              <R> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <r> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
