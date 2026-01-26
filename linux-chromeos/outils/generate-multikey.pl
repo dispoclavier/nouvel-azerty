@@ -2,7 +2,8 @@
 # 2022-12-28T0901+0100
 # 2023-10-27T1438+0200
 # 2024-05-13T1842+0200
-# 2024-05-27T2346+0200
+# 2024-07-26T1942+0200
+# 2026-01-26T0431+0100
 # = last modified.
 # 
 # Adds the Multi_key equivalent below the dead key
@@ -29,7 +30,7 @@
 # The ASCII symbols used as equivalents follow the
 # new-school input composition.
 #
-# Supports also section sign in lieu of semicolon,
+# Supports also section sign in lieu of exclam,
 # and EuroSign in lieu of quotedbl.
 #
 #
@@ -45,21 +46,21 @@
 #
 #
 # Using old-style file handles.
-use warnings;
 use strict;
+use warnings;
 use utf8;
 use feature 'unicode_strings';
 
-# Courtesy https://stackoverflow.com/a/12291409
+# By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
 my $file_path = 'Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
-print( "Opened file $file_path.\n" );
+print( "Opened file $file_path for reading.\n" );
 
 my $backup_path = 'Compose.bak';
 open( BACKUP, '>', $backup_path ) or die $!;
-print( "Opened file $backup_path.\n" );
+print( "Opened file $backup_path for writing.\n" );
 
 print( "Copying content from $file_path to $backup_path.\n" );
 while ( my $line = <INPUT> ) {
@@ -73,10 +74,10 @@ close( BACKUP );
 print( "Closed file $backup_path.\n" );
 
 open( BACKUP, '<', $backup_path ) or die $!;
-print( "Opened file $backup_path.\n" );
+print( "Opened file $backup_path for reading.\n" );
 
 open( OUTPUT, '>', $file_path ) or die $!;
-print( "Opened file $file_path.\n" );
+print( "Opened file $file_path for writing.\n" );
 
 print( "Processing content from $backup_path to $file_path.\n" );
 my ( $sta, $end, $str, $cp, $out );
@@ -232,10 +233,10 @@ while ( my $line = <BACKUP> ) {
 				$line =~ s/^(?!#)(?!<Multi_key>)(.+) {11}/<Multi_key>$1/;
 				$line =~ s/^(?!#)(?!<Multi_key>)(.+)/<Multi_key>$1/;
 				print OUTPUT $line;
-				if ( $line =~ /^<Multi_key>.*<semicolon>/ ) {
+				if ( $line =~ /^<Multi_key>.*<exclam>/ ) {
 					do {
-						$line =~ s/^([^ ]*?)<semicolon>([^ ]*)/$1<section>$2  /;
-					} while ( $line =~ /^([^ ]*?)<semicolon>/ );
+						$line =~ s/^([^ ]*?)<exclam>([^ ]*) /$1<section>$2/;
+					} while ( $line =~ /^([^ ]*?)<exclam>/ );
 					print OUTPUT $line;
 				}
 				if ( $line =~ /^<Multi_key>.*<quotedbl>/ ) {
@@ -250,9 +251,9 @@ while ( my $line = <BACKUP> ) {
 		print OUTPUT $line;
 	}
 }
+print( "File content processed successfully.\n" );
 
 close( BACKUP );
 print( "Closed file $backup_path.\n" );
 close( OUTPUT );
 print( "Closed file $file_path.\n" );
-print( "File content processed successfully.\n" );

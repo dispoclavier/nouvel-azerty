@@ -7,7 +7,7 @@
 # 2025-12-23T0450+0100
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
-# 2026-01-24T2237+0100
+# 2026-01-26T0514+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -295,7 +295,7 @@ sub dekeysym {
 	$keysym =~ s/%slash/\//;
 	$keysym =~ s/%colon/:/;
 	$keysym =~ s/%semicolon/;/;
-	$keysym =~ s/%semsection/00A7/;
+	$keysym =~ s/%excsection/00A7/;
 	$keysym =~ s/%less/</;
 	$keysym =~ s/%equal/=/;
 	$keysym =~ s/%greater/>/;
@@ -1346,6 +1346,7 @@ my @dead_key_mk_equivs = (
 	'<!M><%dollar>➔00A4',
 	'<!M><%equal>➔2690',
 	'<!M><%exclam>➔1E05',
+	'<!M><%excsection>➔1E05',
 	'<!M><%grave>➔00F2',
 	'<!M><%greater>➔021F',
 	'<!M><%hash>➔2460',
@@ -1359,7 +1360,6 @@ my @dead_key_mk_equivs = (
 	'<!M><%quotEuroSign>➔0151',
 	'<!M><%quotedbl>➔0151',
 	'<!M><%semicolon>➔0219',
-	'<!M><%semsection>➔0219',
 	'<!M><%slash>➔00F8',
 	'<!M><%tilde>➔00F5',
 	'<!M><%underscore>➔005F',
@@ -1433,7 +1433,7 @@ while ( my $line = <INPUT> ) {
 
 			# Prepare for sorting, shorten, further decode.
 			$line =~ s/<EuroSign>/<\%quotEuroSign>/g;
-			$line =~ s/<section>/<\%semsection>/g;
+			$line =~ s/<section>/<\%excsection>/g;
 			$line =~ s/<rightsinglequotemark>/<\%aprightsingquotmark>/g;
 			$line =~ s/<ascii(circum|tilde)>/<\%$1>/g;
 			$line =~ s/<numbersign>/<\%hash>/g;
