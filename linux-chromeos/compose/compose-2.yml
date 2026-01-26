@@ -525,9 +525,9 @@
 #   B06   N                `  GRAVE           dead_grave
 #
 #   B07   ? (level 1: ,)   ,  CEDILLA         dead_cedilla
-#   B08   ! (level 1: .)   !  DOT_BELOW       dead_belowdot
+#   B08   ! (level 1: .)   ;  COMMA_BELOW     dead_belowcomma
 #   B09   : (level 1: /)   :  DIAERESIS       dead_diaeresis (new-school)
-#   B10   ; (level 1: \)   ;  COMMA_BELOW     dead_belowcomma
+#   B10   ; (level 1: \)   !  DOT_BELOW       dead_belowdot
 #
 #
 #:# Legacy dead keys for Non-Belgian AZERTY
@@ -11003,12 +11003,16 @@
 #
 <dead_breve><dead_belowdot>                                                                    <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 <Multi_key><parenright><exclam>                                                                <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
+<Multi_key><parenright><section>                                                               <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 <dead_belowdot><dead_breve>                                                                    <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 <Multi_key><exclam><parenright>                                                                <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
+<Multi_key><section><parenright>                                                               <A> : "Ặ" U1EB6 # LATIN CAPITAL LETTER A WITH BREVE AND DOT BELOW
 <dead_breve><dead_belowdot>                                                                    <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
 <Multi_key><parenright><exclam>                                                                <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
+<Multi_key><parenright><section>                                                               <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
 <dead_belowdot><dead_breve>                                                                    <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
 <Multi_key><exclam><parenright>                                                                <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
+<Multi_key><section><parenright>                                                               <a> : "ặ" U1EB7 # LATIN SMALL LETTER A WITH BREVE AND DOT BELOW
 #
 #
 #^# BREVE_BELOW
@@ -11934,20 +11938,28 @@
 #
 <dead_horn><dead_belowdot>                                                                     <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
 <Multi_key><plus><exclam>                                                                      <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
+<Multi_key><plus><section>                                                                     <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
 <dead_belowdot><dead_horn>                                                                     <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
 <Multi_key><exclam><plus>                                                                      <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
+<Multi_key><section><plus>                                                                     <O> : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
 <dead_horn><dead_belowdot>                                                                     <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
 <Multi_key><plus><exclam>                                                                      <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
+<Multi_key><plus><section>                                                                     <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
 <dead_belowdot><dead_horn>                                                                     <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
 <Multi_key><exclam><plus>                                                                      <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
+<Multi_key><section><plus>                                                                     <o> : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
 <dead_horn><dead_belowdot>                                                                     <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 <Multi_key><plus><exclam>                                                                      <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
+<Multi_key><plus><section>                                                                     <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 <dead_belowdot><dead_horn>                                                                     <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 <Multi_key><exclam><plus>                                                                      <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
+<Multi_key><section><plus>                                                                     <U> : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 <dead_horn><dead_belowdot>                                                                     <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 <Multi_key><plus><exclam>                                                                      <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
+<Multi_key><plus><section>                                                                     <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 <dead_belowdot><dead_horn>                                                                     <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 <Multi_key><exclam><plus>                                                                      <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
+<Multi_key><section><plus>                                                                     <u> : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 #
 #
 #^# COMBINING_OVERLAY
@@ -15289,6 +15301,7 @@
 #   For maintainability of the code, and usability of the documentation, this
 #   dead key content is grouped in a single place.
 #   See #^# CIRCUMFLEX_BELOW
+#   See # # Notes about documentation
 #
 #
 # # CIRCUMFLEX&GRAVE
@@ -15323,28 +15336,40 @@
 #
 <dead_circumflex><dead_belowdot>                                                               <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <A> : "Ậ" U1EAC # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex><dead_belowdot>                                                               <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <a> : "ậ" U1EAD # LATIN SMALL LETTER A WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex><dead_belowdot>                                                               <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <E> : "Ệ" U1EC6 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex><dead_belowdot>                                                               <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <e> : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex><dead_belowdot>                                                               <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <O> : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex><dead_belowdot>                                                               <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><less><exclam>                                                                      <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><less><section>                                                                     <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <dead_belowdot><dead_circumflex>                                                               <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <Multi_key><exclam><less>                                                                      <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
+<Multi_key><section><less>                                                                     <o> : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 #
 #
 #^# HACEK input facility by CIRCUMFLEX
@@ -15396,6 +15421,7 @@
 #
 #   For maintainability of the code, and usability of the documentation, this
 #   dead key content is grouped in a single place.
+#   See # # Notes about documentation
 #
 <dead_circumflex><dead_circumflex><dead_circumflex>                                        <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><less><less>                                                              <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
@@ -16939,174 +16965,260 @@
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   plus yields "⨥" U2A25, minus yields "⨪" U2A2A, and equal yields "⩦" U2A66.
 #
+#   For convenience, the multikey sequence « ¦§ » is also supported, to account
+#   for the mapping of the section sign at level 3 of B10 in French mode for
+#   the synergy with digits and for backward compatibility.
+#
 <dead_belowdot>                                                                            <space> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <space> : "̣" U0323 # COMBINING DOT BELOW
+<Multi_key><section>                                                                       <space> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                            <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <Multi_key><exclam>                                                                        <U200B> : "̣" U0323 # COMBINING DOT BELOW
+<Multi_key><section>                                                                       <U200B> : "̣" U0323 # COMBINING DOT BELOW
 <dead_belowdot>                                                                     <nobreakspace> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                 <nobreakspace> : "⸳" U2E33 # RAISED DOT
+<Multi_key><section>                                                                <nobreakspace> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <U202F> : "⸳" U2E33 # RAISED DOT
 <Multi_key><exclam>                                                                        <U202F> : "⸳" U2E33 # RAISED DOT
+<Multi_key><section>                                                                       <U202F> : "⸳" U2E33 # RAISED DOT
 <dead_belowdot>                                                                            <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
+<Multi_key><exclam>                                                                        <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
+<Multi_key><section>                                                                       <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 #   Multikey conflicts with "↱" U21B1.                                                     <minus> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                             <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+<Multi_key><exclam>                                                                         <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
+<Multi_key><section>                                                                        <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 #   Multikey conflicts with "Ợ" U1EE2, "ợ" U1EE3, "Ự" U1EF0, "ự" U1EF1.                     <plus> : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                       <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <Multi_key><exclam>                                                                   <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><section>                                                                  <underscore> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot>                                                                            <equal> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <Multi_key><exclam>                                                                        <equal> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
+<Multi_key><section>                                                                       <equal> : "⩦" U2A66 # EQUALS SIGN WITH DOT BELOW
 <dead_belowdot>                                                                                <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<Multi_key><section>                                                                           <0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
+<Multi_key><section>                                                                        <KP_0> : "⸪" U2E2A # TWO DOTS OVER ONE DOT PUNCTUATION
 <dead_belowdot>                                                                                <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <Multi_key><exclam>                                                                            <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<Multi_key><section>                                                                           <1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <dead_belowdot>                                                                             <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
+<Multi_key><section>                                                                        <KP_1> : "⸫" U2E2B # ONE DOT OVER TWO DOTS PUNCTUATION
 <dead_belowdot>                                                                                <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <2> : "⁚" U205A # TWO DOT PUNCTUATION
+<Multi_key><section>                                                                           <2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
+<Multi_key><section>                                                                        <KP_2> : "⁚" U205A # TWO DOT PUNCTUATION
 <dead_belowdot>                                                                                <3> : "⁝" U205D # TRICOLON
 <Multi_key><exclam>                                                                            <3> : "⁝" U205D # TRICOLON
+<Multi_key><section>                                                                           <3> : "⁝" U205D # TRICOLON
 <dead_belowdot>                                                                             <KP_3> : "⁝" U205D # TRICOLON
 <Multi_key><exclam>                                                                         <KP_3> : "⁝" U205D # TRICOLON
+<Multi_key><section>                                                                        <KP_3> : "⁝" U205D # TRICOLON
 <dead_belowdot>                                                                                <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <Multi_key><exclam>                                                                            <4> : "⁞" U205E # VERTICAL FOUR DOTS
+<Multi_key><section>                                                                           <4> : "⁞" U205E # VERTICAL FOUR DOTS
 <dead_belowdot>                                                                             <KP_4> : "⁞" U205E # VERTICAL FOUR DOTS
 <Multi_key><exclam>                                                                         <KP_4> : "⁞" U205E # VERTICAL FOUR DOTS
+<Multi_key><section>                                                                        <KP_4> : "⁞" U205E # VERTICAL FOUR DOTS
 <dead_belowdot>                                                                                <5> : "⁙" U2059 # FIVE DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <5> : "⁙" U2059 # FIVE DOT PUNCTUATION
+<Multi_key><section>                                                                           <5> : "⁙" U2059 # FIVE DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_5> : "⁙" U2059 # FIVE DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_5> : "⁙" U2059 # FIVE DOT PUNCTUATION
+<Multi_key><section>                                                                        <KP_5> : "⁙" U2059 # FIVE DOT PUNCTUATION
 <dead_belowdot>                                                                                <6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <Multi_key><exclam>                                                                            <6> : "⸽" U2E3D # VERTICAL SIX DOTS
+<Multi_key><section>                                                                           <6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <dead_belowdot>                                                                             <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <Multi_key><exclam>                                                                         <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
+<Multi_key><section>                                                                        <KP_6> : "⸽" U2E3D # VERTICAL SIX DOTS
 <dead_belowdot>                                                                                <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<Multi_key><section>                                                                           <7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
+<Multi_key><section>                                                                        <KP_7> : "⸬" U2E2C # SQUARED FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                                <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                            <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<Multi_key><section>                                                                           <8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                             <KP_8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <Multi_key><exclam>                                                                         <KP_8> : "⁘" U2058 # FOUR DOT PUNCTUATION
+<Multi_key><section>                                                                        <KP_8> : "⁘" U2058 # FOUR DOT PUNCTUATION
 <dead_belowdot>                                                                                <9> : "⁛" U205B # FOUR DOT MARK
 <Multi_key><exclam>                                                                            <9> : "⁛" U205B # FOUR DOT MARK
+<Multi_key><section>                                                                           <9> : "⁛" U205B # FOUR DOT MARK
 <dead_belowdot>                                                                             <KP_9> : "⁛" U205B # FOUR DOT MARK
 <Multi_key><exclam>                                                                         <KP_9> : "⁛" U205B # FOUR DOT MARK
+<Multi_key><section>                                                                        <KP_9> : "⁛" U205B # FOUR DOT MARK
 <dead_belowdot>                                                                                <A> : "Ạ" U1EA0 # LATIN CAPITAL LETTER A WITH DOT BELOW
 <Multi_key><exclam>                                                                            <A> : "Ạ" U1EA0 # LATIN CAPITAL LETTER A WITH DOT BELOW
+<Multi_key><section>                                                                           <A> : "Ạ" U1EA0 # LATIN CAPITAL LETTER A WITH DOT BELOW
 <dead_belowdot>                                                                                <a> : "ạ" U1EA1 # LATIN SMALL LETTER A WITH DOT BELOW
 <Multi_key><exclam>                                                                            <a> : "ạ" U1EA1 # LATIN SMALL LETTER A WITH DOT BELOW
+<Multi_key><section>                                                                           <a> : "ạ" U1EA1 # LATIN SMALL LETTER A WITH DOT BELOW
 <dead_belowdot>                                                                                <B> : "Ḅ" U1E04 # LATIN CAPITAL LETTER B WITH DOT BELOW
 <Multi_key><exclam>                                                                            <B> : "Ḅ" U1E04 # LATIN CAPITAL LETTER B WITH DOT BELOW
+<Multi_key><section>                                                                           <B> : "Ḅ" U1E04 # LATIN CAPITAL LETTER B WITH DOT BELOW
 <dead_belowdot>                                                                                <b> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
 <Multi_key><exclam>                                                                            <b> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
+<Multi_key><section>                                                                           <b> : "ḅ" U1E05 # LATIN SMALL LETTER B WITH DOT BELOW
 <dead_belowdot>                                                                                <D> : "Ḍ" U1E0C # LATIN CAPITAL LETTER D WITH DOT BELOW
 <Multi_key><exclam>                                                                            <D> : "Ḍ" U1E0C # LATIN CAPITAL LETTER D WITH DOT BELOW
+<Multi_key><section>                                                                           <D> : "Ḍ" U1E0C # LATIN CAPITAL LETTER D WITH DOT BELOW
 <dead_belowdot>                                                                                <d> : "ḍ" U1E0D # LATIN SMALL LETTER D WITH DOT BELOW
 <Multi_key><exclam>                                                                            <d> : "ḍ" U1E0D # LATIN SMALL LETTER D WITH DOT BELOW
+<Multi_key><section>                                                                           <d> : "ḍ" U1E0D # LATIN SMALL LETTER D WITH DOT BELOW
 <dead_belowdot>                                                                                <E> : "Ẹ" U1EB8 # LATIN CAPITAL LETTER E WITH DOT BELOW
 <Multi_key><exclam>                                                                            <E> : "Ẹ" U1EB8 # LATIN CAPITAL LETTER E WITH DOT BELOW
+<Multi_key><section>                                                                           <E> : "Ẹ" U1EB8 # LATIN CAPITAL LETTER E WITH DOT BELOW
 <dead_belowdot>                                                                                <e> : "ẹ" U1EB9 # LATIN SMALL LETTER E WITH DOT BELOW
 <Multi_key><exclam>                                                                            <e> : "ẹ" U1EB9 # LATIN SMALL LETTER E WITH DOT BELOW
+<Multi_key><section>                                                                           <e> : "ẹ" U1EB9 # LATIN SMALL LETTER E WITH DOT BELOW
 <dead_belowdot>                                                                                <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
 <Multi_key><exclam>                                                                            <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
+<Multi_key><section>                                                                           <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
 <dead_belowdot>                                                                                <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
 <Multi_key><exclam>                                                                            <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
+<Multi_key><section>                                                                           <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
 <dead_belowdot>                                                                                <I> : "Ị" U1ECA # LATIN CAPITAL LETTER I WITH DOT BELOW
 <Multi_key><exclam>                                                                            <I> : "Ị" U1ECA # LATIN CAPITAL LETTER I WITH DOT BELOW
+<Multi_key><section>                                                                           <I> : "Ị" U1ECA # LATIN CAPITAL LETTER I WITH DOT BELOW
 <dead_belowdot>                                                                                <i> : "ị" U1ECB # LATIN SMALL LETTER I WITH DOT BELOW
 <Multi_key><exclam>                                                                            <i> : "ị" U1ECB # LATIN SMALL LETTER I WITH DOT BELOW
+<Multi_key><section>                                                                           <i> : "ị" U1ECB # LATIN SMALL LETTER I WITH DOT BELOW
 <dead_belowdot>                                                                                <K> : "Ḳ" U1E32 # LATIN CAPITAL LETTER K WITH DOT BELOW
 <Multi_key><exclam>                                                                            <K> : "Ḳ" U1E32 # LATIN CAPITAL LETTER K WITH DOT BELOW
+<Multi_key><section>                                                                           <K> : "Ḳ" U1E32 # LATIN CAPITAL LETTER K WITH DOT BELOW
 <dead_belowdot>                                                                                <k> : "ḳ" U1E33 # LATIN SMALL LETTER K WITH DOT BELOW
 <Multi_key><exclam>                                                                            <k> : "ḳ" U1E33 # LATIN SMALL LETTER K WITH DOT BELOW
+<Multi_key><section>                                                                           <k> : "ḳ" U1E33 # LATIN SMALL LETTER K WITH DOT BELOW
 <dead_belowdot>                                                                                <L> : "Ḷ" U1E36 # LATIN CAPITAL LETTER L WITH DOT BELOW
 <Multi_key><exclam>                                                                            <L> : "Ḷ" U1E36 # LATIN CAPITAL LETTER L WITH DOT BELOW
+<Multi_key><section>                                                                           <L> : "Ḷ" U1E36 # LATIN CAPITAL LETTER L WITH DOT BELOW
 <dead_belowdot>                                                                                <l> : "ḷ" U1E37 # LATIN SMALL LETTER L WITH DOT BELOW
 <Multi_key><exclam>                                                                            <l> : "ḷ" U1E37 # LATIN SMALL LETTER L WITH DOT BELOW
+<Multi_key><section>                                                                           <l> : "ḷ" U1E37 # LATIN SMALL LETTER L WITH DOT BELOW
 <dead_belowdot>                                                                                <M> : "Ṃ" U1E42 # LATIN CAPITAL LETTER M WITH DOT BELOW
 <Multi_key><exclam>                                                                            <M> : "Ṃ" U1E42 # LATIN CAPITAL LETTER M WITH DOT BELOW
+<Multi_key><section>                                                                           <M> : "Ṃ" U1E42 # LATIN CAPITAL LETTER M WITH DOT BELOW
 <dead_belowdot>                                                                                <m> : "ṃ" U1E43 # LATIN SMALL LETTER M WITH DOT BELOW
 <Multi_key><exclam>                                                                            <m> : "ṃ" U1E43 # LATIN SMALL LETTER M WITH DOT BELOW
+<Multi_key><section>                                                                           <m> : "ṃ" U1E43 # LATIN SMALL LETTER M WITH DOT BELOW
 <dead_belowdot>                                                                                <N> : "Ṇ" U1E46 # LATIN CAPITAL LETTER N WITH DOT BELOW
 <Multi_key><exclam>                                                                            <N> : "Ṇ" U1E46 # LATIN CAPITAL LETTER N WITH DOT BELOW
+<Multi_key><section>                                                                           <N> : "Ṇ" U1E46 # LATIN CAPITAL LETTER N WITH DOT BELOW
 <dead_belowdot>                                                                                <n> : "ṇ" U1E47 # LATIN SMALL LETTER N WITH DOT BELOW
 <Multi_key><exclam>                                                                            <n> : "ṇ" U1E47 # LATIN SMALL LETTER N WITH DOT BELOW
+<Multi_key><section>                                                                           <n> : "ṇ" U1E47 # LATIN SMALL LETTER N WITH DOT BELOW
 <dead_belowdot>                                                                                <O> : "Ọ" U1ECC # LATIN CAPITAL LETTER O WITH DOT BELOW
 <Multi_key><exclam>                                                                            <O> : "Ọ" U1ECC # LATIN CAPITAL LETTER O WITH DOT BELOW
+<Multi_key><section>                                                                           <O> : "Ọ" U1ECC # LATIN CAPITAL LETTER O WITH DOT BELOW
 <dead_belowdot>                                                                                <o> : "ọ" U1ECD # LATIN SMALL LETTER O WITH DOT BELOW
 <Multi_key><exclam>                                                                            <o> : "ọ" U1ECD # LATIN SMALL LETTER O WITH DOT BELOW
+<Multi_key><section>                                                                           <o> : "ọ" U1ECD # LATIN SMALL LETTER O WITH DOT BELOW
 <dead_belowdot>                                                                                <R> : "Ṛ" U1E5A # LATIN CAPITAL LETTER R WITH DOT BELOW
 <Multi_key><exclam>                                                                            <R> : "Ṛ" U1E5A # LATIN CAPITAL LETTER R WITH DOT BELOW
+<Multi_key><section>                                                                           <R> : "Ṛ" U1E5A # LATIN CAPITAL LETTER R WITH DOT BELOW
 <dead_belowdot>                                                                                <r> : "ṛ" U1E5B # LATIN SMALL LETTER R WITH DOT BELOW
 <Multi_key><exclam>                                                                            <r> : "ṛ" U1E5B # LATIN SMALL LETTER R WITH DOT BELOW
+<Multi_key><section>                                                                           <r> : "ṛ" U1E5B # LATIN SMALL LETTER R WITH DOT BELOW
 <dead_belowdot>                                                                                <S> : "Ṣ" U1E62 # LATIN CAPITAL LETTER S WITH DOT BELOW
 <Multi_key><exclam>                                                                            <S> : "Ṣ" U1E62 # LATIN CAPITAL LETTER S WITH DOT BELOW
+<Multi_key><section>                                                                           <S> : "Ṣ" U1E62 # LATIN CAPITAL LETTER S WITH DOT BELOW
 <dead_belowdot>                                                                                <s> : "ṣ" U1E63 # LATIN SMALL LETTER S WITH DOT BELOW
 <Multi_key><exclam>                                                                            <s> : "ṣ" U1E63 # LATIN SMALL LETTER S WITH DOT BELOW
+<Multi_key><section>                                                                           <s> : "ṣ" U1E63 # LATIN SMALL LETTER S WITH DOT BELOW
 <dead_belowdot>                                                                                <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
 <Multi_key><exclam>                                                                            <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
+<Multi_key><section>                                                                           <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
 <dead_belowdot>                                                                                <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
 <Multi_key><exclam>                                                                            <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
+<Multi_key><section>                                                                           <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
 <dead_belowdot>                                                                                <U> : "Ụ" U1EE4 # LATIN CAPITAL LETTER U WITH DOT BELOW
 <Multi_key><exclam>                                                                            <U> : "Ụ" U1EE4 # LATIN CAPITAL LETTER U WITH DOT BELOW
+<Multi_key><section>                                                                           <U> : "Ụ" U1EE4 # LATIN CAPITAL LETTER U WITH DOT BELOW
 <dead_belowdot>                                                                                <u> : "ụ" U1EE5 # LATIN SMALL LETTER U WITH DOT BELOW
 <Multi_key><exclam>                                                                            <u> : "ụ" U1EE5 # LATIN SMALL LETTER U WITH DOT BELOW
+<Multi_key><section>                                                                           <u> : "ụ" U1EE5 # LATIN SMALL LETTER U WITH DOT BELOW
 <dead_belowdot>                                                                                <V> : "Ṿ" U1E7E # LATIN CAPITAL LETTER V WITH DOT BELOW
 <Multi_key><exclam>                                                                            <V> : "Ṿ" U1E7E # LATIN CAPITAL LETTER V WITH DOT BELOW
+<Multi_key><section>                                                                           <V> : "Ṿ" U1E7E # LATIN CAPITAL LETTER V WITH DOT BELOW
 <dead_belowdot>                                                                                <v> : "ṿ" U1E7F # LATIN SMALL LETTER V WITH DOT BELOW
 <Multi_key><exclam>                                                                            <v> : "ṿ" U1E7F # LATIN SMALL LETTER V WITH DOT BELOW
+<Multi_key><section>                                                                           <v> : "ṿ" U1E7F # LATIN SMALL LETTER V WITH DOT BELOW
 <dead_belowdot>                                                                                <W> : "Ẉ" U1E88 # LATIN CAPITAL LETTER W WITH DOT BELOW
 <Multi_key><exclam>                                                                            <W> : "Ẉ" U1E88 # LATIN CAPITAL LETTER W WITH DOT BELOW
+<Multi_key><section>                                                                           <W> : "Ẉ" U1E88 # LATIN CAPITAL LETTER W WITH DOT BELOW
 <dead_belowdot>                                                                                <w> : "ẉ" U1E89 # LATIN SMALL LETTER W WITH DOT BELOW
 <Multi_key><exclam>                                                                            <w> : "ẉ" U1E89 # LATIN SMALL LETTER W WITH DOT BELOW
+<Multi_key><section>                                                                           <w> : "ẉ" U1E89 # LATIN SMALL LETTER W WITH DOT BELOW
 <dead_belowdot>                                                                                <Y> : "Ỵ" U1EF4 # LATIN CAPITAL LETTER Y WITH DOT BELOW
 <Multi_key><exclam>                                                                            <Y> : "Ỵ" U1EF4 # LATIN CAPITAL LETTER Y WITH DOT BELOW
+<Multi_key><section>                                                                           <Y> : "Ỵ" U1EF4 # LATIN CAPITAL LETTER Y WITH DOT BELOW
 <dead_belowdot>                                                                                <y> : "ỵ" U1EF5 # LATIN SMALL LETTER Y WITH DOT BELOW
 <Multi_key><exclam>                                                                            <y> : "ỵ" U1EF5 # LATIN SMALL LETTER Y WITH DOT BELOW
+<Multi_key><section>                                                                           <y> : "ỵ" U1EF5 # LATIN SMALL LETTER Y WITH DOT BELOW
 <dead_belowdot>                                                                                <Z> : "Ẓ" U1E92 # LATIN CAPITAL LETTER Z WITH DOT BELOW
 <Multi_key><exclam>                                                                            <Z> : "Ẓ" U1E92 # LATIN CAPITAL LETTER Z WITH DOT BELOW
+<Multi_key><section>                                                                           <Z> : "Ẓ" U1E92 # LATIN CAPITAL LETTER Z WITH DOT BELOW
 <dead_belowdot>                                                                                <z> : "ẓ" U1E93 # LATIN SMALL LETTER Z WITH DOT BELOW
 <Multi_key><exclam>                                                                            <z> : "ẓ" U1E93 # LATIN SMALL LETTER Z WITH DOT BELOW
+<Multi_key><section>                                                                           <z> : "ẓ" U1E93 # LATIN SMALL LETTER Z WITH DOT BELOW
 #
 #
 # # DOT_BELOW&DOT_ABOVE
 #
 <dead_belowdot><dead_abovedot>                                                             <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <Multi_key><exclam><period>                                                                <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
+<Multi_key><section><period>                                                               <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <dead_abovedot><dead_belowdot>                                                             <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <Multi_key><period><exclam>                                                                <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
+<Multi_key><period><section>                                                               <equal> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <dead_belowdot><dead_abovedot>                                                                 <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
 <Multi_key><exclam><period>                                                                    <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
+<Multi_key><section><period>                                                                   <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
 <dead_abovedot><dead_belowdot>                                                                 <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
 <Multi_key><period><exclam>                                                                    <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
+<Multi_key><period><section>                                                                   <S> : "Ṩ" U1E68 # LATIN CAPITAL LETTER S WITH DOT BELOW AND DOT ABOVE
 <dead_belowdot><dead_abovedot>                                                                 <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 <Multi_key><exclam><period>                                                                    <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
+<Multi_key><section><period>                                                                   <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 <dead_abovedot><dead_belowdot>                                                                 <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 <Multi_key><period><exclam>                                                                    <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
+<Multi_key><period><section>                                                                   <s> : "ṩ" U1E69 # LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 #
 #
 # # DOT_BELOW&MACRON
 #
 <dead_belowdot><dead_macron>                                                                   <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
 <Multi_key><exclam><bar>                                                                       <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
+<Multi_key><section><bar>                                                                      <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
 <dead_macron><dead_belowdot>                                                                   <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
 <Multi_key><bar><exclam>                                                                       <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
+<Multi_key><bar><section>                                                                      <L> : "Ḹ" U1E38 # LATIN CAPITAL LETTER L WITH DOT BELOW AND MACRON
 <dead_belowdot><dead_macron>                                                                   <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
 <Multi_key><exclam><bar>                                                                       <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
+<Multi_key><section><bar>                                                                      <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
 <dead_macron><dead_belowdot>                                                                   <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
 <Multi_key><bar><exclam>                                                                       <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
+<Multi_key><bar><section>                                                                      <l> : "ḹ" U1E39 # LATIN SMALL LETTER L WITH DOT BELOW AND MACRON
 <dead_belowdot><dead_macron>                                                                   <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
 <Multi_key><exclam><bar>                                                                       <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
+<Multi_key><section><bar>                                                                      <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
 <dead_macron><dead_belowdot>                                                                   <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
 <Multi_key><bar><exclam>                                                                       <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
+<Multi_key><bar><section>                                                                      <R> : "Ṝ" U1E5C # LATIN CAPITAL LETTER R WITH DOT BELOW AND MACRON
 <dead_belowdot><dead_macron>                                                                   <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
 <Multi_key><exclam><bar>                                                                       <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
+<Multi_key><section><bar>                                                                      <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
 <dead_macron><dead_belowdot>                                                                   <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
 <Multi_key><bar><exclam>                                                                       <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
+<Multi_key><bar><section>                                                                      <r> : "ṝ" U1E5D # LATIN SMALL LETTER R WITH DOT BELOW AND MACRON
 #
 #
 #^# VERTICAL_LINE_BELOW
@@ -17124,40 +17236,59 @@
 #
 <dead_belowdot><dead_belowdot>                                                             <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><section><section>                                                              <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><section><section>                                                              <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                      <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                         <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><section><section>                                                       <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><section><section>                                                              <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                          <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                             <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><section><section>                                                           <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><section><section>                                                           <quotedbl> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                          <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                             <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
+<Multi_key><section><section>                                                           <EuroSign> : "̎" U030E # COMBINING DOUBLE VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                        <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                           <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><section><section>                                                         <apostrophe> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                              <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <Multi_key><exclam><exclam>                                                 <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
+<Multi_key><section><section>                                               <rightsinglequotemark> : "̍" U030D # COMBINING VERTICAL LINE ABOVE: Marshallese
 <dead_belowdot><dead_belowdot>                                                             <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+<Multi_key><section><section>                                                              <comma> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                            <period> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <Multi_key><exclam><exclam>                                                               <period> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
+<Multi_key><section><section>                                                             <period> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
 <dead_belowdot><dead_belowdot>                                                                 <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <E> : "E̩" # U0045 U0329 LATIN CAPITAL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <e> : "e̩" # U0065 U0329 LATIN SMALL LETTER E WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <N> : "N̩" # U004E U0329 LATIN CAPITAL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <N> : "N̩" # U004E U0329 LATIN CAPITAL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <N> : "N̩" # U004E U0329 LATIN CAPITAL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <n> : "n̩" # U006E U0329 LATIN SMALL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <n> : "n̩" # U006E U0329 LATIN SMALL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <n> : "n̩" # U006E U0329 LATIN SMALL LETTER N WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <O> : "O̩" # U004F U0329 LATIN CAPITAL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <O> : "O̩" # U004F U0329 LATIN CAPITAL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <O> : "O̩" # U004F U0329 LATIN CAPITAL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <o> : "o̩" # U006F U0329 LATIN SMALL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <o> : "o̩" # U006F U0329 LATIN SMALL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <o> : "o̩" # U006F U0329 LATIN SMALL LETTER O WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <S> : "S̩" # U0053 U0329 LATIN CAPITAL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <S> : "S̩" # U0053 U0329 LATIN CAPITAL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <S> : "S̩" # U0053 U0329 LATIN CAPITAL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <dead_belowdot><dead_belowdot>                                                                 <s> : "s̩" # U0073 U0329 LATIN SMALL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 <Multi_key><exclam><exclam>                                                                    <s> : "s̩" # U0073 U0329 LATIN SMALL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
+<Multi_key><section><section>                                                                  <s> : "s̩" # U0073 U0329 LATIN SMALL LETTER S WITH VERTICAL LINE BELOW: Yoruba in current Nigerian alphabet
 #
 #
 #*# DIAERESIS
@@ -17469,6 +17600,7 @@
 #   For maintainability of the code, and usability of the documentation, this
 #   dead key content is grouped in a single place.
 #   See #^# DIAERESIS_BELOW
+#   See # # Notes about documentation
 #
 #
 # # DIAERESIS&HACEK
@@ -17550,6 +17682,7 @@
 #
 #   For maintainability of the code, and usability of the documentation, this
 #   dead key content is grouped in a single place.
+#   See # # Notes about documentation
 #
 <dead_diaeresis><dead_diaeresis><dead_diaeresis>                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
 <Multi_key><colon><colon><colon>                                                           <space> : "̤" U0324 # COMBINING DIAERESIS BELOW
@@ -17643,124 +17776,82 @@
 #   Numbers 1..10 followed by a period are in dead_cedilla.
 #   See #*# CEDILLA
 #
-#   For convenience, the multikey sequence « ¦§ » is also supported, to account
-#   for the mapping of the section sign at level 3 of B10 in French mode for
-#   the synergy with digits and for backward compatibility.
-#
 <dead_belowcomma>                                                                          <space> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <space> : "̦" U0326 # COMBINING COMMA BELOW
-<Multi_key><section>                                                                       <space> : "̦" U0326 # COMBINING COMMA BELOW
 <dead_belowcomma>                                                                          <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <U200B> : "̦" U0326 # COMBINING COMMA BELOW
-<Multi_key><section>                                                                       <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <dead_belowcomma>                                                                   <nobreakspace> : "⸴" U2E34 # RAISED COMMA
 <Multi_key><semicolon>                                                              <nobreakspace> : "⸴" U2E34 # RAISED COMMA
-<Multi_key><section>                                                                <nobreakspace> : "⸴" U2E34 # RAISED COMMA
 <dead_belowcomma>                                                                          <U202F> : "⸴" U2E34 # RAISED COMMA
 <Multi_key><semicolon>                                                                     <U202F> : "⸴" U2E34 # RAISED COMMA
-<Multi_key><section>                                                                       <U202F> : "⸴" U2E34 # RAISED COMMA
 <dead_belowcomma>                                                                              <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><semicolon>                                                                         <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
-<Multi_key><section>                                                                           <0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <dead_belowcomma>                                                                           <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <Multi_key><semicolon>                                                                      <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
-<Multi_key><section>                                                                        <KP_0> : "⒛" U249B # NUMBER TWENTY FULL STOP
 <dead_belowcomma>                                                                              <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
 <Multi_key><semicolon>                                                                         <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
-<Multi_key><section>                                                                           <1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
 <dead_belowcomma>                                                                           <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
-<Multi_key><section>                                                                        <KP_1> : "⒒" U2492 # NUMBER ELEVEN FULL STOP
 <dead_belowcomma>                                                                              <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
 <Multi_key><semicolon>                                                                         <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
-<Multi_key><section>                                                                           <2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
 <dead_belowcomma>                                                                           <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
 <Multi_key><semicolon>                                                                      <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
-<Multi_key><section>                                                                        <KP_2> : "⒓" U2493 # NUMBER TWELVE FULL STOP
 <dead_belowcomma>                                                                              <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
-<Multi_key><section>                                                                           <3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_3> : "⒔" U2494 # NUMBER THIRTEEN FULL STOP
 <dead_belowcomma>                                                                              <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
-<Multi_key><section>                                                                           <4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_4> : "⒕" U2495 # NUMBER FOURTEEN FULL STOP
 <dead_belowcomma>                                                                              <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
-<Multi_key><section>                                                                           <5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_5> : "⒖" U2496 # NUMBER FIFTEEN FULL STOP
 <dead_belowcomma>                                                                              <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
-<Multi_key><section>                                                                           <6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_6> : "⒗" U2497 # NUMBER SIXTEEN FULL STOP
 <dead_belowcomma>                                                                              <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
-<Multi_key><section>                                                                           <7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_7> : "⒘" U2498 # NUMBER SEVENTEEN FULL STOP
 <dead_belowcomma>                                                                              <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
 <Multi_key><semicolon>                                                                         <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
-<Multi_key><section>                                                                           <8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
-<Multi_key><section>                                                                        <KP_8> : "⒙" U2499 # NUMBER EIGHTEEN FULL STOP
 <dead_belowcomma>                                                                              <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
 <Multi_key><semicolon>                                                                         <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
-<Multi_key><section>                                                                           <9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
 <dead_belowcomma>                                                                           <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
 <Multi_key><semicolon>                                                                      <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
-<Multi_key><section>                                                                        <KP_9> : "⒚" U249A # NUMBER NINETEEN FULL STOP
 <dead_belowcomma>                                                                              <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
 <Multi_key><semicolon>                                                                         <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
-<Multi_key><section>                                                                           <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
 <dead_belowcomma>                                                                              <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
 <Multi_key><semicolon>                                                                         <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
-<Multi_key><section>                                                                           <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
 <dead_belowcomma>                                                                              <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <Multi_key><semicolon>                                                                         <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
-<Multi_key><section>                                                                           <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <dead_belowcomma>                                                                              <d> : "d̦" # U0064 U0326 LATIN SMALL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <Multi_key><semicolon>                                                                         <d> : "d̦" # U0064 U0326 LATIN SMALL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
-<Multi_key><section>                                                                           <d> : "d̦" # U0064 U0326 LATIN SMALL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <dead_belowcomma>                                                                              <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <Multi_key><semicolon>                                                                         <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
-<Multi_key><section>                                                                           <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <dead_belowcomma>                                                                              <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
 <Multi_key><semicolon>                                                                         <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
-<Multi_key><section>                                                                           <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
 <dead_belowcomma>                                                                              <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section>                                                                           <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section>                                                                           <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
-<Multi_key><section>                                                                           <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <dead_belowcomma>                                                                              <s> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <s> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
-<Multi_key><section>                                                                           <s> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
 <dead_belowcomma>                                                                              <T> : "Ț" U021A # LATIN CAPITAL LETTER T WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <T> : "Ț" U021A # LATIN CAPITAL LETTER T WITH COMMA BELOW
-<Multi_key><section>                                                                           <T> : "Ț" U021A # LATIN CAPITAL LETTER T WITH COMMA BELOW
 <dead_belowcomma>                                                                              <t> : "ț" U021B # LATIN SMALL LETTER T WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <t> : "ț" U021B # LATIN SMALL LETTER T WITH COMMA BELOW
-<Multi_key><section>                                                                           <t> : "ț" U021B # LATIN SMALL LETTER T WITH COMMA BELOW
 <dead_belowcomma>                                                                              <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
 <Multi_key><semicolon>                                                                         <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
-<Multi_key><section>                                                                           <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
 <dead_belowcomma>                                                                              <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 <Multi_key><semicolon>                                                                         <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
-<Multi_key><section>                                                                           <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 #
 #
 # # COMMA_BELOW&GROUP_1
@@ -17768,80 +17859,60 @@
 #
 <dead_belowcomma><UEFD0>                                                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign>                                                             <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign>                                                               <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0>                                                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign>                                                             <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign>                                                               <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
 # # COMMA_BELOW&GROUP_2
 #
 <dead_belowcomma><UEFD0><UEFD0>                                                                <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign>                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign>                                                   <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><UEFD0>                                                                <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign>                                                 <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign>                                                   <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
 # # COMMA_BELOW&GROUP_3
 #
 <dead_belowcomma><UEFD0><3>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><3>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><3>                                                            <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_3>                                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_3>                                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_3>                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><UEFD0><UEFD0>                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign><numbersign>                                     <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign><numbersign>                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><3>                                                                    <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><3>                                                          <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><3>                                                            <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_3>                                                                 <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_3>                                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_3>                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><UEFD0><UEFD0>                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign><numbersign>                                     <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign><numbersign>                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
 # # COMMA_BELOW&GROUP_4
 #
 <dead_belowcomma><UEFD0><4>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><4>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><4>                                                            <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_4>                                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_4>                                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_4>                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><UEFD0><UEFD0><UEFD0>                                                  <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign><numbersign><numbersign>                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign><numbersign><numbersign>                           <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><4>                                                                    <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><4>                                                          <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><4>                                                            <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_4>                                                                 <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_4>                                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_4>                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><UEFD0><UEFD0><UEFD0>                                                  <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><numbersign><numbersign><numbersign>                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><numbersign><numbersign><numbersign>                           <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
 # # COMMA_BELOW&GROUP_5
 #
 <dead_belowcomma><UEFD0><5>                                                                    <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><5>                                                          <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><5>                                                            <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_5>                                                                 <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_5>                                                       <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_5>                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><5>                                                                    <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><5>                                                          <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><5>                                                            <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma><UEFD0><KP_5>                                                                 <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon><numbersign><KP_5>                                                       <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><section><numbersign><KP_5>                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 #
 #
 #^# COMMA_ABOVE
@@ -17862,40 +17933,28 @@
 #
 <dead_belowcomma><dead_belowcomma>                                                         <space> : "̓" U0313 # COMBINING COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <space> : "̓" U0313 # COMBINING COMMA ABOVE
-<Multi_key><section><section>                                                              <space> : "̓" U0313 # COMBINING COMMA ABOVE
 <dead_belowcomma><dead_belowcomma>                                                         <U200B> : "̓" U0313 # COMBINING COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <U200B> : "̓" U0313 # COMBINING COMMA ABOVE
-<Multi_key><section><section>                                                              <U200B> : "̓" U0313 # COMBINING COMMA ABOVE
 <dead_belowcomma><dead_belowcomma>                                                  <nobreakspace> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><semicolon><semicolon>                                                   <nobreakspace> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><section><section>                                                       <nobreakspace> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <dead_belowcomma><dead_belowcomma>                                                         <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><semicolon><semicolon>                                                          <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><section><section>                                                              <U202F> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <dead_belowcomma><dead_belowcomma>                                                         <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
-<Multi_key><section><section>                                                              <minus> : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE
 <dead_belowcomma><dead_belowcomma>                                                         <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 <Multi_key><semicolon><semicolon>                                                          <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
-<Multi_key><section><section>                                                              <comma> : "̕" U0315 # COMBINING COMMA ABOVE RIGHT
 <dead_belowcomma><dead_belowcomma>                                                             <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
 <Multi_key><semicolon><semicolon>                                                              <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
-<Multi_key><section><section>                                                                  <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
 <dead_belowcomma><dead_belowcomma>                                                             <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
 <Multi_key><semicolon><semicolon>                                                              <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
-<Multi_key><section><section>                                                                  <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
 <dead_belowcomma><dead_belowcomma>                                                             <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <Multi_key><semicolon><semicolon>                                                              <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
-<Multi_key><section><section>                                                                  <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <dead_belowcomma><dead_belowcomma>                                                             <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
 <Multi_key><semicolon><semicolon>                                                              <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
-<Multi_key><section><section>                                                                  <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
 <dead_belowcomma><dead_belowcomma>                                                             <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
 <Multi_key><semicolon><semicolon>                                                              <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
-<Multi_key><section><section>                                                                  <U> : "Ꞿ" UA7BE # LATIN CAPITAL LETTER GLOTTAL U
 <dead_belowcomma><dead_belowcomma>                                                             <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 <Multi_key><semicolon><semicolon>                                                              <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
-<Multi_key><section><section>                                                                  <u> : "ꞿ" UA7BF # LATIN SMALL LETTER GLOTTAL U
 #
 #
 #   See part 3 in compose-3.yml.
