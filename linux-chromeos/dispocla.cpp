@@ -1,4 +1,4 @@
-//                       Date: 2026-01-12T1903+0100
+//                       Date: 2026-01-26T0403+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1355,10 +1355,10 @@ xkb_symbols "kbfrFRs" {
 		[               comma,            question,            question,            question,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
 	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U2063 INVISIBLE SEPARATOR; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
-	key <AB08> { // The inconsistency between index 3 on the one hand, and indices 4 and 6 on the other hand, is correct.
+	key <AB08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[              period,               UEF62,              exclam,           semicolon,       dead_belowdot,           semicolon,              U1F631,              U1F4E3 ],
-		[              period,           backslash,              exclam,           semicolon,       dead_belowdot,               UEF7A,          punctspace,              U1F4E2 ]
+		[              period,               UEF62,           semicolon,           semicolon,     dead_belowcomma,           semicolon,              U1F631,              U1F4E3 ],
+		[              period,           backslash,           semicolon,           semicolon,     dead_belowcomma,               UEF7A,          punctspace,              U1F4E2 ]
 	}; // UEF62 ' ;' spaced out with NNBSP; UEF7A '&#'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
@@ -1369,10 +1369,10 @@ xkb_symbols "kbfrFRs" {
 		[               colon,               slash,               colon,               colon,      dead_diaeresis,               U2044,              U1F612,               slash ]
 	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji
 
-	key <AB10> { // The inconsistency between indices 3 and 4 is correct.
+	key <AB10> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[      periodcentered,               UEF60,             section,              exclam,     dead_belowcomma,             section,              U1F494,           backslash ],
-		[           semicolon,              exclam,           semicolon,              exclam,     dead_belowcomma,             section,              U1F609,           backslash ]
+		[      periodcentered,               UEF60,             section,              exclam,       dead_belowdot,             section,              U1F494,           backslash ],
+		[           semicolon,              exclam,              exclam,              exclam,       dead_belowdot,             section,              U1F609,           backslash ]
 	}; // UEF60 ' !' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
