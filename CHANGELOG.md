@@ -20,15 +20,13 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
-## 6.2.0 (projet)
+## 6.2.0 (2026-01-27)
 
 Inversion des touches mortes point souscrit et virgule souscrite suite à la version 6.0.0 (2025-08-11).
 
 Harmonisation du niveau 3 des touches du point-virgule et du point d’exclamation.
 
 Harmonisation du contenu des touches mortes.
-
-Complétion de séquences de touches mortes spécifiques à Windows.
 
 * Disposition :
 	* Maj + AltGr : Inverser la touche morte point souscrit, qui va sur B10, et la touche morte virgule souscrite, qui va sur B08. dispocla.cpp [2574be2](https://github.com/dispoclavier/nouvel-azerty/commit/2574be2da636dab55a75ce3b8a19fefa1cda9ca0), kbcomazerty.c, kbcomredispo.c [4520be4](https://github.com/dispoclavier/nouvel-azerty/commit/4520be45b7ac8e86dfd6d41c68041ef3ef7f5cb6), compose-1.yml, compose-2.yml, compose-3.yml [2e82db8](https://github.com/dispoclavier/nouvel-azerty/commit/2e82db805376d66554c2678089d9d7e1ff7d5a31), [cfa8d12](https://github.com/dispoclavier/nouvel-azerty/commit/cfa8d12739a9f456f30e9ffbd26fe8bceb54bf6a), [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0), nouvel-azerty.json, nouvel-azerty-verrcap.json, nouvel-azerty-verrmod.json, nouvel-azerty-verrmod-verrcap.json, qzjfgy.json [2858190](https://github.com/dispoclavier/nouvel-azerty/commit/2858190fa067f84e3ab74c68be1dffcd08831f4a), dead-key-convert.pl, generate-multikey.pl, generate-deadkey-tables.pl, generate-multikey-tables.pl [84f2f06](https://github.com/dispoclavier/nouvel-azerty/commit/84f2f062285f75b5b1ade0eb438cf6b807b38135)
@@ -47,6 +45,8 @@ Complétion de séquences de touches mortes spécifiques à Windows.
 		* Mettre "⏱" U+23F1 à la place de "⋰" U+22F0, qui prend la place de "⏲" U+23F2, qui prend la place laissée par "⏱" U+23F1. ibidem
 	* Séquences spécifiques à Windows : Prendre en charge les équivalents en composition. compose-2.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
 * Documentation : Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
+* Build : 6.1.9.0 [1b44e3e](https://github.com/dispoclavier/nouvel-azerty/commit/1b44e3e0c63b0fa6379ce63b9bffd13c378618f9), [9ebae51](https://github.com/dispoclavier/nouvel-azerty/commit/9ebae512ac3df271039da8c998fe50bb8b7586e2), [6d7c695](https://github.com/dispoclavier/nouvel-azerty/commit/6d7c695ddecbb4b081bfedd330d3918bfa57b4fd)
+* Build : 6.2.0.0 [32c4d2f](https://github.com/dispoclavier/nouvel-azerty/commit/32c4d2f5b17c1d16c48bd41d0ec61b9331ca1cf9)
 
 ## 6.1.8 (2026-01-25)
 
