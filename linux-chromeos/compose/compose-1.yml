@@ -1011,11 +1011,8 @@
 #   See # # Maintenance of letter groups
 #
 #   Lines starting with "#@" are Windows-specific alternative input sequences
-#   instead of multicharacter output sequences. These need to be configured in
-#   a single place with respect to dead key tables, without multikey equivalent
-#   given that multikey equivalents cannot be supported on Windows due to file
-#   size constraints on keyboard layout drivers.
-#   See kbdeadtrans.c * Multikey equivalents of dead keys
+#   instead of multicharacter output sequences. They need to be configured in
+#   the same place with respect to dead key tables.
 #   See # # Notes about documentation
 #
 #
@@ -1226,7 +1223,7 @@
 #   See ### Group dead key introduction
 #   https://github.com/dispoclavier/nouvel-azerty/tree/main/linux-chromeos/outils
 #
-#   Polytonic Greek is documented in an extra table since it is transpiled to C
+#   Polytonic Greek is documented in an extra table since its transpilation
 #   starting with version 6.1.1.
 #   See ### Greek with diacritics
 #   See # # End note about polytonic Greek
@@ -4542,13 +4539,15 @@
 #
 #   The broken bar "¦" U00A6 is repurposed as multikey symbol, and consistently
 #   it is the dead character of Multi_key. Given that Multi_key double press is
-#   not used, this is supported as a means to input "¦" U00A6.
+#   not used, this is supported as an alternative means to input "¦" U00A6.
 #
 <Multi_key><Multi_key>                                                                             : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
-#   Another option is case insensitive « ¦mul ».
+#   Another option is case insensitive « ¦mul », with titlecase support with
+#   respect to the XKB keysym "Multi_key".
 #
 <Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+<Multi_key><M><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #   The sideways compatible sequence « ¦!^ » as in en_US.UTF-8/Compose could be
