@@ -39,12 +39,12 @@ Complétion de séquences de touches mortes spécifiques à Windows.
 *	Transformations :
 	* Groupes des symboles :
 		* Mettre "¡" U+00A1 à la place de "ː" U+02D0, qui prend la place laissée par "¡" U+00A1. compose-3.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0), [a413760](https://github.com/dispoclavier/nouvel-azerty/commit/a4137604e292d1c18c88af6d970be4ca4006165c)
-		* Mettre "‼" U+203C à la place de "ˑ" U+02D1, qui prend la place laissée par "‼" U+203C.
-		* Mettre "❕" U+2755 à la place de "⸫" U+2E2B, qui prend la place de "∴" U+2234, qui prend la place de "⏰" U+23F0, qui prend la place de "⌚" U+231A, qui prend la place de "⋯" U+22EF, qui prend la place laissée par "❕" U+2755.
-		* Mettre "❗" U+2757 à la place de "⁛" U+205B, qui prend la place laissée par "❗" U+2757.
-		* Mettre "⁉" U+2049 à la place de "⸪" U+2E2A, qui prend la place de "∵" U+2235, qui prend la place de "⧗" U+29D7, qui prend la place de "❣" U+2763, qui prend la place de "⏳" U+23F3, qui prend la place laissée par "⁉" U+2049.
-		* Mettre "⚠" U+26A0 à la place de "⋱" U+22F1, qui prend la place de "⧖" U+29D6, qui prend la place de "❢" U+2762, qui prend la place de "⌛" U+231B, qui prend la place laissée par "⚠" U+26A0.
-		* Mettre "⏱" U+23F1 à la place de "⋰" U+22F0, qui prend la place de "⏲" U+23F2, qui prend la place laissée par "⏱" U+23F1.
+		* Mettre "‼" U+203C à la place de "ˑ" U+02D1, qui prend la place laissée par "‼" U+203C. ibidem
+		* Mettre "❕" U+2755 à la place de "⸫" U+2E2B, qui prend la place de "∴" U+2234, qui prend la place de "⏰" U+23F0, qui prend la place de "⌚" U+231A, qui prend la place de "⋯" U+22EF, qui prend la place laissée par "❕" U+2755. ibidem
+		* Mettre "❗" U+2757 à la place de "⁛" U+205B, qui prend la place laissée par "❗" U+2757. ibidem
+		* Mettre "⁉" U+2049 à la place de "⸪" U+2E2A, qui prend la place de "∵" U+2235, qui prend la place de "⧗" U+29D7, qui prend la place de "❣" U+2763, qui prend la place de "⏳" U+23F3, qui prend la place laissée par "⁉" U+2049. ibidem
+		* Mettre "⚠" U+26A0 à la place de "⋱" U+22F1, qui prend la place de "⧖" U+29D6, qui prend la place de "❢" U+2762, qui prend la place de "⌛" U+231B, qui prend la place laissée par "⚠" U+26A0. ibidem
+		* Mettre "⏱" U+23F1 à la place de "⋰" U+22F0, qui prend la place de "⏲" U+23F2, qui prend la place laissée par "⏱" U+23F1. ibidem
 	* Séquences spécifiques à Windows : Prendre en charge les équivalents en composition. compose-2.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
 * Documentation : Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
 
