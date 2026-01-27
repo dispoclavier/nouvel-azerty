@@ -1,10 +1,11 @@
 /*****************************************************************************\
 * Module Name: kbazerty.h
 *
-* Virtual key defines for AZERTY keyboard layouts.
+* Virtual key defines for AZERTY keyboard layouts
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
 * Move #include <windows.h> back to C sources        Wed 2025-08-27T1300+0200

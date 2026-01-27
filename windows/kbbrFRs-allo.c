@@ -1,10 +1,11 @@
 /*****************************************************************************\
 * Module Name: kbbrFRs-allo.c
 *
-* Row E of keyboard layout variant.
+* Row E of keyboard layout variant
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation pro parte
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com
 *
 * History:
 * Move main allocation table here          6.0.8.0.2 Thu 2025-09-25T1216+0200

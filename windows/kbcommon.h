@@ -1,11 +1,11 @@
 /**********************************************************************************\
 * Module Name: kbcommon.h
 *
-* Various defines for use in keyboard layout configurations.
+* Various defines for use in keyboard layout configurations
 *
 * Copyright:
-* 1985..2001 Microsoft Corporation pro parte
-* 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * Define TYPEDEF_VK_TO_WCHARS up to 56     6.0.5.0.0 Sat 2025-08-30T2048+0200
 * Fix misspelling                          6.0.0.0.0 Tue 2025-07-29T0457+0200

@@ -3,8 +3,9 @@
 *
 * AZERTY subset of ligatures.
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
 * Move AZERTY MCUs to kbligazerty.c        6.0.3.0.0 Wed 2025-08-20T1930+0200

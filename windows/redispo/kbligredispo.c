@@ -1,10 +1,11 @@
 /*****************************************************************************\
 * Module Name: kbligredispo.c
 *
-* Remapped subset of ligatures.
+* Remapped subset of ligatures
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
 * Rename kbligqzjfgy.c to kbligredispo.c   6.0.3.4.0 Sat 2025-08-23T1637+0200

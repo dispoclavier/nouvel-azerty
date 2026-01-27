@@ -3,8 +3,9 @@
 *
 * Keyboard layout C source.
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
 * Rename kbfrAFs.C to kbfrAFs1.C           6.0.9.8.0 Thu 2025-10-02T1456+0200

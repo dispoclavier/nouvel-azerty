@@ -4,10 +4,11 @@
 * Dead key content
 *
 * Copyright:
-* 1985..2001 Microsoft Corporation pro parte
-* 2014..2025 Marcel Schneider dev[arobase]dispoclavier.com
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update the done cursor for 6.1.8         6.1.8.0.0 Sun 2026-01-25T0531+0100
 * Update the done cursor for 6.1.7         6.1.7.3.0 Mon 2026-01-19T2308+0100
 * Add D833 High surrogate for math arrows  6.1.7.1.0 Sat 2026-01-03T2311+0100
 * Include a subset of multikey equivalents 6.1.6.0.0 Fri 2026-01-02T0912+0100

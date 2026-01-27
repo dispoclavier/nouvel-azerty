@@ -1,13 +1,14 @@
 /*****************************************************************************\
 * Module name: kbdeadtrans-multikey.c
 *
-* Dedicated multikey sequences.
+* Dedicated multikey sequences
 *
 * Copyright:
-* 1985..2001 Microsoft Corporation pro parte
-* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.1.9.0.0 Mon 2026-01-26T0656+0100
 * Update                                   6.1.8.0.0 Sun 2026-01-25T0533+0100
 * Update                                   6.1.7.4.0 Tue 2026-01-20T0337+0100
 * Update to 6.1.7.3                        6.1.7.3.0 Mon 2026-01-19T2316+0100
@@ -3389,6 +3390,7 @@
 /*<!M><o><%equal>                                                  */ DEADTRANS( L'='	,0xE534	,0x2257	,0x0000), // '=' ➔ "≗" U+2257 RING EQUAL TO
 /*<!M><O><%equal>                                                  */ DEADTRANS( L'='	,0xE535	,0x29C3	,0x0000), // '=' ➔ "⧃" U+29C3 CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
 /*<!M><O><%exclam>                                                 */ DEADTRANS( L'!'	,0xE535	,0x29EC	,0x0000), // '!' ➔ "⧬" U+29EC WHITE CIRCLE WITH DOWN ARROW
+/*<!M><o><%excsection>                                             */ DEADTRANS( 0x00A7	,0xE534	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><o><%greater>                                                */ DEADTRANS( L'>'	,0xE534	,0x2941	,0x0000), // '>' ➔ "⥁" U+2941 CLOCKWISE CLOSED CIRCLE ARROW
 /*<!M><O><%greater>                                                */ DEADTRANS( L'>'	,0xE535	,0x29C1	,0x0000), // '>' ➔ "⧁" U+29C1 CIRCLED GREATER-THAN
 /*<!M><o><%hash>                                                   */ DEADTRANS( L'#'	,0xE534	,0xE53C	,0x0001), // Intermediate multikey chain link
@@ -3443,7 +3445,6 @@
 /*<!M><o><%plus><~space>                                           */ DEADTRANS( L' '	,0xE542	,0x2295	,0x0000), // ' ' ➔ "⊕" U+2295 CIRCLED PLUS
 /*<!M><O><%plus><~space>                                           */ DEADTRANS( L' '	,0xE543	,0x2A01	,0x0000), // ' ' ➔ "⨁" U+2A01 N-ARY CIRCLED PLUS OPERATOR
 /*<!M><o><%semicolon>                                              */ DEADTRANS( L';'	,0xE534	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><o><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE534	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><o><%slash>                                                  */ DEADTRANS( L'/'	,0xE534	,0xE544	,0x0001), // Intermediate multikey chain link
 /*<!M><O><%slash>                                                  */ DEADTRANS( L'/'	,0xE535	,0x2205	,0x0000), // '/' ➔ "∅" U+2205 EMPTY SET
 /*<!M><o><%slash><%greater>                                        */ DEADTRANS( L'>'	,0xE544	,0x2642	,0x0000), // '>' ➔ "♂" U+2642 MALE SIGN
@@ -4345,6 +4346,8 @@
 /*<!M><Z><%colon>                                                  */ DEADTRANS( L':'	,0xE618	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
 /*<!M><z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE617	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
 /*<!M><Z><%exclam>                                                 */ DEADTRANS( L'!'	,0xE618	,0x2A21	,0x0000), // '!' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
+/*<!M><z><%excsection>                                             */ DEADTRANS( 0x00A7	,0xE617	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
+/*<!M><Z><%excsection>                                             */ DEADTRANS( 0x00A7	,0xE618	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><z><%greater>                                                */ DEADTRANS( L'>'	,0xE617	,0xE619	,0x0001), // Intermediate multikey chain link
 /*<!M><Z><%greater>                                                */ DEADTRANS( L'>'	,0xE618	,0xE61A	,0x0001), // Intermediate multikey chain link
 /*<!M><z><%greater><%greater>                                      */ DEADTRANS( L'>'	,0xE619	,0x2A20	,0x0000), // '>' ➔ "⨠" U+2A20 Z NOTATION SCHEMA PIPING
@@ -4372,8 +4375,6 @@
 /*<!M><Z><%period>                                                 */ DEADTRANS( L'.'	,0xE618	,0x2981	,0x0000), // '.' ➔ "⦁" U+2981 Z NOTATION SPOT
 /*<!M><z><%semicolon>                                              */ DEADTRANS( L';'	,0xE617	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><Z><%semicolon>                                              */ DEADTRANS( L';'	,0xE618	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE617	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><Z><%semsection>                                             */ DEADTRANS( 0x00A7	,0xE618	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><z><1>                                                       */ DEADTRANS( L'1'	,0xE617	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
 /*<!M><Z><1>                                                       */ DEADTRANS( L'1'	,0xE618	,0x2A21	,0x0000), // '1' ➔ "⨡" U+2A21 Z NOTATION SCHEMA PROJECTION
 /*<!M><Z><2>                                                       */ DEADTRANS( L'2'	,0xE618	,0x01A7	,0x0000), // '2' ➔ "Ƨ" U+01A7 LATIN CAPITAL LETTER TONE TWO
@@ -4518,6 +4519,7 @@
 /*<!M><~nbspace><%exclam><J>                                       */ DEADTRANS( L'J'	,0xE638	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
 /*<!M><~nbspace><%exclam><Y>                                       */ DEADTRANS( L'Y'	,0xE638	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
 /*<!M><~nbspace><%exclam><y>                                       */ DEADTRANS( L'y'	,0xE638	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~nbspace><%excsection>                                      */ DEADTRANS( 0x00A7	,0xE61D	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><~nbspace><%greater>                                         */ DEADTRANS( L'>'	,0xE61D	,0xE639	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%greater><%greater>                               */ DEADTRANS( L'>'	,0xE639	,0xE63A	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%greater><%greater><%greater>                     */ DEADTRANS( L'>'	,0xE63A	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
@@ -4650,7 +4652,6 @@
 /*<!M><~nbspace><%plus><%plus>                                     */ DEADTRANS( L'+'	,0xE64F	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
 /*<!M><~nbspace><%plus><2>                                         */ DEADTRANS( L'2'	,0xE64F	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
 /*<!M><~nbspace><%semicolon>                                       */ DEADTRANS( L';'	,0xE61D	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~nbspace><%semsection>                                      */ DEADTRANS( 0x00A7	,0xE61D	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><~nbspace><%slash>                                           */ DEADTRANS( L'/'	,0xE61D	,0xE650	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%slash><%backslash>                               */ DEADTRANS( L'\\'	,0xE650	,0xE651	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%slash><%backslash><%bar>                         */ DEADTRANS( L'|'	,0xE651	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
@@ -4811,6 +4812,7 @@
 /*<!M><~nbspace><o><%backslash>                                    */ DEADTRANS( L'\\'	,0xE676	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
 /*<!M><~nbspace><o><%equal>                                        */ DEADTRANS( L'='	,0xE676	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
 /*<!M><~nbspace><O><%equal>                                        */ DEADTRANS( L'='	,0xE677	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~nbspace><o><%excsection>                                   */ DEADTRANS( 0x00A7	,0xE676	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><o><%greater>                                      */ DEADTRANS( L'>'	,0xE676	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><O><%greater>                                      */ DEADTRANS( L'>'	,0xE677	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><o><%minus>                                        */ DEADTRANS( L'-'	,0xE676	,0xE678	,0x0001), // Intermediate multikey chain link
@@ -4827,7 +4829,6 @@
 /*<!M><~nbspace><o><%period>                                       */ DEADTRANS( L'.'	,0xE676	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
 /*<!M><~nbspace><o><%plus>                                         */ DEADTRANS( L'+'	,0xE676	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
 /*<!M><~nbspace><o><%semicolon>                                    */ DEADTRANS( L';'	,0xE676	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><o><%semsection>                                   */ DEADTRANS( 0x00A7	,0xE676	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><o><%slash>                                        */ DEADTRANS( L'/'	,0xE676	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
 /*<!M><~nbspace><o><8>                                             */ DEADTRANS( L'8'	,0xE676	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
 /*<!M><~nbspace><O><8>                                             */ DEADTRANS( L'8'	,0xE677	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
@@ -4876,6 +4877,7 @@
 /*<!M><~nbspace><~nbspace><%colon>                                 */ DEADTRANS( L':'	,0xE682	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
 /*<!M><~nbspace><~nbspace><%equal>                                 */ DEADTRANS( L'='	,0xE682	,0xE687	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~nbspace><%equal><%equal>                         */ DEADTRANS( L'='	,0xE687	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~nbspace><~nbspace><%excsection>                            */ DEADTRANS( 0x00A7	,0xE682	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><~nbspace><%greater>                               */ DEADTRANS( L'>'	,0xE682	,0xE688	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~nbspace><%greater><%less>                        */ DEADTRANS( L'<'	,0xE688	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
 /*<!M><~nbspace><~nbspace><%greater><%minus>                       */ DEADTRANS( L'-'	,0xE688	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
@@ -4890,7 +4892,6 @@
 /*<!M><~nbspace><~nbspace><%minus><%slash>                         */ DEADTRANS( L'/'	,0xE68A	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~nbspace><~nbspace><%period>                                */ DEADTRANS( L'.'	,0xE682	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~nbspace><~nbspace><%semicolon>                             */ DEADTRANS( L';'	,0xE682	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~nbspace><%semsection>                            */ DEADTRANS( 0x00A7	,0xE682	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><~nbspace><%slash>                                 */ DEADTRANS( L'/'	,0xE682	,0xE68B	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~nbspace><%slash><%backslash>                     */ DEADTRANS( L'\\'	,0xE68B	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
 /*<!M><~nbspace><~nbspace><%slash><%minus>                         */ DEADTRANS( L'-'	,0xE68B	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
@@ -4963,6 +4964,7 @@
 /*<!M><~nbspace><~space><%colon>                                   */ DEADTRANS( L':'	,0xE696	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
 /*<!M><~nbspace><~space><%equal>                                   */ DEADTRANS( L'='	,0xE696	,0xE69B	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~space><%equal><%equal>                           */ DEADTRANS( L'='	,0xE69B	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~nbspace><~space><%excsection>                              */ DEADTRANS( 0x00A7	,0xE696	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><~space><%greater>                                 */ DEADTRANS( L'>'	,0xE696	,0xE69C	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~space><%greater><%less>                          */ DEADTRANS( L'<'	,0xE69C	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
 /*<!M><~nbspace><~space><%greater><%minus>                         */ DEADTRANS( L'-'	,0xE69C	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
@@ -4977,7 +4979,6 @@
 /*<!M><~nbspace><~space><%minus><%slash>                           */ DEADTRANS( L'/'	,0xE69E	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~nbspace><~space><%period>                                  */ DEADTRANS( L'.'	,0xE696	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~nbspace><~space><%semicolon>                               */ DEADTRANS( L';'	,0xE696	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~nbspace><~space><%semsection>                              */ DEADTRANS( 0x00A7	,0xE696	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~nbspace><~space><%slash>                                   */ DEADTRANS( L'/'	,0xE696	,0xE69F	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><~space><%slash><%backslash>                       */ DEADTRANS( L'\\'	,0xE69F	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
 /*<!M><~nbspace><~space><%slash><%minus>                           */ DEADTRANS( L'-'	,0xE69F	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN
@@ -5136,6 +5137,7 @@
 /*<!M><~space><%exclam><J>                                         */ DEADTRANS( L'J'	,0xE6C2	,0x297F	,0x0000), // 'J' ➔ "⥿" U+297F DOWN FISH TAIL
 /*<!M><~space><%exclam><Y>                                         */ DEADTRANS( L'Y'	,0xE6C2	,0x297F	,0x0000), // 'Y' ➔ "⥿" U+297F DOWN FISH TAIL
 /*<!M><~space><%exclam><y>                                         */ DEADTRANS( L'y'	,0xE6C2	,0x297F	,0x0000), // 'y' ➔ "⥿" U+297F DOWN FISH TAIL
+/*<!M><~space><%excsection>                                        */ DEADTRANS( 0x00A7	,0xE6A7	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><~space><%greater>                                           */ DEADTRANS( L'>'	,0xE6A7	,0xE6C3	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><%greater><%greater>                                 */ DEADTRANS( L'>'	,0xE6C3	,0xE6C4	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><%greater><%greater><%greater>                       */ DEADTRANS( L'>'	,0xE6C4	,0x22D9	,0x0000), // '>' ➔ "⋙" U+22D9 VERY MUCH GREATER-THAN
@@ -5272,7 +5274,6 @@
 /*<!M><~space><%plus><%plus>                                       */ DEADTRANS( L'+'	,0xE6D9	,0x29FA	,0x0000), // '+' ➔ "⧺" U+29FA DOUBLE PLUS
 /*<!M><~space><%plus><2>                                           */ DEADTRANS( L'2'	,0xE6D9	,0x2A27	,0x0000), // '2' ➔ "⨧" U+2A27 PLUS SIGN WITH SUBSCRIPT TWO
 /*<!M><~space><%semicolon>                                         */ DEADTRANS( L';'	,0xE6A7	,0x2A3E	,0x0000), // ';' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
-/*<!M><~space><%semsection>                                        */ DEADTRANS( 0x00A7	,0xE6A7	,0x2A3E	,0x0000), // '§' ➔ "⨾" U+2A3E Z NOTATION RELATIONAL COMPOSITION
 /*<!M><~space><%slash>                                             */ DEADTRANS( L'/'	,0xE6A7	,0xE6DA	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><%slash><%backslash>                                 */ DEADTRANS( L'\\'	,0xE6DA	,0xE6DB	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><%slash><%backslash><%bar>                           */ DEADTRANS( L'|'	,0xE6DB	,0x2A1E	,0x0000), // '|' ➔ "⨞" U+2A1E LARGE LEFT TRIANGLE OPERATOR
@@ -5433,6 +5434,7 @@
 /*<!M><~space><o><%backslash>                                      */ DEADTRANS( L'\\'	,0xE700	,0x29B0	,0x0000), // '\' ➔ "⦰" U+29B0 REVERSED EMPTY SET
 /*<!M><~space><o><%equal>                                          */ DEADTRANS( L'='	,0xE700	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
 /*<!M><~space><O><%equal>                                          */ DEADTRANS( L'='	,0xE701	,0x229C	,0x0000), // '=' ➔ "⊜" U+229C CIRCLED EQUALS
+/*<!M><~space><o><%excsection>                                     */ DEADTRANS( 0x00A7	,0xE700	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~space><o><%greater>                                        */ DEADTRANS( L'>'	,0xE700	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
 /*<!M><~space><O><%greater>                                        */ DEADTRANS( L'>'	,0xE701	,0x2A7A	,0x0000), // '>' ➔ "⩺" U+2A7A GREATER-THAN WITH CIRCLE INSIDE
 /*<!M><~space><o><%minus>                                          */ DEADTRANS( L'-'	,0xE700	,0xE702	,0x0001), // Intermediate multikey chain link
@@ -5449,7 +5451,6 @@
 /*<!M><~space><o><%period>                                         */ DEADTRANS( L'.'	,0xE700	,0x29BF	,0x0000), // '.' ➔ "⦿" U+29BF CIRCLED BULLET
 /*<!M><~space><o><%plus>                                           */ DEADTRANS( L'+'	,0xE700	,0x2640	,0x0000), // '+' ➔ "♀" U+2640 FEMALE SIGN
 /*<!M><~space><o><%semicolon>                                      */ DEADTRANS( L';'	,0xE700	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><o><%semsection>                                     */ DEADTRANS( 0x00A7	,0xE700	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~space><o><%slash>                                          */ DEADTRANS( L'/'	,0xE700	,0x2298	,0x0000), // '/' ➔ "⊘" U+2298 CIRCLED DIVISION SLASH
 /*<!M><~space><o><8>                                               */ DEADTRANS( L'8'	,0xE700	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
 /*<!M><~space><O><8>                                               */ DEADTRANS( L'8'	,0xE701	,0x2663	,0x0000), // '8' ➔ "♣" U+2663 BLACK CLUB SUIT
@@ -5501,6 +5502,7 @@
 /*<!M><~space><~space><%colon>                                     */ DEADTRANS( L':'	,0xE70C	,0x2982	,0x0000), // ':' ➔ "⦂" U+2982 Z NOTATION TYPE COLON
 /*<!M><~space><~space><%equal>                                     */ DEADTRANS( L'='	,0xE70C	,0xE711	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><~space><%equal><%equal>                             */ DEADTRANS( L'='	,0xE711	,0x2263	,0x0000), // '=' ➔ "≣" U+2263 STRICTLY EQUIVALENT TO
+/*<!M><~space><~space><%excsection>                                */ DEADTRANS( 0x00A7	,0xE70C	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~space><~space><%greater>                                   */ DEADTRANS( L'>'	,0xE70C	,0xE712	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><~space><%greater><%less>                            */ DEADTRANS( L'<'	,0xE712	,0x2AA5	,0x0000), // '<' ➔ "⪥" U+2AA5 GREATER-THAN BESIDE LESS-THAN
 /*<!M><~space><~space><%greater><%minus>                           */ DEADTRANS( L'-'	,0xE712	,0x2B43	,0x0000), // '-' ➔ "⭃" U+2B43 RIGHTWARDS ARROW THROUGH GREATER-THAN
@@ -5515,7 +5517,6 @@
 /*<!M><~space><~space><%minus><%slash>                             */ DEADTRANS( L'/'	,0xE714	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~space><~space><%period>                                    */ DEADTRANS( L'.'	,0xE70C	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~space><~space><%semicolon>                                 */ DEADTRANS( L';'	,0xE70C	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
-/*<!M><~space><~space><%semsection>                                */ DEADTRANS( 0x00A7	,0xE70C	,0x2A1F	,0x0000), // '§' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
 /*<!M><~space><~space><%slash>                                     */ DEADTRANS( L'/'	,0xE70C	,0xE715	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><~space><%slash><%backslash>                         */ DEADTRANS( L'\\'	,0xE715	,0x25C1	,0x0000), // '\' ➔ "◁" U+25C1 WHITE LEFT-POINTING TRIANGLE
 /*<!M><~space><~space><%slash><%minus>                             */ DEADTRANS( L'-'	,0xE715	,0x29A7	,0x0000), // '-' ➔ "⦧" U+29A7 OBLIQUE ANGLE OPENING DOWN

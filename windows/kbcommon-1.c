@@ -1,10 +1,11 @@
 /*****************************************************************************\
 * Module Name: kbcommon-1.c
 *
-* Common keyboard layout data, part 1.
+* Common keyboard layout data, part 1
 *
-* Copyright (c) 1985-2001, Microsoft Corporation
-* Copyright (c) 2014-2025, Marcel Schneider dev[arobase]dispoclavier.com
+* Copyright:
+* 1985..2001 Microsoft Corporation (pro parte)
+* 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
 * Further document the dead key bug        6.0.9.0.0 Mon 2025-09-29T1419+0200
