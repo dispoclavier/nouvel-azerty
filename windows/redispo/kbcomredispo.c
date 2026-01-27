@@ -8,7 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Permutate on B08-B10 in sync with Shift  6.0.9.0.0 Mon 2026-01-26T0417+0100
+* Permutate on B08-B10 in sync with Shift  6.2.0.0.0 Mon 2026-01-26T0417+0100
 * Add 6 spare modification numbers         6.0.5.0.0 Sat 2025-08-30T2006+0200
 * Add mod# 33 in main allocation table     6.0.4.1.0 Wed 2025-08-27T1834+0200
 * Rename kbcomqzjfgy.c to kbcomredispo.c   6.0.3.4.0 Sat 2025-08-23T1631+0200
