@@ -6,19 +6,19 @@
 
 2. Le deux-barrettes "¦" U+00A6 (barre brisée, barre discontinue, barre déjointe, barre à trou) représente la touche de composition "⎄" U+2384. Les séquences de composition sont entre guillemets français pour la lisibilité : « ¦mul », « ¦MUL », « ¦!^ », « ¦:\ », « ¦#1: », « ¦¦ ».
 
-## 6.3.0 (projet)
+## 6.4.0 (projet)
 
 Disposition de plus d’émojis sur les touches vives prévues sous Windows.
 
 Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels pris en charge sur touches vives sous Windows.
 
-## 6.2.0 (projet)
+## 6.3.0 (projet)
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
-## 6.1.9 (projet)
+## 6.2.0 (projet)
 
 Inversion des touches mortes point souscrit et virgule souscrite suite à la version 6.0.0 (2025-08-11).
 
