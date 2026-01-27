@@ -16,6 +16,8 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
+## 6.2.1 (projet)
+
 Complétion des séquences de touches mortes spécifiques à Windows.
 
 ## 6.2.0 (projet)
@@ -26,20 +28,25 @@ Harmonisation du niveau 3 des touches du point-virgule et du point d’exclamat
 
 Harmonisation du contenu des touches mortes.
 
+Complétion de séquences de touches mortes spécifiques à Windows.
+
 * Disposition :
-	* Maj + AltGr : Inverser la touche morte point souscrit, qui va sur B10, et la touche morte virgule souscrite, qui va sur B08. dispocla.cpp [2574be2](https://github.com/dispoclavier/nouvel-azerty/commit/2574be2da636dab55a75ce3b8a19fefa1cda9ca0), kbcomazerty.c, kbcomredispo.c [4520be4](https://github.com/dispoclavier/nouvel-azerty/commit/4520be45b7ac8e86dfd6d41c68041ef3ef7f5cb6), compose-1.yml, compose-2.yml [2e82db8](https://github.com/dispoclavier/nouvel-azerty/commit/2e82db805376d66554c2678089d9d7e1ff7d5a31), [cfa8d12](https://github.com/dispoclavier/nouvel-azerty/commit/cfa8d12739a9f456f30e9ffbd26fe8bceb54bf6a), dead-key-convert.pl, generate-multikey.pl, generate-deadkey-tables.pl, generate-multikey-tables.pl [84f2f06](https://github.com/dispoclavier/nouvel-azerty/commit/84f2f062285f75b5b1ade0eb438cf6b807b38135)
+	* Maj + AltGr : Inverser la touche morte point souscrit, qui va sur B10, et la touche morte virgule souscrite, qui va sur B08. dispocla.cpp [2574be2](https://github.com/dispoclavier/nouvel-azerty/commit/2574be2da636dab55a75ce3b8a19fefa1cda9ca0), kbcomazerty.c, kbcomredispo.c [4520be4](https://github.com/dispoclavier/nouvel-azerty/commit/4520be45b7ac8e86dfd6d41c68041ef3ef7f5cb6), compose-1.yml, compose-2.yml, compose-3.yml [2e82db8](https://github.com/dispoclavier/nouvel-azerty/commit/2e82db805376d66554c2678089d9d7e1ff7d5a31), [cfa8d12](https://github.com/dispoclavier/nouvel-azerty/commit/cfa8d12739a9f456f30e9ffbd26fe8bceb54bf6a), [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0), nouvel-azerty.json, nouvel-azerty-verrcap.json, nouvel-azerty-verrmod.json, nouvel-azerty-verrmod-verrcap.json, qzjfgy.json [2858190](https://github.com/dispoclavier/nouvel-azerty/commit/2858190fa067f84e3ab74c68be1dffcd08831f4a), dead-key-convert.pl, generate-multikey.pl, generate-deadkey-tables.pl, generate-multikey-tables.pl [84f2f06](https://github.com/dispoclavier/nouvel-azerty/commit/84f2f062285f75b5b1ade0eb438cf6b807b38135)
 	* AltGr :
 		* Mode français : Redonder le point-virgule sur B08 à la place du point d’exclamation. ibidem
 		* Mode ASCII : Inverser le point d’exclamation, qui va sur B10, et le point-virgule, qui va sur B08. ibidem
+* Composition : Prendre en charge la séquence « ¦Mul » pour "¦" U+00A6. compose-1.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
 *	Transformations :
 	* Groupes des symboles :
-		* Mettre "¡" U+00A1 à la place de "ː" U+02D0, qui prend la place laissée par "¡" U+00A1.
+		* Mettre "¡" U+00A1 à la place de "ː" U+02D0, qui prend la place laissée par "¡" U+00A1. compose-3.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0), [a413760](https://github.com/dispoclavier/nouvel-azerty/commit/a4137604e292d1c18c88af6d970be4ca4006165c)
 		* Mettre "‼" U+203C à la place de "ˑ" U+02D1, qui prend la place laissée par "‼" U+203C.
 		* Mettre "❕" U+2755 à la place de "⸫" U+2E2B, qui prend la place de "∴" U+2234, qui prend la place de "⏰" U+23F0, qui prend la place de "⌚" U+231A, qui prend la place de "⋯" U+22EF, qui prend la place laissée par "❕" U+2755.
 		* Mettre "❗" U+2757 à la place de "⁛" U+205B, qui prend la place laissée par "❗" U+2757.
 		* Mettre "⁉" U+2049 à la place de "⸪" U+2E2A, qui prend la place de "∵" U+2235, qui prend la place de "⧗" U+29D7, qui prend la place de "❣" U+2763, qui prend la place de "⏳" U+23F3, qui prend la place laissée par "⁉" U+2049.
 		* Mettre "⚠" U+26A0 à la place de "⋱" U+22F1, qui prend la place de "⧖" U+29D6, qui prend la place de "❢" U+2762, qui prend la place de "⌛" U+231B, qui prend la place laissée par "⚠" U+26A0.
 		* Mettre "⏱" U+23F1 à la place de "⋰" U+22F0, qui prend la place de "⏲" U+23F2, qui prend la place laissée par "⏱" U+23F1.
+	* Séquences spécifiques à Windows : Prendre en charge les équivalents en composition. compose-2.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
+* Documentation : Corriger ou ajouter des annotations. compose-1.yml, compose-2.yml, compose-3.yml [b11199b](https://github.com/dispoclavier/nouvel-azerty/commit/b11199b64f45e6c510ae658f14bac41efe8cfaf0)
 
 ## 6.1.8 (2026-01-25)
 
