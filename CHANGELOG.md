@@ -16,13 +16,34 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
+Complétion des séquences de touches mortes spécifiques à Windows.
+
 ## 6.1.9 (projet)
 
-Complétion des séquences de touches mortes spécifiques à Windows.
+Inversion des touches mortes point souscrit et virgule souscrite suite à la version 6.0.0 (2025-08-11).
+
+Harmonisation du niveau 3 des touches du point-virgule et du point d’exclamation.
+
+Harmonisation du contenu des touches mortes.
+
+* Disposition :
+	* Maj + AltGr : Inverser la touche morte point souscrit, qui va sur B10, et la touche morte virgule souscrite, qui va sur B08. dispocla.cpp [2574be2](https://github.com/dispoclavier/nouvel-azerty/commit/2574be2da636dab55a75ce3b8a19fefa1cda9ca0), kbcomazerty.c, kbcomredispo.c [4520be4](https://github.com/dispoclavier/nouvel-azerty/commit/4520be45b7ac8e86dfd6d41c68041ef3ef7f5cb6), compose-1.yml, compose-2.yml [2e82db8](https://github.com/dispoclavier/nouvel-azerty/commit/2e82db805376d66554c2678089d9d7e1ff7d5a31), [cfa8d12](https://github.com/dispoclavier/nouvel-azerty/commit/cfa8d12739a9f456f30e9ffbd26fe8bceb54bf6a), dead-key-convert.pl, generate-multikey.pl, generate-deadkey-tables.pl, generate-multikey-tables.pl [84f2f06](https://github.com/dispoclavier/nouvel-azerty/commit/84f2f062285f75b5b1ade0eb438cf6b807b38135)
+	* AltGr :
+		* Mode français : Redonder le point-virgule sur B08 à la place du point d’exclamation. ibidem
+		* Mode ASCII : Inverser le point d’exclamation, qui va sur B10, et le point-virgule, qui va sur B08. ibidem
+*	Transformations :
+	* Groupes des symboles :
+		* Mettre "¡" U+00A1 à la place de "ː" U+02D0, qui prend la place laissée par "¡" U+00A1.
+		* Mettre "‼" U+203C à la place de "ˑ" U+02D1, qui prend la place laissée par "‼" U+203C.
+		* Mettre "❕" U+2755 à la place de "⸫" U+2E2B, qui prend la place de "∴" U+2234, qui prend la place de "⏰" U+23F0, qui prend la place de "⌚" U+231A, qui prend la place de "⋯" U+22EF, qui prend la place laissée par "❕" U+2755.
+		* Mettre "❗" U+2757 à la place de "⁛" U+205B, qui prend la place laissée par "❗" U+2757.
+		* Mettre "⁉" U+2049 à la place de "⸪" U+2E2A, qui prend la place de "∵" U+2235, qui prend la place de "⧗" U+29D7, qui prend la place de "❣" U+2763, qui prend la place de "⏳" U+23F3, qui prend la place laissée par "⁉" U+2049.
+		* Mettre "⚠" U+26A0 à la place de "⋱" U+22F1, qui prend la place de "⧖" U+29D6, qui prend la place de "❢" U+2762, qui prend la place de "⌛" U+231B, qui prend la place laissée par "⚠" U+26A0.
+		* Mettre "⏱" U+23F1 à la place de "⋰" U+22F0, qui prend la place de "⏲" U+23F2, qui prend la place laissée par "⏱" U+23F1.
 
 ## 6.1.8 (2026-01-25)
 
-Portage sous Linux de la touche morte virtuelle traversant développée sous Windows.
+Portage sous Linux de la touche morte virtuelle traversant.
 
 Correction du contenu des touches mortes.
 
