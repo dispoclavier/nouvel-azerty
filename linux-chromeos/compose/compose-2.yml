@@ -489,45 +489,46 @@
 #   Dead key layout overview
 #
 #   Based on AZERTY fr_FR, French mode (ASCII mode swaps B09, B10 levels 1, 2).
-#   Non-existing mnemonic keysyms are flagged with a prepended asterisk and are
-#   new-school as of multikey equivalents.
+#   Non-existing mnemonic keysyms are flagged with a prepended asterisk and
+#   followed by the private use area keysym used in this file. All of these
+#   are new-school as of multikey equivalents. Levels are in French mode.
 #
-#   Level 2                3  4
-#                             IDENTIFIER      keysym [private use if non-X11]
+#                          Multikey equivalent
+#   Level 1 2  (QWERTY) 3  ↓      4
+#                                 IDENTIFIER      Keysym
 #
-#   D01   A (Q on QWERTY)  ^  SUPERSCRIPT    *dead_superscript UEFD1
-#   D02   Z (W on QWERTY)  %  TURNED         *dead_turned UEFD5
-#   D03   E                "  DOUBLE_ACUTE    dead_doubleacute (new-school)
-#   D04   R                \  REVERSED       *dead_reversed UEFD6
-#   D05   T                ~  TILDE           dead_tilde
-#   D06   Y                @  GREEK           dead_greek (new-school)
-#   D07   U                '  ACUTE           dead_acute
-#   D08   I                {  HOOK            dead_hook (new-school)
-#   D09   O                }  RETROFLEX_HOOK *dead_retroflexhook UEFD4
-#   D10   P                &  DOT_ABOVE       dead_abovedot « ¦. »
+#   D01   a A  (Q)      ^  ¦^ #*# SUPERSCRIPT    *dead_superscript UEFD1
+#   D02   z Z  (W)      %  ¦% #*# TURNED         *dead_turned UEFD5
+#   D03   e E           "  ¦" #*# DOUBLE_ACUTE    dead_doubleacute new-school
+#   D04   r R           \  ¦\ #*# REVERSED       *dead_reversed UEFD6
+#   D05   t T           ~  ¦~ #*# TILDE           dead_tilde
+#   D06   y Y           @  ¦@ #*# GREEK           dead_greek new-school
+#   D07   u U           '  ¦' #*# ACUTE           dead_acute
+#   D08   i I           {  ¦{ #*# HOOK            dead_hook new-school
+#   D09   o O           }  ¦} #*# RETROFLEX_HOOK *dead_retroflexhook UEFD4
+#   D10   p P           &  ¦. #*# DOT_ABOVE       dead_abovedot
 #
-#   C01   Q (A on QWERTY)  #  GROUP_1        *dead_group UEFD0
-#   C02   S                $  CURRENCY        dead_currency (new-school)
-#   C03   D                (  INVERTED_BREVE  dead_invertedbreve (new-school)
-#   C04   F                )  BREVE           dead_breve (new-school)
-#   C05   G                -  BARRED         *dead_bar UEFD8
-#   C06   H                +  HORN            dead_horn
-#   C07   J                _  SUBSCRIPT      *dead_subscript UEFD2
-#   C08   K                [  OGONEK          dead_ogonek (new-school)
-#   C09   L                ]  HOOK_ABOVE     *dead_abovehook UEFD3
-#   C10   M                |  MACRON          dead_macron (new-school)
+#   C01   q Q  (A)      #  ¦# #*# GROUP_1        *dead_group UEFD0
+#   C02   s S           $  ¦$ #*# CURRENCY        dead_currency new-school
+#   C03   d D           (  ¦( #*# INVERTED_BREVE  dead_invertedbreve new-school
+#   C04   f F           )  ¦) #*# BREVE           dead_breve new-school
+#   C05   g G           -  ¦- #*# BAR            *dead_bar UEFD8
+#   C06   h H           +  ¦+ #*# HORN            dead_horn
+#   C07   j J           _  ¦_ #*# SUBSCRIPT      *dead_subscript UEFD2
+#   C08   k K           [  ¦[ #*# OGONEK          dead_ogonek new-school
+#   C09   l L           ]  ¦] #*# HOOK_ABOVE     *dead_abovehook UEFD3
+#   C10   m M  (;)      |  ¦| #*# MACRON          dead_macron new-school
 #
-#   B01   W (Z on QWERTY)  /  STROKE          dead_stroke
-#   B02   X                *  RING_ABOVE      dead_abovering
-#   B03   C                <  CIRCUMFLEX      dead_circumflex (new-school)
-#   B04   V                >  HACEK           dead_caron (new-school)
-#   B05   B                =  FLAG           *dead_flag UEFD7
-#   B06   N                `  GRAVE           dead_grave
-#
-#   B07   ? (level 1: ,)   ,  CEDILLA         dead_cedilla
-#   B08   ! (level 1: .)   ;  COMMA_BELOW     dead_belowcomma
-#   B09   : (level 1: /)   :  DIAERESIS       dead_diaeresis (new-school)
-#   B10   ; (level 1: \)   !  DOT_BELOW       dead_belowdot
+#   B01   w W  (Z)      /  ¦/ #*# STROKE          dead_stroke
+#   B02   x X           *  ¦* #*# RING_ABOVE      dead_abovering
+#   B03   c C           <  ¦< #*# CIRCUMFLEX      dead_circumflex new-school
+#   B04   v V           >  ¦> #*# HACEK           dead_caron new-school
+#   B05   b B           =  ¦= #*# FLAG           *dead_flag UEFD7
+#   B06   n N           `  ¦` #*# GRAVE           dead_grave
+#   B07   ,  ? (M)      ?  ¦, #*# CEDILLA         dead_cedilla
+#   B08   .  ;          ;  ¦; #*# COMMA_BELOW     dead_belowcomma
+#   B09   /  :          :  ¦: #*# DIAERESIS       dead_diaeresis new-school
+#   B10   \  !          §  ¦! #*# DOT_BELOW       dead_belowdot
 #
 #
 #:# Legacy dead keys for Non-Belgian AZERTY
@@ -11164,11 +11165,19 @@
 #   https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #   https://web.archive.org/web/20250202064605/https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #
+#   The identifier is BAR rather than BARRED, consistently with STROKE, despite
+#   most character names use BARRED instead of WITH BAR that is consistent with
+#   most other diacritics, and despite the confusability with the bar keysym.
+#   See "ƚ" U019A # LATIN SMALL LETTER L WITH BAR
+#   See "Ƚ" U023D # LATIN CAPITAL LETTER L WITH BAR
+#   See "Ꞓ" UA792 # LATIN CAPITAL LETTER C WITH BAR
+#   See "ꞓ" UA793 # LATIN SMALL LETTER C WITH BAR
+#
 #
 #   Letters
 #
 #   All barred letters occurring in orthographies have their precomposed form
-#   encoded in Unicode, since the overlay bar diacritics do not render well.
+#   encoded in Unicode, due to the rendering challenge of overlay diacritics.
 #   https://www.frathwiki.com/Bar
 #
 #   The unicase glottal stop with stroke, meaning with bar, is supported in its
