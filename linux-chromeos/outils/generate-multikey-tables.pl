@@ -5,10 +5,10 @@
 # 2024-05-16T1520+0200
 # 2024-10-28T1415+0100
 # 2025-11-30T2108+0100
-# 2026-01-26T0523+0100
+# 2026-01-29T2352+0100
 # = last modified.
 #
-# Generates HTML tables of dedicated non-math multikey sequences found in
+# Generates HTML tables of dedicated non-math multikey sequences configured in
 # Compose.yml.
 #
 # In the input file, parsing starts at "START_MULTIKEY", and parsing stops at
@@ -135,20 +135,21 @@ while ( my $line = <INPUT> ) {
 		) {
 			if ( $line =~ /<Multi_key>/ ) {
 
-				# Starting from here, this should be in sync with generate-deadkey-tables.pl.
+				# Starting from here, this should be in sync with generate-deadkey-tables.pl,
+				# except for the attributeless spans needed for dead key base markup.
+
 				# Convert dead keys.
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;ou AltGr\/Option + ⟦£\$¤⟧ (en mode ASCII uniquement)">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + ⟦P⟧">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + ⟦X⟧">rond en chef<\/kbd>/g;
-				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche £\$¤&#10;ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
-				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + ⟦.;⟧⟧">virgule souscrite<\/kbd>/g;
-				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + ⟦§!">point souscrit<\/kbd>/g;
+				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche ⟦£\$¤⟧&#10;ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
+				$line =~ s/<dead_belowcomma>/<kbd class="deadkey long" title="Touche morte virgule souscrite Maj + AltGr\/Option + ⟦.;⟧">virgule souscrite<\/kbd>/g;
+				$line =~ s/<dead_belowdot>/<kbd class="deadkey long" title="Touche morte point souscrit Maj + AltGr\/Option + ⟦§!⟧">point souscrit<\/kbd>/g;
 				$line =~ s/<dead_breve>/<kbd class="deadkey" title="Touche morte brève Maj + AltGr\/Option + ⟦F⟧">brève<\/kbd>/g;
 				$line =~ s/<dead_caron>/<kbd class="deadkey" title="Touche morte hatchek Maj + AltGr\/Option + ⟦V⟧">hatchek<\/kbd>/g;
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ⟦?,⟧">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ⟦¨^⟧&#10;ou Maj + AltGr\/Option + ⟦C⟧">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte monétaire Maj + AltGr\/Option + ⟦S⟧">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧&#10;ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧&#10;ou Maj + AltGr\/Option + ⟦\/:⟧">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + ⟦E⟧">double aigu<\/kbd>/g;
 				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + ⟦£\$¤⟧&#10;ou Maj + AltGr\/Option + ⟦N⟧">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + ⟦Y⟧&#10;ou Maj + AltGr\/Option + ⟦Y⟧">grec<\/kbd>/g;
@@ -178,14 +179,20 @@ while ( my $line = <INPUT> ) {
 				# Mark up invisibles or confusables.
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + ⟦Espace⟧ (en mode français uniquement)">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + ⟦Espace⟧ (en mode français uniquement)">espace nulle<\/kbd>/g;
+				$line =~ s/<hyphen>/<kbd class="livekey" title="Trait d’union conditionnel Maj + ⟦5([⟧ (en mode français uniquement)">- conditionnel<\/kbd>/g;
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + ⟦4&#x27;{⟧">— tiret cadratin<\/kbd>/g;
 				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + ⟦3&#x22;#⟧">– tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U2212>/<kbd class="livekey" title="Signe moins AltFr + ⟦T⟧">− signe moins<\/kbd>/g;
 				$line =~ s/<U02BB>/<kbd class="livekey" title="Lettre apostrophe tournée Maj + ⟦8_\\⟧ sur les variantes pour la Polynésie">ʻ lettre apostrophe tournée<\/kbd>/g;
 				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + ⟦§!⟧">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ⟦?,⟧">[fine insécable]?<\/kbd>/g;
+				$line =~ s/<UEF65>/<kbd class="livekey" title="Guillemet fermant espacé AltFr + ⟦?,⟧">[fine insécable]»<\/kbd>/g;
+				$line =~ s/<UEF67>/<kbd class="livekey" title="Guillemet simple fermant espacé AltFr + ⟦£\$¤⟧">[fine insécable]›<\/kbd>/g;
+				$line =~ s/<UEF64>/<kbd class="livekey" title="Guillemet ouvrant espacé AltFr + ⟦%ù⟧">«[fine insécable]<\/kbd>/g;
+				$line =~ s/<UEF66>/<kbd class="livekey" title="Guillemet simple ouvrant espacé AltFr + ⟦¨^⟧">‹[fine insécable]<\/kbd>/g;
 
 				# Add tooltips.
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;et en mode ASCII, AltGr\/Option + ⟦£\$¤⟧">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + ⟦Espace⟧ (en mode français uniquement)">⍽<\/span>/g;
 				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
@@ -195,7 +202,13 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + ⟦P⟧">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦¨^⟧">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦£\$¤⟧">›<\/span>/g;
+				$line =~ s/<U0190>/<span class="tooltip" title="Capitale latine E ouvert Maj + ⟦1&⟧ sur les variantes pour l’Afrique francophone">Ɛ<\/span>/g;
+				$line =~ s/<U025B>/<span class="tooltip" title="Minuscule latine e ouvert Touche ⟦1&⟧ sur les variantes pour l’Afrique francophone">ɛ<\/span>/g;
+				$line =~ s/<U0186>/<span class="tooltip" title="Capitale latine O ouvert Maj + ⟦8_\\⟧ sur les variantes pour l’Afrique francophone">Ɔ<\/span>/g;
+				$line =~ s/<U0254>/<span class="tooltip" title="Minuscule latine o ouvert Touche ⟦8_\\⟧ sur les variantes pour l’Afrique francophone">ɔ<\/span>/g;
+				$line =~ s/<twosuperior>/<span class="tooltip" title="Exposant 2 Touche ⟦1&⟧ en mode français">²<\/span>/g;
 				$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
+				$line =~ s/<ellipsis>/<span class="tooltip" title="Points de suspension Touche ⟦%ù⟧ en mode français">…<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
 				$line =~ s/<asciicircum>/^/g;
@@ -232,6 +245,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<semicolon>/;/g;
 				$line =~ s/<section>/§/g;
 				$line =~ s/<mu>/µ/g;
+				$line =~ s/<guillemotleft>/«/g;
+				$line =~ s/<guillemotright>/»/g;
 				$line =~ s/<agrave>/à/g;
 				$line =~ s/<Agrave>/À/g;
 				$line =~ s/<egrave>/è/g;
@@ -248,16 +263,20 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<Odiaeresis>/Ö/g;
 				$line =~ s/<udiaeresis>/ü/g;
 				$line =~ s/<Udiaeresis>/Ü/g;
+				$line =~ s/<ntilde>/ñ/g;
+				$line =~ s/<Ntilde>/Ñ/g;
 
-				# Convert Unicode keysym to NCR.
+				# Convert remaining Unicode keysyms to NCRs.
 				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
 
-				# Format Unicode scalar in comment.
+				# Format Unicode scalars in comments.
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 
-				# Remove remaining delimiters.
-				$line =~ s/<(.)>/$1/g;
-				# Down to here, this should be in sync with generate-deadkey-tables.pl.
+				# Remove remaining keysym delimiters.
+				$line =~ s/<([a-zA-Z0-9])>/$1/g;
+
+				# Down to here, this should be in sync with generate-deadkey-tables.pl,
+				# except for the attributeless spans needed for dead key base markup.
 
 				# Add ZWNJ between a colon and a parenthesis to prevent WordPress from
 				# parsing the sequence as an emoji.

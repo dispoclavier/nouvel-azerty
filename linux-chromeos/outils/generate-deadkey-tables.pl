@@ -10,7 +10,7 @@
 # 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
 # 2026-01-12T1834+0100
-# 2026-01-26T0518+0100
+# 2026-01-29T2352+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -33,6 +33,12 @@
 # Parsing "START_LETTER_SYMBOL_GROUPS" as the end tag is commented out, so that
 # space and symbol group tables and letter group tables are generated too.
 # Other options may be configured after "/START_LETTER_SYMBOL_GROUPS/".
+#
+# As the keyboard input may end with a dead key, this needs to be marked up
+# with a bold label and a bold border, so as to not raise questions about
+# whether the base character display is broken, as it happens when a keysym
+# is not converted. That is achieved by :last-child style rules, so that the
+# unwrapped input characters need to be wrapped each one in a span.
 #
 # The keyboard output is marked up for display with a white background and with
 # a light-blue baseline for the purpose of delimiting whitespace characters and
@@ -134,7 +140,7 @@ my $end_tags       = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
 my ( @anchors, $anchor, $check, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str,
-		 $test, $text, $tooltip, $ucodes, $winspe );
+		 $test, $textstyle, $tooltip, $ucodes, $winspe );
 my $highsu = 'Uniquement pour Windows';
 my $nowin  = 'Ne fonctionne pas sous Windows';
 
@@ -188,12 +194,13 @@ while ( my $line = <INPUT> ) {
 		unless ( $line =~ /<Multi_key>/        # Multikey equivalents are skipped.
 			|| $line =~ /^#[^@]/                 # Annotations are not (yet) processed.
 			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
-			|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe.
+			|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias of ASCII apostrophe.
 			|| $line =~ /high surrogate/         # High surrogates, a Windows feature.
 			|| $line =~ /# [Aa]vailable\.?$/     # Empty slots in letter groups.
+			|| $line =~ /<UEFD0><UEFD0><UEFD0>/  # Triple or quadruple group dead key press alternatives.
+			|| $line =~ / <ellipsis></           # skull and crossbones, black sun with rays or snowflake emoji.
 		) {
-			if ( $line =~ /<Multi_key>/ # The only instance of non-initial "Multi_key" is "Multi_key" double press.
-				|| $line =~ /<dead_abovedot>/
+			if ( $line =~ /<dead_abovedot>/
 				|| $line =~ /<dead_abovering>/
 				|| $line =~ /<dead_acute>/
 				|| $line =~ /<dead_belowcomma>/
@@ -239,9 +246,10 @@ while ( my $line = <INPUT> ) {
 					$check  = '';
 				}
 
-				# Starting from here, this should be in sync with generate-multikey-tables.pl.
+				# Starting from here, this should be in sync with generate-multikey-tables.pl,
+				# except for the attributeless spans needed for dead key base markup.
+
 				# Convert dead keys.
-				$line =~ s/<Multi_key>/<kbd class="deadkey" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;ou AltGr\/Option + ⟦£\$¤⟧ (en mode ASCII uniquement)">¦<\/kbd>/g;
 				$line =~ s/<dead_abovedot>/<kbd class="deadkey long" title="Touche morte point en chef Maj + AltGr\/Option + ⟦P⟧">point en chef<\/kbd>/g;
 				$line =~ s/<dead_abovering>/<kbd class="deadkey long" title="Touche morte rond en chef Maj + AltGr\/Option + ⟦X⟧">rond en chef<\/kbd>/g;
 				$line =~ s/<dead_acute>/<kbd class="deadkey" title="Touche morte accent aigu Touche ⟦£\$¤⟧&#10;ou Maj + AltGr\/Option + ⟦U⟧">aigu<\/kbd>/g;
@@ -252,7 +260,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<dead_cedilla>/<kbd class="deadkey" title="Touche morte cédille Maj + AltGr\/Option + ⟦?,⟧">cédille<\/kbd>/g;
 				$line =~ s/<dead_circumflex>/<kbd class="deadkey" title="Touche morte accent circonflexe Touche ⟦¨^⟧&#10;ou Maj + AltGr\/Option + ⟦C⟧">circonflexe<\/kbd>/g;
 				$line =~ s/<dead_currency>/<kbd class="deadkey long" title="Touche morte monétaire Maj + AltGr\/Option + ⟦S⟧">monétaire<\/kbd>/g;
-				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧&#10;ou Maj + AltGr\/Option + \/:">tréma<\/kbd>/g;
+				$line =~ s/<dead_diaeresis>/<kbd class="deadkey" title="Touche morte tréma Touche ⟦5([⟧&#10;ou Maj + AltGr\/Option + ⟦\/:⟧">tréma<\/kbd>/g;
 				$line =~ s/<dead_doubleacute>/<kbd class="deadkey" title="Touche morte double accent aigu Maj + AltGr\/Option + ⟦E⟧">double aigu<\/kbd>/g;
 				$line =~ s/<dead_grave>/<kbd class="deadkey" title="Touche morte accent grave AltGr\/Option + ⟦£\$¤⟧&#10;ou Maj + AltGr\/Option + ⟦N⟧">grave<\/kbd>/g;
 				$line =~ s/<dead_greek>/<kbd class="deadkey" title="Touche morte grec ou cerclé AltGr\/Option + ⟦Y⟧&#10;ou Maj + AltGr\/Option + ⟦Y⟧">grec<\/kbd>/g;
@@ -282,14 +290,20 @@ while ( my $line = <INPUT> ) {
 				# Mark up invisibles or confusables.
 				$line =~ s/<U202F>/<kbd class="livekey" title="Espace fine insécable AltFr + ⟦Espace⟧ (en mode français uniquement)">fine insécable<\/kbd>/g;
 				$line =~ s/<U200B>/<kbd class="livekey" title="Césure conditionnelle Maj + AltGr\/Option + ⟦Espace⟧ (en mode français uniquement)">espace nulle<\/kbd>/g;
+				$line =~ s/<hyphen>/<kbd class="livekey" title="Trait d’union conditionnel Maj + ⟦5([⟧ (en mode français uniquement)">- conditionnel<\/kbd>/g;
 				$line =~ s/<emdash>/<kbd class="livekey" title="Tiret cadratin Maj + ⟦4&#x27;{⟧">— tiret cadratin<\/kbd>/g;
 				$line =~ s/<endash>/<kbd class="livekey" title="Tiret demi-cadratin Maj + ⟦3&#x22;#⟧">– tiret demi-cadratin<\/kbd>/g;
 				$line =~ s/<U2212>/<kbd class="livekey" title="Signe moins AltFr + ⟦T⟧">− signe moins<\/kbd>/g;
 				$line =~ s/<U02BB>/<kbd class="livekey" title="Lettre apostrophe tournée Maj + ⟦8_\\⟧ sur les variantes pour la Polynésie">ʻ lettre apostrophe tournée<\/kbd>/g;
 				$line =~ s/<UEF60>/<kbd class="livekey" title="Point d’exclamation espacé AltFr + ⟦§!⟧">[fine insécable]!<\/kbd>/g;
 				$line =~ s/<UEF63>/<kbd class="livekey" title="Point d’interrogation espacé AltFr + ⟦?,⟧">[fine insécable]?<\/kbd>/g;
+				$line =~ s/<UEF65>/<kbd class="livekey" title="Guillemet fermant espacé AltFr + ⟦?,⟧">[fine insécable]»<\/kbd>/g;
+				$line =~ s/<UEF67>/<kbd class="livekey" title="Guillemet simple fermant espacé AltFr + ⟦£\$¤⟧">[fine insécable]›<\/kbd>/g;
+				$line =~ s/<UEF64>/<kbd class="livekey" title="Guillemet ouvrant espacé AltFr + ⟦%ù⟧">«[fine insécable]<\/kbd>/g;
+				$line =~ s/<UEF66>/<kbd class="livekey" title="Guillemet simple ouvrant espacé AltFr + ⟦¨^⟧">‹[fine insécable]<\/kbd>/g;
 
 				# Add tooltips.
+				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;et en mode ASCII, AltGr\/Option + ⟦£\$¤⟧">¦<\/span>/g;
 				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
 				$line =~ s/<nobreakspace>/<span class="tooltip" title="Espace insécable AltGr\/Option + ⟦Espace⟧ (en mode français uniquement)">⍽<\/span>/g;
 				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
@@ -299,69 +313,81 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/<paragraph>/<span class="tooltip" title="Symbole paragraphe américain Maj + AltFr + ⟦P⟧">¶<\/span>/g;
 				$line =~ s/<U2039>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦¨^⟧">‹<\/span>/g;
 				$line =~ s/<U203A>/<span class="tooltip" title="Guillemet chevron simple AltFr + ⟦£\$¤⟧">›<\/span>/g;
+				$line =~ s/<U0190>/<span class="tooltip" title="Capitale latine E ouvert Maj + ⟦1&⟧ sur les variantes pour l’Afrique francophone">Ɛ<\/span>/g;
+				$line =~ s/<U025B>/<span class="tooltip" title="Minuscule latine e ouvert Touche ⟦1&⟧ sur les variantes pour l’Afrique francophone">ɛ<\/span>/g;
+				$line =~ s/<U0186>/<span class="tooltip" title="Capitale latine O ouvert Maj + ⟦8_\\⟧ sur les variantes pour l’Afrique francophone">Ɔ<\/span>/g;
+				$line =~ s/<U0254>/<span class="tooltip" title="Minuscule latine o ouvert Touche ⟦8_\\⟧ sur les variantes pour l’Afrique francophone">ɔ<\/span>/g;
+				$line =~ s/<twosuperior>/<span class="tooltip" title="Exposant 2 Touche ⟦1&⟧ en mode français">²<\/span>/g;
 				$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
+				$line =~ s/<ellipsis>/<span class="tooltip" title="Points de suspension Touche ⟦%ù⟧ en mode français">…<\/span>/g;
 
 				# Convert remaining ASCII and iconic.
-				$line =~ s/<asciicircum>/^/g;
-				$line =~ s/<percent>/%/g;
-				$line =~ s/<EuroSign>/€/g;
-				$line =~ s/<quotedbl>/&quot;/g;
-				$line =~ s/<backslash>/\\/g;
-				$line =~ s/<asciitilde>/~/g;
-				$line =~ s/<at>/@/g;
-				$line =~ s/<braceleft>/{/g;
-				$line =~ s/<braceright>/}/g;
-				$line =~ s/<ampersand>/&amp;/g;
-				$line =~ s/<numbersign>/#/g;
-				$line =~ s/<dollar>/\$/g;
-				$line =~ s/<parenleft>/(/g;
-				$line =~ s/<parenright>/)/g;
-				$line =~ s/<minus>/-/g;
-				$line =~ s/<plus>/+/g;
-				$line =~ s/<underscore>/_/g;
-				$line =~ s/<bracketleft>/[/g;
-				$line =~ s/<bracketright>/]/g;
-				$line =~ s/<bar>/|/g;
-				$line =~ s/<slash>/\//g;
-				$line =~ s/<asterisk>/*/g;
-				$line =~ s/<less>/&lt;/g;
-				$line =~ s/<greater>/&gt;/g;
-				$line =~ s/<equal>/=/g;
-				$line =~ s/<grave>/`/g;
-				$line =~ s/<comma>/,/g;
-				$line =~ s/<question>/?/g;
-				$line =~ s/<period>/./g;
-				$line =~ s/<exclam>/!/g;
-				$line =~ s/<colon>/:/g;
-				$line =~ s/<semicolon>/;/g;
-				$line =~ s/<section>/§/g;
-				$line =~ s/<mu>/µ/g;
-				$line =~ s/<agrave>/à/g;
-				$line =~ s/<Agrave>/À/g;
-				$line =~ s/<egrave>/è/g;
-				$line =~ s/<Egrave>/È/g;
-				$line =~ s/<ugrave>/ù/g;
-				$line =~ s/<Ugrave>/Ù/g;
-				$line =~ s/<eacute>/é/g;
-				$line =~ s/<Eacute>/É/g;
-				$line =~ s/<ccedilla>/ç/g;
-				$line =~ s/<Ccedilla>/Ç/g;
-				$line =~ s/<adiaeresis>/ä/g;
-				$line =~ s/<Adiaeresis>/Ä/g;
-				$line =~ s/<odiaeresis>/ö/g;
-				$line =~ s/<Odiaeresis>/Ö/g;
-				$line =~ s/<udiaeresis>/ü/g;
-				$line =~ s/<Udiaeresis>/Ü/g;
+				$line =~ s/<asciicircum>/<span>^<\/span>/g;
+				$line =~ s/<percent>/<span>%<\/span>/g;
+				$line =~ s/<EuroSign>/<span>€<\/span>/g;
+				$line =~ s/<quotedbl>/<span>&quot;<\/span>/g;
+				$line =~ s/<backslash>/<span>\\<\/span>/g;
+				$line =~ s/<asciitilde>/<span>~<\/span>/g;
+				$line =~ s/<at>/<span>@<\/span>/g;
+				$line =~ s/<braceleft>/<span>{<\/span>/g;
+				$line =~ s/<braceright>/<span>}<\/span>/g;
+				$line =~ s/<ampersand>/<span>&amp;<\/span>/g;
+				$line =~ s/<numbersign>/<span>#<\/span>/g;
+				$line =~ s/<dollar>/<span>\$<\/span>/g;
+				$line =~ s/<parenleft>/<span>(<\/span>/g;
+				$line =~ s/<parenright>/<span>)<\/span>/g;
+				$line =~ s/<minus>/<span>-<\/span>/g;
+				$line =~ s/<plus>/<span>+<\/span>/g;
+				$line =~ s/<underscore>/<span>_<\/span>/g;
+				$line =~ s/<bracketleft>/<span>[<\/span>/g;
+				$line =~ s/<bracketright>/<span>]<\/span>/g;
+				$line =~ s/<bar>/<span>|<\/span>/g;
+				$line =~ s/<slash>/<span>\/<\/span>/g;
+				$line =~ s/<asterisk>/<span>*<\/span>/g;
+				$line =~ s/<less>/<span>&lt;<\/span>/g;
+				$line =~ s/<greater>/<span>&gt;<\/span>/g;
+				$line =~ s/<equal>/<span>=<\/span>/g;
+				$line =~ s/<grave>/<span>`<\/span>/g;
+				$line =~ s/<comma>/<span>,<\/span>/g;
+				$line =~ s/<question>/<span>?<\/span>/g;
+				$line =~ s/<period>/<span>.<\/span>/g;
+				$line =~ s/<exclam>/<span>!<\/span>/g;
+				$line =~ s/<colon>/<span>:<\/span>/g;
+				$line =~ s/<semicolon>/<span>;<\/span>/g;
+				$line =~ s/<section>/<span>§<\/span>/g;
+				$line =~ s/<mu>/<span>µ<\/span>/g;
+				$line =~ s/<guillemotleft>/<span>«<\/span>/g;
+				$line =~ s/<guillemotright>/<span>»<\/span>/g;
+				$line =~ s/<agrave>/<span>à<\/span>/g;
+				$line =~ s/<Agrave>/<span>À<\/span>/g;
+				$line =~ s/<egrave>/<span>è<\/span>/g;
+				$line =~ s/<Egrave>/<span>È<\/span>/g;
+				$line =~ s/<ugrave>/<span>ù<\/span>/g;
+				$line =~ s/<Ugrave>/<span>Ù<\/span>/g;
+				$line =~ s/<eacute>/<span>é<\/span>/g;
+				$line =~ s/<Eacute>/<span>É<\/span>/g;
+				$line =~ s/<ccedilla>/<span>ç<\/span>/g;
+				$line =~ s/<Ccedilla>/<span>Ç<\/span>/g;
+				$line =~ s/<adiaeresis>/<span>ä<\/span>/g;
+				$line =~ s/<Adiaeresis>/<span>Ä<\/span>/g;
+				$line =~ s/<odiaeresis>/<span>ö<\/span>/g;
+				$line =~ s/<Odiaeresis>/<span>Ö<\/span>/g;
+				$line =~ s/<udiaeresis>/<span>ü<\/span>/g;
+				$line =~ s/<Udiaeresis>/<span>Ü<\/span>/g;
+				$line =~ s/<ntilde>/<span>ñ<\/span>/g;
+				$line =~ s/<Ntilde>/<span>Ñ<\/span>/g;
 
-				# Convert Unicode keysym to NCR.
-				$line =~ s/<U([0-9A-F]{4})>/&#x$1;/g;
+				# Convert remaining Unicode keysyms to NCRs.
+				$line =~ s/<U([0-9A-F]{4})>/<span>&#x$1;<\/span>/g;
 
-				# Format Unicode scalar in comment.
+				# Format Unicode scalars in comments.
 				$line =~ s/U([0-9A-F]{4,5})/U+$1/g;
 
-				# Remove remaining delimiters.
-				$line =~ s/<(.)>/$1/g;
-				# Down to here, this should be in sync with generate-multikey-tables.pl.
+				# Remove remaining keysym delimiters.
+				$line =~ s/<([a-zA-Z0-9])>/<span>$1<\/span>/g;
+
+				# Down to here, this should be in sync with generate-multikey-tables.pl,
+				# except for the attributeless spans needed for dead key base markup.
 
 				# Translate English comments to French.
 				$line =~ s/ # Wide-headed arrow high surrogate/ # Surrogat haut de flèche à pointe large/g;
@@ -476,11 +502,11 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*\w); /$1 ; /g;
 
 				# Add text style emoji for searchability.
-				if ( $line =~ m/ émoji/u ) {
-					$line    =~ m/^.+ : +"(.+?)"/u;
-					$text    = "$1&#xFE0E; ";
+				if ( $line   =~ m/ émoji/u ) {
+					$line      =~ m/^.+ : +"(.+?)"/u;
+					$textstyle = "$1&#xFE0E; ";
 				} else {
-					$text    = '';
+					$textstyle = '';
 				}
 
 				# Add localized tooltips.
@@ -567,7 +593,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/^(.+?) : "(.+?)" (U\+(?:03[0-6]|1A[BC]|1D[C-F]|20[D-F])[0-9A-F]) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">$3<\/td><td$winspe>$check$1<\/td><td>$4<\/td><\/tr>/;
 
 				# All other characters.
-				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$text$3<\/td><td$winspe>$check$1<\/td><td>$4$math<\/td><\/tr>/;
+				$line =~ s/^(.+?) :(?: "(.+?)")? (U\+[0-9A-F]{4,5}) # (.+)/<tr id="$anchor" class="$class"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">$textstyle$3<\/td><td$winspe>$check$1<\/td><td>$4$math<\/td><\/tr>/;
 
 				print OUTPUT $line;
 				if ( $comprehensive ) {

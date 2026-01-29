@@ -6,6 +6,7 @@
 # 2025-09-25T0143+0200
 # 2025-11-30T2108+0100
 # 2025-12-26T0915+0100
+# 2026-01-29T2351+0100
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -113,137 +114,136 @@ while ( my $line = <INPUT> ) {
 		$parse_on = !1;
 	}
 	if ( $parse_on ) {
-		if ( $line =~ /^</ ) {                   # Skip annotations.
-			unless ( $line =~ /<nobreakspace>/     # No-break space alias sequences.
-				|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
-				|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
-				|| $line =~ /<dead_greek/            # Alias of <at> in multikey sequences.
-			) {
+		unless ( $line =~ /^#/                 # Skip annotations.
+			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
+			|| $line =~ /<nobreakspace>/         # No-break space alias sequences.
+			|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
+			|| $line =~ /<dead_greek/            # Alias of <at> in multikey sequences.
+		) {
 
-				# Collapse spaces.
-				$line =~ s/ {2,}/ /g;
-				$line =~ s/> </></g;
+			# Collapse spaces.
+			$line =~ s/ {2,}/ /g;
+			$line =~ s/> </></g;
 
-				# Add tooltips.
-				$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;ou AltGr\/Option + ⟦£\$¤⟧ en mode ASCII">¦<\/span>/g;
-				$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
-				$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
-				$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche ⟦4&#x27;{⟧">’<\/span>/g;
-				$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
+			# Add tooltips.
+			$line =~ s/<Multi_key>/<span class="tooltip" title="Touche de composition AltGr\/Option + ⟦+=}⟧&#10;et en mode ASCII, AltGr\/Option + ⟦£\$¤⟧">¦<\/span>/g;
+			$line =~ s/<space>/<span class="tooltip" title="Espace">␣<\/span>/g;
+			$line =~ s/<apostrophe>/<span class="tooltip" title="Apostrophe ASCII ou guillemet simple générique Touche ⟦+=}⟧ en mode français,&#10;ou touche ⟦%ù⟧ en mode ASCII,&#10;ou AltGr\/Option + ⟦U⟧&#10;ou encore le guillemet apostrophe Touche ⟦4&#x27;{⟧ en mode français">&#x27;<\/span>/g;
+			$line =~ s/<rightsinglequotemark>/<span class="tooltip" title="Guillemet apostrophe Touche ⟦4&#x27;{⟧">’<\/span>/g;
+			$line =~ s/<periodcentered>/<span class="tooltip" title="Point médian Touche ⟦§!⟧ en mode français">·<\/span>/g;
 
-				# Convert remaining ASCII and iconic.
-				$line =~ s/<asciicircum>/^/g;
-				$line =~ s/<percent>/%/g;
-				$line =~ s/<EuroSign>/€/g;
-				$line =~ s/<quotedbl>/"/g;
-				$line =~ s/<backslash>/\\/g;
-				$line =~ s/<asciitilde>/~/g;
-				$line =~ s/<at>/@/g;
-				$line =~ s/<braceleft>/{/g;
-				$line =~ s/<braceright>/}/g;
-				$line =~ s/<ampersand>/&amp;/g;
-				$line =~ s/<numbersign>/#/g;
-				$line =~ s/<dollar>/\$/g;
-				$line =~ s/<parenleft>/(/g;
-				$line =~ s/<parenright>/)/g;
-				$line =~ s/<minus>/-/g;
-				$line =~ s/<plus>/+/g;
-				$line =~ s/<underscore>/_/g;
-				$line =~ s/<bracketleft>/[/g;
-				$line =~ s/<bracketright>/]/g;
-				$line =~ s/<bar>/|/g;
-				$line =~ s/<slash>/\//g;
-				$line =~ s/<asterisk>/*/g;
-				$line =~ s/<less>/&lt;/g;
-				$line =~ s/<greater>/&gt;/g;
-				$line =~ s/<equal>/=/g;
-				$line =~ s/<grave>/`/g;
-				$line =~ s/<comma>/,/g;
-				$line =~ s/<question>/?/g;
-				$line =~ s/<period>/./g;
-				$line =~ s/<exclam>/!/g;
-				$line =~ s/<colon>/:/g;
-				$line =~ s/<semicolon>/;/g;
-				$line =~ s/<section>/§/g;
-				$line =~ s/<egrave>/è/g;
+			# Convert remaining ASCII and iconic.
+			$line =~ s/<asciicircum>/^/g;
+			$line =~ s/<percent>/%/g;
+			$line =~ s/<EuroSign>/€/g;
+			$line =~ s/<quotedbl>/"/g;
+			$line =~ s/<backslash>/\\/g;
+			$line =~ s/<asciitilde>/~/g;
+			$line =~ s/<at>/@/g;
+			$line =~ s/<braceleft>/{/g;
+			$line =~ s/<braceright>/}/g;
+			$line =~ s/<ampersand>/&amp;/g;
+			$line =~ s/<numbersign>/#/g;
+			$line =~ s/<dollar>/\$/g;
+			$line =~ s/<parenleft>/(/g;
+			$line =~ s/<parenright>/)/g;
+			$line =~ s/<minus>/-/g;
+			$line =~ s/<plus>/+/g;
+			$line =~ s/<underscore>/_/g;
+			$line =~ s/<bracketleft>/[/g;
+			$line =~ s/<bracketright>/]/g;
+			$line =~ s/<bar>/|/g;
+			$line =~ s/<slash>/\//g;
+			$line =~ s/<asterisk>/*/g;
+			$line =~ s/<less>/&lt;/g;
+			$line =~ s/<greater>/&gt;/g;
+			$line =~ s/<equal>/=/g;
+			$line =~ s/<grave>/`/g;
+			$line =~ s/<comma>/,/g;
+			$line =~ s/<question>/?/g;
+			$line =~ s/<period>/./g;
+			$line =~ s/<exclam>/!/g;
+			$line =~ s/<colon>/:/g;
+			$line =~ s/<semicolon>/;/g;
+			$line =~ s/<section>/§/g;
+			$line =~ s/<egrave>/è/g;
 
-				# Remove remaining delimiters.
-				$line =~ s/<(.)>/$1/g;
+			# Remove remaining delimiters.
+			$line =~ s/<(.)>/$1/g;
 
-				# Add anchors and localized tooltips.
-				$line    =~ m/^.+ : +"(.+?)"/u;
-				$str     = $1;
-				$cp      = ord( $str ); # Code point.
-				$cp      = sprintf( "%X", $cp ); # To hex.
-				$cp      =~ s/^(.)$/000$1/;
-				$cp      =~ s/^(..)$/00$1/;
-				$cp      =~ s/^(...)$/0$1/;
-				$descrip = '';
-				if ( $descriptors_file_path ) {
-					open( LIST, '<', $descriptors_file_path ) or die $!;
-					while ( my $des_line = <LIST> ) {
-						if ( $des_line =~ /U$cp;/ ) {
-							chomp( $des_line );
-							$des_line =~ s/^.+; (.+)$/$1/;
-							$descrip = $des_line;
-							++$descriptors_count;
-							last;
-						}
+			# Add anchors and localized tooltips.
+			$line    =~ m/^.+ : +"(.+?)"/u;
+			$str     = $1;
+			$cp      = ord( $str ); # Code point.
+			$cp      = sprintf( "%X", $cp ); # To hex.
+			$cp      =~ s/^(.)$/000$1/;
+			$cp      =~ s/^(..)$/00$1/;
+			$cp      =~ s/^(...)$/0$1/;
+			$descrip = '';
+			if ( $descriptors_file_path ) {
+				open( LIST, '<', $descriptors_file_path ) or die $!;
+				while ( my $des_line = <LIST> ) {
+					if ( $des_line =~ /U$cp;/ ) {
+						chomp( $des_line );
+						$des_line =~ s/^.+; (.+)$/$1/;
+						$descrip = $des_line;
+						++$descriptors_count;
+						last;
 					}
-					close( LIST );
 				}
-				unless ( $descrip ) {
-					open( LIST, '<', $fr_names_file_path ) or die $!;
-					while ( my $name_line = <LIST> ) {
-						if ( $name_line =~ /^$cp\t/ ) {
-							chomp( $name_line );
-							$name_line =~ s/^.+\t(.+)$/$1/;
-							$descrip = $name_line;
-							++$names_count;
-							last;
-						}
-					}
-					close( LIST );
-				}
-				unless ( $descrip ) {
-					++$missing_count;
-					$missing_log .= $cp . ' (:' . $line_nb . ")\n";
-					open( LIST, '<', $names_file_path ) or die $!;
-					while ( my $name_line = <LIST> ) {
-						if ( $name_line =~ /^$cp\t/ ) {
-							chomp( $name_line );
-							$name_line =~ s/^.+\t(.+)$/$1/;
-							$descrip = $name_line;
-							last;
-						}
-					}
-					close( LIST );
-				}
-				$tooltip = $descrip . " U+$cp";
-				$anchor  = 'U+' . $cp;
-				$regex   = quotemeta( $anchor );
-				$index   = 0;
-				if ( grep( /^$regex$/, @anchors ) ) {
-					$test = $regex;
-					while ( grep( /^$test$/, @anchors ) ) {
-						++$index;
-						$test = $regex . '_' . $index;
-					}
-					$anchor = $anchor . '_' . $index;
-				}
-				push( @anchors, $anchor );
-
-				# Anchor end tags are spaced out so as to not match the regex adding a tooltip to anchor elements.
-				# (For this to be effective, KSES needs to be turned off when this is loaded into the web page.)
-				
-				# Diacritics.
-				$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
-				
-				# Spacing symbols.
-				$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
-				
-				print OUTPUT "$line";
+				close( LIST );
 			}
+			unless ( $descrip ) {
+				open( LIST, '<', $fr_names_file_path ) or die $!;
+				while ( my $name_line = <LIST> ) {
+					if ( $name_line =~ /^$cp\t/ ) {
+						chomp( $name_line );
+						$name_line =~ s/^.+\t(.+)$/$1/;
+						$descrip = $name_line;
+						++$names_count;
+						last;
+					}
+				}
+				close( LIST );
+			}
+			unless ( $descrip ) {
+				++$missing_count;
+				$missing_log .= $cp . ' (:' . $line_nb . ")\n";
+				open( LIST, '<', $names_file_path ) or die $!;
+				while ( my $name_line = <LIST> ) {
+					if ( $name_line =~ /^$cp\t/ ) {
+						chomp( $name_line );
+						$name_line =~ s/^.+\t(.+)$/$1/;
+						$descrip = $name_line;
+						last;
+					}
+				}
+				close( LIST );
+			}
+			$tooltip = $descrip . " U+$cp";
+			$anchor  = 'U+' . $cp;
+			$regex   = quotemeta( $anchor );
+			$index   = 0;
+			if ( grep( /^$regex$/, @anchors ) ) {
+				$test = $regex;
+				while ( grep( /^$test$/, @anchors ) ) {
+					++$index;
+					$test = $regex . '_' . $index;
+				}
+				$anchor = $anchor . '_' . $index;
+			}
+			push( @anchors, $anchor );
+
+			# Anchor end tags are spaced out so as to not match the regex adding a tooltip to anchor elements.
+			# (For this to be effective, KSES needs to be turned off when this is loaded into the web page.)
+			
+			# Diacritics.
+			$line =~ s/^(.+?) : "(.+?)" U(20[DE][0-9A-F]) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">◌$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+			
+			# Spacing symbols.
+			$line =~ s/^(.+?) : "(.+?)" U([0-9A-F]{4,5}) # (.+)/<tr id="$anchor"><td title="$tooltip"><a href="#$anchor"><span class="bg">$2<\/span><\/a ><\/td><td title="$4">U+$3<\/td><td>$1<\/td><td><span class="en">$4<\/span><span class="fr">$descrip<\/span><\/td><\/tr>/;
+			
+			print OUTPUT "$line";
 		}
 	}
 }
