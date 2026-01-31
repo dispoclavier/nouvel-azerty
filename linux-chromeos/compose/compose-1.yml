@@ -4308,9 +4308,10 @@
 # # Alternative multiplication symbol
 #
 #   An x-shaped alternative multiplication symbol is supported with respect to
-#   its use on real-world websites repurposing the Cyrillic letter "х" U0445 as
-#   a multiplication symbol, with a look and feel similar to Latin "x" without
-#   actually being a Latin letter. And without search equivalence.
+#   its use on real-world websites repurposing the Cyrillic small letter ha
+#   "х" U0445 as a multiplication symbol, with a look and feel similar to Latin
+#   small letter "x" without actually being a Latin letter. And without search
+#   equivalence.
 #   See # # Multiplication and division symbols
 #   See #   Leading space
 #

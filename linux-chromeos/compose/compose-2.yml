@@ -7197,9 +7197,13 @@
 #   dead_greek double press
 #   Multikey: ¦@@
 #
-#   This scheme supports double-circled numbers, available from 1 through 10,
-#   since single-circled numbers are supported in dead_greek single press.
-#   As a result, dead_greek triple press is not used.
+#   This extends the Greek dead key to a circled dead key for which a dedicated
+#   keysym is proposed, *dead_circled, but that has no room on a Latin keyboard
+#   layout on its own in the presence of a Greek letter dead key.
+#
+#   This virtual dead key supports double-circled numbers, available from 1
+#   through 10, thanks to the fact that single-circled numbers are supported in
+#   dead_greek single press. As a result, dead_greek triple press is not used.
 #   See #^# CIRCLED_TEEN
 #
 #   For an easier alternative, double-circled numbers are in dead_doubleacute,
@@ -7212,7 +7216,7 @@
 #   attribute for circled inverted color numbers.
 #   See # # CIRCLED_NEGATIVE
 #
-#   As a diacritic,  "⃝" U20DD is provided, and "⚪" U26AA as a spacing clone.
+#   As a diacritic,  "⃝" U20DD is provided, and "◯" U25EF as a spacing clone.
 #
 <dead_greek><dead_greek>                                                                   <space> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
 <Multi_key><at><at>                                                                        <space> : "⃝" U20DD # COMBINING ENCLOSING CIRCLE
@@ -12414,14 +12418,18 @@
 #
 # # SUBSCRIPT&TURNED
 #
-<UEFD2><UEFD5>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
-<Multi_key><underscore><percent>                                                               <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
-<UEFD5><UEFD2>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
-<Multi_key><percent><underscore>                                                               <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<UEFD2><UEFD5>                                                                            <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
+<Multi_key><underscore><percent>                                                          <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
+<UEFD5><UEFD2>                                                                            <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
+<Multi_key><percent><underscore>                                                          <exclam> : "ꜟ" UA71F # MODIFIER LETTER LOW INVERTED EXCLAMATION MARK
 <UEFD2><UEFD5>                                                                                 <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
 <Multi_key><underscore><percent>                                                               <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
 <UEFD5><UEFD2>                                                                                 <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
 <Multi_key><percent><underscore>                                                               <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
+<UEFD2><UEFD5>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<Multi_key><underscore><percent>                                                               <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<UEFD5><UEFD2>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<Multi_key><percent><underscore>                                                               <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
 <UEFD2><UEFD5>                                                                                 <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 <Multi_key><underscore><percent>                                                               <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
 <UEFD5><UEFD2>                                                                                 <M> : "ꟺ" UA7FA # LATIN LETTER SMALL CAPITAL TURNED M
@@ -12450,6 +12458,14 @@
 #
 # # SUBSCRIPT&REVERSED
 #
+<UEFD2><UEFD6>                                                                                 <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
+<Multi_key><underscore><backslash>                                                             <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
+<UEFD6><UEFD2>                                                                                 <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
+<Multi_key><backslash><underscore>                                                             <E> : "ⱻ" U2C7B # LATIN LETTER SMALL CAPITAL TURNED E
+<UEFD2><UEFD6>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<Multi_key><underscore><backslash>                                                             <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<UEFD6><UEFD2>                                                                                 <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
+<Multi_key><backslash><underscore>                                                             <K> : "𝼐" U1DF10 # LATIN LETTER SMALL CAPITAL TURNED K
 <UEFD2><UEFD6>                                                                                 <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <Multi_key><underscore><backslash>                                                             <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
 <UEFD6><UEFD2>                                                                                 <N> : "ᴎ" U1D0E # LATIN LETTER SMALL CAPITAL REVERSED N
@@ -13079,10 +13095,13 @@
 #   of the virtual dead key based on dead_belowcomma double press with a set of
 #   duplicates in dead_belowcomma for convenience.
 #   https://en.wikipedia.org/wiki/Smooth_breathing
+#   See #^# COMMA_ABOVE
+#   See #*# COMMA_BELOW
 #
-#   As a diacritic, a mark looking close to a right half ring is picked, for an
-#   alternative to the comma above: "҆" U0486, although this is Cyrillic. But a
-#   dedicated spacing clone is available for Greek smooth breathing: "᾿" U1FBF.
+#   As a diacritic, a mark looking close to a right half ring is picked, for
+#   the sake of being a real psili, as an alternative to the comma above:
+#   "҆" U0486, although this is Cyrillic. But a dedicated spacing clone is
+#   available for Greek smooth breathing: "᾿" U1FBF.
 #   See #^# COMMA_ABOVE
 #
 <UEFD3><UEFD3>                                                                             <space> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
@@ -13641,30 +13660,24 @@
 #
 # # MACRON&ACUTE&GRAVE
 #
-<dead_macron><dead_acute><dead_grave>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><bar><apostrophe><grave>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_macron><dead_grave><dead_acute>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><bar><grave><apostrophe>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_acute><dead_macron><dead_grave>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><apostrophe><bar><grave>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_grave><dead_macron><dead_acute>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><grave><bar><apostrophe>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_acute><dead_grave><dead_macron>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><apostrophe><grave><bar>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_grave><dead_acute><dead_macron>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><grave><apostrophe><bar>                                                        <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_macron><dead_acute><dead_grave>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><bar><apostrophe><grave>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_macron><dead_grave><dead_acute>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><bar><grave><apostrophe>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_acute><dead_macron><dead_grave>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><apostrophe><bar><grave>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_grave><dead_macron><dead_acute>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><grave><bar><apostrophe>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_acute><dead_grave><dead_macron>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><apostrophe><grave><bar>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<dead_grave><dead_acute><dead_macron>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
-<Multi_key><grave><apostrophe><bar>                                                        <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+#   As this dead key exists for "᫘" U1AD8 only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#dead_macron><dead_acute><dead_grave>                                                      <space> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+#dead_macron><dead_acute><dead_grave>                                                      <U200B> : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_macron><dead_acute><dead_grave>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><bar><apostrophe><grave>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_macron><dead_grave><dead_acute>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><bar><grave><apostrophe>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_acute><dead_macron><dead_grave>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><apostrophe><bar><grave>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_grave><dead_macron><dead_acute>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><grave><bar><apostrophe>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_acute><dead_grave><dead_macron>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><apostrophe><grave><bar>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<dead_grave><dead_acute><dead_macron>                                                              : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
+<Multi_key><grave><apostrophe><bar>                                                                : "᫘" U1AD8 # COMBINING MACRON-ACUTE-GRAVE
 #
 #
 # # MACRON&BREVE
@@ -13802,6 +13815,8 @@
 <Multi_key><bar><bar>                                                                      <grave> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <dead_macron><dead_macron>                                                              <question> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 <Multi_key><bar><bar>                                                                   <question> : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
+<dead_macron><dead_macron>                                                                <period> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
+<Multi_key><bar><bar>                                                                     <period> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
 <dead_macron><dead_macron>                                                             <semicolon> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
 <Multi_key><bar><bar>                                                                  <semicolon> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
 <dead_macron><dead_macron>                                                              <multiply> : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
@@ -17802,7 +17817,24 @@
 #   Multikey: ¦;
 #   Multikey: ¦§
 #
-#   The glottal letters new to Unicode v12 are duplicated here for convenience.
+#   The "k" with cedilla "Ķ" U0136, "ķ" U0137 is reported to be actually with
+#   comma below and to need comma-below glyphs accordingly:
+#   “despite their names, this pair of characters should normally be displayed
+#   with a comma below”
+#   Hence this casing pair is duplicated in dead_belowcomma.
+#   https://www.unicode.org/Public/17.0.0/ucd/NamesList.txt
+#   https://hapax.qc.ca/ListeNoms-17.0.0.txt
+#   https://en.wikipedia.org/wiki/%C4%B6
+#
+#   As a consequence, the cuatrillo with comma "Ꜯ" UA72E, "ꜯ" UA72F cannot be
+#   by "K", "k". So it is by "C", "c", by "F", "f" and by "Q", "q" instead,
+#   with Spanish, English and French mnemonics based on the numeral.
+#   
+#   The glottal letters "Ꞻ" UA7BA, "ꞻ" UA7BB, "Ꞽ" UA7BC, "ꞽ" UA7BD, "Ꞿ" UA7BE,
+#   "ꞿ" UA7BF, new to Unicode v12, are duplicated here for convenience.
+#   See LETTER GLOTTAL
+#   See #^# GLOTTAL
+#   See #^# COMMA_ABOVE
 #
 #   Digits yield numbers 11 through 20 followed by a period, as an experimental
 #   convenience, while parenthesized digits and letters are not supported.
@@ -17861,18 +17893,30 @@
 <Multi_key><semicolon>                                                                         <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
 <dead_belowcomma>                                                                              <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
 <Multi_key><semicolon>                                                                         <a> : "ꞻ" UA7BB # LATIN SMALL LETTER GLOTTAL A
+<dead_belowcomma>                                                                              <C> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <C> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <c> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <c> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <Multi_key><semicolon>                                                                         <D> : "D̦" # U0044 U0326 LATIN CAPITAL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <dead_belowcomma>                                                                              <d> : "d̦" # U0064 U0326 LATIN SMALL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
 <Multi_key><semicolon>                                                                         <d> : "d̦" # U0064 U0326 LATIN SMALL LETTER D WITH COMMA BELOW: Moldovan and Romanian until 1904
+<dead_belowcomma>                                                                              <F> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <F> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <f> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <f> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <Multi_key><semicolon>                                                                         <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <dead_belowcomma>                                                                              <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
 <Multi_key><semicolon>                                                                         <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
-<dead_belowcomma>                                                                              <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<Multi_key><semicolon>                                                                         <K> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
-<dead_belowcomma>                                                                              <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
-<Multi_key><semicolon>                                                                         <k> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <K> : "Ķ" U0136 # LATIN CAPITAL LETTER K WITH CEDILLA
+<Multi_key><semicolon>                                                                         <K> : "Ķ" U0136 # LATIN CAPITAL LETTER K WITH CEDILLA
+<dead_belowcomma>                                                                              <k> : "ķ" U0137 # LATIN SMALL LETTER K WITH CEDILLA
+<Multi_key><semicolon>                                                                         <k> : "ķ" U0137 # LATIN SMALL LETTER K WITH CEDILLA
+<dead_belowcomma>                                                                              <Q> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <Q> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <q> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<Multi_key><semicolon>                                                                         <q> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <dead_belowcomma>                                                                              <s> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
@@ -17952,10 +17996,10 @@
 #   dead_abovecomma
 #   dead_belowcomma double press
 #   Multikey: ¦;;
-#   Multikey: ¦§§
 #
-#   This yields mainly the glottal letters new to Unicode v12, since these may
-#   be expected here, because the spiritus lenis that these glottal letters are
+#   This yields mainly the glottal letters "Ꞻ" UA7BA, "ꞻ" UA7BB, "Ꞽ" UA7BC,
+#   "ꞽ" UA7BD, "Ꞿ" UA7BE, "ꞿ" UA7BF new to Unicode v12, as these may be
+#   expected here, because the spiritus lenis that these glottal letters are
 #   diacriticized with, often happens to be shaped like a comma above, that may
 #   also be referred to as a curly apostrophe on top, so that "̓" U0313
 #   COMBINING COMMA ABOVE is the actual encoding of the combining psili.
@@ -17963,6 +18007,7 @@
 #   Nevertheless, the glottal letters are also in a dedicated dead key,
 #   virtualized by *dead_abovehook UEFD3 double press.
 #   See #^# GLOTTAL
+#   See #*# COMMA_BELOW
 #
 <dead_belowcomma><dead_belowcomma>                                                         <space> : "̓" U0313 # COMBINING COMMA ABOVE
 <Multi_key><semicolon><semicolon>                                                          <space> : "̓" U0313 # COMBINING COMMA ABOVE
