@@ -17008,16 +17008,30 @@
 #*# COMMA_BELOW
 #   dead_belowcomma
 #   Multikey: ¦;
-#   Multikey: ¦§
 #
-#   The "k" with cedilla "Ķ" U0136, "ķ" U0137 is reported to be actually with
-#   comma below and to need comma-below glyphs accordingly:
+#   The "k", "l", "n", "r" with cedilla "Ķ" U0136, "ķ" U0137, "Ļ" U013B,
+#   "ļ" U013C, "Ņ" U0145, "ņ" U0146, "Ŗ" U0156, "ŗ" U0157 are reported to be
+#   actually with comma below and to need comma-below glyphs accordingly:
 #   “despite their names, this pair of characters should normally be displayed
 #   with a comma below”
-#   Hence this casing pair is duplicated in dead_belowcomma.
+#   In Latvian, "g" too is with comma below: "Ģ" U0122, "ģ" U0123. In this
+#   case, Unicode only states that “there are three major glyph variants”.
+#   Latvian also uses "k", "l" and "n" with comma below, and before the Soviet
+#   occupation, Latvian used "r" with comma below, too.
+#   Hence these casing pairs are duplicated in dead_belowcomma.
 #   https://www.unicode.org/Public/17.0.0/ucd/NamesList.txt
 #   https://hapax.qc.ca/ListeNoms-17.0.0.txt
+#   https://en.wikipedia.org/wiki/Cedilla
+#   "Ģ" U0122, "ģ" U0123:
+#   https://en.wikipedia.org/wiki/%C4%A2
+#   "Ķ" U0136, "ķ" U0137:
 #   https://en.wikipedia.org/wiki/%C4%B6
+#   "Ļ" U013B, "ļ" U013C:
+#   https://fr.wikipedia.org/wiki/%C4%BB
+#   "Ņ" U0145, "ņ" U0146:
+#   https://fr.wikipedia.org/wiki/%C5%85
+#   "Ŗ" U0156, "ŗ" U0157:
+#   https://fr.wikipedia.org/wiki/%C5%96
 #
 #   As a consequence, the cuatrillo with comma "Ꜯ" UA72E, "ꜯ" UA72F cannot be
 #   by "K", "k". So it is by "C", "c", by "F", "f" and by "Q", "q" instead,
@@ -17098,6 +17112,10 @@
 <Multi_key><semicolon>                                                                         <F> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <f> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                                         <f> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <G> : "Ģ" U0122 # LATIN CAPITAL LETTER G WITH CEDILLA
+<Multi_key><semicolon>                                                                         <G> : "Ģ" U0122 # LATIN CAPITAL LETTER G WITH CEDILLA
+<dead_belowcomma>                                                                              <g> : "ģ" U0123 # LATIN SMALL LETTER G WITH CEDILLA
+<Multi_key><semicolon>                                                                         <g> : "ģ" U0123 # LATIN SMALL LETTER G WITH CEDILLA
 <dead_belowcomma>                                                                              <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <Multi_key><semicolon>                                                                         <I> : "Ꞽ" UA7BC # LATIN CAPITAL LETTER GLOTTAL I
 <dead_belowcomma>                                                                              <i> : "ꞽ" UA7BD # LATIN SMALL LETTER GLOTTAL I
@@ -17106,10 +17124,22 @@
 <Multi_key><semicolon>                                                                         <K> : "Ķ" U0136 # LATIN CAPITAL LETTER K WITH CEDILLA
 <dead_belowcomma>                                                                              <k> : "ķ" U0137 # LATIN SMALL LETTER K WITH CEDILLA
 <Multi_key><semicolon>                                                                         <k> : "ķ" U0137 # LATIN SMALL LETTER K WITH CEDILLA
+<dead_belowcomma>                                                                              <L> : "Ļ" U013B # LATIN CAPITAL LETTER L WITH CEDILLA
+<Multi_key><semicolon>                                                                         <L> : "Ļ" U013B # LATIN CAPITAL LETTER L WITH CEDILLA
+<dead_belowcomma>                                                                              <l> : "ļ" U013C # LATIN SMALL LETTER L WITH CEDILLA
+<Multi_key><semicolon>                                                                         <l> : "ļ" U013C # LATIN SMALL LETTER L WITH CEDILLA
+<dead_belowcomma>                                                                              <N> : "Ņ" U0145 # LATIN CAPITAL LETTER N WITH CEDILLA
+<Multi_key><semicolon>                                                                         <N> : "Ņ" U0145 # LATIN CAPITAL LETTER N WITH CEDILLA
+<dead_belowcomma>                                                                              <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
+<Multi_key><semicolon>                                                                         <n> : "ņ" U0146 # LATIN SMALL LETTER N WITH CEDILLA
 <dead_belowcomma>                                                                              <Q> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                                         <Q> : "Ꜯ" UA72E # LATIN CAPITAL LETTER CUATRILLO WITH COMMA
 <dead_belowcomma>                                                                              <q> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
 <Multi_key><semicolon>                                                                         <q> : "ꜯ" UA72F # LATIN SMALL LETTER CUATRILLO WITH COMMA
+<dead_belowcomma>                                                                              <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
+<Multi_key><semicolon>                                                                         <R> : "Ŗ" U0156 # LATIN CAPITAL LETTER R WITH CEDILLA
+<dead_belowcomma>                                                                              <r> : "ŗ" U0157 # LATIN SMALL LETTER R WITH CEDILLA
+<Multi_key><semicolon>                                                                         <r> : "ŗ" U0157 # LATIN SMALL LETTER R WITH CEDILLA
 <dead_belowcomma>                                                                              <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <Multi_key><semicolon>                                                                         <S> : "Ș" U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
 <dead_belowcomma>                                                                              <s> : "ș" U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
@@ -17704,6 +17734,7 @@
 #*# DOT_BELOW
 #   dead_belowdot
 #   Multikey: ¦!
+#   Multikey: ¦§
 #
 #   Digits yield multidot punctuation, and "⃨" U20E8 COMBINING TRIPLE UNDERDOT
 #   has underscore as a base character.
