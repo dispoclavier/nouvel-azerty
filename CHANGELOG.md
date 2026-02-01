@@ -24,6 +24,7 @@ Ajout de séquences de touches mortes spécifiques à Windows.
 
 Correction et simplification du contenu des touches mortes.
 
+* Composition : Sous Windows : Déboguer la séquence « ¦Mul » pour "¦" U+00A6. kbdeadtrans-multikey.c [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
 *	Transformations :
 	* Indice :
 		* Indice et groupe 1 :
@@ -40,11 +41,14 @@ Correction et simplification du contenu des touches mortes.
 	* Virgule souscrite :
 		* Redonder "Ķ" U+0136, "ķ" U+0137 (qui sont aussi dans cédille) à la place de "Ꜯ" U+A72E, "ꜯ" U+A72F, qui vont par "C", "c", par "F", "f" et par "Q", "q". ibidem
 		* Redonder "Ģ" U+0122, "ģ", "Ļ" U+013B, "ļ" U+013C, "Ņ" U+0145, "ņ" U+0146, "Ŗ" U+0156, "ŗ" U+0157 (qui sont aussi dans cédille). compose-2.yml [5cc9c3b](https://github.com/dispoclavier/nouvel-azerty/commit/5cc9c3b6f50a0747375ad3555b1073d1a93103dd)
+	* Sous Windows : Touche morte groupe : Supprimer la limitation des appuis multiples. kbdeadtrans.c [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
 * Documentation :
+	* Mettre à jour et corriger le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [d246dc0](https://github.com/dispoclavier/nouvel-azerty/commit/d246dc07dc159340e22218e00c17cbc6037839ce)
 	* Déboguer les tableaux de touches mortes. generate-deadkey-tables.pl [6104dc2](https://github.com/dispoclavier/nouvel-azerty/commit/6104dc2daa26dfcd8309229ed498339346f885ed)
 	* Corriger et mettre à jour les infobulles des tableaux. generate-deadkey-tables.pl, generate-multikey-tables.pl, generate-math-table [6104dc2](https://github.com/dispoclavier/nouvel-azerty/commit/6104dc2daa26dfcd8309229ed498339346f885ed)
 	* Mettre à jour l’ordre des touches mortes. compose-2.yml [2529366](https://github.com/dispoclavier/nouvel-azerty/commit/2529366313410a59d3cf4fecb5933663e27eb157), [5cc9c3b](https://github.com/dispoclavier/nouvel-azerty/commit/5cc9c3b6f50a0747375ad3555b1073d1a93103dd)
 	* Corriger des annotations. compose-1.yml, compose-2.yml [2ebf9a0](https://github.com/dispoclavier/nouvel-azerty/commit/2ebf9a0b972ccd1e22d944a6cbf1f402ec8defb3)
+* Build : 6.2.1.0 [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
 
 ## 6.2.0 (2026-01-27)
 
