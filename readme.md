@@ -45,19 +45,26 @@ Afin de savoir avec exactitude ce que l’on a sous les doigts, on peut sortir l
 
 ### Version
 
-Le numéro de version est sur AltGr + Échappement.
+Le numéro de version est sur AltGr + Échappement. Il comporte 4 numéros :
+
+1. Version majeure
+2. Version mineure
+3. Version d’appoint ou de maintenance
+4. Build
+
+Ce numéro [ne satisfait pas](https://gist.github.com/jashkenas/cbd2b088e20279ae2c8e) aux exigences du [versionnage sémantique](https://semver.org/).
 
 Le troisième numéro n’est pas toujours une version de maintenance, car des fonctionnalités peuvent être ajoutées ou modifiées sans que cela justifie d’incrémenter le numéro de version mineure.
 
-Le quatrième numéro est ajouté pour numéroter les builds, aussi sous Linux, parce que sous Windows, le fichier Compose.yml sert de code source du contenu des touches mortes et des séquences de composition. Ce numéro est incrémenté à chaque compilation des pilotes de disposition.
+Le quatrième numéro est ajouté pour numéroter les builds, aussi sous Linux, parce que sous Windows, le fichier Compose.yml sert de code source du contenu des touches mortes et des séquences de composition. Il est incrémenté quand les pilotes de disposition sont recompilés.
 
 ### Variante
 
 Un identifiant de la variante est sur Majuscule + AltGr + Échappement.
 
-Cela est censé être un descripteur. Si la chaîne de caractères apparaît tronquée, cela est dû à une limitation propre au système d’exploitation. Windows ne prend en charge que 16 unités de code, soit 16 lettres latines.
+Censé être un descripteur, l’identifiant est tronqué sous Windows qui ne prend en charge que 16 unités de code, soit 16 lettres latines.
 
-Sur la version de base de ce nouvel AZERTY, c’est « fr_FR_semi_auto » pour ‹ français France disposition de clavier semi-automatique ›, en référence à l’espacement semi-automatique des grandes ponctuations (?;:!«»‹›).
+Pour la version de base de ce nouvel AZERTY, l’identifiant est « fr_FR_semi_auto » pour ‹ français France disposition de clavier semi-automatique ›, comme l’espacement semi-automatique des grandes ponctuations (?;:!«»‹›).
 
 ## Touches
 
@@ -113,28 +120,26 @@ La touche AltGr gagne en importance, car elle sert à saisir les chiffres et le 
 2. Espace insécable : AltGr + Espace ;
 3. Symbole euro : AltGr + ⟦E€⟧.
 
-Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le point, l’arobase et le guillemet, tous en Minuscule sur leurs touches ou, pour l’arobase, sur la touche d’à côté ⟦°)]⟧.
+Sont aussi en AltGr tous les symboles et ponctuations ASCII sauf la virgule, le point, l’arobase et le guillemet, tous en Minuscule sur leurs touches ou, pour l’arobase, sur la touche à côté, sur ⟦°)]⟧.
 
-Parmi ces symboles en AltGr, les parenthèses sont "(" sur AltGr + ⟦D⟧ comme début, et ")" sur AltGr + ⟦F⟧ comme fin, directement sous les doigts sur la rangée de repos.
+Parmi ces symboles en AltGr, les parenthèses sont l’une sur AltGr + ⟦D⟧ comme début, et l’autre sur AltGr + ⟦F⟧ comme fin, directement sous les doigts sur la rangée de repos.
 
-Les symboles inférieur et supérieur (à) sont "<" sur AltGr + ⟦C⟧, et ">" sur AltGr + ⟦V⟧, en synergie avec l’oblique sur AltGr + ⟦W⟧ (elle est aussi sur sa touche ⟦/:⟧, en Minuscule, ou en mode ASCII en Majuscule), avec le point d’exclamation sur AltGr + ⟦.;⟧ (il est aussi sur sa touche ⟦§!⟧, en AltFr), avec le trait d’union sur AltGr + ⟦G⟧ (il est aussi sur sa touche ⟦6-|⟧, en Minuscule), avec le point d’interrogation sur AltGr + ⟦?,⟧ (il y est aussi en AltFr), et avec le symbole égal sur AltGr + ⟦B⟧ (il est aussi sur sa touche ⟦+=}⟧, en AltFr, ou en mode ASCII en Minuscule).
+Les symboles inférieur et supérieur (à) sont le premier sur AltGr + ⟦C⟧, le deuxième sur AltGr + ⟦V⟧, en synergie avec l’oblique sur AltGr + ⟦W⟧ (elle est aussi sur sa touche ⟦/:⟧, en Minuscule, ou en mode ASCII en Majuscule), avec le point d’exclamation en mode ASCII sur AltGr + ⟦§!⟧, avec le trait d’union sur AltGr + ⟦G⟧ (il est aussi sur sa touche ⟦6-|⟧, en Minuscule), avec le point d’interrogation sur AltGr + ⟦?,⟧ (il y est aussi en AltFr), et avec le symbole égal sur AltGr + ⟦B⟧ (il est aussi sur sa touche ⟦+=}⟧, en AltFr, ou en mode ASCII en Minuscule).
 
-Les crochets sont "[" sur AltGr + ⟦K⟧, et "]" sur AltGr + ⟦L⟧, en synergie avec les points de suspension "…" sur AltGr + ⟦%ù⟧. (Les points de suspension entre crochets "⟦…⟧" sont aussi sur Maj + AltGr + ⟦%ù⟧.)
+Les crochets sont sur AltGr + ⟦K⟧ et ⟦L⟧, en synergie avec les points de suspension "…" sur AltGr + ⟦%ù⟧. Les points de suspension entre crochets "[…]" sont aussi sur Maj + AltGr + ⟦%ù⟧ (car le caractère qui y figure en Minuscule reste en Minuscule, tandis que sur les trois autres touches du trèfle il est en Maj + AltGr).
 
 #### AltFr
 
-C’est que la touche ⟦><⟧ devient la troisième modificatrice, AltFr comme Alternative Française (*Alternate French*).
+La touche ⟦><⟧ devient la troisième modificatrice graphique, AltFr comme Alternative Française (*Alternate French*).
 
-AltFr a les chiffres en rangée et en pavé. Pour les chiffres en rangée, AltFr est comme une touche AltGr gauche, et presque comme Majuscule gauche.
+AltFr sert à taper les chiffres en rangée et en pavé. Pour les chiffres en rangée, AltFr est comme une touche AltGr gauche, et comme les touches Majuscule gauche et droite de l’AZERTY traditionnel. Les chiffres en pavé sont sur ⟦7è`⟧, ⟦8_\⟧, ⟦9ç^⟧ et en dessous, avec le zéro à la fois sur ⟦0à@⟧ et sur ⟦N⟧, et un double zéro sur ⟦B⟧. (Le triple zéro est ainsi sur AltFr + ⟦B⟧ + ⟦N⟧.)
 
-Sur la barre, AltFr a l’espace fine insécable, et toutes les huit grandes ponctuations sans espace, pour la composition au détail de séquences comme le point d’interrogation entre parenthèses :
+Sur la barre, en AltFr se trouve l’espace fine insécable, qui accompagne toutes les huit grandes ponctuations en Majuscule, sur les quatre touches où elles sont imprimées en Majuscule ou en Minuscule, et sur les quatre touches du trèfle à côté d’⟦Entrée⟧. Les mêmes ?;:!«»‹› sont sans espace en AltFr, pour la composition au détail de séquences comme le point d’interrogation entre parenthèses :
 
 1. Espace fine insécable : AltFr + Espace ;
 2. Parenthèse ouvrante : AltFr + ⟦D⟧ ;
 3. Point d’interrogation : AltFr + ⟦?,⟧ ;
 4. Parenthèse fermante : AltFr + ⟦F⟧.
-
-En pavé, les chiffres en AltFr sont en dessous de ⟦7è`⟧, ⟦8_\\⟧, ⟦9ç^⟧ comme sur les claviers compacts, sauf pour le zéro, qui est à la fois sur ⟦0à@⟧ et sur ⟦N⟧, et en tant que double zéro sur ⟦B⟧. (Ainsi, le triple zéro est sur AltFr + ⟦B⟧ + ⟦N⟧.)
 
 En Majuscule + AltFr se trouvent des exposants, minuscules pour les lettres, ainsi que les quatre grandes ponctuations au cas où il s’agit d’en saisir plusieurs à la suite, sans espace entre elles :
 
