@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Support infinite group dead key presses  6.2.1.0.0 Wed 2026-01-28T1105+0100
 * Update the done cursor for 6.2.0         6.2.0.0.0 Tue 2026-01-27T2110+0100
 * Update the done cursor for 6.1.8         6.1.8.0.0 Sun 2026-01-25T0531+0100
 * Update the done cursor for 6.1.7         6.1.7.3.0 Mon 2026-01-19T2308+0100
@@ -240,6 +241,29 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*<!dead_flag>*/ DEADTRANS( L'Y'	,0x2690	,0xDDFE	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FE "🇾" REGIONAL INDICATOR SYMBOL LETTER Y
 /*<!dead_flag>*/ DEADTRANS( L'z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
 /*<!dead_flag>*/ DEADTRANS( L'Z'	,0x2690	,0xDDFF	,0x0000	), // High surrogate: D83C; Unicode: U+1F1FF "🇿" REGIONAL INDICATOR SYMBOL LETTER Z
+
+/*****************************************************************************\
+* Group dead key infinite multiple press
+*
+* Starting from group 3, groups are directly accessed by typing a digit after
+* a single group dead key press. For convenience, group dead key triple and
+* quadruple press are also supported. Easy feasability on Windows imposes to
+* leverage the full potential for the sake of removing arbitrary limitations.
+*
+\*****************************************************************************/
+
+/* From group  1 to group  2    DEADTRANS( 0x2460	,0x2460	,0x2461	,0x0001), */
+/* From group  2 to group  3    DEADTRANS( 0x2460	,0x2461	,0x2462	,0x0001), */
+/* From group  3 to group  4    DEADTRANS( 0x2460	,0x2462	,0x2463	,0x0001), */
+/* From group  4 to group  5 */ DEADTRANS( 0x2460	,0x2463	,0x2464	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group  5 to group  6 */ DEADTRANS( 0x2460	,0x2464	,0x2465	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group  6 to group  7 */ DEADTRANS( 0x2460	,0x2465	,0x2466	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group  7 to group  8 */ DEADTRANS( 0x2460	,0x2466	,0x2467	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group  8 to group  9 */ DEADTRANS( 0x2460	,0x2467	,0x2468	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group  9 to group 10 */ DEADTRANS( 0x2460	,0x2468	,0x2469	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group 10 to group 11 */ DEADTRANS( 0x2460	,0x2469	,0x246A	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group 11 to group 12 */ DEADTRANS( 0x2460	,0x246A	,0x246B	,0x0001), // Virtual dead key’s intermediate chain link
+/* From group 12 to group  1 */ DEADTRANS( 0x2460	,0x246B	,0x2460	,0x0001), // Virtual dead key’s intermediate chain link
 
 /*****************************************************************************\
 * Diacritical and transformational dead key content
