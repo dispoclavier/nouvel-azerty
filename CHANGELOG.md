@@ -18,7 +18,7 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
-## 6.2.1 (projet)
+## 6.2.1 (2026-02-01)
 
 Ajout de séquences de touches mortes spécifiques à Windows.
 
