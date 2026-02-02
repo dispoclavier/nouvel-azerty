@@ -5219,8 +5219,6 @@
 <Multi_key><backslash>                                                                         <F> : "ꟻ" UA7FB # LATIN EPIGRAPHIC LETTER REVERSED F
 <UEFD6>                                                                                        <f> : "☙" U2619 # REVERSED ROTATED FLORAL HEART BULLET
 <Multi_key><backslash>                                                                         <f> : "☙" U2619 # REVERSED ROTATED FLORAL HEART BULLET
-<UEFD6>                                                                                        <G> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
-<Multi_key><backslash>                                                                         <G> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <UEFD6>                                                                                        <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <Multi_key><backslash>                                                                         <g> : "𝼁" U1DF01 # LATIN SMALL LETTER REVERSED SCRIPT G
 <UEFD6>                                                                                        <H> : "Ꟶ" UA7F5 # LATIN CAPITAL LETTER REVERSED HALF H
@@ -5243,10 +5241,10 @@
 <Multi_key><backslash>                                                                         <P> : "ꟼ" UA7FC # LATIN EPIGRAPHIC LETTER REVERSED P
 <UEFD6>                                                                                        <p> : "⁋" U204B # REVERSED PILCROW SIGN
 <Multi_key><backslash>                                                                         <p> : "⁋" U204B # REVERSED PILCROW SIGN
-<UEFD6>                                                                                        <Q> : "꟎" UA7CE # LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
-<Multi_key><backslash>                                                                         <Q> : "꟎" UA7CE # LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
-<UEFD6>                                                                                        <q> : "꟏" UA7CF # LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
-<Multi_key><backslash>                                                                         <q> : "꟏" UA7CF # LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
+<UEFD6>                                                                                        <Q> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><backslash>                                                                         <Q> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+<UEFD6>                                                                                        <q> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><backslash>                                                                         <q> : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <UEFD6>                                                                                        <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
 <Multi_key><backslash>                                                                         <R> : "ᴙ" U1D19 # LATIN LETTER SMALL CAPITAL REVERSED R
 <UEFD6>                                                                                        <r> : "ɿ" U027F # LATIN SMALL LETTER REVERSED R WITH FISHHOOK
@@ -5290,6 +5288,10 @@
 <Multi_key><backslash><numbersign>                                                             <h> : "ꟶ" UA7F6 # LATIN SMALL LETTER REVERSED HALF H
 <UEFD6><UEFD0>                                                                                 <n> : "𝼇" U1DF07 # LATIN SMALL LETTER REVERSED ENG
 <Multi_key><backslash><numbersign>                                                             <n> : "𝼇" U1DF07 # LATIN SMALL LETTER REVERSED ENG
+<UEFD6><UEFD0>                                                                                 <Q> : "꟎" UA7CE # LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><backslash><numbersign>                                                             <Q> : "꟎" UA7CE # LATIN CAPITAL LETTER PHARYNGEAL VOICED FRICATIVE
+<UEFD6><UEFD0>                                                                                 <q> : "꟏" UA7CF # LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
+<Multi_key><backslash><numbersign>                                                             <q> : "꟏" UA7CF # LATIN SMALL LETTER PHARYNGEAL VOICED FRICATIVE
 <UEFD6><UEFD0>                                                                                 <X> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <Multi_key><backslash><numbersign>                                                             <X> : "Ɜ" UA7AB # LATIN CAPITAL LETTER REVERSED OPEN E
 <UEFD6><UEFD0>                                                                                 <x> : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
@@ -8097,15 +8099,29 @@
 #
 #
 #^# CURL
-#   curl, loop, crossed tail, squirrel tail
+#   curl, crossed-tail, loop, squirrel tail
 #   dead_hook double press
 #   Multikey: ¦{{
 #
-#   As a diacritic, the double ring is used, as coming closest to a curl below.
-#   Since the combining double ring below has no spacing clone nor any modifier
-#   looking close to it, the centered half rings "˒" U02D2, "˓" U02D3 are used
-#   instead, with a rationale based on the laterality of the AltFr and AltGr
-#   modifier keys involved in typing these left and right half rings this way.
+#   This virtual dead key on dead_hook double press supports letters whose hook
+#   is elongated, mostly until crossing itself. The extension has various names
+#   and is found as a curl on "ɕ" U0255, "ȡ" U0221, "ʥ" U02A5, "ȴ" U0234,
+#   "ȵ" U0235, "𝼞" U1DF1E, "ȶ" U0236, "ʨ" U02A8, "ⱴ" U2C74, "ʑ" U0291 and
+#   "ʓ" U0293; as a crossed-tail on "ꬼ" UAB3C, "ꬶ" UAB36, "Ʝ" UA7B2, "ʝ" U029D,
+#   "ꬺ" UAB3A, "ꬻ" UAB3B, "ꭉ" UAB49 and "ꭊ" UAB4A; as a loop on "Ꝍ" UA74C,
+#   "ꝍ" UA74D and "Ỿ" U1EFE, "ỿ" U1EFF; and as a squirrel tail on "ꝕ" UA755.
+#
+#   This also supports ain "ᴥ" U1D25 for its loop form, by case insensitive "q"
+#   for the shape mnemonic based on its phonetic notation "ʕ" U0295.
+#
+#
+#   Diacritic
+#
+#   As a diacritic, the double ring is provided, for coming closest to a curl
+#   below. Yet this has no spacing clone, nor any modifier looking close to it.
+#   So, the centered half rings "˒" U02D2, "˓" U02D3 are provided instead, with
+#   a rationale based on the laterality of the AltFr and AltGr modifier keys
+#   involved in typing these left and right half rings in this setting.
 #   See #*# HOOK_ABOVE
 #
 <dead_hook><dead_hook>                                                                     <space> : "͚" U035A # COMBINING DOUBLE RING BELOW
@@ -11649,54 +11665,26 @@
 #
 #
 #*# HORN
-#   horn, notch, descender
+#   horn, notch, low left serif, descender
 #   dead_horn
 #   Multikey: ¦+
 #
 #   As HORN has no reported usage outside Unicode precomposed letters, and the
 #   precomposed letters with horn alone come in two pairs only, dead_horn is
 #   extended to support the Swedish "ⱸ" U2C78 LATIN SMALL LETTER E WITH NOTCH,
-#   and the historic letters with descender "Ⱨ" U2C67, "ⱨ" U2C68, "Ⱪ" U2C69,
+#   two letters "ꭕ" UAB55 and "ꭙ" UAB59 with a low serif on the left leg, and
+#   the historic letters with descender "Ⱨ" U2C67, "ⱨ" U2C68, "Ⱪ" U2C69,
 #   "ⱪ" U2C6A, "Ⱬ" U2C6B, "ⱬ" U2C6C, "Ꞑ" UA790, "ꞑ" UA791. The mnemonics are
-#   based on considering the notch as a low horn, and the descender as a
-#   downwards horn.
+#   based on considering the notch and the serif as a low upwards horn, the
+#   descender as a low downwards horn.
 #   https://www.frathwiki.com/Horn
 #   https://www.frathwiki.com/Descender
 #   https://fr.wikipedia.org/wiki/%E2%B1%B8
+#   https://fr.wikipedia.org/wiki/%EA%AD%95
 #
 #   HORN could also be used as an easier alternative for the belt diacritic.
 #   It is not, to prevent HORN from becoming an unmnemonic holdall.
 #   See #^# BREVE_BELOW
-#
-#
-#   Diacritics
-#
-#   This also supports "᫉" U1AC9 COMBINING DOUBLE PLUS SIGN ABOVE by quotedbl
-#   or EuroSign, while the single counterpart "᫈" U1AC8 is supported in
-#   combining above.
-#   See #^# COMBINING_ABOVE
-#
-#   This also supports "᫊" U1ACA COMBINING DOUBLE PLUS SIGN BELOW by ampersand,
-#   while the single counterpart "̟" U031F is supported in combining below.
-#   See #^# COMBINING_BELOW
-#
-#
-#   Spacing modifier letters
-#
-#   Instead of a non-existing spacing clone of "̛" U031B, "ꜚ" UA71A is picked,
-#   based on the horn’s shape, although this is a Chinantec tone mark, but a
-#   spacing modifier letter anyway.
-#
-#   The other Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are in
-#   dead_abovedot, and the full set has dedicated multikey support.
-#   See #*# DOT_ABOVE
-#   See #^# Chinantec tone marks
-#
-#   Another mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
-#   SIGN, based on the horn’s multikey equivalent, is supported by other base
-#   letters: not case insensitive P, as this is used for pilcrow signs and
-#   bullets, but all other fully available base letters for a streamlined user
-#   experience.
 #
 #
 #   Pilcrow signs and bullets
@@ -11729,6 +11717,36 @@
 #   expected to meet most common user expectations. Double arrows are yielded
 #   by *dead_flag.
 #   See #*# FLAG
+#
+#
+#   Diacritics
+#
+#   Additionally to the combining horn "̛" U031B, this supports "᫉" U1AC9
+#   COMBINING DOUBLE PLUS SIGN ABOVE by quotedbl or EuroSign, while the single
+#   counterpart "᫈" U1AC8 is supported in combining above.
+#   See #^# COMBINING_ABOVE
+#
+#   This also supports "᫊" U1ACA COMBINING DOUBLE PLUS SIGN BELOW by ampersand,
+#   while the single counterpart "̟" U031F is supported in combining below.
+#   See #^# COMBINING_BELOW
+#
+#
+#   Spacing modifier letters
+#
+#   Instead of a non-existing spacing clone of "̛" U031B, "ꜚ" UA71A is picked,
+#   based on the horn’s shape, although this is a Chinantec tone mark, but a
+#   spacing modifier letter anyway.
+#
+#   The other Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are in
+#   dead_abovedot, and the full set has dedicated multikey support.
+#   See #*# DOT_ABOVE
+#   See #^# Chinantec tone marks
+#
+#   Another mnemonic spacing modifier letter, "˖" U02D6 MODIFIER LETTER PLUS
+#   SIGN, based on the horn’s multikey equivalent, is supported by other base
+#   letters: not case insensitive P, as this is used for pilcrow signs and
+#   bullets, but all other fully available base letters for a streamlined user
+#   experience.
 #
 <dead_horn>                                                                                <space> : "̛" U031B # COMBINING HORN
 <Multi_key><plus>                                                                          <space> : "̛" U031B # COMBINING HORN
@@ -11878,10 +11896,10 @@
 <Multi_key><plus>                                                                              <W> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <w> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                              <w> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                    <X> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <X> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<dead_horn>                                                                                    <x> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
-<Multi_key><plus>                                                                              <x> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
+<dead_horn>                                                                                    <X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+<Multi_key><plus>                                                                              <X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+<dead_horn>                                                                                    <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<Multi_key><plus>                                                                              <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <dead_horn>                                                                                    <Y> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                              <Y> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <y> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
@@ -13132,9 +13150,41 @@
 #   Multikey: ¦|
 #
 #   Long leg is merged with macron thanks to an empty intersection and with a
-#   mnemonic based on the macron multikey equivalent pipe "|". (As of small r
-#   with long leg "ɼ" U027C, it has been obsoleted by IPA in 1989. But the
-#   long-leg diacritic as such is still in use.)
+#   mnemonic based on the macron multikey equivalent pipe "|" spurring the
+#   extended "long" semantics of dead_macron, that therefore supports "ɼ" U027C
+#   and its turned counterpart "ɺ" U027A in the uppercase slot for convenience.
+#
+#   By contrast, "Ƞ" U0220, "ƞ" U019E cannot be supported in group 0 in a
+#   cross-platform compatible manner, as composed "N̄", "n̄" is used to write
+#   Fula in Senegalese orthography. So it is in group 1 instead, the more
+#   appropriately as it has been obsoleted both in Lakota and in the IPA.
+#   So has "ɼ" U027C been obsoleted by IPA in 1989.
+#   https://en.wikipedia.org/wiki/N_with_long_right_leg
+#   https://fr.wikipedia.org/wiki/%C9%BC
+#
+#   Tbat notwithstanding, "Ƞ" U0220, "ƞ" U019E is supported in group 0 as a
+#   Windows-specific alternative.
+#   See #   Windows-specific
+#
+#   Long leg is not obsolete, however, when it occurs on "x", as in "ꭗ" UAB57,
+#   and in "ꭘ" UAB58 with an additional right ring, and therefore supported in
+#   the uppercase slot for convenience, additionally to their support in letter
+#   groups, by "x" and "X" as base characters, because dead_abovering by "x"
+#   and "X" is used up by "ꭔ" UAB54 and "ꭖ" UAB56 featuring normal-length legs.
+#   See #+# GROUP_5
+#   See #+# GROUP_3
+#
+#   Similarly, "ꭙ" UAB59 and "ꭕ" UAB55 are supported in group 1. Both have a
+#   left serif, and "ꭙ" UAB59 has a long left leg, while "ꭕ" UAB55 being a
+#   Latin small chi has naturally two long legs.
+#
+#   In group 2, the stretched C "ʗ" U0297 is supported by case insensitive "c"
+#   to meet eventual user expectations based on the extended semantics of
+#   dead_macron including vertical bar and long, additionally to the support in
+#   double press of dead_macron, given that in dead_macron single press, both
+#   "C" and "c" are used for currency symbols "₵" U20B5 and "¢" U00A2; and in
+#   group 1, for open o with macron.
+#   See #^# MACRON_BELOW
 #
 #   The historic letters with topbar "Ƃ" U0182, "ƃ" U0183, "Ƌ" U018B, "ƌ" U018C
 #   are supported alongside thanks to an empty intersection, with a rationale
@@ -13152,24 +13202,6 @@
 #   dead_stroke.
 #   See #*# BAR
 #   See #*# STROKE
-#
-#
-#   Letters
-#
-#   Letters with long leg "ꭗ" UAB57 and "ꭘ" UAB58 are also supported in
-#   dead_macron, additionally to their support in letter groups, by "x" and "X"
-#   as base characters, given the extended "long" semantics of dead_macron, and
-#   because dead_abovering by "x" and "X" is used up by "ꭔ" UAB54 and "ꭖ" UAB56
-#   featuring normal-length legs.
-#   See #+# GROUP_5
-#   See #+# GROUP_3
-#
-#   In group 2, the stretched C "ʗ" U0297 is supported by case insensitive "c"
-#   to meet eventual user expectations based on the extended semantics of
-#   dead_macron including vertical bar and long, additionally to the support in
-#   double press of dead_macron, given that in dead_macron single press, both
-#   "C" and "c" are used for currency symbols "₵" U20B5 and "¢" U00A2.
-#   See #^# MACRON_BELOW
 #
 #
 #   Daggers
@@ -13493,6 +13525,14 @@
 <Multi_key><bar>                                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
 <dead_diaeresis><dead_diaeresis>                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
 <Multi_key><colon><colon>                                                                      <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
+#@<dead_macron>                                                                                  <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><bar>                                                                               <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<dead_diaeresis><dead_diaeresis>                                                               <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><colon><colon>                                                                      <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<dead_macron>                                                                                  <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><bar>                                                                               <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<dead_diaeresis><dead_diaeresis>                                                               <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><colon><colon>                                                                      <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <dead_macron>                                                                                  <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <Multi_key><bar>                                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
@@ -13597,6 +13637,14 @@
 <Multi_key><bar><numbersign>                                                                   <A> : "Ǣ" U01E2 # LATIN CAPITAL LETTER AE WITH MACRON
 <dead_macron><UEFD0>                                                                           <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
 <Multi_key><bar><numbersign>                                                                   <a> : "ǣ" U01E3 # LATIN SMALL LETTER AE WITH MACRON
+<dead_macron><UEFD0>                                                                           <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+<Multi_key><bar><numbersign>                                                                   <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+<dead_macron><UEFD0>                                                                           <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+<Multi_key><bar><numbersign>                                                                   <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+<dead_macron><UEFD0>                                                                           <X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+<Multi_key><bar><numbersign>                                                                   <X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+<dead_macron><UEFD0>                                                                           <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+<Multi_key><bar><numbersign>                                                                   <x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 #
 #
 # # MACRON&GROUP_2
@@ -15744,6 +15792,12 @@
 #   See #*# CIRCUMFLEX
 #
 #
+#   Math symbol
+#
+#   Equal yields "≦" U2266 consistently with dead_circumflex yielding "≧" U2267
+#   by the same base character.
+#
+#
 #   Diacritic
 #
 #   The doubled diacritic "᫏" U1ACF COMBINING DOUBLE CARON (since Unicode 17.0)
@@ -15752,12 +15806,6 @@
 #   thanks to hacek not having any precomposed "w̌".
 #   https://www.unicode.org/charts/PDF/Unicode-17.0/U170-1AB0.pdf
 #   See "᪰" U1AB0
-#
-#
-#   Math symbol
-#
-#   Equal yields "≦" U2266 consistently with dead_circumflex yielding "≧" U2267
-#   by the same base character.
 #
 #
 #   Shortcut
@@ -16827,6 +16875,10 @@
 #   dead_cedilla
 #   Multikey: ¦,
 #
+#   Cedilla has no reported usage outside Unicode precomposed letters.
+#   https://www.frathwiki.com/Cedilla
+#
+#
 #   "Ç" key emulation
 #
 #   The polygrams with "a", "o" and "u" make the dead_cedilla key behave like a
@@ -16835,25 +16887,15 @@
 #   See #*# CIRCUMFLEX
 #
 #
-#   Letters
-#
-#   Cedilla has no reported usage outside Unicode precomposed letters.
-#   https://www.frathwiki.com/Cedilla
-#
-#   Letters with left serif "ꭕ" UAB55 and "ꭙ" UAB59 are also supported in
-#   dead_cedilla, additionally to their support in letter groups, by "x" and
-#   "X" as base characters, given an empty intersection and by lack of a
-#   dedicated dead key, making dead_cedilla the most straightforward host.
-#   See #+# GROUP_4
-#   See #+# GROUP_11
-#
-#
 #   Dotted numbers
 #
 #   Digits yield numbers 1 through 10 followed by a period, as an experimental
-#   convenience, as opposed to the not supported parenthesized digits and
-#   letters. Numbers 11..20 are in dead_belowcomma.
+#   convenience. Numbers 11..20 are in dead_belowcomma.
 #   See #*# COMMA_BELOW
+#
+#   Still, the parenthesized digits and letters are not supported. Circled
+#   numbers are instead.
+#   See # # Circled by leading parenthesis
 #
 <dead_cedilla>                                                                             <space> : "̧" U0327 # COMBINING CEDILLA
 <Multi_key><comma>                                                                         <space> : "̧" U0327 # COMBINING CEDILLA
@@ -16959,10 +17001,6 @@
 <Multi_key><comma>                                                                             <U> : "ÇU" # U00C7 U0055 Canadian French: "Ç" key emulation
 <dead_cedilla>                                                                                 <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
 <Multi_key><comma>                                                                             <u> : "çu" # U00E7 U0075 Canadian French: "Ç" key emulation
-<dead_cedilla>                                                                                 <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<Multi_key><comma>                                                                             <X> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-<dead_cedilla>                                                                                 <x> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
-<Multi_key><comma>                                                                             <x> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
 #
 #
 # # CEDILLA&ACUTE
