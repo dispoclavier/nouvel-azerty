@@ -9254,10 +9254,10 @@
 #   See # # B07-level_3 question
 #   See # # B08-level_3 exclam
 #
-                                                                                    <UEFD0><UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<Multi_key>                                                                    <numbersign><UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
-                                                                                    <UEFD0><UEF63> : "¿" U00BF # INVERTED QUESTION MARK
-<Multi_key>                                                                    <numbersign><UEF63> : "¿" U00BF # INVERTED QUESTION MARK
+<UEFD0>                                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><numbersign>                                                                    <UEF60> : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<UEFD0>                                                                                    <UEF63> : "¿" U00BF # INVERTED QUESTION MARK
+<Multi_key><numbersign>                                                                    <UEF63> : "¿" U00BF # INVERTED QUESTION MARK
 #
 #
 # # Aring for Danish, Norwegian, Swedish, Finnish, Walloon, and Chamorro
@@ -9265,14 +9265,14 @@
 #   Aring is supported in dead_abovering. As a convenience, Aring is also in
 #   group 1 of Agrave, and of Adiaeresis for the Swiss QWERTZ variant.
 #
-                                                                                   <UEFD0><Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
-<Multi_key>                                                                   <numbersign><Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
-                                                                                   <UEFD0><agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
-<Multi_key>                                                                   <numbersign><agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
-                                                                               <UEFD0><Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
-                                                                               <UEFD0><adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<UEFD0>                                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                                   <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<Multi_key><numbersign>                                                                   <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<UEFD0>                                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Adiaeresis> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<UEFD0>                                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <adiaeresis> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut for Swiss layout
 #
 #
 # # Oslash for Danish, Norwegian and other languages
@@ -9290,14 +9290,14 @@
 #   is phonetically equivalent to Swedish Öö.
 #   See #*# DIAERESIS
 #
-                                                                                 <UEFD0><Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
-<Multi_key>                                                                 <numbersign><Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
-                                                                                 <UEFD0><ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
-<Multi_key>                                                                 <numbersign><ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
-                                                                               <UEFD0><Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
-                                                                               <UEFD0><odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+<UEFD0>                                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                                 <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<Multi_key><numbersign>                                                                 <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<UEFD0>                                                                               <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Odiaeresis> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut for Swiss layout
+<UEFD0>                                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <odiaeresis> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut for Swiss layout
 #
 #
 # # Ntilde for Breton and Spanish
@@ -9309,14 +9309,14 @@
 #   unused group 1 of Egrave and Udiaeresis is also used, the latter for a
 #   Swiss QWERTZ layout, until another use case emerges.
 #
-                                                                                   <UEFD0><Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
-<Multi_key>                                                                   <numbersign><Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
-                                                                                   <UEFD0><egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
-<Multi_key>                                                                   <numbersign><egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
-                                                                               <UEFD0><Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
-                                                                               <UEFD0><udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
-<Multi_key>                                                               <numbersign><udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
+<UEFD0>                                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                                   <Egrave> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                                   <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<Multi_key><numbersign>                                                                   <egrave> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut
+<UEFD0>                                                                               <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <Udiaeresis> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE shortcut for Swiss layout
+<UEFD0>                                                                               <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
+<Multi_key><numbersign>                                                               <udiaeresis> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE shortcut for Swiss layout
 #
 #
 # # Superscript square and cube for African and Breton variants
@@ -9330,26 +9330,26 @@
 #   provides easy access, while groups 2 and 3 are both case insensitive and
 #   mnemonic.
 #
-                                                                                   <UEFD0><eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key>                                                                   <numbersign><eacute> : "²" U00B2 # SUPERSCRIPT TWO
-                                                                                   <UEFD0><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                                                   <numbersign><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                            <UEFD0><UEFD0><eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key>                                                       <numbersign><numbersign><eacute> : "²" U00B2 # SUPERSCRIPT TWO
-                                                                            <UEFD0><UEFD0><Eacute> : "²" U00B2 # SUPERSCRIPT TWO
-<Multi_key>                                                       <numbersign><numbersign><Eacute> : "²" U00B2 # SUPERSCRIPT TWO
-                                                                                <UEFD0><3><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                                                <numbersign><3><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                             <UEFD0><KP_3><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                                             <numbersign><KP_3><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                     <UEFD0><UEFD0><UEFD0><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                           <numbersign><numbersign><numbersign><eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                                <UEFD0><3><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                                                <numbersign><3><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                             <UEFD0><KP_3><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                                             <numbersign><KP_3><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-                                                                     <UEFD0><UEFD0><UEFD0><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
-<Multi_key>                                           <numbersign><numbersign><numbersign><Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0>                                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign>                                                                   <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0>                                                                                   <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign>                                                                   <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0>                                                                            <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign><numbersign>                                                       <eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0><UEFD0>                                                                            <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<Multi_key><numbersign><numbersign>                                                       <Eacute> : "²" U00B2 # SUPERSCRIPT TWO
+<UEFD0><3>                                                                                <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><3>                                                                <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><KP_3>                                                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><KP_3>                                                             <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0><UEFD0>                                                                     <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><numbersign><numbersign>                                           <eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><3>                                                                                <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><3>                                                                <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><KP_3>                                                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><KP_3>                                                             <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<UEFD0><UEFD0><UEFD0>                                                                     <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
+<Multi_key><numbersign><numbersign><numbersign>                                           <Eacute> : "³" U00B3 # SUPERSCRIPT THREE
 #
 #
 # # HORIZONTAL BAR for Breton and African variants
@@ -9362,14 +9362,14 @@
 #   is mapped, this is in group 1 of case insensitive OPEN O and N WITH TILDE
 #   mapped on that key in African and Breton variants respectively.
 #
-                                                                                    <UEFD0><U0254> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                    <numbersign><U0254> : "―" U2015 # HORIZONTAL BAR
-                                                                                    <UEFD0><U0186> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                    <numbersign><U0186> : "―" U2015 # HORIZONTAL BAR
-                                                                                   <UEFD0><ntilde> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                   <numbersign><ntilde> : "―" U2015 # HORIZONTAL BAR
-                                                                                   <UEFD0><Ntilde> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                   <numbersign><Ntilde> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U0254> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U0186> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                   <ntilde> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <ntilde> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <Ntilde> : "―" U2015 # HORIZONTAL BAR
 #
 #
 # # Fallback input methods for HORIZONTAL BAR
@@ -9399,10 +9399,10 @@
 #
 #   (The XKB keysym "hyphen" is U00AD SOFT HYPHEN.)
 #
-                                                                                   <UEFD0><hyphen> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                   <numbersign><hyphen> : "―" U2015 # HORIZONTAL BAR
-                                                                                    <UEFD0><U2011> : "―" U2015 # HORIZONTAL BAR
-<Multi_key>                                                                    <numbersign><U2011> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                   <hyphen> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                   <hyphen> : "―" U2015 # HORIZONTAL BAR
+<UEFD0>                                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
+<Multi_key><numbersign>                                                                    <U2011> : "―" U2015 # HORIZONTAL BAR
 #
 #
 # # Long dashes
@@ -9429,10 +9429,10 @@
 #   See #*# DIAERESIS
 #   See #   Input method for hyphens and dashes
 #
-                                                                                   <UEFD0><endash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key>                                                                   <numbersign><endash> : "⸺" U2E3A # TWO-EM DASH
-                                                                                   <UEFD0><emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                                                   <numbersign><emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0>                                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign>                                                                   <endash> : "⸺" U2E3A # TWO-EM DASH
+<UEFD0>                                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign>                                                                   <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
 # # Micro and pound signs for backward compatibility
@@ -9469,32 +9469,32 @@
 #     semantics. The same holds true with single symbols for the single angle
 #     quotation marks "‹" U2039 and "›" U203A.
 #
-                                                                           <UEFD0><guillemotright> : "µ" U00B5 # MICRO SIGN
-<Multi_key>                                                           <numbersign><guillemotright> : "µ" U00B5 # MICRO SIGN
-                                                                                    <UEFD0><UEF65> : "µ" U00B5 # MICRO SIGN
-<Multi_key>                                                                    <numbersign><UEF65> : "µ" U00B5 # MICRO SIGN
-                                                                                    <UEFD0><U203A> : "£" U00A3 # POUND SIGN
-<Multi_key>                                                                    <numbersign><U203A> : "£" U00A3 # POUND SIGN
-                                                                                    <UEFD0><UEF67> : "£" U00A3 # POUND SIGN
-<Multi_key>                                                                    <numbersign><UEF67> : "£" U00A3 # POUND SIGN
-                                                                            <UEFD0><guillemotleft> : "%" U0025 # PERCENT SIGN
-<Multi_key>                                                            <numbersign><guillemotleft> : "%" U0025 # PERCENT SIGN
-                                                                                    <UEFD0><UEF64> : "%" U0025 # PERCENT SIGN
-<Multi_key>                                                                    <numbersign><UEF64> : "%" U0025 # PERCENT SIGN
-                                                                                    <UEFD0><U2039> : "¨" U00A8 # DIAERESIS
-<Multi_key>                                                                    <numbersign><U2039> : "¨" U00A8 # DIAERESIS
-                                                                                    <UEFD0><UEF66> : "¨" U00A8 # DIAERESIS
-<Multi_key>                                                                    <numbersign><UEF66> : "¨" U00A8 # DIAERESIS
-                                                                               <UEFD0><dead_acute> : "$" U0024 # DOLLAR SIGN
-<Multi_key>                                                               <numbersign><dead_acute> : "$" U0024 # DOLLAR SIGN
-                                                                               <UEFD0><dead_grave> : "¤" U00A4 # CURRENCY SIGN
-<Multi_key>                                                               <numbersign><dead_grave> : "¤" U00A4 # CURRENCY SIGN
-                                                                          <UEFD0><dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
-<Multi_key>                                                          <numbersign><dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
-                                                                           <UEFD0><dead_diaeresis> : "=" U003D # EQUALS SIGN
-<Multi_key>                                                           <numbersign><dead_diaeresis> : "=" U003D # EQUALS SIGN
-                                                                              <UEFD0><twosuperior> : "&" U0026 # AMPERSAND
-<Multi_key>                                                              <numbersign><twosuperior> : "&" U0026 # AMPERSAND
+<UEFD0>                                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign>                                                           <guillemotright> : "µ" U00B5 # MICRO SIGN
+<UEFD0>                                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
+<Multi_key><numbersign>                                                                    <UEF65> : "µ" U00B5 # MICRO SIGN
+<UEFD0>                                                                                    <U203A> : "£" U00A3 # POUND SIGN
+<Multi_key><numbersign>                                                                    <U203A> : "£" U00A3 # POUND SIGN
+<UEFD0>                                                                                    <UEF67> : "£" U00A3 # POUND SIGN
+<Multi_key><numbersign>                                                                    <UEF67> : "£" U00A3 # POUND SIGN
+<UEFD0>                                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
+<Multi_key><numbersign>                                                            <guillemotleft> : "%" U0025 # PERCENT SIGN
+<UEFD0>                                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
+<Multi_key><numbersign>                                                                    <UEF64> : "%" U0025 # PERCENT SIGN
+<UEFD0>                                                                                    <U2039> : "¨" U00A8 # DIAERESIS
+<Multi_key><numbersign>                                                                    <U2039> : "¨" U00A8 # DIAERESIS
+<UEFD0>                                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
+<Multi_key><numbersign>                                                                    <UEF66> : "¨" U00A8 # DIAERESIS
+<UEFD0>                                                                               <dead_acute> : "$" U0024 # DOLLAR SIGN
+<Multi_key><numbersign>                                                               <dead_acute> : "$" U0024 # DOLLAR SIGN
+<UEFD0>                                                                               <dead_grave> : "¤" U00A4 # CURRENCY SIGN
+<Multi_key><numbersign>                                                               <dead_grave> : "¤" U00A4 # CURRENCY SIGN
+<UEFD0>                                                                          <dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
+<Multi_key><numbersign>                                                          <dead_circumflex> : "^" U005E # CIRCUMFLEX ACCENT
+<UEFD0>                                                                           <dead_diaeresis> : "=" U003D # EQUALS SIGN
+<Multi_key><numbersign>                                                           <dead_diaeresis> : "=" U003D # EQUALS SIGN
+<UEFD0>                                                                              <twosuperior> : "&" U0026 # AMPERSAND
+<Multi_key><numbersign>                                                              <twosuperior> : "&" U0026 # AMPERSAND
 #
 #
 # # Hair space
@@ -9509,8 +9509,8 @@
 #   See # # A03-level_1 space
 #   See # # A03-level_3 nobreakspace
 #
-                                                                                    <UEFD0><U202F> : " " U200A # HAIR SPACE
-<Multi_key>                                                                    <numbersign><U202F> : " " U200A # HAIR SPACE
+<UEFD0>                                                                                    <U202F> : " " U200A # HAIR SPACE
+<Multi_key><numbersign>                                                                    <U202F> : " " U200A # HAIR SPACE
 #
 #
 # # Tabular minus sign
@@ -9544,8 +9544,8 @@
 #   of MINUS SIGN as here, and in the set of dashes and hyphens by multikey.
 #   See #   Input method for hyphens and dashes
 #
-                                                                                    <UEFD0><U2212> : "‒" U2012 # FIGURE DASH
-<Multi_key>                                                                    <numbersign><U2212> : "‒" U2012 # FIGURE DASH
+<UEFD0>                                                                                    <U2212> : "‒" U2012 # FIGURE DASH
+<Multi_key><numbersign>                                                                    <U2212> : "‒" U2012 # FIGURE DASH
 #
 #
 # # Arrows as on the numpad
@@ -9606,10 +9606,10 @@
 #   group 3 of both EN DASH and EM DASH according to their length in em dashes.
 #   See #   Input method for hyphens and dashes
 #
-                                                                            <UEFD0><UEFD0><endash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key>                                                       <numbersign><numbersign><endash> : "⸺" U2E3A # TWO-EM DASH
-                                                                            <UEFD0><UEFD0><emdash> : "⸺" U2E3A # TWO-EM DASH
-<Multi_key>                                                       <numbersign><numbersign><emdash> : "⸺" U2E3A # TWO-EM DASH
+<UEFD0><UEFD0>                                                                            <endash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign><numbersign>                                                       <endash> : "⸺" U2E3A # TWO-EM DASH
+<UEFD0><UEFD0>                                                                            <emdash> : "⸺" U2E3A # TWO-EM DASH
+<Multi_key><numbersign><numbersign>                                                       <emdash> : "⸺" U2E3A # TWO-EM DASH
 #
 #
 # # Basic simple arrows
@@ -9617,46 +9617,46 @@
 #   Live in default mode on AltGr + numpad.
 #   Live in   ASCII mode on AltFr + numpad.
 #
-                                                                                 <UEFD0><UEFD0><0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                                 <UEFD0><UEFD0><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                                 <UEFD0><UEFD0><2> : "↓" U2193 # DOWNWARDS ARROW
-<Multi_key>                                                            <numbersign><numbersign><2> : "↓" U2193 # DOWNWARDS ARROW
-                                                                              <UEFD0><UEFD0><KP_2> : "↓" U2193 # DOWNWARDS ARROW
-<Multi_key>                                                         <numbersign><numbersign><KP_2> : "↓" U2193 # DOWNWARDS ARROW
-                                                                                 <UEFD0><UEFD0><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                                 <UEFD0><UEFD0><4> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key>                                                            <numbersign><numbersign><4> : "←" U2190 # LEFTWARDS ARROW
-                                                                              <UEFD0><UEFD0><KP_4> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key>                                                         <numbersign><numbersign><KP_4> : "←" U2190 # LEFTWARDS ARROW
-                                                                                 <UEFD0><UEFD0><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                                 <UEFD0><UEFD0><6> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key>                                                            <numbersign><numbersign><6> : "→" U2192 # RIGHTWARDS ARROW
-                                                                              <UEFD0><UEFD0><KP_6> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key>                                                         <numbersign><numbersign><KP_6> : "→" U2192 # RIGHTWARDS ARROW
-                                                                                 <UEFD0><UEFD0><7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                                 <UEFD0><UEFD0><8> : "↑" U2191 # UPWARDS ARROW
-<Multi_key>                                                            <numbersign><numbersign><8> : "↑" U2191 # UPWARDS ARROW
-                                                                              <UEFD0><UEFD0><KP_8> : "↑" U2191 # UPWARDS ARROW
-<Multi_key>                                                         <numbersign><numbersign><KP_8> : "↑" U2191 # UPWARDS ARROW
-                                                                                 <UEFD0><UEFD0><9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                                            <numbersign><numbersign><9> : "↗" U2197 # NORTH EAST ARROW emoji
-                                                                              <UEFD0><UEFD0><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                                         <numbersign><numbersign><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0>                                                                                 <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0>                                                                                 <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0>                                                                                 <2> : "↓" U2193 # DOWNWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                            <2> : "↓" U2193 # DOWNWARDS ARROW
+<UEFD0><UEFD0>                                                                              <KP_2> : "↓" U2193 # DOWNWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                         <KP_2> : "↓" U2193 # DOWNWARDS ARROW
+<UEFD0><UEFD0>                                                                                 <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0>                                                                                 <4> : "←" U2190 # LEFTWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                            <4> : "←" U2190 # LEFTWARDS ARROW
+<UEFD0><UEFD0>                                                                              <KP_4> : "←" U2190 # LEFTWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                         <KP_4> : "←" U2190 # LEFTWARDS ARROW
+<UEFD0><UEFD0>                                                                                 <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0>                                                                                 <6> : "→" U2192 # RIGHTWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                            <6> : "→" U2192 # RIGHTWARDS ARROW
+<UEFD0><UEFD0>                                                                              <KP_6> : "→" U2192 # RIGHTWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                         <KP_6> : "→" U2192 # RIGHTWARDS ARROW
+<UEFD0><UEFD0>                                                                                 <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0>                                                                                 <8> : "↑" U2191 # UPWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                            <8> : "↑" U2191 # UPWARDS ARROW
+<UEFD0><UEFD0>                                                                              <KP_8> : "↑" U2191 # UPWARDS ARROW
+<Multi_key><numbersign><numbersign>                                                         <KP_8> : "↑" U2191 # UPWARDS ARROW
+<UEFD0><UEFD0>                                                                                 <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                            <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0>                                                                              <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign>                                                         <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 #
 #
 #^# GROUP_3
@@ -9671,18 +9671,18 @@
 #   group 3 of both EN DASH and EM DASH according to their length in em dashes.
 #   See #   Input method for hyphens and dashes
 #
-                                                                                <UEFD0><3><endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                                                <numbersign><3><endash> : "⸻" U2E3B # THREE-EM DASH
-                                                                             <UEFD0><KP_3><endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                                             <numbersign><KP_3><endash> : "⸻" U2E3B # THREE-EM DASH
-                                                                     <UEFD0><UEFD0><UEFD0><endash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                           <numbersign><numbersign><numbersign><endash> : "⸻" U2E3B # THREE-EM DASH
-                                                                                <UEFD0><3><emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                                                <numbersign><3><emdash> : "⸻" U2E3B # THREE-EM DASH
-                                                                             <UEFD0><KP_3><emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                                             <numbersign><KP_3><emdash> : "⸻" U2E3B # THREE-EM DASH
-                                                                     <UEFD0><UEFD0><UEFD0><emdash> : "⸻" U2E3B # THREE-EM DASH
-<Multi_key>                                           <numbersign><numbersign><numbersign><emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><3>                                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                                <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                             <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><UEFD0><UEFD0>                                                                     <endash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><numbersign><numbersign>                                           <endash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><3>                                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><3>                                                                <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><KP_3>                                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><KP_3>                                                             <emdash> : "⸻" U2E3B # THREE-EM DASH
+<UEFD0><UEFD0><UEFD0>                                                                     <emdash> : "⸻" U2E3B # THREE-EM DASH
+<Multi_key><numbersign><numbersign><numbersign>                                           <emdash> : "⸻" U2E3B # THREE-EM DASH
 #
 #
 # # Basic double arrows
@@ -9690,86 +9690,86 @@
 #   Live in default mode on Shift + AltGr + numpad.
 #   Live in   ASCII mode on Shift + AltFr + numpad.
 #
-                                                                                     <UEFD0><3><0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
-                                                                                     <UEFD0><3><1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
-                                                                                     <UEFD0><3><2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
-                                                                                     <UEFD0><3><3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
-                                                                                     <UEFD0><3><4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
-                                                                                     <UEFD0><3><5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
-                                                                                     <UEFD0><3><6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
-                                                                                     <UEFD0><3><7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
-                                                                                     <UEFD0><3><8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
-                                                                                     <UEFD0><3><9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key>                                                                     <numbersign><3><9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-                                                                               <UEFD0><KP_3><KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key>                                                               <numbersign><KP_3><KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-                                                                          <UEFD0><UEFD0><UEFD0><9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key>                                                <numbersign><numbersign><numbersign><9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-                                                                       <UEFD0><UEFD0><UEFD0><KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
-<Multi_key>                                             <numbersign><numbersign><numbersign><KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<UEFD0><3>                                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_0> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<UEFD0><3>                                                                                     <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_1> : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
+<UEFD0><3>                                                                                     <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_2> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<UEFD0><3>                                                                                     <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_3> : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<UEFD0><3>                                                                                     <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_4> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<UEFD0><3>                                                                                     <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_5> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<UEFD0><3>                                                                                     <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_6> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<UEFD0><3>                                                                                     <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_7> : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<UEFD0><3>                                                                                     <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_8> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<UEFD0><3>                                                                                     <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><numbersign><3>                                                                     <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<UEFD0><KP_3>                                                                               <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><numbersign><KP_3>                                                               <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                          <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                                <9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<UEFD0><UEFD0><UEFD0>                                                                       <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key><numbersign><numbersign><numbersign>                                             <KP_9> : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 #
 #
 #^# GROUP_4
@@ -9784,86 +9784,86 @@
 #   Live in default mode on AltFr + numpad.
 #   Live in   ASCII mode on AltGr + AltFr + numpad.
 #
-                                                                                     <UEFD0><4><0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                                                     <numbersign><4><0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                               <UEFD0><KP_4><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-                                                                                     <UEFD0><4><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                                                     <numbersign><4><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                               <UEFD0><KP_4><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-                                                                                     <UEFD0><4><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><4><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_4><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><4><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                                                     <numbersign><4><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                               <UEFD0><KP_4><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-                                                                                     <UEFD0><4><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><4><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_4><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><4><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                                                     <numbersign><4><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                               <UEFD0><KP_4><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-                                                                                     <UEFD0><4><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                                                     <numbersign><4><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                               <UEFD0><KP_4><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                                     <UEFD0><4><7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                                                     <numbersign><4><7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                               <UEFD0><KP_4><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-                                                                                     <UEFD0><4><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><4><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_4><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><4><9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                                                     <numbersign><4><9> : "↗" U2197 # NORTH EAST ARROW emoji
-                                                                               <UEFD0><KP_4><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                                               <numbersign><KP_4><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-                                                                   <UEFD0><UEFD0><UEFD0><UEFD0><9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                    <numbersign><numbersign><numbersign><numbersign><9> : "↗" U2197 # NORTH EAST ARROW emoji
-                                                                <UEFD0><UEFD0><UEFD0><UEFD0><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key>                                 <numbersign><numbersign><numbersign><numbersign><KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><4>                                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><4>                                                                     <0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+<UEFD0><4>                                                                                     <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><4>                                                                     <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+<UEFD0><4>                                                                                     <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                                     <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                                     <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><4>                                                                     <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+<UEFD0><4>                                                                                     <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                                     <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                                     <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><4>                                                                     <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+<UEFD0><4>                                                                                     <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><4>                                                                     <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><4>                                                                                     <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><4>                                                                     <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+<UEFD0><4>                                                                                     <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><4>                                                                     <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><4>                                                                                     <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><4>                                                                     <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><KP_4>                                                                               <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><KP_4>                                                               <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                   <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                    <9> : "↗" U2197 # NORTH EAST ARROW emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                                <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                                 <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 #
 #
 #^# GROUP_5
@@ -9874,46 +9874,46 @@
 #   Live in default mode on Shift + AltFr + numpad.
 #   Live in   ASCII mode on Shift + AltGr + AltFr + numpad.
 #
-                                                                                     <UEFD0><5><0> : "⬍" U2B0D # UP DOWN BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><0> : "⬍" U2B0D # UP DOWN BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_0> : "⬍" U2B0D # UP DOWN BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_0> : "⬍" U2B0D # UP DOWN BLACK ARROW
-                                                                                     <UEFD0><5><1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
-                                                                                     <UEFD0><5><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><5><2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_5><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_5><KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><5><3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
-                                                                                     <UEFD0><5><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><5><4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_5><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_5><KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><5><5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
-                                                                                     <UEFD0><5><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                                                     <numbersign><5><6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                               <UEFD0><KP_5><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-<Multi_key>                                                               <numbersign><KP_5><KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
-                                                                                     <UEFD0><5><7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
-                                                                                     <UEFD0><5><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                                                     <numbersign><5><8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                               <UEFD0><KP_5><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-<Multi_key>                                                               <numbersign><KP_5><KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
-                                                                                     <UEFD0><5><9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
-<Multi_key>                                                                     <numbersign><5><9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
-                                                                               <UEFD0><KP_5><KP_9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
-<Multi_key>                                                               <numbersign><KP_5><KP_9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
+<UEFD0><5>                                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <0> : "⬍" U2B0D # UP DOWN BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_0> : "⬍" U2B0D # UP DOWN BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_0> : "⬍" U2B0D # UP DOWN BLACK ARROW
+<UEFD0><5>                                                                                     <1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_1> : "⬋" U2B0B # SOUTH WEST BLACK ARROW
+<UEFD0><5>                                                                                     <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><5>                                                                     <2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><KP_5>                                                                               <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_5>                                                               <KP_2> : "⬇" U2B07 # DOWNWARDS BLACK ARROW emoji
+<UEFD0><5>                                                                                     <3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_3> : "⬊" U2B0A # SOUTH EAST BLACK ARROW
+<UEFD0><5>                                                                                     <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><5>                                                                     <4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><KP_5>                                                                               <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_5>                                                               <KP_4> : "⬅" U2B05 # LEFTWARDS BLACK ARROW emoji
+<UEFD0><5>                                                                                     <5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_5> : "⬌" U2B0C # LEFT RIGHT BLACK ARROW
+<UEFD0><5>                                                                                     <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><5>                                                                     <6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><KP_5>                                                                               <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<Multi_key><numbersign><KP_5>                                                               <KP_6> : "➡" U27A1 # BLACK RIGHTWARDS ARROW emoji
+<UEFD0><5>                                                                                     <7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_7> : "⬉" U2B09 # NORTH WEST BLACK ARROW
+<UEFD0><5>                                                                                     <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><5>                                                                     <8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><KP_5>                                                                               <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<Multi_key><numbersign><KP_5>                                                               <KP_8> : "⬆" U2B06 # UPWARDS BLACK ARROW emoji
+<UEFD0><5>                                                                                     <9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
+<Multi_key><numbersign><5>                                                                     <9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
+<UEFD0><KP_5>                                                                               <KP_9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
+<Multi_key><numbersign><KP_5>                                                               <KP_9> : "⬈" U2B08 # NORTH EAST BLACK ARROW
 #
 #
 #^# GROUP_6
@@ -9924,46 +9924,46 @@
 #   Live in default mode on Shift + AltGr + AltFr + numpad.
 #   Live in   ASCII mode on Shift + AltGr + numpad.
 #
-                                                                                     <UEFD0><6><0> : "⇳" U21F3 # UP DOWN WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><0> : "⇳" U21F3 # UP DOWN WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_0> : "⇳" U21F3 # UP DOWN WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_0> : "⇳" U21F3 # UP DOWN WHITE ARROW
-                                                                                     <UEFD0><6><1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
-                                                                                     <UEFD0><6><2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
-                                                                                     <UEFD0><6><3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
-                                                                                     <UEFD0><6><4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
-                                                                                     <UEFD0><6><5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
-                                                                                     <UEFD0><6><6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
-                                                                                     <UEFD0><6><7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
-                                                                                     <UEFD0><6><8> : "⇧" U21E7 # UPWARDS WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><8> : "⇧" U21E7 # UPWARDS WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_8> : "⇧" U21E7 # UPWARDS WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_8> : "⇧" U21E7 # UPWARDS WHITE ARROW
-                                                                                     <UEFD0><6><9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
-<Multi_key>                                                                     <numbersign><6><9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
-                                                                               <UEFD0><KP_6><KP_9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
-<Multi_key>                                                               <numbersign><KP_6><KP_9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
+<UEFD0><6>                                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <0> : "⇳" U21F3 # UP DOWN WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_0> : "⇳" U21F3 # UP DOWN WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_0> : "⇳" U21F3 # UP DOWN WHITE ARROW
+<UEFD0><6>                                                                                     <1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_1> : "⬃" U2B03 # SOUTH WEST WHITE ARROW
+<UEFD0><6>                                                                                     <2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_2> : "⇩" U21E9 # DOWNWARDS WHITE ARROW
+<UEFD0><6>                                                                                     <3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_3> : "⬂" U2B02 # SOUTH EAST WHITE ARROW
+<UEFD0><6>                                                                                     <4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_4> : "⇦" U21E6 # LEFTWARDS WHITE ARROW
+<UEFD0><6>                                                                                     <5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_5> : "⬄" U2B04 # LEFT RIGHT WHITE ARROW
+<UEFD0><6>                                                                                     <6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_6> : "⇨" U21E8 # RIGHTWARDS WHITE ARROW
+<UEFD0><6>                                                                                     <7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_7> : "⬁" U2B01 # NORTH WEST WHITE ARROW
+<UEFD0><6>                                                                                     <8> : "⇧" U21E7 # UPWARDS WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <8> : "⇧" U21E7 # UPWARDS WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_8> : "⇧" U21E7 # UPWARDS WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_8> : "⇧" U21E7 # UPWARDS WHITE ARROW
+<UEFD0><6>                                                                                     <9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
+<Multi_key><numbersign><6>                                                                     <9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
+<UEFD0><KP_6>                                                                               <KP_9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
+<Multi_key><numbersign><KP_6>                                                               <KP_9> : "⬀" U2B00 # NORTH EAST WHITE ARROW
 #
 #
 #^# GROUP_7
@@ -9974,46 +9974,46 @@
 #   Live in default mode on AltGr + AltFr + numpad.
 #   Live in   ASCII mode on AltGr + numpad.
 #
-                                                                                     <UEFD0><7><0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
-                                                                                     <UEFD0><7><9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
-<Multi_key>                                                                     <numbersign><7><9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
-                                                                               <UEFD0><KP_7><KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
-<Multi_key>                                                               <numbersign><KP_7><KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_0> : "⭥" U2B65 # UP DOWN TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_1> : "⭩" U2B69 # SOUTH WEST TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_2> : "⭣" U2B63 # DOWNWARDS TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_3> : "⭨" U2B68 # SOUTH EAST TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_4> : "⭠" U2B60 # LEFTWARDS TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_5> : "⭤" U2B64 # LEFT RIGHT TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_6> : "⭢" U2B62 # RIGHTWARDS TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_7> : "⭦" U2B66 # NORTH WEST TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_8> : "⭡" U2B61 # UPWARDS TRIANGLE-HEADED ARROW
+<UEFD0><7>                                                                                     <9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><7>                                                                     <9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
+<UEFD0><KP_7>                                                                               <KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
+<Multi_key><numbersign><KP_7>                                                               <KP_9> : "⭧" U2B67 # NORTH EAST TRIANGLE-HEADED ARROW
 #
 #
 #^# GROUP_8
@@ -10027,46 +10027,46 @@
 #
 # # Triangle-headed arrows to bar
 #
-                                                                                     <UEFD0><9><0> : "⭿" U2B7F # VERTICAL TAB KEY
-<Multi_key>                                                                     <numbersign><9><0> : "⭿" U2B7F # VERTICAL TAB KEY
-                                                                               <UEFD0><KP_9><KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
-<Multi_key>                                                               <numbersign><KP_9><KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
-                                                                                     <UEFD0><9><1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><5> : "⭾" U2B7E # HORIZONTAL TAB KEY
-<Multi_key>                                                                     <numbersign><9><5> : "⭾" U2B7E # HORIZONTAL TAB KEY
-                                                                               <UEFD0><KP_9><KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
-<Multi_key>                                                               <numbersign><KP_9><KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
-                                                                                     <UEFD0><9><6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
-                                                                                     <UEFD0><9><9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                                     <numbersign><9><9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
-                                                                               <UEFD0><KP_9><KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
-<Multi_key>                                                               <numbersign><KP_9><KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <0> : "⭿" U2B7F # VERTICAL TAB KEY
+<Multi_key><numbersign><9>                                                                     <0> : "⭿" U2B7F # VERTICAL TAB KEY
+<UEFD0><KP_9>                                                                               <KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
+<Multi_key><numbersign><KP_9>                                                               <KP_0> : "⭿" U2B7F # VERTICAL TAB KEY
+<UEFD0><9>                                                                                     <1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_1> : "⭹" U2B79 # SOUTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_2> : "⭳" U2B73 # DOWNWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_3> : "⭸" U2B78 # SOUTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_4> : "⭰" U2B70 # LEFTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<Multi_key><numbersign><9>                                                                     <5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<UEFD0><KP_9>                                                                               <KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<Multi_key><numbersign><KP_9>                                                               <KP_5> : "⭾" U2B7E # HORIZONTAL TAB KEY
+<UEFD0><9>                                                                                     <6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_6> : "⭲" U2B72 # RIGHTWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_7> : "⭶" U2B76 # NORTH WEST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_8> : "⭱" U2B71 # UPWARDS TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><9>                                                                                     <9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><9>                                                                     <9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<UEFD0><KP_9>                                                                               <KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
+<Multi_key><numbersign><KP_9>                                                               <KP_9> : "⭷" U2B77 # NORTH EAST TRIANGLE-HEADED ARROW TO BAR
 #
 #
 #^# GROUP_10
@@ -10080,46 +10080,46 @@
 #
 # # Wide-headed light barb arrows
 #
-                                                                                     <UEFD0><1><0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                                     <numbersign><1><0> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                               <UEFD0><KP_1><KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                               <numbersign><KP_1><KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                                     <UEFD0><1><1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
-                                                                                     <UEFD0><1><2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
-                                                                                     <UEFD0><1><3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
-                                                                                     <UEFD0><1><4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-                                                                                     <UEFD0><1><5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                                     <numbersign><1><5> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                               <UEFD0><KP_1><KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                               <numbersign><KP_1><KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                                     <UEFD0><1><6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
-                                                                                     <UEFD0><1><7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
-                                                                                     <UEFD0><1><8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
-                                                                                     <UEFD0><1><9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
-<Multi_key>                                                                     <numbersign><1><9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
-                                                                               <UEFD0><KP_1><KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
-<Multi_key>                                                               <numbersign><KP_1><KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_2> : "🡣" U1F863 # WIDE-HEADED DOWNWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_3> : "🡦" U1F866 # WIDE-HEADED SOUTH EAST LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><1>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_1>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_1>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><1>                                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_7> : "🡤" U1F864 # WIDE-HEADED NORTH WEST LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_8> : "🡡" U1F861 # WIDE-HEADED UPWARDS LIGHT BARB ARROW
+<UEFD0><1>                                                                                     <9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><1>                                                                     <9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<UEFD0><KP_1>                                                                               <KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
+<Multi_key><numbersign><KP_1>                                                               <KP_9> : "🡥" U1F865 # WIDE-HEADED NORTH EAST LIGHT BARB ARROW
 #
 #
 #^# GROUP_12
@@ -10127,46 +10127,46 @@
 #
 # # Wide-headed very heavy barb arrows
 #
-                                                                                     <UEFD0><2><0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                                     <numbersign><2><0> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                               <UEFD0><KP_2><KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                               <numbersign><KP_2><KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                                     <UEFD0><2><1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                                     <numbersign><2><5> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                               <UEFD0><KP_2><KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key>                                                               <numbersign><KP_2><KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-                                                                                     <UEFD0><2><6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
-                                                                                     <UEFD0><2><9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
-<Multi_key>                                                                     <numbersign><2><9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
-                                                                               <UEFD0><KP_2><KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
-<Multi_key>                                                               <numbersign><KP_2><KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_2> : "🢃" U1F883 # WIDE-HEADED DOWNWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_3> : "🢆" U1F886 # WIDE-HEADED SOUTH EAST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><2>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><KP_2>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<Multi_key><numbersign><KP_2>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+<UEFD0><2>                                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_7> : "🢄" U1F884 # WIDE-HEADED NORTH WEST VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_8> : "🢁" U1F881 # WIDE-HEADED UPWARDS VERY HEAVY BARB ARROW
+<UEFD0><2>                                                                                     <9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><2>                                                                     <9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<UEFD0><KP_2>                                                                               <KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
+<Multi_key><numbersign><KP_2>                                                               <KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
 #
 #
 #*# CURRENCY
@@ -13273,14 +13273,14 @@
 <Multi_key><bar>                                                                               <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
 <Multi_key><colon><colon>                                                                      <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
-<dead_macron>                                                                                  <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_diaeresis><dead_diaeresis>                                                               <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><colon><colon>                                                                      <F> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_diaeresis><dead_diaeresis>                                                               <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><colon><colon>                                                                      <f> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_macron>                                                                                  <F> : "ɸ" U0278 # LATIN SMALL LETTER PHI
+<Multi_key><bar>                                                                               <F> : "ɸ" U0278 # LATIN SMALL LETTER PHI
+<dead_diaeresis><dead_diaeresis>                                                               <F> : "ɸ" U0278 # LATIN SMALL LETTER PHI
+<Multi_key><colon><colon>                                                                      <F> : "ɸ" U0278 # LATIN SMALL LETTER PHI
+<dead_macron>                                                                                  <f> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<Multi_key><bar>                                                                               <f> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<dead_diaeresis><dead_diaeresis>                                                               <f> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
+<Multi_key><colon><colon>                                                                      <f> : "ⱷ" U2C77 # LATIN SMALL LETTER TAILLESS PHI
 <dead_macron>                                                                                  <G> : "Ḡ" U1E20 # LATIN CAPITAL LETTER G WITH MACRON
 <Multi_key><bar>                                                                               <G> : "Ḡ" U1E20 # LATIN CAPITAL LETTER G WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <G> : "Ḡ" U1E20 # LATIN CAPITAL LETTER G WITH MACRON
@@ -13305,14 +13305,14 @@
 <Multi_key><bar>                                                                               <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
 <Multi_key><colon><colon>                                                                      <i> : "ī" U012B # LATIN SMALL LETTER I WITH MACRON
-<dead_macron>                                                                                  <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><bar>                                                                               <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_diaeresis><dead_diaeresis>                                                               <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<Multi_key><colon><colon>                                                                      <J> : "︤" UFE24 # COMBINING MACRON LEFT HALF
-<dead_macron>                                                                                  <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><bar>                                                                               <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<dead_diaeresis><dead_diaeresis>                                                               <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
-<Multi_key><colon><colon>                                                                      <j> : "︥" UFE25 # COMBINING MACRON RIGHT HALF
+<dead_macron>                                                                                  <J> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<Multi_key><bar>                                                                               <J> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<dead_diaeresis><dead_diaeresis>                                                               <J> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<Multi_key><colon><colon>                                                                      <J> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<dead_macron>                                                                                  <j> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<Multi_key><bar>                                                                               <j> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<dead_diaeresis><dead_diaeresis>                                                               <j> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
+<Multi_key><colon><colon>                                                                      <j> : "ꟾ" UA7FE # LATIN EPIGRAPHIC LETTER I LONGA
 <dead_macron>                                                                                  <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <Multi_key><bar>                                                                               <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
 <dead_diaeresis><dead_diaeresis>                                                               <K> : "︤" UFE24 # COMBINING MACRON LEFT HALF
