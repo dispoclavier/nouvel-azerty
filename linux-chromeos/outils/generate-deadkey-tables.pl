@@ -10,7 +10,7 @@
 # 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
 # 2026-01-12T1834+0100
-# 2026-02-07T1102+0100
+# 2026-02-08T0542+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -109,7 +109,7 @@ unless ( -d $output_directory ) {
 }
 my $output_file_name_template = 'deadkey-table-partial';
 my $output_path_trunk         = "$output_directory/$output_file_name_template";
-my $output_file_index         = -3;
+my $output_file_index         = -2;
 my $output_file_extension     = '.html';
 my $output_path               = "$output_directory/ALL_$output_file_name_template$output_file_extension";
 open( WHOLEOUTPUT, '>', $output_path ) or die $!;
