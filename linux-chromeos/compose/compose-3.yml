@@ -2694,8 +2694,8 @@
 # # COUNTRY_FLAGS
 #
 #   These have been moved to part 3 in compose-3.yml when part 2 exceeded the
-#   2048kB github.com file size limit, so as to avoid splitting part 2 at the
-#   expense of traceability.
+#   2048kB github.com file size limit for v6.1.7, so as to avoid splitting
+#   part 2 at the expense of traceability.
 #
 <UEFD7><UEFD7>                                                                              <A><C> : "🇦🇨" # Ascension Island
 <Multi_key><equal><equal>                                                                   <A><C> : "🇦🇨" # Ascension Island
@@ -8503,6 +8503,7 @@
 #
 #
 # # Shortcut for Bold italic Latin alphabet in group 8
+#
 #   See # # Bold italic Latin alphabet
 #
 <UEFD0><7><period>                                                                             <A> : "𝑨" U1D468 # MATHEMATICAL BOLD ITALIC CAPITAL A

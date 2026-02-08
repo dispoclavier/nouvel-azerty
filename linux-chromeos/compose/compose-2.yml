@@ -3311,8 +3311,8 @@
 <Multi_key><asciicircum><asciicircum>                                               <bracketright> : "̚" U031A # COMBINING LEFT ANGLE ABOVE
 <UEFD1><UEFD1>                                                                               <bar> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
 <Multi_key><asciicircum><asciicircum>                                                        <bar> : "᪻" U1ABB # COMBINING PARENTHESES ABOVE
-<UEFD1><UEFD1>                                                                         <numbersign>: "᫙" U1AD9 # COMBINING SHARP SIGN
-#   Multikey conflicts with "᫆" U1AC6, "ᫌ" U1ACC, "ᫍ" U1ACD, "ᫎ" U1ACE, "᫥" U1AE5, […]     <numbersign>: "᫙" U1AD9 # COMBINING SHARP SIGN
+<UEFD1><UEFD1>                                                                        <numbersign> : "᫙" U1AD9 # COMBINING SHARP SIGN
+#   Multikey conflicts with "᫆" U1AC6, "ᫌ" U1ACC, "ᫍ" U1ACD, "ᫎ" U1ACE, "᫥" U1AE5, […]    <numbersign> : "᫙" U1AD9 # COMBINING SHARP SIGN
 <UEFD1><UEFD1>                                                                             <slash> : "ᷭ" U1DED # COMBINING LATIN SMALL LETTER O WITH LIGHT CENTRALIZATION STROKE
 <Multi_key><asciicircum><asciicircum>                                                      <slash> : "ᷭ" U1DED # COMBINING LATIN SMALL LETTER O WITH LIGHT CENTRALIZATION STROKE
 <UEFD1><UEFD1>                                                                          <asterisk> : "⃰" U20F0 # COMBINING ASTERISK ABOVE
@@ -3554,8 +3554,8 @@
 #
 # # COMBINING_ABOVE&GROUP_2
 #
-<UEFD1><UEFD1>                                                          <UEFD0><UEFD0> <numbersign>: "᫙" U1AD9 # COMBINING SHARP SIGN
-<Multi_key><asciicircum><asciicircum>                         <numbersign><numbersign> <numbersign>: "᫙" U1AD9 # COMBINING SHARP SIGN
+<UEFD1><UEFD1>                                                          <UEFD0><UEFD0><numbersign> : "᫙" U1AD9 # COMBINING SHARP SIGN
+<Multi_key><asciicircum><asciicircum>                         <numbersign><numbersign><numbersign> : "᫙" U1AD9 # COMBINING SHARP SIGN
 <UEFD1><UEFD1>                                                                   <UEFD0><UEFD0><b> : "᫚" U1ADA # COMBINING FLAT SIGN
 <Multi_key><asciicircum><asciicircum>                                  <numbersign><numbersign><b> : "᫚" U1ADA # COMBINING FLAT SIGN
 <UEFD1><UEFD1>                                                                   <UEFD0><UEFD0><d> : "᫙" U1AD9 # COMBINING SHARP SIGN
@@ -7255,8 +7255,7 @@
 <Multi_key><apostrophe>                                                                 <EuroSign> : "”" U201D # RIGHT DOUBLE QUOTATION MARK, double comma quotation mark
 <dead_acute>                                                                                  <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #   Multikey conflicts with "́" U0301, "ἄ" U1F04, "ἅ" U1F05, "Ἄ" U1F0C, "Ἅ" U1F0D, […]         <at> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<dead_acute>                                                                          <dead_greek> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
-<Multi_key><apostrophe>                                                               <dead_greek> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+#   Alias sequence conflicts with "́" U0301, "ά" U1F71, "ᾴ" U1FB4, "Ά" U1FBB, […]      <dead_greek> : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <dead_acute>                                                                          <apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 #   Multikey conflicts with "Ő" U0150, "ő" U0151, "Ű" U0170, "ű" U0171, "ʹ" U02B9, […]<apostrophe> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
 <dead_acute>                                                                <rightsinglequotemark> : "’" U2019 # RIGHT SINGLE QUOTATION MARK, single comma quotation mark
@@ -7593,6 +7592,7 @@
 #
 #
 # # ACUTE&MACRON
+#
 #   See # # MACRON&ACUTE
 #
 <dead_acute><dead_macron>                                                                  <space> : "᷇" U1DC7 # COMBINING ACUTE-MACRON
@@ -10076,7 +10076,7 @@
 #
 #
 #^# GROUP_11
-#   Multikey: ¦#11
+#   Multikey: ¦#1
 #
 # # Wide-headed light barb arrows
 #
@@ -10123,7 +10123,7 @@
 #
 #
 #^# GROUP_12
-#   Multikey: ¦#12
+#   Multikey: ¦#2
 #
 # # Wide-headed very heavy barb arrows
 #
@@ -10838,6 +10838,7 @@
 #
 #
 # # BREVE&MACRON
+#
 #   See # # MACRON&BREVE
 #
 #   As this dead key exists for "᷋" U1DCB only, it is streamlined by cropping
@@ -13718,6 +13719,7 @@
 #
 #
 # # MACRON&BREVE
+#
 #   See # # BREVE&MACRON
 #
 #   As this dead key exists for "᷌" U1DCC only, it is streamlined by cropping
@@ -13732,6 +13734,7 @@
 #
 #
 # # MACRON&GRAVE
+#
 #   See # # GRAVE&MACRON
 #
 <dead_macron><dead_grave>                                                                  <space> : "᷆" U1DC6 # COMBINING MACRON-GRAVE
@@ -15011,8 +15014,7 @@
 #   Multikey conflicts with "Ẫ" U1EAA, "ẫ" U1EAB, "Ễ" U1EC4, "ễ" U1EC5, "Ỗ" U1ED6, […]<asciitilde> : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
 <dead_circumflex>                                                                             <at> : "⍽" U237D # SHOULDERED OPEN BOX
 #   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […]         <at> : "⍽" U237D # SHOULDERED OPEN BOX
-<dead_circumflex>                                                                     <dead_greek> : "⍽" U237D # SHOULDERED OPEN BOX
-#   Multikey conflicts with "͂" U0342, "ἆ" U1F06, "ἇ" U1F07, "Ἆ" U1F0E, "Ἇ" U1F0F, […] <dead_greek> : "⍽" U237D # SHOULDERED OPEN BOX
+#   Alias sequence conflicts with "͂" U0342, "ᾶ" U1FB6, "ᾷ" U1FB7, "῀" U1FC0, […]      <dead_greek> : "⍽" U237D # SHOULDERED OPEN BOX
 <dead_circumflex>                                                                     <apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 #   Multikey conflicts with "Ấ" U1EA4, "ấ" U1EA5, "Ế" U1EBE, "ế" U1EBF, "Ố" U1ED0, […]<apostrophe> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 <dead_circumflex>                                                           <rightsinglequotemark> : "‘" U2018 # LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
@@ -17124,6 +17126,7 @@
 #
 #
 # # GRAVE&MACRON
+#
 #   See # # MACRON&GRAVE
 #
 <dead_grave><dead_macron>                                                                  <space> : "᷅" U1DC5 # COMBINING GRAVE-MACRON
@@ -17720,8 +17723,7 @@
 <Multi_key><colon>                                                                <periodcentered> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_diaeresis>                                                                              <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 #   Multikey conflicts with "¨" U00A8, "̈" U0308, "̈́" U0344, "΅" U0385, "ΐ" U0390, […]          <at> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<dead_diaeresis>                                                                      <dead_greek> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
-<Multi_key><colon>                                                                    <dead_greek> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+#   Alias sequence conflicts with "¨" U00A8, "̈" U0308, "Ϊ" U03AA, "Ϋ" U03AB, […]      <dead_greek> : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <dead_diaeresis>                                                                      <apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 #   Multikey conflicts with "Ǘ" U01D7, "ǘ" U01D8, "Ḯ" U1E2E, "ḯ" U1E2F, "ΐ" U1FD3, […]<apostrophe> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                            <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
