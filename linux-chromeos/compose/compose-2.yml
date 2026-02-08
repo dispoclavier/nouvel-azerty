@@ -7321,10 +7321,10 @@
 <Multi_key><apostrophe>                                                                        <B> : "B́" # U0042 U0301 LATIN CAPITAL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
 <dead_acute>                                                                                   <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
 <Multi_key><apostrophe>                                                                        <b> : "b́" # U0062 U0301 LATIN SMALL LETTER B WITH ACUTE: Ntcham, Shinasha, Vōro
-#@<dead_acute>                                                                                   <B> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-#@<Multi_key><apostrophe>                                                                        <B> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
-#@<dead_acute>                                                                                   <b> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
-#@<Multi_key><apostrophe>                                                                        <b> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
+#@<dead_acute>                                                                                 <B> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
+#@<Multi_key><apostrophe>                                                                      <B> : "Ñ" U00D1 # LATIN CAPITAL LETTER N WITH TILDE
+#@<dead_acute>                                                                                 <b> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
+#@<Multi_key><apostrophe>                                                                      <b> : "ñ" U00F1 # LATIN SMALL LETTER N WITH TILDE
 <dead_acute>                                                                                   <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <Multi_key><apostrophe>                                                                        <C> : "Ć" U0106 # LATIN CAPITAL LETTER C WITH ACUTE
 <dead_acute>                                                                                   <c> : "ć" U0107 # LATIN SMALL LETTER C WITH ACUTE
@@ -7333,10 +7333,10 @@
 <Multi_key><apostrophe>                                                                        <D> : "D́" # U0044 U0301 LATIN CAPITAL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
 <dead_acute>                                                                                   <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
 <Multi_key><apostrophe>                                                                        <d> : "d́" # U0064 U0301 LATIN SMALL LETTER D WITH ACUTE: Vōro; ALA-LC for Altai, Komi, Iakut; Romanized Kharoṣṭhī
-#@<dead_acute>                                                                                   <D> : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
-#@<Multi_key><apostrophe>                                                                        <D> : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
-#@<dead_acute>                                                                                   <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
-#@<Multi_key><apostrophe>                                                                        <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
+#@<dead_acute>                                                                                 <D> : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
+#@<Multi_key><apostrophe>                                                                      <D> : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
+#@<dead_acute>                                                                                 <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
+#@<Multi_key><apostrophe>                                                                      <d> : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
 <dead_acute>                                                                                   <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <Multi_key><apostrophe>                                                                        <E> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 <dead_acute>                                                                                   <e> : "é" U00E9 # LATIN SMALL LETTER E WITH ACUTE
@@ -7345,10 +7345,10 @@
 <Multi_key><apostrophe>                                                                        <F> : "F́" # U0046 U0301 LATIN CAPITAL LETTER F WITH ACUTE: Vōro
 <dead_acute>                                                                                   <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE: Vōro
 <Multi_key><apostrophe>                                                                        <f> : "f́" # U0066 U0301 LATIN SMALL LETTER F WITH ACUTE: Vōro
-#@<dead_acute>                                                                                   <F> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
-#@<Multi_key><apostrophe>                                                                        <F> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
-#@<dead_acute>                                                                                   <f> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
-#@<Multi_key><apostrophe>                                                                        <f> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
+#@<dead_acute>                                                                                 <F> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+#@<Multi_key><apostrophe>                                                                      <F> : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+#@<dead_acute>                                                                                 <f> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
+#@<Multi_key><apostrophe>                                                                      <f> : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 <dead_acute>                                                                                   <G> : "Ǵ" U01F4 # LATIN CAPITAL LETTER G WITH ACUTE
 <Multi_key><apostrophe>                                                                        <G> : "Ǵ" U01F4 # LATIN CAPITAL LETTER G WITH ACUTE
 <dead_acute>                                                                                   <g> : "ǵ" U01F5 # LATIN SMALL LETTER G WITH ACUTE
@@ -7357,10 +7357,10 @@
 <Multi_key><apostrophe>                                                                        <H> : "H́" # U0048 U0301 LATIN CAPITAL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
 <dead_acute>                                                                                   <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
 <Multi_key><apostrophe>                                                                        <h> : "h́" # U0068 U0301 LATIN SMALL LETTER H WITH ACUTE: Vōro; ALA-LC for Abkhaz, Dargwa, Lak, Lezgian; Romanized Avestan
-#@<dead_acute>                                                                                   <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
-#@<Multi_key><apostrophe>                                                                        <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
-#@<dead_acute>                                                                                   <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
-#@<Multi_key><apostrophe>                                                                        <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
+#@<dead_acute>                                                                                 <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
+#@<Multi_key><apostrophe>                                                                      <H> : "Ḥ" U1E24 # LATIN CAPITAL LETTER H WITH DOT BELOW
+#@<dead_acute>                                                                                 <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
+#@<Multi_key><apostrophe>                                                                      <h> : "ḥ" U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
 <dead_acute>                                                                                   <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <Multi_key><apostrophe>                                                                        <I> : "Í" U00CD # LATIN CAPITAL LETTER I WITH ACUTE
 <dead_acute>                                                                                   <i> : "í" U00ED # LATIN SMALL LETTER I WITH ACUTE
@@ -7369,10 +7369,10 @@
 <Multi_key><apostrophe>                                                                        <J> : "J́" # U004A U0301 LATIN CAPITAL LETTER J WITH ACUTE: Dutch
 <dead_acute>                                                                                   <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE: Dutch
 <Multi_key><apostrophe>                                                                        <j> : "j́" # U006A U0301 LATIN SMALL LETTER J WITH ACUTE: Dutch
-#@<dead_acute>                                                                                   <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
-#@<Multi_key><apostrophe>                                                                        <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
-#@<dead_acute>                                                                                   <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
-#@<Multi_key><apostrophe>                                                                        <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
+#@<dead_acute>                                                                                 <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
+#@<Multi_key><apostrophe>                                                                      <J> : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
+#@<dead_acute>                                                                                 <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
+#@<Multi_key><apostrophe>                                                                      <j> : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
 <dead_acute>                                                                                   <K> : "Ḱ" U1E30 # LATIN CAPITAL LETTER K WITH ACUTE
 <Multi_key><apostrophe>                                                                        <K> : "Ḱ" U1E30 # LATIN CAPITAL LETTER K WITH ACUTE
 <dead_acute>                                                                                   <k> : "ḱ" U1E31 # LATIN SMALL LETTER K WITH ACUTE
@@ -7401,10 +7401,10 @@
 <Multi_key><apostrophe>                                                                        <Q> : "Q́" # U0051 U0301 LATIN CAPITAL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
 <dead_acute>                                                                                   <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
 <Multi_key><apostrophe>                                                                        <q> : "q́" # U0071 U0301 LATIN SMALL LETTER Q WITH ACUTE: Chimane orthography of Wayne Gill
-#@<dead_acute>                                                                                   <Q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-#@<Multi_key><apostrophe>                                                                        <Q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-#@<dead_acute>                                                                                   <q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
-#@<Multi_key><apostrophe>                                                                        <q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#@<dead_acute>                                                                                 <Q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#@<Multi_key><apostrophe>                                                                      <Q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#@<dead_acute>                                                                                 <q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
+#@<Multi_key><apostrophe>                                                                      <q> : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <dead_acute>                                                                                   <R> : "Ŕ" U0154 # LATIN CAPITAL LETTER R WITH ACUTE
 <Multi_key><apostrophe>                                                                        <R> : "Ŕ" U0154 # LATIN CAPITAL LETTER R WITH ACUTE
 <dead_acute>                                                                                   <r> : "ŕ" U0155 # LATIN SMALL LETTER R WITH ACUTE
@@ -7417,10 +7417,10 @@
 <Multi_key><apostrophe>                                                                        <T> : "T́" # U0054 U0301 LATIN CAPITAL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
 <dead_acute>                                                                                   <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
 <Multi_key><apostrophe>                                                                        <t> : "t́" # U0074 U0301 LATIN SMALL LETTER T WITH ACUTE: Vōro; ALA-LC for Komi, Chuvash; Romanized Kharoṣṭhī
-#@<dead_acute>                                                                                   <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
-#@<Multi_key><apostrophe>                                                                        <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
-#@<dead_acute>                                                                                   <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
-#@<Multi_key><apostrophe>                                                                        <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
+#@<dead_acute>                                                                                 <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
+#@<Multi_key><apostrophe>                                                                      <T> : "Ṭ" U1E6C # LATIN CAPITAL LETTER T WITH DOT BELOW
+#@<dead_acute>                                                                                 <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
+#@<Multi_key><apostrophe>                                                                      <t> : "ṭ" U1E6D # LATIN SMALL LETTER T WITH DOT BELOW
 <dead_acute>                                                                                   <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <Multi_key><apostrophe>                                                                        <U> : "Ú" U00DA # LATIN CAPITAL LETTER U WITH ACUTE
 <dead_acute>                                                                                   <u> : "ú" U00FA # LATIN SMALL LETTER U WITH ACUTE
@@ -7429,10 +7429,10 @@
 <Multi_key><apostrophe>                                                                        <V> : "V́" # U0056 U0301 LATIN CAPITAL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
 <dead_acute>                                                                                   <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
 <Multi_key><apostrophe>                                                                        <v> : "v́" # U0076 U0301 LATIN SMALL LETTER V WITH ACUTE: Vōro; Romanized Kharoṣṭhī. — Overrides en_US.UTF-8/Compose Ǘ
-#@<dead_acute>                                                                                   <V> : "Ʌ" U0245 # LATIN CAPITAL LETTER TURNED V
-#@<Multi_key><apostrophe>                                                                        <V> : "Ʌ" U0245 # LATIN CAPITAL LETTER TURNED V
-#@<dead_acute>                                                                                   <v> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
-#@<Multi_key><apostrophe>                                                                        <v> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
+#@<dead_acute>                                                                                 <V> : "Ʌ" U0245 # LATIN CAPITAL LETTER TURNED V
+#@<Multi_key><apostrophe>                                                                      <V> : "Ʌ" U0245 # LATIN CAPITAL LETTER TURNED V
+#@<dead_acute>                                                                                 <v> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
+#@<Multi_key><apostrophe>                                                                      <v> : "ʌ" U028C # LATIN SMALL LETTER TURNED V
 <dead_acute>                                                                                   <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <Multi_key><apostrophe>                                                                        <W> : "Ẃ" U1E82 # LATIN CAPITAL LETTER W WITH ACUTE
 <dead_acute>                                                                                   <w> : "ẃ" U1E83 # LATIN SMALL LETTER W WITH ACUTE
@@ -7441,10 +7441,10 @@
 <Multi_key><apostrophe>                                                                        <X> : "X́" # U0058 U0301 LATIN CAPITAL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
 <dead_acute>                                                                                   <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
 <Multi_key><apostrophe>                                                                        <x> : "x́" # U0078 U0301 LATIN SMALL LETTER X WITH ACUTE: Romanized Avestan, Ingush, Chechen; Romanized Pashto following DIN 31635
-#@<dead_acute>                                                                                   <X> : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
-#@<Multi_key><apostrophe>                                                                        <X> : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
-#@<dead_acute>                                                                                   <x> : "ŋ" U014B # LATIN SMALL LETTER ENG
-#@<Multi_key><apostrophe>                                                                        <x> : "ŋ" U014B # LATIN SMALL LETTER ENG
+#@<dead_acute>                                                                                 <X> : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
+#@<Multi_key><apostrophe>                                                                      <X> : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
+#@<dead_acute>                                                                                 <x> : "ŋ" U014B # LATIN SMALL LETTER ENG
+#@<Multi_key><apostrophe>                                                                      <x> : "ŋ" U014B # LATIN SMALL LETTER ENG
 <dead_acute>                                                                                   <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <Multi_key><apostrophe>                                                                        <Y> : "Ý" U00DD # LATIN CAPITAL LETTER Y WITH ACUTE
 <dead_acute>                                                                                   <y> : "ý" U00FD # LATIN SMALL LETTER Y WITH ACUTE
@@ -13345,14 +13345,14 @@
 <Multi_key><bar>                                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
 <dead_diaeresis><dead_diaeresis>                                                               <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
 <Multi_key><colon><colon>                                                                      <n> : "n̄" # U006E U0304 LATIN SMALL LETTER N WITH MACRON: Fula in Senegalese orthography
-#@<dead_macron>                                                                                  <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
-#@<Multi_key><bar>                                                                               <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
-#@<dead_diaeresis><dead_diaeresis>                                                               <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
-#@<Multi_key><colon><colon>                                                                      <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
-#@<dead_macron>                                                                                  <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-#@<Multi_key><bar>                                                                               <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-#@<dead_diaeresis><dead_diaeresis>                                                               <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
-#@<Multi_key><colon><colon>                                                                      <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<dead_macron>                                                                                <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><bar>                                                                             <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<dead_diaeresis><dead_diaeresis>                                                             <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><colon><colon>                                                                    <N> : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
+#@<dead_macron>                                                                                <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><bar>                                                                             <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<dead_diaeresis><dead_diaeresis>                                                             <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
+#@<Multi_key><colon><colon>                                                                    <n> : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <dead_macron>                                                                                  <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <Multi_key><bar>                                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <O> : "Ō" U014C # LATIN CAPITAL LETTER O WITH MACRON
@@ -13533,14 +13533,14 @@
 <Multi_key><bar>                                                                   <numbersign><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON: Languages in Togo
 <dead_diaeresis><dead_diaeresis>                                                        <UEFD0><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON: Languages in Togo
 <Multi_key><colon><colon>                                                          <numbersign><x> : "ɛ̄" # U025B U0304 LATIN SMALL LETTER OPEN E WITH MACRON: Languages in Togo
-#@<dead_macron>                                                                           <UEFD0><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
-#@<Multi_key><bar>                                                                   <numbersign><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
-#@<dead_diaeresis><dead_diaeresis>                                                        <UEFD0><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
-#@<Multi_key><colon><colon>                                                          <numbersign><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
-#@<dead_macron>                                                                           <UEFD0><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-#@<Multi_key><bar>                                                                   <numbersign><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-#@<dead_diaeresis><dead_diaeresis>                                                        <UEFD0><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
-#@<Multi_key><colon><colon>                                                          <numbersign><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+#@<dead_macron>                                                                         <UEFD0><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+#@<Multi_key><bar>                                                                 <numbersign><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+#@<dead_diaeresis><dead_diaeresis>                                                      <UEFD0><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+#@<Multi_key><colon><colon>                                                        <numbersign><X> : "ꭕ" UAB55 # LATIN SMALL LETTER CHI WITH LOW LEFT SERIF
+#@<dead_macron>                                                                         <UEFD0><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+#@<Multi_key><bar>                                                                 <numbersign><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+#@<dead_diaeresis><dead_diaeresis>                                                      <UEFD0><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
+#@<Multi_key><colon><colon>                                                        <numbersign><x> : "ꭙ" UAB59 # LATIN SMALL LETTER X WITH LONG LEFT LEG WITH SERIF
 <dead_macron>                                                                           <UEFD0><Y> : "Ʊ̄" # U01B1 U0304 LATIN CAPITAL LETTER UPSILON WITH MACRON: Languages in Togo
 <Multi_key><bar>                                                                   <numbersign><Y> : "Ʊ̄" # U01B1 U0304 LATIN CAPITAL LETTER UPSILON WITH MACRON: Languages in Togo
 <dead_diaeresis><dead_diaeresis>                                                        <UEFD0><Y> : "Ʊ̄" # U01B1 U0304 LATIN CAPITAL LETTER UPSILON WITH MACRON: Languages in Togo
