@@ -16,15 +16,23 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
-## 6.2.2 (projet)
+## 6.2.3 (projet)
+
+Complétion des séquences de touches mortes spécifiques à Windows.
+
+Généralisation de raccourcis à touche morte développés sous Windows.
+
+## 6.2.2 (2026-02-08)
 
 Complétion des séquences de touches mortes spécifiques à Windows.
 
 Correction et simplification du contenu des touches mortes.
 
+Généralisation de raccourcis à touche morte développés sous Windows.
+
 * Disposition : AltGr + Échap : Mettre à jour les descripteurs des dispositions de clavier redisposées. compose-1.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 *	Transformations :
-	* Corriger la mise en forme. compose-2.yml [123f206](https://github.com/dispoclavier/nouvel-azerty/commit/123f20638ccb0ee08dd91779680235d5bf2f2ab8), [958bfa2](https://github.com/dispoclavier/nouvel-azerty/commit/958bfa2b0f937fffefd0555b181cb9c848e79954), [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374)
+	* Corriger la mise en forme. compose-2.yml [123f206](https://github.com/dispoclavier/nouvel-azerty/commit/123f20638ccb0ee08dd91779680235d5bf2f2ab8), [958bfa2](https://github.com/dispoclavier/nouvel-azerty/commit/958bfa2b0f937fffefd0555b181cb9c848e79954), [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), [9460077](https://github.com/dispoclavier/nouvel-azerty/commit/94600774a05e019429c5f409324757d24bf3b46f)
 	* Groupes des symboles : Redonder "√" U+221A, "∛" U+221B, "∜" U+221C, "♻" U+267B, "☢" U+2622, "♼" U+267C, "♽" U+267D, "⛯" U+26EF, "♋" U+264B, "⌫" U+232B, "®" U+00AE, "∖" U+2216 par "·" U+00B7. compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 	* Réfléchi : Redonder "ʕ" U+0295 par "q", "Q" à la place de "꟎" U+A7CE, "꟏" U+A7CF, qui vont dans le groupe 1, et le supprimer par "G". compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
 	* Tilde et perluète : Redonder  "⃠" U+20E0 par "·" U+00B7. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
@@ -40,7 +48,9 @@ Correction et simplification du contenu des touches mortes.
 		* Redonder "ꟾ" U+A7FE par "J", "j". compose-2.yml [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32)
 		* Redonder "ⱷ" U+2C77 par "f". ibidem
 		* Redonder "ɸ" U+0278 par "F". ibidem
+		* Redonder "ꭆ" U+AB46 par "R" à la place de "ɺ" U+027A, qui va dans le groupe 1 et qui y est aussi dans tourné. compose-2.yml [63954a2](https://github.com/dispoclavier/nouvel-azerty/commit/63954a2841acccfd304c6314f33805ecb1f6ea30)
 		* Groupe 1 :
+			* Redonder "ɺ" U+027A par "r" et "R". ibidem
 			* Redonder "Ƞ" U+0220, "ƞ" U+019E, pour Windows aussi dans le groupe 0. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
 			* Compléter les séquences de "Ǣ" U+01E2, "ǣ" U+01E3, "Ƞ" U+0220, "ƞ" U+019E. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 			* Compléter les séquences de "ꭕ" U+AB55, "ꭙ" U+AB59 pour Windows. ibidem
@@ -64,7 +74,8 @@ Correction et simplification du contenu des touches mortes.
 	* Tableaux de touches mortes :
 		* Compléter avec les lettres pour les langues au Togo, qui étaient dans un tableau dédié. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc), [6c0af06](https://github.com/dispoclavier/nouvel-azerty/commit/6c0af062f9d3a662ad91daf0752576135c252e27)
 		* Corriger l’espacement des ponctuations. generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc)
-	* Ajouter, corriger ou mettre à jour des annotations. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796), [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), compose-1.yml, compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796), [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), [63954a2](https://github.com/dispoclavier/nouvel-azerty/commit/63954a2841acccfd304c6314f33805ecb1f6ea30), compose-1.yml, compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+* Build : 6.2.2.0 [5d9fb4b](https://github.com/dispoclavier/nouvel-azerty/commit/5d9fb4bb873046ccb48ff152e238c94c09a42d80)
 
 ## 6.2.1 (2026-02-01)
 

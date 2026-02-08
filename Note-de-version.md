@@ -1,36 +1,59 @@
-# 6.2.1 (2026-02-01)
+# 6.2.2 (2026-02-08)
 
-Ajout de séquences de touches mortes spécifiques à Windows.
+Complétion des séquences de touches mortes spécifiques à Windows.
 
 Correction et simplification du contenu des touches mortes.
 
+Généralisation de raccourcis à touche morte développés sous Windows.
+
 ## Modifications
 
-* Composition : Sous Windows : Déboguer la séquence « ¦Mul » pour "¦" U00A6. kbdeadtrans-multikey.c [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
+* Disposition : AltGr + Échap : Mettre à jour les descripteurs des dispositions de clavier redisposées. compose-1.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 *	Transformations :
-	* Indice :
-		* Indice et groupe 1 :
-			* Corriger "ᴐ" U1D10 en redondant par "C". compose-2.yml [2ebf9a0](https://github.com/dispoclavier/nouvel-azerty/commit/2ebf9a0b972ccd1e22d944a6cbf1f402ec8defb3)
-			* Redonder "ᴣ" U1D23 par "z". ibidem
-		* Indice et groupe 2 :
-			* Mettre "ᴐ" U1D10 par "o", et par "O" à la place de "ᴕ" U1D15, qui prend la place laissée par "ᴐ" U1D10 dans le groupe 3. ibidem
-			* Redonder  par "". ibidem
-		* Indice et tourné : Redonder "ꜟ" UA71F. ibidem
-		* Indice et réfléchi : Redonder "ⱻ" U2C7B, "𝼐" U1DF10. ibidem
+	* Corriger la mise en forme. compose-2.yml [123f206](https://github.com/dispoclavier/nouvel-azerty/commit/123f20638ccb0ee08dd91779680235d5bf2f2ab8), [958bfa2](https://github.com/dispoclavier/nouvel-azerty/commit/958bfa2b0f937fffefd0555b181cb9c848e79954), [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), [9460077](https://github.com/dispoclavier/nouvel-azerty/commit/94600774a05e019429c5f409324757d24bf3b46f)
+	* Groupes des symboles : Redonder "√" U+221A, "∛" U+221B, "∜" U+221C, "♻" U+267B, "☢" U+2622, "♼" U+267C, "♽" U+267D, "⛯" U+26EF, "♋" U+264B, "⌫" U+232B, "®" U+00AE, "∖" U+2216 par "·" U+00B7. compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Réfléchi : Redonder "ʕ" U+0295 par "q", "Q" à la place de "꟎" U+A7CE, "꟏" U+A7CF, qui vont dans le groupe 1, et le supprimer par "G". compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+	* Tilde et perluète : Redonder  "⃠" U+20E0 par "·" U+00B7. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Grec-ou-cerclé > Cerclé : Redonder "⦸" U+29B8 par "·" U+00B7. ibidem
+	* Accent aigu :
+		* Redonder "▿" U+25BF par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
+		* Groupe 1 : Redonder "Ŋ́", "ŋ́", "Ɔ́", "ɔ́". compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Rayé : Redonder "ʢ" U+02A2 par "·" U+00B7. ibidem
+	* Cornu :
+		* Redonder "⃥" U+20E5 par "·" U+00B7. ibidem
+		* Redonder "ꭕ" U+AB55 et "ꭙ" U+AB59. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
 	* Macron :
-		* Macron et accent aigu et accent grave : Simplifier la saisie de "᫘" U1AD8. ibidem
-		* Macron souscrit : Redonder "⨱" U2A31 par ".". ibidem
-	* Virgule souscrite :
-		* Redonder "Ķ" U0136, "ķ" U0137 (qui sont aussi dans cédille) à la place de "Ꜯ" UA72E, "ꜯ" UA72F, qui vont par "C", "c", par "F", "f" et par "Q", "q". ibidem
-		* Redonder "Ģ" U0122, "ģ", "Ļ" U013B, "ļ" U013C, "Ņ" U0145, "ņ" U0146, "Ŗ" U0156, "ŗ" U0157 (qui sont aussi dans cédille). compose-2.yml [5cc9c3b](https://github.com/dispoclavier/nouvel-azerty/commit/5cc9c3b6f50a0747375ad3555b1073d1a93103dd)
-	* Sous Windows : Touche morte groupe : Supprimer la limitation des appuis multiples. kbdeadtrans.c [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
+		* Redonder "ꟾ" U+A7FE par "J", "j". compose-2.yml [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32)
+		* Redonder "ⱷ" U+2C77 par "f". ibidem
+		* Redonder "ɸ" U+0278 par "F". ibidem
+		* Redonder "ꭆ" U+AB46 par "R" à la place de "ɺ" U+027A, qui va dans le groupe 1 et qui y est aussi dans tourné. compose-2.yml [63954a2](https://github.com/dispoclavier/nouvel-azerty/commit/63954a2841acccfd304c6314f33805ecb1f6ea30)
+		* Groupe 1 :
+			* Redonder "ɺ" U+027A par "r" et "R". ibidem
+			* Redonder "Ƞ" U+0220, "ƞ" U+019E, pour Windows aussi dans le groupe 0. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+			* Compléter les séquences de "Ǣ" U+01E2, "ǣ" U+01E3, "Ƞ" U+0220, "ƞ" U+019E. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+			* Compléter les séquences de "ꭕ" U+AB55, "ꭙ" U+AB59 pour Windows. ibidem
+		* Groupe 2 :
+			* Redonder "ꭕ" U+AB55 et "ꭙ" U+AB59, pour Windows aussi dans le groupe 1. ibidem
+			* Compléter les séquences de "ʗ" U+0297, "ʗ" U+0297, "ꭕ" U+AB55, "ꭙ" U+AB59. ibidem
+		* Groupe 3 : Compléter les séquences de "ꭕ" U+AB55, "ꭙ" U+AB59. ibidem
+		* Macron et tilde : Compléter les séquences de "Ū̃", "ū̃". ibidem
+		* Macron et accent aigu : Compléter les séquences de "᷄" U+1DC4, "Ḗ" U+1E16, "ḗ" U+1E17, "Ṓ" U+1E52, "ṓ" U+1E53, "Ū́", "ū́". ibidem
+		* Macron souscrit : Redonder "⦥" U+29A5 par "·" U+00B7. ibidem
+	* Accent circonflexe : Redonder "⍽" U+237D par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
+	* Hatchek :
+		* Compléter les séquences de "Ʊ̌". compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+		* Groupe 1 : Compléter les séquences de "⸷" U+2E37, "Ǯ" U+01EE, "ǯ" U+01EF. ibidem
+	* Drapeau :
+		* Compléter les séquences de "⊇" U+2287, "⊆" U+2286. ibidem
+		* Redonder "🏴󠁧󠁢󠁳󠁣󠁴󠁿" par la touche morte grec-ou-cerclé. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Cédille : Supprimer "ꭕ" U+AB55 et "ꭙ" U+AB59, qui vont dans cornu. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+	* Tréma : Redonder "▾" U+25BE par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
 * Documentation :
-	* Mettre à jour et corriger le mode d’emploi. readme.md alias Mode-d-emploi-commun.md [d246dc0](https://github.com/dispoclavier/nouvel-azerty/commit/d246dc07dc159340e22218e00c17cbc6037839ce)
-	* Déboguer les tableaux de touches mortes. generate-deadkey-tables.pl [6104dc2](https://github.com/dispoclavier/nouvel-azerty/commit/6104dc2daa26dfcd8309229ed498339346f885ed)
-	* Corriger et mettre à jour les infobulles des tableaux. generate-deadkey-tables.pl, generate-multikey-tables.pl, generate-math-table [6104dc2](https://github.com/dispoclavier/nouvel-azerty/commit/6104dc2daa26dfcd8309229ed498339346f885ed)
-	* Mettre à jour l’ordre des touches mortes. compose-2.yml [2529366](https://github.com/dispoclavier/nouvel-azerty/commit/2529366313410a59d3cf4fecb5933663e27eb157), [5cc9c3b](https://github.com/dispoclavier/nouvel-azerty/commit/5cc9c3b6f50a0747375ad3555b1073d1a93103dd)
-	* Corriger des annotations. compose-1.yml, compose-2.yml [2ebf9a0](https://github.com/dispoclavier/nouvel-azerty/commit/2ebf9a0b972ccd1e22d944a6cbf1f402ec8defb3)
-* Build : 6.2.1.0 [4df04ef](https://github.com/dispoclavier/nouvel-azerty/commit/4df04ef8f38fc7c5254836d6636c3af90b10e836)
+	* Tableaux de touches mortes :
+		* Compléter avec les lettres pour les langues au Togo, qui étaient dans un tableau dédié. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc), [6c0af06](https://github.com/dispoclavier/nouvel-azerty/commit/6c0af062f9d3a662ad91daf0752576135c252e27)
+		* Corriger l’espacement des ponctuations. generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796), [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), [63954a2](https://github.com/dispoclavier/nouvel-azerty/commit/63954a2841acccfd304c6314f33805ecb1f6ea30), compose-1.yml, compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+* Build : 6.2.2.0 [5d9fb4b](https://github.com/dispoclavier/nouvel-azerty/commit/5d9fb4bb873046ccb48ff152e238c94c09a42d80)
 
 ## Pour Windows
 
@@ -40,7 +63,7 @@ La variante AZERTY pour la langue bretonne, celle pour la Polynésie française,
 
 ### Installation
 
-Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.2.1.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.1/Un-nouvel-AZERTY-Windows-6.2.1.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.2.1.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.1/Un-nouvel-AZERTY-Windows-variantes-6.2.1.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
+Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.2.2.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.2/Un-nouvel-AZERTY-Windows-6.2.2.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.2.2.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.2/Un-nouvel-AZERTY-Windows-variantes-6.2.2.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
 Le meilleur mode d’emploi [coule de source sûre dans CCM](https://www.commentcamarche.net/informatique/windows/33353-majuscules-accentuees-windows-quad/) pour une autre disposition de clavier. Il est facilement transposable au cas où.
 
@@ -52,7 +75,7 @@ Toutes les variantes AZERTY ou redisposées sont incluses pour installation et f
 
 ### Activation ou installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.2.1.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.1/Un-nouvel-AZERTY-Linux-6.2.1.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.2.2.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.2/Un-nouvel-AZERTY-Linux-6.2.2.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
 
 ## Pour macOS
 
@@ -70,5 +93,5 @@ Du total il faut soustraire les téléchargements effectués par SourceForge, so
 
 Cette note est [versionnée](https://github.com/dispoclavier/nouvel-azerty/blob/main/Note-de-version.md).
 
-| Dernière mise à jour : 2026-02-01 |
+| Dernière mise à jour : 2026-02-08 |
 |-|
