@@ -5009,8 +5009,8 @@
 #   Multikey conflcts with "ᵳ" U1D73.                                                  <braceleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                          <braceright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <Multi_key><asciitilde>                                                               <braceright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<dead_tilde>                                                                           <numbersign>: "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
-#   Multikey conflicts with composed "Ɔ̃", "Ǝ̃", "Ɛ̃", "ǝ̃", "ɔ̃", "ɛ̃".                     <numbersign>: "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+<dead_tilde>                                                                          <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
+#   Multikey conflicts with composed "Ɔ̃", "Ǝ̃", "Ɛ̃", "ǝ̃", "ɔ̃", "ɛ̃".                    <numbersign> : "⧤" U29E4 # EQUALS SIGN AND SLANTED PARALLEL WITH TILDE ABOVE
 <dead_tilde>                                                                              <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
 <Multi_key><asciitilde>                                                                   <dollar> : "͠" U0360 # COMBINING DOUBLE TILDE
 <dead_tilde>                                                                              <emdash> : "͠" U0360 # COMBINING DOUBLE TILDE
