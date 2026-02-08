@@ -10,7 +10,7 @@
 # 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
 # 2026-01-12T1834+0100
-# 2026-01-29T2352+0100
+# 2026-02-07T1102+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -21,7 +21,6 @@
 # Section headings with a leading "#*#" and the following headings switch files
 # of partial tables:
 #
-#     # # Composed letters for languages in Togo
 #     # # COUNTRY_FLAGS
 #     ### Space and symbol groups
 #     ### Letter groups
@@ -165,7 +164,6 @@ while ( my $line = <INPUT> ) {
 	}
 	if ( $parse_on ) {
 		if ( $line =~ /^#\*# /
-			|| $line =~ /^# # Composed letters for languages in Togo/
 			|| $line =~ /^# # COUNTRY_FLAGS/
 			|| $line =~ /^### Space and symbol groups/
 			|| $line =~ /^### Letter groups/
@@ -191,6 +189,7 @@ while ( my $line = <INPUT> ) {
 			print OUTPUT $start_tags;
 			print OUTPUT "<!-- $1 -->\n";
 		}
+
 		unless ( $line =~ /<Multi_key>/        # Multikey equivalents are skipped.
 			|| $line =~ /^#[^@]/                 # Annotations are not (yet) processed.
 			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
@@ -442,8 +441,8 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) in legacy usage/$1 précédemment/g;
 				$line =~ s/( # .*) infinity/$1 infinité/g;
 				$line =~ s/( # .*) Japanese kome/$1 kome japonais/g;
-				$line =~ s/( # .*) Languages of Gabon/$1 langues du Gabon/g;
-				$line =~ s/( # .*) Languages of Togo/$1 langues du Togo/g;
+				$line =~ s/( # .*) Languages in Gabon/$1 langues au Gabon/g;
+				$line =~ s/( # .*) Languages in Togo/$1 langues au Togo/g;
 				$line =~ s/( # .*) last track button/$1 bouton de la dernière piste/g;
 				$line =~ s/( # .*) Lezgian/$1 lezghien/g;
 				$line =~ s/( # .*) lightning/$1 éclair/g;
@@ -499,6 +498,7 @@ while ( my $line = <INPUT> ) {
 				$line =~ s/( # .*) voiceless alveolar trill/$1 consonne roulée alvéolaire sourde/g;
 				$line =~ s/( # .*) Yoruba in current Nigerian alphabet/$1 yoruba avec l’alphabet nigérian actuel/g;
 				$line =~ s/( # .*) emoji/$1 émoji/g;
+				$line =~ s/( # .*\w): /$1 : /g;
 				$line =~ s/( # .*\w); /$1 ; /g;
 
 				# Add text style emoji for searchability.
