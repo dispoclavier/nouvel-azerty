@@ -16,7 +16,49 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
+## 6.2.2 (projet)
+
 Complétion des séquences de touches mortes spécifiques à Windows.
+
+Correction et simplification du contenu des touches mortes.
+
+* Disposition : AltGr + Échap : Mettre à jour les descripteurs des dispositions de clavier redisposées. compose-1.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+*	Transformations :
+	* Corriger la mise en forme. compose-2.yml [123f206](https://github.com/dispoclavier/nouvel-azerty/commit/123f20638ccb0ee08dd91779680235d5bf2f2ab8), [958bfa2](https://github.com/dispoclavier/nouvel-azerty/commit/958bfa2b0f937fffefd0555b181cb9c848e79954), [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374)
+	* Groupes des symboles : Redonder "√" U+221A, "∛" U+221B, "∜" U+221C, "♻" U+267B, "☢" U+2622, "♼" U+267C, "♽" U+267D, "⛯" U+26EF, "♋" U+264B, "⌫" U+232B, "®" U+00AE, "∖" U+2216 par "·" U+00B7. compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Réfléchi : Redonder "ʕ" U+0295 par "q", "Q" à la place de "꟎" U+A7CE, "꟏" U+A7CF, qui vont dans le groupe 1, et le supprimer par "G". compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+	* Tilde et perluète : Redonder  "⃠" U+20E0 par "·" U+00B7. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+	* Grec-ou-cerclé > Cerclé : Redonder "⦸" U+29B8 par "·" U+00B7. ibidem
+	* Accent aigu groupe 1 : Redonder "Ŋ́", "ŋ́", "Ɔ́", "ɔ́". ibidem
+	* Rayé : Redonder "ʢ" U+02A2 par "·" U+00B7. ibidem
+	* Cornu :
+		* Redonder "⃥" U+20E5 par "·" U+00B7. ibidem
+		* Redonder "ꭕ" U+AB55 et "ꭙ" U+AB59. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+	* Macron :
+		* Redonder "ꟾ" U+A7FE par "J", "j". compose-2.yml [bc92f7f](https://github.com/dispoclavier/nouvel-azerty/commit/bc92f7f55cc0fdb6a33d9a2ff803fc0615553a32)
+		* Redonder "ⱷ" U+2C77 par "f". ibidem
+		* Redonder "ɸ" U+0278 par "F". ibidem
+		* Groupe 1 :
+			* Redonder "Ƞ" U+0220, "ƞ" U+019E, pour Windows aussi dans le groupe 0. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+			* Compléter les séquences de "Ǣ" U+01E2, "ǣ" U+01E3, "Ƞ" U+0220, "ƞ" U+019E. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
+			* Compléter les séquences de "ꭕ" U+AB55, "ꭙ" U+AB59 pour Windows. ibidem
+		* Groupe 2 :
+			* Redonder "ꭕ" U+AB55 et "ꭙ" U+AB59, pour Windows aussi dans le groupe 1. ibidem
+			* Compléter les séquences de "ʗ" U+0297, "ʗ" U+0297, "ꭕ" U+AB55, "ꭙ" U+AB59. ibidem
+		* Groupe 3 : Compléter les séquences de "ꭕ" U+AB55, "ꭙ" U+AB59. ibidem
+		* Macron et tilde : Compléter les séquences de "Ū̃", "ū̃". ibidem
+		* Macron et accent aigu : Compléter les séquences de "᷄" U+1DC4, "Ḗ" U+1E16, "ḗ" U+1E17, "Ṓ" U+1E52, "ṓ" U+1E53, "Ū́", "ū́". ibidem
+		* Macron souscrit : Redonder "⦥" U+29A5 par "·" U+00B7. ibidem
+	* Hatchek :
+		* Compléter les séquences de "Ʊ̌". ibidem
+		* Groupe 1 : Compléter les séquences de "⸷" U+2E37, "Ǯ" U+01EE, "ǯ" U+01EF. ibidem
+	* Drapeau : Compléter les séquences de "⊇" U+2287, "⊆" U+2286. ibidem
+	* Cédille : Supprimer "ꭕ" U+AB55 et "ꭙ" U+AB59, qui vont dans cornu. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+* Documentation :
+	* Tableaux de touches mortes :
+		* Compléter avec les lettres pour les langues au Togo, qui étaient dans un tableau dédié. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc), [6c0af06](https://github.com/dispoclavier/nouvel-azerty/commit/6c0af062f9d3a662ad91daf0752576135c252e27)
+		* Corriger l’espacement des ponctuations. generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796), [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), [658a778](https://github.com/dispoclavier/nouvel-azerty/commit/658a77887fed8ce47fe7ef6c6d2c07c3e5909374), compose-1.yml, compose-3.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 
 ## 6.2.1 (2026-02-01)
 
@@ -290,7 +332,7 @@ Complétion du contenu des touches mortes et des séquences de composition.
 			* Redonder "Ʌ" U+0245 par "V", "ʌ" U+028C par "v" pour la phonétique. ibidem
 			* Redonder "Ŋ" U+014A par "X", "ŋ" U+014B par "x". ibidem
 	* Tilde : Redonder "❰" U+2770, "❱" U+2771 par "<", ">". compose-2.yml [5f4de75](https://github.com/dispoclavier/nouvel-azerty/commit/5f4de7591985e160b4737b70efc74b3671748d93), [8efaac3](https://github.com/dispoclavier/nouvel-azerty/commit/8efaac3ca70170af4bc824993ec271c0c57d318c)
-	* Grec ou cerclé : Ajouter "◎" U+25CE par ")" ou "°" à la place de "⊚" U+229A, qui est dans grec ou cerclé. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
+	* Grec-ou-cerclé : Ajouter "◎" U+25CE par ")" ou "°" à la place de "⊚" U+229A, qui est dans grec ou cerclé. compose-2.yml [28a3e82](https://github.com/dispoclavier/nouvel-azerty/commit/28a3e8274e740d7bdc20cabba47950545543b100)
 		* Cerclé : Ajouter "◯" U+25EF comme clone espaçant du diacritique  "⃝" U+20DD à la place de "⚪" U+26AA, qui est dans le groupe 3 de "@". ibidem
 	* Accent aigu :
 		* Redonder "†" U+2020 par "!", "‡" U+2021 par "?", "‱" U+2031 par "%". compose-2.yml [83dfcd1](https://github.com/dispoclavier/nouvel-azerty/commit/83dfcd1a3f8fd916a18eb8a64c85852fa02ea7ff), [bcd5b17](https://github.com/dispoclavier/nouvel-azerty/commit/bcd5b179ed907ebf6c22ddef574d066ec142144e), kbdeadtrans.c [3fa6ce1](https://github.com/dispoclavier/nouvel-azerty/commit/3fa6ce188f231153816a5b5ce90b89ef46c4663d)
