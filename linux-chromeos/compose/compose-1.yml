@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.0.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.2.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -932,10 +932,10 @@
 <UEFA6> : "Canadien multilingue disposition de clavier semi-automatique – kbfrCAms " #
 <UEFA7> : "Français Canada disposition de clavier semi-automatique – kbfrCAs " #
 <UEFA8> : "Français Suisse disposition de clavier semi-automatique – kbfrCHs " #
-<UEFA9> : "Français France disposition de clavier semi-automatique redisposée – kbfrFRsr " #
-<UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRsr " #
-<UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFsr " #
-<UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFsr " #
+<UEFA9> : "Français France disposition de clavier semi-automatique redisposée – kbfrFRr " #
+<UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRr " #
+<UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFr " #
+<UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFr " #
 <UEFAD> : "" #
 <UEFAE> : "" #
 <UEFAF> : "" #
@@ -1343,8 +1343,8 @@
 #
 #   The fraction-slash-based abbreviations "℀" U2100, "⅍" U214D, "℁" U2101 and
 #   "℅" U2105 have alias multikey sequences skipping the slash for brevity, and
-#   "℆" U2106 has this alias space terminated to prevent conflicts with a union
-#   symbol "∪" U222A multikey sequence based on its nickname.
+#   "℆" U2106 has this alias space terminated (« ¦cu␣ ») to prevent conflicts
+#   with a multikey sequence for "∪" U222A based on the nickname « ¦cup ».
 #
 #   « ¦SO » sequences are used fo mathematical symbols, reverse sequences are
 #   used for circled letters, other casing pairs are used for German eszett and
@@ -14338,71 +14338,6 @@
 <Multi_key><section><grave><at>                                                                <v> : "ῲ" U1FF2 # GREEK SMALL LETTER OMEGA WITH VARIA AND YPOGEGRAMMENI
 #
 #
-# # GREEK_OR_CIRCLED&DOT_BELOW
-#   Ypogegrammeni
-#
-<dead_greek><dead_belowdot>                                                                <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                                    <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><at><section>                                                                   <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                                    <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><section><at>                                                                   <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                                    <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><at><section>                                                                   <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                                    <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<Multi_key><section><at>                                                                   <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
-<dead_greek><dead_belowdot>                                                         <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                             <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<Multi_key><at><section>                                                            <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                         <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                             <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<Multi_key><section><at>                                                            <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<Multi_key><at><exclam>                                                                    <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<Multi_key><at><section>                                                                   <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<Multi_key><exclam><at>                                                                    <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<Multi_key><section><at>                                                                   <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<Multi_key><at><section>                                                                       <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<Multi_key><section><at>                                                                       <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<Multi_key><at><section>                                                                       <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<Multi_key><section><at>                                                                       <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<Multi_key><at><section>                                                                       <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<Multi_key><section><at>                                                                       <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<Multi_key><at><section>                                                                       <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<Multi_key><section><at>                                                                       <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<Multi_key><at><section>                                                                       <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<Multi_key><section><at>                                                                       <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
-<dead_greek><dead_belowdot>                                                                    <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-<Multi_key><at><exclam>                                                                        <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-<Multi_key><at><section>                                                                       <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-<dead_belowdot><dead_greek>                                                                    <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-<Multi_key><exclam><at>                                                                        <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-<Multi_key><section><at>                                                                       <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
-#
-#
 # # GREEK_OR_CIRCLED&DIAERESIS
 #   Dialytika
 #
@@ -14710,6 +14645,71 @@
 <Multi_key><colon><grave><at>                                                                  <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
 <dead_grave><dead_diaeresis><dead_greek>                                                       <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
 <Multi_key><grave><colon><at>                                                                  <y> : "ῢ" U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+#
+#
+# # GREEK_OR_CIRCLED&DOT_BELOW
+#   Ypogegrammeni
+#
+<dead_greek><dead_belowdot>                                                                <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                                    <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at><section>                                                                   <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                                    <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><section><at>                                                                   <space> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                                    <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><at><section>                                                                   <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                                    <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<Multi_key><section><at>                                                                   <U200B> : "ͅ" U0345 # COMBINING GREEK YPOGEGRAMMENI
+<dead_greek><dead_belowdot>                                                         <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                             <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<Multi_key><at><section>                                                            <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                         <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                             <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<Multi_key><section><at>                                                            <nobreakspace> : "ͺ" U037A # GREEK YPOGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><at><exclam>                                                                    <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><at><section>                                                                   <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><exclam><at>                                                                    <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<Multi_key><section><at>                                                                   <U202F> : "ι" U1FBE # GREEK PROSGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<Multi_key><at><section>                                                                       <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<Multi_key><section><at>                                                                       <A> : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<Multi_key><at><section>                                                                       <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<Multi_key><section><at>                                                                       <a> : "ᾳ" U1FB3 # GREEK SMALL LETTER ALPHA WITH YPOGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<Multi_key><at><section>                                                                       <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<Multi_key><section><at>                                                                       <H> : "ῌ" U1FCC # GREEK CAPITAL LETTER ETA WITH PROSGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<Multi_key><at><section>                                                                       <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<Multi_key><section><at>                                                                       <h> : "ῃ" U1FC3 # GREEK SMALL LETTER ETA WITH YPOGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<Multi_key><at><section>                                                                       <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<Multi_key><section><at>                                                                       <V> : "ῼ" U1FFC # GREEK CAPITAL LETTER OMEGA WITH PROSGEGRAMMENI
+<dead_greek><dead_belowdot>                                                                    <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+<Multi_key><at><exclam>                                                                        <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+<Multi_key><at><section>                                                                       <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+<dead_belowdot><dead_greek>                                                                    <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+<Multi_key><exclam><at>                                                                        <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
+<Multi_key><section><at>                                                                       <v> : "ῳ" U1FF3 # GREEK SMALL LETTER OMEGA WITH YPOGEGRAMMENI
 #
 #
 # # End note about polytonic Greek

@@ -520,54 +520,105 @@
 #   See #*# RETROFLEX_HOOK
 #   See #*# DOT_ABOVE
 #
+#   Since v6.0.0, periodcentered is mapped at level 1 instead of backslash
+#   on B10 except on remapped variants. The backslash is supported on D04,
+#   level 3. As a consequence, for the symbol groups, periodcentered works
+#   as an alias base character.
+#
 <UEFD0>                                                                                <backslash> : "√" U221A # SQUARE ROOT math
 <Multi_key><numbersign>                                                                <backslash> : "√" U221A # SQUARE ROOT math
+<UEFD0>                                                                           <periodcentered> : "√" U221A # SQUARE ROOT math
+<Multi_key><numbersign>                                                           <periodcentered> : "√" U221A # SQUARE ROOT math
 <UEFD0><UEFD0>                                                                         <backslash> : "∛" U221B # CUBE ROOT math
 <Multi_key><numbersign><numbersign>                                                    <backslash> : "∛" U221B # CUBE ROOT math
+<UEFD0><UEFD0>                                                                    <periodcentered> : "∛" U221B # CUBE ROOT math
+<Multi_key><numbersign><numbersign>                                               <periodcentered> : "∛" U221B # CUBE ROOT math
 <UEFD0><3>                                                                             <backslash> : "∜" U221C # FOURTH ROOT math
 <Multi_key><numbersign><3>                                                             <backslash> : "∜" U221C # FOURTH ROOT math
 <UEFD0><KP_3>                                                                          <backslash> : "∜" U221C # FOURTH ROOT math
 <Multi_key><numbersign><KP_3>                                                          <backslash> : "∜" U221C # FOURTH ROOT math
 <UEFD0><UEFD0><UEFD0>                                                                  <backslash> : "∜" U221C # FOURTH ROOT math
 <Multi_key><numbersign><numbersign><numbersign>                                        <backslash> : "∜" U221C # FOURTH ROOT math
+<UEFD0><3>                                                                        <periodcentered> : "∜" U221C # FOURTH ROOT math
+<Multi_key><numbersign><3>                                                        <periodcentered> : "∜" U221C # FOURTH ROOT math
+<UEFD0><KP_3>                                                                     <periodcentered> : "∜" U221C # FOURTH ROOT math
+<Multi_key><numbersign><KP_3>                                                     <periodcentered> : "∜" U221C # FOURTH ROOT math
+<UEFD0><UEFD0><UEFD0>                                                             <periodcentered> : "∜" U221C # FOURTH ROOT math
+<Multi_key><numbersign><numbersign><numbersign>                                   <periodcentered> : "∜" U221C # FOURTH ROOT math
 <UEFD0><4>                                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><numbersign><4>                                                             <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <UEFD0><KP_4>                                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><numbersign><KP_4>                                                          <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                           <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                            <backslash> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<UEFD0><4>                                                                        <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><numbersign><4>                                                        <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<UEFD0><KP_4>                                                                     <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><numbersign><KP_4>                                                     <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                      <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                       <periodcentered> : "♻" U267B # BLACK UNIVERSAL RECYCLING SYMBOL emoji
 <UEFD0><5>                                                                             <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <Multi_key><numbersign><5>                                                             <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <UEFD0><KP_5>                                                                          <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <Multi_key><numbersign><KP_5>                                                          <backslash> : "☢" U2622 # RADIOACTIVE SIGN emoji
+<UEFD0><5>                                                                        <periodcentered> : "☢" U2622 # RADIOACTIVE SIGN emoji
+<Multi_key><numbersign><5>                                                        <periodcentered> : "☢" U2622 # RADIOACTIVE SIGN emoji
+<UEFD0><KP_5>                                                                     <periodcentered> : "☢" U2622 # RADIOACTIVE SIGN emoji
+<Multi_key><numbersign><KP_5>                                                     <periodcentered> : "☢" U2622 # RADIOACTIVE SIGN emoji
 <UEFD0><6>                                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><numbersign><6>                                                             <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
 <UEFD0><KP_6>                                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
 <Multi_key><numbersign><KP_6>                                                          <backslash> : "♼" U267C # RECYCLED PAPER SYMBOL
+<UEFD0><6>                                                                        <periodcentered> : "♼" U267C # RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><6>                                                        <periodcentered> : "♼" U267C # RECYCLED PAPER SYMBOL
+<UEFD0><KP_6>                                                                     <periodcentered> : "♼" U267C # RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><KP_6>                                                     <periodcentered> : "♼" U267C # RECYCLED PAPER SYMBOL
 <UEFD0><7>                                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
 <Multi_key><numbersign><7>                                                             <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
 <UEFD0><KP_7>                                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
 <Multi_key><numbersign><KP_7>                                                          <backslash> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<UEFD0><7>                                                                        <periodcentered> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><7>                                                        <periodcentered> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<UEFD0><KP_7>                                                                     <periodcentered> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
+<Multi_key><numbersign><KP_7>                                                     <periodcentered> : "♽" U267D # PARTIALLY-RECYCLED PAPER SYMBOL
 <UEFD0><8>                                                                             <backslash> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
 <Multi_key><numbersign><8>                                                             <backslash> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
 <UEFD0><KP_8>                                                                          <backslash> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
 <Multi_key><numbersign><KP_8>                                                          <backslash> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
+<UEFD0><8>                                                                        <periodcentered> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
+<Multi_key><numbersign><8>                                                        <periodcentered> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
+<UEFD0><KP_8>                                                                     <periodcentered> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
+<Multi_key><numbersign><KP_8>                                                     <periodcentered> : "⛯" U26EF # MAP SYMBOL FOR LIGHTHOUSE
 <UEFD0><9>                                                                             <backslash> : "♋" U264B # CANCER emoji
 <Multi_key><numbersign><9>                                                             <backslash> : "♋" U264B # CANCER emoji
 <UEFD0><KP_9>                                                                          <backslash> : "♋" U264B # CANCER emoji
 <Multi_key><numbersign><KP_9>                                                          <backslash> : "♋" U264B # CANCER emoji
+<UEFD0><9>                                                                        <periodcentered> : "♋" U264B # CANCER emoji
+<Multi_key><numbersign><9>                                                        <periodcentered> : "♋" U264B # CANCER emoji
+<UEFD0><KP_9>                                                                     <periodcentered> : "♋" U264B # CANCER emoji
+<Multi_key><numbersign><KP_9>                                                     <periodcentered> : "♋" U264B # CANCER emoji
 <UEFD0><0>                                                                             <backslash> : "⌫" U232B # ERASE TO THE LEFT
 <Multi_key><numbersign><0>                                                             <backslash> : "⌫" U232B # ERASE TO THE LEFT
 <UEFD0><KP_0>                                                                          <backslash> : "⌫" U232B # ERASE TO THE LEFT
 <Multi_key><numbersign><KP_0>                                                          <backslash> : "⌫" U232B # ERASE TO THE LEFT
+<UEFD0><0>                                                                        <periodcentered> : "⌫" U232B # ERASE TO THE LEFT
+<Multi_key><numbersign><0>                                                        <periodcentered> : "⌫" U232B # ERASE TO THE LEFT
+<UEFD0><KP_0>                                                                     <periodcentered> : "⌫" U232B # ERASE TO THE LEFT
+<Multi_key><numbersign><KP_0>                                                     <periodcentered> : "⌫" U232B # ERASE TO THE LEFT
 <UEFD0><1>                                                                             <backslash> : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><numbersign><1>                                                             <backslash> : "®" U00AE # REGISTERED SIGN emoji
 <UEFD0><KP_1>                                                                          <backslash> : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><numbersign><KP_1>                                                          <backslash> : "®" U00AE # REGISTERED SIGN emoji
+<UEFD0><1>                                                                        <periodcentered> : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><numbersign><1>                                                        <periodcentered> : "®" U00AE # REGISTERED SIGN emoji
+<UEFD0><KP_1>                                                                     <periodcentered> : "®" U00AE # REGISTERED SIGN emoji
+<Multi_key><numbersign><KP_1>                                                     <periodcentered> : "®" U00AE # REGISTERED SIGN emoji
 <UEFD0><2>                                                                             <backslash> : "∖" U2216 # SET MINUS math
 <Multi_key><numbersign><2>                                                             <backslash> : "∖" U2216 # SET MINUS math
 <UEFD0><KP_2>                                                                          <backslash> : "∖" U2216 # SET MINUS math
 <Multi_key><numbersign><KP_2>                                                          <backslash> : "∖" U2216 # SET MINUS math
+<UEFD0><2>                                                                        <periodcentered> : "∖" U2216 # SET MINUS math
+<Multi_key><numbersign><2>                                                        <periodcentered> : "∖" U2216 # SET MINUS math
 #
 #
 # # D05 asciitilde
@@ -646,17 +697,17 @@
 #
 # # D06 at
 #
-#   Since v1.7.0, dead_greek is also mapped at level 3 instead of the at sign
-#   on D06, level 3. The at sign is supported on E11, level 1, making its D06,
-#   level 3 instance redundant, so that this position is available for an easy
-#   dead_greek duplicate. As a consequence, for the symbol groups, dead_greek
-#   must work as an alias base character.
-#
 #   Group 1 has "◌" U25CC as the usual pick for the dotted circle, a generic
 #   base character for combining diacritics in documentation.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=80
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=132&zoom=100,0,410
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=950
+#
+#   Since v1.7.0, dead_greek is also mapped at level 3 instead of the at sign
+#   on D06, level 3. The at sign is supported on E11, level 1, making its D06,
+#   level 3 instance redundant, so that this position is available for an easy
+#   dead_greek duplicate. As a consequence, for the symbol groups, dead_greek
+#   works as an alias base character.
 #
 <UEFD0>                                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
 <Multi_key><numbersign>                                                                       <at> : "◌" U25CC # DOTTED CIRCLE, generic base character for combining diacritics
@@ -763,8 +814,8 @@
 #   See #   Alternative keysyms
 #
 #   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
-#   apostrophe and rightsinglequotemark. "ʻ" U02BB is similarly supported in
-#   group 1 of grave.
+#   apostrophe and rightsinglequotemark. Its turned counterpart "ʻ" U02BB is
+#   similarly supported in group 1 of grave.
 #   See # # B06 grave
 #
 <UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -777,90 +828,90 @@
 <Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "⊂" U2282 # SUBSET OF math
 <UEFD0><3>                                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><3>                                                            <apostrophe> : "⊃" U2283 # SUPERSET OF math
-<UEFD0><3>                                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
-<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><KP_3>                                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><KP_3>                                                         <apostrophe> : "⊃" U2283 # SUPERSET OF math
-<UEFD0><KP_3>                                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
-<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><UEFD0><UEFD0>                                                                 <apostrophe> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><numbersign><numbersign>                                       <apostrophe> : "⊃" U2283 # SUPERSET OF math
+<UEFD0><3>                                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<UEFD0><KP_3>                                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
+<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "⊃" U2283 # SUPERSET OF math
 <UEFD0><4>                                                                            <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><4>                                                            <apostrophe> : "∪" U222A # UNION math
-<UEFD0><4>                                                                  <rightsinglequotemark> : "∪" U222A # UNION math
-<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><KP_4>                                                                         <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∪" U222A # UNION math
-<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∪" U222A # UNION math
-<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                          <apostrophe> : "∪" U222A # UNION math
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                           <apostrophe> : "∪" U222A # UNION math
+<UEFD0><4>                                                                  <rightsinglequotemark> : "∪" U222A # UNION math
+<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∪" U222A # UNION math
+<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∪" U222A # UNION math
+<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><UEFD0><UEFD0><UEFD0>                                                <rightsinglequotemark> : "∪" U222A # UNION math
 <Multi_key><numbersign><numbersign><numbersign><numbersign>                 <rightsinglequotemark> : "∪" U222A # UNION math
 <UEFD0><5>                                                                            <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><5>                                                            <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
-<UEFD0><5>                                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
-<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><KP_5>                                                                         <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><KP_5>                                                         <apostrophe> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<UEFD0><5>                                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
+<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><KP_5>                                                               <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <Multi_key><numbersign><KP_5>                                               <rightsinglequotemark> : "⤵" U2935 # ARROW POINTING RIGHTWARDS THEN CURVING DOWNWARDS emoji
 <UEFD0><6>                                                                            <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <Multi_key><numbersign><6>                                                            <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
-<UEFD0><6>                                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
-<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <UEFD0><KP_6>                                                                         <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <Multi_key><numbersign><KP_6>                                                         <apostrophe> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<UEFD0><6>                                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
+<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <UEFD0><KP_6>                                                               <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <Multi_key><numbersign><KP_6>                                               <rightsinglequotemark> : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS emoji
 <UEFD0><7>                                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><7>                                                            <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
-<UEFD0><7>                                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
-<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><KP_7>                                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><KP_7>                                                         <apostrophe> : "⚭" U26AD # MARRIAGE SYMBOL
+<UEFD0><7>                                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
+<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><KP_7>                                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <Multi_key><numbersign><KP_7>                                               <rightsinglequotemark> : "⚭" U26AD # MARRIAGE SYMBOL
 <UEFD0><8>                                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><8>                                                            <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
-<UEFD0><8>                                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
-<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><KP_8>                                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><KP_8>                                                         <apostrophe> : "⚱" U26B1 # FUNERAL URN emoji
+<UEFD0><8>                                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
+<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><KP_8>                                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <Multi_key><numbersign><KP_8>                                               <rightsinglequotemark> : "⚱" U26B1 # FUNERAL URN emoji
 <UEFD0><9>                                                                            <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><9>                                                            <apostrophe> : "♎" U264E # LIBRA emoji
-<UEFD0><9>                                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
-<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><KP_9>                                                                         <apostrophe> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><KP_9>                                                         <apostrophe> : "♎" U264E # LIBRA emoji
+<UEFD0><9>                                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
+<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><KP_9>                                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <Multi_key><numbersign><KP_9>                                               <rightsinglequotemark> : "♎" U264E # LIBRA emoji
 <UEFD0><0>                                                                            <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <Multi_key><numbersign><0>                                                            <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
-<UEFD0><0>                                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
-<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <UEFD0><KP_0>                                                                         <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <Multi_key><numbersign><KP_0>                                                         <apostrophe> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<UEFD0><0>                                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
+<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <UEFD0><KP_0>                                                               <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <Multi_key><numbersign><KP_0>                                               <rightsinglequotemark> : "⏫" U23EB # BLACK UP-POINTING DOUBLE TRIANGLE emoji, fast up button
 <UEFD0><1>                                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key><numbersign><1>                                                            <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<UEFD0><1>                                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <UEFD0><KP_1>                                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key><numbersign><KP_1>                                                         <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><1>                                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <UEFD0><KP_1>                                                               <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key><numbersign><KP_1>                                               <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <UEFD0><2>                                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><2>                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><2>                                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <UEFD0><KP_2>                                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><KP_2>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><2>                                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <UEFD0><KP_2>                                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><KP_2>                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 #
@@ -1317,12 +1368,6 @@
 #   See #   Hyphens
 #   See # # B05 equal
 #
-#   Since the four basic arithmetic operators are on level-5 live key positions
-#   thanks to the level-5 numpad, for maximum usability the typographic aliases
-#   are in group 3 rather than in group 2, used instead for the heavy operators
-#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
-#   See dispocla.cpp ## Level-5 numpad
-#
 #   In Unicode CLDR, "➖" U2796 HEAVY MINUS SIGN is the range syntax mark.
 #   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L72
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L72
@@ -1706,11 +1751,12 @@
 #
 # # B01 slash
 #
-#   Since the four basic arithmetic operators are on level-5 live key positions
-#   thanks to the level-5 numpad, for maximum usability the typographic aliases
-#   are in group 3 rather than in group 2, used instead for the heavy operators
-#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
-#   See # # C05 minus
+#   As the four basic arithmetic operators and their three ASCII aliases are
+#   on level-5 live key positions thanks to the level-5 numpad, for usability,
+#   two out of the three typographic operators are in group 3 rather than
+#   in group 2, used for the heavy operators instead, consistently with the
+#   heavy angle brackets "❰" U2770, "❱" U2771.
+#   See # # B02 asterisk
 #   See dispocla.cpp ## Level-5 numpad
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
@@ -1771,11 +1817,12 @@
 #
 # # B02 asterisk
 #
-#   Since the four basic arithmetic operators are on level-5 live key positions
-#   thanks to the level-5 numpad, for maximum usability the typographic aliases
-#   are in group 3 rather than in group 2, used instead for the heavy operators
-#   consistently with the heavy angle brackets "❰" U2770, "❱" U2771.
-#   See # # C05 minus
+#   As the four basic arithmetic operators and their three ASCII aliases are
+#   on level-5 live key positions thanks to the level-5 numpad, for usability,
+#   two out of the three typographic operators are in group 3 rather than
+#   in group 2, used for the heavy operators instead, consistently with the
+#   heavy angle brackets "❰" U2770, "❱" U2771.
+#   See # # B01 slash
 #   See dispocla.cpp ## Level-5 numpad
 #
 <UEFD0>                                                                                 <asterisk> : "✗" U2717 # BALLOT X
@@ -2391,6 +2438,11 @@
 #   easily emulated on macOS. Japanese keyboards have left and right Oyayubi
 #   keys that made it into the Windows layout driver source code by Ian James
 #   as LOYA and ROYA, but not into ISO/IEC 9995.
+#
+#   Since v1.0.0, section is mapped at level 3 of B10, consistently with the
+#   legacy keycap and in synergy with the level-3 digits. The exclam is mapped
+#   here in ASCII mode since v6.0.0. As a consequence, for the symbol groups,
+#   section works as an alias base character.
 #
 <UEFD0>                                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><numbersign>                                                                   <exclam> : "¡" U00A1 # INVERTED EXCLAMATION MARK
@@ -3703,9 +3755,10 @@
 #   The base characters are ordered following the ASCII map of the keyboard
 #   layouts, stable across all locale variants and remapped variants, rather
 #   than by code point, and the aliases are ordered below the ASCII character
-#   they stand for: rightsinglequotemark for apostrophe, EuroSign for quotedbl,
-#   section for exclam. This order is most beneficial for development and
-#   maintenance, as it is consistent with the actual user experience.
+#   they stand for: EuroSign for quotedbl, periodcentered for backslash,
+#   dead_greek for at, rightsinglequotemark for apostrophe, section for exclam.
+#   This order consistent with the actual user experience is most beneficial
+#   for development and maintenance.
 #   See # # Proposed dead key layout for AZERTY keyboards
 #   See #   Dead key layout overview
 #
@@ -3739,6 +3792,12 @@
 <UEFD6><dead_doubleacute>                                                              <backslash> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><quotedbl>                                                       <backslash> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><EuroSign>                                                       <backslash> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<dead_doubleacute><UEFD6>                                                         <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><quotedbl><backslash>                                                  <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><EuroSign><backslash>                                                  <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<UEFD6><dead_doubleacute>                                                         <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><backslash><quotedbl>                                                  <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><backslash><EuroSign>                                                  <periodcentered> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <dead_doubleacute><UEFD6>                                                             <asciitilde> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><quotedbl><backslash>                                                      <asciitilde> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><EuroSign><backslash>                                                      <asciitilde> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -3751,6 +3810,12 @@
 <UEFD6><dead_doubleacute>                                                                     <at> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><quotedbl>                                                              <at> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><backslash><EuroSign>                                                              <at> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<dead_doubleacute><UEFD6>                                                             <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><quotedbl><backslash>                                                      <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><EuroSign><backslash>                                                      <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<UEFD6><dead_doubleacute>                                                             <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><backslash><quotedbl>                                                      <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
+<Multi_key><backslash><EuroSign>                                                      <dead_greek> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <dead_doubleacute><UEFD6>                                                             <apostrophe> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><quotedbl><backslash>                                                      <apostrophe> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
 <Multi_key><EuroSign><backslash>                                                      <apostrophe> : "🔜" U1F51C # SOON WITH RIGHTWARDS ARROW ABOVE emoji
@@ -4435,11 +4500,6 @@
 #
 #   Group 1 of the base alphabet: Latin letters, symbols and punctuation
 #
-#   These base letters are also used in the dead key based input methods for
-#   composed letters, where they need to be synced whenever this list is edited
-#   (as for v4.19.0 on 2025-01-25).
-#   See # # Composed letters for languages in Togo
-#
 #   Letters with hook "Ƒ" U0191, "ƒ" U0192, "Ɲ" U019D, "ɲ" U0272, "Ʋ" U01B2,
 #   "ʋ" U028B are supported for convenience as a subset of those supported by
 #   dead_hook. "Ʋ" U01B2, "ʋ" U028B with "U", "u" as a base character is a
@@ -4451,6 +4511,15 @@
 #   group 2.
 #   https://en.wikipedia.org/wiki/Bambara_language
 #   See #*# HOOK
+#
+#
+#   Composed letters for languages in Togo
+#
+#   These base letters are also used for composed letters in the diacritical
+#   dead keys, where they need to be synced whenever this list is edited (as
+#   it was for v4.19.0 on 2025-01-25).
+#   See Languages in Togo
+#   See # # Composed letters for languages in Togo
 #
 #
 #   VERSICLE and RESPONSE
