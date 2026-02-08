@@ -29,7 +29,9 @@ Correction et simplification du contenu des touches mortes.
 	* Réfléchi : Redonder "ʕ" U+0295 par "q", "Q" à la place de "꟎" U+A7CE, "꟏" U+A7CF, qui vont dans le groupe 1, et le supprimer par "G". compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
 	* Tilde et perluète : Redonder  "⃠" U+20E0 par "·" U+00B7. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 	* Grec-ou-cerclé > Cerclé : Redonder "⦸" U+29B8 par "·" U+00B7. ibidem
-	* Accent aigu groupe 1 : Redonder "Ŋ́", "ŋ́", "Ɔ́", "ɔ́". ibidem
+	* Accent aigu :
+		* Redonder "▿" U+25BF par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
+		* Groupe 1 : Redonder "Ŋ́", "ŋ́", "Ɔ́", "ɔ́". compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 	* Rayé : Redonder "ʢ" U+02A2 par "·" U+00B7. ibidem
 	* Cornu :
 		* Redonder "⃥" U+20E5 par "·" U+00B7. ibidem
@@ -49,11 +51,15 @@ Correction et simplification du contenu des touches mortes.
 		* Macron et tilde : Compléter les séquences de "Ū̃", "ū̃". ibidem
 		* Macron et accent aigu : Compléter les séquences de "᷄" U+1DC4, "Ḗ" U+1E16, "ḗ" U+1E17, "Ṓ" U+1E52, "ṓ" U+1E53, "Ū́", "ū́". ibidem
 		* Macron souscrit : Redonder "⦥" U+29A5 par "·" U+00B7. ibidem
+	* Accent circonflexe : Redonder "⍽" U+237D par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
 	* Hatchek :
-		* Compléter les séquences de "Ʊ̌". ibidem
+		* Compléter les séquences de "Ʊ̌". compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 		* Groupe 1 : Compléter les séquences de "⸷" U+2E37, "Ǯ" U+01EE, "ǯ" U+01EF. ibidem
-	* Drapeau : Compléter les séquences de "⊇" U+2287, "⊆" U+2286. ibidem
+	* Drapeau :
+		* Compléter les séquences de "⊇" U+2287, "⊆" U+2286. ibidem
+		* Redonder "🏴󠁧󠁢󠁳󠁣󠁴󠁿" par la touche morte grec-ou-cerclé. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5)
 	* Cédille : Supprimer "ꭕ" U+AB55 et "ꭙ" U+AB59, qui vont dans cornu. compose-2.yml [044c99d](https://github.com/dispoclavier/nouvel-azerty/commit/044c99d30858177f380a0ffd55e584a69ed4b796)
+	* Tréma : Redonder "▾" U+25BE par la touche morte grec-ou-cerclé. compose-2.yml [21391b7](https://github.com/dispoclavier/nouvel-azerty/commit/21391b76bf27d010fb1f61fb03aa14681e19f101)
 * Documentation :
 	* Tableaux de touches mortes :
 		* Compléter avec les lettres pour les langues au Togo, qui étaient dans un tableau dédié. compose-2.yml [7af2bd2](https://github.com/dispoclavier/nouvel-azerty/commit/7af2bd29e29e1de1632f99ee40accc923b783cf5), generate-deadkey-tables [59286c4](https://github.com/dispoclavier/nouvel-azerty/commit/59286c4fda55223407cb208da8637a0a514970bc), [6c0af06](https://github.com/dispoclavier/nouvel-azerty/commit/6c0af062f9d3a662ad91daf0752576135c252e27)
