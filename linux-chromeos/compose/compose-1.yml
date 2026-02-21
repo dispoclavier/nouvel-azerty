@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.2.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.3.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -917,12 +917,30 @@
 #
 #   <UEFA0> : For ease of maintenance, this is defined in the file header.
 #
+#   This string is mapped at level 3 of the Escape key.
 #
-# # Output of keyboard layout variant name
+#   The version number is a period-separated concatenation of 4 numbers. The
+#   third does not number patches only, and the build number is part of the
+#   string because this file is also the source code of the dead key content as
+#   it is transpiled to the sources of the layout drivers for the Windows OS.
+#   https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/compose/readme.md
+#   See Legal note
+#
+#   Version v1.0.0 was released on 2023-07-14T0423+0200.
+#   https://github.com/dispoclavier/nouvel-azerty/releases/tag/v1.0.0
+#
+#
+# # Output of keyboard layout variant descriptor
+#
+#   This string is mapped at level 4 of the Escape key.
 #
 #   The Belgian layout variant comes without its remapped variant because
 #   the point in having a Belgian variant is a reasonable amount of sideways
 #   compatibility with the Belgian AZERTY, and remapping defeats this point.
+#
+#   These descriptors are output with the layout name and a trailing space for
+#   convenience.
+#   See #   End of line comments
 #
 <UEFA1> : "Français France disposition de clavier semi-automatique – kbfrFRs " #
 <UEFA2> : "Breton et français disposition de clavier semi-automatique – kbbrFRs " #
@@ -2224,19 +2242,19 @@
 #
 # # Spaces
 #
-#   Since all important space characters are supported on live keys as the only
-#   acceptable scheme from a user experience point of view, for no-break space
-#   and no-break thin space, dead key based input methods, including multikey,
-#   are not required.
+#   Given that all important space characters are supported on live keys as the
+#   only acceptable scheme from a user experience point of view, for no-break
+#   space and no-break thin space, dead key based input methods, including
+#   multikey, are not required.
 #   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #   U00A0 NO-BREAK SPACE is supported in en_US.UTF-8/Compose, by « ¦␣␣ ». But
-#   the equally or even more useful U202F NARROW NO-BREAK SPACE is not. Since
-#   both are heavily used in French and consistently supported on live keys,
-#   and moreover, the multikey sequence for U00A0 <Multi_key><space><space>
-#   conflicts with every single math symbol sequence distinguished by multiple
-#   leading spaces, sideways compatible support for U00A0 by multikey needs to
-#   be dropped as impossible.
+#   the equally or even more useful U202F NARROW NO-BREAK SPACE is not. Both
+#   are heavily used in French and consistently supported on live keys. Also,
+#   the multikey sequence for U00A0 <Multi_key><space><space> conflicts with
+#   every single math symbol sequence distinguished by multiple leading spaces.
+#   As a consequence, sideways compatible support for U00A0 by multikey needs
+#   to be dropped as impossible.
 #
 #   U2008 PUNCTUATION SPACE is supported in en_US.UTF-8/Compose by « ¦␣. »,
 #   but the matching U2007 FIGURE SPACE, that is used with the same rationale
@@ -2479,6 +2497,7 @@
 #   or even only an easy-access dead key input method like in group 1 of U002D.
 #   Else, U2010 would screw things up, from undeliverable email to broken links
 #   to parse errors.
+#   See #   Keyboard support for hyphens
 #
 #
 #   Discussion of the hyphen encoding
@@ -2556,10 +2575,11 @@
 #   Indeed ANSI parenthesized the "Minus" part, as it was not an intrinsic part
 #   of the character name, only an indication about usage in practice.
 #   https://www.unicode.org/L2/Historical/Unicode-Pre1.0-Draft-Sept27-1990.txt
-#   See #   Discussion of the hyphen encoding
 #
 #   In October 2022, Unicode stopped using Lucida Sans Unicode in the tables of
-#   its Standard Annexes and Technical Reports. E.g. in UAX #14:
+#   its Standard Annexes and Technical Reports. And Arial Unicode MS altogether
+#   in the process, as a matter of doing away with vendor specifics throughout.
+#   The outcome of this style sheet change is exemplified in UAX #14:
 #
 #   * Before (October 5, 2022):
 #
@@ -2568,6 +2588,7 @@
 #          font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial, sans-serif;
 #          […] }
 #
+#   https://web.archive.org/web/20221005223038cs_/https://www.unicode.org/reports/reports-v2.css
 #   https://web.archive.org/web/20221005223038/https://www.unicode.org/reports/tr14/
 #
 #   * After (October 19, 2022):
@@ -2579,6 +2600,7 @@
 #
 #   This edit was not logged in the header (still “Last edited: 2015-04-06 AF,
 #   2015-04-15 KW”).
+#   https://web.archive.org/web/20221019184912cs_/https://www.unicode.org/reports/reports-v2.css
 #   https://web.archive.org/web/20221019184912/http://www.unicode.org/reports/tr14/
 #
 #   This happened the month after the Unicode Consortium moved its headquarters
@@ -2598,7 +2620,7 @@
 #   for the purpose of getting digits on unshifted keys in an “ASCII mode” that
 #   contrasts with “French mode”. Featuring the Unicode HYPHEN in locale mode
 #   would be prone to raising issues and triggering angry feedback about that
-#   “fake hyphen” looking like an ASCII hyphen in almost all fonts without
+#   “fake hyphen” looking like an ASCII hyphen in almost all fonts, but not
 #   working as expected.
 #
 #   As a consequence, keyboard layout design should not take this extra hyphen
@@ -2612,6 +2634,11 @@
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #   See # # Fallback input methods for HORIZONTAL BAR
+#
+#   In any event, as a matter of leaving nobody stranded, HYPHEN has an easy,
+#   two-handed shortcut in dead_acute by minus, since v6.2.3 (2026-02-21). This
+#   works on the standard layout (D12, E06) and on remapped variants (E04, C12)
+#   likewise.
 #
 #   By contrast, "‑" U2011 NON-BREAKING HYPHEN is so important that it is on
 #   live key E06, level 2.
@@ -5375,12 +5402,13 @@
 #   backslash to diagonal stems, while the pipe is required for an actual bar,
 #   as in "⤆" U2906, "⤇" U2907, "↥" U21A5, "↧" U21A7.
 #
-#   Since double arrows also occur in all eight directions, non-horizontal ones
-#   use appended equal in conjunction with \, !, / for the few existing, namely
-#   the basic "⇑" U21D1, "⇓" U21D3, "⇕" U21D5, "⇖" U21D6, "⇗" U21D7, "⇘" U21D8
-#   and "⇙" U21D9. As a result, "⇕" U21D5 is input like "↕" U2195 with appended
-#   equal. For consistency with triple and quadruple arrows, appended digit 2
-#   is also supported.
+#   As double arrows also occur in all eight directions, the non-horizontal
+#   double arrows use appended equal in conjunction with \, !, /: "⇑" U21D1,
+#   "⇓" U21D3, "⇕" U21D5, "⇖" U21D6, "⇗" U21D7, "⇘" U21D8 and "⇙" U21D9.
+#   As a consequence, "⇕" U21D5 is input like "↕" U2195 with appended equal.
+#
+#   For consistency with triple and quadruple arrows, appended digit 2 is also
+#   supported.
 #
 #   Triple and quadruple arrows use appended digit 3 or 4, as for "⇛" U21DB,
 #   "⤊" U290A, "⤋" U290B, "⟰" U27F0, "⟱" U27F1. In this role, digits are
@@ -9605,9 +9633,9 @@
 #
 # # LaTeX codes
 #
-#   Since the maximum number of keysyms is 9, including the initial Multi_key
-#   press, many LaTeX commands need to be truncated to make working multikey
-#   sequences out of them, limiting this input method’s usability.
+#   Under the keysym maximum number constraint of 9, including the initial
+#   Multi_key press, many LaTeX commands need to be truncated to make working
+#   multikey sequences out of them, limiting this input method’s usability.
 #
 #   Most short sequences require space termination to prevent conflicts with
 #   longer sequences starting the same way. This is consistent with the way
