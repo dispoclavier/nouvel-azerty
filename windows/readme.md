@@ -6,13 +6,13 @@ Ces modes d’emploi complètent à leur tour la page web [Un nouvel AZERTY](htt
 
 ## Installation
 
-Télécharger le dossier « Un-nouvel-AZERTY-Windows-[version].zip » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
+Télécharger le dossier « Un-nouvel-AZERTY-Windows-[version].zip » ou « Un-nouvel-AZERTY-Windows-variantes-[version].zip » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
 ## Utilisation
 
 Les fonctionnalités implémentables sous tous les systèmes d’exploitation pris en charge sont présentées dans le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
 
-Ce mode d’emploi complémentaire présente uniquement ce qui est particulier à Windows.
+Ce mode d’emploi complémentaire présente ce qui est particulier à Windows.
 
 ### Touches
 
@@ -22,7 +22,7 @@ Ce nouvel AZERTY permet d’utiliser toutes les modificatrices que Windows prend
 
 Quitte à alerter les personnes utilisatrices que les touches mortes façon Windows dysfonctionnent, autant mettre en valeur les points forts de Windows, car il ne s’agit pas de descendre en flammes un outil de travail incontournable. Il faut tirer le meilleur parti possible de l’existant, qui contrairement à d’autres parties de Windows n’est pas susceptible d’être amélioré à ce stade, ne serait-ce que pour déboguer le plus gros.
 
-C’est pourquoi, afin de ne pas priver de fonctionnalités les personnes intéressées, on ne saurait faire l’économie des modificatrices AltLe et AltQr, ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode, et qui facilitent énormément la saisie des émojis drapeaux et de plusieurs alphabets mathématiques préformatés.
+C’est pourquoi, afin de ne pas priver de fonctionnalités les personnes intéressées, on ne saurait faire l’économie des modificatrices AltEm et AltMa, ajoutées sur les bascules Verrouillage Capitales et Verrouillage Mode, et qui facilitent énormément la saisie des émojis drapeaux et de plusieurs alphabets mathématiques préformatés.
 
 ##### AltGr
 
@@ -32,50 +32,50 @@ D’habitude, sous Windows, AltGr est Contrôle + Alt et interfère avec les
 
 Comme AltFr est sur la touche ISO entre Majuscule gauche et ⟦W⟧, et que cette touche manque sur les agencements ANSI, on peut mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite. Pour ce faire, des fichiers de redisposition de codes matériels de touches se trouvent dans le dossier redispositions\\.
 
-##### AltLe
+##### AltEm
 
-"Le" dans le nom de la nouvelle modificatrice « AltLe » signifie « Lettres émojis ».
+"Le" dans le nom de la nouvelle modificatrice « AltEm » signifie « Lettres émojis ».
 
-AltLe s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltLe est active.
+AltEm s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltEm est active.
 
 On peut alors saisir [tous les drapeaux nationaux](https://unicode.org/emoji/charts/emoji-list.html#country-flag) par leur [code ISO à deux lettres](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) ou AC 🇦🇨, CP 🇨🇵, DG 🇩🇬, EA 🇪🇦, EU 🇪🇺, IC 🇮🇨, TA 🇹🇦, UN 🇺🇳, XK 🇽🇰.
 
 Plusieurs drapeaux – national, supranational, international – sont aussi précomposés :
 
-* France 🇫🇷 : Maj + AltLe + ⟦.;⟧ ;
-* Union Européenne 🇪🇺 : Maj + AltLe + ⟦/:⟧ ;
-* Nations Unies 🇺🇳 : Maj + AltLe + ⟦§!⟧.
+* France 🇫🇷 : Maj + AltEm + ⟦.;⟧ ;
+* Union Européenne 🇪🇺 : Maj + AltEm + ⟦/:⟧ ;
+* Nations Unies 🇺🇳 : Maj + AltEm + ⟦§!⟧.
 
 Les trois seuls drapeaux régionaux, [codés différemment](https://blog.unicode.org/2022/03/the-past-and-future-of-flag-emoji.html), sont précomposés :
 
-* Angleterre 🏴󠁧󠁢󠁥󠁮󠁧󠁿 : Maj + AltLe + ⟦£$¤⟧ ;
-* Écosse 🏴󠁧󠁢󠁳󠁣󠁴󠁿 : Maj + AltLe + ⟦+=}⟧ ;
-* Pays de Galles 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Maj + AltLe + ⟦µ*⟧.
+* Angleterre 🏴󠁧󠁢󠁥󠁮󠁧󠁿 : Maj + AltEm + ⟦£$¤⟧ ;
+* Écosse 🏴󠁧󠁢󠁳󠁣󠁴󠁿 : Maj + AltEm + ⟦+=}⟧ ;
+* Pays de Galles 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Maj + AltEm + ⟦µ*⟧.
 
 On peut aussi écrire en 🇱⁠🇪⁠🇹⁠🇹⁠🇷⁠🇪⁠🇸⁠ 🇪⁠🇲⁠🇴⁠🇯⁠🇮⁠🇸 non accentuées⁠. Deux possibilités pour cela :
 
 * Entre deux lettres, appuyer sur la barre d’espace.
-* Écrire en Maj + AltLe, en utilisant pour la lettre dans la colonne 2 de chaque rangée la touche après la dernière lettre de cette rangée, et appuyer sur la barre d’espace entre deux mots (sans avoir besoin de lever les doigts de Maj + AltLe).
+* Écrire en Maj + AltEm, en utilisant pour la lettre dans la colonne 2 de chaque rangée la touche après la dernière lettre de cette rangée, et appuyer sur la barre d’espace entre deux mots (sans avoir besoin de lever les doigts de Maj + AltEm).
 
-##### AltQr
+##### AltMa
 
-"Qr" dans le nom de la nouvelle modificatrice « AltQr » signifie « Quick response » comme dans les QR codes.
+"Ma" dans le nom de la nouvelle modificatrice « AltMa » signifie « Mathématique » par rapport aux lettres préformatées à usage mathématique, souvent détournées pour simuler de la mise en forme en texte brut.
 
-AltQr s’ajoute sur VerrMod. Tant que l’on appuie sur VerrMod, AltQr est active.
+AltMa s’ajoute sur VerrMod. Tant que l’on appuie sur VerrMod, AltMa est active.
 
 On peut alors saisir les lettres symboles mathématiques italiques, pour 𝑒́𝑐𝑟𝑖𝑟𝑒 𝑒𝑛 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒 même là où la mise en forme n’est pas prise en charge, avec des diacritiques ajoutés par un appui sur la touche morte suivi d’espace :
 
-1. Symbole "𝑒" : AltQr + ⟦E⟧ ;
+1. Symbole "𝑒" : AltMa + ⟦E⟧ ;
 2. Accent aigu, étape 1 : ⟦£$¤⟧ ;
-3. Accent aigu, étape 2 : Espace.
+3. Accent aigu, étape 2 : ⟦Espace⟧.
 
-En AltFr + AltQr se trouvent les lettres symboles mathématiques calligraphiques grasses, pour 𝓮́𝓬𝓻𝓲𝓻𝓮 𝓮𝓷 𝓮́𝓬𝓻𝓲𝓽𝓾𝓻𝓮 𝓬𝓾𝓻𝓼𝓲𝓿𝓮 𝓬𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝓲𝓺𝓾𝓮. (Grasses plutôt que normales parce que, codées dans un seul bloc, elles sont uniformes.)
+En AltFr + AltMa se trouvent les lettres symboles mathématiques calligraphiques grasses, pour 𝓮́𝓬𝓻𝓲𝓻𝓮 𝓮𝓷 𝓮́𝓬𝓻𝓲𝓽𝓾𝓻𝓮 𝓬𝓾𝓻𝓼𝓲𝓿𝓮 𝓬𝓪𝓵𝓵𝓲𝓰𝓻𝓪𝓹𝓱𝓲𝓺𝓾𝓮. (Grasses plutôt que normales parce que, codées dans un seul bloc, elles sont uniformes.)
 
-En AltGr + AltQr se trouvent les lettres symboles mathématiques ajourées, pour 𝕖́𝕔𝕣𝕚𝕣𝕖 𝕖𝕟 𝕒𝕛𝕠𝕦𝕣𝕖́.
+En AltGr + AltMa se trouvent les lettres symboles mathématiques ajourées, pour 𝕖́𝕔𝕣𝕚𝕣𝕖 𝕖𝕟 𝕒𝕛𝕠𝕦𝕣𝕖́.
 
-En AltGr + AltFr + AltQr se trouvent les lettres symboles mathématiques grasses sans empattements, pour 𝗲́𝗰𝗿𝗶𝗿𝗲 𝗲𝗻 𝗴𝗿𝗮𝘀.
+En AltGr + AltFr + AltMa se trouvent les lettres symboles mathématiques grasses sans empattements, pour 𝗲́𝗰𝗿𝗶𝗿𝗲 𝗲𝗻 𝗴𝗿𝗮𝘀.
 
-La combinaison AltLe + AltQr fonctionne mal, mais on peut y utiliser les minuscules mathématiques calligraphiques normales, souvent incohérentes dans les polices de caractères car codées dans deux blocs. Toutes leurs majuscules sont en AltGr + AltLe + AltQr, et elles sont aussi en Maj + AltLe + AltQr, sauf que celles sur ⟦Z⟧, ⟦S⟧ et ⟦X⟧ sont sur les touches après ⟦P⟧, ⟦M⟧ et ⟦N⟧. (La raison est qu’en Maj + AltLe, la colonne 02 est boguée.)
+La combinaison AltEm + AltMa fonctionne mal, mais on peut y utiliser les minuscules mathématiques calligraphiques normales, souvent incohérentes dans les polices de caractères car codées dans deux blocs. Toutes leurs majuscules sont en AltGr + AltEm + AltMa, et elles sont aussi en Maj + AltEm + AltMa, sauf que celles sur ⟦Z⟧, ⟦S⟧ et ⟦X⟧ sont sur les touches après ⟦P⟧, ⟦M⟧ et ⟦N⟧. (La raison est qu’en Maj + AltEm, la colonne 02 est boguée.)
 
 #### Bascules
 
@@ -119,25 +119,25 @@ Les touches mortes diacritiques ou transformationnelles émettent un demi-codet 
 
 Par exemple, en plus d’être sur touche vive, le "q" minuscule en exposant "𐞥" U+107A5 est dans la touche morte exposant. Pour le saisir, il faut appuyer deux fois sur la touche morte exposant sur Maj + AltGr + ⟦A⟧, entrecoupées d’un appui sur la barre d’espace, et ensuite appuyer sur ⟦Q⟧. Soit en détail :
 
-1. Maj + AltGr + [A]
-2. Maj + AltGr + [Espace]
-3. Maj + AltGr + [A]
-4. [Q]
+1. Maj + AltGr + ⟦A⟧
+2. Maj + AltGr + ⟦Espace⟧
+3. Maj + AltGr + ⟦A⟧
+4. ⟦Q⟧
 
 Les caractères pris en charge par les touches mortes de ce nouvel AZERTY nécessitent 8 demi-codets hauts, ainsi répartis sur les touches mortes :
 
-* U+D801 exposant : lettres modificatives en exposant
-* U+D807 tourné : "𑾰" U+11FB0 LETTRE LISSOU YHA
-* U+D835 groupe : symboles mathématiques alphanumériques
-* U+D837 rayé, brève, hameçon et autres touches mortes : lettres latines
-* U+D83C drapeau, grec ou cerclé : lettres pour drapeaux, lettres encadrées
-* U+D83D accent circonflexe, accent aigu, tréma : guillemets décoratifs
-* U+D83E barré, groupes 11 et 12 comme intégré : flèches à pointe large
-* U+DB40 drapeau : étiquettes
+* U+D801 dans la touche morte exposant : lettres modificatives en exposant
+* U+D807 dans la touche morte tourné : "𑾰" U+11FB0 LETTRE LISSOU YHA
+* U+D835 dans la touche morte groupe : symboles mathématiques alphanumériques
+* U+D837 dans les touches mortes rayé, brève, hameçon et autres touches mortes : lettres latines
+* U+D83C dans les touches mortes drapeau, grec-ou-cerclé : lettres pour drapeaux, lettres encadrées
+* U+D83D dans les touches mortes accent circonflexe, accent aigu, tréma : guillemets décoratifs
+* U+D83E dans la touche morte barré, groupes 11 et 12 comme intégré : flèches à pointe large
+* U+DB40 dans la touche morte drapeau : étiquettes
 
-La raison de cette complication est que sous Windows, les caractères sont codés sur 16 bits, et le système Windows de pilotes de disposition a été conçu à une époque où Unicode était de fait un jeu de caractères sur 16 bits, car aucun caractère n’était plus grand que U+FFFF (et par un développeur qui pensait que cela allait rester comme cela).
+La raison de cette complication est que sous Windows, les caractères sont codés sur 16 bits, et le système Windows de pilotes de disposition a été conçu à une époque où Unicode était de fait un jeu de caractères sur 16 bits, car aucun caractère n’était plus grand que U+FFFF, et à une époque où Unicode était encore d’accord pour précomposer les lettres diacritées utilisées en vietnamien, car composer "ơ" et "ư" était encore trop délicat.
 
-Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes, il aurait simplement fallu ajouter une colonne, et programmer Windows pour la consulter et ajouter son contenu s’il n’est pas nul.
+Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes, il aurait simplement fallu ajouter au moins une colonne, et programmer Windows pour la consulter et ajouter son contenu s’il n’est pas nul.
 
 ##### Lettres composées
 
@@ -150,7 +150,7 @@ Par exemple, pour saisir le o ouvert accent aigu, il faut d’abord saisir le o 
 1. Touche morte groupe : ⟦µ*⟧ ;
 2. ⟦C⟧ ;
 3. Touche morte accent aigu : ⟦£$¤⟧ ;
-4. Espace.
+4. ⟦Espace⟧.
 
 La raison de cette complication est que le système Windows de pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et par un développeur qui ne pensait sans doute pas aux autres langues, et qui n’était peut-être pas au courant du modèle d’encodage d’Unicode ni de la recommandation de prendre en charge les lettres composées par touches mortes.
 
