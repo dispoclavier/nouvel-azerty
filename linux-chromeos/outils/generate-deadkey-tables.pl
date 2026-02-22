@@ -10,7 +10,7 @@
 # 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
 # 2026-01-12T1834+0100
-# 2026-02-08T0542+0100
+# 2026-02-22T0023+0100
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -28,10 +28,6 @@
 #     #.# DEAD_LEGACYTILDE
 #     #.# DEAD_LEGACYGRAVE
 #     # # EMOJI_READY
-#
-# Parsing "START_LETTER_SYMBOL_GROUPS" as the end tag is commented out, so that
-# space and symbol group tables and letter group tables are generated too.
-# Other options may be configured after "/START_LETTER_SYMBOL_GROUPS/".
 #
 # As the keyboard input may end with a dead key, this needs to be marked up
 # with a bold label and a bold border, so as to not raise questions about
@@ -147,20 +143,6 @@ while ( my $line = <INPUT> ) {
 	$line_nb = $.;
 	if ( $line =~ /START_GREEK/ ) {
 		$parse_on = !0;
-	}
-	if ( $line =~ /START_LETTER_SYMBOL_GROUPS/ ) {
-
-		# The symbol group table and the letter group table are generated alongside
-		# as an alternative documentation that is searchable, as opposed to the two
-		# image-based tables with tooltips.
-		# To skip these HTML tables, uncomment this line:
-		# $parse_on = !1;
-
-		# If the symbol group and letter group tables are generated, symbol groups
-		# and letter groups are included in the comprehensive table WHOLEOUTPUT.
-		# To exclude these from WHOLEOUTPUT, uncomment this line:
-		# $comprehensive = !1;
-
 	}
 	if ( $parse_on ) {
 		if ( $line =~ /^#\*# /
