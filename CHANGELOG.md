@@ -54,7 +54,7 @@ Généralisation de raccourcis à touche morte développés sous Windows.
 		* Redonder "‡" U+2021 par "T" sous Windows. ibidem
 * Documentation :
 	* Corriger le mode d’emploi sous Windows. windows/readme.md alias Mode-d-emploi-sous-Windows.md [83c5798](https://github.com/dispoclavier/nouvel-azerty/commit/83c579898a4b6324b1b8c6fbe59145e514772eb4)
-	* Corriger le journal des modifications. CHANGELOG.md @@
+	* Corriger le journal des modifications. CHANGELOG.md [88dac7b](https://github.com/dispoclavier/nouvel-azerty/commit/88dac7b78c2cdccf6a629c6ca957210731f813a4)
 	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml, compose-3.yml [3ce34f3](https://github.com/dispoclavier/nouvel-azerty/commit/3ce34f375659552d8aa288f814f71e423c832a2f)
 	* Regrouper la touche morte groupe dans la partie 3 pour maintenir l’affichabilité sur github.com. Compose.yml, compose-1.yml, compose-2.yml, compose-3.yml [3ce34f3](https://github.com/dispoclavier/nouvel-azerty/commit/3ce34f375659552d8aa288f814f71e423c832a2f), [4e1e20f](https://github.com/dispoclavier/nouvel-azerty/commit/4e1e20f269b5e021aa8f0261008275c954f88113), linux-chromeos/compose/readme.md [650aa4d](https://github.com/dispoclavier/nouvel-azerty/commit/650aa4db7326eb45f788a144bfc58edf8a5fd0f4), generate-deadkey-tables.pl [9041736](https://github.com/dispoclavier/nouvel-azerty/commit/9041736c61bc8afb1689821eaa1ed2bffd10f936)
 
