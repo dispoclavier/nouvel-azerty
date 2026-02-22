@@ -1,4 +1,4 @@
-//                       Date: 2026-01-26T0403+0100
+//                       Date: 2026-02-22T2250+0100
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -691,7 +691,7 @@ xkb_symbols "kbfrFRs" {
 	//
 	// The TLDE key is dedicated to this toggle for cross-platform consistency
 	// with the KANA toggle on Windows, where however this key is supercharged
-	// with the AltQr modifier as a way to compensate the suboptimal dead key
+	// with the AltMa modifier as a way to compensate the suboptimal dead key
 	// support on Windows due to the defective DEADTRANS macro.
 	//
 	// This toggle is duplicated on the CAPS key for an opportunity to free up
@@ -819,6 +819,19 @@ xkb_symbols "kbfrFRs" {
 	// level-8 position of C04 "F" is used for the FIRE emoji U1F525, benefitting
 	// from multilingual alphabetic mnemonic that is actually useful, given that
 	// "🔥" U1F525 is less frequent than "–" U2013 (C04) and "⇒" U21D2 (C05).
+	//
+	//
+	// ## Micro and pound signs for backward compatibility
+	//
+	// "£" U00A3 POUND SIGN and "µ" U00B5 MICRO SIGN are both supported on live
+	// key positions:
+	//                   "£"    "µ"
+	//     level-5   key "R" or "Y"   as part of the level-5 numpad
+	//     level-6   key D12 or C12   for hardware compatibility
+	//     level-7   key "L" or "M"   for alphabetic mnemonics
+	//
+	// Level-5 mnemonics are French: "R" stands for "Royaume Uni" United Kingdom,
+	// while "Y" is the key of the Greek-or-circled dead key dead_greek.
 	//
 	//
 	// ## Backward compatibility
