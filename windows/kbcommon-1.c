@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Rename AltLe to AltEm, AltQr to AltMa    6.2.3.0.0 Sat 2026-02-14T1236+0100
 * Further document the dead key bug        6.0.9.0.0 Mon 2025-09-29T1419+0200
 * Move part of the code to kbcommon-2.c    6.0.8.0.2 Thu 2025-09-25T1113+0200
 * Rename from kbcommon.c to kbcommon-1.c   6.0.8.0.1 Thu 2025-09-25T0613+0200
@@ -146,17 +147,22 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 *     ALT   (Left)  used for generating characters by number with numpad
 *     0x10  (Right) used for the Alternate Graphic modifier key
 *     0x20  (Left)  AltFr (Alt French) for unspaced punctuation, graphic numpad
-*     0x40  (Left)  AltLe (Alt Letter emoji) for country flags, other emoji
-*     0x80  (Left)  AltQr (Alt Quick response) for math alphabets and emoji
+*     0x40  (Left)  AltEm (Alt Emoji) for country flags and other emoji
+*     0x80  (Left)  AltMa (Alt Math) for mathematical alphabets and emoji
 *
-* The 8th shifter (0x08) is used by the Kana Lock toggle.
+* The eighth shifter (0x08) is used by the Kana Lock toggle.
 *
 * AltGr is right Alt, but it is not emulated by the Ctrl + Alt combo any more.
 *
 * AltFr is the ISO key B00, or it goes on the Caps Lock key, and that toggle
-* goes then on right Control.
+* goes then on right Control, as this is also repurposed for the ISO key B00
+* on ANSI keyboards for markets accustomed to the ISO keyboard.
 *
-* For Kana Lock and AltQr, key E00 is repurposed (given that on French AZERTY,
+* AltEm is supercharged on the key of the Caps Lock toggle.
+*
+* AltMa is supercharged on the key of the Kana Lock toggle.
+*
+* For Kana Lock and AltMa, key E00 is repurposed (given that on French AZERTY,
 * E00 is just superscript 2).
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
@@ -166,8 +172,8 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
                                       // 8 is KANA
     { VK_OEM_AX   ,   16           }, // AltGr key
     { VK_OEM_102  ,   32           }, // AltFr key
-    { VK_CAPITAL  ,   64           }, // AltLe key on top of Caps Lock
-    { VK_KANA     ,   128          }, // AltQr key on top of Kana Lock
+    { VK_CAPITAL  ,   64           }, // AltEm key on top of Caps Lock
+    { VK_KANA     ,   128          }, // AltMa key on top of Kana Lock
     { 0           ,   0            }
 };
 
