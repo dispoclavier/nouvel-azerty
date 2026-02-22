@@ -13017,7 +13017,7 @@
 <dead_macron><dead_macron>                                                                <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <Multi_key><bar><bar>                                                                     <emdash> : "͟" U035F # COMBINING DOUBLE MACRON BELOW
 <dead_macron><dead_macron>                                                                 <minus> : "±" U00B1 # PLUS-MINUS SIGN
-<Multi_key><bar><bar>                                                                      <minus> : "±" U00B1 # PLUS-MINUS SIGN
+#   Multikey conflicts with "⊮" U22AE, "⫲" U2AF2.                                          <minus> : "±" U00B1 # PLUS-MINUS SIGN
 <dead_macron><dead_macron>                                                           <bracketleft> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <Multi_key><bar><bar>                                                                <bracketleft> : "⦋" U298B # LEFT SQUARE BRACKET WITH UNDERBAR
 <dead_macron><dead_macron>                                                          <bracketright> : "⦌" U298C # RIGHT SQUARE BRACKET WITH UNDERBAR
@@ -15618,7 +15618,7 @@
 <Multi_key><equal>                                                                  <nobreakspace> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <UEFD7>                                                                                    <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
 <Multi_key><equal>                                                                         <U202F> : "˭" U02ED # MODIFIER LETTER UNASPIRATED
-<UEFD7>                                                                                    <minus> : "" U2E40 # DOUBLE HYPHEN
+<UEFD7>                                                                                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 #   Multikey conflicts with "≡" U2261.                                                     <minus> : "⹀" U2E40 # DOUBLE HYPHEN
 <UEFD7>                                                                               <dead_caron> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
 #   Multikey conflicts with "⇒" U21D2, "⪜" U2A9C.                                        <greater> : "‌" U200C # ZERO WIDTH NON-JOINER, cursive non-joiner
