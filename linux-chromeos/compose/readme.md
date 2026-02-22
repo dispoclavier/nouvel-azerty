@@ -7,20 +7,20 @@ Ce fichier n’est pas au format YAML. L’extension ".yml" sert à la coloratio
 Le contenu de Compose.yml est réparti sur les trois fichiers compose-1.yml, compose-2.yml et compose-3.yml pour la mise en ligne sur GitHub. Ces partiels ne dépassent pas 2 Mo afin de bénéficier des fonctionnalités de github.com, absentes de github.dev qui affiche Compose.yml en entier.
 
 * compose-1.yml : séquences de composition dédiées, grec sauf lettres grecques ;
-* compose-2.yml : touches mortes sauf groupes des lettres et des symboles ;
-* compose-3.yml : groupes des symboles, groupes des lettres.
+* compose-2.yml : touches mortes sauf touche morte groupe et drapeaux nationaux ;
+* compose-3.yml : drapeaux nationaux, emojis (projet), touche morte groupe.
 
 Le fichier d’un seul tenant Compose.yml dans ce dossier est celui de la dernière version publiée ou un fichier mis à jour en cours de développement.
 
-Les paquetages distribués dont le nom commence par "Un-nouvel-AZERTY-Linux-" contiennent aussi une copie de ce fichier, placée à la racine.
+Les paquetages distribués dont le nom commence par "Un-nouvel-AZERTY-Linux-" contiennent aussi une copie de Compose.yml, placée à la racine.
 
 ## Versionnage
 
-Dans Compose.yml, le numéro de version est inclus sous la forme d’une chaîne de caractères pour touche vive parce que ces dispositions de clavier sortent leur version par AltGr + Échap.
+Dans Compose.yml, le numéro de version est inclus sous la forme d’une chaîne de caractères pour touche vive parce que ces dispositions de clavier sortent leur numéro de version par AltGr/Option + Échap.
 
 Le numéro de version sur trois nombres est complété par le numéro de build, aussi pour Linux (depuis le build 6.0.7.03, sans zéro de remplissage depuis 6.0.9.6) parce que le fichier Compose.yml sert aussi de code source au contenu de touches mortes transpilé pour Windows.
 
-L’historique des versions 1.0.0 à 1.6.0 a été restauré de [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2).
+L’historique des versions v1.0.0 à 1.6.0 a été restauré de [c6c939f](https://github.com/dispoclavier/nouvel-azerty/commit/c6c939f1ec1a84dc4a1ec4aaf49df552b887e5dd) à [bebf6f8](https://github.com/dispoclavier/nouvel-azerty/commit/bebf6f8e44270b5623bf4eae95454b8b657497e2).
 
 ## Documentation
 
