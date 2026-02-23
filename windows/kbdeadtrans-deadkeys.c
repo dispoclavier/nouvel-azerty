@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.3.1.0 Mon 2026-02-23T0705+0100
 * Update                                   6.2.3.0.0 Sun 2026-02-22T2241+0100
 * Update                                   6.2.2.0.0 Sun 2026-02-08T1921+0100
 * Update                                   6.2.1.0.0 Sun 2026-02-01T0208+0100
@@ -3240,6 +3241,7 @@
 /*<!diaeresis>                                                     */ DEADTRANS( L'$'	,0x00EB	,0x017F	,0x0000), // '$' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
 /*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000), // '-' ➔ "⹀" U+2E40 DOUBLE HYPHEN
 /*<!diaeresis>                                                     */ DEADTRANS( L'%'	,0x00EB	,0x2030	,0x0000), // '%' ➔ "‰" U+2030 PER MILLE SIGN
+/*<!diaeresis>                                                     */ DEADTRANS( L'.'	,0x00EB	,0x2026	,0x0000), // '.' ➔ "…" U+2026 HORIZONTAL ELLIPSIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000), // '"' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x20AC	,0x00EB	,0x201E	,0x0000), // '€' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'/'	,0x00EB	,0x2016	,0x0000), // '/' ➔ "‖" U+2016 DOUBLE VERTICAL LINE
@@ -3255,8 +3257,10 @@
 /*<!diaeresis>                                                     */ DEADTRANS( L'9'	,0x00EB	,0x2079	,0x0000), // '9' ➔ "⁹" U+2079 SUPERSCRIPT NINE
 /*<!diaeresis>                                                     */ DEADTRANS( L'A'	,0x00EB	,0x00C4	,0x0000), // 'A' ➔ "Ä" U+00C4 LATIN CAPITAL LETTER A WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'a'	,0x00EB	,0x00E4	,0x0000), // 'a' ➔ "ä" U+00E4 LATIN SMALL LETTER A WITH DIAERESIS
-/*<!diaeresis>                                                     */ DEADTRANS( 0x00C7	,0x00EB	,0x00D8	,0x0000), // 'Ç' ➔ "Ø" U+00D8 LATIN CAPITAL LETTER O WITH STROKE
-/*<!diaeresis>                                                     */ DEADTRANS( 0x00E7	,0x00EB	,0x00F8	,0x0000), // 'ç' ➔ "ø" U+00F8 LATIN SMALL LETTER O WITH STROKE
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00C0	,0x00EB	,0x00C5	,0x0000), // 'À' ➔ "Å" U+00C5 LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00E0	,0x00EB	,0x00E5	,0x0000), // 'à' ➔ "å" U+00E5 LATIN SMALL LETTER A WITH RING ABOVE shortcut
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00C7	,0x00EB	,0x00D8	,0x0000), // 'Ç' ➔ "Ø" U+00D8 LATIN CAPITAL LETTER O WITH STROKE shortcut
+/*<!diaeresis>                                                     */ DEADTRANS( 0x00E7	,0x00EB	,0x00F8	,0x0000), // 'ç' ➔ "ø" U+00F8 LATIN SMALL LETTER O WITH STROKE shortcut
 /*<!diaeresis>                                                     */ DEADTRANS( L'E'	,0x00EB	,0x00CB	,0x0000), // 'E' ➔ "Ë" U+00CB LATIN CAPITAL LETTER E WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'e'	,0x00EB	,0x00EB	,0x0000), // 'e' ➔ "ë" U+00EB LATIN SMALL LETTER E WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( 0x2014	,0x00EB	,0x2E3B	,0x0000), // '—' ➔ "⸻" U+2E3B THREE-EM DASH
@@ -3282,6 +3286,8 @@
 /*<!diaeresis>                                                     */ DEADTRANS( L'x'	,0x00EB	,0x1E8D	,0x0000), // 'x' ➔ "ẍ" U+1E8D LATIN SMALL LETTER X WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'y'	,0x00EB	,0x00FF	,0x0000), // 'y' ➔ "ÿ" U+00FF LATIN SMALL LETTER Y WITH DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'Y'	,0x00EB	,0x0178	,0x0000), // 'Y' ➔ "Ÿ" U+0178 LATIN CAPITAL LETTER Y WITH DIAERESIS
+/*<!diaeresis>                                                     */ DEADTRANS( L'z'	,0x00EB	,0x017F	,0x0000), // 'z' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
+/*<!diaeresis>                                                     */ DEADTRANS( L'Z'	,0x00EB	,0x2260	,0x0000), // 'Z' ➔ "≠" U+2260 NOT EQUAL TO
 /*<!diaeresis>                                                     */ DEADTRANS( 0x00A0	,0x00EB	,0x00A8	,0x0000), // ' ' ➔ "¨" U+00A8 DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( 0x202F	,0x00EB	,0x00A8	,0x0000), // ' ' ➔ "¨" U+00A8 DIAERESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L' '	,0x00EB	,0x0308	,0x0000), // ' ' ➔ "̈" U+0308 COMBINING DIAERESIS
