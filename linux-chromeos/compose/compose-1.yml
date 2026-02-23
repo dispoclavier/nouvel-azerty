@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.3.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.3.1" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -2636,7 +2636,7 @@
 #   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   In any event, as a matter of leaving nobody stranded, HYPHEN has an easy,
-#   two-handed shortcut in dead_acute by minus, since v6.2.3 (2026-02-21). This
+#   two-handed shortcut in dead_acute by minus, since v6.2.3 (2026-02-23). This
 #   works on the standard layout (D12, E06) and on remapped variants (E04, C12)
 #   likewise.
 #
@@ -5545,7 +5545,6 @@
 #   The sideways compatible sequence supported here for "±" U00B1 contrasts
 #   with the reverse sequence used for "∓" U2213.
 #   See #   Order sensitivity
-#   See "∓" U2213
 #
 #   On the associated keyboard layouts, "±" U00B1 is at level 7 on the key
 #   (D05) where the minus sign "−" U2212 is at level 5.

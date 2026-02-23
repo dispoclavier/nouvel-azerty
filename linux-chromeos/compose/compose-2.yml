@@ -16822,12 +16822,18 @@
 #   unshifted position. Hence its use for various shortcuts.
 #
 #   By diacriticized base letters, dead_diaeresis yields "Ǜ" U01DB, "ǜ" U01DC
-#   by "Ù", "ù", but also "Ø" U00D8, "ø" U00F8 by "Ç", "ç" for convenience.
+#   by "Ù", "ù", but also "Å" U00C5, "å" U00E5 by "À", "à", and "Ø" U00D8,
+#   "ø" U00F8 by "Ç", "ç" for convenience.
 #   See # # Oslash for Danish, Norwegian and other languages
 #
-#   The long s "ſ" U017F has a shortcut by "s", because the sharp s "ß" U00DF,
-#   that may be expected in dead_diaeresis, is in group 1 of "s" and thus well
+#   The long s "ſ" U017F has shortcuts by "z" and by "$", and the sharp s
+#   "ẞ" U1E9E, "ß" U00DF has one by "S", "s" because it may be expected in
+#   dead_diaeresis, additionally to being in group 1 of "S", "s" and thus well
 #   supported, unlike the long s, in group 3 of "s" due to its antiquation.
+#
+#   The "≠" U2260 has a shortcut by "Z" with a graphic mnemonic, and so has the
+#   horizontal ellipsis "…" U2026 by period, although it is on live key.
+#   See dispocla.cpp key <AC11>
 #
 #
 #   Superscript digits
@@ -16924,6 +16930,8 @@
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 #   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_diaeresis>                                                                          <period> : "…" U2026 # HORIZONTAL ELLIPSIS
+#   Multikey conflicts with "⫶" U2AF6.                                                    <period> : "…" U2026 # HORIZONTAL ELLIPSIS
 <dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
 <Multi_key><colon>                                                                        <endash> : "⸺" U2E3A # TWO-EM DASH
 <dead_diaeresis>                                                                          <emdash> : "⸻" U2E3B # THREE-EM DASH
@@ -17018,14 +17026,22 @@
 <Multi_key><colon>                                                                             <Y> : "Ÿ" U0178 # LATIN CAPITAL LETTER Y WITH DIAERESIS
 <dead_diaeresis>                                                                               <y> : "ÿ" U00FF # LATIN SMALL LETTER Y WITH DIAERESIS
 <Multi_key><colon>                                                                             <y> : "ÿ" U00FF # LATIN SMALL LETTER Y WITH DIAERESIS
+<dead_diaeresis>                                                                               <Z> : "≠" U2260 # NOT EQUAL TO
+<Multi_key><colon>                                                                             <Z> : "≠" U2260 # NOT EQUAL TO
+<dead_diaeresis>                                                                               <z> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<Multi_key><colon>                                                                             <z> : "ſ" U017F # LATIN SMALL LETTER LONG S
+<dead_diaeresis>                                                                          <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<Multi_key><colon>                                                                        <Agrave> : "Å" U00C5 # LATIN CAPITAL LETTER A WITH RING ABOVE shortcut
+<dead_diaeresis>                                                                          <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
+<Multi_key><colon>                                                                        <agrave> : "å" U00E5 # LATIN SMALL LETTER A WITH RING ABOVE shortcut
 <dead_diaeresis>                                                                          <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon>                                                                        <Ugrave> : "Ǜ" U01DB # LATIN CAPITAL LETTER U WITH DIAERESIS AND GRAVE
 <dead_diaeresis>                                                                          <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
 <Multi_key><colon>                                                                        <ugrave> : "ǜ" U01DC # LATIN SMALL LETTER U WITH DIAERESIS AND GRAVE
-<dead_diaeresis>                                                                        <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<Multi_key><colon>                                                                      <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE
-<dead_diaeresis>                                                                        <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
-<Multi_key><colon>                                                                      <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE
+<dead_diaeresis>                                                                        <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<Multi_key><colon>                                                                      <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
+<dead_diaeresis>                                                                        <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
+<Multi_key><colon>                                                                      <ccedilla> : "ø" U00F8 # LATIN SMALL LETTER O WITH STROKE shortcut
 #
 #
 # # DIAERESIS&GROUP_1
