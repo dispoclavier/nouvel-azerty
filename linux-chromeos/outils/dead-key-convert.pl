@@ -8,6 +8,7 @@
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
 # 2026-01-26T0514+0100
+# 2026-02-23T0307+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -264,7 +265,7 @@ sub format_character {
 		$character = '0x' . $character;
 	} else {
 		push( @bad_format, "'" . $character . "'" );
-		#$character = 'badf'; # Comment this out to see the actual string in context.
+		$character = 'badf'; # Comment this out to see the actual string in context.
 	}
 	return $character;
 }
@@ -1246,7 +1247,14 @@ my @dead_key_characters = (
 	'<!invertedbreve><!grave><!belowdot>➔2534',
 	'<!invertedbreve><!grave>➔2535',
 
-	# Additional dead key chains (0).
+	# Additional dead key chains (7).
+	'<!circumflex><!circumflex><!group>➔01EF',
+	'<!diaeresis><!diaeresis><!group><!group><!group>➔01EE',
+	'<!diaeresis><!diaeresis><!group><3>➔01EE',
+	'<!macron><!group><!group><!group>➔01EE',
+	'<!macron><!group><3>➔01EE',
+	'<!diaeresis><!diaeresis><!group>➔01E3',
+	'<!diaeresis><!diaeresis><!group><!group>➔0297',
 
 );
 
@@ -1537,11 +1545,13 @@ print( "Case insensitive sorting complete.\n" );
 print CONSOLE ( "Case insensitive sorting complete.\n" );
 
 # Define the multikey dead characters.
+# The sub get_mk_equiv_dead_character cannot be used, because this uncomments the multikey
+# equivalents commented out due to conflicts with dedicated multikey sequences.
 print( "Defining the multikey dead characters in progress ---\n" );
 print CONSOLE ( "Defining the multikey dead characters in progress ---\n" );
 foreach my $entry ( @multikey_complete ) {
 	$deadkey = $entry;
-	$deadkey = get_mk_equiv_dead_character( $deadkey );
+	#$deadkey = get_mk_equiv_dead_character( $deadkey );
 	unless ( length( $deadkey ) > 4 ) {
 		push( @multikey_dchars, $entry . '➔' . $deadkey );
 	} else {
@@ -1576,7 +1586,7 @@ print CONSOLE ( "Processing the dead key output in progress ---\n" );
 foreach my $line ( @dead_key_out ) {
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Single-character output.
 		unless ( $line =~ /<UEF/ ) {       # Multicharacter input.
-			$line          =~ m/(<.+>)(<.+>) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
+			$line          =~ m/(<.+>)(<.+>) *: *"(.)" *U([0-9A-F]{4,5}) *# *(.+)/u;
 			$deadkey       = $1;
 			$input         = $2;
 			$output_string = $3;
