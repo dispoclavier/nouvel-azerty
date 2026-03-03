@@ -30,33 +30,6 @@
 * This file is included in kbdeadtrans.c.
 *
 *
-* WARNING: Layout drivers including the full set of multikey equivalents are
-*          unavailable in the Language bar, and if one of these is the default
-*          keyboard layout, the keyboard is broken in some of the applications
-*          (e.g. in VSCode, not in Windows File Explorer).
-*
-* The source code of a full set of multikey equivalents has almost the size of
-* the dead key partial:
-*
-*     + kbdeadtrans.c                      6.1.5.2     687 kB
-*     + kbdeadtrans-deadkeys.c             6.1.5.2   1 699 kB
-*     + kbdeadtrans-multikey.c             6.1.5.2     861 kB
-*     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-*     DLL                                                      219 kB
-*
-*     + kbdeadtrans-multikey-equivalents.c 6.1.5.2   1 590 kB
-*     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-*     DLL                                                      289 kB
-*
-* This seems to be the only explanation for the failure of the layout drivers.
-*
-* Given that multikey equivalents of dead keys are a Linux feature fostered by
-* mutualized dead key configuration, and required as a workaround for missing
-* dead keys on keyboard layouts still featuring a Multikey, they do not need
-* to be supported on Windows except a small subset including unchained dead
-* keys, merely as a proof of concept. The rest can be skipped so as to limit
-* the layout driver file size below a presumed threshold of 254 kB.
-*
 * The code below is generated. Please do not edit in place.
 *
 * Cross-platform compatible changes should be done in the source Compose.yml.

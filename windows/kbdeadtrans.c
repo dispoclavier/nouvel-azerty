@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Rule out separate multikey equivalents   6.2.4.0.0 Tue 2026-03-03T0949+0100
 * Support infinite group dead key presses  6.2.1.0.0 Wed 2026-01-28T1105+0100
 * Update the done cursor for 6.2.0         6.2.0.0.0 Tue 2026-01-27T2110+0100
 * Update the done cursor for 6.1.8         6.1.8.0.0 Sun 2026-01-25T0531+0100
@@ -275,29 +276,22 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 #include "kbdeadtrans-deadkeys.c"
 
 /*****************************************************************************\
-* Dedicated multikey sequences
+* Dedicated multikey sequences and multikey equivalents of dead keys
 *
 * This is part of the keyboard layout but must be shipped separately due to
 * file size restrictions on github.com.
 * See kbdeadtrans-multikey.c
 *
-\*****************************************************************************/
-#include "kbdeadtrans-multikey.c"
-
-/*****************************************************************************\
-* Multikey equivalents of dead keys
-*
 * The full set of multikey equivalents cannot be supported on Windows,
 * presumably due to a layout driver file size issue. A small subset however
 * including unchained dead keys can be safely supported.
-* See kbdeadtrans-multikey-equivalents.c
 *
 * Multikey equivalents of dead keys are a Linux feature fostered and
 * required by mutualized dead key configuration, with layouts lacking
 * some or all dead keys but supporting the Multikey.
 *
 \*****************************************************************************/
-#include "kbdeadtrans-multikey-equivalents.c"
+#include "kbdeadtrans-multikey.c"
 
 /*****************************************************************************\
 * Legacy dead key content
