@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.3.1" # See #   End of line comments
+<UEFA0>                     : "version 6.2.4.2" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -5673,6 +5673,8 @@
 #
 <Multi_key><space><parenleft>                                                              <space> : "⁀" U2040 # CHARACTER TIE
 <Multi_key><space><parenleft>                                                       <nobreakspace> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><nobreakspace><parenleft>                                                       <space> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><nobreakspace><parenleft>                                                <nobreakspace> : "⁀" U2040 # CHARACTER TIE
 #
 #
 # # Fraction slash
@@ -6519,8 +6521,7 @@
 <Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
 <Multi_key><v><v><equal>                                                                           : "≙" U2259 # ESTIMATES
 <Multi_key><V><V><equal>                                                                           : "≙" U2259 # ESTIMATES
-<Multi_key><space><asciicircum><equal>                                                             : "≙" U2259 # ESTIMATES
-<Multi_key><nobreakspace><asciicircum><equal>                                                      : "≙" U2259 # ESTIMATES
+<Multi_key><asciicircum><equal>                                                                    : "≙" U2259 # ESTIMATES
 <Multi_key><v><equal>                                                                              : "≚" U225A # EQUIANGULAR TO
 <Multi_key><V><equal>                                                                              : "≚" U225A # EQUIANGULAR TO
 <Multi_key><space><asterisk><equal>                                                                : "≛" U225B # STAR EQUALS
