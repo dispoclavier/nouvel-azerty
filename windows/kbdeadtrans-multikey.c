@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.4.2.0 Wed 2026-03-04T2223+0100
 * Shrink-remove all multikey equivalents   6.2.4.1.0 Tue 2026-03-03T1429+0100
 * Move here debugged multikey equivalents  6.2.4.0.0 Tue 2026-03-03T0958+0100
 * Update with debugged multikey sequences  6.2.3.1.0 Mon 2026-02-23T0354+0100
@@ -973,6 +974,7 @@
 /*<!M><%circum><%circum><%hash><2>                                 */ DEADTRANS( L'2'	,0xE417	,0xE419	,0x0001), // Intermediate multikey chain link
 /*<!M><%circum><%colon>                                            */ DEADTRANS( L':'	,0xE3EB	,0xE41A	,0x0001), // Intermediate multikey chain link
 /*<!M><%circum><%colon><%circum>                                   */ DEADTRANS( L'^'	,0xE41A	,0xE41B	,0x0001), // Intermediate multikey chain link
+/*<!M><%circum><%equal>                                            */ DEADTRANS( L'='	,0xE3EB	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
 /*<!M><%circum><%hash>                                             */ DEADTRANS( L'#'	,0xE3EB	,0xE41C	,0x0001), // Intermediate multikey chain link
 /*<!M><%circum><%hash><%hash>                                      */ DEADTRANS( L'#'	,0xE41C	,0xE41D	,0x0001), // Intermediate multikey chain link
 /*<!M><%circum><%hash><%hash><%hash>                               */ DEADTRANS( L'#'	,0xE41D	,0xE41E	,0x0001), // Intermediate multikey chain link
@@ -5683,7 +5685,6 @@
 /*<!M><~nbspace><%bracketright><%underscore>                       */ DEADTRANS( L'_'	,0xEACF	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
 /*<!M><~nbspace><%circum>                                          */ DEADTRANS( L'^'	,0xEABA	,0xEAD0	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%circum><%circum>                                 */ DEADTRANS( L'^'	,0xEAD0	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~nbspace><%circum><%equal>                                  */ DEADTRANS( L'='	,0xEAD0	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
 /*<!M><~nbspace><%circum><%underscore>                             */ DEADTRANS( L'_'	,0xEAD0	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
 /*<!M><~nbspace><%circum><o>                                       */ DEADTRANS( L'o'	,0xEAD0	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!M><~nbspace><%circum><O>                                       */ DEADTRANS( L'O'	,0xEAD0	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
@@ -5810,6 +5811,8 @@
 /*<!M><~nbspace><%parenleft><%less>                                */ DEADTRANS( L'<'	,0xEAE6	,0x2993	,0x0000), // '<' ➔ "⦓" U+2993 LEFT ARC LESS-THAN BRACKET
 /*<!M><~nbspace><%parenleft><%parenleft>                           */ DEADTRANS( L'('	,0xEAE6	,0x2985	,0x0000), // '(' ➔ "⦅" U+2985 LEFT WHITE PARENTHESIS
 /*<!M><~nbspace><%parenleft><8>                                    */ DEADTRANS( L'8'	,0xEAE6	,0x29DD	,0x0000), // '8' ➔ "⧝" U+29DD TIE OVER INFINITY
+/*<!M><~nbspace><%parenleft><~nbspace>                             */ DEADTRANS( 0x00A0	,0xEAE6	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
+/*<!M><~nbspace><%parenleft><~space>                               */ DEADTRANS( L' '	,0xEAE6	,0x2040	,0x0000), // ' ' ➔ "⁀" U+2040 CHARACTER TIE
 /*<!M><~nbspace><%parenright>                                      */ DEADTRANS( L')'	,0xEABA	,0xEAE7	,0x0001), // Intermediate multikey chain link
 /*<!M><~nbspace><%parenright><%bracketleft>                        */ DEADTRANS( L'['	,0xEAE7	,0x27EF	,0x0000), // '[' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
 /*<!M><~nbspace><%parenright><%bracketright>                       */ DEADTRANS( L']'	,0xEAE7	,0x27EF	,0x0000), // ']' ➔ "⟯" U+27EF MATHEMATICAL RIGHT FLATTENED PARENTHESIS
@@ -6301,7 +6304,6 @@
 /*<!M><~space><%bracketright><%underscore>                         */ DEADTRANS( L'_'	,0xEB59	,0x298C	,0x0000), // '_' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
 /*<!M><~space><%circum>                                            */ DEADTRANS( L'^'	,0xEB44	,0xEB5A	,0x0001), // Intermediate multikey chain link
 /*<!M><~space><%circum><%circum>                                   */ DEADTRANS( L'^'	,0xEB5A	,0x22C4	,0x0000), // '^' ➔ "⋄" U+22C4 DIAMOND OPERATOR
-/*<!M><~space><%circum><%equal>                                    */ DEADTRANS( L'='	,0xEB5A	,0x2259	,0x0000), // '=' ➔ "≙" U+2259 ESTIMATES
 /*<!M><~space><%circum><%underscore>                               */ DEADTRANS( L'_'	,0xEB5A	,0x25B5	,0x0000), // '_' ➔ "▵" U+25B5 WHITE UP-POINTING SMALL TRIANGLE
 /*<!M><~space><%circum><o>                                         */ DEADTRANS( L'o'	,0xEB5A	,0x2A36	,0x0000), // 'o' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!M><~space><%circum><O>                                         */ DEADTRANS( L'O'	,0xEB5A	,0x2A36	,0x0000), // 'O' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT

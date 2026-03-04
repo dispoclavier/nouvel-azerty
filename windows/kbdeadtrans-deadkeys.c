@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.4.2.0 Wed 2026-03-04T2220+0100
 * Update                                   6.2.3.1.0 Mon 2026-02-23T0705+0100
 * Update                                   6.2.3.0.0 Sun 2026-02-22T2241+0100
 * Update                                   6.2.2.0.0 Sun 2026-02-08T1921+0100
@@ -8035,9 +8036,9 @@
 /*<!macron><!macron>                                               */ DEADTRANS( L']'	,0x1E07	,0x298C	,0x0000), // ']' ➔ "⦌" U+298C RIGHT SQUARE BRACKET WITH UNDERBAR
 /*<!macron><!macron>                                               */ DEADTRANS( L'$'	,0x1E07	,0x035F	,0x0000), // '$' ➔ "͟" U+035F COMBINING DOUBLE MACRON BELOW
 /*<!macron><!macron>                                               */ DEADTRANS( L'`'	,0x1E07	,0x2A5F	,0x0000), // '`' ➔ "⩟" U+2A5F LOGICAL AND WITH UNDERBAR
-/*<!macron><!macron>                                               */ DEADTRANS( L'-'	,0x1E07	,0x00B1	,0x0000), // '-' ➔ "±" U+00B1 PLUS-MINUS SIGN
 /*<!macron><!macron>                                               */ DEADTRANS( L'%'	,0x1E07	,0x29CB	,0x0000), // '%' ➔ "⧋" U+29CB TRIANGLE WITH UNDERBAR
 /*<!macron><!macron>                                               */ DEADTRANS( L'.'	,0x1E07	,0x2A31	,0x0000), // '.' ➔ "⨱" U+2A31 MULTIPLICATION SIGN WITH UNDERBAR
+/*<!macron><!macron>                                               */ DEADTRANS( L'+'	,0x1E07	,0x00B1	,0x0000), // '+' ➔ "±" U+00B1 PLUS-MINUS SIGN
 /*<!macron><!macron>                                               */ DEADTRANS( L'?'	,0x1E07	,0x2A63	,0x0000), // '?' ➔ "⩣" U+2A63 LOGICAL OR WITH DOUBLE UNDERBAR
 /*<!macron><!macron>                                               */ DEADTRANS( L'"'	,0x1E07	,0x035F	,0x0000), // '"' ➔ "͟" U+035F COMBINING DOUBLE MACRON BELOW
 /*<!macron><!macron>                                               */ DEADTRANS( 0x20AC	,0x1E07	,0x035F	,0x0000), // '€' ➔ "͟" U+035F COMBINING DOUBLE MACRON BELOW
