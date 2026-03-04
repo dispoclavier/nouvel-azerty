@@ -8,7 +8,7 @@
 # 2025-12-25T0221+0100
 # 2025-12-31T1259+0100
 # 2026-01-26T0514+0100
-# 2026-02-23T0307+0100
+# 2026-03-04T1042+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -57,8 +57,8 @@
 #
 # Multikey
 #
-# Multikey sequences need to be processed separately. These are unrelated to,
-# or not congruent with, the dead key output, as about 100 multikey equivalents
+# Multikey sequences need to be processed separately, as they are unrelated to,
+# or not congruent with, the dead key output: About 160 multikey equivalents
 # are commented out due to conflicts.
 #
 # Dedicated multikey sequences are an indispensable part of the keyboard layout
@@ -66,19 +66,31 @@
 # as for most mathematical symbols. After an attempt to support all multikey
 # sequences on 2025-11-12, the subset of the dedicated multikey sequences is
 # ultimately supported since 2025-12-22, and the transpiler was fixed from
-# 2025-12-24 until 2026-01-03.
+# 2025-12-24 until 2026-03-03.
 #
+# Multikey equivalents of dead keys, by contrast, are an XCompose feature for
+# incomplete keyboard layouts. As a consequence, these are sort of optional.
 # Supporting all available multikey equivalents of dead key chains on Windows
-# causes an issue, presumably when exceeding a 256 kB layout driver file size
-# limit. The affected layout does not show up in the Language bar, and if it
-# is the default, the keyboard does not work in some of the applications (not
-# in VSCode, but in Windows File Explorer).
+# causes issues progressively, when exceeding some layout driver file size
+# threshold. Not 256 kB; issues also occur at 243 kB and 244 kB, but not at
+# 231 kB. The affected layout does not show up in the Language bar, and if it
+# is the default, the keyboard does not work in some of the applications.
+# VSCode is affected, but the Windows File Explorer is not. Additionally,
+# a vendor-specific touchpad driver may be deactivated. This affects the
+# Touchpad Dell and its driver GlidePoint® provided by ALPSALPINE Co., Ltd,
+# v.10.3201.101.121 (https://dl.dell.com/FOLDER06037821M/6/Dell-Touchpad-Driver_18D77_WIN_10.3201.101.215_A08_03.EXE).
 #
 # As multikey equivalents may increase the DLL file size from 219 to 289 kB,
-# half of the equivalents can still be supported. Also, the dead characters
-# need to be in sync with those of dead key chains. As a compromise, only
-# unchained dead keys have their multikey equivalent supported.
-# See kbdeadtrans-multikey-equivalents.c
+# half of the equivalents could still be supported. As a compromise, only
+# unchained dead keys may have their multikey equivalent supported.
+#
+# However, on Windows, the dead characters cannot be in sync with those of
+# dead key chains, because if they were, the commented-out multikey equivalents
+# would be uncommented, and the conflicts would break part of the sequences.
+#
+# Given that supporting all multikey equivalents breaks the layout drivers and
+# the OS, keeping the source code file size below the 2MB file size limit of
+# github.com is not mandatory. Yet, when skipping all equivalents, it happens.
 #
 # Even for all equivalents, using private use characters, all the intermediate
 # chains can be supported, as the first area E000..F8FF encompassing 6400 code
@@ -87,9 +99,10 @@
 # multikey chains used E201..E715. The full set of 2357 intermediate multikey
 # chains with multikey equivalents of dead keys used E200..EAAF (2026-01-03).
 #
-# For test purposes, this can be toggled here:
-my $support_multikey_equivalents = !0;
-my $support_all_multikey_equivalents = !1;
+# For test purposes, this can be toggled here by replacing false (!1) with
+# true (!0):
+my $support_simple_multikey_equivalents = !1;
+my $support_all_multikey_equivalents    = !1;
 #
 #
 # Multicharacter output
@@ -206,11 +219,6 @@ open( MULTIKEY, '>', $multikey_path ) or die $!;
 print( "Opened file $multikey_path.\n" );
 print CONSOLE ( "Opened file $multikey_path.\n" );
 
-my $equivalents_path = 'WINDOWS/multikey-equivalents.c';
-open( EQUIVALENTS, '>', $equivalents_path ) or die $!;
-print( "Opened file $equivalents_path.\n" );
-print CONSOLE ( "Opened file $equivalents_path.\n" );
-
 my $report_path = 'WINDOWS/dead-keys.txt';
 open( REPORT, '>', $report_path ) or die $!;
 print( "Opened file $report_path.\n" );
@@ -243,11 +251,6 @@ my @multikey_out      = ();
 my $multikey_count    = 0;
 my @multikey_dchars   = ();
 my @multikey_print    = ();
-my @mk_equiv_parsed   = ();
-my @mk_equiv_complete = ();
-my @mk_equiv_out      = ();
-my $mk_equiv_count    = 0;
-my @mk_equiv_print    = ();
 my ( $chain, $comment, $deadchar, $deadkey, $full_chain, $high_out, $high_su, $input, $input_string, $length,
 		$output_code, $output_string, $preceding, $print, $uplus_output );
 my $keysym            = '%ampersand';
@@ -1335,56 +1338,6 @@ sub get_multikey_dead_character {
 	return $multikey;
 }
 
-# Single-press dead key multikey equivalents (33).
-my @dead_key_mk_equivs = (
-
-	'<!M><%apostrophe>➔00E1',
-	'<!M><%aprightsingquotmark>➔00E1',
-	'<!M><%asterisk>➔00E5',
-	'<!M><%at>➔03B5',
-	'<!M><%backslash>➔1D19',
-	'<!M><%bar>➔0101',
-	'<!M><%braceleft>➔0192',
-	'<!M><%braceright>➔0273',
-	'<!M><%bracketleft>➔01EB',
-	'<!M><%bracketright>➔1EBB',
-	'<!M><%circum>➔005E',
-	'<!M><%colon>➔00EB',
-	'<!M><%comma>➔00E7',
-	'<!M><%dollar>➔00A4',
-	'<!M><%equal>➔2690',
-	'<!M><%exclam>➔1E05',
-	'<!M><%excsection>➔1E05',
-	'<!M><%grave>➔00F2',
-	'<!M><%greater>➔021F',
-	'<!M><%hash>➔2460',
-	'<!M><%less>➔00EA',
-	'<!M><%minus>➔024D',
-	'<!M><%parenleft>➔0213',
-	'<!M><%parenright>➔0115',
-	'<!M><%percent>➔0250',
-	'<!M><%period>➔1E57',
-	'<!M><%plus>➔01A1',
-	'<!M><%quotEuroSign>➔0151',
-	'<!M><%quotedbl>➔0151',
-	'<!M><%semicolon>➔0219',
-	'<!M><%slash>➔00F8',
-	'<!M><%tilde>➔00F5',
-	'<!M><%underscore>➔005F',
-);
-
-sub get_mk_equiv_dead_character {
-	my ( $deadkey ) = @_;
-	foreach my $item ( @dead_key_mk_equivs ) {
-		if ( substr( $item, 0, -5 ) eq $deadkey ) {
-			$deadkey = substr( $item, -4, 4 );
-			last;
-		}
-	}
-	$deadkey = get_multikey_dead_character( $deadkey );
-	return $deadkey;
-}
-
 # Processes the source.
 print( "Parsing $input_path in progress ---\n" );
 print CONSOLE ( "Parsing $input_path in progress ---\n" );
@@ -1453,22 +1406,21 @@ while ( my $line = <INPUT> ) {
 			$line =~ s/<U202F>/<~nbthinspace>/g;
 			$line =~ s/<U200B>/<~spacezerowidth>/g;
 
-			# Store dead keys and multikey in 3 arrays.
+			# Store dead keys and multikey in 2 arrays.
 			if ( $line =~ /^(#@)?<!M>/ ) {
-				if ( $parse_equivalents eq !0 && $support_multikey_equivalents eq !0 ) {
-					push( @mk_equiv_out, $line );
-
-					# Add to catalog.
-					$line =~ m/(<.+>).+/;
-					push( @mk_equiv_parsed, $1 );
-
-				} elsif ( $parse_equivalents eq !1 ) {
+				if ( $parse_equivalents eq !0 ) {
+					if ( $line =~ /^(#@)?<!M><[^>]+><[^>]+>[^<]/ && $support_simple_multikey_equivalents eq !0 ) {
+						push( @multikey_out, $line );
+					} elsif ( $support_all_multikey_equivalents eq !0 ) {
+						push( @multikey_out, $line );
+					}
+				} else {
 					push( @multikey_out, $line );
-
-					# Add to catalog.
-					$line =~ m/(<.+>).+/;
-					push( @multikey_parsed, $1 );
 				}
+
+				# Add to catalog.
+				$line =~ m/(<.+>).+/;
+				push( @multikey_parsed, $1 );
 
 			} else {
 				push( @dead_key_out, $line );
@@ -1507,31 +1459,6 @@ foreach my $entry ( @multikey_parsed ) {
 print( "Adding missing links to multikey chains complete.\n" );
 print CONSOLE ( "Adding missing links to multikey chains complete.\n" );
 
-# Add missing links to multikey equivalent chains.
-print( "Adding missing links to multikey equivalent chains in progress ---\n" );
-print CONSOLE ( "Adding missing links to multikey equivalent chains in progress ---\n" );
-foreach my $entry ( @mk_equiv_parsed ) {
-	do {
-		$entry =~ m/^(<.+>)<.+>$/;
-		$preceding = $1;
-		# This should work better than "unless ( grep { /^\Q$preceding$/ } @mk_equiv_complete ) {".
-		my $ok = !1;
-		foreach my $item ( @mk_equiv_complete ) {
-			if ( $item eq $preceding ) {
-				$ok = !0;
-				last;
-			}
-		}
-		if ( $ok eq !1 ) {
-			push( @mk_equiv_complete, $preceding );
-			push( @mk_equiv_out, $preceding );
-		}
-		$entry =~ s/^(<.+>)<.+>$/$1/;
-	} while ( $entry =~ /^<.+><.+>$/ );
-}
-print( "Adding missing links to multikey equivalent chains complete.\n" );
-print CONSOLE ( "Adding missing links to multikey equivalent chains complete.\n" );
-
 # Case insensitive sorting.
 # By courtesy of https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 print( "Case insensitive sorting in progress ---\n" );
@@ -1539,46 +1466,20 @@ print CONSOLE ( "Case insensitive sorting in progress ---\n" );
 @dead_key_out      = sort { "\L$a" cmp "\L$b" } @dead_key_out;
 @multikey_complete = sort { "\L$a" cmp "\L$b" } @multikey_complete;
 @multikey_out      = sort { "\L$a" cmp "\L$b" } @multikey_out;
-@mk_equiv_complete = sort { "\L$a" cmp "\L$b" } @mk_equiv_complete;
-@mk_equiv_out      = sort { "\L$a" cmp "\L$b" } @mk_equiv_out;
 print( "Case insensitive sorting complete.\n" );
 print CONSOLE ( "Case insensitive sorting complete.\n" );
 
 # Define the multikey dead characters.
-# The sub get_mk_equiv_dead_character cannot be used, because this uncomments the multikey
-# equivalents commented out due to conflicts with dedicated multikey sequences.
 print( "Defining the multikey dead characters in progress ---\n" );
 print CONSOLE ( "Defining the multikey dead characters in progress ---\n" );
 foreach my $entry ( @multikey_complete ) {
 	$deadkey = $entry;
-	#$deadkey = get_mk_equiv_dead_character( $deadkey );
-	unless ( length( $deadkey ) > 4 ) {
-		push( @multikey_dchars, $entry . '➔' . $deadkey );
-	} else {
-		push( @multikey_dchars, $entry . '➔' . $dead_hex );
-		++$dead_dec;
-		$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
-	}
+	push( @multikey_dchars, $entry . '➔' . $dead_hex );
+	++$dead_dec;
+	$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
 }
 print( "Defining the multikey dead characters complete.\n" );
 print CONSOLE ( "Defining the multikey dead characters complete.\n" );
-
-# Define the dead key multikey equivalent dead characters in the same array.
-print( "Defining the multikey equivalent dead characters in progress ---\n" );
-print CONSOLE ( "Defining the multikey equivalent dead characters in progress ---\n" );
-foreach my $entry ( @mk_equiv_complete ) {
-	$deadkey = $entry;
-	$deadkey = get_mk_equiv_dead_character( $deadkey );
-	unless ( length( $deadkey ) > 4 ) {
-		push( @multikey_dchars, $entry . '➔' . $deadkey );
-	} else {
-		push( @multikey_dchars, $entry . '➔' . $dead_hex );
-		++$dead_dec;
-		$dead_hex = sprintf( "%X", $dead_dec ); # To hex.
-	}
-}
-print( "Defining the multikey equivalent dead characters complete.\n" );
-print CONSOLE ( "Defining the multikey equivalent dead characters complete.\n" );
 
 # Process single-character dead key output without multicharacter input.
 print( "Processing the dead key output in progress ---\n" );
@@ -1655,8 +1556,8 @@ print( "Processing the dead key output complete.\n" );
 print CONSOLE ( "Processing the dead key output complete.\n" );
 
 # Process single-character multikey output without multicharacter input.
-print( "Processing the dedicated multikey output in progress ---\n" );
-print CONSOLE ( "Processing the dedicated multikey output in progress ---\n" );
+print( "Processing the multikey output in progress ---\n" );
+print CONSOLE ( "Processing the multikey output in progress ---\n" );
 foreach my $line ( @multikey_out ) {
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Single-character output.
 		unless ( $line =~ /<UEF/ ) {       # Multicharacter input.
@@ -1737,124 +1638,10 @@ foreach my $line ( @multikey_out ) {
 	}
 	push( @multikey_print, $print );
 }
-print( "Processing the dedicated multikey output complete.\n" );
-print CONSOLE ( "Processing the dedicated multikey output complete.\n" );
+print( "Processing the multikey output complete.\n" );
+print CONSOLE ( "Processing the multikey output complete.\n" );
 
 print MULTIKEY @multikey_print;
-
-#
-# Output multikey in 2 files is required because a single file exceeds the 2MB
-# file size limit of github.com (not github.dev) if all multikey equivalents
-# are supported. Yet, only single press dead key multikey equivalents are
-# supported, dead key chains are excluded, as a way to keep the layout driver
-# file size below a presumed 254 kB limit.
-#
-# Wrapping this code in a subroutine to comply with the D.R.Y. principle gets
-# perl 5, version 38, subversion 0 (v5.38.0) built for MSWin32-x64-multi-thread
-# to crash the computer.
-#
-# Process single-character dead key multikey equivalent output without multicharacter input.
-print( "Processing the dead key multikey equivalent output in progress ---\n" );
-print CONSOLE ( "Processing the dead key multikey equivalent output in progress ---\n" );
-foreach my $line ( @mk_equiv_out ) {
-	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Single-character output.
-		unless ( $line =~ /<UEF/ ) {       # Multicharacter input.
-			$line          =~ m/((<.+>)(<.+>)) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
-			$full_chain    = $1;
-			$deadkey       = $2;
-			$input         = $3;
-			$output_string = $4;
-			$output_code   = $5;
-			$comment       = $6;
-
-			$deadchar = get_mk_equiv_dead_character( $deadkey );
-
-			if ( length( $deadchar ) < 3 || hex( $deadchar ) < 57856 || $support_all_multikey_equivalents eq !0 ) {
-
-				# Get input code for DEADTRANS call.
-				$input = get_dead_character( $input );
-				$input =~ s/<(.+)>/$1/;
-				$input =~ s/U([0-9A-F]{4})/$1/;
-				$input = dekeysym( $input );
-
-				# Get input character for annotation.
-				if ( $input =~ /[0-9A-F]{4}/ ) {
-					$input_string = chr( hex( $input ) );
-				} else {
-					$input_string = $input;
-					$input_string =~ s/\\?(.)/$1/;
-					if ( $input_string =~ /^"$/ ) {
-						$delim = "'";
-					}
-				}
-
-				# Convert SMP characters to surrogate pairs.
-				if ( $output_code =~ /[0-9A-F]{5}/ ) {
-					$high_su = sprintf( "%X", ( 55232 + int( hex( $output_code ) / 1024 ) ) );
-					unless ( grep( /^$high_su$/, @high_surrogates ) ) {
-						push( @high_surrogates, $high_su );
-					}
-					$high_out     = 'High surrogate: ' . $high_su . '; ';
-					$uplus_output = 'U+' . $output_code . ' ';
-					$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
-					++$half;
-					print LOG $high_su . ', ' . $deadkey . "\n";
-
-				} else {
-					$uplus_output = 'U+' . $output_code . ' ';
-					$high_out     = '';
-					++$full;
-				}
-
-				$length = length( $full_chain );
-				if ( $length > 65 ) {
-					$length = 65;
-					++$overlong;
-				}
-				$print = '/*' . $full_chain . ( " " x ( 65 - $length ) ) . "*/ DEADTRANS( " . format_character( $input )
-								. "\t," . format_character( $deadchar ) . "\t,0x" . $output_code . "\t,0x0000), // " . $high_out . $delim
-								. $input_string . $delim . ' ➔ "' . $output_string . '" ' . $uplus_output . $comment . "\n";
-				++$mk_equiv_count;
-			}
-		}
-	} else {
-		if ( $line =~ /^<.+>$/ && $support_all_multikey_equivalents eq !0 ) {
-			if ( $line eq '<!M>' ) {
-				$print = '';
-			} else {
-				$line       =~ m/(<.+>)(<.+>)/;
-				$deadkey    = $1;
-				$input      = $2;
-				$deadchar   = get_multikey_dead_character( $deadkey );
-				$input      =~ s/<(.+)>/$input/;
-				$input      = dekeysym( $input );
-				$print      = '/*' . $line . ( " " x ( 65 - length( $line ) ) )
-				               . "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-				               . "\t," . format_character( get_multikey_dead_character( $line ) ) . "\t,0x0001), // Intermediate multikey chain link\n";
-			}
-		} else {
-			++$multichar;
-			$print = '';
-		}
-	}
-	push( @mk_equiv_print, $print );
-}
-print( "Processing the dead key multikey equivalent output complete.\n" );
-print CONSOLE ( "Processing the dead key multikey equivalent output complete.\n" );
-
-print EQUIVALENTS @mk_equiv_print;
-
-# Generates the required multikey chain links.
-foreach my $deadkey ( @dead_key_mk_equivs ) {
-	$input       = substr( $deadkey, 4, -5 );
-	$output_code = substr( $deadkey, -4, 4 );
-	$deadkey     = substr( $deadkey, 0, -5 );
-	$deadchar    = '00A6';
-	$input       = dekeysym( $input );
-	print EQUIVALENTS $print = '/*' . $deadkey . ( " " x ( 65 - length( $deadkey ) ) )
-				. "*/ DEADTRANS( " . format_character( $input ) . "\t," . format_character( $deadchar )
-				. "\t," . format_character( $output_code ) . "\t,0x0001), // Intermediate multikey chain link\n";
-}
 
 # Print report to a file.
 print( "Printing the reports in progress ---\n" );
@@ -1890,9 +1677,6 @@ print CONSOLE ( "Closed file $input_path.\n" );
 close( DEADKEYS );
 print( "Closed file $deadkey_path.\n" );
 print CONSOLE ( "Closed file $deadkey_path.\n" );
-close( EQUIVALENTS );
-print( "Closed file $equivalents_path.\n" );
-print CONSOLE ( "Closed file $equivalents_path.\n" );
 close( MULTIKEY );
 print( "Closed file $multikey_path.\n" );
 print CONSOLE ( "Closed file $multikey_path.\n" );
@@ -1924,10 +1708,8 @@ print( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print CONSOLE ( "  Their relationship to the dead keys is logged in $log_path.\n" );
 print( "  $multichar unsupported multicharacter input/output dead key sequences not processed.\n" );
 print CONSOLE ( "  $multichar unsupported multicharacter input/output dead key sequences not processed.\n" );
-print( "  $multikey_count potential multikey-only sequences in $multikey_path.\n" );
-print CONSOLE ( "  $multikey_count potential multikey-only sequences in $multikey_path.\n" );
-print( "  $mk_equiv_count dead key multikey equivalent sequences in $equivalents_path.\n" );
-print CONSOLE ( "  $mk_equiv_count dead key multikey equivalent sequences in $equivalents_path.\n" );
+print( "  $multikey_count potential multikey sequences in $multikey_path.\n" );
+print CONSOLE ( "  $multikey_count potential multikey sequences in $multikey_path.\n" );
 unless ( @unsupported == 0 ) {
 	if ( @unsupported == 1 ) {
 		print( "  The unsupported chain is listed in $report_path.\n" );
