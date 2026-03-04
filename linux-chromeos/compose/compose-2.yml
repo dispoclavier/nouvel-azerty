@@ -1326,7 +1326,7 @@
 <UEFD1>                                                                                  <greater> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <Multi_key><asciicircum>                                                                 <greater> : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <UEFD1>                                                                                    <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
-#   Multikey conflicts with "≙" U2259                                                               <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
+#   Multikey conflicts with "≙" U2259.                                                     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <UEFD1>                                                                                    <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 #   Multikey conflicts with "ᷗ" U1DD7.                                                      <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <UEFD1>                                                                                   <period> : "·" U00B7 # MIDDLE DOT
