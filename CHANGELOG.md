@@ -18,9 +18,19 @@ Mise à jour pour macOS des dispositions développées pour Linux, portées sous
 
 ## 6.2.4 (projet)
 
-Correction des noms donnés aux touches modificatrices supplémentaires sous Windows.
+Débogage des pilotes de disposition pour Windows par l’arrêt des équivalents en composition de touches mortes.
 
-Complétion des séquences de touches mortes spécifiques sous Windows.
+Simplification de la saisie de symboles mathématiques.
+
+Correction du contenu des touches mortes.
+
+* Composition :
+	* Sous Windows :
+		* Déboguer les équivalents en composition par leur fusion avec les séquences de composition dédiées. dead-key-convert.pl [6d61802](https://github.com/dispoclavier/nouvel-azerty/commit/6d61802a303535d4ff63a505a7554ec0a9ea99db), kbdeadtrans.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [6a251b1](https://github.com/dispoclavier/nouvel-azerty/commit/6a251b10484ff3ab73907f094b01a97bf51deb84)
+		* Déboguer le système par l’arrêt de la prise en charge des équivalents en composition, afin de réduire la taille des pilotes de disposition. dead-key-convert.pl [6d61802](https://github.com/dispoclavier/nouvel-azerty/commit/6d61802a303535d4ff63a505a7554ec0a9ea99db), kbdeadtrans.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [f2eb494](https://github.com/dispoclavier/nouvel-azerty/commit/f2eb494fa26307690ac37468b0090953869df5e7)
+* Builds :
+	* 6.2.4.0 [6a251b1](https://github.com/dispoclavier/nouvel-azerty/commit/6a251b10484ff3ab73907f094b01a97bf51deb84)
+	* 6.2.4.1 [f2eb494](https://github.com/dispoclavier/nouvel-azerty/commit/f2eb494fa26307690ac37468b0090953869df5e7)
 
 ## 6.2.3 (2026-02-23)
 
