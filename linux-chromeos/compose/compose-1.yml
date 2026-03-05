@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.4.2" # See #   End of line comments
+<UEFA0>                     : "version 6.2.4.3" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -5526,17 +5526,30 @@
 #
 # # Not sign
 #
-#   The not sign is also in group 4 of grave on the N key.
+#   For consistency of "⇁" U21C1 with the other harpoons, and with respect to
+#   the availability of alphabetic sequences for the not sign, this is given
+#   the tedious double-leading-space graphic sequences.
 #
-#   These sequences need to be consistent with those of "⫬" U2AEC and "⫭" U2AED
-#   below. There is also a non-math TURNED NOT SIGN "⌙" U2319.
+#   All-capitals alphabetic sequences are used for the double-struck not signs
+#   "⫬" U2AEC and "⫭" U2AED below, rather than titlecase, due to conflicts with
+#   "⫱" U2AF1 and "№" U2116.
+#
+#   The not sign is also in group 4 of grave on the N key.
+#   See # # B06 grave
+#
+#   The non-math REVERSED NOT SIGN"⌐" U2310 and TURNED NOT SIGN "⌙" U2319 are
+#   supported outside the math section.
+#   See #*# REVERSED
 #   See # # TURNED&GROUP_1
 #   See # # TURNED&GROUP_2
 #
-<Multi_key><minus><apostrophe>                                                             <space> : "¬" U00AC # NOT SIGN
-<Multi_key><minus><apostrophe>                                                      <nobreakspace> : "¬" U00AC # NOT SIGN
-<Multi_key><minus><rightsinglequotemark>                                                   <space> : "¬" U00AC # NOT SIGN
-<Multi_key><minus><rightsinglequotemark>                                            <nobreakspace> : "¬" U00AC # NOT SIGN
+<Multi_key><n><o><t>                                                                               : "¬" U00AC # NOT SIGN
+<Multi_key><space><space><minus><apostrophe>                                                       : "¬" U00AC # NOT SIGN
+<Multi_key><nobreakspace><space><minus><apostrophe>                                                : "¬" U00AC # NOT SIGN
+<Multi_key><nobreakspace><nobreakspace><minus><apostrophe>                                         : "¬" U00AC # NOT SIGN
+<Multi_key><space><space><minus><rightsinglequotemark>                                             : "¬" U00AC # NOT SIGN
+<Multi_key><nobreakspace><space><minus><rightsinglequotemark>                                      : "¬" U00AC # NOT SIGN
+<Multi_key><nobreakspace><nobreakspace><minus><rightsinglequotemark>                               : "¬" U00AC # NOT SIGN
 #
 #
 # # Plus minus
@@ -6075,12 +6088,10 @@
 <Multi_key><rightsinglequotemark><exclam>                                           <nobreakspace> : "↿" U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
 <Multi_key><minus><grave>                                                                  <space> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
 <Multi_key><minus><grave>                                                           <nobreakspace> : "⇀" U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
-<Multi_key><space><space><minus><apostrophe>                                                       : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><nobreakspace><space><minus><apostrophe>                                                : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><nobreakspace><nobreakspace><minus><apostrophe>                                         : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><space><space><minus><rightsinglequotemark>                                             : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><nobreakspace><space><minus><rightsinglequotemark>                                      : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-<Multi_key><nobreakspace><nobreakspace><minus><rightsinglequotemark>                               : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><minus><apostrophe>                                                             <space> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><minus><apostrophe>                                                      <nobreakspace> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><minus><rightsinglequotemark>                                                   <space> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<Multi_key><minus><rightsinglequotemark>                                            <nobreakspace> : "⇁" U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 <Multi_key><exclam><apostrophe>                                                            <space> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
 <Multi_key><exclam><apostrophe>                                                     <nobreakspace> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
 <Multi_key><exclam><rightsinglequotemark>                                                  <space> : "⇂" U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
@@ -9308,10 +9319,12 @@
 <Multi_key><T><KP_2><percent>                                                                      : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><2><backslash>                                                                       : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><KP_2><backslash>                                                                    : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><N><O><T>                                                                               : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                             <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                                   <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><rightsinglequotemark>                                            <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
+<Multi_key><T><O><N>                                                                               : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><space><apostrophe><equal>                                                              : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><nobreakspace><apostrophe><equal>                                                       : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><space><rightsinglequotemark><equal>                                                    : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
