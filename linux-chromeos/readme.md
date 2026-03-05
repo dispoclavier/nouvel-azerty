@@ -226,7 +226,11 @@ Ce mode d’emploi complémentaire présente ce qui est particulier à Linux.
 #### Émulation de touche "ê"
 
 L’émulation de touche "ê" par la touche morte accent circonflexe fonctionne aussi en capitales, "q" donne "êqu", et "x" donne "êch".
- 
+
+#### Touches mortes
+
+La plupart des touches mortes ont un équivalent en composition, où la touche morte est remplacée par la touche de composition suivie du parent ASCII de la touche morte. Les touches mortes sont en général sur la même touche que leur parent ASCII. Une partie des équivalents en composition sont désactivés pour éviter les conflits
+
 ### Séquences
 
 #### Trigramme breton
