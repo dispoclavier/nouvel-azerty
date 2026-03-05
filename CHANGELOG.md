@@ -22,7 +22,7 @@ Simplification de la saisie de symboles mathématiques.
 
 Correction du contenu des touches mortes.
 
-## 6.2.4 (projet)
+## 6.2.4 (2026-03-05)
 
 Débogage des pilotes de disposition pour Windows par l’arrêt des équivalents en composition de touches mortes.
 
@@ -36,11 +36,14 @@ Correction de contenu de touche morte.
 		* Déboguer le système par l’arrêt de la prise en charge des équivalents en composition, afin de réduire la taille des pilotes de disposition. dead-key-convert.pl [6d61802](https://github.com/dispoclavier/nouvel-azerty/commit/6d61802a303535d4ff63a505a7554ec0a9ea99db), kbdeadtrans.c, kbdeadtrans-multikey.c, kbdeadtrans-multikey-equivalents.c [f2eb494](https://github.com/dispoclavier/nouvel-azerty/commit/f2eb494fa26307690ac37468b0090953869df5e7)
 	* Simplifier les séquences de "≙" U+2259. compose-1.yml [ef34a55](https://github.com/dispoclavier/nouvel-azerty/commit/ef34a556042e7785e16356ef89aecf2e4f8388ea)
 	* Compléter les séquences de "⁀" U+2040. ibidem
+	* Corriger ou compléter les séquences de "¬" U+00AC, "⇁" U+21C1, "⫬" U+2AEC, "⫭" U+2AED. compose-1.yml [5a7edc1](https://github.com/dispoclavier/nouvel-azerty/commit/5a7edc1ced405ea228cc3271f87d791def378726)
 * Transformations : Macron : Macron souscrit : Corriger "±" U+00B1 par "+". compose-2.yml [ef34a55](https://github.com/dispoclavier/nouvel-azerty/commit/ef34a556042e7785e16356ef89aecf2e4f8388ea), [5e0ec1d](https://github.com/dispoclavier/nouvel-azerty/commit/5e0ec1d83577ea9891d8fd04cb208f07d792529e)
+* Documentation : Mettre à jour les modes d’emploi. readme.md alias Mode-d-emploi-commun.md [6da6c32](https://github.com/dispoclavier/nouvel-azerty/commit/6da6c325ba05e102a76a50bcd304bf23d42a914b), linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [fd4e9fa](https://github.com/dispoclavier/nouvel-azerty/commit/fd4e9facc1c86d3cef3c6b8fbdf1a835408d418d), windows/readme.md alias Mode-d-emploi-sous-Windows.md [f7e85cf](https://github.com/dispoclavier/nouvel-azerty/commit/f7e85cf464d9a5e996fc28176ad9cf7414e368a0)
 * Builds :
 	* 6.2.4.0 [6a251b1](https://github.com/dispoclavier/nouvel-azerty/commit/6a251b10484ff3ab73907f094b01a97bf51deb84)
 	* 6.2.4.1 [f2eb494](https://github.com/dispoclavier/nouvel-azerty/commit/f2eb494fa26307690ac37468b0090953869df5e7)
 	* 6.2.4.2 [f5b40c9](https://github.com/dispoclavier/nouvel-azerty/commit/f5b40c9cf47e4b5db990507d34fb40e9937a5939)
+	* 6.2.4.3 [0758b13](https://github.com/dispoclavier/nouvel-azerty/commit/0758b13173cc0500870e8564ead0e73fad548f79)
 
 ## 6.2.3 (2026-02-23)
 
