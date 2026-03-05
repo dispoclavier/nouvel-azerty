@@ -152,9 +152,9 @@ Par exemple, pour saisir le o ouvert accent aigu, il faut d’abord saisir le o 
 3. Touche morte accent aigu : ⟦£$¤⟧ ;
 4. ⟦Espace⟧.
 
-La raison de cette complication est que le système Windows de pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et par un développeur qui ne pensait sans doute pas aux autres langues, et qui n’était peut-être pas au courant du modèle d’encodage d’Unicode ni de la recommandation de prendre en charge les lettres composées par touches mortes.
+La raison de cette complication est que le système Windows de pilotes de disposition a été conçu à une époque où les langues les mieux établies et les plus réactives, comme le grec et le vietnamien, se faisaient doter de jeux complets de lettres diacritées précomposées, et sans penser aux autres langues, prises en charge par le modèle d’encodage d’Unicode assorti de la recommandation de permettre la saisie par touches mortes des lettres composées de la même manière que celle des lettres précomposées.
 
-Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes il aurait simplement fallu ajouter 5 colonnes (ou plus, car on n’est pas à quelques kilooctets près, puisque les pilotes de ce nouvel AZERTY sont déjà dix fois plus lourds qu’un pilote moyen et restent parfaitement fonctionnels, et Windows aussi), et programmer Windows pour les consulter et ajouter leur contenu s’il n’est pas nul.
+Ce dérangement n’est pas dû à une limitation technique intrinsèque, car dans le tableau des touches mortes, il aurait simplement fallu ajouter 5 colonnes (ou plus, car on n’est pas à quelques kilooctets près, puisque les pilotes de disposition restent opérationnels jusqu’au vingtuple de leur taille moyenne, et Windows aussi), et programmer Windows pour les consulter et ajouter leur contenu s’il est non nul.
 
 ### Émojis
 
