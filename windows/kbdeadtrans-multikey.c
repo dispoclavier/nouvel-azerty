@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.4.3.0 Thu 2026-03-05T0307+0100
 * Update                                   6.2.4.2.0 Wed 2026-03-04T2223+0100
 * Shrink-remove all multikey equivalents   6.2.4.1.0 Tue 2026-03-03T1429+0100
 * Move here debugged multikey equivalents  6.2.4.0.0 Tue 2026-03-03T0958+0100
@@ -2024,15 +2025,15 @@
 /*<!M><%minus><%apostrophe><%bar>                                  */ DEADTRANS( L'|'	,0xE659	,0x2957	,0x0000), // '|' ➔ "⥗" U+2957 RIGHTWARDS HARPOON WITH BARB DOWN TO BAR
 /*<!M><%minus><%apostrophe><%grave>                                */ DEADTRANS( L'`'	,0xE659	,0x2969	,0x0000), // '`' ➔ "⥩" U+2969 RIGHTWARDS HARPOON WITH BARB DOWN ABOVE LEFTWARDS HARPOON WITH BARB DOWN
 /*<!M><%minus><%apostrophe><%minus>                                */ DEADTRANS( L'-'	,0xE659	,0x2AE0	,0x0000), // '-' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><%minus><%apostrophe><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE659	,0x00AC	,0x0000), // ' ' ➔ "¬" U+00AC NOT SIGN
-/*<!M><%minus><%apostrophe><~space>                                */ DEADTRANS( L' '	,0xE659	,0x00AC	,0x0000), // ' ' ➔ "¬" U+00AC NOT SIGN
+/*<!M><%minus><%apostrophe><~nbspace>                              */ DEADTRANS( 0x00A0	,0xE659	,0x21C1	,0x0000), // ' ' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><%minus><%apostrophe><~space>                                */ DEADTRANS( L' '	,0xE659	,0x21C1	,0x0000), // ' ' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 /*<!M><%minus><%aprightsingquotmark>                               */ DEADTRANS( 0x2019	,0xE658	,0xE65A	,0x0001), // Intermediate multikey chain link
 /*<!M><%minus><%aprightsingquotmark><%aprightsingquotmark>         */ DEADTRANS( 0x2019	,0xE65A	,0x22B9	,0x0000), // '’' ➔ "⊹" U+22B9 HERMITIAN CONJUGATE MATRIX
 /*<!M><%minus><%aprightsingquotmark><%bar>                         */ DEADTRANS( L'|'	,0xE65A	,0x2957	,0x0000), // '|' ➔ "⥗" U+2957 RIGHTWARDS HARPOON WITH BARB DOWN TO BAR
 /*<!M><%minus><%aprightsingquotmark><%grave>                       */ DEADTRANS( L'`'	,0xE65A	,0x2969	,0x0000), // '`' ➔ "⥩" U+2969 RIGHTWARDS HARPOON WITH BARB DOWN ABOVE LEFTWARDS HARPOON WITH BARB DOWN
 /*<!M><%minus><%aprightsingquotmark><%minus>                       */ DEADTRANS( L'-'	,0xE65A	,0x2AE0	,0x0000), // '-' ➔ "⫠" U+2AE0 SHORT UP TACK
-/*<!M><%minus><%aprightsingquotmark><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE65A	,0x00AC	,0x0000), // ' ' ➔ "¬" U+00AC NOT SIGN
-/*<!M><%minus><%aprightsingquotmark><~space>                       */ DEADTRANS( L' '	,0xE65A	,0x00AC	,0x0000), // ' ' ➔ "¬" U+00AC NOT SIGN
+/*<!M><%minus><%aprightsingquotmark><~nbspace>                     */ DEADTRANS( 0x00A0	,0xE65A	,0x21C1	,0x0000), // ' ' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><%minus><%aprightsingquotmark><~space>                       */ DEADTRANS( L' '	,0xE65A	,0x21C1	,0x0000), // ' ' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
 /*<!M><%minus><%backslash>                                         */ DEADTRANS( L'\\'	,0xE658	,0xE65B	,0x0001), // Intermediate multikey chain link
 /*<!M><%minus><%backslash><~nbspace>                               */ DEADTRANS( 0x00A0	,0xE65B	,0x29A6	,0x0000), // ' ' ➔ "⦦" U+29A6 OBLIQUE ANGLE OPENING UP
 /*<!M><%minus><%backslash><~space>                                 */ DEADTRANS( L' '	,0xE65B	,0x29A6	,0x0000), // ' ' ➔ "⦦" U+29A6 OBLIQUE ANGLE OPENING UP
@@ -4530,6 +4531,8 @@
 /*<!M><N><O><%underscore>                                          */ DEADTRANS( L'_'	,0xE9CC	,0x2116	,0x0000), // '_' ➔ "№" U+2116 NUMERO SIGN
 /*<!M><n><o><r>                                                    */ DEADTRANS( L'r'	,0xE9CB	,0x22BD	,0x0000), // 'r' ➔ "⊽" U+22BD NOR
 /*<!M><N><O><R>                                                    */ DEADTRANS( L'R'	,0xE9CC	,0x22BD	,0x0000), // 'R' ➔ "⊽" U+22BD NOR
+/*<!M><n><o><t>                                                    */ DEADTRANS( L't'	,0xE9CB	,0x00AC	,0x0000), // 't' ➔ "¬" U+00AC NOT SIGN
+/*<!M><N><O><T>                                                    */ DEADTRANS( L'T'	,0xE9CC	,0x2AEC	,0x0000), // 'T' ➔ "⫬" U+2AEC DOUBLE STROKE NOT SIGN
 /*<!M><n><p>                                                       */ DEADTRANS( L'p'	,0xE9BE	,0xE9CD	,0x0001), // Intermediate multikey chain link
 /*<!M><N><P>                                                       */ DEADTRANS( L'P'	,0xE9BD	,0xE9CE	,0x0001), // Intermediate multikey chain link
 /*<!M><n><s>                                                       */ DEADTRANS( L's'	,0xE9BE	,0x20AA	,0x0000), // 's' ➔ "₪" U+20AA NEW SHEQEL SIGN
@@ -5275,6 +5278,7 @@
 /*<!M><t><o>                                                       */ DEADTRANS( L'o'	,0xEA67	,0xEA79	,0x0001), // Intermediate multikey chain link
 /*<!M><T><O>                                                       */ DEADTRANS( L'O'	,0xEA66	,0xEA7A	,0x0001), // Intermediate multikey chain link
 /*<!M><T><o>                                                       */ DEADTRANS( L'o'	,0xEA66	,0x2AF1	,0x0000), // 'o' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
+/*<!M><T><O><N>                                                    */ DEADTRANS( L'N'	,0xEA7A	,0x2AED	,0x0000), // 'N' ➔ "⫭" U+2AED REVERSED DOUBLE STROKE NOT SIGN
 /*<!M><t><o><x>                                                    */ DEADTRANS( L'x'	,0xEA79	,0x2620	,0x0000), // 'x' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
 /*<!M><T><O><X>                                                    */ DEADTRANS( L'X'	,0xEA7A	,0x2620	,0x0000), // 'X' ➔ "☠" U+2620 SKULL AND CROSSBONES emoji
 /*<!M><t><o><~nbspace>                                             */ DEADTRANS( 0x00A0	,0xEA79	,0x2AF1	,0x0000), // ' ' ➔ "⫱" U+2AF1 DOWN TACK WITH CIRCLE BELOW
@@ -6081,8 +6085,8 @@
 /*<!M><~nbspace><~nbspace><%less><o>                               */ DEADTRANS( L'o'	,0xEB26	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><~nbspace><%less><O>                               */ DEADTRANS( L'O'	,0xEB26	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><~nbspace><%minus>                                 */ DEADTRANS( L'-'	,0xEB1F	,0xEB27	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~nbspace><%minus><%apostrophe>                    */ DEADTRANS( L'\''	,0xEB27	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~nbspace><%minus><%aprightsingquotmark>           */ DEADTRANS( 0x2019	,0xEB27	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~nbspace><%minus><%apostrophe>                    */ DEADTRANS( L'\''	,0xEB27	,0x00AC	,0x0000), // ''' ➔ "¬" U+00AC NOT SIGN
+/*<!M><~nbspace><~nbspace><%minus><%aprightsingquotmark>           */ DEADTRANS( 0x2019	,0xEB27	,0x00AC	,0x0000), // '’' ➔ "¬" U+00AC NOT SIGN
 /*<!M><~nbspace><~nbspace><%minus><%slash>                         */ DEADTRANS( L'/'	,0xEB27	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~nbspace><~nbspace><%period>                                */ DEADTRANS( L'.'	,0xEB1F	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~nbspace><~nbspace><%semicolon>                             */ DEADTRANS( L';'	,0xEB1F	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
@@ -6168,8 +6172,8 @@
 /*<!M><~nbspace><~space><%less><o>                                 */ DEADTRANS( L'o'	,0xEB3A	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><~space><%less><O>                                 */ DEADTRANS( L'O'	,0xEB3A	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~nbspace><~space><%minus>                                   */ DEADTRANS( L'-'	,0xEB33	,0xEB3B	,0x0001), // Intermediate multikey chain link
-/*<!M><~nbspace><~space><%minus><%apostrophe>                      */ DEADTRANS( L'\''	,0xEB3B	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~nbspace><~space><%minus><%aprightsingquotmark>             */ DEADTRANS( 0x2019	,0xEB3B	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~nbspace><~space><%minus><%apostrophe>                      */ DEADTRANS( L'\''	,0xEB3B	,0x00AC	,0x0000), // ''' ➔ "¬" U+00AC NOT SIGN
+/*<!M><~nbspace><~space><%minus><%aprightsingquotmark>             */ DEADTRANS( 0x2019	,0xEB3B	,0x00AC	,0x0000), // '’' ➔ "¬" U+00AC NOT SIGN
 /*<!M><~nbspace><~space><%minus><%slash>                           */ DEADTRANS( L'/'	,0xEB3B	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~nbspace><~space><%period>                                  */ DEADTRANS( L'.'	,0xEB33	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~nbspace><~space><%semicolon>                               */ DEADTRANS( L';'	,0xEB33	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
@@ -6705,8 +6709,8 @@
 /*<!M><~space><~space><%less><o>                                   */ DEADTRANS( L'o'	,0xEBB0	,0x2A79	,0x0000), // 'o' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~space><~space><%less><O>                                   */ DEADTRANS( L'O'	,0xEBB0	,0x2A79	,0x0000), // 'O' ➔ "⩹" U+2A79 LESS-THAN WITH CIRCLE INSIDE
 /*<!M><~space><~space><%minus>                                     */ DEADTRANS( L'-'	,0xEBA9	,0xEBB1	,0x0001), // Intermediate multikey chain link
-/*<!M><~space><~space><%minus><%apostrophe>                        */ DEADTRANS( L'\''	,0xEBB1	,0x21C1	,0x0000), // ''' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
-/*<!M><~space><~space><%minus><%aprightsingquotmark>               */ DEADTRANS( 0x2019	,0xEBB1	,0x21C1	,0x0000), // '’' ➔ "⇁" U+21C1 RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+/*<!M><~space><~space><%minus><%apostrophe>                        */ DEADTRANS( L'\''	,0xEBB1	,0x00AC	,0x0000), // ''' ➔ "¬" U+00AC NOT SIGN
+/*<!M><~space><~space><%minus><%aprightsingquotmark>               */ DEADTRANS( 0x2019	,0xEBB1	,0x00AC	,0x0000), // '’' ➔ "¬" U+00AC NOT SIGN
 /*<!M><~space><~space><%minus><%slash>                             */ DEADTRANS( L'/'	,0xEBB1	,0x299F	,0x0000), // '/' ➔ "⦟" U+299F ACUTE ANGLE
 /*<!M><~space><~space><%period>                                    */ DEADTRANS( L'.'	,0xEBA9	,0x2219	,0x0000), // '.' ➔ "∙" U+2219 BULLET OPERATOR
 /*<!M><~space><~space><%semicolon>                                 */ DEADTRANS( L';'	,0xEBA9	,0x2A1F	,0x0000), // ';' ➔ "⨟" U+2A1F Z NOTATION SCHEMA COMPOSITION
