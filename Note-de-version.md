@@ -16,7 +16,7 @@ Correction de contenu de touche morte.
 	* Compléter les séquences de "⁀" U+2040. ibidem
 	* Corriger ou compléter les séquences de "¬" U+00AC, "⇁" U+21C1, "⫬" U+2AEC, "⫭" U+2AED. compose-1.yml [5a7edc1](https://github.com/dispoclavier/nouvel-azerty/commit/5a7edc1ced405ea228cc3271f87d791def378726)
 * Transformations : Macron : Macron souscrit : Corriger "±" U+00B1 par "+". compose-2.yml [ef34a55](https://github.com/dispoclavier/nouvel-azerty/commit/ef34a556042e7785e16356ef89aecf2e4f8388ea), [5e0ec1d](https://github.com/dispoclavier/nouvel-azerty/commit/5e0ec1d83577ea9891d8fd04cb208f07d792529e)
-* Documentation : Mettre à jour les modes d’emploi. readme.md alias Mode-d-emploi-commun.md [6da6c32](https://github.com/dispoclavier/nouvel-azerty/commit/6da6c325ba05e102a76a50bcd304bf23d42a914b), linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.md [fd4e9fa](https://github.com/dispoclavier/nouvel-azerty/commit/fd4e9facc1c86d3cef3c6b8fbdf1a835408d418d), windows/readme.md alias Mode-d-emploi-sous-Windows.md [f7e85cf](https://github.com/dispoclavier/nouvel-azerty/commit/f7e85cf464d9a5e996fc28176ad9cf7414e368a0)
+* Documentation : Mettre à jour les modes d’emploi. readme.md alias Mode-d-emploi-commun.pdf [6da6c32](https://github.com/dispoclavier/nouvel-azerty/commit/6da6c325ba05e102a76a50bcd304bf23d42a914b), linux-chromeos/readme.md alias Mode-d-emploi-sous-Linux.pdf [fd4e9fa](https://github.com/dispoclavier/nouvel-azerty/commit/fd4e9facc1c86d3cef3c6b8fbdf1a835408d418d), windows/readme.md alias Mode-d-emploi-sous-Windows.pdf [f7e85cf](https://github.com/dispoclavier/nouvel-azerty/commit/f7e85cf464d9a5e996fc28176ad9cf7414e368a0)
 * Builds :
 	* 6.2.4.0 [6a251b1](https://github.com/dispoclavier/nouvel-azerty/commit/6a251b10484ff3ab73907f094b01a97bf51deb84)
 	* 6.2.4.1 [f2eb494](https://github.com/dispoclavier/nouvel-azerty/commit/f2eb494fa26307690ac37468b0090953869df5e7)
@@ -61,5 +61,5 @@ Du total il faut soustraire les téléchargements effectués par SourceForge, so
 
 Cette note est [versionnée](https://github.com/dispoclavier/nouvel-azerty/blob/main/Note-de-version.md).
 
-| Dernière mise à jour : 2026-03-05 |
+| Dernière mise à jour : 2026-03-06 |
 |-|
