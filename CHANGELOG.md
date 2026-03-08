@@ -23,11 +23,13 @@ Simplification de la saisie de symboles mathématiques.
 Mise à jour du contenu des touches mortes.
 
 * Composition :
+	* Supprimer "ẞ" U+1E9E par « ¦SS ». compose-1.yml [4cca3ed](https://github.com/dispoclavier/nouvel-azerty/commit/4cca3ed1fcf2cd80a67685554172e64de5950d15)
+	* Simplifier les séquences de "⅀" U+2140. ibidem
 	* Simplifier les séquences de "⁀" U+2040. compose-1.yml [5cf1669](https://github.com/dispoclavier/nouvel-azerty/commit/5cf16696380edc7460a304c93e2bb63e2e051bdc)
 	* Compléter les séquences de "¡" U+00A1, "‎" U+200E, "‏" U+200F, "‪" U+202A, U+202B, "‬" U+202C, "‭" U+202D, U+202E, "⁦" U+2066, U+2067, "⁨" U+2068, "⁩" U+2069, "K" U+212A. compose-2.yml [37be705](https://github.com/dispoclavier/nouvel-azerty/commit/37be705dc3fc45b4644d91a4c9615e66ce89e221)
 * Transformations : Désactiver des équivalents en composition en conflit avec des symboles mathématiques. compose-2.yml [5cf1669](https://github.com/dispoclavier/nouvel-azerty/commit/5cf16696380edc7460a304c93e2bb63e2e051bdc)
 * Documentation :
-	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [37be705](https://github.com/dispoclavier/nouvel-azerty/commit/37be705dc3fc45b4644d91a4c9615e66ce89e221)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [37be705](https://github.com/dispoclavier/nouvel-azerty/commit/37be705dc3fc45b4644d91a4c9615e66ce89e221), [4cca3ed](https://github.com/dispoclavier/nouvel-azerty/commit/4cca3ed1fcf2cd80a67685554172e64de5950d15)
 	* Corriger le journal des modifications. CHANGELOG.md [7ca1301](https://github.com/dispoclavier/nouvel-azerty/commit/7ca13015fc8afde167fc4f3a5781eef9b22f32ae)
 
 ## 6.2.4 (2026-03-05)
