@@ -2053,7 +2053,10 @@
 <Multi_key><s><h>                                                                                  : "ʃ" U0283 # LATIN SMALL LETTER ESH
 <Multi_key><s><l>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><f><s>                                                                                  : "ſ" U017F # LATIN SMALL LETTER LONG S
-<Multi_key><S><S>                                                                                  : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
+#
+#   "ẞ" U1E9E by « ¦SS » conflicts with "⅀" U2140 and is semantically
+#   overloaded. Hence it is discarded as inappropriate.
+#
 <Multi_key><S><s>                                                                                  : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
 <Multi_key><s><s>                                                                                  : "ß" U00DF # LATIN SMALL LETTER SHARP S
 <Multi_key><S><Z>                                                                                  : "ẞ" U1E9E # LATIN CAPITAL LETTER SHARP S
@@ -5995,12 +5998,9 @@
 <Multi_key><g><g><at>                                                                              : "ℽ" U213D # DOUBLE-STRUCK SMALL GAMMA
 <Multi_key><G><G><at>                                                                              : "ℾ" U213E # DOUBLE-STRUCK CAPITAL GAMMA
 <Multi_key><P><P><at>                                                                              : "ℿ" U213F # DOUBLE-STRUCK CAPITAL PI
-<Multi_key><space><S><S><at>                                                                       : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-<Multi_key><nobreakspace><S><S><at>                                                                : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-<Multi_key><space><S><S>                                                                   <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-<Multi_key><space><S><S>                                                            <nobreakspace> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-<Multi_key><nobreakspace><S><S>                                                            <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
-<Multi_key><nobreakspace><S><S>                                                     <nobreakspace> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
+<Multi_key><S><S><at>                                                                              : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
+<Multi_key><S><S>                                                                          <space> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
+<Multi_key><S><S>                                                                   <nobreakspace> : "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 <Multi_key><G><percent>                                                                            : "⅁" U2141 # TURNED SANS-SERIF CAPITAL G
 <Multi_key><L><percent>                                                                    <space> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
 <Multi_key><L><percent>                                                             <nobreakspace> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L

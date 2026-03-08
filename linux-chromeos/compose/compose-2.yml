@@ -995,8 +995,9 @@
 #
 #   Hence it is proposed to use space as a base character to get the combining
 #   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s
-#   US Custom keyboard layout for macOS:
-#   http://uscustom.sourceforge.net/
+#   US Custom keyboard layout for macOS.
+#   https://uscustom.sourceforge.net/
+#   https://sourceforge.net/projects/uscustom/
 #
 #   Indeed the Unicode Standard version 11.0.0, section 5.2, page 220 states:
 #
