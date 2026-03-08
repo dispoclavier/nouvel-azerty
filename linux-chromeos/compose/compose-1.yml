@@ -5719,10 +5719,8 @@
 #
 # # Character tie
 #
-<Multi_key><space><parenleft>                                                              <space> : "⁀" U2040 # CHARACTER TIE
-<Multi_key><space><parenleft>                                                       <nobreakspace> : "⁀" U2040 # CHARACTER TIE
-<Multi_key><nobreakspace><parenleft>                                                       <space> : "⁀" U2040 # CHARACTER TIE
-<Multi_key><nobreakspace><parenleft>                                                <nobreakspace> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><parenleft>                                                                     <space> : "⁀" U2040 # CHARACTER TIE
+<Multi_key><parenleft>                                                              <nobreakspace> : "⁀" U2040 # CHARACTER TIE
 #
 #
 # # Fraction slash

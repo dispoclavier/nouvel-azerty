@@ -9626,11 +9626,11 @@
 #   See # # BREVE&INVERTED_BREVE
 #
 <dead_invertedbreve>                                                                       <space> : "̑" U0311 # COMBINING INVERTED BREVE
-<Multi_key><parenleft>                                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
+#   Multikey conflicts with "⁀" U2040.                                                     <space> : "̑" U0311 # COMBINING INVERTED BREVE
 <dead_invertedbreve>                                                                       <U200B> : "̑" U0311 # COMBINING INVERTED BREVE
 <Multi_key><parenleft>                                                                     <U200B> : "̑" U0311 # COMBINING INVERTED BREVE
 <dead_invertedbreve>                                                                <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
-<Multi_key><parenleft>                                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
+#   Multikey conflicts with "⁀" U2040.                                              <nobreakspace> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                       <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                     <U202F> : "꭛" UAB5B # MODIFIER BREVE WITH INVERTED BREVE
 <dead_invertedbreve>                                                                      <dollar> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
