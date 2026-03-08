@@ -153,6 +153,7 @@
 #   opposed to connecting the dead keys to a similar number of multikey entry
 #   points, as it is straightforward when manually configuring the dead keys
 #   on Windows.
+#   See dead-key-convert.pl # Multikey
 #
 #   Most multikey equivalents below the dead key sequences have been added by
 #   the script generate-multikey.pl.
@@ -505,9 +506,10 @@
 #   followed by the private use area keysym used in this file. All of these
 #   are new-school as of multikey equivalents. Levels are in French mode.
 #
+#   Level 1 2           3         4
 #                          Multikey equivalent
-#   Level 1 2  (QWERTY) 3  ↓      4
-#                                 IDENTIFIER      Keysym
+#                          ↓
+#              (QWERTY)           IDENTIFIER      Keysym
 #
 #   D01   a A  (Q)      ^  ¦^ #*# SUPERSCRIPT    *dead_superscript UEFD1
 #   D02   z Z  (W)      %  ¦% #*# TURNED         *dead_turned UEFD5
@@ -554,7 +556,8 @@
 #   bar is pressed after a dead key. Designed to seamlessly transition UX, the
 #   legacy dead keys have limited functionality, no multikey equivalents, and
 #   output ASCII on hitting space, ASCII twice on double press, emulating dead
-#   key behavior as on Windows. (2022-12-20T2238+0100..2023-11-23T0722+0100)
+#   key behavior as found on legacy keyboard layouts shipped with Windows.
+#   (2022-12-20T2238+0100..2023-11-23T0722+0100)
 #
 #
 #.# DEAD_LEGACYTILDE
@@ -664,7 +667,7 @@
 #   "Ṻ" U1E7A and "ṻ" U1E7B versus "Ǖ" U01D5 and "ǖ" U01D6, the only case, for
 #   instance. All other dead key combinations are symmetric and are symmetrized
 #   consistently, multikey equivalents not withstanding.
-#   See # # Plus minus
+#   See # # Plus-minus
 #   See # # MACRON&DIAERESIS
 #   See # # DIAERESIS&MACRON
 #   See # # Multikey equivalents
@@ -17578,14 +17581,14 @@
 #   See #*# SUBSCRIPT
 #
 <dead_belowdot><dead_belowdot>                                                             <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<Multi_key><exclam><exclam>                                                                <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
-<Multi_key><section><section>                                                              <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+#   Multikey conflicts with "¡" U00A1.                                                     <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
+#   Multikey conflicts with "¡" U00A1.                                                     <space> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                             <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><exclam><exclam>                                                                <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <Multi_key><section><section>                                                              <U200B> : "̩" U0329 # COMBINING VERTICAL LINE BELOW: Yoruba, German dialectology
 <dead_belowdot><dead_belowdot>                                                      <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><exclam><exclam>                                                         <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><section><section>                                                       <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+#   Multikey conflicts with "¡" U00A1.                                              <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+#   Multikey conflicts with "¡" U00A1.                                              <nobreakspace> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <dead_belowdot><dead_belowdot>                                                             <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><exclam><exclam>                                                                <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><section><section>                                                              <U202F> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE

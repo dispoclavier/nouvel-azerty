@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.4.3" # See #   End of line comments
+<UEFA0>                     : "version 6.2.5.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -1461,6 +1461,8 @@
 <Multi_key><f><a>                                                                                  : "℻" U213B # FACSIMILE SIGN
 <Multi_key><F><a>                                                                                  : "℻" U213B # FACSIMILE SIGN
 <Multi_key><F><A>                                                                                  : "℻" U213B # FACSIMILE SIGN
+<Multi_key><K><space>                                                                              : "K" U212A # KELVIN SIGN
+<Multi_key><k><space>                                                                              : "K" U212A # KELVIN SIGN
 <Multi_key><space><K>                                                                              : "K" U212A # KELVIN SIGN
 <Multi_key><nobreakspace><K>                                                                       : "K" U212A # KELVIN SIGN
 <Multi_key><space><k>                                                                              : "K" U212A # KELVIN SIGN
@@ -1504,12 +1506,12 @@
 <Multi_key><P><E><R>                                                                               : "⅌" U214C # PER SIGN
 <Multi_key><R><slash>                                                                              : "℟" U211F # RESPONSE
 <Multi_key><r><slash>                                                                              : "℟" U211F # RESPONSE
+<Multi_key><R><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
+<Multi_key><r><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><space><R><slash>                                                                       : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><nobreakspace><R><slash>                                                                : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><space><r><slash>                                                                       : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><nobreakspace><r><slash>                                                                : "℞" U211E # PRESCRIPTION TAKE
-<Multi_key><R><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
-<Multi_key><r><minus>                                                                              : "℞" U211E # PRESCRIPTION TAKE
 <Multi_key><o><R>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><O><r>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
 <Multi_key><r><o>                                                                                  : "®" U00AE # REGISTERED SIGN emoji
@@ -2274,20 +2276,32 @@
 # # Question and exclamation
 #
 #   Turned Spanish punctuation is supported in en_US.UTF-8/Compose by the most
-#   straightforward multikey sequences, using duplication throughout, thanks to
-#   limiting dead_belowdot to single press.
+#   straightforward multikey sequences, using duplication throughout.
 #
 <Multi_key><question><question>                                                                    : "¿" U00BF # INVERTED QUESTION MARK
 #
 #   As dead_belowdot double press is used to virtualize dead_belowverticalline,
-#   the sequence for "¡" U00A1 cannot be fully sideways compatible and needs to
-#   be extended by leading space or triplication.
+#   the sequences for "¡" U00A1 cannot be fully sideways compatible and need to
+#   be extended by trailing or leading space or triplication.
 #   See #^# VERTICAL_LINE_BELOW
 #   See #   Leading space
 #
+<Multi_key><exclam><exclam><exclam>                                                                : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><exclam><exclam><space>                                                                 : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><exclam><exclam><nobreakspace>                                                          : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><space><exclam><exclam>                                                                 : "¡" U00A1 # INVERTED EXCLAMATION MARK
 <Multi_key><nobreakspace><exclam><exclam>                                                          : "¡" U00A1 # INVERTED EXCLAMATION MARK
-<Multi_key><exclam><exclam><exclam>                                                                : "¡" U00A1 # INVERTED EXCLAMATION MARK
+#
+#   Given that in French mode, exclam at level 3 is replaced with section in an
+#   attempt to restore some backward compatibility with the synergy of section
+#   with digits, these sequences are extended by replacing exclam with section.
+#   See dispocla.cpp key <AB10>
+#
+<Multi_key><section><section><section>                                                             : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><section><section><space>                                                               : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><section><section><nobreakspace>                                                        : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><space><section><section>                                                               : "¡" U00A1 # INVERTED EXCLAMATION MARK
+<Multi_key><nobreakspace><section><section>                                                        : "¡" U00A1 # INVERTED EXCLAMATION MARK
 #
 #   However, these multikey sequences are superseded by the more streamlined
 #   support of turned punctuation in symbol group 1, either with the unspaced
@@ -4380,7 +4394,7 @@
 #   https://gedit-text-editor.org/user-manuals/gedit/plugin-draw-spaces.html
 #
 #   "⎍" U238D MONOSTABLE SYMBOL is picked as a flipped narrow shouldered box,
-#   repurposed by lack of an unsuccessful symbol in L2/10-351.
+#   repurposed by lack of an unsuccessful symbol proposed in L2/10-351.
 #   https://unicode.org/L2/L2010/10351-n3897-jtc1sc35n1579.pdf
 #
 #Multi_key><n><b><t><s><p>                                                                         : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
@@ -4624,30 +4638,45 @@
 #   space, additionally to the then equally required trailing space.
 #
 <Multi_key><m><greater>                                                                            : "‎" U200E # LEFT-TO-RIGHT MARK
+<Multi_key><M><greater>                                                                            : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><space><greater>                                                                <space> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><space><greater>                                                         <nobreakspace> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><nobreakspace><greater>                                                         <space> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><nobreakspace><greater>                                                  <nobreakspace> : "‎" U200E # LEFT-TO-RIGHT MARK
 <Multi_key><m><less>                                                                               : "‏" U200F # RIGHT-TO-LEFT MARK
+<Multi_key><M><less>                                                                               : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><space><less>                                                                   <space> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><space><less>                                                            <nobreakspace> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><nobreakspace><less>                                                            <space> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><nobreakspace><less>                                                     <nobreakspace> : "‏" U200F # RIGHT-TO-LEFT MARK
 <Multi_key><e><greater>                                                                            : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
+<Multi_key><E><greater>                                                                            : "‪" U202A # LEFT-TO-RIGHT EMBEDDING
 <Multi_key><e><less>                                                                               : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
+<Multi_key><E><less>                                                                               : "‫" U202B # RIGHT-TO-LEFT EMBEDDING
 #   <Multi_key><d><equal> conflicts with "₫" U20AB.                                                : "‬" U202C # POP DIRECTIONAL FORMATTING
 #   <Multi_key><d><greater> conflicts with "ǆ" U01C6.                                              : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><d><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><D><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><d><bar>                                                                                : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><D><bar>                                                                                : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><p><greater>                                                                            : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><P><greater>                                                                            : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><p><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
+<Multi_key><P><less>                                                                               : "‬" U202C # POP DIRECTIONAL FORMATTING
 <Multi_key><f><greater>                                                                            : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
+<Multi_key><F><greater>                                                                            : "‭" U202D # LEFT-TO-RIGHT OVERRIDE
 <Multi_key><f><less>                                                                               : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
+<Multi_key><F><less>                                                                               : "‮" U202E # RIGHT-TO-LEFT OVERRIDE
 <Multi_key><i><greater>                                                                            : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE
+<Multi_key><I><greater>                                                                            : "⁦" U2066 # LEFT-TO-RIGHT ISOLATE
 <Multi_key><i><less>                                                                               : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE
+<Multi_key><I><less>                                                                               : "⁧" U2067 # RIGHT-TO-LEFT ISOLATE
 <Multi_key><i><bar>                                                                                : "⁨" U2068 # FIRST STRONG ISOLATE
+<Multi_key><I><bar>                                                                                : "⁨" U2068 # FIRST STRONG ISOLATE
 <Multi_key><p><d><i>                                                                               : "⁩" U2069 # POP DIRECTIONAL ISOLATE
+<Multi_key><P><D><I>                                                                               : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 <Multi_key><i><equal>                                                                              : "⁩" U2069 # POP DIRECTIONAL ISOLATE
+<Multi_key><I><equal>                                                                              : "⁩" U2069 # POP DIRECTIONAL ISOLATE
 #
 #
 #^# Box drawings
@@ -5091,7 +5120,7 @@
 # # Overview of math symbols
 #
 #      1  # # Not sign
-#      1  # # Plus minus
+#      1  # # Plus-minus
 #      2  # # Multiplication and division signs
 #      9  # # Greek mathematical SMP symbols
 #      1  # # Double vertical bar
@@ -5207,7 +5236,7 @@
 #
 #   By contrast, many sequences are required to be order sensitive, as for
 #   "±" U00B1 and "∓" U2213, "⨤" U2A24 and "⨦" U2A26.
-#   See # # Plus minus
+#   See # # Plus-minus
 #
 #
 #   Trailing space
@@ -5224,13 +5253,19 @@
 #
 #   Leading space
 #
-#   When things do not work as expected, the likely culprit is a conflict with
+#   When things do not work as expected, the likely culprit was a conflict with
 #   a dead key equivalent as for "≪" U226A, "≫" U226B, "⋘" U22D8, "⋙" U22D9.
-#   To fix these issues, sequences start with a space, or interchangeably with
+#   To fix these issues, sequences started with a space, or interchangeably with
 #   a no-break space, supported for the sake of synergy with the Multi_key dead
 #   key, mapped invariably at level 3, both in French mode, where it is on key
 #   E12, and in ASCII mode where it is also on key D12; yet the space character
 #   at level 3 is no-break space in French mode, ASCII space in ASCII mode.
+#
+#   More extensively ruling out multikey equivalents of dead keys since v6.2.5
+#   helps making some of these math seauences more streamlined again, rather
+#   than needlessly screwing them up while Windows is unable to support the
+#   multikey equivalents anyway.
+#   See dead-key-convert.pl # Multikey
 #
 #   Distinguishing math sequences from each other is another usage for leading
 #   space. This occurs when intuitivity requires similar sequences for various
@@ -5552,7 +5587,7 @@
 <Multi_key><nobreakspace><nobreakspace><minus><rightsinglequotemark>                               : "¬" U00AC # NOT SIGN
 #
 #
-# # Plus minus
+# # Plus-minus
 #
 #   Order matters, unlike in en_US.UTF-8/Compose not supporting "∓" U2213.
 #   The sideways compatible sequence supported here for "±" U00B1 contrasts
