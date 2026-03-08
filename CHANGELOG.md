@@ -16,7 +16,7 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
 
-## 6.2.5 (projet)
+## 6.2.5 (2026-03-08)
 
 Simplification de la saisie de symboles mathématiques.
 
@@ -31,6 +31,7 @@ Mise à jour du contenu des touches mortes.
 * Documentation :
 	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [37be705](https://github.com/dispoclavier/nouvel-azerty/commit/37be705dc3fc45b4644d91a4c9615e66ce89e221), [4cca3ed](https://github.com/dispoclavier/nouvel-azerty/commit/4cca3ed1fcf2cd80a67685554172e64de5950d15)
 	* Corriger le journal des modifications. CHANGELOG.md [7ca1301](https://github.com/dispoclavier/nouvel-azerty/commit/7ca13015fc8afde167fc4f3a5781eef9b22f32ae)
+* Build : 6.2.5.0 [01e75bf](https://github.com/dispoclavier/nouvel-azerty/commit/01e75bfda306c76633085e6d6c5d6f0d015ba79b)
 
 ## 6.2.4 (2026-03-05)
 
