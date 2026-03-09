@@ -5169,6 +5169,12 @@
 #   such as randomly duplicating or inverting multikey sequence constituents. A
 #   well-designed sequence is mnemonic thanks to its intuitivity.
 #
+#   Sequences may be case sensitive. "⇴" U21F4 RIGHT ARROW WITH SMALL CIRCLE
+#   has a lowercase "o" in its main sequence « ¦o-> », whereas uppercase "O" is
+#   used in « ¦O-> » for "↫" U21AB LEFTWARDS ARROW WITH LOOP. As a fallback, an
+#   alternative sequence using the other case and leading space is provided for
+#   both.
+#
 #
 #   Streamlining
 #
@@ -6104,7 +6110,8 @@
 <Multi_key><less><minus><o>                                                         <nobreakspace> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
 <Multi_key><less><minus><O>                                                                <space> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
 <Multi_key><less><minus><O>                                                         <nobreakspace> : "↫" U21AB # LEFTWARDS ARROW WITH LOOP
-<Multi_key><o><minus><greater>                                                                     : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
+<Multi_key><space><o><minus><greater>                                                              : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
+<Multi_key><nobreakspace><o><minus><greater>                                                       : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
 <Multi_key><O><minus><greater>                                                                     : "↬" U21AC # RIGHTWARDS ARROW WITH LOOP
 <Multi_key><space><less><asciitilde><greater>                                                      : "↭" U21AD # LEFT RIGHT WAVE ARROW
 <Multi_key><nobreakspace><less><asciitilde><greater>                                               : "↭" U21AD # LEFT RIGHT WAVE ARROW
@@ -6242,8 +6249,7 @@
 <Multi_key><asciitilde><asciitilde><greater>                                                       : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
 <Multi_key><bar><less><minus>                                                                      : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
 <Multi_key><minus><greater><bar>                                                                   : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
-<Multi_key><space><o><minus><greater>                                                              : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
-<Multi_key><nobreakspace><o><minus><greater>                                                       : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
+<Multi_key><o><minus><greater>                                                                     : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><space><O><minus><greater>                                                              : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 <Multi_key><nobreakspace><O><minus><greater>                                                       : "⇴" U21F4 # RIGHT ARROW WITH SMALL CIRCLE
 #Multi_key><exclam><greater><less><exclam>                                                         : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
