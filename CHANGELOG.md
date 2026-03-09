@@ -14,7 +14,25 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 ## 6.3.0 (projet)
 
-Mise à jour pour macOS des dispositions développées pour Linux, portées sous Windows et complétées pour Windows et pour Linux.
+Mise à jour pour macOS des dispositions développées pour Windows, portées sous macOS puis sous Linux, portées sous Windows, et complétées pour Windows et pour Linux.
+
+## 6.2.6 (projet)
+
+Simplification de la saisie des symboles mathématiques.
+
+Mise à jour du contenu des touches mortes.
+
+* Composition :
+	* Déboguer et corriger les séquences de "⁦" U+2066, U+2067. compose-1.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6)
+	* Mettre à jour les séquences de "⨟" U+2A1F, "⨾" U+2A3E. ibidem
+	* Mettre à jour les séquences de "↑" U+2191, "↓" U+2193, "↕" U+2195, "↟" U+219F, "↡" U+21A1, "↥" U+21A5, "↧" U+21A7, "↨" U+21A8, "↰" U+21B0, "↱" U+21B1, "↾" U+21BE, "↿" U+21BF, "⇂" U+21C2, "⇃" U+21C3, "⇅" U+21C5, "⇈" U+21C8, "⇊" U+21CA, "⇑" U+21D1, "⇓" U+21D3, "⇕" U+21D5, "⇵" U+21F5, "⋮" U+22EE, "⟰" U+27F0, "⟱" U+27F1, "⤈" U+2908, "⤉" U+2909, "⤊" U+290A, "⤋" U+290B, "⤒" U+2912, "⤓" U+2913, "⤴" U+2934, "⤵" U+2935, "⤶" U+2936, "⤷" U+2937, "⥉" U+2949, "⥌" U+294C, "⥍" U+294D, "⥏" U+294F, "⥑" U+2951, "⥔" U+2954, "⥕" U+2955, "⥘" U+2958, "⥙" U+2959, "⥜" U+295C, "⥝" U+295D, "⥠" U+2960, "⥡" U+2961, "⥣" U+2963, "⥥" U+2965, "⥮" U+296E, "⥯" U+296F, "⥾" U+297E, "⥿" U+297F, "⦽" U+29BD, "⧪" U+29EA, "⧬" U+29EC, "⧭" U+29ED, "⨡" U+2A21, "⫱" U+2AF1. ibidem
+	* Corriger les séquences de "­" U+00AD, "‐" U+2010, "‑" U+2011, "‒" U+2012, "–" U+2013, "—" U+2014, "―" U+2015, "⸺" U+2E3A, "⸻" U+2E3B, "⹀" U+2E40. ibidem
+	* Simplifier les séquences de "⅀" U+2140, "↶" U+21B6, "⇉" U+21C9, "⇶" U+21F6. ibidem
+* Transformations : Désactiver les équivalents en composition en conflit avec des symboles mathématiques. compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6)
+* Documentation :
+	* Mettre à jour les modes d’emploi.
+	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6)
+* Build : 6.2.6.0
 
 ## 6.2.5 (2026-03-08)
 
