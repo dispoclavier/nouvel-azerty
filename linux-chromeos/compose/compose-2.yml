@@ -1017,6 +1017,10 @@
 #      handwriting sequence, in which users type the base character first,
 #      followed by the accents or other nonspacing marks (see Figure 5-4).
 #
+#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
+#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-5/#G1076
+#   https://unicode.org/mail-arch/unicode-ml/y2016-m11/0046.html
+#
 #   As a result, keyboard layouts should feature dead keys as well as easy
 #   access to combining marks. Alternative input method for combining marks:
 #   https://www.fon.hum.uva.nl/praat/manual/Phonetic_symbols__diacritics.html
@@ -10257,13 +10261,13 @@
 <UEFD8>                                                                                    <colon> : "÷" U00F7 # DIVISION SIGN
 #   Multikey conflicts with "∹" U2239.                                                     <colon> : "÷" U00F7 # DIVISION SIGN
 <UEFD8>                                                                                        <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
-<Multi_key><minus>                                                                             <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+#   Multikey conflicts with "⸺" U2E3A.                                                         <2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <UEFD8>                                                                                     <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
-<Multi_key><KP_Subtract>                                                                    <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+#   Multikey conflicts with "⸺" U2E3A.                                                      <KP_2> : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <UEFD8>                                                                                        <7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                             <7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "―" U2015.                                                         <7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                     <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
-<Multi_key><KP_Subtract>                                                                    <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "―" U2015.                                                      <KP_7> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                                        <A> : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
 <Multi_key><minus>                                                                             <A> : "Ꜻ" UA73A # LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR
 <UEFD8>                                                                                        <a> : "ꜻ" UA73B # LATIN SMALL LETTER AV WITH HORIZONTAL BAR
@@ -14338,7 +14342,7 @@
 <dead_circumflex>                                                                              <N> : "ÊN" # U00CA U004E French: "Ê" key emulation; overrides "N̂" # U004E U0302
 <Multi_key><less>                                                                              <N> : "ÊN" # U00CA U004E French: "Ê" key emulation; overrides "N̂" # U004E U0302
 <dead_circumflex>                                                                              <n> : "ên" # U00EA U006E French: "Ê" key emulation; overrides "n̂" # U006E U0302
-<Multi_key><less>                                                                              <n> : "ên" # U00EA U006E French: "Ê" key emulation; overrides "n̂" # U006E U0302
+#   Multikey conflicts with "↶" U21B6.                                                         <n> : "ên" # U00EA U006E French: "Ê" key emulation; overrides "n̂" # U006E U0302
 <dead_circumflex>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <Multi_key><less>                                                                              <O> : "Ô" U00D4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 <dead_circumflex>                                                                              <o> : "ô" U00F4 # LATIN SMALL LETTER O WITH CIRCUMFLEX
