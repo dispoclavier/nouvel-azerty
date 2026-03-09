@@ -5286,11 +5286,11 @@
 #   modifier key may be released before any of them, in particular in French
 #   mode where level 3 of the space bar is no-break space.
 #
-#   Examples involving single or multiple leading [nobreak]space:
-#   Single:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
-#   Double:    "⧸" U29F8, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
-#   Triple:    "⟋" U27CB and "⟍" U27CD;
-#   Quadruple:  "⁄" U2044 and "⧵" U29F5.
+#   Examples involving no, single or multiple leading [nobreak]space:
+#   None:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
+#   Single:  "⧸" U29F8, "⧹" U29F9;
+#   Double:  "⟋" U27CB, "⟍" U27CD, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
+#   Triple:   "⁄" U2044, "⧵" U29F5.
 #
 #
 #   Negation
@@ -5759,11 +5759,10 @@
 #
 <Multi_key><f><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
 <Multi_key><F><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
-<Multi_key><space><space><space><space><slash>                                                     : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><space><space><space><slash>                                              : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><space><space><slash>                                       : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><slash>                                : "⁄" U2044 # FRACTION SLASH
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><slash>                         : "⁄" U2044 # FRACTION SLASH
+<Multi_key><space><space><space><slash>                                                            : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><space><space><slash>                                                     : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><nobreakspace><space><slash>                                              : "⁄" U2044 # FRACTION SLASH
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                                       : "⁄" U2044 # FRACTION SLASH
 #
 #
 # # Commercial minus sign
@@ -6366,27 +6365,22 @@
 <Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
-<Multi_key><space><minus>                                                                  <space> : "−" U2212 # MINUS SIGN
-<Multi_key><space><minus>                                                           <nobreakspace> : "−" U2212 # MINUS SIGN
+<Multi_key><minus>                                                                         <space> : "−" U2212 # MINUS SIGN
+<Multi_key><minus>                                                                  <nobreakspace> : "−" U2212 # MINUS SIGN
 <Multi_key><minus><plus>                                                                           : "∓" U2213 # MINUS-OR-PLUS SIGN
 <Multi_key><period><plus>                                                                          : "∔" U2214 # DOT PLUS
-<Multi_key><space><slash>                                                                  <space> : "∕" U2215 # DIVISION SLASH
-<Multi_key><space><slash>                                                           <nobreakspace> : "∕" U2215 # DIVISION SLASH
-<Multi_key><nobreakspace><slash>                                                           <space> : "∕" U2215 # DIVISION SLASH
-<Multi_key><nobreakspace><slash>                                                    <nobreakspace> : "∕" U2215 # DIVISION SLASH
-<Multi_key><space><backslash>                                                              <space> : "∖" U2216 # SET MINUS
-<Multi_key><space><backslash>                                                       <nobreakspace> : "∖" U2216 # SET MINUS
-<Multi_key><nobreakspace><backslash>                                                       <space> : "∖" U2216 # SET MINUS
-<Multi_key><nobreakspace><backslash>                                                <nobreakspace> : "∖" U2216 # SET MINUS
-<Multi_key><space><asterisk>                                                               <space> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><space><asterisk>                                                        <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><nobreakspace><asterisk>                                                        <space> : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key><nobreakspace><asterisk>                                                 <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><slash>                                                                         <space> : "∕" U2215 # DIVISION SLASH
+<Multi_key><slash>                                                                  <nobreakspace> : "∕" U2215 # DIVISION SLASH
+<Multi_key><backslash>                                                                     <space> : "∖" U2216 # SET MINUS
+<Multi_key><backslash>                                                              <nobreakspace> : "∖" U2216 # SET MINUS
+<Multi_key><asterisk>                                                                      <space> : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key><asterisk>                                                               <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><o>                                                                             <space> : "∘" U2218 # RING OPERATOR
 <Multi_key><o>                                                                      <nobreakspace> : "∘" U2218 # RING OPERATOR
-<Multi_key><space><space><period>                                                                  : "∙" U2219 # BULLET OPERATOR
-<Multi_key><nobreakspace><space><period>                                                           : "∙" U2219 # BULLET OPERATOR
-<Multi_key><nobreakspace><nobreakspace><period>                                                    : "∙" U2219 # BULLET OPERATOR
+<Multi_key><space><period>                                                                 <space> : "∙" U2219 # BULLET OPERATOR
+<Multi_key><space><period>                                                          <nobreakspace> : "∙" U2219 # BULLET OPERATOR
+<Multi_key><nobreakspace><period>                                                          <space> : "∙" U2219 # BULLET OPERATOR
+<Multi_key><nobreakspace><period>                                                   <nobreakspace> : "∙" U2219 # BULLET OPERATOR
 <Multi_key><v><2>                                                                                  : "√" U221A # SQUARE ROOT
 <Multi_key><v><KP_2>                                                                               : "√" U221A # SQUARE ROOT
 <Multi_key><V><2>                                                                                  : "√" U221A # SQUARE ROOT
@@ -6445,16 +6439,12 @@
 <Multi_key><minus><parenright><slash>                                                      <space> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><minus><parenright><slash>                                               <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><backslash><parenright><slash>                                                          : "∢" U2222 # SPHERICAL ANGLE
-<Multi_key><space><bar>                                                                    <space> : "∣" U2223 # DIVIDES
-<Multi_key><space><bar>                                                             <nobreakspace> : "∣" U2223 # DIVIDES
-<Multi_key><nobreakspace><bar>                                                             <space> : "∣" U2223 # DIVIDES
-<Multi_key><nobreakspace><bar>                                                      <nobreakspace> : "∣" U2223 # DIVIDES
+<Multi_key><bar>                                                                           <space> : "∣" U2223 # DIVIDES
+<Multi_key><bar>                                                                    <nobreakspace> : "∣" U2223 # DIVIDES
 <Multi_key><bar><slash>                                                                    <space> : "∤" U2224 # DOES NOT DIVIDE
 <Multi_key><bar><slash>                                                             <nobreakspace> : "∤" U2224 # DOES NOT DIVIDE
-<Multi_key><space><bar><bar>                                                               <space> : "∥" U2225 # PARALLEL TO
-<Multi_key><space><bar><bar>                                                        <nobreakspace> : "∥" U2225 # PARALLEL TO
-<Multi_key><nobreakspace><bar><bar>                                                        <space> : "∥" U2225 # PARALLEL TO
-<Multi_key><nobreakspace><bar><bar>                                                 <nobreakspace> : "∥" U2225 # PARALLEL TO
+<Multi_key><bar><bar>                                                                      <space> : "∥" U2225 # PARALLEL TO
+<Multi_key><bar><bar>                                                               <nobreakspace> : "∥" U2225 # PARALLEL TO
 <Multi_key><bar><bar><slash>                                                                       : "∦" U2226 # NOT PARALLEL TO
 <Multi_key><a>                                                                             <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><a>                                                                      <nobreakspace> : "∧" U2227 # LOGICAL AND
@@ -6465,10 +6455,8 @@
 <Multi_key><v><percent>                                                             <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><backslash>                                                                  <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><backslash>                                                           <nobreakspace> : "∧" U2227 # LOGICAL AND
-<Multi_key><space><asciicircum>                                                            <space> : "∧" U2227 # LOGICAL AND
-<Multi_key><space><asciicircum>                                                     <nobreakspace> : "∧" U2227 # LOGICAL AND
-<Multi_key><nobreakspace><asciicircum>                                                     <space> : "∧" U2227 # LOGICAL AND
-<Multi_key><nobreakspace><asciicircum>                                              <nobreakspace> : "∧" U2227 # LOGICAL AND
+<Multi_key><asciicircum>                                                                   <space> : "∧" U2227 # LOGICAL AND
+<Multi_key><asciicircum>                                                            <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><a><n><d>                                                                               : "∧" U2227 # LOGICAL AND
 <Multi_key><A><N><D>                                                                               : "∧" U2227 # LOGICAL AND
 <Multi_key><v>                                                                             <space> : "∨" U2228 # LOGICAL OR
@@ -6528,30 +6516,24 @@
 #   Colon’s does, too, provided that the font supports this.
 #   https://ux.stackexchange.com/questions/122248/should-u2236-ratio-be-used-as-a-time-separator-instead-of-u003a-colon
 #
-<Multi_key><space><colon>                                                                  <space> : "∶" U2236 # RATIO
-<Multi_key><space><colon>                                                           <nobreakspace> : "∶" U2236 # RATIO
-<Multi_key><nobreakspace><colon>                                                           <space> : "∶" U2236 # RATIO
-<Multi_key><nobreakspace><colon>                                                    <nobreakspace> : "∶" U2236 # RATIO
-<Multi_key><space><colon><colon>                                                                   : "∷" U2237 # PROPORTION
-<Multi_key><nobreakspace><colon><colon>                                                            : "∷" U2237 # PROPORTION
+<Multi_key><colon>                                                                         <space> : "∶" U2236 # RATIO
+<Multi_key><colon>                                                                  <nobreakspace> : "∶" U2236 # RATIO
+<Multi_key><colon><colon>                                                                  <space> : "∷" U2237 # PROPORTION
+<Multi_key><colon><colon>                                                           <nobreakspace> : "∷" U2237 # PROPORTION
 <Multi_key><period><minus>                                                                 <space> : "∸" U2238 # DOT MINUS
 <Multi_key><period><minus>                                                          <nobreakspace> : "∸" U2238 # DOT MINUS
 <Multi_key><minus><colon>                                                                          : "∹" U2239 # EXCESS
 <Multi_key><colon><minus><colon>                                                                   : "∺" U223A # GEOMETRIC PROPORTION
-<Multi_key><space><colon><asciitilde>                                                              : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><colon><asciitilde>                                                       : "∻" U223B # HOMOTHETIC
-<Multi_key><space><asciitilde><colon>                                                              : "∻" U223B # HOMOTHETIC
-<Multi_key><nobreakspace><asciitilde><colon>                                                       : "∻" U223B # HOMOTHETIC
+<Multi_key><colon><asciitilde>                                                                     : "∻" U223B # HOMOTHETIC
+<Multi_key><asciitilde><colon>                                                                     : "∻" U223B # HOMOTHETIC
 #
 #   ASCII tilde "~" and "∼" U223C TILDE OPERATOR have different glyphs in some
 #   fonts. Consistently, they are disunified.
 #   https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf#page=903&zoom=100,0,500
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-22/#G58950
 #
-<Multi_key><space><asciitilde>                                                             <space> : "∼" U223C # TILDE OPERATOR
-<Multi_key><space><asciitilde>                                                      <nobreakspace> : "∼" U223C # TILDE OPERATOR
-<Multi_key><nobreakspace><asciitilde>                                                      <space> : "∼" U223C # TILDE OPERATOR
-<Multi_key><nobreakspace><asciitilde>                                               <nobreakspace> : "∼" U223C # TILDE OPERATOR
+<Multi_key><asciitilde>                                                                    <space> : "∼" U223C # TILDE OPERATOR
+<Multi_key><asciitilde>                                                             <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
 <Multi_key><s><percent>                                                                            : "∾" U223E # INVERTED LAZY S
@@ -6560,39 +6542,31 @@
 <Multi_key><S><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><i><n>                                                                               : "∿" U223F # SINE WAVE
 <Multi_key><S><I><N>                                                                               : "∿" U223F # SINE WAVE
-<Multi_key><space><asciitilde><percent>                                                            : "≀" U2240 # WREATH PRODUCT
-<Multi_key><nobreakspace><asciitilde><percent>                                                     : "≀" U2240 # WREATH PRODUCT
-<Multi_key><space><asciitilde><slash>                                                      <space> : "≁" U2241 # NOT TILDE
-<Multi_key><space><asciitilde><slash>                                               <nobreakspace> : "≁" U2241 # NOT TILDE
-<Multi_key><nobreakspace><asciitilde><slash>                                               <space> : "≁" U2241 # NOT TILDE
-<Multi_key><nobreakspace><asciitilde><slash>                                        <nobreakspace> : "≁" U2241 # NOT TILDE
+<Multi_key><asciitilde><percent>                                                           <space> : "≀" U2240 # WREATH PRODUCT
+<Multi_key><asciitilde><percent>                                                    <nobreakspace> : "≀" U2240 # WREATH PRODUCT
+<Multi_key><percent><asciitilde>                                                           <space> : "≀" U2240 # WREATH PRODUCT
+<Multi_key><percent><asciitilde>                                                    <nobreakspace> : "≀" U2240 # WREATH PRODUCT
+<Multi_key><asciitilde><slash>                                                             <space> : "≁" U2241 # NOT TILDE
+<Multi_key><asciitilde><slash>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
 <Multi_key><minus><asciitilde>                                                                     : "≂" U2242 # MINUS TILDE
 <Multi_key><asciitilde><minus>                                                             <space> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus>                                                      <nobreakspace> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key><asciitilde><minus><slash>                                                              : "≄" U2244 # NOT ASYMPTOTICALLY EQUAL TO
-<Multi_key><space><asciitilde><equal>                                                      <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><space><asciitilde><equal>                                               <nobreakspace> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><nobreakspace><asciitilde><equal>                                               <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><nobreakspace><asciitilde><equal>                                        <nobreakspace> : "≅" U2245 # APPROXIMATELY EQUAL TO
-<Multi_key><space><asciitilde><equal><slash>                                               <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><space><asciitilde><equal><slash>                                        <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><nobreakspace><asciitilde><equal><slash>                                        <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
-<Multi_key><nobreakspace><asciitilde><equal><slash>                                 <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+<Multi_key><asciitilde><equal>                                                             <space> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><asciitilde><equal>                                                      <nobreakspace> : "≅" U2245 # APPROXIMATELY EQUAL TO
+<Multi_key><asciitilde><equal><slash>                                                      <space> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
+<Multi_key><asciitilde><equal><slash>                                               <nobreakspace> : "≆" U2246 # APPROXIMATELY BUT NOT ACTUALLY EQUAL TO
 <Multi_key><asciitilde><slash><equal>                                                              : "≇" U2247 # NEITHER APPROXIMATELY NOR ACTUALLY EQUAL TO
-<Multi_key><space><asciitilde><asciitilde>                                                 <space> : "≈" U2248 # ALMOST EQUAL TO
-<Multi_key><space><asciitilde><asciitilde>                                          <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
-<Multi_key><nobreakspace><asciitilde><asciitilde>                                          <space> : "≈" U2248 # ALMOST EQUAL TO
-<Multi_key><nobreakspace><asciitilde><asciitilde>                                   <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key><asciitilde><asciitilde>                                                        <space> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key><asciitilde><asciitilde>                                                 <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><slash>                                                         : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><minus>                                                         : "≊" U224A # ALMOST EQUAL OR EQUAL TO
-<Multi_key><space><asciitilde><asciitilde><asciitilde>                                             : "≋" U224B # TRIPLE TILDE
-<Multi_key><nobreakspace><asciitilde><asciitilde><asciitilde>                                      : "≋" U224B # TRIPLE TILDE
+<Multi_key><asciitilde><asciitilde><asciitilde>                                                    : "≋" U224B # TRIPLE TILDE
 <Multi_key><asciitilde><backslash><equal>                                                          : "≌" U224C # ALL EQUAL TO
 <Multi_key><parenright><parenleft>                                                         <space> : "≍" U224D # EQUIVALENT TO
 <Multi_key><parenright><parenleft>                                                  <nobreakspace> : "≍" U224D # EQUIVALENT TO
-#Multi_key><space><parenleft><equal><parenright>                                                   : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><space><parenleft><equal>                                                               : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><nobreakspace><parenleft><equal>                                                        : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+#Multi_key><parenleft><equal><parenright>                                                          : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+<Multi_key><parenleft><equal>                                                                      : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
 <Multi_key><parenleft><minus>                                                              <space> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><parenleft><minus>                                                       <nobreakspace> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><period><equal>                                                                 <space> : "≐" U2250 # APPROACHES THE LIMIT
@@ -6603,8 +6577,8 @@
 <Multi_key><period><equal><period><slash>                                                          : "≓" U2253 # IMAGE OF OR APPROXIMATELY EQUAL TO
 <Multi_key><colon><equal>                                                                          : "≔" U2254 # COLON EQUALS
 <Multi_key><equal><colon>                                                                          : "≕" U2255 # EQUALS COLON
-<Multi_key><space><minus><o><minus>                                                                : "≖" U2256 # RING IN EQUAL TO
-<Multi_key><nobreakspace><minus><o><minus>                                                         : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><equal><o>                                                                              : "≖" U2256 # RING IN EQUAL TO
+<Multi_key><minus><o><minus>                                                                       : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><o><equal>                                                                              : "≗" U2257 # RING EQUAL TO
 <Multi_key><parenleft><equal>                                                                      : "≘" U2258 # CORRESPONDS TO
 <Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
@@ -6949,13 +6923,12 @@
 <Multi_key><nobreakspace><asciicircum><asciicircum>                                                : "⋄" U22C4 # DIAMOND OPERATOR
 <Multi_key><space><less><greater>                                                                  : "⋄" U22C4 # DIAMOND OPERATOR
 <Multi_key><nobreakspace><less><greater>                                                           : "⋄" U22C4 # DIAMOND OPERATOR
-<Multi_key><space><period>                                                                 <space> : "⋅" U22C5 # DOT OPERATOR
-<Multi_key><space><period>                                                          <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
-<Multi_key><nobreakspace><period>                                                          <space> : "⋅" U22C5 # DOT OPERATOR
-<Multi_key><nobreakspace><period>                                                   <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
-<Multi_key><space><space><asterisk>                                                                : "⋆" U22C6 # STAR OPERATOR
-<Multi_key><nobreakspace><space><asterisk>                                                         : "⋆" U22C6 # STAR OPERATOR
-<Multi_key><nobreakspace><nobreakspace><asterisk>                                                  : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><period>                                                                        <space> : "⋅" U22C5 # DOT OPERATOR
+<Multi_key><period>                                                                 <nobreakspace> : "⋅" U22C5 # DOT OPERATOR
+<Multi_key><space><asterisk>                                                               <space> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><space><asterisk>                                                        <nobreakspace> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><nobreakspace><asterisk>                                                        <space> : "⋆" U22C6 # STAR OPERATOR
+<Multi_key><nobreakspace><asterisk>                                                 <nobreakspace> : "⋆" U22C6 # STAR OPERATOR
 <Multi_key><minus><x><colon>                                                                       : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><minus><X><colon>                                                                       : "⋇" U22C7 # DIVISION TIMES
 <Multi_key><colon><minus><x>                                                                       : "⋇" U22C7 # DIVISION TIMES
@@ -7631,16 +7604,14 @@
 <Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><bar><minus>                                                                     : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                              : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><space><space><space><slash>                                                            : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><space><space><slash>                                                     : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><slash>                                              : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><slash>                                       : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><space><space><slash>                                                                   : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><space><slash>                                                            : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><slash>                                                     : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
-<Multi_key><space><space><space><backslash>                                                        : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><space><space><backslash>                                                 : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><space><backslash>                                          : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                                   : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><space><space><backslash>                                                               : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><backslash>                                                        : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><backslash>                                                 : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><a><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><A><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><space><bracketleft><a>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND
@@ -8614,27 +8585,22 @@
 #
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><space><space><space><space><backslash>                                                 : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><space><space><space><backslash>                                          : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><space><space><backslash>                                   : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><space><backslash>                            : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><nobreakspace><backslash>                     : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><space><space><space><backslash>                                                        : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><space><space><backslash>                                                 : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><space><backslash>                                          : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                                   : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><underscore><slash>                                                             <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><underscore><slash>                                                      <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 <Multi_key><backslash><minus>                                                       <nobreakspace> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
-<Multi_key><space><space><slash>                                                           <space> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><space><space><slash>                                                    <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><nobreakspace><space><slash>                                                    <space> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><nobreakspace><space><slash>                                             <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><nobreakspace><nobreakspace><slash>                                             <space> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><nobreakspace><nobreakspace><slash>                                      <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
-<Multi_key><space><space><backslash>                                                       <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><space><space><backslash>                                                <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><nobreakspace><space><backslash>                                                <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><nobreakspace><space><backslash>                                         <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><nobreakspace><nobreakspace><backslash>                                         <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
-<Multi_key><nobreakspace><nobreakspace><backslash>                                  <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><space><slash>                                                                  <space> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><space><slash>                                                           <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><nobreakspace><slash>                                                           <space> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><nobreakspace><slash>                                                    <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
+<Multi_key><space><backslash>                                                              <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><space><backslash>                                                       <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><nobreakspace><backslash>                                                       <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><nobreakspace><backslash>                                                <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><plus><plus>                                                                     : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><nobreakspace><plus><plus>                                                              : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><3><plus>                                                                               : "⧻" U29FB # TRIPLE PLUS

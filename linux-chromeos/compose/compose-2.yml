@@ -1300,11 +1300,11 @@
 #   See dispocla.cpp ## Overscore
 #
 <UEFD1>                                                                                    <space> : "̅" U0305 # COMBINING OVERLINE
-<Multi_key><asciicircum>                                                                   <space> : "̅" U0305 # COMBINING OVERLINE
+#   Multikey conflicts with "∧" U2227.                                                     <space> : "̅" U0305 # COMBINING OVERLINE
 <UEFD1>                                                                                    <U200B> : "̅" U0305 # COMBINING OVERLINE
 <Multi_key><asciicircum>                                                                   <U200B> : "̅" U0305 # COMBINING OVERLINE
 <UEFD1>                                                                             <nobreakspace> : "‾" U203E # OVERLINE
-<Multi_key><asciicircum>                                                            <nobreakspace> : "‾" U203E # OVERLINE
+#   Multikey conflicts with "∧" U2227.                                              <nobreakspace> : "‾" U203E # OVERLINE
 <UEFD1>                                                                                    <U202F> : "‾" U203E # OVERLINE
 <Multi_key><asciicircum>                                                                   <U202F> : "‾" U203E # OVERLINE
 <UEFD1>                                                                                 <quotedbl> : "ˮ" U02EE # MODIFIER LETTER DOUBLE APOSTROPHE
@@ -3738,6 +3738,8 @@
 <Multi_key><percent>                                                                <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                                    <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><percent>                                                                       <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD5>                                                                               <asciitilde> : "≀" U2240 # WREATH PRODUCT
+#   Multikey conflicts with "≀" U2240, "ꭨ" UAB68.                                    <asciitilde> : "≀" U2240 # WREATH PRODUCT
 <UEFD5>                                                                               <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><percent>                                                                  <apostrophe> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD5>                                                                     <rightsinglequotemark> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -4591,11 +4593,11 @@
 #   with its spacing counterpart "ʽ" U02BD.
 #
 <UEFD6>                                                                                    <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
-<Multi_key><backslash>                                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
+#   Multikey conflicts with "∖" U2216.                                                     <space> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <UEFD6>                                                                                    <U200B> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <Multi_key><backslash>                                                                     <U200B> : "̔" U0314 # COMBINING REVERSED COMMA ABOVE
 <UEFD6>                                                                             <nobreakspace> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
-<Multi_key><backslash>                                                              <nobreakspace> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
+#   Multikey conflicts with "∖" U2216.                                              <nobreakspace> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                                    <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <Multi_key><backslash>                                                                     <U202F> : "ʽ" U02BD # MODIFIER LETTER REVERSED COMMA
 <UEFD6>                                                                              <asciicircum> : "⦣" U29A3 # REVERSED ANGLE
@@ -5011,11 +5013,11 @@
 #   elsewhere, the multikey equivalent cannot be supported.)
 #
 <dead_tilde>                                                                               <space> : "̃" U0303 # COMBINING TILDE
-<Multi_key><asciitilde>                                                                    <space> : "̃" U0303 # COMBINING TILDE
+#   Multikey conflicts with "∼" U223C.                                                     <space> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                               <U200B> : "̃" U0303 # COMBINING TILDE
 <Multi_key><asciitilde>                                                                    <U200B> : "̃" U0303 # COMBINING TILDE
 <dead_tilde>                                                                        <nobreakspace> : "~" U007E # TILDE
-<Multi_key><asciitilde>                                                             <nobreakspace> : "~" U007E # TILDE
+#   Multikey conflicts with "∼" U223C.                                              <nobreakspace> : "~" U007E # TILDE
 <dead_tilde>                                                                               <U202F> : "˜" U02DC # SMALL TILDE
 <Multi_key><asciitilde>                                                                    <U202F> : "˜" U02DC # SMALL TILDE
 <dead_tilde>                                                                            <quotedbl> : "️" UFE0F # VARIATION SELECTOR-16, emoji style
@@ -5061,7 +5063,7 @@
 <dead_tilde>                                                                             <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 #   Multikey conflicts with "↝" U219D, "⪠" U2AA0.                                        <greater> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
 <dead_tilde>                                                                               <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
-<Multi_key><asciitilde>                                                                    <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
+#   Multikey conflicts with "≅" U2245.                                                     <equal> : "͌" U034C # COMBINING ALMOST EQUAL TO ABOVE
 <dead_tilde>                                                                               <grave> : "" U000C # FORM FEED, page break in plain text
 #   Multikey conflicts with composed "Ã̀", "Ẽ̀", "Ĩ̀", "Õ̀", "Ɔ̃̀", "Ɛ̃̀", "ɔ̃̀", "ɛ̃̀", "Ũ̀", "Ɛ̃̀", […] <grave> : "" U000C # FORM FEED, page break in plain text
 <dead_tilde>                                                                                   <0> : "˕" U02D5 # MODIFIER LETTER DOWN TACK
@@ -5235,21 +5237,21 @@
 # # TILDE&TURNED
 #
 <dead_tilde><UEFD5>                                                                        <space> : "̾" U033E # COMBINING VERTICAL TILDE
-<Multi_key><asciitilde><percent>                                                           <space> : "̾" U033E # COMBINING VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <space> : "̾" U033E # COMBINING VERTICAL TILDE
 <UEFD5><dead_tilde>                                                                        <space> : "̾" U033E # COMBINING VERTICAL TILDE
-<Multi_key><percent><asciitilde>                                                           <space> : "̾" U033E # COMBINING VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <space> : "̾" U033E # COMBINING VERTICAL TILDE
 <dead_tilde><UEFD5>                                                                        <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
-<Multi_key><asciitilde><percent>                                                           <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
 <UEFD5><dead_tilde>                                                                        <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
-<Multi_key><percent><asciitilde>                                                           <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <U200B> : "̾" U033E # COMBINING VERTICAL TILDE
 <dead_tilde><UEFD5>                                                                 <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
-<Multi_key><asciitilde><percent>                                                    <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                              <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5><dead_tilde>                                                                 <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
-<Multi_key><percent><asciitilde>                                                    <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                              <nobreakspace> : "ⸯ" U2E2F # VERTICAL TILDE
 <dead_tilde><UEFD5>                                                                        <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
-<Multi_key><asciitilde><percent>                                                           <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
 <UEFD5><dead_tilde>                                                                        <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
-<Multi_key><percent><asciitilde>                                                           <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
+#   Multikey conflicts with "≀" U2240.                                                     <U202F> : "ⸯ" U2E2F # VERTICAL TILDE
 #
 #
 # # TILDE&ACUTE
@@ -5393,21 +5395,21 @@
 # # TILDE&STROKE
 #
 <dead_tilde><dead_stroke>                                                                  <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
-<Multi_key><asciitilde><slash>                                                             <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
+#   Multikey conflicts with "≁" U2241.                                                     <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_stroke><dead_tilde>                                                                  <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
-<Multi_key><slash><asciitilde>                                                             <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
+#   Multikey conflicts with "≁" U2241.                                                     <space> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_tilde><dead_stroke>                                                                  <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
-<Multi_key><asciitilde><slash>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
+#   Multikey conflicts with "≁" U2241.                                                     <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_stroke><dead_tilde>                                                                  <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
-<Multi_key><slash><asciitilde>                                                             <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
+#   Multikey conflicts with "≁" U2241.                                                     <U200B> : "͊" U034A # COMBINING NOT TILDE ABOVE
 <dead_tilde><dead_stroke>                                                           <nobreakspace> : "≁" U2241 # NOT TILDE
-<Multi_key><asciitilde><slash>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
+#   Multikey conflicts with "≁" U2241.                                              <nobreakspace> : "≁" U2241 # NOT TILDE
 <dead_stroke><dead_tilde>                                                           <nobreakspace> : "≁" U2241 # NOT TILDE
-<Multi_key><slash><asciitilde>                                                      <nobreakspace> : "≁" U2241 # NOT TILDE
+#   Multikey conflicts with "≁" U2241.                                              <nobreakspace> : "≁" U2241 # NOT TILDE
 <dead_tilde><dead_stroke>                                                                  <U202F> : "≁" U2241 # NOT TILDE
-<Multi_key><asciitilde><slash>                                                             <U202F> : "≁" U2241 # NOT TILDE
+#   Multikey conflicts with "≁" U2241.                                                     <U202F> : "≁" U2241 # NOT TILDE
 <dead_stroke><dead_tilde>                                                                  <U202F> : "≁" U2241 # NOT TILDE
-<Multi_key><slash><asciitilde>                                                             <U202F> : "≁" U2241 # NOT TILDE
+#   Multikey conflicts with "≁" U2241.                                                     <U202F> : "≁" U2241 # NOT TILDE
 #
 #
 # # TILDE&GRAVE
@@ -5529,21 +5531,21 @@
 # # TILDE&DIAERESIS
 #
 <dead_tilde><dead_diaeresis>                                                               <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
-<Multi_key><asciitilde><colon>                                                             <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
+#   Multikey conflicts with "∻" U223B.                                                     <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
 <dead_diaeresis><dead_tilde>                                                               <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
-<Multi_key><colon><asciitilde>                                                             <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
+#   Multikey conflicts with "∻" U223B.                                                     <space> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
 <dead_tilde><dead_diaeresis>                                                               <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
-<Multi_key><asciitilde><colon>                                                             <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
+#   Multikey conflicts with "∻" U223B.                                                     <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
 <dead_diaeresis><dead_tilde>                                                               <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
-<Multi_key><colon><asciitilde>                                                             <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
+#   Multikey conflicts with "∻" U223B.                                                     <U200B> : "͋" U034B # COMBINING HOMOTHETIC ABOVE
 <dead_tilde><dead_diaeresis>                                                                   <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
-<Multi_key><asciitilde><colon>                                                                 <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
+#   Multikey conflicts with "∻" U223B.                                                         <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
 <dead_diaeresis><dead_tilde>                                                                   <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
-<Multi_key><colon><asciitilde>                                                                 <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
+#   Multikey conflicts with "∻" U223B.                                                         <O> : "Ṏ" U1E4E # LATIN CAPITAL LETTER O WITH TILDE AND DIAERESIS
 <dead_tilde><dead_diaeresis>                                                                   <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
-<Multi_key><asciitilde><colon>                                                                 <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
+#   Multikey conflicts with "∻" U223B.                                                         <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
 <dead_diaeresis><dead_tilde>                                                                   <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
-<Multi_key><colon><asciitilde>                                                                 <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
+#   Multikey conflicts with "∻" U223B.                                                         <o> : "ṏ" U1E4F # LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
 #
 #
 # # TILDE&AMPERSAND
@@ -5724,12 +5726,16 @@
 #   “tilde and ampersand”.
 #   See # # TILDE&AMPERSAND
 #
+#   Consistently with other dead keys yielding diacriticized math symbols,
+#   dead_tilde double press followed by colon is a shortcut to "∻" U223B.
+#   
+#
 <dead_tilde><dead_tilde>                                                                   <space> : "̰" U0330 # COMBINING TILDE BELOW
-<Multi_key><asciitilde><asciitilde>                                                        <space> : "̰" U0330 # COMBINING TILDE BELOW
+#   Multikey conflicts with "≈" U2248.                                                     <space> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde><dead_tilde>                                                                   <U200B> : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <U200B> : "̰" U0330 # COMBINING TILDE BELOW
 <dead_tilde><dead_tilde>                                                            <nobreakspace> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
-<Multi_key><asciitilde><asciitilde>                                                 <nobreakspace> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
+#   Multikey conflicts with "≈" U2248.                                              <nobreakspace> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                                   <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <Multi_key><asciitilde><asciitilde>                                                        <U202F> : "˷" U02F7 # MODIFIER LETTER LOW TILDE
 <dead_tilde><dead_tilde>                                                               <ampersand> : "̴" U0334 # COMBINING TILDE OVERLAY
@@ -5738,6 +5744,8 @@
 <Multi_key><asciitilde><asciitilde>                                                         <plus> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <dead_tilde><dead_tilde>                                                                   <equal> : "᷽" U1DFD # COMBINING ALMOST EQUAL TO BELOW
 <Multi_key><asciitilde><asciitilde>                                                        <equal> : "᷽" U1DFD # COMBINING ALMOST EQUAL TO BELOW
+<dead_tilde><dead_tilde>                                                                   <colon> : "∻" U223B # HOMOTHETIC
+<Multi_key><asciitilde><asciitilde>                                                        <colon> : "∻" U223B # HOMOTHETIC
 <dead_tilde><dead_tilde>                                                                       <A> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
 <Multi_key><asciitilde><asciitilde>                                                            <A> : "︩" UFE29 # COMBINING TILDE LEFT HALF BELOW
 <dead_tilde><dead_tilde>                                                                       <a> : "︪" UFE2A # COMBINING TILDE RIGHT HALF BELOW
@@ -5829,11 +5837,11 @@
 #   Multikey: ¦~~~
 #
 <dead_tilde><dead_tilde><dead_tilde>                                                       <space> : "̴" U0334 # COMBINING TILDE OVERLAY
-<Multi_key><asciitilde><asciitilde><asciitilde>                                            <space> : "̴" U0334 # COMBINING TILDE OVERLAY
+#   Multikey conflicts with "≋" U224B.                                                     <space> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde><dead_tilde><dead_tilde>                                                       <U200B> : "̴" U0334 # COMBINING TILDE OVERLAY
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <U200B> : "̴" U0334 # COMBINING TILDE OVERLAY
 <dead_tilde><dead_tilde><dead_tilde>                                                <nobreakspace> : "~" U007E # TILDE
-<Multi_key><asciitilde><asciitilde><asciitilde>                                     <nobreakspace> : "~" U007E # TILDE
+#   Multikey conflicts with "≋" U224B.                                              <nobreakspace> : "~" U007E # TILDE
 <dead_tilde><dead_tilde><dead_tilde>                                                       <U202F> : "~" U007E # TILDE
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <U202F> : "~" U007E # TILDE
 <dead_tilde><dead_tilde><dead_tilde>                                                           <l> : "ꬸ" UAB38 # LATIN SMALL LETTER L WITH DOUBLE MIDDLE TILDE
@@ -8825,11 +8833,11 @@
 #   See # # Lenient dead key press
 #
 <dead_abovedot>                                                                            <space> : "̇" U0307 # COMBINING DOT ABOVE
-<Multi_key><period>                                                                        <space> : "̇" U0307 # COMBINING DOT ABOVE
+#   Multikey conflicts with "⋅" U22C5.                                                     <space> : "̇" U0307 # COMBINING DOT ABOVE
 <dead_abovedot>                                                                            <U200B> : "̇" U0307 # COMBINING DOT ABOVE
 <Multi_key><period>                                                                        <U200B> : "̇" U0307 # COMBINING DOT ABOVE
 <dead_abovedot>                                                                     <nobreakspace> : "˙" U02D9 # DOT ABOVE
-<Multi_key><period>                                                                 <nobreakspace> : "˙" U02D9 # DOT ABOVE
+#   Multikey conflicts with "⋅" U22C5.                                              <nobreakspace> : "˙" U02D9 # DOT ABOVE
 <dead_abovedot>                                                                            <U202F> : "˙" U02D9 # DOT ABOVE
 <Multi_key><period>                                                                        <U202F> : "˙" U02D9 # DOT ABOVE
 <dead_abovedot>                                                                          <percent> : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
@@ -9642,6 +9650,8 @@
 <Multi_key><parenleft>                                                                    <dollar> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <dead_invertedbreve>                                                                      <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <Multi_key><parenleft>                                                                    <emdash> : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
+<dead_invertedbreve>                                                                       <equal> : "≘" U2258 # CORRESPONDS TO
+#   Multikey conflicts with "≎" U224E.                                                     <equal> : "≘" U2258 # CORRESPONDS TO
 <dead_invertedbreve>                                                                           <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <Multi_key><parenleft>                                                                         <A> : "Ȃ" U0202 # LATIN CAPITAL LETTER A WITH INVERTED BREVE
 <dead_invertedbreve>                                                                           <a> : "ȃ" U0203 # LATIN SMALL LETTER A WITH INVERTED BREVE
@@ -10217,11 +10227,11 @@
 #   See #*# SUPERSCRIPT
 #
 <UEFD8>                                                                                    <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
-<Multi_key><minus>                                                                         <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
+#   Multikey conflicts with "−" U2212.                                                     <space> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <UEFD8>                                                                                    <U200B> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <Multi_key><minus>                                                                         <U200B> : "̵" U0335 # COMBINING SHORT STROKE OVERLAY
 <UEFD8>                                                                             <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
-<Multi_key><minus>                                                                  <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
+#   Multikey conflicts with "−" U2212.                                              <nobreakspace> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                    <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <Multi_key><minus>                                                                         <U202F> : "˗" U02D7 # MODIFIER LETTER MINUS SIGN
 <UEFD8>                                                                                  <percent> : "ƾ" U01BE # LATIN LETTER INVERTED GLOTTAL STOP WITH STROKE
@@ -10317,7 +10327,7 @@
 <UEFD8>                                                                                        <O> : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <Multi_key><minus>                                                                             <O> : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <UEFD8>                                                                                        <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
-<Multi_key><minus>                                                                             <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
+#   Multikey conflicts with "≖" U2256.                                                         <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
 <UEFD8>                                                                                        <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
 <Multi_key><minus>                                                                             <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
 <UEFD8>                                                                                        <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
@@ -12254,17 +12264,17 @@
 #   See # # Notes about documentation
 #
 <dead_macron>                                                                              <space> : "̄" U0304 # COMBINING MACRON
-<Multi_key><bar>                                                                           <space> : "̄" U0304 # COMBINING MACRON
+#   Multikey conflicts with "∣" U2223.                                                     <space> : "̄" U0304 # COMBINING MACRON
 <dead_diaeresis><dead_diaeresis>                                                           <space> : "̄" U0304 # COMBINING MACRON
-<Multi_key><colon><colon>                                                                  <space> : "̄" U0304 # COMBINING MACRON
+#   Multikey conflicts with "∷" U2237.                                                     <space> : "̄" U0304 # COMBINING MACRON
 <dead_macron>                                                                              <U200B> : "̄" U0304 # COMBINING MACRON
 <Multi_key><bar>                                                                           <U200B> : "̄" U0304 # COMBINING MACRON
 <dead_diaeresis><dead_diaeresis>                                                           <U200B> : "̄" U0304 # COMBINING MACRON
 <Multi_key><colon><colon>                                                                  <U200B> : "̄" U0304 # COMBINING MACRON
 <dead_macron>                                                                       <nobreakspace> : "¯" U00AF # MACRON
-<Multi_key><bar>                                                                    <nobreakspace> : "¯" U00AF # MACRON
+#   Multikey conflicts with "∣" U2223.                                              <nobreakspace> : "¯" U00AF # MACRON
 <dead_diaeresis><dead_diaeresis>                                                    <nobreakspace> : "¯" U00AF # MACRON
-<Multi_key><colon><colon>                                                           <nobreakspace> : "¯" U00AF # MACRON
+#   Multikey conflicts with "∷" U2237.                                              <nobreakspace> : "¯" U00AF # MACRON
 <dead_macron>                                                                              <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <Multi_key><bar>                                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
 <dead_diaeresis><dead_diaeresis>                                                           <U202F> : "ˉ" U02C9 # MODIFIER LETTER MACRON
@@ -12999,11 +13009,11 @@
 #   See # # TILDE&AMPERSAND
 #
 <dead_macron><dead_macron>                                                                 <space> : "̱" U0331 # COMBINING MACRON BELOW
-<Multi_key><bar><bar>                                                                      <space> : "̱" U0331 # COMBINING MACRON BELOW
+#   Multikey conflicts with "∥" U2225.                                                     <space> : "̱" U0331 # COMBINING MACRON BELOW
 <dead_macron><dead_macron>                                                                 <U200B> : "̱" U0331 # COMBINING MACRON BELOW
 <Multi_key><bar><bar>                                                                      <U200B> : "̱" U0331 # COMBINING MACRON BELOW
 <dead_macron><dead_macron>                                                          <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
-<Multi_key><bar><bar>                                                               <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
+#   Multikey conflicts with "∥" U2225.                                              <nobreakspace> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <dead_macron><dead_macron>                                                                 <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <Multi_key><bar><bar>                                                                      <U202F> : "ˍ" U02CD # MODIFIER LETTER LOW MACRON
 <dead_macron><dead_macron>                                                                 <slash> : "⦤" U29A4 # ANGLE WITH UNDERBAR
@@ -13275,17 +13285,19 @@
 #   and "≱" U2271.
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
-<Multi_key><slash>                                                                         <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
+#   Multikey conflicts with "∕" U2215.                                                     <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_stroke>                                                                              <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <Multi_key><slash>                                                                         <U200B> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 <dead_stroke>                                                                       <nobreakspace> : "∕" U2215 # DIVISION SLASH
-<Multi_key><slash>                                                                  <nobreakspace> : "∕" U2215 # DIVISION SLASH
+#   Multikey conflicts with "∕" U2215.                                              <nobreakspace> : "∕" U2215 # DIVISION SLASH
 <dead_stroke>                                                                              <U202F> : "∕" U2215 # DIVISION SLASH
 <Multi_key><slash>                                                                         <U202F> : "∕" U2215 # DIVISION SLASH
 <dead_stroke>                                                                           <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash>                                                                      <quotedbl> : "∄" U2204 # THERE DOES NOT EXIST
 <dead_stroke>                                                                           <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
 <Multi_key><slash>                                                                      <EuroSign> : "∄" U2204 # THERE DOES NOT EXIST
+<dead_stroke>                                                                         <asciitilde> : "≁" U2241 # NOT TILDE
+<Multi_key><slash>                                                                    <asciitilde> : "≁" U2241 # NOT TILDE
 <dead_stroke>                                                                                <bar> : "∤" U2224 # DOES NOT DIVIDE
 #   Multikey conflicts with "⧡" U29E1.                                                       <bar> : "∤" U2224 # DOES NOT DIVIDE
 <dead_stroke>                                                                              <equal> : "≠" U2260 # NOT EQUAL TO
@@ -13719,11 +13731,11 @@
 #   See #*# DOT_ABOVE
 #
 <dead_abovering>                                                                           <space> : "̊" U030A # COMBINING RING ABOVE
-<Multi_key><asterisk>                                                                      <space> : "̊" U030A # COMBINING RING ABOVE
+#   Multikey conflicts with "∗" U2217.                                                     <space> : "̊" U030A # COMBINING RING ABOVE
 <dead_abovering>                                                                           <U200B> : "̊" U030A # COMBINING RING ABOVE
 <Multi_key><asterisk>                                                                      <U200B> : "̊" U030A # COMBINING RING ABOVE
 <dead_abovering>                                                                    <nobreakspace> : "˚" U02DA # RING ABOVE
-<Multi_key><asterisk>                                                               <nobreakspace> : "˚" U02DA # RING ABOVE
+#   Multikey conflicts with "∗" U2217.                                              <nobreakspace> : "˚" U02DA # RING ABOVE
 <dead_abovering>                                                                           <U202F> : "˚" U02DA # RING ABOVE
 <Multi_key><asterisk>                                                                      <U202F> : "˚" U02DA # RING ABOVE
 <dead_abovering>                                                                      <braceright> : "⦲" U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
@@ -15731,7 +15743,7 @@
 <UEFD7>                                                                                        <O> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
 <Multi_key><equal>                                                                             <O> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
 <UEFD7>                                                                                        <o> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
-<Multi_key><equal>                                                                             <o> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
+#   Multikey conflicts with "≖" U2256.                                                         <o> : "🇴⁠" # U1F1F4 U2060 REGIONAL INDICATOR SYMBOL LETTER O, WORD JOINER
 <UEFD7>                                                                                        <P> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
 <Multi_key><equal>                                                                             <P> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
 <UEFD7>                                                                                        <p> : "🇵⁠" # U1F1F5 U2060 REGIONAL INDICATOR SYMBOL LETTER P, WORD JOINER
@@ -16903,11 +16915,11 @@
 #   See # # Symbols for no-break thin space NBTSP
 #
 <dead_diaeresis>                                                                           <space> : "̈" U0308 # COMBINING DIAERESIS
-<Multi_key><colon>                                                                         <space> : "̈" U0308 # COMBINING DIAERESIS
+#   Multikey conflicts with "∶" U2236.                                                     <space> : "̈" U0308 # COMBINING DIAERESIS
 <dead_diaeresis>                                                                           <U200B> : "̈" U0308 # COMBINING DIAERESIS
 <Multi_key><colon>                                                                         <U200B> : "̈" U0308 # COMBINING DIAERESIS
 <dead_diaeresis>                                                                    <nobreakspace> : "¨" U00A8 # DIAERESIS
-<Multi_key><colon>                                                                  <nobreakspace> : "¨" U00A8 # DIAERESIS
+#   Multikey conflicts with "∶" U2236.                                              <nobreakspace> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                           <U202F> : "¨" U00A8 # DIAERESIS
 <Multi_key><colon>                                                                         <U202F> : "¨" U00A8 # DIAERESIS
 <dead_diaeresis>                                                                     <asciicircum> : "᫜" U1ADC # COMBINING DIAERESIS WITH RAISED LEFT DOT
