@@ -14799,7 +14799,7 @@
 #   See # # Notes about documentation
 #
 <dead_circumflex><dead_circumflex><dead_circumflex>                                        <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-<Multi_key><less><less><less>                                                              <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
+#   Multikey conflicts with "⋘" U22D8.                                                     <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_abovering>                                                          <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><less><asterisk>                                                                <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_abovering><dead_circumflex>                                                          <space> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
@@ -14811,7 +14811,7 @@
 <dead_abovering><dead_circumflex>                                                          <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <Multi_key><asterisk><less>                                                                <U200B> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 <dead_circumflex><dead_circumflex><dead_circumflex>                                 <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
-<Multi_key><less><less><less>                                                       <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
+#   Multikey conflicts with "⋘" U22D8.                                              <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_circumflex><dead_abovering>                                                   <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <Multi_key><less><asterisk>                                                         <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
 <dead_abovering><dead_circumflex>                                                   <nobreakspace> : "ꞈ" UA788 # MODIFIER LETTER LOW CIRCUMFLEX ACCENT
@@ -15099,7 +15099,7 @@
 <dead_caron>                                                                               <space> : "̌" U030C # COMBINING CARON
 <Multi_key><greater>                                                                       <space> : "̌" U030C # COMBINING CARON
 <dead_circumflex><dead_circumflex>                                                         <space> : "̌" U030C # COMBINING CARON
-<Multi_key><less><less>                                                                    <space> : "̌" U030C # COMBINING CARON
+#   Multikey conflicts with "≪" U226A.                                                     <space> : "̌" U030C # COMBINING CARON
 <dead_caron>                                                                               <U200B> : "̌" U030C # COMBINING CARON
 <Multi_key><greater>                                                                       <U200B> : "̌" U030C # COMBINING CARON
 <dead_circumflex><dead_circumflex>                                                         <U200B> : "̌" U030C # COMBINING CARON
@@ -15107,7 +15107,7 @@
 <dead_caron>                                                                        <nobreakspace> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_circumflex><dead_circumflex>                                                  <nobreakspace> : "ˇ" U02C7 # CARON
-<Multi_key><less><less>                                                             <nobreakspace> : "ˇ" U02C7 # CARON
+#   Multikey conflicts with "≪" U226A.                                              <nobreakspace> : "ˇ" U02C7 # CARON
 <dead_caron>                                                                               <U202F> : "ˇ" U02C7 # CARON
 <Multi_key><greater>                                                                       <U202F> : "ˇ" U02C7 # CARON
 <dead_circumflex><dead_circumflex>                                                         <U202F> : "ˇ" U02C7 # CARON
@@ -15552,11 +15552,11 @@
 #   See #^# HIGH_BAR
 #
 <dead_caron><dead_caron>                                                                   <space> : "̬" U032C # COMBINING CARON BELOW
-<Multi_key><greater><greater>                                                              <space> : "̬" U032C # COMBINING CARON BELOW
+#   Multikey conflicts with "≫" U226B.                                                     <space> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron><dead_caron>                                                                   <U200B> : "̬" U032C # COMBINING CARON BELOW
 <Multi_key><greater><greater>                                                              <U200B> : "̬" U032C # COMBINING CARON BELOW
 <dead_caron><dead_caron>                                                            <nobreakspace> : "ˬ" U02EC # MODIFIER LETTER VOICING
-<Multi_key><greater><greater>                                                       <nobreakspace> : "ˬ" U02EC # MODIFIER LETTER VOICING
+#   Multikey conflicts with "≫" U226B.                                              <nobreakspace> : "ˬ" U02EC # MODIFIER LETTER VOICING
 <dead_caron><dead_caron>                                                                   <U202F> : "ˬ" U02EC # MODIFIER LETTER VOICING
 <Multi_key><greater><greater>                                                              <U202F> : "ˬ" U02EC # MODIFIER LETTER VOICING
 <dead_caron><dead_caron>                                                                       <A> : "˰" U02F0 # MODIFIER LETTER LOW UP ARROWHEAD

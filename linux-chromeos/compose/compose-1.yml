@@ -5264,25 +5264,16 @@
 #
 #   Leading space
 #
-#   When things do not work as expected, the likely culprit was a conflict with
-#   a dead key equivalent as for "≪" U226A, "≫" U226B, "⋘" U22D8, "⋙" U22D9.
-#   To fix these issues, sequences started with a space, or interchangeably with
-#   a no-break space, supported for the sake of synergy with the Multi_key dead
-#   key, mapped invariably at level 3, both in French mode, where it is on key
-#   E12, and in ASCII mode where it is also on key D12; yet the space character
-#   at level 3 is no-break space in French mode, ASCII space in ASCII mode.
-#
-#   More extensively ruling out multikey equivalents of dead keys since v6.2.5
-#   helps making some of these math seauences more streamlined again, rather
-#   than needlessly screwing them up while Windows is unable to support the
-#   multikey equivalents anyway.
-#   See dead-key-convert.pl # Multikey
-#
-#   Distinguishing math sequences from each other is another usage for leading
+#   Distinguishing math sequences from each other is the main usage for leading
 #   space. This occurs when intuitivity requires similar sequences for various
-#   symbols, like for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN.
+#   symbols, like for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN. To fix these issues,
+#   sequences start with a space, or with no-break space supported for the sake
+#   of synergy with the Multi_key dead key, mapped invariably at level 3, both
+#   in French mode, where it is on key E12, and in ASCII mode, where it is also
+#   on key D12; yet the space character at level 3 is no-break space in French
+#   mode, ASCII space in ASCII mode.
 #
-#   This scheme may require prepending multiple spaces. Then the level-3/AltGr
+#   This scheme may require prepending multiple spaces. Then, the level-3/AltGr
 #   modifier key may be released before any of them, in particular in French
 #   mode where level 3 of the space bar is no-break space.
 #
@@ -5291,6 +5282,16 @@
 #   Single:  "⧸" U29F8, "⧹" U29F9, "▷" U25B7;
 #   Double:  "⟋" U27CB, "⟍" U27CD, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
 #   Triple:   "⁄" U2044, "⧵" U29F5.
+#
+#   Previously, when things did not work as expected, the likely culprit was a
+#   conflict with a dead key equivalent. Examples included "≪" U226A, "≫" U226B
+#   and "⋘" U22D8.
+#
+#   More extensively ruling out multikey equivalents of dead keys since v6.2.5
+#   helps making some of these math seauences more streamlined again, rather
+#   than needlessly screwing them up while Windows is unable to support the
+#   multikey equivalents anyway.
+#   See dead-key-convert.pl # Multikey
 #
 #
 #   Negation
@@ -6623,14 +6624,10 @@
 <Multi_key><space><less><equal><slash>                                                             : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
 <Multi_key><nobreakspace><less><equal><slash>                                                      : "≨" U2268 # LESS-THAN BUT NOT EQUAL TO
 <Multi_key><greater><equal><slash>                                                                 : "≩" U2269 # GREATER-THAN BUT NOT EQUAL TO
-<Multi_key><space><less><less>                                                             <space> : "≪" U226A # MUCH LESS-THAN
-<Multi_key><space><less><less>                                                      <nobreakspace> : "≪" U226A # MUCH LESS-THAN
-<Multi_key><nobreakspace><less><less>                                                      <space> : "≪" U226A # MUCH LESS-THAN
-<Multi_key><nobreakspace><less><less>                                               <nobreakspace> : "≪" U226A # MUCH LESS-THAN
-<Multi_key><space><greater><greater>                                                       <space> : "≫" U226B # MUCH GREATER-THAN
-<Multi_key><space><greater><greater>                                                <nobreakspace> : "≫" U226B # MUCH GREATER-THAN
-<Multi_key><nobreakspace><greater><greater>                                                <space> : "≫" U226B # MUCH GREATER-THAN
-<Multi_key><nobreakspace><greater><greater>                                         <nobreakspace> : "≫" U226B # MUCH GREATER-THAN
+<Multi_key><less><less>                                                                    <space> : "≪" U226A # MUCH LESS-THAN
+<Multi_key><less><less>                                                             <nobreakspace> : "≪" U226A # MUCH LESS-THAN
+<Multi_key><greater><greater>                                                              <space> : "≫" U226B # MUCH GREATER-THAN
+<Multi_key><greater><greater>                                                       <nobreakspace> : "≫" U226B # MUCH GREATER-THAN
 <Multi_key><parenleft><parenright>                                                         <space> : "≬" U226C # BETWEEN
 <Multi_key><parenleft><parenright>                                                  <nobreakspace> : "≬" U226C # BETWEEN
 <Multi_key><parenright><parenleft><slash>                                                          : "≭" U226D # NOT EQUIVALENT TO
@@ -7031,10 +7028,10 @@
 <Multi_key><period><greater>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                               <space> : "⋗" U22D7 # GREATER-THAN WITH DOT
 <Multi_key><greater><period>                                                        <nobreakspace> : "⋗" U22D7 # GREATER-THAN WITH DOT
-<Multi_key><space><less><less><less>                                                               : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><nobreakspace><less><less><less>                                                        : "⋘" U22D8 # VERY MUCH LESS-THAN
-<Multi_key><space><greater><greater><greater>                                                      : "⋙" U22D9 # VERY MUCH GREATER-THAN
-<Multi_key><nobreakspace><greater><greater><greater>                                               : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><less><less><less>                                                              <space> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><less><less><less>                                                       <nobreakspace> : "⋘" U22D8 # VERY MUCH LESS-THAN
+<Multi_key><greater><greater><greater>                                                     <space> : "⋙" U22D9 # VERY MUCH GREATER-THAN
+<Multi_key><greater><greater><greater>                                              <nobreakspace> : "⋙" U22D9 # VERY MUCH GREATER-THAN
 #
 #   Consistently with "≤" U2264, "≥" U2265, underscore is used in sequences for
 #   single-line equal in middle position too, and even in overscore position.
