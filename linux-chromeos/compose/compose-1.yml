@@ -4338,18 +4338,18 @@
 #
 # # Diameter sign
 #
-#   This sequence is case sensitive, as uppercase is used for "∅" U2205 EMPTY
-#   SET (supported as a mathematical symbol without being space terminated),
-#   while "⌀" U2300 DIAMETER SIGN is not a math symbol, yet space termination
-#   is required to prevent a conflict with "♂" U2642 MALE SIGN.
-#   See # # Mathematical symbols in Miscellaneous Technical block U2300
+#   This sequence is case insensitive, but it has a leading space to prevent a
+#   conflict with "⊘" U2298 CIRCLED DIVISION SLASH.
+#   See #   Leading space
 #
-#   However, that complication doesn’t matter since "⌀" U2300 is also on live
-#   key C03 "D", level 7, and in group 1 of "(" on the same.
+#   However, that complication doesn’t matter, as "⌀" U2300 is also on live key
+#   C03 "D", level 7, and in group 1 of "(" on the same.
 #   See # # C03 parenleft
 #
-<Multi_key><o><slash>                                                                      <space> : "⌀" U2300 # DIAMETER SIGN
-<Multi_key><o><slash>                                                               <nobreakspace> : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><space><o><slash>                                                                       : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><nobreakspace><o><slash>                                                                : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><space><O><slash>                                                                       : "⌀" U2300 # DIAMETER SIGN
+<Multi_key><nobreakspace><O><slash>                                                                : "⌀" U2300 # DIAMETER SIGN
 #
 #
 # # Alternative multiplication symbol
@@ -6752,8 +6752,8 @@
 <Multi_key><o><minus>                                                                      <space> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><o><minus>                                                               <nobreakspace> : "⊖" U2296 # CIRCLED MINUS
 <Multi_key><o><x>                                                                                  : "⊗" U2297 # CIRCLED TIMES
-<Multi_key><space><o><slash>                                                                       : "⊘" U2298 # CIRCLED DIVISION SLASH
-<Multi_key><nobreakspace><o><slash>                                                                : "⊘" U2298 # CIRCLED DIVISION SLASH
+<Multi_key><o><slash>                                                                      <space> : "⊘" U2298 # CIRCLED DIVISION SLASH
+<Multi_key><o><slash>                                                               <nobreakspace> : "⊘" U2298 # CIRCLED DIVISION SLASH
 <Multi_key><o><period>                                                                             : "⊙" U2299 # CIRCLED DOT OPERATOR
 <Multi_key><O><o>                                                                          <space> : "⊚" U229A # CIRCLED RING OPERATOR
 <Multi_key><O><o>                                                                   <nobreakspace> : "⊚" U229A # CIRCLED RING OPERATOR
