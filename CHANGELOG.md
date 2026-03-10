@@ -34,6 +34,8 @@ Mise à jour du contenu des touches mortes.
 	* Simplifier les séquences de "⇴" U+21F4. compose-1.yml [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6)
 	* Adapter les séquences de "↬" U+21AC. ibidem
 	* Simplifier les séquences de "≪" U+226A, "≫" U+226B, "⋘" U+22D8, "⋙" U+22D9. compose-1.yml [29475d5](https://github.com/dispoclavier/nouvel-azerty/commit/29475d5933ca92aeaad314dbc86926225e7e1c27)
+	* Simplifier les séquences de "⊘" U+2298 [df62a94](https://github.com/dispoclavier/nouvel-azerty/commit/df62a9462d4f34881e21198ae63afd0e1ea18234)
+	* Adapter les séquences de "⌀" U+2300. ibidem
 * Transformations :
 	* Tourné : Redonder "≀" U+2240. compose-2.yml [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
 	* Tilde > tilde médian : Redonder "∻" U+223B. ibidem
@@ -55,7 +57,7 @@ Mise à jour du contenu des touches mortes.
 	* Désactiver les équivalents en composition en conflit avec des symboles mathématiques. compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43), [29475d5](https://github.com/dispoclavier/nouvel-azerty/commit/29475d5933ca92aeaad314dbc86926225e7e1c27)
 * Documentation :
 	* Mettre à jour les modes d’emploi.
-	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6), [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43), [eeb6a3d](https://github.com/dispoclavier/nouvel-azerty/commit/eeb6a3d66bb7d832f3f63839c87e96c6267852be), [29475d5](https://github.com/dispoclavier/nouvel-azerty/commit/29475d5933ca92aeaad314dbc86926225e7e1c27)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6), [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43), [eeb6a3d](https://github.com/dispoclavier/nouvel-azerty/commit/eeb6a3d66bb7d832f3f63839c87e96c6267852be), [29475d5](https://github.com/dispoclavier/nouvel-azerty/commit/29475d5933ca92aeaad314dbc86926225e7e1c27), [df62a94](https://github.com/dispoclavier/nouvel-azerty/commit/df62a9462d4f34881e21198ae63afd0e1ea18234)
 * Build : 6.2.6.0
 
 ## 6.2.5 (2026-03-08)
