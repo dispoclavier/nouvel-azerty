@@ -5288,7 +5288,7 @@
 #
 #   Examples involving no, single or multiple leading [nobreak]space:
 #   None:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
-#   Single:  "⧸" U29F8, "⧹" U29F9;
+#   Single:  "⧸" U29F8, "⧹" U29F9, "▷" U25B7;
 #   Double:  "⟋" U27CB, "⟍" U27CD, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
 #   Triple:   "⁄" U2044, "⧵" U29F5.
 #
@@ -6561,12 +6561,12 @@
 <Multi_key><asciitilde><asciitilde>                                                 <nobreakspace> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><slash>                                                         : "≉" U2249 # NOT ALMOST EQUAL TO
 <Multi_key><asciitilde><asciitilde><minus>                                                         : "≊" U224A # ALMOST EQUAL OR EQUAL TO
-<Multi_key><asciitilde><asciitilde><asciitilde>                                                    : "≋" U224B # TRIPLE TILDE
+<Multi_key><asciitilde><asciitilde><asciitilde>                                            <space> : "≋" U224B # TRIPLE TILDE
+<Multi_key><asciitilde><asciitilde><asciitilde>                                     <nobreakspace> : "≋" U224B # TRIPLE TILDE
 <Multi_key><asciitilde><backslash><equal>                                                          : "≌" U224C # ALL EQUAL TO
 <Multi_key><parenright><parenleft>                                                         <space> : "≍" U224D # EQUIVALENT TO
 <Multi_key><parenright><parenleft>                                                  <nobreakspace> : "≍" U224D # EQUIVALENT TO
-#Multi_key><parenleft><equal><parenright>                                                          : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
-<Multi_key><parenleft><equal>                                                                      : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
+<Multi_key><parenleft><equal><parenright>                                                          : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
 <Multi_key><parenleft><minus>                                                              <space> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><parenleft><minus>                                                       <nobreakspace> : "≏" U224F # DIFFERENCE BETWEEN
 <Multi_key><period><equal>                                                                 <space> : "≐" U2250 # APPROACHES THE LIMIT
@@ -6580,7 +6580,8 @@
 <Multi_key><equal><o>                                                                              : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><minus><o><minus>                                                                       : "≖" U2256 # RING IN EQUAL TO
 <Multi_key><o><equal>                                                                              : "≗" U2257 # RING EQUAL TO
-<Multi_key><parenleft><equal>                                                                      : "≘" U2258 # CORRESPONDS TO
+<Multi_key><parenleft><equal>                                                              <space> : "≘" U2258 # CORRESPONDS TO
+<Multi_key><parenleft><equal>                                                       <nobreakspace> : "≘" U2258 # CORRESPONDS TO
 <Multi_key><a><equal>                                                                              : "≙" U2259 # ESTIMATES
 <Multi_key><v><v><equal>                                                                           : "≙" U2259 # ESTIMATES
 <Multi_key><V><V><equal>                                                                           : "≙" U2259 # ESTIMATES
@@ -6607,9 +6608,8 @@
 <Multi_key><minus><equal><slash>                                                           <space> : "≢" U2262 # NOT IDENTICAL TO
 <Multi_key><minus><equal><slash>                                                    <nobreakspace> : "≢" U2262 # NOT IDENTICAL TO
 <Multi_key><minus><equal><minus>                                                                   : "≣" U2263 # STRICTLY EQUIVALENT TO
-<Multi_key><space><space><equal><equal>                                                            : "≣" U2263 # STRICTLY EQUIVALENT TO
-<Multi_key><nobreakspace><space><equal><equal>                                                     : "≣" U2263 # STRICTLY EQUIVALENT TO
-<Multi_key><nobreakspace><nobreakspace><equal><equal>                                              : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><equal><equal>                                                                  <space> : "≣" U2263 # STRICTLY EQUIVALENT TO
+<Multi_key><equal><equal>                                                           <nobreakspace> : "≣" U2263 # STRICTLY EQUIVALENT TO
 <Multi_key><less><underscore>                                                              <space> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <Multi_key><less><underscore>                                                       <nobreakspace> : "≤" U2264 # LESS-THAN OR EQUAL TO
 <Multi_key><greater><underscore>                                                           <space> : "≥" U2265 # GREATER-THAN OR EQUAL TO
@@ -7604,14 +7604,20 @@
 <Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><bar><minus>                                                                     : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                              : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><space><space><slash>                                                                   : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><space><slash>                                                            : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><slash>                                                     : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><space><space><slash>                                                           <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><space><space><slash>                                                    <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><space><slash>                                                    <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><space><slash>                                             <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><slash>                                             <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><slash>                                      <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><parenright><underscore><asciicircum>                                           <space> : "⟌" U27CC # LONG DIVISION
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
-<Multi_key><space><space><backslash>                                                               : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><space><backslash>                                                        : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
-<Multi_key><nobreakspace><nobreakspace><backslash>                                                 : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><space><space><backslash>                                                       <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><space><space><backslash>                                                <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><backslash>                                                <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><backslash>                                         <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><backslash>                                         <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><backslash>                                  <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><a><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><A><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><space><bracketleft><a>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND

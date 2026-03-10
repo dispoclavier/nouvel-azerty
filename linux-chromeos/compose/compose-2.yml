@@ -11151,14 +11151,14 @@
 <Multi_key><underscore>                                                             <nobreakspace> : "_" U005F # LOW LINE
 <UEFD2>                                                                                    <U202F> : "_" U005F # LOW LINE
 <Multi_key><underscore>                                                                    <U202F> : "_" U005F # LOW LINE
-<UEFD2>                                                                                    <minus> : "₋" U208B # SUBSCRIPT MINUS
-#   Multikey conflicts with "ᴃ" U1D03, "ᵻ" U1D7B, "ᵾ" U1D7E, "ᶧ" U1DA7.                    <minus> : "₋" U208B # SUBSCRIPT MINUS
-<UEFD2>                                                                                     <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
-<Multi_key><underscore>                                                                     <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
 <UEFD2>                                                                                <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
 <Multi_key><underscore>                                                                <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
 <UEFD2>                                                                               <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
 #   Multikey conflicts with "𐞜" U1079C, "𝼄" U1DF04.                                   <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
+<UEFD2>                                                                                    <minus> : "₋" U208B # SUBSCRIPT MINUS
+#   Multikey conflicts with "ᴃ" U1D03, "ᵻ" U1D7B, "ᵾ" U1D7E, "ᶧ" U1DA7.                    <minus> : "₋" U208B # SUBSCRIPT MINUS
+<UEFD2>                                                                                     <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<Multi_key><underscore>                                                                     <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
 <UEFD2>                                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <Multi_key><underscore>                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <UEFD2>                                                                                 <ellipsis> : "⃨" U20E8 # COMBINING TRIPLE UNDERDOT
@@ -14045,18 +14045,38 @@
 #   See #*# CEDILLA
 #
 #
-#   Superscript digits
+#   Superscripts
 #
-#   For the sake of usability and meeting predictable user expectations (that
-#   also have been escalated to the level of standards support), superscript
+#   For the sake of usability and meeting predictable user expectations, that
+#   also have been escalated to the level of standards support, superscript
 #   digits are supported, at the expense of multikey equivalents.
 #   See NF Z71-300:2019, section 6.3.3 page 24
-#   See E DIN 2137-1:2020-11
-#   See # # Multikey equivalents
+#
+#   As the ISO keyboard standard, part 11, since the 2026 revision supports
+#   superscript signs and parentheses along with digits, these are supported
+#   likewise, as well as the superscript equals sign "⁼" U207C for completeness
+#   and consistency, except the superscript plus sign, as dead_circumflex by
+#   plus is required for "⨣" U2A23 PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE.
+#   $ee ISO/IEC 9995-11:2026
+#   https://en.wikipedia.org/wiki/ISO/IEC_9995#Dead_keys_on_digits:_Superscripting_and_subscripting
+#   https://en.wikipedia.org/w/index.php?title=ISO/IEC_9995&diff=next&oldid=1319186841#Dead_keys_on_digits:_Superscripting_and_subscripting
+#
+#       Dead keys on digits: Superscripting and subscripting
+#       If the definition of a keyboard layout refers to this feature (which is
+#       optional), the circumflex  applied on a digit (i.e., pressed and
+#       released before typing the digit) yields the superscript version of the
+#       digit (as indicated by the arrow in the keyboard symbol). Then,
+#       likewise, the caron  yields the subscript version of the digit. Besides
+#       digits, the same applies for the parentheses ( and ), the plus sign +
+#       and the hyphen-minus -, the latter yielding a superscripted or
+#       subscripted minus sign.
 #
 #   The German E DIN 2137-1:2020-11 has been synced with NF Z71-300:2019, but
 #   only with the digits part, not the plus and minus signs nor parentheses.
+#   https://de.wikipedia.org/wiki/E1_(Tastaturbelegung)#Hochstellen,_Tiefstellen_und_Einkreisen_von_Buchstaben
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
+#   See DIN 2137-01:2023-08
+#   See E DIN 2137-1:2020-11
 #
 #   In en_US.UTF-8/Compose, that the “superscript digits by dead_circumflex”
 #   feature comes from, the superscript dead key is missing, consistently with
@@ -14069,12 +14089,13 @@
 #   with the less frequent "♥" U2665, as of "⁸" U2078 if using the new sequence
 #   <Multi_key><less><8> introduced for "♥" U2665.
 #   See # # Heart emoji
+#   See # # Multikey equivalents
 #
 #   For full support including multikey equivalents, the diaeresis dead key may
 #   likely be an acceptable workaround solution for superscript digits, as some
 #   mnemonic, using the traditional French AZERTY mapping of dead_diaeresis on
 #   the same key (D11) as dead_circumflex, in shift position, might not be too
-#   far-fetched. Superscript digits are also in the superscript dead key.
+#   far-fetched. Superscript characters are also in the superscript dead key.
 #   See #*# DIAERESIS
 #   See #*# SUPERSCRIPT
 #
@@ -14115,9 +14136,6 @@
 #
 #   Followed by colon, dead_circumflex is a shortcut to the horizontal ellipsis
 #   "…" U2026.
-#
-#   Followed by minus the hyphen, dead_circumflex is a shortcut to the em dash
-#   "—" U2014, consistently with dead_acute yielding the en dash "–" U2013.
 #
 #   Followed by slash, dead_circumflex is a shortcut to the fraction slash
 #   "⁄" U2044.
@@ -14223,8 +14241,12 @@
 <Multi_key><less>                                                                         <dollar> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <dead_circumflex>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
 <Multi_key><less>                                                                         <emdash> : "᷍" U1DCD # COMBINING DOUBLE CIRCUMFLEX ABOVE
-<dead_circumflex>                                                                          <minus> : "—" U2014 # EM DASH
-#   Multikey conflicts with "←" U2190, "↔" U2194, "↚" U219A, "↢" U21A2, "↤" U21A4, […]     <minus> : "—" U2014 # EM DASH
+<dead_circumflex>                                                                      <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
+#   Multikey conflicts with "ἇ" U1F07, "Ἇ" U1F0F, "ἧ" U1F27, "Ἧ" U1F2F, "ἷ" U1F37, […] <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
+<dead_circumflex>                                                                     <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
+#   Multikey conflicts with , "ἆ" U1F06, "Ἆ" U1F0E, "ἦ" U1F26, "Ἦ" U1F2E, […]         <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
+<dead_circumflex>                                                                          <minus> : "⁻" U207B # SUPERSCRIPT MINUS
+#   Multikey conflicts with "←" U2190, "↔" U2194, "↚" U219A, "↢" U21A2, "↤" U21A4, […]     <minus> : "⁻" U207B # SUPERSCRIPT MINUS
 <dead_circumflex>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <Multi_key><less>                                                                           <plus> : "⨣" U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_circumflex>                                                                    <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
@@ -14241,8 +14263,8 @@
 #   Multikey conflicts with "A̭", "C̭", "H̭", "I̭", "K̭", "O̭", "R̭", "S̭", "W̭", "Z̭", "a̭", "c̭", […] <less> : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
 <dead_circumflex>                                                                        <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
 #   Multikey conflicts with "≶" U2276, "≸" U2278, "⟡" U27E1, "⟣" U27E3, "⤝" U291D, […]   <greater> : "⩾" U2A7E # GREATER-THAN OR SLANTED EQUAL TO
-<dead_circumflex>                                                                          <equal> : "≦" U2266 # LESS-THAN OVER EQUAL TO
-#   Multikey conflicts with "⇍" U21CD, "⇎" U21CE, "⇐" U21D0, "⇔" U21D4, "⟸" U27F8, […]     <equal> : "≦" U2266 # LESS-THAN OVER EQUAL TO
+<dead_circumflex>                                                                          <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
+#   Multikey conflicts with "⇍" U21CD, "⇎" U21CE, "⇐" U21D0, "⇔" U21D4, "⟸" U27F8, […]     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <dead_circumflex>                                                                       <question> : "‽" U203D # INTERROBANG
 <Multi_key><less>                                                                       <question> : "‽" U203D # INTERROBANG
 <dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
@@ -15016,7 +15038,7 @@
 #   https://www.unicode.org/notes/tn24/
 #
 #
-#   Subscript
+#   Subscripts
 #
 #   The hacek dead key supports subscript digits, for the sake of conformance
 #   with NF Z71-300:2019, 6.3.3 p24, that E DIN 2137-1:2020-11 has been synced
@@ -15024,10 +15046,14 @@
 #   https://de.wikipedia.org/wiki/DIN_2137#%C3%9Cberarbeitung_2020
 #   See #*# CIRCUMFLEX
 #
-#   However, this redundancy with the subscript dead key is not extended to the
-#   signs and parentheses, as the standard does not require these, and because
-#   their multikey equivalents would need to be deactivated anyway due to
-#   conflicts with many mathematical symbols, that would require leading space.
+#   This redundancy with the subscript dead key is extended to the signs and
+#   parentheses, although the French standard does not require these in 2019,
+#   but the ISO/IEC 9995-11 standard makes it optional since its 2026 revision.
+#   See #*# CIRCUMFLEX
+#   See #*# SUBSCRIPT
+#
+#   Multikey equivalents are deactivated due to conflicts with mathematical
+#   symbols, that would require leading space.
 #
 #
 #   Turned letter apostrophe
@@ -15042,12 +15068,6 @@
 #   Followed by bar, dead_caron yields the right-guard dagger "⸷" U2E37,
 #   consistently with dead_circumflex yielding its left-guard couterpart.
 #   See #*# CIRCUMFLEX
-#
-#
-#   Math symbol
-#
-#   Equal yields "≦" U2266 consistently with dead_circumflex yielding "≧" U2267
-#   by the same base character.
 #
 #
 #   Diacritic
@@ -15096,10 +15116,26 @@
 #   Multikey conflicts with "⋫" U22EB.                                                       <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 <dead_circumflex><dead_circumflex>                                                           <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
 #   Multikey conflicts with "⬴" U2B34, "⬵" U2B35, "⬼" U2B3C, "⬽" U2B3D.                      <bar> : "⸷" U2E37 # DAGGER WITH RIGHT GUARD
-<dead_caron>                                                                               <equal> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
-#   Multikey conflicts with itself and "≩" U2269, "⪌" U2A8C, "⫺" U2AFA.                    <equal> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
-<dead_circumflex><dead_circumflex>                                                         <equal> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
-<Multi_key><less><less>                                                                    <equal> : "≧" U2267 # GREATER-THAN OVER EQUAL TO
+<dead_caron>                                                                           <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
+#   Multikey conflicts with "≻" U227B, "≿" U227F, "⊁" U2281, "⋩" U22E9, "⦕" U2995, […] <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
+<dead_circumflex><dead_circumflex>                                                     <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
+#   Multikey conflicts with "⪻" U2ABB.                                                 <parenleft> : "₍" U208D # SUBSCRIPT LEFT PARENTHESIS
+<dead_caron>                                                                          <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
+#   Multikey conflicts with "≻" U227B, "≿" U227F, "⊁" U2281, "⋩" U22E9, "⧽" U29FD, […]<parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
+<dead_circumflex><dead_circumflex>                                                    <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
+#   Multikey conflicts with "⪻" U2ABB.                                                <parenright> : "₎" U208E # SUBSCRIPT RIGHT PARENTHESIS
+<dead_caron>                                                                               <minus> : "₋" U208B # SUBSCRIPT MINUS
+#   Multikey conflicts with "↣" U21A3, "⤐" U2910, "⤔" U2914, "⤕" U2915, "⤖" U2916, […]     <minus> : "₋" U208B # SUBSCRIPT MINUS
+<dead_circumflex><dead_circumflex>                                                         <minus> : "₋" U208B # SUBSCRIPT MINUS
+#   Multikey conflicts with "↞" U219E, "⬴" U2B34, "⬵" U2B35, "⬷" U2B37, "⬻" U2B3B, […]     <minus> : "₋" U208B # SUBSCRIPT MINUS
+<dead_caron>                                                                                <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<Multi_key><greater>                                                                        <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<dead_circumflex><dead_circumflex>                                                          <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<Multi_key><less><less>                                                                     <plus> : "₊" U208A # SUBSCRIPT PLUS SIGN
+<dead_caron>                                                                               <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
+#   Multikey conflicts with itself and "≩" U2269, "⪌" U2A8C, "⫺" U2AFA.                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
+<dead_circumflex><dead_circumflex>                                                         <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
+<Multi_key><less><less>                                                                    <equal> : "₌" U208C # SUBSCRIPT EQUALS SIGN
 <dead_caron>                                                                               <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><greater>                                                                       <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex><dead_circumflex>                                                         <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
@@ -15910,11 +15946,11 @@
 #   of backslash on most variants), and "🏳" U1F3F3 WAVING WHITE FLAG, by slash.
 #
 <UEFD7><UEFD7>                                                                             <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
-<Multi_key><equal><equal>                                                                  <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
+#   Multikey conflicts with "≣" U2263.                                                     <space> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <UEFD7><UEFD7>                                                                             <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <Multi_key><equal><equal>                                                                  <U200B> : "͇" U0347 # COMBINING EQUALS SIGN BELOW
 <UEFD7><UEFD7>                                                                      <nobreakspace> : "⚑" U2691 # BLACK FLAG
-<Multi_key><equal><equal>                                                           <nobreakspace> : "⚑" U2691 # BLACK FLAG
+#   Multikey conflicts with "≣" U2263.                                              <nobreakspace> : "⚑" U2691 # BLACK FLAG
 <UEFD7><UEFD7>                                                                             <U202F> : "⚐" U2690 # WHITE FLAG
 <Multi_key><equal><equal>                                                                  <U202F> : "⚐" U2690 # WHITE FLAG
 <UEFD7><UEFD7>                                                                             <slash> : "🏳" U1F3F3 # WAVING WHITE FLAG
@@ -16856,7 +16892,7 @@
 #   See dispocla.cpp key <AC11>
 #
 #
-#   Superscript digits
+#   Superscripts
 #
 #   As dead_circumflex is lacking the multikey equivalents, dead_diaeresis is a
 #   full-support alternative.
@@ -16944,12 +16980,20 @@
 <Multi_key><colon>                                                          <rightsinglequotemark> : "‚" U201A # SINGLE LOW-9 QUOTATION MARK, low single comma quotation mark
 <dead_diaeresis>                                                                          <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
 <Multi_key><colon>                                                                        <dollar> : "ſ" U017F # LATIN SMALL LETTER LONG S
-<dead_diaeresis>                                                                           <minus> : "⹀" U2E40 # DOUBLE HYPHEN
-#   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⹀" U2E40 # DOUBLE HYPHEN
+<dead_diaeresis>                                                                       <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
+#   Multikey conflicts with "☹" U2639.                                                 <parenleft> : "⁽" U207D # SUPERSCRIPT LEFT PARENTHESIS
+<dead_diaeresis>                                                                      <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
+#   Multikey conflicts with "☺" U263A.                                                <parenright> : "⁾" U207E # SUPERSCRIPT RIGHT PARENTHESIS
+<dead_diaeresis>                                                                           <minus> : "⁻" U207B # SUPERSCRIPT MINUS
+#   Multikey conflicts with "÷" U00F7, "∺" U223A, "⋇" U22C7, "⧴" U29F4.                    <minus> : "⁻" U207B # SUPERSCRIPT MINUS
+<dead_diaeresis>                                                                            <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
+<Multi_key><colon>                                                                          <plus> : "⁺" U207A # SUPERSCRIPT PLUS SIGN
 <dead_diaeresis>                                                                           <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key><colon>                                                                         <slash> : "‖" U2016 # DOUBLE VERTICAL LINE
 <dead_diaeresis>                                                                        <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
 #   Multikey conflicts with "᪱" U1AB1.                                                   <asterisk> : "⁑" U2051 # TWO ASTERISKS ALIGNED VERTICALLY
+<dead_diaeresis>                                                                           <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
+#   Multikey conflicts with "≔" U2254.                                                     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <dead_diaeresis>                                                                          <period> : "…" U2026 # HORIZONTAL ELLIPSIS
 #   Multikey conflicts with "⫶" U2AF6.                                                    <period> : "…" U2026 # HORIZONTAL ELLIPSIS
 <dead_diaeresis>                                                                          <endash> : "⸺" U2E3A # TWO-EM DASH
