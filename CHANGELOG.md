@@ -28,12 +28,33 @@ Mise à jour du contenu des touches mortes.
 	* Mettre à jour les séquences de "↑" U+2191, "↓" U+2193, "↕" U+2195, "↟" U+219F, "↡" U+21A1, "↥" U+21A5, "↧" U+21A7, "↨" U+21A8, "↰" U+21B0, "↱" U+21B1, "↾" U+21BE, "↿" U+21BF, "⇂" U+21C2, "⇃" U+21C3, "⇅" U+21C5, "⇈" U+21C8, "⇊" U+21CA, "⇑" U+21D1, "⇓" U+21D3, "⇕" U+21D5, "⇵" U+21F5, "⋮" U+22EE, "⟰" U+27F0, "⟱" U+27F1, "⤈" U+2908, "⤉" U+2909, "⤊" U+290A, "⤋" U+290B, "⤒" U+2912, "⤓" U+2913, "⤴" U+2934, "⤵" U+2935, "⤶" U+2936, "⤷" U+2937, "⥉" U+2949, "⥌" U+294C, "⥍" U+294D, "⥏" U+294F, "⥑" U+2951, "⥔" U+2954, "⥕" U+2955, "⥘" U+2958, "⥙" U+2959, "⥜" U+295C, "⥝" U+295D, "⥠" U+2960, "⥡" U+2961, "⥣" U+2963, "⥥" U+2965, "⥮" U+296E, "⥯" U+296F, "⥾" U+297E, "⥿" U+297F, "⦽" U+29BD, "⧪" U+29EA, "⧬" U+29EC, "⧭" U+29ED, "⨡" U+2A21, "⫱" U+2AF1. ibidem
 	* Corriger les séquences de "‐" U+2010, "‑" U+2011, "‒" U+2012, "–" U+2013, "—" U+2014, "―" U+2015, "⸺" U+2E3A, "⸻" U+2E3B, "⹀" U+2E40. ibidem
 	* Simplifier les séquences de "⅀" U+2140, "↶" U+21B6, "⇉" U+21C9, "⇶" U+21F6. ibidem
+	* Simplifier les séquences de "⁄" U+2044, "−" U+2212, "∕" U+2215, "∖" U+2216, "∗" U+2217, "∙" U+2219, "∣" U+2223, "∥" U+2225, "∧" U+2227, "∶" U+2236, "∷" U+2237, "∻" U+223B, "∼" U+223C, "≀" U+2240, "≁" U+2241, "≅" U+2245, "≆" U+2246, "≈" U+2248, "≋" U+224B, "≎" U+224E, "≖" U+2256, "⋅" U+22C5, "⋆" U+22C6, "⟋" U+27CB, "⟍" U+27CD, "⧵" U+29F5, "⧸" U+29F8, "⧹" U+29F9. compose-1.yml [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
+	* Adapter les séquences de "≘" U+2258. compose-1.yml [eeb6a3d](https://github.com/dispoclavier/nouvel-azerty/commit/eeb6a3d66bb7d832f3f63839c87e96c6267852be)
+	* Simplifier les séquences de "≣" U+2263. ibidem
 	* Simplifier les séquences de "⇴" U+21F4. compose-1.yml [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6)
 	* Adapter les séquences de "↬" U+21AC. ibidem
-* Transformations : Désactiver les équivalents en composition en conflit avec des symboles mathématiques. compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6)
+* Transformations :
+	* Tourné : Redonder "≀" U+2240. compose-2.yml [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
+	* Tilde > tilde médian : Redonder "∻" U+223B. ibidem
+	* Brève inversée : Redonder "≘" U+2258. ibidem
+	* Barré : Redonder "≁" U+2241. ibidem
+	* Accent circonflexe :
+		* Redonder "⁻" U+207B par "-" à la place de "—" U+2014, qui est sur touche vive.
+		* Redonder "⁽" U+207D et "⁾" U+207E par "(" et ")".
+		* Redonder "⁼" U+207C par "=" à la place de "≦" U+2266, qui est en composition.
+	* Hatchek :
+		* Redonder "₊" U+208A et "₋" U+208B par "+" et "-".
+		* Redonder "₍" U+208D et "₎" U+208E par "(" et ")".
+		* Redonder "₌" U+208C par "=" à la place de "≧" U+2267, qui est en composition.
+	* Tréma :
+		* Redonder "⁺" U+207A par "+".
+		* Redonder "⁻" U+207B par "-" à la place de "⹀" U+2E40, qui est dans drapeau.
+		* Redonder "⁽" U+207D et "⁾" U+207E par "(" et ")".
+		* Redonder "⁼" U+207C par "=".
+	* Désactiver les équivalents en composition en conflit avec des symboles mathématiques. compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
 * Documentation :
 	* Mettre à jour les modes d’emploi.
-	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6)
+	* Ajouter, corriger ou mettre à jour des annotations. compose-1.yml, compose-2.yml [ea26e6a](https://github.com/dispoclavier/nouvel-azerty/commit/ea26e6a11a048595abd47c4edec466d07ed2bad6), [9cf17f3](https://github.com/dispoclavier/nouvel-azerty/commit/9cf17f35b4926411ade13ae643216e14517e75e6), [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43), [eeb6a3d](https://github.com/dispoclavier/nouvel-azerty/commit/eeb6a3d66bb7d832f3f63839c87e96c6267852be)
 * Build : 6.2.6.0
 
 ## 6.2.5 (2026-03-08)
