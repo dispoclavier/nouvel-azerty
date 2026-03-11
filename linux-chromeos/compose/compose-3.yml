@@ -3790,14 +3790,17 @@
 #
 # # C01 numbersign
 #
-#   The first three positions are inaccessible by multikey equivalents, due to
-#   an inavoidable interference of numbersign with itself.
+#
+#   The empty and filled checkboxes "☐" U2610, "☑" U2611 and "☒" U2612 are
+#   supported here in groups 1..3, for intuitivity and mnemonics, to ensure the
+#   usability of the group dead key, although they are inaccessible by multikey
+#   equivalents, due to an inavoidable interference of numbersign with itself.
 #   See # # Multikey equivalents
 #
-#   The empty and filled checkboxes are supported here to ensure the usability
-#   of the group dead key, although they could be fully supported in the prime
-#   groups of "|". The light variant "⮽" U2BBD is in group 10.
-#   See # # C10 bar
+#   The light checkbox variant "⮽" U2BBD is in group 10 rather than in group 4,
+#   because group 4 is used for "▪" U25AA consistently with "⬝" U2B1D in the
+#   same group of underscore.
+#   See # # C07 underscore
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two

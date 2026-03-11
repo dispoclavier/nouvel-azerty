@@ -3672,6 +3672,14 @@
 #
 #   The rotation angle may be 180° as for TURNED, or 90° as for SIDEWAYS.
 #
+#
+#   Letters
+#
+#   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
+#   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
+#   is also supported as a base character for this input method.
+#   See # # D07 apostrophe
+#
 #   As "ɟ" U025F LATIN SMALL LETTER DOTLESS J WITH STROKE is “typographically a
 #   turned f, but better thought of as a form of j” (Unicode Code Charts), it
 #   is supported as such, but for convenience, also as a turned f.
@@ -3708,6 +3716,9 @@
 #   for Lisu.
 #   See #*# REVERSED
 #
+#
+#   Punctuation
+#
 #   Turned punctuation for Spanish is supported both by turned (single press)
 #   and inverted (double press) dead keys, to meet expectations based on names.
 #
@@ -3720,10 +3731,14 @@
 #   See # # C03 parenleft
 #   See # # C04 parenright
 #
-#   For intuitivity, the Polynesian ʻeta, Hawaiʻian ʻokina can also be input as
-#   if it were a turned rightsinglequotemark despite being a letter. Apostrophe
-#   is also supported as a base character for this input method.
-#   See # # D07 apostrophe
+#
+#   Math symbols
+#
+#   Consistently with other dead keys supporting diacriticized math symbols,
+#   asciitilde yields "≀" U2240, and digit 8 yields "∞" U221E.
+#
+#
+#   Diacritic
 #
 #   As a diacritic, "̒" U0312 COMBINING TURNED COMMA ABOVE is included, and its
 #   spacing counterpart "ʻ" U02BB MODIFIER LETTER TURNED COMMA alongside (but a
@@ -9624,6 +9639,12 @@
 #   See # # Proofreading mark
 #
 #
+#   Math symbol
+#
+#   Consistently with other dead keys supporting diacriticized math symbols,
+#   equal yields "≘" U2258.
+#
+#
 #   Double diacritic
 #
 #   The double diacritic "͡" U0361 has emdash as a mnemonic base character, and
@@ -11824,11 +11845,11 @@
 #   See # # CIRCLED_SANS
 #
 <dead_ogonek>                                                                              <space> : "̨" U0328 # COMBINING OGONEK
-<Multi_key><bracketleft>                                                                   <space> : "̨" U0328 # COMBINING OGONEK
+#   Multikey conflicts with "☐" U2610.                                                     <space> : "̨" U0328 # COMBINING OGONEK
 <dead_ogonek>                                                                              <U200B> : "̨" U0328 # COMBINING OGONEK
 <Multi_key><bracketleft>                                                                   <U200B> : "̨" U0328 # COMBINING OGONEK
 <dead_ogonek>                                                                       <nobreakspace> : "˛" U02DB # OGONEK
-<Multi_key><bracketleft>                                                            <nobreakspace> : "˛" U02DB # OGONEK
+#   Multikey conflicts with "☐" U2610.                                              <nobreakspace> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                              <U202F> : "˛" U02DB # OGONEK
 <Multi_key><bracketleft>                                                                   <U202F> : "˛" U02DB # OGONEK
 <dead_ogonek>                                                                         <apostrophe> : "᷎" U1DCE # COMBINING OGONEK ABOVE
@@ -13223,21 +13244,6 @@
 #   dead_longsolidusoverlay
 #   Multikey: ¦/
 #
-#   Some letters occur both with a diagonal stroke and with an oblique stroke,
-#   where the diagonal stroke has the steep slant of a regular slash, while the
-#   oblique stroke is only slightly slanted, to such an extent that it might be
-#   referred to as an oblique bar, if keeping things straightforward wasn’t the
-#   best option. Yet prior to Unicode 16.0, the only letter occurring both with
-#   a diagonal stroke and an oblique stroke was "K", where a diagonal stroke is
-#   also short: "Ꝃ" UA742 LATIN CAPITAL LETTER K WITH DIAGONAL STROKE. But as
-#   Unicode 16.0 adds "Ꟍ" UA7CC LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
-#   https://commons.wikimedia.org/wiki/File:Latin_letter_S_with_diagonal_stroke.svg
-#   alongside Unicode 6.0 "Ꞩ" UA7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE,
-#   the scheme is now clear, and double press is dedicated to oblique stroke.
-#   However, empty slots in single press are populated conveniently for a
-#   streamlined user experience.
-#   See #^# OBLIQUE_STROKE
-#
 #   In X11 XKB, the diacritic called “stroke” had an ambiguous shape, until the
 #   horizontal stroke and the slanted strokes were distinguished by introducing
 #   the new dead_longsolidusoverlay keysym named after U0338 "̸" COMBINING LONG
@@ -13264,12 +13270,30 @@
 #   https://web.archive.org/web/20250202064605/https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/commit/cb44799b72f611eb4c9d7cc185bc3b09e070be08
 #   See # # Bar and stroke diacritics
 #
+#
+#   Letters
+#
 #   For convenience, to account for this confusion, letters without a variant
 #   with stroke have their barred variant duplicated in this dead key as well,
 #   to make it more lenient, for a streamlined user experience.
 #
-#   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
-#   division slash "∕" U2215 is picked.
+#   Some letters occur both with a diagonal stroke and with an oblique stroke,
+#   where the diagonal stroke has the steep slant of a regular slash, while the
+#   oblique stroke is only slightly slanted, to such an extent that it might be
+#   referred to as an oblique bar, if keeping things straightforward wasn’t the
+#   best option. Yet prior to Unicode 16.0, the only letter occurring both with
+#   a diagonal stroke and an oblique stroke was "K", where a diagonal stroke is
+#   also short: "Ꝃ" UA742 LATIN CAPITAL LETTER K WITH DIAGONAL STROKE. But as
+#   Unicode 16.0 adds "Ꟍ" UA7CC LATIN CAPITAL LETTER S WITH DIAGONAL STROKE
+#   https://commons.wikimedia.org/wiki/File:Latin_letter_S_with_diagonal_stroke.svg
+#   alongside Unicode 6.0 "Ꞩ" UA7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE,
+#   the scheme is now clear, and double press is dedicated to oblique stroke.
+#   However, empty slots in single press are populated conveniently for a
+#   streamlined user experience.
+#   See #^# OBLIQUE_STROKE
+#
+#
+#   Math symbols
 #
 #   Digits yield mathematical slashes. This is a part of the design of math
 #   sequences.
@@ -13282,7 +13306,13 @@
 #   equal yields "≠" U2260 in group 0, "≢" U2262 in group 1, as "≡" U2261 is in
 #   group 1 of equal; less yields "≮" U226E in group 0, "≰" U2270 in groups 1
 #   and 2, as "⩽" U2A7D is in group 2 of less; so does greater for "≯" U226F
-#   and "≱" U2271.
+#   and "≱" U2271; asciitilde yields "≁" U2241.
+#
+#
+#   Diacritic
+#
+#   As a spacing counterpart of the long solidus diacritic "̸" U0338, the
+#   division slash "∕" U2215 is picked.
 #
 <dead_stroke>                                                                              <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY
 #   Multikey conflicts with "∕" U2215.                                                     <space> : "̸" U0338 # COMBINING LONG SOLIDUS OVERLAY

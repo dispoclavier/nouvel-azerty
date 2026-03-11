@@ -4091,23 +4091,25 @@
 #
 # # Checkboxes
 #
+#   The empty-checkbox "☐" U2610 sequence works with space, with nobreakspace
+#   and with underscore as well.
+#
+#   The sequence of the box with check "☑" U2611 is case insensitive. By
+#   contrast, the sequences of the boxes with "x" are case sensitive, as
+#   lowercase yields "☒" U2612, and uppercase yields a light variant "⮽" U2BBD.
+#
 #   Regular empty, check-filled and X-filled checkboxes are also in groups 1..3
-#   of bar. Not numbersign because that would not be cross-platform compatible.
-#   The alternative checkbox with a light X is also in group 10 of numbersign.
-#   See # # C10 bar
+#   of numbersign, and the alternative with a light X is also in group 10.
 #   See # # C01 numbersign
 #
-#   The empty-checkbox sequence includes an underscore instead of a space,
-#   because with space it conflicts with combining ogonek. The filled checkbox
-#   sequences include case insensitive letters.
-#
+#Multi_key><bracketleft><space><bracketright>                                                      : "☐" U2610 # BALLOT BOX
+<Multi_key><bracketleft><space>                                                                    : "☐" U2610 # BALLOT BOX
+<Multi_key><bracketleft><nobreakspace>                                                             : "☐" U2610 # BALLOT BOX
 <Multi_key><bracketleft><underscore><bracketright>                                                 : "☐" U2610 # BALLOT BOX
 <Multi_key><bracketleft><v><bracketright>                                                          : "☑" U2611 # BALLOT BOX WITH CHECK emoji
 <Multi_key><bracketleft><V><bracketright>                                                          : "☑" U2611 # BALLOT BOX WITH CHECK emoji
 <Multi_key><bracketleft><x><bracketright>                                                          : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><bracketleft><X><bracketright>                                                          : "☒" U2612 # BALLOT BOX WITH X
-<Multi_key><bracketleft><x><l><bracketright>                                                       : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
-<Multi_key><bracketleft><X><L><bracketright>                                                       : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
+<Multi_key><bracketleft><X><bracketright>                                                          : "⮽" U2BBD # BALLOT BOX WITH LIGHT X
 #
 #
 # # Shadowed circle
@@ -5285,12 +5287,9 @@
 #
 #   Previously, when things did not work as expected, the likely culprit was a
 #   conflict with a dead key equivalent. Examples included "≪" U226A, "≫" U226B
-#   and "⋘" U22D8.
-#
-#   More extensively ruling out multikey equivalents of dead keys since v6.2.5
-#   helps making some of these math seauences more streamlined again, rather
-#   than needlessly screwing them up while Windows is unable to support the
-#   multikey equivalents anyway.
+#   and "⋘" U22D8. More extensively ruling out dead key multikey equivalents
+#   helps since v6.2.5 make some of these math sequences more streamlined again.
+#   Windows is unable to support the multikey equivalents anyway.
 #   See dead-key-convert.pl # Multikey
 #
 #
@@ -6777,10 +6776,14 @@
 <Multi_key><bracketleft><plus>                                                                     : "⊞" U229E # SQUARED PLUS
 <Multi_key><bracketleft><minus><bracketright>                                                      : "⊟" U229F # SQUARED MINUS
 #Multi_key><bracketleft><x><bracketright>                                                          : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><space><bracketleft><x>                                                                 : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><nobreakspace><bracketleft><x>                                                          : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><space><bracketleft><X>                                                                 : "⊠" U22A0 # SQUARED TIMES
-<Multi_key><nobreakspace><bracketleft><X>                                                          : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><x>                                                                <space> : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><x>                                                         <nobreakspace> : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><X>                                                                <space> : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><X>                                                         <nobreakspace> : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><bracketleft><multiply>                                                                 : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><x><bracketright>                                                                       : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><X><bracketright>                                                                       : "⊠" U22A0 # SQUARED TIMES
+<Multi_key><multiply><bracketright>                                                                : "⊠" U22A0 # SQUARED TIMES
 #Multi_key><bracketleft><period><bracketright>                                                     : "⊡" U22A1 # SQUARED DOT OPERATOR
 <Multi_key><bracketleft><period>                                                                   : "⊡" U22A1 # SQUARED DOT OPERATOR
 #
