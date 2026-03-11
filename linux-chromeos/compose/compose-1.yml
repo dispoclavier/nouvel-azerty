@@ -5280,10 +5280,10 @@
 #   mode where level 3 of the space bar is no-break space.
 #
 #   Examples involving no, single or multiple leading [nobreak]space:
-#   None:    "∕" U2215, "∖" U2216, "∣" U2223, "∼" U223C;
-#   Single:  "⧸" U29F8, "⧹" U29F9, "▷" U25B7;
-#   Double:  "⟋" U27CB, "⟍" U27CD, "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
-#   Triple:   "⁄" U2044, "⧵" U29F5.
+#   None:    "∕" U2215, "∖" U2216,  "⦀" U2980, "∣" U2223, "∼" U223C;
+#   Single:  "⧸" U29F8, "⧹" U29F9,  "⫴" U2AF4, "▷" U25B7,           ;
+#   Double:  "⟋" U27CB, "⟍" U27CD, "⫼" U2AFC,                      "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
+#   Triple:   "⁄" U2044, "⧵" U29F5 .
 #
 #   Previously, when things did not work as expected, the likely culprit was a
 #   conflict with a dead key equivalent. Examples included "≪" U226A, "≫" U226B
@@ -6827,11 +6827,11 @@
 <Multi_key><2><T><greater>                                                          <nobreakspace> : "⊩" U22A9 # FORCES
 <Multi_key><KP_2><T><greater>                                                              <space> : "⊩" U22A9 # FORCES
 <Multi_key><KP_2><T><greater>                                                       <nobreakspace> : "⊩" U22A9 # FORCES
-<Multi_key><space><bar><bar><minus>                                                                : "⊩" U22A9 # FORCES
-<Multi_key><nobreakspace><bar><bar><minus>                                                         : "⊩" U22A9 # FORCES
+<Multi_key><bar><bar><minus>                                                               <space> : "⊩" U22A9 # FORCES
+<Multi_key><bar><bar><minus>                                                        <nobreakspace> : "⊩" U22A9 # FORCES
+<Multi_key><3><T><greater>                                                                         : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
 <Multi_key><KP_3><T><greater>                                                                      : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
-<Multi_key><space><bar><bar><bar><minus>                                                           : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
-<Multi_key><nobreakspace><bar><bar><bar><minus>                                                    : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
+<Multi_key><bar><bar><bar><minus>                                                                  : "⊪" U22AA # TRIPLE VERTICAL BAR RIGHT TURNSTILE
 <Multi_key><2><T><2><greater>                                                              <space> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><2><T><2><greater>                                                       <nobreakspace> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
 <Multi_key><KP_2><T><KP_2><greater>                                                        <space> : "⊫" U22AB # DOUBLE VERTICAL BAR DOUBLE RIGHT TURNSTILE
@@ -7626,16 +7626,16 @@
 <Multi_key><nobreakspace><bracketleft><A>                                                          : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><bracketleft><v><percent>                                                               : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><v><percent><bracketright>                                                              : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><v><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><V><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><v>                                                                <space> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><v>                                                         <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><V>                                                                <space> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><V>                                                         <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><space><bracketleft><v><bracketright>                                                   : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><nobreakspace><bracketleft><v><bracketright>                                            : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><space><bracketleft><V><bracketright>                                                   : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><nobreakspace><bracketleft><V><bracketright>                                            : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><v><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><V><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><space><bracketleft><v>                                                                 : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><nobreakspace><bracketleft><v>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><space><bracketleft><V>                                                                 : "⟏" U27CF # SQUARED LOGICAL OR
+<Multi_key><nobreakspace><bracketleft><V>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><less><period><greater>                                                                 : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
 <Multi_key><a><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><A><period>                                                                             : "⟑" U27D1 # AND WITH DOT
@@ -8203,6 +8203,8 @@
 #
 <Multi_key><3><bar>                                                                                : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><KP_3><bar>                                                                             : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><bar><bar><bar>                                                                 <space> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
+<Multi_key><bar><bar><bar>                                                          <nobreakspace> : "⦀" U2980 # TRIPLE VERTICAL BAR DELIMITER
 <Multi_key><z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
 <Multi_key><Z><period>                                                                             : "⦁" U2981 # Z NOTATION SPOT
 <Multi_key><space><space><colon>                                                                   : "⦂" U2982 # Z NOTATION TYPE COLON
@@ -9462,8 +9464,8 @@
 <Multi_key><minus><bar><O>                                                                         : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><bar><minus><bar>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><minus><bar>                                                        <nobreakspace> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
-<Multi_key><bar><bar><minus>                                                               <space> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
-<Multi_key><bar><bar><minus>                                                        <nobreakspace> : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
+<Multi_key><space><bar><bar><minus>                                                                : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><bar><minus>                                                         : "⫲" U2AF2 # PARALLEL WITH HORIZONTAL STROKE
 <Multi_key><bar><bar><asciitilde>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
 <Multi_key><asciitilde><bar><bar>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
 <Multi_key><bar><asciitilde><bar>                                                                  : "⫳" U2AF3 # PARALLEL WITH TILDE OPERATOR
@@ -9475,7 +9477,9 @@
 <Multi_key><space><bar><bar><bar>                                                   <nobreakspace> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><nobreakspace><bar><bar><bar>                                                   <space> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
 <Multi_key><nobreakspace><bar><bar><bar>                                            <nobreakspace> : "⫴" U2AF4 # TRIPLE VERTICAL BAR BINARY RELATION
-<Multi_key><bar><bar><bar><minus>                                                                  : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><minus><bar><bar><bar>                                                                  : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><space><bar><bar><bar><minus>                                                           : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><bar><bar><minus>                                                    : "⫵" U2AF5 # TRIPLE VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><3><colon>                                                                              : "⫶" U2AF6 # TRIPLE COLON OPERATOR
 <Multi_key><KP_3><colon>                                                                           : "⫶" U2AF6 # TRIPLE COLON OPERATOR
 <Multi_key><colon><period>                                                                         : "⫶" U2AF6 # TRIPLE COLON OPERATOR
