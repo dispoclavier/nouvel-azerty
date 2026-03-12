@@ -10260,7 +10260,7 @@
 <UEFD8>                                                                                <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 #   Multikey conflicts with "ʢ" U02A2, "⦦" U29A6, "𐞴" U107B4.                          <backslash> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                           <periodcentered> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
-<Multi_key><minus>                                                                <periodcentered> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
+#   Multikey conflicts with "⦦" U29A6.                                            <periodcentered> : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                               <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 #   Multikey conflicts with "¬" U00AC, "⊹" U22B9, "⥗" U2957, "⥩" U2969, "⫠" U2AE0.    <apostrophe> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <UEFD8>                                                                     <rightsinglequotemark> : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
@@ -10348,7 +10348,7 @@
 <UEFD8>                                                                                        <O> : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <Multi_key><minus>                                                                             <O> : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <UEFD8>                                                                                        <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
-#   Multikey conflicts with "≖" U2256.                                                         <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
+#   Multikey conflicts with "≖" U2256, "⊸" U22B8.                                              <o> : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
 <UEFD8>                                                                                        <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
 <Multi_key><minus>                                                                             <P> : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
 <UEFD8>                                                                                        <p> : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
@@ -11227,7 +11227,7 @@
 <UEFD2>                                                                                        <A> : "ᴀ" U1D00 # LATIN LETTER SMALL CAPITAL A
 <Multi_key><underscore>                                                                        <A> : "ᴀ" U1D00 # LATIN LETTER SMALL CAPITAL A
 <UEFD2>                                                                                        <a> : "ₐ" U2090 # LATIN SUBSCRIPT SMALL LETTER A
-<Multi_key><underscore>                                                                        <a> : "ₐ" U2090 # LATIN SUBSCRIPT SMALL LETTER A
+#   Multikey conflicts with "⊼" U22BC.                                                         <a> : "ₐ" U2090 # LATIN SUBSCRIPT SMALL LETTER A
 <UEFD2>                                                                                        <B> : "ʙ" U0299 # LATIN LETTER SMALL CAPITAL B
 <Multi_key><underscore>                                                                        <B> : "ʙ" U0299 # LATIN LETTER SMALL CAPITAL B
 <UEFD2>                                                                                        <b> : "ᵦ" U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
@@ -11311,7 +11311,7 @@
 <UEFD2>                                                                                        <V> : "ᴠ" U1D20 # LATIN LETTER SMALL CAPITAL V
 <Multi_key><underscore>                                                                        <V> : "ᴠ" U1D20 # LATIN LETTER SMALL CAPITAL V
 <UEFD2>                                                                                        <v> : "ᵥ" U1D65 # LATIN SUBSCRIPT SMALL LETTER V
-<Multi_key><underscore>                                                                        <v> : "ᵥ" U1D65 # LATIN SUBSCRIPT SMALL LETTER V
+#   Multikey conflicts with "⊼" U22BC, "⊽" U22BD.                                              <v> : "ᵥ" U1D65 # LATIN SUBSCRIPT SMALL LETTER V
 <UEFD2>                                                                                        <W> : "ᴡ" U1D21 # LATIN LETTER SMALL CAPITAL W
 <Multi_key><underscore>                                                                        <W> : "ᴡ" U1D21 # LATIN LETTER SMALL CAPITAL W
 <UEFD2>                                                                                        <w> : "ᴧ" U1D27 # GREEK LETTER SMALL CAPITAL LAMDA
@@ -13201,11 +13201,11 @@
 #   See #^# MACRON_BELOW
 #
 <dead_macron><dead_macron><dead_macron>                                                    <space> : "̲" U0332 # COMBINING LOW LINE
-<Multi_key><bar><bar><bar>                                                                 <space> : "̲" U0332 # COMBINING LOW LINE
+#   Multikey conflicts with "⦀" U2980.                                                     <space> : "̲" U0332 # COMBINING LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <U200B> : "̲" U0332 # COMBINING LOW LINE
 <Multi_key><bar><bar><bar>                                                                 <U200B> : "̲" U0332 # COMBINING LOW LINE
 <dead_macron><dead_macron><dead_macron>                                             <nobreakspace> : "_" U005F # LOW LINE
-<Multi_key><bar><bar><bar>                                                          <nobreakspace> : "_" U005F # LOW LINE
+#   Multikey conflicts with "⦀" U2980.                                              <nobreakspace> : "_" U005F # LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <U202F> : "_" U005F # LOW LINE
 <Multi_key><bar><bar><bar>                                                                 <U202F> : "_" U005F # LOW LINE
 <dead_macron><dead_macron><dead_macron>                                                    <grave> : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR

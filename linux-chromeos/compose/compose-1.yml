@@ -1438,9 +1438,13 @@
 <Multi_key><C><O>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><C><o>                                                                                  : "℅" U2105 # CARE OF
 <Multi_key><o><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><o><periodcentered><c>                                                                  : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><o><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><o><periodcentered><C>                                                                  : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><O><backslash><C>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><O><periodcentered><C>                                                                  : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><O><backslash><c>                                                                       : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
+<Multi_key><O><periodcentered><c>                                                                  : "🅮" U1F16E # CIRCLED C WITH OVERLAID BACKSLASH
 <Multi_key><o><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><O><c>                                                                                  : "©" U00A9 # COPYRIGHT SIGN emoji
 <Multi_key><parenleft><parenright><c>                                                              : "©" U00A9 # COPYRIGHT SIGN emoji
@@ -4132,9 +4136,12 @@
 #
 <Multi_key><bracketleft><slash><minus><bracketright>                                               : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><backslash><minus><bracketright>                                           : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><bracketleft><periodcentered><minus><bracketright>                                      : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><slash><colon><bracketright>                                               : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><backslash><colon><bracketright>                                           : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><bracketleft><periodcentered><colon><bracketright>                                      : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
 <Multi_key><bracketleft><minus><backslash><bracketright>                                           : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
+<Multi_key><bracketleft><minus><periodcentered><bracketright>                                      : "⧠" U29E0 # SQUARE WITH CONTOURED OUTLINE
 #
 #
 #^# Emoji by multikey
@@ -5557,17 +5564,21 @@
 #   because EuroSign replaces quotedbl on AltGr/Option + E.
 #
 #   Sequences including exclam need to be duplicated using section instead, as
-#   in French mode, on key B10, the section sign replaces the exclamation mark.
-#
-#   As rightsinglequotemark is on the apostrophe key in French mode, sequences
-#   with apostrophe should also work with rightsinglequotemark. Yet apostrophe
-#   is on key E12, at the same (base) level as rightsinglequotemark on E04.
+#   in French mode, on key B10 at level 3, section replaces exclam.
 #
 #   Sequences including the at sign are duplicated using dead_greek instead,
 #   if the at sign is preceded by another ASCII symbol that has a mapping at
 #   level 3, for example in a sequence for "϶" U03F6, given that dead_greek
 #   replaces the at sign on AltGr/Option + Y, and the at sign on key E11 is not
 #   in synergy with those ASCII symbols that are mapped at level 3 only.
+#
+#   As rightsinglequotemark is on the apostrophe key in French mode, sequences
+#   with apostrophe should also work with rightsinglequotemark. Yet apostrophe
+#   is on key E12, at the same (base) level as rightsinglequotemark on E04.
+#
+#   Sequences including backslash need to be duplicated using periodcentered
+#   instead, as in French mode, on key B10 at level 1 of unremapped variants,
+#   periodcentered replaces backslash.
 #
 #
 # # Not sign
@@ -5665,7 +5676,9 @@
 <Multi_key><e><at>                                                                                 : "ϵ" U03F5 # GREEK LUNATE EPSILON SYMBOL
 <Multi_key><E><at>                                                                                 : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 <Multi_key><e><backslash><at>                                                                      : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><e><periodcentered><at>                                                                 : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 <Multi_key><e><backslash><dead_greek>                                                              : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+<Multi_key><e><periodcentered><dead_greek>                                                         : "϶" U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 #
 #
 # # Double vertical bar
@@ -5886,7 +5899,9 @@
 <Multi_key><ampersand><o><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><O><greater><percent>                                                        : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><o><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><o><greater><periodcentered>                                                 : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 <Multi_key><ampersand><O><greater><backslash>                                                      : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
+<Multi_key><ampersand><O><greater><periodcentered>                                                 : "⃚" U20DA # COMBINING ANTICLOCKWISE RING OVERLAY
 #Multi_key><ampersand><3><period>                                                                  : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><3>                                                                          : "⃛" U20DB # COMBINING THREE DOTS ABOVE
 <Multi_key><ampersand><KP_3>                                                                       : "⃛" U20DB # COMBINING THREE DOTS ABOVE
@@ -5898,6 +5913,7 @@
 <Multi_key><ampersand><period><period><period><period>                                             : "⃜" U20DC # COMBINING FOUR DOTS ABOVE
 <Multi_key><ampersand><less><minus><greater>                                                       : "⃡" U20E1 # COMBINING LEFT RIGHT ARROW ABOVE
 <Multi_key><ampersand><backslash>                                                                  : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
+<Multi_key><ampersand><periodcentered>                                                             : "⃥" U20E5 # COMBINING REVERSE SOLIDUS OVERLAY
 <Multi_key><ampersand><bar><bar>                                                                   : "⃦" U20E6 # COMBINING DOUBLE VERTICAL STROKE OVERLAY
 #Multi_key><ampersand><slash><slash>                                                               : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
 <Multi_key><ampersand><slash>                                                                      : "⃫" U20EB # COMBINING LONG DOUBLE SOLIDUS OVERLAY
@@ -5986,6 +6002,7 @@
 <Multi_key><i><at>                                                                                 : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><i><percent>                                                                            : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><i><backslash>                                                                          : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
+<Multi_key><i><periodcentered>                                                                     : "℩" U2129 # TURNED GREEK SMALL LETTER IOTA
 <Multi_key><B><asciitilde>                                                                         : "ℬ" U212C # SCRIPT CAPITAL B
 <Multi_key><C><numbersign>                                                                         : "ℭ" U212D # BLACK-LETTER CAPITAL C
 <Multi_key><e><asciitilde>                                                                         : "ℯ" U212F # SCRIPT SMALL E
@@ -5994,13 +6011,21 @@
 <Multi_key><M><asciitilde>                                                                         : "ℳ" U2133 # SCRIPT CAPITAL M
 <Multi_key><o><asciitilde>                                                                         : "ℴ" U2134 # SCRIPT SMALL O
 <Multi_key><a><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
+<Multi_key><a><periodcentered>                                                                     : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><A><backslash>                                                                          : "ℵ" U2135 # ALEF SYMBOL
+<Multi_key><A><periodcentered>                                                                     : "ℵ" U2135 # ALEF SYMBOL
 <Multi_key><b><backslash>                                                                          : "ℶ" U2136 # BET SYMBOL
+<Multi_key><b><periodcentered>                                                                     : "ℶ" U2136 # BET SYMBOL
 <Multi_key><B><backslash>                                                                          : "ℶ" U2136 # BET SYMBOL
+<Multi_key><B><periodcentered>                                                                     : "ℶ" U2136 # BET SYMBOL
 <Multi_key><g><backslash>                                                                          : "ℷ" U2137 # GIMEL SYMBOL
+<Multi_key><g><periodcentered>                                                                     : "ℷ" U2137 # GIMEL SYMBOL
 <Multi_key><G><backslash>                                                                          : "ℷ" U2137 # GIMEL SYMBOL
+<Multi_key><G><periodcentered>                                                                     : "ℷ" U2137 # GIMEL SYMBOL
 <Multi_key><d><backslash>                                                                          : "ℸ" U2138 # DALET SYMBOL
+<Multi_key><d><periodcentered>                                                                     : "ℸ" U2138 # DALET SYMBOL
 <Multi_key><D><backslash>                                                                          : "ℸ" U2138 # DALET SYMBOL
+<Multi_key><D><periodcentered>                                                                     : "ℸ" U2138 # DALET SYMBOL
 <Multi_key><p><p><at>                                                                              : "ℼ" U213C # DOUBLE-STRUCK SMALL PI
 <Multi_key><g><g><at>                                                                              : "ℽ" U213D # DOUBLE-STRUCK SMALL GAMMA
 <Multi_key><G><G><at>                                                                              : "ℾ" U213E # DOUBLE-STRUCK CAPITAL GAMMA
@@ -6011,8 +6036,11 @@
 <Multi_key><L><percent>                                                             <nobreakspace> : "⅂" U2142 # TURNED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                                  <space> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><L><backslash>                                                           <nobreakspace> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
+<Multi_key><L><periodcentered>                                                             <space> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
+<Multi_key><L><periodcentered>                                                      <nobreakspace> : "⅃" U2143 # REVERSED SANS-SERIF CAPITAL L
 <Multi_key><Y><percent>                                                                            : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 <Multi_key><Y><backslash>                                                                          : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
+<Multi_key><Y><periodcentered>                                                                     : "⅄" U2144 # TURNED SANS-SERIF CAPITAL Y
 #Multi_key><D><D><slash>                                                                           : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 <Multi_key><D><D>                                                                                  : "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
 #Multi_key><d><d><slash>                                                                           : "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
@@ -6058,10 +6086,14 @@
 <Multi_key><less><section><greater>                                                 <nobreakspace> : "↕" U2195 # UP DOWN ARROW
 <Multi_key><less><backslash>                                                               <space> : "↖" U2196 # NORTH WEST ARROW
 <Multi_key><less><backslash>                                                        <nobreakspace> : "↖" U2196 # NORTH WEST ARROW
+<Multi_key><less><periodcentered>                                                          <space> : "↖" U2196 # NORTH WEST ARROW
+<Multi_key><less><periodcentered>                                                   <nobreakspace> : "↖" U2196 # NORTH WEST ARROW
 <Multi_key><slash><greater>                                                                <space> : "↗" U2197 # NORTH EAST ARROW
 <Multi_key><slash><greater>                                                         <nobreakspace> : "↗" U2197 # NORTH EAST ARROW
 <Multi_key><backslash><greater>                                                            <space> : "↘" U2198 # SOUTH EAST ARROW
 <Multi_key><backslash><greater>                                                     <nobreakspace> : "↘" U2198 # SOUTH EAST ARROW
+<Multi_key><periodcentered><greater>                                                       <space> : "↘" U2198 # SOUTH EAST ARROW
+<Multi_key><periodcentered><greater>                                                <nobreakspace> : "↘" U2198 # SOUTH EAST ARROW
 <Multi_key><less><slash>                                                                   <space> : "↙" U2199 # SOUTH WEST ARROW
 <Multi_key><less><slash>                                                            <nobreakspace> : "↙" U2199 # SOUTH WEST ARROW
 <Multi_key><less><minus><slash>                                                            <space> : "↚" U219A # LEFTWARDS ARROW WITH STROKE
@@ -6224,14 +6256,20 @@
 <Multi_key><less><exclam><greater><KP_2>                                                           : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><less><section><greater><KP_2>                                                          : "⇕" U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key><less><backslash><equal>                                                                : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><less><periodcentered><equal>                                                           : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
 <Multi_key><less><backslash><2>                                                                    : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><less><periodcentered><2>                                                               : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
 <Multi_key><less><backslash><KP_2>                                                                 : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key><less><periodcentered><KP_2>                                                            : "⇖" U21D6 # NORTH WEST DOUBLE ARROW
 <Multi_key><slash><greater><equal>                                                                 : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><slash><greater><2>                                                                     : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><slash><greater><KP_2>                                                                  : "⇗" U21D7 # NORTH EAST DOUBLE ARROW
 <Multi_key><backslash><greater><equal>                                                             : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><periodcentered><greater><equal>                                                        : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
 <Multi_key><backslash><greater><2>                                                                 : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><periodcentered><greater><2>                                                            : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
 <Multi_key><backslash><greater><KP_2>                                                              : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key><periodcentered><greater><KP_2>                                                         : "⇘" U21D8 # SOUTH EAST DOUBLE ARROW
 <Multi_key><less><slash><equal>                                                                    : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
 <Multi_key><less><slash><2>                                                                        : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
 <Multi_key><less><slash><KP_2>                                                                     : "⇙" U21D9 # SOUTH WEST DOUBLE ARROW
@@ -6338,14 +6376,18 @@
 <Multi_key><nobreakspace><e><e>                                                     <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                                  <space> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><e><backslash>                                                           <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><e><periodcentered>                                                             <space> : "∋" U220B # CONTAINS AS MEMBER
+<Multi_key><e><periodcentered>                                                      <nobreakspace> : "∋" U220B # CONTAINS AS MEMBER
 <Multi_key><p><slash>                                                                              : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><space><e><e><slash>                                                                    : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><nobreakspace><e><e><slash>                                                             : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><e><backslash><slash>                                                                   : "∌" U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key><e><periodcentered><slash>                                                              : "∌" U220C # DOES NOT CONTAIN AS MEMBER
 <Multi_key><p><comma>                                                                              : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><space><e><e><comma>                                                                    : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><nobreakspace><e><e><comma>                                                             : "∍" U220D # SMALL CONTAINS AS MEMBER
 <Multi_key><e><backslash><comma>                                                                   : "∍" U220D # SMALL CONTAINS AS MEMBER
+<Multi_key><e><periodcentered><comma>                                                              : "∍" U220D # SMALL CONTAINS AS MEMBER
 #   "End of proof"
 #Multi_key><e><o><p>                                                                               : "∎" U220E # END OF PROOF
 <Multi_key><e><o>                                                                                  : "∎" U220E # END OF PROOF
@@ -6362,6 +6404,7 @@
 <Multi_key><P>                                                                      <nobreakspace> : "∏" U220F # N-ARY PRODUCT
 <Multi_key><P><percent>                                                                            : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><P><backslash>                                                                          : "∐" U2210 # N-ARY COPRODUCT
+<Multi_key><P><periodcentered>                                                                     : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><C><P>                                                                                  : "∐" U2210 # N-ARY COPRODUCT
 <Multi_key><S>                                                                             <space> : "∑" U2211 # N-ARY SUMMATION
 <Multi_key><S>                                                                      <nobreakspace> : "∑" U2211 # N-ARY SUMMATION
@@ -6373,6 +6416,8 @@
 <Multi_key><slash>                                                                  <nobreakspace> : "∕" U2215 # DIVISION SLASH
 <Multi_key><backslash>                                                                     <space> : "∖" U2216 # SET MINUS
 <Multi_key><backslash>                                                              <nobreakspace> : "∖" U2216 # SET MINUS
+<Multi_key><periodcentered>                                                                <space> : "∖" U2216 # SET MINUS
+<Multi_key><periodcentered>                                                         <nobreakspace> : "∖" U2216 # SET MINUS
 <Multi_key><asterisk>                                                                      <space> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><asterisk>                                                               <nobreakspace> : "∗" U2217 # ASTERISK OPERATOR
 <Multi_key><o>                                                                             <space> : "∘" U2218 # RING OPERATOR
@@ -6410,7 +6455,9 @@
 <Multi_key><4><V>                                                                                  : "∜" U221C # FOURTH ROOT
 <Multi_key><KP_4><V>                                                                               : "∜" U221C # FOURTH ROOT
 <Multi_key><8><backslash>                                                                          : "∝" U221D # PROPORTIONAL TO
+<Multi_key><8><periodcentered>                                                                     : "∝" U221D # PROPORTIONAL TO
 <Multi_key><KP_8><backslash>                                                                       : "∝" U221D # PROPORTIONAL TO
+<Multi_key><KP_8><periodcentered>                                                                  : "∝" U221D # PROPORTIONAL TO
 <Multi_key><8><slash>                                                                              : "∝" U221D # PROPORTIONAL TO
 <Multi_key><KP_8><slash>                                                                           : "∝" U221D # PROPORTIONAL TO
 <Multi_key><8><comma>                                                                              : "∝" U221D # PROPORTIONAL TO
@@ -6439,6 +6486,7 @@
 <Multi_key><minus><parenright><slash>                                                      <space> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><minus><parenright><slash>                                               <nobreakspace> : "∡" U2221 # MEASURED ANGLE
 <Multi_key><backslash><parenright><slash>                                                          : "∢" U2222 # SPHERICAL ANGLE
+<Multi_key><periodcentered><parenright><slash>                                                     : "∢" U2222 # SPHERICAL ANGLE
 <Multi_key><bar>                                                                           <space> : "∣" U2223 # DIVIDES
 <Multi_key><bar>                                                                    <nobreakspace> : "∣" U2223 # DIVIDES
 <Multi_key><bar><slash>                                                                    <space> : "∤" U2224 # DOES NOT DIVIDE
@@ -6455,6 +6503,8 @@
 <Multi_key><v><percent>                                                             <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><backslash>                                                                  <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><v><backslash>                                                           <nobreakspace> : "∧" U2227 # LOGICAL AND
+<Multi_key><v><periodcentered>                                                             <space> : "∧" U2227 # LOGICAL AND
+<Multi_key><v><periodcentered>                                                      <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><asciicircum>                                                                   <space> : "∧" U2227 # LOGICAL AND
 <Multi_key><asciicircum>                                                            <nobreakspace> : "∧" U2227 # LOGICAL AND
 <Multi_key><a><n><d>                                                                               : "∧" U2227 # LOGICAL AND
@@ -6536,10 +6586,14 @@
 <Multi_key><asciitilde>                                                             <nobreakspace> : "∼" U223C # TILDE OPERATOR
 <Multi_key><asciitilde><backslash>                                                         <space> : "∽" U223D # REVERSED TILDE
 <Multi_key><asciitilde><backslash>                                                  <nobreakspace> : "∽" U223D # REVERSED TILDE
+<Multi_key><asciitilde><periodcentered>                                                    <space> : "∽" U223D # REVERSED TILDE
+<Multi_key><asciitilde><periodcentered>                                             <nobreakspace> : "∽" U223D # REVERSED TILDE
 <Multi_key><s><percent>                                                                            : "∾" U223E # INVERTED LAZY S
 <Multi_key><S><percent>                                                                            : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
+<Multi_key><s><periodcentered><percent>                                                            : "∾" U223E # INVERTED LAZY S
 <Multi_key><S><backslash><percent>                                                                 : "∾" U223E # INVERTED LAZY S
+<Multi_key><S><periodcentered><percent>                                                            : "∾" U223E # INVERTED LAZY S
 <Multi_key><s><i><n>                                                                               : "∿" U223F # SINE WAVE
 <Multi_key><S><I><N>                                                                               : "∿" U223F # SINE WAVE
 <Multi_key><asciitilde><percent>                                                           <space> : "≀" U2240 # WREATH PRODUCT
@@ -6564,6 +6618,7 @@
 <Multi_key><asciitilde><asciitilde><asciitilde>                                            <space> : "≋" U224B # TRIPLE TILDE
 <Multi_key><asciitilde><asciitilde><asciitilde>                                     <nobreakspace> : "≋" U224B # TRIPLE TILDE
 <Multi_key><asciitilde><backslash><equal>                                                          : "≌" U224C # ALL EQUAL TO
+<Multi_key><asciitilde><periodcentered><equal>                                                     : "≌" U224C # ALL EQUAL TO
 <Multi_key><parenright><parenleft>                                                         <space> : "≍" U224D # EQUIVALENT TO
 <Multi_key><parenright><parenleft>                                                  <nobreakspace> : "≍" U224D # EQUIVALENT TO
 <Multi_key><parenleft><equal><parenright>                                                          : "≎" U224E # GEOMETRICALLY EQUIVALENT TO
@@ -6574,6 +6629,7 @@
 <Multi_key><period><equal><period>                                                         <space> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <Multi_key><period><equal><period>                                                  <nobreakspace> : "≑" U2251 # GEOMETRICALLY EQUAL TO
 <Multi_key><period><equal><period><backslash>                                                      : "≒" U2252 # APPROXIMATELY EQUAL TO OR THE IMAGE OF
+<Multi_key><period><equal><period><periodcentered>                                                 : "≒" U2252 # APPROXIMATELY EQUAL TO OR THE IMAGE OF
 <Multi_key><period><equal><period><slash>                                                          : "≓" U2253 # IMAGE OF OR APPROXIMATELY EQUAL TO
 <Multi_key><colon><equal>                                                                          : "≔" U2254 # COLON EQUALS
 <Multi_key><equal><colon>                                                                          : "≕" U2255 # EQUALS COLON
@@ -6687,6 +6743,8 @@
 <Multi_key><c><c>                                                                   <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><backslash>                                                                  <space> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><backslash>                                                           <nobreakspace> : "⊃" U2283 # SUPERSET OF
+<Multi_key><c><periodcentered>                                                             <space> : "⊃" U2283 # SUPERSET OF
+<Multi_key><c><periodcentered>                                                      <nobreakspace> : "⊃" U2283 # SUPERSET OF
 <Multi_key><c><slash>                                                                      <space> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><c><slash>                                                               <nobreakspace> : "⊄" U2284 # NOT A SUBSET OF
 <Multi_key><b><slash>                                                                      <space> : "⊅" U2285 # NOT A SUPERSET OF
@@ -6695,6 +6753,8 @@
 <Multi_key><c><c><slash>                                                            <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><backslash><slash>                                                           <space> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><backslash><slash>                                                    <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><c><periodcentered><slash>                                                      <space> : "⊅" U2285 # NOT A SUPERSET OF
+<Multi_key><c><periodcentered><slash>                                               <nobreakspace> : "⊅" U2285 # NOT A SUPERSET OF
 <Multi_key><c><underscore>                                                                 <space> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><c><underscore>                                                          <nobreakspace> : "⊆" U2286 # SUBSET OF OR EQUAL TO
 <Multi_key><b><underscore>                                                                 <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
@@ -6703,6 +6763,8 @@
 <Multi_key><c><c><underscore>                                                       <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><c><backslash><underscore>                                                      <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 <Multi_key><c><backslash><underscore>                                               <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<Multi_key><c><periodcentered><underscore>                                                 <space> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
+<Multi_key><c><periodcentered><underscore>                                          <nobreakspace> : "⊇" U2287 # SUPERSET OF OR EQUAL TO
 #
 #   The underscore in the "⊈" U2288 and "⊉" U2289 sequences trails, so as to
 #   distinguish these sequences from those of "⊊" U228A and "⊋" U228B, where
@@ -6713,10 +6775,12 @@
 <Multi_key><b><slash><underscore>                                                                  : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><c><slash><underscore>                                                               : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><backslash><slash><underscore>                                                       : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
+<Multi_key><c><periodcentered><slash><underscore>                                                  : "⊉" U2289 # NEITHER A SUPERSET OF NOR EQUAL TO
 <Multi_key><c><underscore><slash>                                                                  : "⊊" U228A # SUBSET OF WITH NOT EQUAL TO
 <Multi_key><b><underscore><slash>                                                                  : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><c><c><underscore><slash>                                                               : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 <Multi_key><c><backslash><underscore><slash>                                                       : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
+<Multi_key><c><periodcentered><underscore><slash>                                                  : "⊋" U228B # SUPERSET OF WITH NOT EQUAL TO
 #Multi_key><u><less><minus>                                                                        : "⊌" U228C # MULTISET
 <Multi_key><u><less>                                                                               : "⊌" U228C # MULTISET
 <Multi_key><U><less>                                                                               : "⊌" U228C # MULTISET
@@ -6732,6 +6796,8 @@
 <Multi_key><c><c><bracketright>                                                     <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><backslash><bracketright>                                                    <space> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><backslash><bracketright>                                             <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
+<Multi_key><c><periodcentered><bracketright>                                               <space> : "⊐" U2290 # SQUARE ORIGINAL OF
+<Multi_key><c><periodcentered><bracketright>                                        <nobreakspace> : "⊐" U2290 # SQUARE ORIGINAL OF
 <Multi_key><c><bracketleft><underscore>                                                    <space> : "⊑" U2291 # SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketleft><underscore>                                             <nobreakspace> : "⊑" U2291 # SQUARE IMAGE OF OR EQUAL TO
 <Multi_key><c><bracketright><underscore>                                                   <space> : "⊑" U2291 # SQUARE IMAGE OF OR EQUAL TO
@@ -6742,6 +6808,8 @@
 <Multi_key><c><c><bracketright><underscore>                                         <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                        <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore>                                 <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><periodcentered><bracketright><underscore>                                   <space> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><periodcentered><bracketright><underscore>                            <nobreakspace> : "⊒" U2292 # SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><n><bracketleft>                                                                        : "⊓" U2293 # SQUARE CAP
 <Multi_key><n><bracketright>                                                                       : "⊓" U2293 # SQUARE CAP
 <Multi_key><u><bracketleft>                                                                        : "⊔" U2294 # SQUARE CUP
@@ -6868,18 +6936,16 @@
 <Multi_key><bar><greater><underscore>                                               <nobreakspace> : "⊵" U22B5 # CONTAINS AS NORMAL SUBGROUP OR EQUAL TO
 <Multi_key><o><minus><period>                                                                      : "⊶" U22B6 # ORIGINAL OF
 <Multi_key><period><minus><o>                                                                      : "⊷" U22B7 # IMAGE OF
-<Multi_key><space><minus><o>                                                               <space> : "⊸" U22B8 # MULTIMAP
-<Multi_key><space><minus><o>                                                        <nobreakspace> : "⊸" U22B8 # MULTIMAP
-<Multi_key><nobreakspace><minus><o>                                                        <space> : "⊸" U22B8 # MULTIMAP
-<Multi_key><nobreakspace><minus><o>                                                 <nobreakspace> : "⊸" U22B8 # MULTIMAP
-<Multi_key><space><plus><apostrophe>                                                               : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><plus><apostrophe>                                                        : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><plus><rightsinglequotemark>                                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><plus><rightsinglequotemark>                                              : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><apostrophe><plus>                                                               : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><apostrophe><plus>                                                        : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><space><rightsinglequotemark><plus>                                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
-<Multi_key><nobreakspace><rightsinglequotemark><plus>                                              : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><minus><o>                                                                      <space> : "⊸" U22B8 # MULTIMAP
+<Multi_key><minus><o>                                                               <nobreakspace> : "⊸" U22B8 # MULTIMAP
+<Multi_key><plus><apostrophe>                                                              <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><plus><apostrophe>                                                       <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><plus><rightsinglequotemark>                                                    <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><plus><rightsinglequotemark>                                             <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><apostrophe><plus>                                                              <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><apostrophe><plus>                                                       <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><rightsinglequotemark><plus>                                                    <space> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
+<Multi_key><rightsinglequotemark><plus>                                             <nobreakspace> : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 #Multi_key><minus><apostrophe><apostrophe><minus>                                                  : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 <Multi_key><minus><apostrophe><apostrophe>                                                         : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
 <Multi_key><minus><rightsinglequotemark><rightsinglequotemark>                                     : "⊹" U22B9 # HERMITIAN CONJUGATE MATRIX
@@ -6889,17 +6955,13 @@
 <Multi_key><v><underscore>                                                          <nobreakspace> : "⊻" U22BB # XOR
 <Multi_key><x><o><r>                                                                               : "⊻" U22BB # XOR
 <Multi_key><X><O><R>                                                                               : "⊻" U22BB # XOR
-<Multi_key><space><underscore><a>                                                                  : "⊼" U22BC # NAND
-<Multi_key><nobreakspace><underscore><a>                                                           : "⊼" U22BC # NAND
-<Multi_key><space><underscore><v><v>                                                               : "⊼" U22BC # NAND
-<Multi_key><nobreakspace><underscore><v><v>                                                        : "⊼" U22BC # NAND
+<Multi_key><underscore><a>                                                                         : "⊼" U22BC # NAND
+<Multi_key><underscore><v><v>                                                                      : "⊼" U22BC # NAND
 #Multi_key><n><a><n><d>                                                                            : "⊼" U22BC # NAND
 <Multi_key><n><a><n>                                                                               : "⊼" U22BC # NAND
 <Multi_key><N><A><N>                                                                               : "⊼" U22BC # NAND
-<Multi_key><space><underscore><v>                                                          <space> : "⊽" U22BD # NOR
-<Multi_key><space><underscore><v>                                                   <nobreakspace> : "⊽" U22BD # NOR
-<Multi_key><nobreakspace><underscore><v>                                                   <space> : "⊽" U22BD # NOR
-<Multi_key><nobreakspace><underscore><v>                                            <nobreakspace> : "⊽" U22BD # NOR
+<Multi_key><underscore><v>                                                                 <space> : "⊽" U22BD # NOR
+<Multi_key><underscore><v>                                                          <nobreakspace> : "⊽" U22BD # NOR
 <Multi_key><n><o><r>                                                                               : "⊽" U22BD # NOR
 <Multi_key><N><O><R>                                                                               : "⊽" U22BD # NOR
 <Multi_key><L><parenright>                                                                 <space> : "⊾" U22BE # RIGHT ANGLE WITH ARC
@@ -6913,6 +6975,7 @@
 <Multi_key><nobreakspace><A>                                                        <nobreakspace> : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V><percent>                                                                            : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V><backslash>                                                                          : "⋀" U22C0 # N-ARY LOGICAL AND
+<Multi_key><V><periodcentered>                                                                     : "⋀" U22C0 # N-ARY LOGICAL AND
 <Multi_key><V>                                                                             <space> : "⋁" U22C1 # N-ARY LOGICAL OR
 <Multi_key><V>                                                                      <nobreakspace> : "⋁" U22C1 # N-ARY LOGICAL OR
 <Multi_key><N>                                                                             <space> : "⋂" U22C2 # N-ARY INTERSECTION
@@ -6955,25 +7018,40 @@
 #   See "⨝" U2A1D
 #
 <Multi_key><bar><backslash><slash><bar>                                                            : "⋈" U22C8 # BOWTIE
+<Multi_key><bar><periodcentered><slash><bar>                                                       : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><slash><backslash><bar>                                                            : "⋈" U22C8 # BOWTIE
+<Multi_key><bar><slash><periodcentered><bar>                                                       : "⋈" U22C8 # BOWTIE
 <Multi_key><bar><backslash><slash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><bar><backslash><slash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><bar><periodcentered><slash>                                                    <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><bar><periodcentered><slash>                                             <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><bar><slash><backslash>                                                         <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><bar><slash><backslash>                                                  <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><bar><slash><periodcentered>                                                    <space> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><bar><slash><periodcentered>                                             <nobreakspace> : "⋉" U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><backslash><slash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><periodcentered><slash><bar>                                                            : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><bar>                                                                 : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key><slash><periodcentered><bar>                                                            : "⋊" U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 #
 #   While for "⋈" U22C8, "⋉" U22C9, "⋊" U22CA, slash and backslash stand for a
 #   full diagonal, "⋋" U22CB and "⋌" U22CC change the deal, and a full diagonal
 #   requires two slashes or two backslashes instead.
 #
 <Multi_key><backslash><slash><backslash>                                                           : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><periodcentered><slash><periodcentered>                                                 : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><backslash><backslash><slash>                                                   <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><backslash><backslash><slash>                                            <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><periodcentered><periodcentered><slash>                                         <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
+<Multi_key><periodcentered><periodcentered><slash>                                  <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><slash>                                                               : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><periodcentered><slash>                                                          : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><slash><periodcentered>                                                  <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><slash><periodcentered>                                           <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><asciitilde><backslash><underscore>                                                     : "⋍" U22CD # REVERSED TILDE EQUALS
+<Multi_key><asciitilde><periodcentered><underscore>                                                : "⋍" U22CD # REVERSED TILDE EQUALS
 <Multi_key><v><parenright><parenleft>                                                              : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><V><parenright><parenleft>                                                              : "⋎" U22CE # CURLY LOGICAL OR
 <Multi_key><v><parenleft><parenright>                                                              : "⋎" U22CE # CURLY LOGICAL OR
@@ -6985,7 +7063,9 @@
 <Multi_key><v><percent><parenright><parenleft>                                                     : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><percent><parenleft><parenright>                                                     : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><backslash><parenright><parenleft>                                                   : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><periodcentered><parenright><parenleft>                                              : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><v><backslash><parenleft><parenright>                                                   : "⋏" U22CF # CURLY LOGICAL AND
+<Multi_key><v><periodcentered><parenleft><parenright>                                              : "⋏" U22CF # CURLY LOGICAL AND
 <Multi_key><2><c>                                                                          <space> : "⋐" U22D0 # DOUBLE SUBSET
 <Multi_key><2><c>                                                                   <nobreakspace> : "⋐" U22D0 # DOUBLE SUBSET
 <Multi_key><KP_2><c>                                                                       <space> : "⋐" U22D0 # DOUBLE SUBSET
@@ -7003,9 +7083,13 @@
 <Multi_key><2><C><C>                                                                               : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><KP_2><C><C>                                                                            : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><2><c><backslash>                                                                       : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><2><c><periodcentered>                                                                  : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><KP_2><c><backslash>                                                                    : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><KP_2><c><periodcentered>                                                               : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><2><C><backslash>                                                                       : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><2><C><periodcentered>                                                                  : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><KP_2><C><backslash>                                                                    : "⋑" U22D1 # DOUBLE SUPERSET
+<Multi_key><KP_2><C><periodcentered>                                                               : "⋑" U22D1 # DOUBLE SUPERSET
 <Multi_key><2><n>                                                                          <space> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><2><n>                                                                   <nobreakspace> : "⋒" U22D2 # DOUBLE INTERSECTION
 <Multi_key><KP_2><n>                                                                       <space> : "⋒" U22D2 # DOUBLE INTERSECTION
@@ -7077,7 +7161,9 @@
 <Multi_key><b><bracketright><slash>                                                                : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><b><bracketleft><slash>                                                                 : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketright><slash>                                                     : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><periodcentered><bracketright><slash>                                                : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><backslash><bracketleft><slash>                                                      : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
+<Multi_key><c><periodcentered><bracketleft><slash>                                                 : "⋣" U22E3 # NOT SQUARE ORIGINAL OF OR EQUAL TO
 <Multi_key><c><bracketleft><underscore><slash>                                                     : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
 <Multi_key><c><bracketright><underscore><slash>                                                    : "⋤" U22E4 # SQUARE IMAGE OF OR NOT EQUAL TO
 <Multi_key><b><bracketright><underscore><slash>                                                    : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
@@ -7085,7 +7171,9 @@
 <Multi_key><c><c><bracketright><underscore><slash>                                                 : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><c><bracketleft><underscore><slash>                                                  : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketright><underscore><slash>                                         : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><periodcentered><bracketright><underscore><slash>                                    : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><c><backslash><bracketleft><underscore><slash>                                          : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
+<Multi_key><c><periodcentered><bracketleft><underscore><slash>                                     : "⋥" U22E5 # SQUARE ORIGINAL OF OR NOT EQUAL TO
 <Multi_key><less><asciitilde><slash>                                                               : "⋦" U22E6 # LESS-THAN BUT NOT EQUIVALENT TO
 <Multi_key><greater><asciitilde><slash>                                                            : "⋧" U22E7 # GREATER-THAN BUT NOT EQUIVALENT TO
 <Multi_key><less><parenright><parenleft><asciitilde><slash>                                        : "⋨" U22E8 # PRECEDES BUT NOT EQUIVALENT TO
@@ -7113,6 +7201,7 @@
 <Multi_key><period><period><period><minus>                                                         : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key><period><period><period><slash>                                                         : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key><period><period><period><backslash>                                                     : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<Multi_key><period><period><period><periodcentered>                                                : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key><e><minus>                                                                              : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
 <Multi_key><space><minus><e>                                                                       : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
 <Multi_key><nobreakspace><minus><e>                                                                : "⋲" U22F2 # ELEMENT OF WITH LONG HORIZONTAL STROKE
@@ -7131,6 +7220,7 @@
 <Multi_key><e><equal>                                                                              : "⋹" U22F9 # ELEMENT OF WITH TWO HORIZONTAL STROKES
 <Multi_key><p><minus>                                                                              : "⋺" U22FA # CONTAINS WITH LONG HORIZONTAL STROKE
 <Multi_key><e><backslash><minus>                                                                   : "⋺" U22FA # CONTAINS WITH LONG HORIZONTAL STROKE
+<Multi_key><e><periodcentered><minus>                                                              : "⋺" U22FA # CONTAINS WITH LONG HORIZONTAL STROKE
 <Multi_key><p><bar>                                                                        <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><p><bar>                                                                 <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><p>                                                                 <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
@@ -7147,10 +7237,16 @@
 <Multi_key><nobreakspace><bar><e><e>                                                <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><e><backslash><bar>                                                             <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><e><backslash><bar>                                                      <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><e><periodcentered><bar>                                                        <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><e><periodcentered><bar>                                                 <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><e><backslash>                                                      <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><e><backslash>                                               <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><space><bar><e><periodcentered>                                                 <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><space><bar><e><periodcentered>                                          <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><backslash>                                               <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><backslash>                                        <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><e><periodcentered>                                          <space> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><e><periodcentered>                                   <nobreakspace> : "⋻" U22FB # CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><p><bar><comma>                                                                         : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><p><comma>                                                                  : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><p><comma>                                                           : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
@@ -7159,20 +7255,29 @@
 <Multi_key><space><bar><e><e><comma>                                                               : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><e><comma>                                                        : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><e><backslash><bar><comma>                                                              : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><e><periodcentered><bar><comma>                                                         : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><bar><e><backslash><comma>                                                       : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><space><bar><e><periodcentered><comma>                                                  : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><e><backslash><comma>                                                : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
+<Multi_key><nobreakspace><bar><e><periodcentered><comma>                                           : "⋼" U22FC # SMALL CONTAINS WITH VERTICAL BAR AT END OF HORIZONTAL STROKE
 <Multi_key><space><underscore><p>                                                          <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p>                                                   <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p>                                                   <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p>                                            <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash>                                               <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash>                                        <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><periodcentered>                                          <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><periodcentered>                                   <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash>                                        <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash>                                 <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><periodcentered>                                   <space> : "⋽" U22FD # CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><periodcentered>                            <nobreakspace> : "⋽" U22FD # CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><p><comma>                                                           : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><p><comma>                                                    : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><space><underscore><e><backslash><comma>                                                : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><space><underscore><e><periodcentered><comma>                                           : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><nobreakspace><underscore><e><backslash><comma>                                         : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
+<Multi_key><nobreakspace><underscore><e><periodcentered><comma>                                    : "⋾" U22FE # SMALL CONTAINS WITH OVERBAR
 <Multi_key><e><bracketleft>                                                                        : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><e><bracketright>                                                                       : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
 <Multi_key><z><e>                                                                                  : "⋿" U22FF # Z NOTATION BAG MEMBERSHIP
@@ -7279,8 +7384,10 @@
 #   <Multi_key>      [vertical]                                                            <space> : "⏡" U23E1 # BOTTOM TORTOISE SHELL BRACKET
 #   <Multi_key>      [vertical]                                                     <nobreakspace> : "⏡" U23E1 # BOTTOM TORTOISE SHELL BRACKET
 <Multi_key><slash><underscore><underscore><backslash>                                              : "⏢" U23E2 # WHITE TRAPEZIUM
+<Multi_key><slash><underscore><underscore><periodcentered>                                         : "⏢" U23E2 # WHITE TRAPEZIUM
 <Multi_key><bar><underscore><underscore>                                                           : "⏢" U23E2 # WHITE TRAPEZIUM
 <Multi_key><slash><underscore><backslash><underscore>                                              : "⏢" U23E2 # WHITE TRAPEZIUM
+<Multi_key><slash><underscore><periodcentered><underscore>                                         : "⏢" U23E2 # WHITE TRAPEZIUM
 #
 #
 # # Geometric Shapes in block U25A0 used in mathematics
@@ -7302,8 +7409,11 @@
 <Multi_key><slash><numbersign><underscore><slash>                                                  : "▰" U25B0 # BLACK PARALLELOGRAM
 <Multi_key><slash><underscore><slash>                                                              : "▱" U25B1 # WHITE PARALLELOGRAM
 <Multi_key><slash><numbersign><underscore><backslash>                                              : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
+<Multi_key><slash><numbersign><underscore><periodcentered>                                         : "▲" U25B2 # BLACK UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                                  <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 <Multi_key><slash><underscore><backslash>                                           <nobreakspace> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
+<Multi_key><slash><underscore><periodcentered>                                             <space> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
+<Multi_key><slash><underscore><periodcentered>                                      <nobreakspace> : "△" U25B3 # WHITE UP-POINTING TRIANGLE
 #
 #   For intuitivity and efficiency, small up-pointing triangles translate to
 #   asciicircum-underscore instead of the usual slash-underscore-backslash.
@@ -7311,63 +7421,103 @@
 #
 <Multi_key><asciicircum><numbersign><underscore>                                                   : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><space><slash><numbersign><underscore><backslash>                                       : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><space><slash><numbersign><underscore><periodcentered>                                  : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><numbersign><underscore><backslash>                                : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><slash><numbersign><underscore><periodcentered>                           : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><space><asciicircum><underscore>                                                        : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><asciicircum><underscore>                                                 : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><space><slash><underscore><backslash>                                                   : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><space><slash><underscore><periodcentered>                                              : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><underscore><backslash>                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><slash><underscore><periodcentered>                                       : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 #Multi_key><space><bar><numbersign><backslash><slash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 #Multi_key><space><bar><numbersign><slash><backslash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><numbersign>                                                                : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><numbersign>                                                         : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                                  <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><space><bar><periodcentered><slash>                                             <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><space><bar><periodcentered><slash>                                      <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><backslash><slash>                                           <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><backslash><slash>                                    <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><nobreakspace><bar><periodcentered><slash>                                      <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><nobreakspace><bar><periodcentered><slash>                               <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><slash><backslash>                                                  <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><slash><backslash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><space><bar><slash><periodcentered>                                             <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><space><bar><slash><periodcentered>                                      <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                           <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><nobreakspace><bar><slash><backslash>                                    <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><nobreakspace><bar><slash><periodcentered>                                      <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
+<Multi_key><nobreakspace><bar><slash><periodcentered>                               <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash>                               <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
+<Multi_key><underscore><numbersign><periodcentered><slash>                                 <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
+<Multi_key><underscore><numbersign><periodcentered><slash>                          <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash>                                      <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash>                               <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
+<Multi_key><underscore><numbersign><slash><periodcentered>                                 <space> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
+<Multi_key><underscore><numbersign><slash><periodcentered>                          <nobreakspace> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE
 <Multi_key><underscore><backslash><slash>                                                  <space> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 <Multi_key><underscore><backslash><slash>                                           <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
+<Multi_key><underscore><periodcentered><slash>                                             <space> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
+<Multi_key><underscore><periodcentered><slash>                                      <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 <Multi_key><underscore><slash><backslash>                                                  <space> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 <Multi_key><underscore><slash><backslash>                                           <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
+<Multi_key><underscore><slash><periodcentered>                                             <space> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
+<Multi_key><underscore><slash><periodcentered>                                      <nobreakspace> : "▽" U25BD # WHITE DOWN-POINTING TRIANGLE
 #Multi_key><space><underscore><numbersign><backslash><slash>                                       : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 #Multi_key><space><underscore><numbersign><slash><backslash>                                       : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><space><underscore><numbersign>                                                         : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><underscore><numbersign>                                                  : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash><0>                                           : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><periodcentered><slash><0>                                      : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><numbersign><backslash><slash><KP_0>                                        : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><periodcentered><slash><KP_0>                                   : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash><0>                                           : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><slash><periodcentered><0>                                      : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><numbersign><slash><backslash><KP_0>                                        : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><numbersign><slash><periodcentered><KP_0>                                   : "▾" U25BE # BLACK DOWN-POINTING SMALL TRIANGLE
 #Multi_key><space><underscore><backslash><slash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><space><underscore><backslash>                                                          : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><space><underscore><periodcentered>                                                     : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><underscore><backslash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><nobreakspace><underscore><periodcentered>                                              : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #Multi_key><space><underscore><slash><backslash>                                                   : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><space><underscore><slash>                                                              : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><underscore><slash>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><backslash><slash><0>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><periodcentered><slash><0>                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><backslash><slash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><periodcentered><slash><KP_0>                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><0>                                                       : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><slash><periodcentered><0>                                                  : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 <Multi_key><underscore><slash><backslash><KP_0>                                                    : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
+<Multi_key><underscore><slash><periodcentered><KP_0>                                               : "▿" U25BF # WHITE DOWN-POINTING SMALL TRIANGLE
 #Multi_key><space><slash><backslash><numbersign><bar>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><slash><backslash><numbersign>                                                   : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><space><slash><periodcentered><numbersign>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><slash><backslash><numbersign>                                            : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><slash><periodcentered><numbersign>                                       : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 #Multi_key><space><backslash><slash><numbersign><bar>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><space><backslash><slash><numbersign>                                                   : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><space><periodcentered><slash><numbersign>                                              : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><backslash><slash><numbersign>                                            : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><periodcentered><slash><numbersign>                                       : "◀" U25C0 # BLACK LEFT-POINTING TRIANGLE
 #Multi_key><space><space><slash><backslash><bar>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><space><space><slash><backslash>                                                        : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><space><space><slash><periodcentered>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><space><slash><backslash>                                                 : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><space><slash><periodcentered>                                            : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><nobreakspace><slash><backslash>                                          : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><nobreakspace><slash><periodcentered>                                     : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 #Multi_key><space><space><backslash><slash><bar>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><space><space><backslash><slash>                                                        : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><space><space><periodcentered><slash>                                                   : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><space><backslash><slash>                                                 : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><space><periodcentered><slash>                                            : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><nobreakspace><nobreakspace><backslash><slash>                                          : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
+<Multi_key><nobreakspace><nobreakspace><periodcentered><slash>                                     : "◁" U25C1 # WHITE LEFT-POINTING TRIANGLE
 <Multi_key><less><numbersign><greater>                                                     <space> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><less><numbersign><greater>                                              <nobreakspace> : "◆" U25C6 # BLACK DIAMOND
 <Multi_key><space><space><less><greater>                                                           : "◇" U25C7 # WHITE DIAMOND
@@ -7403,12 +7553,16 @@
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=26
 #
 <Multi_key><bar><numbersign><backslash><underscore>                                                : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
+<Multi_key><bar><numbersign><periodcentered><underscore>                                           : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
 <Multi_key><bar><numbersign><underscore><backslash>                                                : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
+<Multi_key><bar><numbersign><underscore><periodcentered>                                           : "◣" U25E3 # BLACK LOWER LEFT TRIANGLE
 <Multi_key><bar><numbersign><underscore><slash>                                                    : "◤" U25E4 # BLACK UPPER LEFT TRIANGLE
 <Multi_key><bar><numbersign><slash><underscore>                                                    : "◤" U25E4 # BLACK UPPER LEFT TRIANGLE
 #Multi_key><underscore><backslash><numbersign><bar>                                                : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 <Multi_key><underscore><backslash><numbersign>                                                     : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
+<Multi_key><underscore><periodcentered><numbersign>                                                : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 <Multi_key><backslash><underscore><numbersign>                                                     : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
+<Multi_key><periodcentered><underscore><numbersign>                                                : "◥" U25E5 # BLACK UPPER RIGHT TRIANGLE
 #Multi_key><bracketleft><numbersign><bar><bracketright>                                            : "◧" U25E7 # SQUARE WITH LEFT HALF BLACK
 <Multi_key><bracketleft><numbersign><bar>                                                          : "◧" U25E7 # SQUARE WITH LEFT HALF BLACK
 #Multi_key><bracketleft><bar><numbersign><bracketright>                                            : "◨" U25E8 # SQUARE WITH RIGHT HALF BLACK
@@ -7422,9 +7576,13 @@
 <Multi_key><slash><period>                                                                         : "◬" U25EC # WHITE UP-POINTING TRIANGLE WITH DOT
 <Multi_key><bar><underscore><slash>                                                                : "◸" U25F8 # UPPER LEFT TRIANGLE
 <Multi_key><underscore><backslash><bar>                                                            : "◹" U25F9 # UPPER RIGHT TRIANGLE
+<Multi_key><underscore><periodcentered><bar>                                                       : "◹" U25F9 # UPPER RIGHT TRIANGLE
 <Multi_key><backslash><underscore><bar>                                                            : "◹" U25F9 # UPPER RIGHT TRIANGLE
+<Multi_key><periodcentered><underscore><bar>                                                       : "◹" U25F9 # UPPER RIGHT TRIANGLE
 <Multi_key><bar><backslash><underscore>                                                            : "◺" U25FA # LOWER LEFT TRIANGLE
+<Multi_key><bar><periodcentered><underscore>                                                       : "◺" U25FA # LOWER LEFT TRIANGLE
 <Multi_key><bar><underscore><backslash>                                                            : "◺" U25FA # LOWER LEFT TRIANGLE
+<Multi_key><bar><underscore><periodcentered>                                                       : "◺" U25FA # LOWER LEFT TRIANGLE
 <Multi_key><space><bracketleft><bracketright>                                                      : "◻" U25FB # WHITE MEDIUM SQUARE
 <Multi_key><nobreakspace><bracketleft><bracketright>                                               : "◻" U25FB # WHITE MEDIUM SQUARE
 <Multi_key><space><bracketright><bracketleft>                                                      : "◻" U25FB # WHITE MEDIUM SQUARE
@@ -7540,21 +7698,32 @@
 <Multi_key><bar><slash><underscore>                                                                : "⟀" U27C0 # THREE DIMENSIONAL ANGLE
 #Multi_key><2><slash><backslash><underscore>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><slash><backslash>                                                                   : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><2><slash><periodcentered>                                                              : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><slash><backslash>                                                                : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><KP_2><slash><periodcentered>                                                           : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><KP_Divide><backslash>                                                            : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><KP_2><KP_Divide><periodcentered>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 #Multi_key><2><backslash><slash><underscore>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><2><backslash>                                                                          : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><2><periodcentered>                                                                     : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><KP_2><backslash>                                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><KP_2><periodcentered>                                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 #
 #   Some fonts feature "⟁" U27C1 with a small circle instead of the inner
 #   triangle.
 #
 <Multi_key><slash><backslash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><slash><periodcentered><underscore><o>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><backslash><underscore><O>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><slash><periodcentered><underscore><O>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><periodcentered><slash><underscore><o>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><backslash><slash><underscore><O>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><periodcentered><slash><underscore><O>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><o>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><slash><underscore><periodcentered><o>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><slash><underscore><backslash><O>                                                       : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
+<Multi_key><slash><underscore><periodcentered><O>                                                  : "⟁" U27C1 # WHITE TRIANGLE CONTAINING SMALL WHITE TRIANGLE
 <Multi_key><bar><underscore>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><bar><underscore>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><underscore><bar>                                                               <space> : "⟂" U27C2 # PERPENDICULAR
@@ -7564,6 +7733,7 @@
 <Multi_key><b><o>                                                                                  : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><c><c><o>                                                                               : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><c><backslash><o>                                                                       : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><periodcentered><o>                                                                  : "⟄" U27C4 # OPEN SUPERSET
 #
 #   For "⟄" U27C4, leading space is supported alongside for consistency with
 #   "⟃" U27C3.
@@ -7573,7 +7743,9 @@
 <Multi_key><space><c><c><o>                                                                        : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><c><c><o>                                                                 : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><space><c><backslash><o>                                                                : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><space><c><periodcentered><o>                                                           : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><c><backslash><o>                                                         : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><nobreakspace><c><periodcentered><o>                                                    : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><s><braceleft>                                                                          : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><S><braceleft>                                                                          : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
 <Multi_key><s><bracketleft>                                                                <space> : "⟅" U27C5 # LEFT S-SHAPED BAG DELIMITER
@@ -7589,7 +7761,9 @@
 <Multi_key><v><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><V><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><space><backslash><c>                                                                   : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><space><periodcentered><c>                                                              : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><nobreakspace><backslash><c>                                                            : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><nobreakspace><periodcentered><c>                                                       : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 #
 #   Some fonts feature a slash instead of a backslash in
 #   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
@@ -7601,7 +7775,9 @@
 <Multi_key><space><c><c><slash>                                                                    : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><c><slash>                                                             : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><c><backslash><slash>                                                            : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><space><c><periodcentered><slash>                                                       : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
+<Multi_key><nobreakspace><c><periodcentered><slash>                                                : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><bar><minus>                                                                     : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><nobreakspace><bar><minus>                                                              : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><space><space><slash>                                                           <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
@@ -7614,10 +7790,16 @@
 <Multi_key><parenright><underscore><asciicircum>                                    <nobreakspace> : "⟌" U27CC # LONG DIVISION
 <Multi_key><space><space><backslash>                                                       <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><space><space><backslash>                                                <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><space><space><periodcentered>                                                  <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><space><space><periodcentered>                                           <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><space><backslash>                                                <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><space><backslash>                                         <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><periodcentered>                                           <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><space><periodcentered>                                    <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><backslash>                                         <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><backslash>                                  <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><periodcentered>                                    <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><nobreakspace><nobreakspace><periodcentered>                             <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><a><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><A><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><space><bracketleft><a>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND
@@ -7642,22 +7824,33 @@
 <Multi_key><v><percent><period>                                                                    : "⟑" U27D1 # AND WITH DOT
 <Multi_key><e><percent>                                                                            : "⟒" U27D2 # ELEMENT OF OPENING UPWARDS
 <Multi_key><L><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
+<Multi_key><L><periodcentered><period>                                                             : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><l><backslash><period>                                                                  : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
+<Multi_key><l><periodcentered><period>                                                             : "⟓" U27D3 # LOWER RIGHT CORNER WITH DOT
 <Multi_key><L><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><l><percent><period>                                                                    : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><L><percent><percent><period>                                                           : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><l><percent><percent><period>                                                           : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><L><backslash><backslash><period>                                                       : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
+<Multi_key><L><periodcentered><periodcentered><period>                                             : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><l><backslash><backslash><period>                                                       : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
+<Multi_key><l><periodcentered><periodcentered><period>                                             : "⟔" U27D4 # UPPER LEFT CORNER WITH DOT
 <Multi_key><bracketright><slash><backslash><bar>                                                   : "⟕" U27D5 # LEFT OUTER JOIN
+<Multi_key><bracketright><slash><periodcentered><bar>                                              : "⟕" U27D5 # LEFT OUTER JOIN
 <Multi_key><bracketright><backslash><slash><bar>                                                   : "⟕" U27D5 # LEFT OUTER JOIN
+<Multi_key><bracketright><periodcentered><slash><bar>                                              : "⟕" U27D5 # LEFT OUTER JOIN
 <Multi_key><bar><slash><backslash><bracketleft>                                                    : "⟖" U27D6 # RIGHT OUTER JOIN
+<Multi_key><bar><slash><periodcentered><bracketleft>                                               : "⟖" U27D6 # RIGHT OUTER JOIN
 <Multi_key><bar><backslash><slash><bracketleft>                                                    : "⟖" U27D6 # RIGHT OUTER JOIN
+<Multi_key><bar><periodcentered><slash><bracketleft>                                               : "⟖" U27D6 # RIGHT OUTER JOIN
 <Multi_key><bracketright><slash><backslash><bracketleft>                                           : "⟗" U27D7 # FULL OUTER JOIN
+<Multi_key><bracketright><slash><periodcentered><bracketleft>                                      : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><bracketright><backslash><slash><bracketleft>                                           : "⟗" U27D7 # FULL OUTER JOIN
+<Multi_key><bracketright><periodcentered><slash><bracketleft>                                      : "⟗" U27D7 # FULL OUTER JOIN
 <Multi_key><T><T><bar>                                                                             : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><T><percent><bar>                                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><T><backslash><bar>                                                                     : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><T><periodcentered><bar>                                                                : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T><T>                                                                    : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><space><T><T>                                                             : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><T><T>                                                      : "⟘" U27D8 # LARGE UP TACK
@@ -7665,8 +7858,11 @@
 <Multi_key><nobreakspace><space><T><percent>                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><T><percent>                                                : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><T><backslash>                                                            : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><space><space><T><periodcentered>                                                       : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><space><T><backslash>                                                     : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><space><T><periodcentered>                                                : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><nobreakspace><nobreakspace><T><backslash>                                              : "⟘" U27D8 # LARGE UP TACK
+<Multi_key><nobreakspace><nobreakspace><T><periodcentered>                                         : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><I><underscore><bar>                                                                    : "⟘" U27D8 # LARGE UP TACK
 #Multi_key><space><space><I><underscore>                                                           : "⟘" U27D8 # LARGE UP TACK
 <Multi_key><space><space><I>                                                                       : "⟘" U27D8 # LARGE UP TACK
@@ -7704,7 +7900,9 @@
 <Multi_key><o><T><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><t><percent>                                                                         : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><T><backslash>                                                                       : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+<Multi_key><o><T><periodcentered>                                                                  : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><t><backslash>                                                                       : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
+<Multi_key><o><t><periodcentered>                                                                  : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><o><bar><underscore>                                                                    : "⟟" U27DF # UP TACK WITH CIRCLE ABOVE
 <Multi_key><a><minus><v>                                                                   <space> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
 <Multi_key><a><minus><v>                                                            <nobreakspace> : "⟠" U27E0 # LOZENGE DIVIDED BY HORIZONTAL RULE
@@ -7930,37 +8128,55 @@
 #Multi_key><bar><minus><greater><less><greater>                                                    : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
 <Multi_key><bar><minus><greater><less>                                                             : "⤠" U2920 # RIGHTWARDS ARROW FROM BAR TO BLACK DIAMOND
 <Multi_key><less><backslash><greater>                                                              : "⤡" U2921 # NORTH WEST AND SOUTH EAST ARROW
+<Multi_key><less><periodcentered><greater>                                                         : "⤡" U2921 # NORTH WEST AND SOUTH EAST ARROW
 <Multi_key><less><slash><greater>                                                                  : "⤢" U2922 # NORTH EAST AND SOUTH WEST ARROW
 <Multi_key><less><backslash><parenright>                                                           : "⤣" U2923 # NORTH WEST ARROW WITH HOOK
+<Multi_key><less><periodcentered><parenright>                                                      : "⤣" U2923 # NORTH WEST ARROW WITH HOOK
 #Multi_key><parenleft><slash><greater>                                                             : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
 <Multi_key><parenleft><slash>                                                                      : "⤤" U2924 # NORTH EAST ARROW WITH HOOK
 #Multi_key><parenleft><backslash><greater>                                                         : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
 <Multi_key><parenleft><backslash>                                                                  : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
+<Multi_key><parenleft><periodcentered>                                                             : "⤥" U2925 # SOUTH EAST ARROW WITH HOOK
 <Multi_key><less><slash><parenright>                                                               : "⤦" U2926 # SOUTH WEST ARROW WITH HOOK
 #Multi_key><less><backslash><slash><greater>                                                       : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
 <Multi_key><less><backslash><slash>                                                                : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
+<Multi_key><less><periodcentered><slash>                                                           : "⤧" U2927 # NORTH WEST ARROW AND NORTH EAST ARROW
 #Multi_key><backslash><greater><slash><greater>                                                    : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
 <Multi_key><backslash><greater><slash>                                                             : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
+<Multi_key><periodcentered><greater><slash>                                                        : "⤨" U2928 # NORTH EAST ARROW AND SOUTH EAST ARROW
 #Multi_key><backslash><greater><less><slash>                                                       : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
 <Multi_key><backslash><greater><less>                                                              : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
+<Multi_key><periodcentered><greater><less>                                                         : "⤩" U2929 # SOUTH EAST ARROW AND SOUTH WEST ARROW
 #Multi_key><less><backslash><less><slash>                                                          : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
 <Multi_key><less><backslash><less>                                                                 : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
+<Multi_key><less><periodcentered><less>                                                            : "⤪" U292A # SOUTH WEST ARROW AND NORTH WEST ARROW
 <Multi_key><slash><backslash>                                                              <space> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><slash><backslash>                                                       <nobreakspace> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
+<Multi_key><slash><periodcentered>                                                         <space> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
+<Multi_key><slash><periodcentered>                                                  <nobreakspace> : "⤫" U292B # RISING DIAGONAL CROSSING FALLING DIAGONAL
 <Multi_key><backslash><slash>                                                              <space> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
 <Multi_key><backslash><slash>                                                       <nobreakspace> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
+<Multi_key><periodcentered><slash>                                                         <space> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
+<Multi_key><periodcentered><slash>                                                  <nobreakspace> : "⤬" U292C # FALLING DIAGONAL CROSSING RISING DIAGONAL
 #Multi_key><space><backslash><greater><slash><greater>                                             : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><backslash><greater>                                                             : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><space><periodcentered><greater>                                                        : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><backslash><greater>                                                      : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><nobreakspace><periodcentered><greater>                                                 : "⤭" U292D # SOUTH EAST ARROW CROSSING NORTH EAST ARROW
 #Multi_key><slash><greater><backslash><greater>                                                    : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
 <Multi_key><slash><greater><backslash>                                                             : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
+<Multi_key><slash><greater><periodcentered>                                                        : "⤮" U292E # NORTH EAST ARROW CROSSING SOUTH EAST ARROW
 <Multi_key><backslash><slash><greater>                                                             : "⤯" U292F # FALLING DIAGONAL CROSSING NORTH EAST ARROW
+<Multi_key><periodcentered><slash><greater>                                                        : "⤯" U292F # FALLING DIAGONAL CROSSING NORTH EAST ARROW
 <Multi_key><slash><backslash><greater>                                                             : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
+<Multi_key><slash><periodcentered><greater>                                                        : "⤰" U2930 # RISING DIAGONAL CROSSING SOUTH EAST ARROW
 #Multi_key><slash><greater><less><backslash>                                                       : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
 <Multi_key><slash><greater><less>                                                                  : "⤱" U2931 # NORTH EAST ARROW CROSSING NORTH WEST ARROW
 #Multi_key><space><less><backslash><slash><greater>                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><space><less><backslash>                                                                : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><space><less><periodcentered>                                                           : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><nobreakspace><less><backslash>                                                         : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
+<Multi_key><nobreakspace><less><periodcentered>                                                    : "⤲" U2932 # NORTH WEST ARROW CROSSING NORTH EAST ARROW
 <Multi_key><asciitilde><minus><greater>                                                            : "⤳" U2933 # WAVE ARROW POINTING DIRECTLY RIGHT
 <Multi_key><minus><comma><less><exclam>                                                            : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
 <Multi_key><minus><comma><less><section>                                                           : "⤴" U2934 # ARROW POINTING RIGHTWARDS THEN CURVING UPWARDS
@@ -8146,6 +8362,7 @@
 <Multi_key><b><less>                                                                               : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><c><less>                                                                            : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 <Multi_key><c><backslash><less>                                                                    : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
+<Multi_key><c><periodcentered><less>                                                               : "⥻" U297B # SUPERSET ABOVE LEFTWARDS ARROW
 #
 #   Fishtails "⥼" U297C.."⥿" U297F are concurrently supported by two iconic
 #   multikey sequence constituents, for everybody to pick their preferred one:
@@ -8276,6 +8493,7 @@
 <Multi_key><bar><w>                                                                                : "⦚" U299A # VERTICAL ZIGZAG LINE
 <Multi_key><bar><W>                                                                                : "⦚" U299A # VERTICAL ZIGZAG LINE
 <Multi_key><backslash><parenleft><minus>                                                           : "⦛" U299B # MEASURED ANGLE OPENING LEFT
+<Multi_key><periodcentered><parenleft><minus>                                                      : "⦛" U299B # MEASURED ANGLE OPENING LEFT
 <Multi_key><L><bracketright>                                                                       : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><l><bracketright>                                                                       : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
 <Multi_key><L><parenright><period>                                                                 : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
@@ -8288,17 +8506,23 @@
 <Multi_key><nobreakspace><space><minus><slash>                                                     : "⦟" U299F # ACUTE ANGLE
 <Multi_key><nobreakspace><nobreakspace><minus><slash>                                              : "⦟" U299F # ACUTE ANGLE
 <Multi_key><backslash><parenleft><slash>                                                           : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
+<Multi_key><periodcentered><parenleft><slash>                                                      : "⦠" U29A0 # SPHERICAL ANGLE OPENING LEFT
 #Multi_key><slash><parenleft><backslash>                                                           : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
 <Multi_key><slash><parenleft>                                                                      : "⦡" U29A1 # SPHERICAL ANGLE OPENING UP
 <Multi_key><space><minus><slash>                                                                   : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><nobreakspace><minus><slash>                                                            : "⦢" U29A2 # TURNED ANGLE
 <Multi_key><space><backslash><minus>                                                               : "⦣" U29A3 # REVERSED ANGLE
+<Multi_key><space><periodcentered><minus>                                                          : "⦣" U29A3 # REVERSED ANGLE
 <Multi_key><nobreakspace><backslash><minus>                                                        : "⦣" U29A3 # REVERSED ANGLE
+<Multi_key><nobreakspace><periodcentered><minus>                                                   : "⦣" U29A3 # REVERSED ANGLE
 <Multi_key><space><underscore><minus><slash>                                                       : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><nobreakspace><underscore><minus><slash>                                                : "⦤" U29A4 # ANGLE WITH UNDERBAR
 <Multi_key><backslash><minus><underscore>                                                          : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
+<Multi_key><periodcentered><minus><underscore>                                                     : "⦥" U29A5 # REVERSED ANGLE WITH UNDERBAR
 <Multi_key><minus><backslash>                                                              <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><minus><backslash>                                                       <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
+<Multi_key><minus><periodcentered>                                                         <space> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
+<Multi_key><minus><periodcentered>                                                  <nobreakspace> : "⦦" U29A6 # OBLIQUE ANGLE OPENING UP
 <Multi_key><space><space><slash><minus>                                                            : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><space><slash><minus>                                                     : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
 <Multi_key><nobreakspace><nobreakspace><slash><minus>                                              : "⦧" U29A7 # OBLIQUE ANGLE OPENING DOWN
@@ -8315,7 +8539,9 @@
 #
 <Multi_key><minus><parenright><slash><greater>                                                     : "⦨" U29A8 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND RIGHT
 <Multi_key><less><backslash><parenleft><minus>                                                     : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
+<Multi_key><less><periodcentered><parenleft><minus>                                                : "⦩" U29A9 # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING UP AND LEFT
 <Multi_key><backslash><greater><parenright><minus>                                                 : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
+<Multi_key><periodcentered><greater><parenright><minus>                                            : "⦪" U29AA # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND RIGHT
 #Multi_key><minus><parenleft><less><slash>                                                         : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
 <Multi_key><minus><parenleft><less>                                                                : "⦫" U29AB # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING DOWN AND LEFT
 <Multi_key><slash><greater><parenright>                                                            : "⦬" U29AC # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND UP
@@ -8323,12 +8549,17 @@
 <Multi_key><bar><parenleft>                                                                        : "⦭" U29AD # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND UP
 #Multi_key><bar><parenright><backslash><greater>                                                   : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 <Multi_key><bar><parenright><backslash>                                                            : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
+<Multi_key><bar><parenright><periodcentered>                                                       : "⦮" U29AE # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING RIGHT AND DOWN
 #Multi_key><less><slash><parenleft><bar>                                                           : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><less><slash><parenleft>                                                                : "⦯" U29AF # MEASURED ANGLE WITH OPEN ARM ENDING IN ARROW POINTING LEFT AND DOWN
 <Multi_key><space><O><backslash>                                                                   : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><space><O><periodcentered>                                                              : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><nobreakspace><O><backslash>                                                            : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><nobreakspace><O><periodcentered>                                                       : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><space><o><backslash>                                                                   : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><space><o><periodcentered>                                                              : "⦰" U29B0 # REVERSED EMPTY SET
 <Multi_key><nobreakspace><o><backslash>                                                            : "⦰" U29B0 # REVERSED EMPTY SET
+<Multi_key><nobreakspace><o><periodcentered>                                                       : "⦰" U29B0 # REVERSED EMPTY SET
 #Multi_key><space><minus><O><slash>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <Multi_key><space><minus><O>                                                                       : "⦱" U29B1 # EMPTY SET WITH OVERBAR
 <Multi_key><nobreakspace><minus><O>                                                                : "⦱" U29B1 # EMPTY SET WITH OVERBAR
@@ -8345,6 +8576,8 @@
 <Multi_key><o><bar><bar>                                                                           : "⦷" U29B7 # CIRCLED PARALLEL
 <Multi_key><O><backslash>                                                                  <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><O><backslash>                                                           <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
+<Multi_key><O><periodcentered>                                                             <space> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
+<Multi_key><O><periodcentered>                                                      <nobreakspace> : "⦸" U29B8 # CIRCLED REVERSE SOLIDUS
 <Multi_key><O><bar><underscore>                                                                    : "⦹" U29B9 # CIRCLED PERPENDICULAR
 #Multi_key><O><underscore><bar> conflicts with "º" U00BA.                                          : "⦹" U29B9 # CIRCLED PERPENDICULAR
 <Multi_key><O><minus><bar>                                                                         : "⦺" U29BA # CIRCLE DIVIDED BY HORIZONTAL BAR AND TOP HALF DIVIDED BY VERTICAL BAR
@@ -8387,6 +8620,7 @@
 <Multi_key><O><equal>                                                                              : "⧃" U29C3 # CIRCLE WITH TWO HORIZONTAL STROKES TO THE RIGHT
 <Multi_key><bracketleft><slash><bracketright>                                                      : "⧄" U29C4 # SQUARED RISING DIAGONAL SLASH
 <Multi_key><bracketleft><backslash><bracketright>                                                  : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
+<Multi_key><bracketleft><periodcentered><bracketright>                                             : "⧅" U29C5 # SQUARED FALLING DIAGONAL SLASH
 #Multi_key><bracketleft><asterisk><bracketright>                                                   : "⧆" U29C6 # SQUARED ASTERISK
 <Multi_key><bracketleft><asterisk>                                                                 : "⧆" U29C6 # SQUARED ASTERISK
 #Multi_key><space><bracketleft><o><bracketright>                                                   : "⧇" U29C7 # SQUARED SMALL CIRCLE
@@ -8402,43 +8636,67 @@
 <Multi_key><KP_2>                                                                   <nobreakspace> : "⧉" U29C9 # TWO JOINED SQUARES
 #Multi_key><period><slash><backslash><underscore>                                                  : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><period><slash><backslash>                                                              : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+<Multi_key><period><slash><periodcentered>                                                         : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 #Multi_key><period><backslash><slash><underscore>                                                  : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><period><backslash>                                                                     : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
+<Multi_key><period><periodcentered>                                                                : "⧊" U29CA # TRIANGLE WITH DOT ABOVE
 <Multi_key><slash><backslash><underscore><underscore>                                              : "⧋" U29CB # TRIANGLE WITH UNDERBAR
+<Multi_key><slash><periodcentered><underscore><underscore>                                         : "⧋" U29CB # TRIANGLE WITH UNDERBAR
 <Multi_key><backslash><slash><underscore><underscore>                                              : "⧋" U29CB # TRIANGLE WITH UNDERBAR
+<Multi_key><periodcentered><slash><underscore><underscore>                                         : "⧋" U29CB # TRIANGLE WITH UNDERBAR
 <Multi_key><slash><backslash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
+<Multi_key><slash><periodcentered><underscore><s>                                                  : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><backslash><slash><underscore><s>                                                       : "⧌" U29CC # S IN TRIANGLE
+<Multi_key><periodcentered><slash><underscore><s>                                                  : "⧌" U29CC # S IN TRIANGLE
 #Multi_key><s><slash><backslash><underscore>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><slash><backslash>                                                                   : "⧌" U29CC # S IN TRIANGLE
+<Multi_key><s><slash><periodcentered>                                                              : "⧌" U29CC # S IN TRIANGLE
 #Multi_key><s><backslash><slash><underscore>                                                       : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><s><backslash><slash>                                                                   : "⧌" U29CC # S IN TRIANGLE
+<Multi_key><s><periodcentered><slash>                                                              : "⧌" U29CC # S IN TRIANGLE
 <Multi_key><space><slash><backslash><underscore>                                                   : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><space><slash><periodcentered><underscore>                                              : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
 <Multi_key><nobreakspace><slash><backslash><underscore>                                            : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><nobreakspace><slash><periodcentered><underscore>                                       : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
 <Multi_key><space><backslash><slash><underscore>                                                   : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><space><periodcentered><slash><underscore>                                              : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
 <Multi_key><nobreakspace><backslash><slash><underscore>                                            : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
+<Multi_key><nobreakspace><periodcentered><slash><underscore>                                       : "⧍" U29CD # TRIANGLE WITH SERIFS AT BOTTOM
 #Multi_key><bar><greater><less><bar>                                                               : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
 <Multi_key><bar><greater><less>                                                                    : "⧎" U29CE # RIGHT TRIANGLE ABOVE LEFT TRIANGLE
 <Multi_key><less><bar><bar>                                                                <space> : "⧏" U29CF # LEFT TRIANGLE BESIDE VERTICAL BAR
 <Multi_key><less><bar><bar>                                                         <nobreakspace> : "⧏" U29CF # LEFT TRIANGLE BESIDE VERTICAL BAR
 <Multi_key><bar><bar><greater>                                                                     : "⧐" U29D0 # VERTICAL BAR BESIDE RIGHT TRIANGLE
 <Multi_key><bar><numbersign><backslash><slash><bar>                                                : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><periodcentered><slash><bar>                                           : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash><bar>                                                : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><slash><periodcentered><bar>                                           : "⧑" U29D1 # BOWTIE WITH LEFT HALF BLACK
 #Multi_key><bar><backslash><slash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><backslash><slash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
+<Multi_key><bar><periodcentered><slash><numbersign>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 #Multi_key><bar><slash><backslash><numbersign><bar>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 <Multi_key><bar><slash><backslash><numbersign>                                                     : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
+<Multi_key><bar><slash><periodcentered><numbersign>                                                : "⧒" U29D2 # BOWTIE WITH RIGHT HALF BLACK
 #Multi_key><bar><numbersign><backslash><slash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
 <Multi_key><bar><numbersign><backslash><slash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
+<Multi_key><bar><numbersign><periodcentered><slash><numbersign>                                    : "⧓" U29D3 # BLACK BOWTIE
 #Multi_key><bar><numbersign><slash><backslash><numbersign><bar>                                    : "⧓" U29D3 # BLACK BOWTIE
 <Multi_key><bar><numbersign><slash><backslash><numbersign>                                         : "⧓" U29D3 # BLACK BOWTIE
+<Multi_key><bar><numbersign><slash><periodcentered><numbersign>                                    : "⧓" U29D3 # BLACK BOWTIE
 <Multi_key><bar><numbersign><backslash><slash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><backslash><slash>                                      <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><periodcentered><slash>                                        <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><periodcentered><slash>                                 <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash>                                             <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 <Multi_key><bar><numbersign><slash><backslash>                                      <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><slash><periodcentered>                                        <space> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
+<Multi_key><bar><numbersign><slash><periodcentered>                                 <nobreakspace> : "⧔" U29D4 # TIMES WITH LEFT HALF BLACK
 #Multi_key><backslash><slash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 <Multi_key><backslash><slash><numbersign>                                                          : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+<Multi_key><periodcentered><slash><numbersign>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 #Multi_key><slash><backslash><numbersign><bar>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 <Multi_key><slash><backslash><numbersign>                                                          : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
+<Multi_key><slash><periodcentered><numbersign>                                                     : "⧕" U29D5 # TIMES WITH RIGHT HALF BLACK
 #Multi_key><X><underscore><underscore>                                                             : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><X><underscore>                                                                         : "⧖" U29D6 # WHITE HOURGLASS
 <Multi_key><space><underscore><X><underscore>                                                      : "⧖" U29D6 # WHITE HOURGLASS
@@ -8513,6 +8771,7 @@
 <Multi_key><m>                                                                      <nobreakspace> : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><m><percent>                                                                            : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><m><backslash>                                                                          : "⧢" U29E2 # SHUFFLE PRODUCT
+<Multi_key><m><periodcentered>                                                                     : "⧢" U29E2 # SHUFFLE PRODUCT
 <Multi_key><equal><slash><slash>                                                                   : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
 <Multi_key><space><space><numbersign>                                                              : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
 <Multi_key><nobreakspace><space><numbersign>                                                       : "⧣" U29E3 # EQUALS SIGN AND SLANTED PARALLEL
@@ -8534,8 +8793,10 @@
 <Multi_key><nobreakspace><bar><equal>                                                              : "⧧" U29E7 # THERMODYNAMIC
 #Multi_key><backslash><numbersign><bar><slash>                                                     : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
 <Multi_key><backslash><numbersign><bar>                                                            : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
+<Multi_key><periodcentered><numbersign><bar>                                                       : "⧨" U29E8 # DOWN-POINTING TRIANGLE WITH LEFT HALF BLACK
 #Multi_key><backslash><bar><numbersign><slash>                                                     : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
 <Multi_key><backslash><bar><numbersign>                                                            : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
+<Multi_key><periodcentered><bar><numbersign>                                                       : "⧩" U29E9 # DOWN-POINTING TRIANGLE WITH RIGHT HALF BLACK
 #Multi_key><less><numbersign><greater><exclam><greater>                                            : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><less><numbersign><greater><exclam>                                                     : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
 <Multi_key><less><numbersign><greater><section>                                                    : "⧪" U29EA # BLACK DIAMOND WITH DOWN ARROW
@@ -8593,22 +8854,34 @@
 #
 <Multi_key><o><backslash>                                                                  <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><o><backslash>                                                           <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><o><periodcentered>                                                             <space> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><o><periodcentered>                                                      <nobreakspace> : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><space><space><space><backslash>                                                        : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><space><space><space><periodcentered>                                                   : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><space><space><backslash>                                                 : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><space><space><periodcentered>                                            : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><nobreakspace><space><backslash>                                          : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><space><periodcentered>                                     : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><backslash>                                   : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
+<Multi_key><nobreakspace><nobreakspace><nobreakspace><periodcentered>                              : "⧵" U29F5 # REVERSE SOLIDUS OPERATOR
 <Multi_key><underscore><slash>                                                             <space> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><underscore><slash>                                                      <nobreakspace> : "⧶" U29F6 # SOLIDUS WITH OVERBAR
 <Multi_key><backslash><minus>                                                              <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 <Multi_key><backslash><minus>                                                       <nobreakspace> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
+<Multi_key><periodcentered><minus>                                                         <space> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
+<Multi_key><periodcentered><minus>                                                  <nobreakspace> : "⧷" U29F7 # REVERSE SOLIDUS WITH HORIZONTAL STROKE
 <Multi_key><space><slash>                                                                  <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><space><slash>                                                           <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><slash>                                                           <space> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><nobreakspace><slash>                                                    <nobreakspace> : "⧸" U29F8 # BIG SOLIDUS
 <Multi_key><space><backslash>                                                              <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><backslash>                                                       <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><space><periodcentered>                                                         <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><space><periodcentered>                                                  <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><backslash>                                                       <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><nobreakspace><backslash>                                                <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><nobreakspace><periodcentered>                                                  <space> : "⧹" U29F9 # BIG REVERSE SOLIDUS
+<Multi_key><nobreakspace><periodcentered>                                           <nobreakspace> : "⧹" U29F9 # BIG REVERSE SOLIDUS
 <Multi_key><space><plus><plus>                                                                     : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><nobreakspace><plus><plus>                                                              : "⧺" U29FA # DOUBLE PLUS
 <Multi_key><3><plus>                                                                               : "⧻" U29FB # TRIPLE PLUS
@@ -8733,13 +9006,21 @@
 #   See #   Leading space
 #
 <Multi_key><space><bar><backslash><slash><bar>                                                     : "⨝" U2A1D # JOIN
+<Multi_key><space><bar><periodcentered><slash><bar>                                                : "⨝" U2A1D # JOIN
 <Multi_key><nobreakspace><bar><backslash><slash><bar>                                              : "⨝" U2A1D # JOIN
+<Multi_key><nobreakspace><bar><periodcentered><slash><bar>                                         : "⨝" U2A1D # JOIN
 <Multi_key><space><bar><slash><backslash><bar>                                                     : "⨝" U2A1D # JOIN
+<Multi_key><space><bar><slash><periodcentered><bar>                                                : "⨝" U2A1D # JOIN
 <Multi_key><nobreakspace><bar><slash><backslash><bar>                                              : "⨝" U2A1D # JOIN
+<Multi_key><nobreakspace><bar><slash><periodcentered><bar>                                         : "⨝" U2A1D # JOIN
 <Multi_key><space><slash><backslash><bar>                                                          : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><space><slash><periodcentered><bar>                                                     : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><nobreakspace><slash><backslash><bar>                                                   : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><nobreakspace><slash><periodcentered><bar>                                              : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><space><backslash><slash><bar>                                                          : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><space><periodcentered><slash><bar>                                                     : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><nobreakspace><backslash><slash><bar>                                                   : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
+<Multi_key><nobreakspace><periodcentered><slash><bar>                                              : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 #
 #   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
 #   like that of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION, except that it is a
@@ -8791,6 +9072,7 @@
 <Multi_key><minus><period>                                                                 <space> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <Multi_key><minus><period>                                                          <nobreakspace> : "⨪" U2A2A # MINUS SIGN WITH DOT BELOW
 <Multi_key><period><minus><period><backslash>                                                      : "⨫" U2A2B # MINUS SIGN WITH FALLING DOTS
+<Multi_key><period><minus><period><periodcentered>                                                 : "⨫" U2A2B # MINUS SIGN WITH FALLING DOTS
 <Multi_key><period><minus><period><slash>                                                          : "⨬" U2A2C # MINUS SIGN WITH RISING DOTS
 <Multi_key><parenleft><plus>                                                                       : "⨭" U2A2D # PLUS SIGN IN LEFT HALF CIRCLE
 <Multi_key><plus><parenright>                                                              <space> : "⨮" U2A2E # PLUS SIGN IN RIGHT HALF CIRCLE
@@ -8815,16 +9097,25 @@
 <Multi_key><nobreakspace><period><X>                                                               : "⨰" U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
 <Multi_key><x><underscore>                                                                         : "⨱" U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
 <Multi_key><backslash><underscore><slash>                                                          : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><periodcentered><underscore><slash>                                                     : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><backslash><slash><underscore>                                                  <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><backslash><slash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><periodcentered><slash><underscore>                                             <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><periodcentered><slash><underscore>                                      <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><slash><backslash><underscore>                                                  <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><slash><backslash><underscore>                                           <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><slash><periodcentered><underscore>                                             <space> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
+<Multi_key><slash><periodcentered><underscore>                                      <nobreakspace> : "⨲" U2A32 # SEMIDIRECT PRODUCT WITH BOTTOM CLOSED
 <Multi_key><space><numbersign><percent>                                                            : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><nobreakspace><numbersign><percent>                                                     : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><space><numbersign><backslash>                                                          : "⨳" U2A33 # SMASH PRODUCT
+<Multi_key><space><numbersign><periodcentered>                                                     : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><nobreakspace><numbersign><backslash>                                                   : "⨳" U2A33 # SMASH PRODUCT
+<Multi_key><nobreakspace><numbersign><periodcentered>                                              : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><backslash><backslash><slash><slash>                                                    : "⨳" U2A33 # SMASH PRODUCT
+<Multi_key><periodcentered><periodcentered><slash><slash>                                          : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><slash><slash><backslash><backslash>                                                    : "⨳" U2A33 # SMASH PRODUCT
+<Multi_key><slash><slash><periodcentered><periodcentered>                                          : "⨳" U2A33 # SMASH PRODUCT
 <Multi_key><parenleft><x>                                                                          : "⨴" U2A34 # MULTIPLICATION SIGN IN LEFT HALF CIRCLE
 <Multi_key><parenleft><X>                                                                          : "⨴" U2A34 # MULTIPLICATION SIGN IN LEFT HALF CIRCLE
 <Multi_key><x><parenright>                                                                         : "⨵" U2A35 # MULTIPLICATION SIGN IN RIGHT HALF CIRCLE
@@ -8842,18 +9133,24 @@
 <Multi_key><A><plus>                                                                               : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><a><plus>                                                                               : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><plus>                                                    : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key><slash><periodcentered><underscore><plus>                                               : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><plus>                                                    : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key><periodcentered><slash><underscore><plus>                                               : "⨹" U2A39 # PLUS SIGN IN TRIANGLE
 <Multi_key><space><A><minus>                                                                       : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><nobreakspace><A><minus>                                                                : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><space><a><minus>                                                                       : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><nobreakspace><a><minus>                                                                : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><minus>                                                   : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key><slash><periodcentered><underscore><minus>                                              : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><minus>                                                   : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key><periodcentered><slash><underscore><minus>                                              : "⨺" U2A3A # MINUS SIGN IN TRIANGLE
 <Multi_key><A><x>                                                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><A><X>                                                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><a><x>                                                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><slash><backslash><underscore><x>                                                       : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key><slash><periodcentered><underscore><x>                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><x>                                                       : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key><periodcentered><slash><underscore><x>                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><space><minus><apostrophe>                                                      <space> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><space><minus><apostrophe>                                               <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><apostrophe>                                               <space> : "⨼" U2A3C # INTERIOR PRODUCT
@@ -8880,6 +9177,7 @@
 <Multi_key><Z><semicolon>                                                                          : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><p><percent>                                                                            : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><p><backslash>                                                                          : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
+<Multi_key><p><periodcentered>                                                                     : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><c><p>                                                                                  : "⨿" U2A3F # AMALGAMATION OR COPRODUCT
 <Multi_key><n><period>                                                                             : "⩀" U2A40 # INTERSECTION WITH DOT
 <Multi_key><N><period>                                                                             : "⩀" U2A40 # INTERSECTION WITH DOT
@@ -8986,6 +9284,7 @@
 #
 <Multi_key><w><percent>                                                                            : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><w><backslash>                                                                          : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
+<Multi_key><w><periodcentered>                                                                     : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><space><a><a>                                                                           : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><nobreakspace><a><a>                                                                    : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><w>                                                                             <space> : "⩖" U2A56 # TWO INTERSECTING LOGICAL OR
@@ -9004,10 +9303,12 @@
 <Multi_key><V><A>                                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><v><percent><v>                                                                         : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><v><backslash><v>                                                                       : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
+<Multi_key><v><periodcentered><v>                                                                  : "⩙" U2A59 # LOGICAL OR OVERLAPPING LOGICAL AND
 <Multi_key><a><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><A><bar>                                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><percent><bar>                                                                       : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><backslash><bar>                                                                     : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
+<Multi_key><v><periodcentered><bar>                                                                : "⩚" U2A5A # LOGICAL AND WITH MIDDLE STEM
 <Multi_key><v><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><V><bar>                                                                                : "⩛" U2A5B # LOGICAL OR WITH MIDDLE STEM
 <Multi_key><A><minus>                                                                      <space> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
@@ -9016,6 +9317,7 @@
 <Multi_key><a><minus>                                                               <nobreakspace> : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><percent><minus>                                                                     : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><backslash><minus>                                                                   : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
+<Multi_key><v><periodcentered><minus>                                                              : "⩜" U2A5C # LOGICAL AND WITH HORIZONTAL DASH
 <Multi_key><v><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><V><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><underscore><underscore><A>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
@@ -9023,17 +9325,23 @@
 <Multi_key><space><underscore><underscore><v><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><v><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><underscore><underscore><v><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><v><periodcentered>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><v><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><v><periodcentered>                               : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><underscore><underscore><V><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><V><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><underscore><underscore><V><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><space><underscore><underscore><V><periodcentered>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><nobreakspace><underscore><underscore><V><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><nobreakspace><underscore><underscore><V><periodcentered>                               : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><a>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><backslash>                                                            : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><v><periodcentered>                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><backslash>                                                            : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><minus><minus><V><periodcentered>                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
@@ -9042,10 +9350,13 @@
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><backslash><underscore>                                                      <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><backslash><underscore>                                               <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><v><periodcentered><underscore>                                                 <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><v><periodcentered><underscore>                                          <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><space><A><underscore><underscore>                                                      : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><nobreakspace><A><underscore><underscore>                                               : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><backslash><underscore><underscore>                                                  : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><v><periodcentered><underscore><underscore>                                             : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 #
 #   "⩡" U2A61 looks like a small "⊻" U22BB and thus qualifies for a sequence
 #   with trailing comma.
@@ -9167,14 +9478,20 @@
 <Multi_key><asciitilde><less>                                                       <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                                   <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><asciitilde><backslash><less>                                            <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
+<Multi_key><asciitilde><periodcentered><less>                                              <space> : "⪝" U2A9D # SIMILAR OR LESS-THAN
+<Multi_key><asciitilde><periodcentered><less>                                       <nobreakspace> : "⪝" U2A9D # SIMILAR OR LESS-THAN
 <Multi_key><space><asciitilde><greater>                                                            : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><nobreakspace><asciitilde><greater>                                                     : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><backslash><greater>                                                <space> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><backslash><greater>                                         <nobreakspace> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
+<Multi_key><asciitilde><periodcentered><greater>                                           <space> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
+<Multi_key><asciitilde><periodcentered><greater>                                    <nobreakspace> : "⪞" U2A9E # SIMILAR OR GREATER-THAN
 <Multi_key><asciitilde><less><equal>                                                               : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><backslash><less><equal>                                                    : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
+<Multi_key><asciitilde><periodcentered><less><equal>                                               : "⪟" U2A9F # SIMILAR ABOVE LESS-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><greater><equal>                                                            : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
 <Multi_key><asciitilde><backslash><greater><equal>                                                 : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
+<Multi_key><asciitilde><periodcentered><greater><equal>                                            : "⪠" U2AA0 # SIMILAR ABOVE GREATER-THAN ABOVE EQUALS SIGN
 <Multi_key><2><less>                                                                       <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><2><less>                                                                <nobreakspace> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><KP_2><less>                                                                    <space> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
@@ -9258,13 +9575,16 @@
 <Multi_key><c><period>                                                              <nobreakspace> : "⪽" U2ABD # SUBSET WITH DOT
 <Multi_key><b><period>                                                                             : "⪾" U2ABE # SUPERSET WITH DOT
 <Multi_key><c><backslash><period>                                                                  : "⪾" U2ABE # SUPERSET WITH DOT
+<Multi_key><c><periodcentered><period>                                                             : "⪾" U2ABE # SUPERSET WITH DOT
 <Multi_key><c><plus>                                                                               : "⪿" U2ABF # SUBSET WITH PLUS SIGN BELOW
 <Multi_key><b><plus>                                                                               : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
 <Multi_key><c><backslash><plus>                                                                    : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
+<Multi_key><c><periodcentered><plus>                                                               : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
 <Multi_key><c><c><plus>                                                                            : "⫀" U2AC0 # SUPERSET WITH PLUS SIGN BELOW
 <Multi_key><c><x>                                                                                  : "⫁" U2AC1 # SUBSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><b><x>                                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><backslash><x>                                                                       : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
+<Multi_key><c><periodcentered><x>                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><c><x>                                                                               : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><space><period><c><underscore>                                                          : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><underscore>                                                   : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
@@ -9272,7 +9592,9 @@
 <Multi_key><space><period><b>                                                                      : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><b>                                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><c><backslash>                                                           : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><space><period><c><periodcentered>                                                      : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><backslash>                                                    : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><nobreakspace><period><c><periodcentered>                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><space><period><c><c>                                                                   : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><nobreakspace><period><c><c>                                                            : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><c><equal>                                                                      <space> : "⫅" U2AC5 # SUBSET OF ABOVE EQUALS SIGN
@@ -9281,6 +9603,8 @@
 <Multi_key><b><equal>                                                               <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><backslash><equal>                                                           <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><backslash><equal>                                                    <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
+<Multi_key><c><periodcentered><equal>                                                      <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
+<Multi_key><c><periodcentered><equal>                                               <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><c><equal>                                                                   <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><c><equal>                                                            <nobreakspace> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
 <Multi_key><c><asciitilde>                                                                 <space> : "⫇" U2AC7 # SUBSET OF ABOVE TILDE OPERATOR
@@ -9289,15 +9613,19 @@
 <Multi_key><b><asciitilde>                                                          <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                                      <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><backslash><asciitilde>                                               <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><periodcentered><asciitilde>                                                 <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
+<Multi_key><c><periodcentered><asciitilde>                                          <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><c><asciitilde>                                                              <space> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><c><asciitilde>                                                       <nobreakspace> : "⫈" U2AC8 # SUPERSET OF ABOVE TILDE OPERATOR
 <Multi_key><c><asciitilde><asciitilde>                                                             : "⫉" U2AC9 # SUBSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><b><asciitilde><asciitilde>                                                             : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><backslash><asciitilde><asciitilde>                                                  : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
+<Multi_key><c><periodcentered><asciitilde><asciitilde>                                             : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><c><asciitilde><asciitilde>                                                          : "⫊" U2ACA # SUPERSET OF ABOVE ALMOST EQUAL TO
 <Multi_key><c><equal><slash>                                                                       : "⫋" U2ACB # SUBSET OF ABOVE NOT EQUAL TO
 <Multi_key><b><equal><slash>                                                                       : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><backslash><equal><slash>                                                            : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
+<Multi_key><c><periodcentered><equal><slash>                                                       : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><c><c><equal><slash>                                                                    : "⫌" U2ACC # SUPERSET OF ABOVE NOT EQUAL TO
 <Multi_key><space><bracketleft><minus>                                                             : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
 <Multi_key><nobreakspace><bracketleft><minus>                                                      : "⫍" U2ACD # SQUARE LEFT OPEN BOX OPERATOR
@@ -9324,7 +9652,9 @@
 <Multi_key><space><e><percent>                                                                     : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><nobreakspace><e><percent>                                                              : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><space><e><backslash>                                                                   : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><space><e><periodcentered>                                                              : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><nobreakspace><e><backslash>                                                            : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
+<Multi_key><nobreakspace><e><periodcentered>                                                       : "⫙" U2AD9 # ELEMENT OF OPENING DOWNWARDS
 <Multi_key><T><n>                                                                                  : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                          <space> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
 <Multi_key><t><n>                                                                   <nobreakspace> : "⫚" U2ADA # PITCHFORK WITH TEE TOP
@@ -9360,11 +9690,15 @@
 <Multi_key><T><percent><apostrophe>                                                                : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><percent><rightsinglequotemark>                                                      : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><backslash><apostrophe>                                                              : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><periodcentered><apostrophe>                                                         : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><T><backslash><rightsinglequotemark>                                                    : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><T><periodcentered><rightsinglequotemark>                                               : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><T><percent>                                                                     : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><nobreakspace><T><percent>                                                              : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><space><T><backslash>                                                                   : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><space><T><periodcentered>                                                              : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><nobreakspace><T><backslash>                                                            : "⫠" U2AE0 # SHORT UP TACK
+<Multi_key><nobreakspace><T><periodcentered>                                                       : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><I><underscore><apostrophe>                                                             : "⫠" U2AE0 # SHORT UP TACK
 <Multi_key><I><underscore><rightsinglequotemark>                                                   : "⫠" U2AE0 # SHORT UP TACK
 #Multi_key><space><I><underscore>                                                                  : "⫠" U2AE0 # SHORT UP TACK
@@ -9407,13 +9741,18 @@
 <Multi_key><2><T><percent>                                                                         : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><KP_2><T><percent>                                                                      : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><2><T><backslash>                                                                       : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><2><T><periodcentered>                                                                  : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><KP_2><T><backslash>                                                                    : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
+<Multi_key><KP_2><T><periodcentered>                                                               : "⫨" U2AE8 # SHORT UP TACK WITH UNDERBAR
 <Multi_key><t><t><percent>                                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><percent><apostrophe>                                                             : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><percent><rightsinglequotemark>                                                   : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><t><t><backslash>                                                                       : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><t><t><periodcentered>                                                                  : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><backslash><apostrophe>                                                           : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><periodcentered><apostrophe>                                                      : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T><backslash><rightsinglequotemark>                                                 : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
+<Multi_key><T><T><periodcentered><rightsinglequotemark>                                            : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><apostrophe><equal><apostrophe>                                                         : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><rightsinglequotemark><equal><rightsinglequotemark>                                     : "⫩" U2AE9 # SHORT UP TACK ABOVE SHORT DOWN TACK
 <Multi_key><T><T>                                                                          <space> : "⫪" U2AEA # DOUBLE DOWN TACK
@@ -9426,10 +9765,14 @@
 <Multi_key><T><T><percent>                                                          <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><T><backslash>                                                               <space> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><T><backslash>                                                        <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><T><periodcentered>                                                          <space> : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><T><periodcentered>                                                   <nobreakspace> : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><2><percent>                                                                         : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><KP_2><percent>                                                                      : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><2><backslash>                                                                       : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><2><periodcentered>                                                                  : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><T><KP_2><backslash>                                                                    : "⫫" U2AEB # DOUBLE UP TACK
+<Multi_key><T><KP_2><periodcentered>                                                               : "⫫" U2AEB # DOUBLE UP TACK
 <Multi_key><N><O><T>                                                                               : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                             <space> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
 <Multi_key><equal><apostrophe>                                                      <nobreakspace> : "⫬" U2AEC # DOUBLE STROKE NOT SIGN
@@ -9442,6 +9785,8 @@
 <Multi_key><nobreakspace><rightsinglequotemark><equal>                                             : "⫭" U2AED # REVERSED DOUBLE STROKE NOT SIGN
 <Multi_key><bar><backslash>                                                                <space> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><bar><backslash>                                                         <nobreakspace> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
+<Multi_key><bar><periodcentered>                                                           <space> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
+<Multi_key><bar><periodcentered>                                                    <nobreakspace> : "⫮" U2AEE # DOES NOT DIVIDE WITH REVERSED NEGATION SLASH
 <Multi_key><o><i>                                                                          <space> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><i>                                                                   <nobreakspace> : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
 <Multi_key><o><I>                                                                                  : "⫯" U2AEF # VERTICAL LINE WITH CIRCLE ABOVE
@@ -9603,7 +9948,9 @@
 #   Mirrors of U2971, U2972, U2975.
 <Multi_key><equal><less><minus>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
+<Multi_key><asciitilde><periodcentered><less><minus>                                               : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                                        : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><less><minus><asciitilde><asciitilde><periodcentered>                                   : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 #
 #   Among the three greater-minus-greater: "↣" U21A3, "⥸" U2978, "⭃" U2B43, and
 #   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to stand out
@@ -9618,6 +9965,7 @@
 <Multi_key><b><minus><greater>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><backslash><minus><greater>                                                          : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><backslash><minus>                                                                   : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+<Multi_key><c><periodcentered><minus>                                                              : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><c><minus><greater>                                                                  : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><c><minus>                                                                           : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #
@@ -9632,12 +9980,16 @@
 <Multi_key><minus><greater><KP_4>                                                                  : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 #Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><asciitilde><backslash><minus>                                                          : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><asciitilde><periodcentered><minus>                                                     : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                                     : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><minus><greater><asciitilde><asciitilde><periodcentered>                                : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><asciitilde><less><minus>                                                               : "⭉" U2B49 # TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde>                                           <space> : "⭊" U2B4A # LEFTWARDS ARROW ABOVE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><asciitilde>                                    <nobreakspace> : "⭊" U2B4A # LEFTWARDS ARROW ABOVE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><backslash>                                                    : "⭋" U2B4B # LEFTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
+<Multi_key><less><minus><asciitilde><periodcentered>                                               : "⭋" U2B4B # LEFTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde><backslash>                                                 : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
+<Multi_key><minus><greater><asciitilde><periodcentered>                                            : "⭌" U2B4C # RIGHTWARDS ARROW ABOVE REVERSE TILDE OPERATOR
 #
 #
 # # Hebrew presentation form in block FB00 used in mathematics
@@ -9671,6 +10023,7 @@
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
 <Multi_key><plus><backslash>                                                                       : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN
+<Multi_key><plus><periodcentered>                                                                  : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN
 #
 #
 # # Symbol in Miscellaneous Symbols Supplement block U1CEC0 used in mathematics
