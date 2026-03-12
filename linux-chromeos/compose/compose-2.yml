@@ -3295,11 +3295,11 @@
 #   See #^# COMBINING_BELOW
 #
 <UEFD1><UEFD1>                                                                             <space> : "̿" U033F # COMBINING DOUBLE OVERLINE
-<Multi_key><asciicircum><asciicircum>                                                      <space> : "̿" U033F # COMBINING DOUBLE OVERLINE
+#   Multikey conflicts with "⋄" U22C4.                                                     <space> : "̿" U033F # COMBINING DOUBLE OVERLINE
 <UEFD1><UEFD1>                                                                             <U200B> : "̿" U033F # COMBINING DOUBLE OVERLINE
 <Multi_key><asciicircum><asciicircum>                                                      <U200B> : "̿" U033F # COMBINING DOUBLE OVERLINE
 <UEFD1><UEFD1>                                                                      <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
-<Multi_key><asciicircum><asciicircum>                                               <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
+#   Multikey conflicts with "⋄" U22C4.                                              <nobreakspace> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                             <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <Multi_key><asciicircum><asciicircum>                                                      <U202F> : "﹌" UFE4C # DOUBLE WAVY OVERLINE
 <UEFD1><UEFD1>                                                                       <asciicircum> : "᪳" U1AB3 # COMBINING DOWNWARDS ARROW
@@ -8952,7 +8952,7 @@
 <dead_abovedot>                                                                                <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
 <Multi_key><period>                                                                            <E> : "Ė" U0116 # LATIN CAPITAL LETTER E WITH DOT ABOVE
 <dead_abovedot>                                                                                <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
-<Multi_key><period>                                                                            <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
+#   Multikey conflicts with "⋵" U22F5.                                                         <e> : "ė" U0117 # LATIN SMALL LETTER E WITH DOT ABOVE
 <dead_abovedot>                                                                                <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <Multi_key><period>                                                                            <F> : "Ḟ" U1E1E # LATIN CAPITAL LETTER F WITH DOT ABOVE
 <dead_abovedot>                                                                                <f> : "ḟ" U1E1F # LATIN SMALL LETTER F WITH DOT ABOVE
@@ -10316,7 +10316,7 @@
 <UEFD8>                                                                                        <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE
 <Multi_key><minus>                                                                             <d> : "đ" U0111 # LATIN SMALL LETTER D WITH STROKE
 <UEFD8>                                                                                        <e> : "ꬳ" UAB33 # LATIN SMALL LETTER BARRED E
-<Multi_key><minus>                                                                             <e> : "ꬳ" UAB33 # LATIN SMALL LETTER BARRED E
+#   Multikey conflicts with "⋲" U22F2.                                                         <e> : "ꬳ" UAB33 # LATIN SMALL LETTER BARRED E
 <UEFD8>                                                                                        <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE
 <Multi_key><minus>                                                                             <F> : "Ꞙ" UA798 # LATIN CAPITAL LETTER F WITH STROKE
 <UEFD8>                                                                                        <f> : "ꞙ" UA799 # LATIN SMALL LETTER F WITH STROKE
@@ -11243,7 +11243,7 @@
 <UEFD2>                                                                                        <E> : "ᴇ" U1D07 # LATIN LETTER SMALL CAPITAL E
 <Multi_key><underscore>                                                                        <E> : "ᴇ" U1D07 # LATIN LETTER SMALL CAPITAL E
 <UEFD2>                                                                                        <e> : "ₑ" U2091 # LATIN SUBSCRIPT SMALL LETTER E
-<Multi_key><underscore>                                                                        <e> : "ₑ" U2091 # LATIN SUBSCRIPT SMALL LETTER E
+#   Multikey conflicts with "⋶" U22F6, "⋽" U22FD.                                              <e> : "ₑ" U2091 # LATIN SUBSCRIPT SMALL LETTER E
 <UEFD2>                                                                                        <F> : "ꜰ" UA730 # LATIN LETTER SMALL CAPITAL F
 <Multi_key><underscore>                                                                        <F> : "ꜰ" UA730 # LATIN LETTER SMALL CAPITAL F
 <UEFD2>                                                                                        <f> : "ᵩ" U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
@@ -11287,7 +11287,7 @@
 <UEFD2>                                                                                        <P> : "ᴘ" U1D18 # LATIN LETTER SMALL CAPITAL P
 <Multi_key><underscore>                                                                        <P> : "ᴘ" U1D18 # LATIN LETTER SMALL CAPITAL P
 <UEFD2>                                                                                        <p> : "ₚ" U209A # LATIN SUBSCRIPT SMALL LETTER P
-<Multi_key><underscore>                                                                        <p> : "ₚ" U209A # LATIN SUBSCRIPT SMALL LETTER P
+#   Multikey conflicts with "⋽" U22FD.                                                         <p> : "ₚ" U209A # LATIN SUBSCRIPT SMALL LETTER P
 <UEFD2>                                                                                        <Q> : "ꞯ" UA7AF # LATIN LETTER SMALL CAPITAL Q
 <Multi_key><underscore>                                                                        <Q> : "ꞯ" UA7AF # LATIN LETTER SMALL CAPITAL Q
 <UEFD2>                                                                                        <q> : "ᵨ" U1D68 # GREEK SUBSCRIPT SMALL LETTER RHO
@@ -12465,7 +12465,7 @@
 <dead_diaeresis><dead_diaeresis>                                                               <E> : "Ē" U0112 # LATIN CAPITAL LETTER E WITH MACRON
 <Multi_key><colon><colon>                                                                      <E> : "Ē" U0112 # LATIN CAPITAL LETTER E WITH MACRON
 <dead_macron>                                                                                  <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
-<Multi_key><bar>                                                                               <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
+#   Multikey conflicts with "⋻" U22FB, "⋼" U22FC.                                              <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
 <dead_diaeresis><dead_diaeresis>                                                               <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
 <Multi_key><colon><colon>                                                                      <e> : "ē" U0113 # LATIN SMALL LETTER E WITH MACRON
 <dead_macron>                                                                                  <F> : "ɸ" U0278 # LATIN SMALL LETTER PHI
