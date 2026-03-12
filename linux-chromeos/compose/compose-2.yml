@@ -2954,7 +2954,7 @@
 #   See # # Fraction slash
 #
 <UEFD1><UEFD2>                                                                             <space> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><asciicircum><underscore>                                                       <space> : "⁄" U2044 # FRACTION SLASH
+#   Multikey conflicts with "▵" U25B5.                                                     <space> : "⁄" U2044 # FRACTION SLASH
 <UEFD2><UEFD1>                                                                             <space> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><underscore><asciicircum>                                                       <space> : "⁄" U2044 # FRACTION SLASH
 <UEFD1><UEFD2>                                                                             <U200B> : "⁄" U2044 # FRACTION SLASH
@@ -2962,7 +2962,7 @@
 <UEFD2><UEFD1>                                                                             <U200B> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><underscore><asciicircum>                                                       <U200B> : "⁄" U2044 # FRACTION SLASH
 <UEFD1><UEFD2>                                                                      <nobreakspace> : "⁄" U2044 # FRACTION SLASH
-<Multi_key><asciicircum><underscore>                                                <nobreakspace> : "⁄" U2044 # FRACTION SLASH
+#   Multikey conflicts with "▵" U25B5.                                              <nobreakspace> : "⁄" U2044 # FRACTION SLASH
 <UEFD2><UEFD1>                                                                      <nobreakspace> : "⁄" U2044 # FRACTION SLASH
 <Multi_key><underscore><asciicircum>                                                <nobreakspace> : "⁄" U2044 # FRACTION SLASH
 <UEFD1><UEFD2>                                                                             <U202F> : "⁄" U2044 # FRACTION SLASH

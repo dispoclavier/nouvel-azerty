@@ -5286,10 +5286,10 @@
 #   mode where level 3 of the space bar is no-break space.
 #
 #   Examples involving no, single or multiple leading [nobreak]space:
-#   None:    "∕" U2215, "∖" U2216,  "⦀" U2980, "∣" U2223, "∼" U223C;
-#   Single:  "⧸" U29F8, "⧹" U29F9,  "⫴" U2AF4, "▷" U25B7,           ;
-#   Double:  "⟋" U27CB, "⟍" U27CD, "⫼" U2AFC,                      "⧂" U29C2, "⧜" U29DC, "◽" U25FD, "⤶" U2936;
-#   Triple:   "⁄" U2044, "⧵" U29F5 .
+#   None:    "∕" U2215, "∖" U2216,  "⦀" U2980, "∗" U2217, "∣" U2223, "∼" U223C;
+#   Single:  "⧸" U29F8, "⧹" U29F9,  "⫴" U2AF4, "⋆" U22C6, "▷" U25B7;
+#   Double:  "⟋" U27CB, "⟍" U27CD, "⫼" U2AFC, "☆" U2606, "◽" U25FD, "⤶" U2936;
+#   Triple:   "⁄" U2044, "⧵" U29F5.
 #
 #   Previously, when things did not work as expected, the likely culprit was a
 #   conflict with a dead key equivalent. Examples included "≪" U226A, "≫" U226B
@@ -7395,16 +7395,16 @@
 <Multi_key><space><slash><numbersign><underscore><periodcentered>                                  : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><numbersign><underscore><backslash>                                : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><numbersign><underscore><periodcentered>                           : "▴" U25B4 # BLACK UP-POINTING SMALL TRIANGLE
-<Multi_key><space><asciicircum><underscore>                                                        : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
-<Multi_key><nobreakspace><asciicircum><underscore>                                                 : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><asciicircum><underscore>                                                       <space> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
+<Multi_key><asciicircum><underscore>                                                <nobreakspace> : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><space><slash><underscore><backslash>                                                   : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><space><slash><underscore><periodcentered>                                              : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><underscore><backslash>                                            : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
 <Multi_key><nobreakspace><slash><underscore><periodcentered>                                       : "▵" U25B5 # WHITE UP-POINTING SMALL TRIANGLE
-#Multi_key><space><bar><numbersign><backslash><slash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-#Multi_key><space><bar><numbersign><slash><backslash>                                              : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><space><bar><numbersign>                                                                : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
-<Multi_key><nobreakspace><bar><numbersign>                                                         : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+#Multi_key><bar><numbersign><backslash><slash>                                                     : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+#Multi_key><bar><numbersign><slash><backslash>                                                     : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><bar><numbersign>                                                               <space> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
+<Multi_key><bar><numbersign>                                                        <nobreakspace> : "▶" U25B6 # BLACK RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                                  <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><backslash><slash>                                           <nobreakspace> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
 <Multi_key><space><bar><periodcentered><slash>                                             <space> : "▷" U25B7 # WHITE RIGHT-POINTING TRIANGLE
@@ -7594,18 +7594,33 @@
 #   https://www.unicode.org/charts/PDF/U2600.pdf
 #   https://www.unicode.org/charts/nameslist/n_2600.html
 #
-<Multi_key><space><space><space><asterisk><numbersign>                                             : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><space><space><asterisk><numbersign>                                      : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><nobreakspace><space><asterisk><numbersign>                               : "★" U2605 # BLACK STAR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk><numbersign>                        : "★" U2605 # BLACK STAR
-<Multi_key><space><space><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
-<Multi_key><space><space><space><asterisk>                                          <nobreakspace> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><space><space><asterisk>                                          <space> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><space><space><asterisk>                                   <nobreakspace> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><nobreakspace><space><asterisk>                                   <space> : "☆" U2606 # WHITE STAR
-<Multi_key><nobreakspace><nobreakspace><space><asterisk>                            <nobreakspace> : "☆" U2606 # WHITE STAR
+#   "★" U2605 is also in group 1 of EuroSign and quotedbl on the "E" key with
+#   a French alphabetic mnemonic. Leading space is supported incrementally for
+#   consistency and lenience.
+#   See #   Leading space
+#
+<Multi_key><asterisk><numbersign>                                                          <space> : "★" U2605 # BLACK STAR
+<Multi_key><asterisk><numbersign>                                                   <nobreakspace> : "★" U2605 # BLACK STAR
+<Multi_key><space><asterisk><numbersign>                                                           : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><asterisk><numbersign>                                                    : "★" U2605 # BLACK STAR
+<Multi_key><space><space><asterisk><numbersign>                                                    : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><space><asterisk><numbersign>                                             : "★" U2605 # BLACK STAR
+<Multi_key><nobreakspace><nobreakspace><asterisk><numbersign>                                      : "★" U2605 # BLACK STAR
+#
+#   "☆" U2606 is also in group 1 of percent, key D02 next to the above.
+#
+<Multi_key><space><space><asterisk>                                                        <space> : "☆" U2606 # WHITE STAR
+<Multi_key><space><space><asterisk>                                                 <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><space><asterisk>                                                 <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><space><asterisk>                                          <nobreakspace> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><asterisk>                                          <space> : "☆" U2606 # WHITE STAR
+<Multi_key><nobreakspace><nobreakspace><asterisk>                                   <nobreakspace> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                            <space> : "☆" U2606 # WHITE STAR
 <Multi_key><nobreakspace><nobreakspace><nobreakspace><asterisk>                     <nobreakspace> : "☆" U2606 # WHITE STAR
+#
+#   "♀" U2640 is also in group 4 of parenright on the "F" key.
+#   "♂" U2642 is also in group 4 of bar on the "M" key.
+#
 <Multi_key><space><o><plus>                                                                        : "♀" U2640 # FEMALE SIGN
 <Multi_key><nobreakspace><o><plus>                                                                 : "♀" U2640 # FEMALE SIGN
 <Multi_key><o><slash><greater>                                                                     : "♂" U2642 # MALE SIGN
@@ -7643,18 +7658,17 @@
 <Multi_key><nobreakspace><B>                                                        <nobreakspace> : "♭" U266D # MUSIC FLAT SIGN
 #
 #   The "h" was reportedly used as a fallback to print "♮" named "b quadratum",
-#   hence it is picked as a presumably intuitive multikey sequence constituent.
+#   hence it is picked as a presumably intuitive multikey sequence constituent,
+#   although conflicting with an alternative sequence for the Hessian matrix
+#   "∇" U2207.
 #   https://music.stackexchange.com/questions/10195/why-is-note-b-marked-with-h-in-scandinavia-and-germany
 #
 <Multi_key><space><h>                                                                              : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><nobreakspace><h>                                                                       : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><H>                                                                              : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><nobreakspace><H>                                                                       : "♮" U266E # MUSIC NATURAL SIGN
-<Multi_key><space><numbersign>                                                             <space> : "♯" U266F # MUSIC SHARP SIGN
-<Multi_key><space><numbersign>                                                      <nobreakspace> : "♯" U266F # MUSIC SHARP SIGN
-<Multi_key><nobreakspace><numbersign>                                                      <space> : "♯" U266F # MUSIC SHARP SIGN
-<Multi_key><nobreakspace><numbersign>                                               <nobreakspace> : "♯" U266F # MUSIC SHARP SIGN
-#
+<Multi_key><numbersign>                                                                    <space> : "♯" U266F # MUSIC SHARP SIGN
+<Multi_key><numbersign>                                                             <nobreakspace> : "♯" U266F # MUSIC SHARP SIGN
 #
 # # Miscellaneous Mathematical Symbols-A of block U27C0
 #
