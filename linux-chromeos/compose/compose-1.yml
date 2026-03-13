@@ -7772,8 +7772,8 @@
 <Multi_key><space><c><periodcentered><slash>                                                       : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><backslash><slash>                                                     : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><c><periodcentered><slash>                                                : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
-<Multi_key><space><bar><minus>                                                                     : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
-<Multi_key><nobreakspace><bar><minus>                                                              : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><bar><minus>                                                                    <space> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
+<Multi_key><bar><minus>                                                             <nobreakspace> : "⟊" U27CA # VERTICAL BAR WITH HORIZONTAL STROKE
 <Multi_key><space><space><slash>                                                           <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><space><space><slash>                                                    <nobreakspace> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
 <Multi_key><nobreakspace><space><slash>                                                    <space> : "⟋" U27CB # MATHEMATICAL RISING DIAGONAL
@@ -7794,12 +7794,10 @@
 <Multi_key><nobreakspace><nobreakspace><backslash>                                  <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><periodcentered>                                    <space> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
 <Multi_key><nobreakspace><nobreakspace><periodcentered>                             <nobreakspace> : "⟍" U27CD # MATHEMATICAL FALLING DIAGONAL
+<Multi_key><bracketleft><a>                                                                        : "⟎" U27CE # SQUARED LOGICAL AND
+<Multi_key><bracketleft><A>                                                                        : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><a><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><A><bracketright>                                                                       : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><space><bracketleft><a>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><nobreakspace><bracketleft><a>                                                          : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><space><bracketleft><A>                                                                 : "⟎" U27CE # SQUARED LOGICAL AND
-<Multi_key><nobreakspace><bracketleft><A>                                                          : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><bracketleft><v><percent>                                                               : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><v><percent><bracketright>                                                              : "⟎" U27CE # SQUARED LOGICAL AND
 <Multi_key><v><bracketright>                                                                       : "⟏" U27CF # SQUARED LOGICAL OR
@@ -7808,10 +7806,6 @@
 <Multi_key><bracketleft><v>                                                         <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><V>                                                                <space> : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><bracketleft><V>                                                         <nobreakspace> : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><space><bracketleft><v>                                                                 : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><nobreakspace><bracketleft><v>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><space><bracketleft><V>                                                                 : "⟏" U27CF # SQUARED LOGICAL OR
-<Multi_key><nobreakspace><bracketleft><V>                                                          : "⟏" U27CF # SQUARED LOGICAL OR
 <Multi_key><less><period><greater>                                                                 : "⟐" U27D0 # WHITE DIAMOND WITH CENTRED DOT
 <Multi_key><a><period>                                                                             : "⟑" U27D1 # AND WITH DOT
 <Multi_key><A><period>                                                                             : "⟑" U27D1 # AND WITH DOT
@@ -7930,10 +7924,10 @@
 <Multi_key><nobreakspace><minus><bracketright><bracketleft>                                        : "⟤" U27E4 # WHITE SQUARE WITH LEFTWARDS TICK
 <Multi_key><bracketleft><bracketright><minus>                                                      : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
 <Multi_key><bracketright><bracketleft><minus>                                                      : "⟥" U27E5 # WHITE SQUARE WITH RIGHTWARDS TICK
-<Multi_key><space><bracketleft><bracketleft>                                                       : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketleft><bracketleft>                                                : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
-<Multi_key><space><bracketright><bracketright>                                                     : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
-<Multi_key><nobreakspace><bracketright><bracketright>                                              : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><bracketleft><bracketleft>                                                      <space> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><bracketleft><bracketleft>                                               <nobreakspace> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key><bracketright><bracketright>                                                    <space> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key><bracketright><bracketright>                                             <nobreakspace> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
 <Multi_key><less><bracketleft>                                                             <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
 <Multi_key><less><bracketleft>                                                      <nobreakspace> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
 <Multi_key><less><bracketright>                                                            <space> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
