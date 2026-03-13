@@ -1069,8 +1069,9 @@
 #   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-5/#G1076
 #   https://unicode.org/mail-arch/unicode-ml/y2016-m11/0046.html
 #
-#   As a result, keyboard layouts should feature dead keys as well as easy
-#   access to combining marks. Alternative input method for combining marks:
+#   As a consequence, keyboard layouts should feature dead keys as well as easy
+#   access to combining marks, so as to support out of the box the characters
+#   used in phonetics and input using Praat with sequences like multikey:
 #   https://www.fon.hum.uva.nl/praat/manual/Phonetic_symbols__diacritics.html
 #
 #   Following a principle used in en_US.UTF-8/Compose, the most synergistic
