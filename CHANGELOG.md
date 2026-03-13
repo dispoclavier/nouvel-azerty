@@ -47,7 +47,6 @@ Mise à jour du contenu des touches mortes.
 	* Simplifier les séquences de "⋄" U+22C4, "⋕" U+22D5, "⋲" U+22F2, "⋵" U+22F5, "⋶" U+22F6, "⋷" U+22F7, "⋻" U+22FB, "⋻" U+22FB, "⋼" U+22FC, "⋽" U+22FD, "⋾" U+22FE. compose-1.yml [4c8abff](https://github.com/dispoclavier/nouvel-azerty/commit/4c8abff6048a27a983b8f4d087165aa35f26cf24)
 	* Adapter les séquences de "⁋" U+204B, "⫥" U+2AE5. ibidem
 	* Simplifier les séquences de "▵" U+25B5, "▶" U+25B6, "▷" U+25B7, "★" U+2605, "☆" U+2606, "♯" U+266F. compose-1.yml [4f61efe](https://github.com/dispoclavier/nouvel-azerty/commit/4f61efe9f6db4c584ccfb1c2cb1bae9209b9375a)
-@	* Simplifier les séquences de "♯" U+266F, "⟄" U+27C4, "⟈" U+27C8.
 * Transformations :
 	* Tourné : Redonder "≀" U+2240. compose-2.yml [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
 	* Tilde > tilde médian : Redonder "∻" U+223B. ibidem
