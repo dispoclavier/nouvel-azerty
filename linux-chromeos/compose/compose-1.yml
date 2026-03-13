@@ -3864,9 +3864,16 @@
 #
 #^# Music signs
 #
-#   Reverse sequences with numbersign are required for group selection.
+#   Reverse sequences with numbersign are used as multikey equivalents of the
+#   group dead key.
+#
 #   Mnemonics support both English and French.
+#
 #   Some sequences are case sensitive.
+#
+#   "♮" U266E and "♯" U266F are also math symbols and as such have other
+#   sequences as well.
+#   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
 <Multi_key><n><4>                                                                                  : "♩" U2669 # QUARTER NOTE
 <Multi_key><n><KP_4>                                                                               : "♩" U2669 # QUARTER NOTE
@@ -5286,9 +5293,9 @@
 #   mode where level 3 of the space bar is no-break space.
 #
 #   Examples involving no, single or multiple leading [nobreak]space:
-#   None:    "∕" U2215, "∖" U2216,  "⦀" U2980, "∗" U2217, "∣" U2223, "∼" U223C;
-#   Single:  "⧸" U29F8, "⧹" U29F9,  "⫴" U2AF4, "⋆" U22C6, "▷" U25B7;
-#   Double:  "⟋" U27CB, "⟍" U27CD, "⫼" U2AFC, "☆" U2606, "◽" U25FD, "⤶" U2936;
+#   None:    "∕" U2215, "∖" U2216,  "∗" U2217, "⦀" U2980, "∣" U2223, "∼" U223C;
+#   Single:  "⧸" U29F8, "⧹" U29F9,  "⋆" U22C6, "⫴" U2AF4, "▷" U25B7;
+#   Double:  "⟋" U27CB, "⟍" U27CD, "☆" U2606, "⫼" U2AFC, "◽" U25FD, "⤶" U2936;
 #   Triple:   "⁄" U2044, "⧵" U29F5.
 #
 #   Previously, when things did not work as expected, the likely culprit was a
@@ -7663,6 +7670,11 @@
 #   "∇" U2207.
 #   https://music.stackexchange.com/questions/10195/why-is-note-b-marked-with-h-in-scandinavia-and-germany
 #
+#   Music signs are also more extensively supported by multikey and in the
+#   symbol groups.
+#   See #^# Music signs
+#   See # # C01 numbersign
+#
 <Multi_key><space><h>                                                                              : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><nobreakspace><h>                                                                       : "♮" U266E # MUSIC NATURAL SIGN
 <Multi_key><space><H>                                                                              : "♮" U266E # MUSIC NATURAL SIGN
@@ -7715,14 +7727,14 @@
 <Multi_key><underscore><bar>                                                        <nobreakspace> : "⟂" U27C2 # PERPENDICULAR
 <Multi_key><space><c><o>                                                                           : "⟃" U27C3 # OPEN SUBSET
 <Multi_key><nobreakspace><c><o>                                                                    : "⟃" U27C3 # OPEN SUBSET
-<Multi_key><b><o>                                                                                  : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><c><c><o>                                                                               : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><c><backslash><o>                                                                       : "⟄" U27C4 # OPEN SUPERSET
-<Multi_key><c><periodcentered><o>                                                                  : "⟄" U27C4 # OPEN SUPERSET
 #
 #   For "⟄" U27C4, leading space is supported alongside for consistency with
 #   "⟃" U27C3.
 #
+<Multi_key><b><o>                                                                                  : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><c><o>                                                                               : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><backslash><o>                                                                       : "⟄" U27C4 # OPEN SUPERSET
+<Multi_key><c><periodcentered><o>                                                                  : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><space><b><o>                                                                           : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><nobreakspace><b><o>                                                                    : "⟄" U27C4 # OPEN SUPERSET
 <Multi_key><space><c><c><o>                                                                        : "⟄" U27C4 # OPEN SUPERSET
@@ -7745,16 +7757,13 @@
 <Multi_key><S><bracketright>                                                        <nobreakspace> : "⟆" U27C6 # RIGHT S-SHAPED BAG DELIMITER
 <Multi_key><v><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
 <Multi_key><V><period>                                                                             : "⟇" U27C7 # OR WITH DOT INSIDE
-<Multi_key><space><backslash><c>                                                                   : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><space><periodcentered><c>                                                              : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><backslash><c>                                                            : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><periodcentered><c>                                                       : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 #
 #   Some fonts feature a slash instead of a backslash in
 #   "⟈" U27C8 REVERSE SOLIDUS PRECEDING SUBSET.
 #
-<Multi_key><space><slash><c>                                                                       : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
-<Multi_key><nobreakspace><slash><c>                                                                : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><backslash><c>                                                                          : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><periodcentered><c>                                                                     : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
+<Multi_key><slash><c>                                                                              : "⟈" U27C8 # REVERSE SOLIDUS PRECEDING SUBSET
 <Multi_key><space><b><slash>                                                                       : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><nobreakspace><b><slash>                                                                : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
 <Multi_key><space><c><c><slash>                                                                    : "⟉" U27C9 # SUPERSET PRECEDING SOLIDUS
