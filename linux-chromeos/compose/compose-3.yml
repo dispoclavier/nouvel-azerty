@@ -3790,7 +3790,6 @@
 #
 # # C01 numbersign
 #
-#
 #   The empty and filled checkboxes "☐" U2610, "☑" U2611 and "☒" U2612 are
 #   supported here in groups 1..3, for intuitivity and mnemonics, to ensure the
 #   usability of the group dead key, although they are inaccessible by multikey
@@ -5282,7 +5281,7 @@
 #   U3000 IDEOGRAPHIC SPACE does not hang into the margin.
 #
 <UEFD0>                                                                                    <space> : " " U2003 # EM SPACE
-<Multi_key><numbersign>                                                                    <space> : " " U2003 # EM SPACE
+#   Multikey conflicts with "♯" U266F.                                                     <space> : " " U2003 # EM SPACE
 <UEFD0><UEFD0>                                                                             <space> : " " U2002 # EN SPACE
 <Multi_key><numbersign><numbersign>                                                        <space> : " " U2002 # EN SPACE
 <UEFD0><3>                                                                                 <space> : " " U2004 # THREE-PER-EM SPACE
@@ -5339,7 +5338,7 @@
 #   for cross-platform compatibility and with respect to U2000 and U2001.
 #
 <UEFD0>                                                                             <nobreakspace> : " " U2001 # EM QUAD
-<Multi_key><numbersign>                                                             <nobreakspace> : " " U2001 # EM QUAD
+#   Multikey conflicts with "♯" U266F.                                              <nobreakspace> : " " U2001 # EM QUAD
 <UEFD0><UEFD0>                                                                      <nobreakspace> : " " U2000 # EN QUAD
 <Multi_key><numbersign><numbersign>                                                 <nobreakspace> : " " U2000 # EN QUAD
 <UEFD0><3>                                                                          <nobreakspace> : " " U2004 # THREE-PER-EM SPACE
