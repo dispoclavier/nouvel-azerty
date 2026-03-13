@@ -11948,9 +11948,9 @@
 <dead_ogonek>                                                                               <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 <Multi_key><bracketleft>                                                                    <KP_9> : "➈" U2788 # DINGBAT CIRCLED SANS-SERIF DIGIT NINE
 <dead_ogonek>                                                                                  <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
-<Multi_key><bracketleft>                                                                       <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
+#   Multikey conflicts with "⟎" U27CE.                                                         <A> : "Ą" U0104 # LATIN CAPITAL LETTER A WITH OGONEK
 <dead_ogonek>                                                                                  <a> : "ą" U0105 # LATIN SMALL LETTER A WITH OGONEK
-<Multi_key><bracketleft>                                                                       <a> : "ą" U0105 # LATIN SMALL LETTER A WITH OGONEK
+#   Multikey conflicts with "⟎" U27CE.                                                         <a> : "ą" U0105 # LATIN SMALL LETTER A WITH OGONEK
 <dead_ogonek>                                                                                  <E> : "Ę" U0118 # LATIN CAPITAL LETTER E WITH OGONEK
 <Multi_key><bracketleft>                                                                       <E> : "Ę" U0118 # LATIN CAPITAL LETTER E WITH OGONEK
 <dead_ogonek>                                                                                  <e> : "ę" U0119 # LATIN SMALL LETTER E WITH OGONEK
@@ -12056,7 +12056,7 @@
 #^# OGONEK_ABOVE
 #
 <dead_ogonek><dead_ogonek>                                                                 <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
-<Multi_key><bracketleft><bracketleft>                                                      <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
+#   Multikey conflicts with "⟦" U27E6.                                                     <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
 <dead_ogonek><dead_ogonek>                                                                 <U200B> : "᷎" U1DCE # COMBINING OGONEK ABOVE
 <Multi_key><bracketleft><bracketleft>                                                      <U200B> : "᷎" U1DCE # COMBINING OGONEK ABOVE
 #
@@ -12180,11 +12180,11 @@
 #   See #^# COMMA_ABOVE
 #
 <UEFD3><UEFD3>                                                                             <space> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
-<Multi_key><bracketright><bracketright>                                                    <space> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
+#   Multikey conflicts with "⟧" U27E7.                                                     <space> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
 <UEFD3><UEFD3>                                                                             <U200B> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
 <Multi_key><bracketright><bracketright>                                                    <U200B> : "҆" U0486 # COMBINING CYRILLIC PSILI PNEUMATA
 <UEFD3><UEFD3>                                                                      <nobreakspace> : "᾿" U1FBF # GREEK PSILI
-<Multi_key><bracketright><bracketright>                                             <nobreakspace> : "᾿" U1FBF # GREEK PSILI
+#   Multikey conflicts with "⟧" U27E7.                                              <nobreakspace> : "᾿" U1FBF # GREEK PSILI
 <UEFD3><UEFD3>                                                                             <U202F> : "᾿" U1FBF # GREEK PSILI
 <Multi_key><bracketright><bracketright>                                                    <U202F> : "᾿" U1FBF # GREEK PSILI
 <UEFD3><UEFD3>                                                                                 <A> : "Ꞻ" UA7BA # LATIN CAPITAL LETTER GLOTTAL A
