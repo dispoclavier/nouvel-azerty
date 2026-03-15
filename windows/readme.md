@@ -1,6 +1,6 @@
 # Un nouvel AZERTY pour Windows
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et les particularités de l’[utilisation](#utilisation) sous Windows, afin de compléter le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
+Ce mode d’emploi couvre l’[installation](#installation) et les particularités de l’[utilisation](#utilisation) sous Windows, afin de compléter le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
 
 Ces modes d’emploi complètent à leur tour la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) et sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf), la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touches-mortes.pdf) est aussi disponible en ligne, et qui est assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touche-morte-groupe.pdf)), ainsi que la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-composition-non-math.pdf)) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne. Ces cinq PDF sont réunis dans le dossier « Un-nouvel-AZERTY-Documentation-[version].zip ».
 
@@ -30,13 +30,11 @@ D’habitude, sous Windows, AltGr est Contrôle + Alt et interfère avec les
 
 ##### AltFr
 
-Comme AltFr est sur la touche ISO entre Majuscule gauche et ⟦W⟧, et que cette touche manque sur les agencements ANSI, on peut mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite. Pour ce faire, des fichiers de redisposition de codes matériels de touches se trouvent dans le dossier redispositions\\.
+Comme AltFr est sur la touche ISO entre Majuscule gauche et ⟦W⟧, et que cette touche manque sur les agencements ANSI, on peut mettre AltFr sur la touche de verrouillage des capitales, et VerrCap sur Contrôle droite, utilisée pour la touche ISO sur les agencements ANSI pour disposition AZERTY. Pour ce faire, des fichiers de redisposition de codes matériels de touches sont disponibles dans le dossier « redispositions\\ ».
 
 ##### AltEm
 
-"Le" dans le nom de la nouvelle modificatrice « AltEm » signifie « Lettres émojis ».
-
-AltEm s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltEm est active.
+La touche modificatrice des émojis, AltEm, s’ajoute sur VerrCap. Tant que l’on appuie sur VerrCap, AltEm est active.
 
 On peut alors saisir [tous les drapeaux nationaux](https://unicode.org/emoji/charts/emoji-list.html#country-flag) par leur [code ISO à deux lettres](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) ou AC 🇦🇨, CP 🇨🇵, DG 🇩🇬, EA 🇪🇦, EU 🇪🇺, IC 🇮🇨, TA 🇹🇦, UN 🇺🇳, XK 🇽🇰.
 
@@ -55,7 +53,7 @@ Les trois seuls drapeaux régionaux, [codés différemment](https://blog.unicode
 On peut aussi écrire en 🇱⁠🇪⁠🇹⁠🇹⁠🇷⁠🇪⁠🇸⁠ 🇪⁠🇲⁠🇴⁠🇯⁠🇮⁠🇸 non accentuées⁠. Deux possibilités pour cela :
 
 * Entre deux lettres, appuyer sur la barre d’espace.
-* Écrire en Maj + AltEm, en utilisant pour la lettre dans la colonne 2 de chaque rangée la touche après la dernière lettre de cette rangée, et appuyer sur la barre d’espace entre deux mots (sans avoir besoin de lever les doigts de Maj + AltEm).
+* Écrire en Maj + AltEm, en utilisant pour la lettre dans la colonne 2 de chaque rangée la touche après la dernière lettre de cette rangée, et appuyer sur la barre d’espace entre deux mots sans avoir besoin de lever les doigts de Maj + AltEm.
 
 ##### AltMa
 
@@ -164,4 +162,4 @@ Une sélection d’émojis codés sur 4 octets est disposée sur les places de 
 
 ## Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « windows/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Windows.md » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Windows-[version].zip ».
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « windows/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Windows.pdf » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Windows-[version].zip ».
