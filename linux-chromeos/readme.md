@@ -1,6 +1,6 @@
 # Un nouvel AZERTY pour Linux
 
-Ceci est un mode d’emploi couvrant principalement l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur), afin de compléter le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
+Ce mode d’emploi couvre l’[installation](#installation) et l’[activation](#activation-sans-droits-dadministrateur), et les particularités de l’[utilisation](#utilisation) sous Linux, afin de compléter le [Mode d’emploi commun](https://github.com/dispoclavier/nouvel-azerty/blob/main/readme.md).
 
 Ces modes d’emploi complètent à leur tour la page web [Un nouvel AZERTY](https://dispoclavier.com/nouvel-azerty/) et sa [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty.pdf), la présentation des [touches mortes](https://dispoclavier.com/nouvel-azerty/touches-mortes/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touches-mortes.pdf) est aussi disponible en ligne, et qui est assortie de 30 sous-pages, une par touche morte diacritique ou transformationnelle, en particulier celle sur les douze [groupes](https://dispoclavier.com/nouvel-azerty/touches-mortes/groupe/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-touche-morte-groupe.pdf)), ainsi que la présentation de la [touche de composition](https://dispoclavier.com/nouvel-azerty/composition/) ([version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-composition-non-math.pdf)) accompagnée de la liste des [symboles mathématiques](https://dispoclavier.com/nouvel-azerty/composition/symboles-mathematiques/), dont une [version en PDF](https://dispoclavier.com/doc/un-nouvel-azerty-symboles-math.pdf) est pareillement disponible en ligne. Ces cinq PDF sont réunis dans le dossier « Un-nouvel-AZERTY-Documentation-[version].zip ».
 
@@ -239,4 +239,4 @@ La capitale "CʼH" du trigramme breton s’insère à la place de la minuscule s
 
 ## Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « linux-chromeos/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Linux.md » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Linux-[version].zip ».
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dossier « linux-chromeos/ » où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-sous-Linux.pdf » qu’il est inclus dans le dossier « Un-nouvel-AZERTY-Linux-[version].zip ».
