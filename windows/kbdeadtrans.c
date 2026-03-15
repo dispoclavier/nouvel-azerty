@@ -1,4 +1,4 @@
- /*****************************************************************************\
+/*****************************************************************************\
 * Module name: kbdeadtrans.c
 *
 * Dead key content
@@ -57,10 +57,40 @@
 *
 * DEADTRANS macro calls
 *
+* The output is directly in C, where an array of DEADTRANS macro calls makes
+* for a flat layout of dead key data, while in KLC format, the data is grouped
+* under DEADKEY headers.
+*
+* When KbdUTool transpiles from KLC to C, comments are ignored under the
+* assumption that development happens in KLC only. But this is just not
+* possible, given that KbdUTool’s KLC-to-C transpiler is broken, as it is
+* unable to handle dead characters above 0x0FFF and to transpile KanaLock
+* levels.
+*
+* Moreover, ligatures are transpiled only up to 5 code units due to the general
+* header not supporting the architectural limit almost exhausted by the
+* subdivision flags.
+*
+* And KLC only supports end-of-line comments, while leading block comments (in
+* addition to EOL comments) are best for human readability, and with long lists
+* are more readable than the grouped layout.
+*
+* Another upside of writing dead key data in C is that any DEADTRANS macro call
+* can be overridden by a similar call, with the same input and the same dead
+* character, but another output, provided that the valid call precedes in the
+* source code.
+*
+\*****************************************************************************/
+
+static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
+
+/*****************************************************************************\
+* High surrogates
+*
 * On Windows, the dead key output is restricted to the low surrogate. An input
 * method for the high surrogates is provided separately at the root of related
-* dead keys, with U+200B ZERO WIDTH SPACE as a base character, in synergy with
-* most dead keys, at level 4 of the space bar in French mode.
+* dead keys, with U+200B ZERO WIDTH SPACE as a base character, at level 4 of
+* the space bar in French mode, in synergy with most dead keys.
 *
 * The number of required high surrogates amounts to eight:
 *
@@ -78,30 +108,6 @@
 *     D83D dead_doubleacute, dead_acute, others (ornamental quotation marks)
 *     D83E dead_stroke, dead_group 11 and 12 as built-in (wide-headed arrows)
 *     DB40 dead_flag as built-in (tag characters)
-*
-* The output is directly in C, where an array of DEADTRANS macro calls makes
-* for a flat layout of dead key data, while in KLC format, the data is grouped
-* under DEADKEY headers. When KbdUTool transpiles from KLC to C, comments are
-* ignored under the assumption that development happens in KLC only. But this
-* is just not possible, given that KbdUTool’s KLC-to-C transpiler is broken, as
-* it is unable to handle dead characters above 0x0FFF and to transpile KanaLock
-* levels. Moreover, ligatures are transpiled only up to 5 code units due to the
-* general header not supporting the architectural limit almost exhausted by the
-* subdivision flags. And KLC only supports end-of-line comments, while leading
-* block comments (in addition to EOL comments) are best for human readability,
-* and with long lists are more readable than the grouped layout.
-*
-* Another upside of writing dead key data in C is that any DEADTRANS macro call
-* can be overridden by a similar call, with the same input and the same dead
-* character, but another output, provided that the valid call precedes in the
-* source code.
-*
-\*****************************************************************************/
-
-static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
-
-/*****************************************************************************\
-* High surrogates
 *
 \*****************************************************************************/
 
@@ -177,9 +183,9 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 /*****************************************************************************\
 * Flag letters
 *
-* Windows has flag letters on live keys, level AltLe (like Letter emoji), and
+* Windows has flag letters on live keys, level AltEm (Emoji letters), and
 * flag letters with an appended word joiner one level up for writing in letter
-* emoji fluently. AltLe is on top of the Caps Lock key.
+* emoji fluently. AltEm is on top of the Caps Lock key.
 *
 * As a result, flag letters by dead keys on Windows are pointless, the more as
 * they would need to be adapted to Windows, where a single dead key press is
