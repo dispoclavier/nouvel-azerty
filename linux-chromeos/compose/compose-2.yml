@@ -11870,9 +11870,9 @@
 <UEFD2><UEFD2>                                                                                 <t> : "̞" U031E # COMBINING DOWN TACK BELOW
 <Multi_key><underscore><underscore>                                                            <t> : "̞" U031E # COMBINING DOWN TACK BELOW
 <UEFD2><UEFD2>                                                                                 <V> : "᷿" U1DFF # COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
-<Multi_key><underscore><underscore>                                                            <V> : "᷿" U1DFF # COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
+#   Multikey conflicts with "⩞" U2A5E, "⩢" U2A62.                                              <V> : "᷿" U1DFF # COMBINING RIGHT ARROWHEAD AND DOWN ARROWHEAD BELOW
 <UEFD2><UEFD2>                                                                                 <v> : "̼" U033C # COMBINING SEAGULL BELOW
-<Multi_key><underscore><underscore>                                                            <v> : "̼" U033C # COMBINING SEAGULL BELOW
+#   Multikey conflicts with "⩞" U2A5E, "⩢" U2A62.                                              <v> : "̼" U033C # COMBINING SEAGULL BELOW
 <UEFD2><UEFD2>                                                                                 <W> : "᪶" U1AB6 # COMBINING WIGGLY LINE BELOW
 <Multi_key><underscore><underscore>                                                            <W> : "᪶" U1AB6 # COMBINING WIGGLY LINE BELOW
 <UEFD2><UEFD2>                                                                                 <w> : "ᪿ" U1ABF # COMBINING LATIN SMALL LETTER W BELOW

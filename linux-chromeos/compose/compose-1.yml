@@ -1306,20 +1306,24 @@
 #   https://github.com/unicode-org/cldr/blob/main/common/main/fr.xml#L1602
 #
 #   All preformatted letters benefit from multikey support thanks to multikey
-#   equivalents, for instance by <Multi_key><asciicircum><[the letter]>.
+#   equivalents, for instance by <Multi_key><asciicircum><[the letter]>. except
+#   on Window due to its inability to support complete layout drivers.
 #   See #*# SUPERSCRIPT
 #   See # # Multikey equivalents
+#   See dead-key-convert.pl # Multikey
 #
 #   The two legacy ordinal indicators are supported with alphabetic mnemonics
 #   in group 12 of "^" on key "A", and in group 12 of "}" on key "O".
 #   See # # D01 asciicircum
 #   See # # D09 braceright
 #
-#   The following intuitive, case insensitive, underscore-terminated multikey
+#   The following intuitive, case sensitive, underscore-terminated multikey
 #   sequences add to this support in the symbol groups. Underscore termination
-#   is consistent with "№" U2116 NUMERO SIGN in the next section. Many fonts
-#   give the legacy ordinal indicators a line below, that is not preferred in
-#   French and makes "º" U00BA unfit for use in the abbreviation for "numéro".
+#   is consistent with "№" U2116 NUMERO SIGN in the next section.
+#
+#   In many fonts, the legacy ordinal indicators have glyphs featuring a line
+#   below, that is not preferred in French and makes "º" U00BA unfit for use in
+#   the abbreviation of "numéro".
 #   See # # Abbreviation "Numéro" with trailing space
 #   See # # Abbreviation "Numéro" without spacing
 #   See # # Abbreviation "Numéro" with legacy NBSP
@@ -1327,9 +1331,7 @@
 #   See # # Abbreviation "Numéro" with TSP WJ
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
-<Multi_key><A><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
 <Multi_key><o><underscore>                                                                         : "º" U00BA # MASCULINE ORDINAL INDICATOR
-<Multi_key><O><underscore>                                                                         : "º" U00BA # MASCULINE ORDINAL INDICATOR
 #
 #
 #^# Abbreviations, Units and Legal Symbols
@@ -9269,18 +9271,12 @@
 <Multi_key><V><minus>                                                                              : "⩝" U2A5D # LOGICAL OR WITH HORIZONTAL DASH
 <Multi_key><underscore><underscore><A>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><underscore><underscore><a>                                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><v><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><v><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><v><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><v><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><v><periodcentered>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><v><periodcentered>                               : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><V><percent>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><V><percent>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><V><backslash>                                           : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><V><backslash>                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><V><periodcentered>                                      : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><V><periodcentered>                               : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><v><percent>                                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><v><backslash>                                                  : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><v><periodcentered>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><V><percent>                                                    : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><V><backslash>                                                  : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><V><periodcentered>                                             : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><A>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><a>                                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
@@ -9289,18 +9285,19 @@
 <Multi_key><minus><minus><V><percent>                                                              : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><backslash>                                                            : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V><periodcentered>                                                       : "⩞" U2A5E # LOGICAL AND WITH DOUBLE OVERBAR
-<Multi_key><space><A><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><space><A><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><nobreakspace><A><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><nobreakspace><A><underscore>                                            <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><A><underscore>                                                                 <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><A><underscore>                                                          <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><space><a><underscore>                                                          <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><space><a><underscore>                                                   <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><nobreakspace><a><underscore>                                                   <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key><nobreakspace><a><underscore>                                            <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                        <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><percent><underscore>                                                 <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><backslash><underscore>                                                      <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><backslash><underscore>                                               <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><periodcentered><underscore>                                                 <space> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key><v><periodcentered><underscore>                                          <nobreakspace> : "⩟" U2A5F # LOGICAL AND WITH UNDERBAR
-<Multi_key><space><A><underscore><underscore>                                                      : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
-<Multi_key><nobreakspace><A><underscore><underscore>                                               : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
+<Multi_key><A><underscore><underscore>                                                             : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><percent><underscore><underscore>                                                    : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><backslash><underscore><underscore>                                                  : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
 <Multi_key><v><periodcentered><underscore><underscore>                                             : "⩠" U2A60 # LOGICAL AND WITH DOUBLE UNDERBAR
@@ -9310,19 +9307,16 @@
 #   See #   Small symbols
 #
 <Multi_key><v><underscore><comma>                                                                  : "⩡" U2A61 # SMALL VEE WITH UNDERBAR
-<Multi_key><space><underscore><underscore><v>                                              <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><v>                                       <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><v>                                       <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><v>                                <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><V>                                              <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><space><underscore><underscore><V>                                       <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><V>                                       <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
-<Multi_key><nobreakspace><underscore><underscore><V>                                <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><v>                                                     <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><v>                                              <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><V>                                                     <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
+<Multi_key><underscore><underscore><V>                                              <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><v>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                               <space> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><minus><minus><V>                                                        <nobreakspace> : "⩢" U2A62 # LOGICAL OR WITH DOUBLE OVERBAR
 <Multi_key><v><underscore><underscore>                                                             : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
+<Multi_key><V><underscore><underscore>                                                             : "⩣" U2A63 # LOGICAL OR WITH DOUBLE UNDERBAR
 #Multi_key><z><less><minus><bar>                                                                   : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
 <Multi_key><z><less><minus>                                                                        : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
 <Multi_key><Z><less><minus>                                                                        : "⩤" U2A64 # Z NOTATION DOMAIN ANTIRESTRICTION
