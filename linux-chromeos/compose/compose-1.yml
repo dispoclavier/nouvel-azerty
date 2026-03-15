@@ -583,7 +583,7 @@
 #   https://github.com/unicode-org/cldr/blob/5172fdc90c970e6820e565e76b8b6f77b0b8fb5d/common/main/vec.xml#L4721
 #   https://github.com/unicode-org/cldr/blob/main/common/main/vec.xml#L4721
 #
-#   Spanish is prone to using NBTSP, since the recommended group separator is a
+#   Spanish is prone to using NBTSP, as the recommended group separator is a
 #   thin space, “un pequeño espacio”, but CLDR is not updated yet.
 #   https://www.rae.es/dpd/punto
 #   https://en.wikipedia.org/wiki/Non-breaking_space#Width_variation
@@ -683,8 +683,8 @@
 # # Double zero
 #
 #   Primarily intended for the level-5 numpad. On the dedicated numpad this may
-#   be mapped on Shift + KP_0, since the cursor key feature is deactivated as
-#   outdated, redundant and wasting the Shift + KP_* positions.
+#   be mapped on Shift + KP_0, thanks to the cursor key feature being
+#   deactivated as outdated, redundant and wasting the Shift + KP_* positions.
 #   See dispocla.cpp ## Level-5 numpad
 #
 <UEF6D> : "00" # See #   End of line comments
@@ -1682,9 +1682,10 @@
 #   Another multikey implementation of circled digits and circled or squared
 #   letters are multikey equivalents of "Greek or circled" dead key dead_greek,
 #   because the multikey equivalent of dead_greek is the at sign, due to shape
-#   and since its position is D06, both at levels 3 and 4, where AZERTY has the
-#   Y key, that French calls "Greek I" ("i grec"). Extending dead_greek to also
-#   support circled is convenient, as Greek does not have dedicated digits.
+#   and to its position on D06, both at levels 3 and 4, where AZERTY has the
+#   "Y" key, that French calls "Greek I" ("i grec"). Extending dead_greek to
+#   support circled is the more convenient as Greek does not have dedicated
+#   digits.
 #   See #*# GREEK_OR_CIRCLED
 #
 #
@@ -1825,9 +1826,10 @@
 #
 # # Circled by leading "o"
 #
-#   This case insensitive "o" prefix supports only numbers 1..10, since letters
-#   would conflict with "œ", "ꝏ", "©"; and "⫯" U2AEF would be involved in other
-#   conflicts. Consistently, this way, en_US.UTF-8/Compose supports only "Ⓐ".
+#   This case insensitive "o" prefix supports only numbers 1..10, as letters
+#   would conflict with "œ", "ꝏ", "©". Other conflicts would involve "⫯" U2AEF.
+#
+#   Consistently, this way, en_US.UTF-8/Compose supports only "Ⓐ".
 #   See #*# GREEK_OR_CIRCLED
 #   See #^# CIRCLED
 #
@@ -1900,8 +1902,8 @@
 #   See #+# GROUP_1
 #
 #   Titlecase sequences are supported following en_US.UTF-8/Compose, but
-#   reverse sequences are not supported since they would not make much sense
-#   and are prone to conflicts.
+#   reverse sequences are not supported, as they would not make much sense and
+#   are prone to conflicts.
 #
 #   Sequences conflicting with ISO currency codes or others are fixed by space
 #   termination along the lines of what is done for math symbols. This affects
@@ -2390,19 +2392,16 @@
 #
 # # Angle quotation marks
 #
-#   The French-style "«" U00AB, "»" U00BB, "‹" U2039, and "›" U203A are on live
-#   keys, since supporting these by dead keys is useless, due to French spacing
-#   requirements.
+#   The French-style "«" U00AB, "»" U00BB, "‹" U2039 and "›" U203A are on live
+#   keys, due to French spacing requirements making dead key support useless.
 #   See dispocla.cpp key <AC11>
 #   See dispocla.cpp key <BKSL>
 #   See dispocla.cpp key <AD11>
 #   See dispocla.cpp key <AD12>
 #
 #   Also, the related multikey sequences provided in en_US.UTF-8/Compose
-#   conflict with sequences for mathematical symbols and with dead key multikey
-#   equivalents.
-#   See #*# SUPERSCRIPT
-#   See #^# COMBINING_ABOVE
+#   « ¦<< », « ¦>> », « ¦.< » and « ¦.> » conflict with sequences for
+#   mathematical symbols.
 #
 #
 # # Middle dot and bullets
@@ -2506,7 +2505,7 @@
 #   hyphen for non-numerical contexts, and "HY[phen]" is "B[reak ]A[fter]".
 #   https://unicode.org/reports/tr14/#HY
 #
-#   East Asian width [ea] neither warrants a duplicate hyphen, since Unicode
+#   East Asian width [ea] neither warrants a duplicate hyphen, because Unicode
 #   includes UFF0D FULLWIDTH HYPHEN-MINUS, and HYPHEN as "Ambiguous" resolves
 #   to "Narrow".
 #
@@ -3378,9 +3377,13 @@
 #   "☚" U261A and "☛" U261B are no emoji, yet these are rendered as emoji on
 #   Microsoft PCs, with the upside that finger-pointing emoji are less screwed
 #   up, as opposed to the backhand index pointing left or right U1F448, U1F449,
-#   in the SMP and thus harder to input by dead keys on Windows. However all of
-#   these are questionable since finger-pointing is bad practice, as opposed to
-#   hand-pointing: "🫱" U1FAF1 RIGHTWARDS HAND,"🫲" U1FAF2 LEFTWARDS HAND.
+#   in the SMP and thus harder to input by dead keys on Windows. However, all
+#   of these are questionable, given that finger-pointing is bad practice, as
+#   opposed to hand-pointing:
+#
+#       "🫱" U1FAF1 RIGHTWARDS HAND
+#       "🫲" U1FAF2 LEFTWARDS HAND
+#
 #   https://emojipedia.org/black-left-pointing-index
 #   https://www.unicode.org/emoji/charts-15.1/emoji-list.html#hand-single-finger
 #   https://unicode.org/Public/emoji/15.1/emoji-sequences.txt
@@ -4260,12 +4263,12 @@
 #   from the bottom to the top, unlike faces of smilies parsed from the top to
 #   the bottom: ":)" or ":-)". This is obvious when looking at the opposite, as
 #   "(-:" is in use with the semantics of an actual upside-down face. The fix
-#   is to use digit 8 instead, since digit 8 is usable both ways. Hence the
+#   is to use digit 8 instead, as digit 8 is usable both ways. Hence the
 #   sequence used for "♡" U2661 as a math symbol.
 #   See "♡" U2661
 #   See # # Miscellaneous Symbols in block U2600 used in mathematics
 #
-#   For completeness, the remaining digits are supported, too, since all these
+#   For completeness, the remaining digits are supported, too. All these
 #   sequences are deactivated consistently as multikey equivalents.
 #   See #*# CIRCUMFLEX
 #   See #^# Bullets
@@ -4585,39 +4588,42 @@
 #
 #   Input composition, also known as multikey, may be represented by a low-end
 #   alternative "¦" U00A6 additionally to the high-end "⎄" U2384 ISO symbol.
+#
 #   The rationale is better font support and a slimmer, less bulky, visually
-#   less impacting, less outstanding glyph design in documentation, since the
-#   ISO symbol did not make it onto many keyboards, partly because dedicating
-#   an entire key to input composition rather than a mere (possibly level-3)
-#   key position is not recommended in the presence of a group dead key (UEFD0)
+#   less impacting, less outstanding glyph design in documentation, considering
+#   that the ISO symbol did not make it onto many keyboards, partly because
+#   dedicating a key — rather than a mere (possibly level-3) key position — to
+#   input composition is not recommended in the presence of a group dead key
 #   providing a more powerful input method for common digraphs. Downgrading the
 #   multikey symbol from "⎄" U2384 to "¦" U00A6 consistently stands for a more
 #   streamlined, less screwed-up user experience.
+#   See ### Group dead key introduction
 #
 #   The ISO/IEC 9995-7 symbol "⎄" U2384 is supported by case insensitive
-#   « ¦cmp ». Not « ¦com », to prevent conflicts with "℅" U2105.
+#   « ¦cmp » streamlined to « ¦cm ». « ¦COM » would conflict with "℅" U2105.
 #
-<Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+#Multi_key><c><m><p>                                                                               : "⎄" U2384 # COMPOSITION SYMBOL
+<Multi_key><c><m>                                                                                  : "⎄" U2384 # COMPOSITION SYMBOL
 <Multi_key><C><M>                                                                                  : "⎄" U2384 # COMPOSITION SYMBOL
 #
-#   The broken bar "¦" U00A6 is repurposed as multikey symbol, and consistently
-#   it is the dead character of Multi_key. Given that Multi_key double press is
-#   not used, this is supported as an alternative means to input "¦" U00A6.
+#   The broken bar "¦" U00A6 repurposed as multikey symbol is consistently the
+#   dead character of Multi_key. Given that Multi_key double press is not used,
+#   this is supported as an alternative means to input "¦" U00A6.
 #
 <Multi_key><Multi_key>                                                                             : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
-#   Another option is case insensitive « ¦mul », with titlecase support with
-#   respect to the XKB keysym "Multi_key".
+#   Another option is case insensitive « ¦mul ». Titlecase is also supported,
+#   with respect to the XKB keysym "Multi_key".
 #
 <Multi_key><m><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><M><u><l>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 <Multi_key><M><U><L>                                                                               : "¦" U00A6 # BROKEN BAR repurposed as multikey symbol
 #
 #   The sideways compatible sequence « ¦!^ » as in en_US.UTF-8/Compose could be
-#   supported in dead_belowdot, but since the relationship to the dead key is
-#   merely fortuitous, it is here without the dead key alternative, and without
-#   the reverse sequence, that is used in en_US.UTF-8/Compose for letters with
-#   circumflex and dot below, and here for "ꜝ" UA71D MODIFIER LETTER RAISED
+#   supported in dead_belowdot, but given the merely fortuitous relationship to
+#   the dead key, it is here without the dead key alternative, and without the
+#   reverse sequence, that is used in en_US.UTF-8/Compose for letters with
+#   circumflex and dot below, and here, for "ꜝ" UA71D MODIFIER LETTER RAISED
 #   EXCLAMATION MARK.
 #   See # # CIRCUMFLEX&DOT_BELOW
 #   See #*# SUPERSCRIPT
@@ -4646,8 +4652,8 @@
 #
 # # Referring to en_US.UTF-8/Compose
 #
-#   This output is not cross-platform compatible, since on Windows it will need
-#   to be truncated to a maximum of 16 UTF-16 code units: "en_US.UTF-8/Comp".
+#   This output is not cross-platform compatible, as on Windows it needs to
+#   be truncated to a maximum of 16 UTF-16 code units: "en_US.UTF-8/Comp".
 #
 <Multi_key><e><n><u><s>                                                                            : "en_US.UTF-8/Compose" # Standard fr_FR XCompose sequences.
 #
@@ -5073,7 +5079,7 @@
 #
 #   Indeed, both Sm and So are only informative, not normative. The reason why
 #   is that labeling all math symbols as Sm is not feasible, and it is not
-#   advisable either, since mathematics repurposed many symbols intrinsically
+#   advisable either, as mathematics repurposed many symbols intrinsically
 #   extraneous to mathematics, such as the male and female signs, already
 #   supercharged as planet symbols ("♀" U2640, "♂" U2642), three music symbols,
 #   one of which is Sm ("♯" U266F) and two, So ("♭" U266D, "♮" U266E), and the
@@ -5293,9 +5299,9 @@
 #   mode where level 3 of the space bar is no-break space.
 #
 #   Examples involving no, single or multiple leading [nobreak]space:
-#   None:    "∕" U2215, "∖" U2216,  "∗" U2217, "⦀" U2980, "∣" U2223, "∼" U223C;
-#   Single:  "⧸" U29F8, "⧹" U29F9,  "⋆" U22C6, "⫴" U2AF4, "▷" U25B7;
-#   Double:  "⟋" U27CB, "⟍" U27CD, "☆" U2606, "⫼" U2AFC, "◽" U25FD, "⤶" U2936;
+#   None:    "∕" U2215, "∖" U2216, "⦀" U2980,  "∗" U2217, "∣" U2223, "∼" U223C;
+#   Single:  "⧸" U29F8, "⧹" U29F9, "⫴" U2AF4,  "⋆" U22C6, "⫾" U2AFE, "▷" U25B7;
+#   Double:  "⟋" U27CB, "⟍" U27CD, "⫼" U2AFC, "☆" U2606, "⫿" U2AFF, "◽" U25FD;
 #   Triple:   "⁄" U2044, "⧵" U29F5.
 #
 #   Previously, when things did not work as expected, the likely culprit was a
@@ -5386,7 +5392,7 @@
 #   the correct bracket being entered would be pointless and induce a useless
 #   complication contrary to the streamlined user experience design principle.
 #
-#   This scheme is also the most efficient, since the bracket has a terminator
+#   This scheme is also the most efficient, as the bracket has a terminator
 #   status after the appropriate number of less or greater as for "⟨" U27E8,
 #   "⟩" U27E9 and "⟪" U27EA, "⟫" U27EB.
 #
@@ -8200,11 +8206,17 @@
 <Multi_key><C><greater>                                                                            : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><c><greater>                                                                            : "⤿" U293F # LOWER LEFT SEMICIRCULAR ANTICLOCKWISE ARROW
 <Multi_key><o><less>                                                                               : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
-<Multi_key><less><o>                                                                               : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><less><O>                                                                               : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
-<Multi_key><o><greater>                                                                            : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><space><less><o>                                                                        : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><nobreakspace><less><o>                                                                 : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><space><O><less>                                                                        : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><nobreakspace><O><less>                                                                 : "⥀" U2940 # ANTICLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><greater><o>                                                                            : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
 <Multi_key><greater><O>                                                                            : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><space><o><greater>                                                                     : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><nobreakspace><o><greater>                                                              : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><space><O><greater>                                                                     : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
+<Multi_key><nobreakspace><O><greater>                                                              : "⥁" U2941 # CLOCKWISE CLOSED CIRCLE ARROW
 #
 #   In "⥂" U2942.."⥄" U2944 featuring a short arrow below or above, this short
 #   stem translates to period, so as to keep the normal-length stem translating
@@ -9342,8 +9354,7 @@
 <Multi_key><period><asciitilde><equal>                                                             : "⩭" U2A6D # CONGRUENT WITH DOT ABOVE
 <Multi_key><asterisk><equal>                                                                       : "⩮" U2A6E # EQUALS WITH ASTERISK
 <Multi_key><asciicircum><asciitilde><asciitilde>                                                   : "⩯" U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
-<Multi_key><space><asciitilde><asciitilde><equal>                                                  : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
-<Multi_key><nobreakspace><asciitilde><asciitilde><equal>                                           : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
+<Multi_key><asciitilde><asciitilde><equal>                                                         : "⩰" U2A70 # APPROXIMATELY EQUAL OR EQUAL TO
 <Multi_key><equal><plus>                                                                           : "⩱" U2A71 # EQUALS SIGN ABOVE PLUS SIGN
 <Multi_key><plus><equal>                                                                           : "⩲" U2A72 # PLUS SIGN ABOVE EQUALS SIGN
 <Multi_key><equal><asciitilde>                                                                     : "⩳" U2A73 # EQUALS SIGN ABOVE TILDE OPERATOR
@@ -9357,16 +9368,10 @@
 <Multi_key><period><period><equal>                                                                 : "⩷" U2A77 # EQUALS SIGN WITH TWO DOTS ABOVE AND TWO DOTS BELOW
 #Multi_key><period><period><period><period><equal><minus>                                          : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
 <Multi_key><period><period><period><period>                                                        : "⩸" U2A78 # EQUIVALENT WITH FOUR DOTS ABOVE
-<Multi_key><space><space><less><o>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><space><less><o>                                                          : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><nobreakspace><less><o>                                                   : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><space><space><less><O>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><space><less><O>                                                          : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><nobreakspace><less><O>                                                   : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
-<Multi_key><space><o><greater>                                                                     : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><o><greater>                                                              : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><space><O><greater>                                                                     : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
-<Multi_key><nobreakspace><O><greater>                                                              : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
+<Multi_key><less><o>                                                                               : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><space><less><O>                                                                        : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><nobreakspace><less><O>                                                                 : "⩹" U2A79 # LESS-THAN WITH CIRCLE INSIDE
+<Multi_key><o><greater>                                                                            : "⩺" U2A7A # GREATER-THAN WITH CIRCLE INSIDE
 <Multi_key><question><less>                                                                        : "⩻" U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
 <Multi_key><question><greater>                                                                     : "⩼" U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
 <Multi_key><less><underscore><grave>                                                               : "⩽" U2A7D # LESS-THAN OR SLANTED EQUAL TO
@@ -9411,7 +9416,7 @@
 <Multi_key><equal><greater><grave>                                                                 : "⪜" U2A9C # DOUBLE-LINE SLANTED EQUAL TO OR GREATER-THAN
 #
 #   The reversed tilde in "⪝" U2A9D, "⪞" U2A9E, "⪟" U2A9F, "⪠" U2AA0 seems to
-#   be a font issue, since it is not hinted in the character names, designed
+#   be a font issue, given that it is not hinted in the character names, made
 #   like those of "⩬" U2A6C, "⪍" U2A8D, "⪎" U2A8E, "⪏" U2A8F, "⪐" U2A90.
 #   Consistently, the backslash in these sequences is optional.
 #
@@ -9439,14 +9444,12 @@
 <Multi_key><KP_2><less>                                                             <nobreakspace> : "⪡" U2AA1 # DOUBLE NESTED LESS-THAN
 <Multi_key><2><greater>                                                                            : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
 <Multi_key><KP_2><greater>                                                                         : "⪢" U2AA2 # DOUBLE NESTED GREATER-THAN
-#Multi_key><space><2><less><underscore>                                                            : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><2><less>                                                                        : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><space><KP_2><less>                                                                     : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><2><less>                                                                 : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
-<Multi_key><nobreakspace><KP_2><less>                                                              : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><less><less><underscore>                                                                : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><2><less><underscore>                                                                   : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
+<Multi_key><KP_2><less><underscore>                                                                : "⪣" U2AA3 # DOUBLE NESTED LESS-THAN WITH UNDERBAR
 #
-#   The symbol "⪤" U2AA4 seems to be more common than "⪥" U2AA5 and is thus
-#   given the easier sequence with less leading spaces.
+#   The symbol "⪤" U2AA4 seems to be more common than "⪥" U2AA5. Therefore it
+#   is given the easier sequence with less leading spaces.
 #   See #   Leading space
 #
 <Multi_key><space><greater><less>                                                                  : "⪤" U2AA4 # GREATER-THAN OVERLAPPING LESS-THAN
@@ -9527,17 +9530,12 @@
 <Multi_key><c><backslash><x>                                                                       : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><periodcentered><x>                                                                  : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
 <Multi_key><c><c><x>                                                                               : "⫂" U2AC2 # SUPERSET WITH MULTIPLICATION SIGN BELOW
-<Multi_key><space><period><c><underscore>                                                          : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><underscore>                                                   : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
-#Multi_key><space><period><b><underscore>                                                          : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><b>                                                                      : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><b>                                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><backslash>                                                           : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><backslash>                                                    : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><periodcentered>                                                      : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><periodcentered>                                               : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><space><period><c><c>                                                                   : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<Multi_key><nobreakspace><period><c><c>                                                            : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><period><c><underscore>                                                                 : "⫃" U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
+#Multi_key><period><b><underscore>                                                                 : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><period><b>                                                                             : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><period><c><backslash>                                                                  : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><period><c><periodcentered>                                                             : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+<Multi_key><period><c><c>                                                                          : "⫄" U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 <Multi_key><c><equal>                                                                      <space> : "⫅" U2AC5 # SUBSET OF ABOVE EQUALS SIGN
 <Multi_key><c><equal>                                                               <nobreakspace> : "⫅" U2AC5 # SUBSET OF ABOVE EQUALS SIGN
 <Multi_key><b><equal>                                                                      <space> : "⫆" U2AC6 # SUPERSET OF ABOVE EQUALS SIGN
@@ -9737,10 +9735,8 @@
 <Multi_key><bar><asterisk>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><i><o>                                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><I><o>                                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><space><bar><o>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><nobreakspace><bar><o>                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><space><bar><O>                                                                         : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
-<Multi_key><nobreakspace><bar><O>                                                                  : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><bar><o>                                                                                : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
+<Multi_key><bar><O>                                                                                : "⫰" U2AF0 # VERTICAL LINE WITH CIRCLE BELOW
 <Multi_key><T><o>                                                                                  : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                          <space> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
 <Multi_key><t><o>                                                                   <nobreakspace> : "⫱" U2AF1 # DOWN TACK WITH CIRCLE BELOW
@@ -9784,8 +9780,8 @@
 <Multi_key><3><slash>                                                               <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 <Multi_key><KP_3><slash>                                                                   <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 <Multi_key><KP_3><slash>                                                            <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><space><slash><slash><slash>                                                            : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
-<Multi_key><nobreakspace><slash><slash><slash>                                                     : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><slash><slash><slash>                                                           <space> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
+<Multi_key><slash><slash><slash>                                                    <nobreakspace> : "⫻" U2AFB # TRIPLE SOLIDUS BINARY RELATION
 #
 #   The LARGE TRIPLE VERTICAL BAR OPERATOR "⫼" U2AFC is more spaced out compared to
 #   "⫴" U2AF4 TRIPLE VERTICAL BAR BINARY RELATION. Hence its sequences have an
@@ -9807,22 +9803,20 @@
 <Multi_key><2><slash>                                                               <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><KP_2><slash>                                                                   <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
 <Multi_key><KP_2><slash>                                                            <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
-<Multi_key><space><slash><slash>                                                           <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
-<Multi_key><space><slash><slash>                                                    <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><slash><slash>                                                    <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
-<Multi_key><nobreakspace><slash><slash>                                             <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
-<Multi_key><space><space><bar>                                                             <space> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><space><space><bar>                                                      <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><nobreakspace><space><bar>                                                      <space> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><nobreakspace><space><bar>                                               <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><nobreakspace><nobreakspace><bar>                                               <space> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><nobreakspace><nobreakspace><bar>                                        <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><slash><slash>                                                                  <space> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><slash><slash>                                                           <nobreakspace> : "⫽" U2AFD # DOUBLE SOLIDUS OPERATOR
+<Multi_key><space><bar>                                                                    <space> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><space><bar>                                                             <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><bar>                                                             <space> : "⫾" U2AFE # WHITE VERTICAL BAR
+<Multi_key><nobreakspace><bar>                                                      <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><i><i>                                                                          <space> : "⫾" U2AFE # WHITE VERTICAL BAR
 <Multi_key><i><i>                                                                   <nobreakspace> : "⫾" U2AFE # WHITE VERTICAL BAR
-<Multi_key><space><space><space><bar>                                                              : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-<Multi_key><nobreakspace><space><space><bar>                                                       : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-<Multi_key><nobreakspace><nobreakspace><space><bar>                                                : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
-<Multi_key><nobreakspace><nobreakspace><nobreakspace><bar>                                         : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><space><space><bar>                                                             <space> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><space><space><bar>                                                      <nobreakspace> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><space><bar>                                                      <space> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><space><bar>                                               <nobreakspace> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><bar>                                               <space> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
+<Multi_key><nobreakspace><nobreakspace><bar>                                        <nobreakspace> : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 <Multi_key><I><I>                                                                                  : "⫿" U2AFF # N-ARY WHITE VERTICAL BAR
 #
 #
@@ -9858,12 +9852,12 @@
 <Multi_key><less><less><minus><bar><bar><minus>                                            <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                     <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 #   Mirror of "⤅" U2905.
-<Multi_key><space><less><less><minus><bar>                                                         : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
-<Multi_key><nobreakspace><less><less><minus><bar>                                                  : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
+<Multi_key><less><less><minus><bar>                                                        <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
+<Multi_key><less><less><minus><bar>                                                 <nobreakspace> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 #
 #   The sequences for "⬷" U2B37 without tail as intended per the character name
-#   would be completed with a font-dependent tail (DejaVu Serif) if they were
-#   not streamlined.
+#   would be completed with an optional tail (DejaVu Serif features it) if they
+#   were not streamlined.
 #
 #   Mirror of "⤐" U2910.
 #Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
@@ -9896,8 +9890,8 @@
 <Multi_key><less><minus><asciitilde><asciitilde><periodcentered>                                   : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 #
 #   Among the three greater-minus-greater: "↣" U21A3, "⥸" U2978, "⭃" U2B43, and
-#   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to stand out
-#   enough to get the most straightforward access.
+#   their mirrored counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to
+#   stand out enough to qualify for the most straightforward input method.
 #
 #   Mirror of "⥷" U2977.
 #Multi_key><space><space><greater><minus><greater>                                                 : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
@@ -10107,14 +10101,16 @@
 ### Greek with diacritics
 #
 #   Polytonic Greek is supported alongside to meet eventual user expectations,
-#   despite its exclusion from the French NF Z71-300:2019 standard. To achieve
-#   this, precomposed polytonic Greek letters are supported, although Unicode
-#   advises to use Greek base letters with combining diacritics instead, since
-#   not providing the ability to input diacriticized Greek letters by dead key
-#   may be considered counter-intuitive. The only cross-platform compatible
-#   way to achieve this requires precomposed letters, so as to avoid composed
-#   dead key output.
+#   despite its exclusion from the French NF Z71-300:2019 standard.
+#
+#   To achieve this, precomposed polytonic Greek letters are supported, as the
+#   only cross-platform compatible way, so as to avoid composed dead key output
+#   that Windows layout drivers are unable to support, although Unicode advises
+#   to use Greek base letters with combining diacritics instead.
 #   https://www.unicode.org/faq/greek.html
+#
+#   Not providing the ability to input diacriticized Greek letters by dead keys
+#   may be considered counter-intuitive.
 #
 #   As a consequence, dead keys for Latin diacritics are extended consistently,
 #   except that for mnemonics, dead_invertedbreve and dead_breve stand for the
@@ -10123,7 +10119,7 @@
 #   mnemonic upside that the mapping of dead_caron on the "V" key also matches
 #   the initial of vrachy.
 #   See #   Dead key layout overview
-#   See # # Order of dead key lists
+#   See # # Order of dead key content lists
 #
 #       dead_acute              oxia
 #       dead_grave              varia

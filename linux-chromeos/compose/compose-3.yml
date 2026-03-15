@@ -1834,14 +1834,14 @@
 # # Cross-platform compatibility
 #
 #   Implementing the group selector as a dead key rather than a modifier key
-#   avoids breaking user experience across platforms, since Windows unsupports
+#   avoids breaking user experience across platforms, as Windows unsupports
 #   the ISO group selector modifier key combination Shift + AltGr, but supports
-#   6 + 1 modifiers, and Apple has broken its technote TN2056 around 2015 after
-#   previously allowing to use left Option as an extra modifier, that was
-#   effectively used by the German Neo ergonomic keyboard layout. After the
-#   dedicated left Option was broken, Neo emulated left Option using
-#   Takayama Fumihiko’s Karabiner Elements.
-#   https://pqrs.org/osx/karabiner/
+#   7 + 1 modifiers, and Apple has broken its technote TN2056 around 2015 after
+#   previously allowing to use left Option as an extra modifier. (This was used
+#   by the German Neo ergonomic keyboard layout, to that extent that since the
+#   dedicated left Option shift state was broken, Neo emulates it using
+#   Takayama Fumihiko’s Karabiner-Elements.)
+#   https://karabiner-elements.pqrs.org/
 #
 #
 # # Maintenance of letter groups
@@ -1939,8 +1939,9 @@
 #   On AZERTY, Ccedilla is above the O key, while Swiss QWERTZ has also an
 #   Odiaeresis live key. In an effort to mitigate the inconvenience of not
 #   having Øø in group 1 of Oo, Oslash is additionally in dead_diaeresis,
-#   with Ccedilla as a base character again, and good mnemonic since Danish Øø
-#   is phonetically equivalent to Swedish Öö.
+#   with Ccedilla as a base character again, and good mnemonics based on Danish
+#   Oslash’s phonetic equivalence to Swedish Odiaeresis, and the Ccedilla key’s
+#   E09 location above the "O" key.
 #   See #*# DIAERESIS
 #
 <UEFD0>                                                                                 <Ccedilla> : "Ø" U00D8 # LATIN CAPITAL LETTER O WITH STROKE shortcut
@@ -2115,7 +2116,7 @@
 #   that remapping defeats the point in backward compatibility anyway.
 #
 #   * "«" U00AB and "»" U00BB are referred to as "less-than/greater-than double
-#     angle quotation marks", since they are always similar in shape to two
+#     angle quotation marks", as they are always similar in shape to two
 #     "<" U003C LESS-THAN SIGNs or ">" U003E GREATER-THAN SIGNs, while their
 #     other attributes (left, right, opening, closing) depend on the context
 #     they are used in: a left-to-right script or a right-to-left script as of
@@ -2217,21 +2218,25 @@
 #   user experience, this mix makes up an extra set.
 #   See # # Arrow emoji
 #
-#   Group 1 is not used here, since digits in group 1 are dead keys activating
+#   Group 1 is not used here, as digits in group 1 are dead keys activating
 #   other groups. And groups 8 and 10 are used for mathematical digit symbols:
-#   double-struck (U1D7D8..) and sans-serif (U1D7E2..).
+#   double-struck ("𝟘" U1D7D8..) and sans-serif ("𝟢" U1D7E2..).
 #
 #   So, groups 9, 11 and 12 are used for additional arrow sets: triangle-headed
-#   to bar (U2B70..) as of BMP arrows, and the wide-headed light (U1F860..) and
-#   very heavy (U1F880..) in the SMP. The sans-serif set U1F850.. is skipped as
-#   not providing enough added value with respect to the fact that on Windows,
-#   the DEADTRANS macro only supports one single code unit output instead of 2,
-#   5 or more, and as a consequence, SMP characters are hard to input by dead
-#   keys.
+#   to bar ("⭰" U2B70..) as of BMP arrows, and the wide-headed light arrows
+#   ("🡠" U1F860..) and very heavy arrows ("🢀" U1F880..) in the SMP.
+#
+#   The sans-serif set "🡐" U1F850.. is skipped as not providing enough added
+#   value with respect to the fact that on Windows, the DEADTRANS macro only
+#   supports one single code unit output instead of 2, 5 or more, and as a
+#   consequence, the input of SMP characters by dead keys requires an
+#   additional step.
+#   See kbdeadtrans.c * High surrogates
 #
 #   0 and 5 are used to input the high surrogate, thanks to the fact that these
 #   arrows do not include bidirectional, double-headed arrows pointing in
 #   opposite directions.
+#   See "*" UD83E # Wide-headed arrow high surrogate
 #
 #   The numpad live key level depends on the Mode Lock toggle state.
 #
@@ -2734,10 +2739,10 @@
 #
 # # Wide-headed light barb arrows
 #
-<UEFD0><1>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><1>                                                                                   <0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><1>                                                                   <0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><KP_1>                                                                             <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><KP_1>                                                             <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_1> : "🡧" U1F867 # WIDE-HEADED SOUTH WEST LIGHT BARB ARROW
@@ -2754,10 +2759,10 @@
 <Multi_key><numbersign><1>                                                                     <4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><KP_1>                                                               <KP_4> : "🡠" U1F860 # WIDE-HEADED LEFTWARDS LIGHT BARB ARROW
-<UEFD0><1>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><1>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
-<UEFD0><KP_1>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_1>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><1>                                                                                   <5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><1>                                                                   <5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><KP_1>                                                                             <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><KP_1>                                                             <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><1>                                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <Multi_key><numbersign><1>                                                                     <6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
 <UEFD0><KP_1>                                                                               <KP_6> : "🡢" U1F862 # WIDE-HEADED RIGHTWARDS LIGHT BARB ARROW
@@ -2781,10 +2786,10 @@
 #
 # # Wide-headed very heavy barb arrows
 #
-<UEFD0><2>                                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <0> : "*" UD83E # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><2>                                                                                   <0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><2>                                                                   <0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><KP_2>                                                                             <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><KP_2>                                                             <KP_0> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_1> : "🢇" U1F887 # WIDE-HEADED SOUTH WEST VERY HEAVY BARB ARROW
@@ -2801,10 +2806,10 @@
 <Multi_key><numbersign><2>                                                                     <4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><KP_2>                                                               <KP_4> : "🢀" U1F880 # WIDE-HEADED LEFTWARDS VERY HEAVY BARB ARROW
-<UEFD0><2>                                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><2>                                                                     <5> : "*" UD83E # Wide-headed arrow high surrogate
-<UEFD0><KP_2>                                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
-<Multi_key><numbersign><KP_2>                                                               <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><2>                                                                                   <5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><2>                                                                   <5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<UEFD0><KP_2>                                                                             <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
+#@<Multi_key><numbersign><KP_2>                                                             <KP_5> : "*" UD83E # Wide-headed arrow high surrogate
 <UEFD0><2>                                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <Multi_key><numbersign><2>                                                                     <6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
 <UEFD0><KP_2>                                                                               <KP_6> : "🢂" U1F882 # WIDE-HEADED RIGHTWARDS VERY HEAVY BARB ARROW
@@ -5128,7 +5133,7 @@
 #
 # # B10 exclam, section
 #
-#   "⟰" U27F0 is repurposed as the level-5 modifier symbol, with the rationale
+#   "⟰" U27F0 is proposed as the level-5 modifier symbol, with the rationale
 #   that this key increments by 4 the level index. Called AltFr on this layout
 #   and natively supported by XKB and Windows layout drivers, this modifier is
 #   easily emulated on macOS. Japanese keyboards have left and right Oyayubi
@@ -5263,11 +5268,11 @@
 #
 #   U2002 and U2003 are at level 1 for usability, although these spaces were
 #   originally intended to be no-break. That brings the need to move their two
-#   breaking clones " " U2000, " " U2001 to A03-level_3, since these have been
-#   made canonically equivalent, as part of mitigating the mess left by the
+#   breaking clones " " U2000, " " U2001 to A03-level_3, as these have been
+#   made canonically equivalent in an effort to mitigate the mess left by the
 #   typographical space range vandalization; U2002..U2006 and U2008..U200A were
 #   originally intended to be no-break, just like U2007 FIGURE SPACE ultimately
-#   remained, as sort of the sole survivor.
+#   remained, sort of the sole survivor.
 #   See # # Punctuation spacing for French, regular with U202F NBTSP
 #
 #   Unlike stated in UAX #14, U2007 is not intended for use in numbers, but
