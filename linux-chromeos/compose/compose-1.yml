@@ -5103,8 +5103,8 @@
 #         −7 ASCII + < = > ^ | ~ fully supported on live keys
 #         +1 Quadruple prime included in TeX math packages
 #         +3 Reverse primes included in TeX math packages
-#         +5 Arrows U21A8, U21AF, U21DC, U2B45, U2B46 included in TeX math packages
-#         +2 Triangles U25E3, U25E5 included in TeX math packages
+#         +5 Arrows "↨" U21A8, "↯" U21AF, "⇜" U21DC, "⭅" U2B45, "⭆" U2B46 ibid.
+#         +2 Triangles "◣" U25E3, "◥" U25E5 included in TeX math packages
 #            https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf
 #       ――――
 #       2326 total characters set out for use in math
@@ -5270,9 +5270,9 @@
 #   Both ASCII space and Latin-1 no-break space are supported as terminating
 #   space, the no-break space because in French mode, it is mapped at level 3,
 #   in synergy with the ASCII symbols, that are likely to occur at the end of
-#   math symbol multikey sequences; even if not, U00A0 is supported anyway, for
-#   consistency and maintainability and with respect to a following number that
-#   may need to be connected to the symbol by a no-break space.
+#   math symbol multikey sequences; even if not, " " U00A0 is supported anyway,
+#   for consistency and maintainability and with respect to a following number
+#   that may need to be connected to the symbol by a no-break space.
 #
 #
 #   Leading space
@@ -5772,7 +5772,8 @@
 #
 #   As an alternative to auto-formatting, custom vulgar fractions can also be
 #   hard-coded using preformatted superscript digits for the numerator, and
-#   subscript digits for the denominator, with the negative kerning of U2044.
+#   subscript digits for the denominator, with the negative kerning of the
+#   fraction slash.
 #
 <Multi_key><f><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
 <Multi_key><F><slash>                                                                              : "⁄" U2044 # FRACTION SLASH
@@ -6134,7 +6135,7 @@
 <Multi_key><bar><exclam><greater>                                                                  : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
 <Multi_key><bar><section><greater>                                                                 : "↧" U21A7 # DOWNWARDS ARROW FROM BAR
 #
-#   U21A8 is not labeled as math, but it is included in TeX math packages.
+#   "↨" U21A8 is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=20
 #
 <Multi_key><less><exclam><greater><bar>                                                            : "↨" U21A8 # UP DOWN ARROW WITH BASE
@@ -6153,7 +6154,7 @@
 #Multi_key><less><minus><slash><minus><greater>                                                    : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
 <Multi_key><less><minus><slash><minus>                                                             : "↮" U21AE # LEFT RIGHT ARROW WITH STROKE
 #
-#   U21AF is not labeled as math, but it is included in TeX math packages.
+#   "↯" U21AF is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=36
 #
 <Multi_key><N><greater>                                                                            : "↯" U21AF # DOWNWARDS ZIGZAG ARROW
@@ -6282,7 +6283,7 @@
 <Multi_key><minus><greater><3>                                                                     : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
 <Multi_key><minus><greater><KP_3>                                                                  : "⇛" U21DB # RIGHTWARDS TRIPLE ARROW
 #
-#   U21DC is not labeled as math, but it is included in TeX math packages.
+#   "⇜" U21DC is not labeled as math, but it is included in TeX math packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=37
 #
 <Multi_key><space><less><asciitilde><asciitilde>                                                   : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
@@ -7967,7 +7968,7 @@
 #   https://www.unicode.org/charts/PDF/U27F0.pdf
 #   https://www.unicode.org/charts/nameslist/n_27F0.html
 #
-#   Horizontals are U2B45, U2B46.
+#   Horizontals are "⭅" U2B45, "⭆" U2B46.
 <Multi_key><less><exclam><4>                                                                       : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><less><section><4>                                                                      : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
 <Multi_key><less><exclam><KP_4>                                                                    : "⟰" U27F0 # UPWARDS QUADRUPLE ARROW
@@ -8214,7 +8215,7 @@
 <Multi_key><period><greater><less>                                                                 : "⥄" U2944 # SHORT RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
-#   Mirror is U2B3E.
+#   Mirror is "⬾" U2B3E.
 #Multi_key><x><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><x><minus>                                                                              : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><X><minus>                                                                              : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
@@ -8338,7 +8339,7 @@
 <Multi_key><space><less><less><minus>                                               <nobreakspace> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 <Multi_key><nobreakspace><less><less><minus>                                               <space> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
 <Multi_key><nobreakspace><less><less><minus>                                        <nobreakspace> : "⥶" U2976 # LESS-THAN ABOVE LEFTWARDS ARROW
-#   Mirror is U2B43.
+#   Mirror is "⭃" U2B43.
 <Multi_key><space><less><minus><less>                                                              : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
 <Multi_key><nobreakspace><less><minus><less>                                                       : "⥷" U2977 # LEFTWARDS ARROW THROUGH LESS-THAN
 <Multi_key><space><greater><minus><greater>                                                        : "⥸" U2978 # GREATER-THAN ABOVE RIGHTWARDS ARROW
@@ -9839,30 +9840,30 @@
 #   https://www.unicode.org/charts/PDF/U2B00.pdf
 #   https://www.unicode.org/charts/nameslist/n_2B00.html
 #
-#   Mirror of U21F4.
+#   Mirror of "⇴" U21F4.
 <Multi_key><less><minus><o><minus>                                                         <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><less><minus><o><minus>                                                  <nobreakspace> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
-#   Mirror of U21F6.
+#   Mirror of "⇶" U21F6.
 <Multi_key><3><less><minus>                                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><KP_3><less><minus>                                                                     : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 #Multi_key><less><minus><less><minus><less><minus>                                                 : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><less><minus><less><minus><less>                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
-#   Mirror of U27F4.
+#   Mirror of "⟴" U27F4.
 <Multi_key><less><minus><o><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><O><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
-#   Mirror of U27FF.
+#   Mirror of "⟿" U27FF.
 <Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
-#   Mirror of U2900.
+#   Mirror of "⤀" U2900.
 <Multi_key><less><less><bar><minus>                                                        <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><bar><minus>                                                 <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                                 <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                          <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
-#   Mirror of U2901.
+#   Mirror of "⤁" U2901.
 <Multi_key><less><less><bar><bar><minus>                                                   <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus>                                            <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                            <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                     <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
-#   Mirror of U2905.
+#   Mirror of "⤅" U2905.
 <Multi_key><space><less><less><minus><bar>                                                         : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><nobreakspace><less><less><minus><bar>                                                  : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 #
@@ -9870,14 +9871,14 @@
 #   would be completed with a font-dependent tail (DejaVu Serif) if they were
 #   not streamlined.
 #
-#   Mirror of U2910.
+#   Mirror of "⤐" U2910.
 #Multi_key><less><less><minus><0><minus><0><minus>                                                 : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 #Multi_key><less><less><minus><0><minus><0><minus><less>                                           : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><0>                                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><KP_0>                                                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-#   Mirror of U2911.
+#   Mirror of "⤑" U2911.
 <Multi_key><less><period><period>                                                                  : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
-#   Mirrors of U2914..U2918.
+#   Mirrors of "⤔" U2914.."⤘" U2918.
 <Multi_key><less><bar><minus><less>                                                                : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><less>                                                         : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><bar><bar><minus><less>                                                           : "⬺" U2B3A # LEFTWARDS ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
@@ -9887,13 +9888,13 @@
 <Multi_key><less><less><minus><bar><minus><less>                                                   : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus><less>                                                     : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
-#   Mirror of U2947.
+#   Mirror of "⥇" U2947.
 <Multi_key><less><minus><x>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 <Multi_key><less><minus><X>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
-#   Mirror of U2933.
+#   Mirror of "⤳" U2933.
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
-#   Mirrors of U2971, U2972, U2975.
+#   Mirrors of "⥱" U2971, "⥲" U2972, "⥵" U2975.
 <Multi_key><equal><less><minus>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><periodcentered><less><minus>                                               : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
@@ -9904,12 +9905,12 @@
 #   their counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to stand out
 #   enough to get the most straightforward access.
 #
-#   Mirror of U2977.
+#   Mirror of "⥷" U2977.
 #Multi_key><space><space><greater><minus><greater>                                                 : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><space><space><greater><minus>                                                          : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><space><greater><minus>                                                   : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><nobreakspace><greater><minus>                                            : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
-#   Mirror of U297A.
+#   Mirror of "⥺" U297A.
 <Multi_key><b><minus><greater>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><backslash><minus><greater>                                                          : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><backslash><minus>                                                                   : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
@@ -9917,8 +9918,8 @@
 #Multi_key><c><c><minus><greater>                                                                  : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><c><minus>                                                                           : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #
-#   Verticals of U2B45, U2B46 are U27F0, U27F1.
-#   U2B45 and U2B46 are not labeled as math but are included in TeX math
+#   Verticals of "⭅" U2B45, "⭆" U2B46 are "⟰" U27F0, "⟱" U27F1.
+#   "⭅" U2B45 and "⭆" U2B46 are not labeled as math but are included in TeX math
 #   packages.
 #   https://tug.ctan.org/fonts/xcharter-math/unimath-xcharter.pdf#page=75
 #

@@ -112,7 +112,7 @@
 #   Another reason to adopt new-school is that in en_US.UTF-8/Compose, <comma>
 #   is used for both dead_cedilla and dead_ogonek, resulting in a conflict on E
 #   that en_US.UTF-8/Compose works around by using <cedilla> instead of <comma>
-#   in the multikey sequences yielding U0228 and U0229.
+#   in the multikey sequences yielding "Ȩ" U0228 and "ȩ" U0229.
 #
 #   Yet another reason is that en_US.UTF-8/Compose, using dead_hook both for
 #   hook and hook above, is unable to support "Ƴ" U01B3 LATIN CAPITAL LETTER Y
@@ -272,11 +272,11 @@
 #   urging to not remove any keysyms (line 168).
 #   https://fossies.org/diffs/tk/8.6.14_vs_8.6.15/xlib/X11/keysymdef.h-diff.html
 #
-#   The outcome is that in the meantime, due to fooling into assuming that the
-#   changes were effective, the instances of dead_longsolidusoverlay have been
-#   replaced with dead_stroke, and *dead_bar has been assigned UEFD8, the ninth
-#   Private Use Area keysym used for regular dead keys in this file, resulting
-#   in more consistency of dead keysyms with names of diacritics.
+#   The outcome is that in the meantime, due to assuming that the changes were
+#   effective, the instances of dead_longsolidusoverlay have been replaced with
+#   dead_stroke, and *dead_bar has been assigned UEFD8, the ninth Private Use
+#   keysym used for regular dead keys in this file, resulting in more
+#   consistency of dead keysyms with names of diacritics.
 #   See # # Proposed additional dead keysyms
 #
 #
@@ -302,8 +302,8 @@
 #   typed after, implementing this dead key on non-Windows keyboards requires
 #   knowing the list of letters expected to be supported.
 #
-#   (Although U0332 COMBINING LOW LINE is defined as connecting, it may not be
-#   used to underline a text span in plain text, due to vertical alignment
+#   (Although "̲" U0332 COMBINING LOW LINE is defined as connecting, it may not
+#   be used to underline a text span in plain text, due to vertical alignment
 #   issues under lowercase letters with descender.)
 #
 #
