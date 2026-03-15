@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.6.0.0 Sun 2026-03-15T2139+0100
 * Update                                   6.2.4.2.0 Wed 2026-03-04T2220+0100
 * Update                                   6.2.3.1.0 Mon 2026-02-23T0705+0100
 * Update                                   6.2.3.0.0 Sun 2026-02-22T2241+0100
@@ -1007,6 +1008,7 @@
 /*<!abovedot><!macron>                                             */ DEADTRANS( 0x200B	,0x01E1	,0x1AD4	,0x0000), // '​' ➔ "᫔" U+1AD4 COMBINING VERTICAL-LINE-MACRON
 /*<!abovedot>                                                      */ DEADTRANS( L'\''	,0x1E57	,0x2AC3	,0x0000), // ''' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( 0x2019	,0x1E57	,0x2AC3	,0x0000), // '’' ➔ "⫃" U+2AC3 SUBSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!abovedot>                                                      */ DEADTRANS( L'*'	,0x1E57	,0x2A30	,0x0000), // '*' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'|'	,0x1E57	,0xA717	,0x0000), // '|' ➔ "ꜗ" U+A717 MODIFIER LETTER DOT VERTICAL BAR
 /*<!abovedot>                                                      */ DEADTRANS( L'{'	,0x1E57	,0x2AC4	,0x0000), // '{' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'='	,0x1E57	,0x2250	,0x0000), // '=' ➔ "≐" U+2250 APPROACHES THE LIMIT
@@ -1019,7 +1021,6 @@
 /*<!abovedot>                                                      */ DEADTRANS( L'?'	,0x1E57	,0x2A52	,0x0000), // '?' ➔ "⩒" U+2A52 LOGICAL OR WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'"'	,0x1E57	,0x22F5	,0x0000), // '"' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( 0x20AC	,0x1E57	,0x22F5	,0x0000), // '€' ➔ "⋵" U+22F5 ELEMENT OF WITH DOT ABOVE
-/*<!abovedot>                                                      */ DEADTRANS( L';'	,0x1E57	,0x2A30	,0x0000), // ';' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'/'	,0x1E57	,0xA718	,0x0000), // '/' ➔ "ꜘ" U+A718 MODIFIER LETTER DOT SLASH
 /*<!abovedot>                                                      */ DEADTRANS( L'~'	,0x1E57	,0x2A6A	,0x0000), // '~' ➔ "⩪" U+2A6A TILDE OPERATOR WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'_'	,0x1E57	,0xA719	,0x0000), // '_' ➔ "ꜙ" U+A719 MODIFIER LETTER DOT HORIZONTAL BAR
@@ -1235,6 +1236,7 @@
 /*<!acute><!abovedot>                                              */ DEADTRANS( 0x200B	,0x1E65	,0x1DC1	,0x0000), // '​' ➔ "᷁" U+1DC1 COMBINING DOTTED ACUTE ACCENT
 /*<!acute><!abovering>                                             */ DEADTRANS( L'A'	,0x01FA	,0x01FA	,0x0000), // 'A' ➔ "Ǻ" U+01FA LATIN CAPITAL LETTER A WITH RING ABOVE AND ACUTE
 /*<!acute><!abovering>                                             */ DEADTRANS( L'a'	,0x01FA	,0x01FB	,0x0000), // 'a' ➔ "ǻ" U+01FB LATIN SMALL LETTER A WITH RING ABOVE AND ACUTE
+/*<!acute><!acute>                                                 */ DEADTRANS( 0x00E1	,0x0171	,0x1ACB	,0x0000), // 'á' ➔ "᫋" U+1ACB COMBINING TRIPLE ACUTE ACCENT
 /*<!acute><!acute>                                                 */ DEADTRANS( L'\''	,0x0171	,0x02BC	,0x0000), // ''' ➔ "ʼ" U+02BC MODIFIER LETTER APOSTROPHE
 /*<!acute><!acute>                                                 */ DEADTRANS( 0x2019	,0x0171	,0x02BC	,0x0000), // '’' ➔ "ʼ" U+02BC MODIFIER LETTER APOSTROPHE
 /*<!acute><!acute>                                                 */ DEADTRANS( L'"'	,0x0171	,0x02EE	,0x0000), // '"' ➔ "ˮ" U+02EE MODIFIER LETTER DOUBLE APOSTROPHE
@@ -2482,7 +2484,11 @@
 /*<!caron><!group>                                                 */ DEADTRANS( L'z'	,0x01EF	,0x01EF	,0x0000), // 'z' ➔ "ǯ" U+01EF LATIN SMALL LETTER EZH WITH CARON
 /*<!caron>                                                         */ DEADTRANS( L'|'	,0x021F	,0x2E37	,0x0000), // '|' ➔ "⸷" U+2E37 DAGGER WITH RIGHT GUARD
 /*<!caron>                                                         */ DEADTRANS( L','	,0x021F	,0x02BB	,0x0000), // ',' ➔ "ʻ" U+02BB MODIFIER LETTER TURNED COMMA
-/*<!caron>                                                         */ DEADTRANS( L'='	,0x021F	,0x2267	,0x0000), // '=' ➔ "≧" U+2267 GREATER-THAN OVER EQUAL TO
+/*<!caron>                                                         */ DEADTRANS( L'='	,0x021F	,0x208C	,0x0000), // '=' ➔ "₌" U+208C SUBSCRIPT EQUALS SIGN
+/*<!caron>                                                         */ DEADTRANS( L'-'	,0x021F	,0x208B	,0x0000), // '-' ➔ "₋" U+208B SUBSCRIPT MINUS
+/*<!caron>                                                         */ DEADTRANS( L'('	,0x021F	,0x208D	,0x0000), // '(' ➔ "₍" U+208D SUBSCRIPT LEFT PARENTHESIS
+/*<!caron>                                                         */ DEADTRANS( L')'	,0x021F	,0x208E	,0x0000), // ')' ➔ "₎" U+208E SUBSCRIPT RIGHT PARENTHESIS
+/*<!caron>                                                         */ DEADTRANS( L'+'	,0x021F	,0x208A	,0x0000), // '+' ➔ "₊" U+208A SUBSCRIPT PLUS SIGN
 /*<!caron>                                                         */ DEADTRANS( L'0'	,0x021F	,0x2080	,0x0000), // '0' ➔ "₀" U+2080 SUBSCRIPT ZERO
 /*<!caron>                                                         */ DEADTRANS( L'1'	,0x021F	,0x2081	,0x0000), // '1' ➔ "₁" U+2081 SUBSCRIPT ONE
 /*<!caron>                                                         */ DEADTRANS( L'2'	,0x021F	,0x2082	,0x0000), // '2' ➔ "₂" U+2082 SUBSCRIPT TWO
@@ -2536,10 +2542,7 @@
 /*<!cedilla><!acute>                                               */ DEADTRANS( L'c'	,0x1E08	,0x1E09	,0x0000), // 'c' ➔ "ḉ" U+1E09 LATIN SMALL LETTER C WITH CEDILLA AND ACUTE
 /*<!cedilla><!breve>                                               */ DEADTRANS( L'E'	,0x1E1C	,0x1E1C	,0x0000), // 'E' ➔ "Ḝ" U+1E1C LATIN CAPITAL LETTER E WITH CEDILLA AND BREVE
 /*<!cedilla><!breve>                                               */ DEADTRANS( L'e'	,0x1E1C	,0x1E1D	,0x0000), // 'e' ➔ "ḝ" U+1E1D LATIN SMALL LETTER E WITH CEDILLA AND BREVE
-/*<!cedilla><!cedilla>                                             */ DEADTRANS( 0x00A0	,0x02BB	,0x02BB	,0x0000), // ' ' ➔ "ʻ" U+02BB MODIFIER LETTER TURNED COMMA
-/*<!cedilla><!cedilla>                                             */ DEADTRANS( 0x202F	,0x02BB	,0x02BB	,0x0000), // ' ' ➔ "ʻ" U+02BB MODIFIER LETTER TURNED COMMA
-/*<!cedilla><!cedilla>                                             */ DEADTRANS( L' '	,0x02BB	,0x0312	,0x0000), // ' ' ➔ "̒" U+0312 COMBINING TURNED COMMA ABOVE
-/*<!cedilla><!cedilla>                                             */ DEADTRANS( 0x200B	,0x02BB	,0x0312	,0x0000), // '​' ➔ "̒" U+0312 COMBINING TURNED COMMA ABOVE
+/*<!cedilla>                                                       */ DEADTRANS( 0x00E7	,0x00E7	,0x0312	,0x0000), // 'ç' ➔ "̒" U+0312 COMBINING TURNED COMMA ABOVE
 /*<!cedilla>                                                       */ DEADTRANS( L'^'	,0x00E7	,0x1DD7	,0x0000), // '^' ➔ "ᷗ" U+1DD7 COMBINING LATIN SMALL LETTER C CEDILLA
 /*<!cedilla>                                                       */ DEADTRANS( L'0'	,0x00E7	,0x2491	,0x0000), // '0' ➔ "⒑" U+2491 NUMBER TEN FULL STOP
 /*<!cedilla>                                                       */ DEADTRANS( L'1'	,0x00E7	,0x2488	,0x0000), // '1' ➔ "⒈" U+2488 DIGIT ONE FULL STOP
@@ -2686,7 +2689,11 @@
 /*<!circumflex><!circumflex><!group>                               */ DEADTRANS( L'z'	,0x01EF	,0x01EF	,0x0000), // 'z' ➔ "ǯ" U+01EF LATIN SMALL LETTER EZH WITH CARON
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'|'	,0x01CD	,0x2E37	,0x0000), // '|' ➔ "⸷" U+2E37 DAGGER WITH RIGHT GUARD
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L','	,0x01CD	,0x02BB	,0x0000), // ',' ➔ "ʻ" U+02BB MODIFIER LETTER TURNED COMMA
-/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'='	,0x01CD	,0x2267	,0x0000), // '=' ➔ "≧" U+2267 GREATER-THAN OVER EQUAL TO
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'='	,0x01CD	,0x208C	,0x0000), // '=' ➔ "₌" U+208C SUBSCRIPT EQUALS SIGN
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'-'	,0x01CD	,0x208B	,0x0000), // '-' ➔ "₋" U+208B SUBSCRIPT MINUS
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'('	,0x01CD	,0x208D	,0x0000), // '(' ➔ "₍" U+208D SUBSCRIPT LEFT PARENTHESIS
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L')'	,0x01CD	,0x208E	,0x0000), // ')' ➔ "₎" U+208E SUBSCRIPT RIGHT PARENTHESIS
+/*<!circumflex><!circumflex>                                       */ DEADTRANS( L'+'	,0x01CD	,0x208A	,0x0000), // '+' ➔ "₊" U+208A SUBSCRIPT PLUS SIGN
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'0'	,0x01CD	,0x2080	,0x0000), // '0' ➔ "₀" U+2080 SUBSCRIPT ZERO
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'1'	,0x01CD	,0x2081	,0x0000), // '1' ➔ "₁" U+2081 SUBSCRIPT ONE
 /*<!circumflex><!circumflex>                                       */ DEADTRANS( L'2'	,0x01CD	,0x2082	,0x0000), // '2' ➔ "₂" U+2082 SUBSCRIPT TWO
@@ -2866,7 +2873,7 @@
 /*<!circumflex>                                                    */ DEADTRANS( L'\''	,0x00EA	,0x2018	,0x0000), // ''' ➔ "‘" U+2018 LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( 0x2019	,0x00EA	,0x2018	,0x0000), // '’' ➔ "‘" U+2018 LEFT SINGLE QUOTATION MARK, single turned comma quotation mark
 /*<!circumflex>                                                    */ DEADTRANS( L'*'	,0x00EA	,0x2042	,0x0000), // '*' ➔ "⁂" U+2042 ASTERISM
-/*<!circumflex>                                                    */ DEADTRANS( L'@'	,0x00EA	,0x237D	,0x0000), // '@' ➔ "⍽" U+237D SHOULDERED OPEN BOX
+/*<!circumflex>                                                    */ DEADTRANS( L'@'	,0x00EA	,0x2A36	,0x0000), // '@' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!circumflex>                                                    */ DEADTRANS( L'|'	,0x00EA	,0x2E36	,0x0000), // '|' ➔ "⸶" U+2E36 DAGGER WITH LEFT GUARD
 /*<!circumflex>                                                    */ DEADTRANS( L'{'	,0x00EA	,0x27E8	,0x0000), // '{' ➔ "⟨" U+27E8 MATHEMATICAL LEFT ANGLE BRACKET
 /*<!circumflex>                                                    */ DEADTRANS( L'}'	,0x00EA	,0x27E9	,0x0000), // '}' ➔ "⟩" U+27E9 MATHEMATICAL RIGHT ANGLE BRACKET
@@ -2875,11 +2882,13 @@
 /*<!circumflex>                                                    */ DEADTRANS( L':'	,0x00EA	,0x2026	,0x0000), // ':' ➔ "…" U+2026 HORIZONTAL ELLIPSIS
 /*<!circumflex>                                                    */ DEADTRANS( L','	,0x00EA	,0x02BC	,0x0000), // ',' ➔ "ʼ" U+02BC MODIFIER LETTER APOSTROPHE
 /*<!circumflex>                                                    */ DEADTRANS( L'$'	,0x00EA	,0x1DCD	,0x0000), // '$' ➔ "᷍" U+1DCD COMBINING DOUBLE CIRCUMFLEX ABOVE
-/*<!circumflex>                                                    */ DEADTRANS( L'='	,0x00EA	,0x2266	,0x0000), // '=' ➔ "≦" U+2266 LESS-THAN OVER EQUAL TO
+/*<!circumflex>                                                    */ DEADTRANS( L'='	,0x00EA	,0x207C	,0x0000), // '=' ➔ "⁼" U+207C SUPERSCRIPT EQUALS SIGN
 /*<!circumflex>                                                    */ DEADTRANS( L'!'	,0x00EA	,0x2E18	,0x0000), // '!' ➔ "⸘" U+2E18 INVERTED INTERROBANG
 /*<!circumflex>                                                    */ DEADTRANS( L'>'	,0x00EA	,0x2A7E	,0x0000), // '>' ➔ "⩾" U+2A7E GREATER-THAN OR SLANTED EQUAL TO
 /*<!circumflex>                                                    */ DEADTRANS( L'<'	,0x00EA	,0x2A7D	,0x0000), // '<' ➔ "⩽" U+2A7D LESS-THAN OR SLANTED EQUAL TO
-/*<!circumflex>                                                    */ DEADTRANS( L'-'	,0x00EA	,0x2014	,0x0000), // '-' ➔ "—" U+2014 EM DASH
+/*<!circumflex>                                                    */ DEADTRANS( L'-'	,0x00EA	,0x207B	,0x0000), // '-' ➔ "⁻" U+207B SUPERSCRIPT MINUS
+/*<!circumflex>                                                    */ DEADTRANS( L'('	,0x00EA	,0x207D	,0x0000), // '(' ➔ "⁽" U+207D SUPERSCRIPT LEFT PARENTHESIS
+/*<!circumflex>                                                    */ DEADTRANS( L')'	,0x00EA	,0x207E	,0x0000), // ')' ➔ "⁾" U+207E SUPERSCRIPT RIGHT PARENTHESIS
 /*<!circumflex>                                                    */ DEADTRANS( L'%'	,0x00EA	,0x2030	,0x0000), // '%' ➔ "‰" U+2030 PER MILLE SIGN
 /*<!circumflex>                                                    */ DEADTRANS( L'.'	,0x00EA	,0x00B7	,0x0000), // '.' ➔ "·" U+00B7 MIDDLE DOT
 /*<!circumflex>                                                    */ DEADTRANS( L'+'	,0x00EA	,0x2A23	,0x0000), // '+' ➔ "⨣" U+2A23 PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
@@ -2928,6 +2937,7 @@
 /*<!circumflex>                                                    */ DEADTRANS( L'i'	,0x00EA	,0x00EE	,0x0000), // 'i' ➔ "î" U+00EE LATIN SMALL LETTER I WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'J'	,0x00EA	,0x0134	,0x0000), // 'J' ➔ "Ĵ" U+0134 LATIN CAPITAL LETTER J WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'j'	,0x00EA	,0x0135	,0x0000), // 'j' ➔ "ĵ" U+0135 LATIN SMALL LETTER J WITH CIRCUMFLEX
+/*<!circumflex>                                                    */ DEADTRANS( 0x00D7	,0x00EA	,0x2A36	,0x0000), // '×' ➔ "⨶" U+2A36 CIRCLED MULTIPLICATION SIGN WITH CIRCUMFLEX ACCENT
 /*<!circumflex>                                                    */ DEADTRANS( L'O'	,0x00EA	,0x00D4	,0x0000), // 'O' ➔ "Ô" U+00D4 LATIN CAPITAL LETTER O WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'o'	,0x00EA	,0x00F4	,0x0000), // 'o' ➔ "ô" U+00F4 LATIN SMALL LETTER O WITH CIRCUMFLEX
 /*<!circumflex>                                                    */ DEADTRANS( L'S'	,0x00EA	,0x015C	,0x0000), // 'S' ➔ "Ŝ" U+015C LATIN CAPITAL LETTER S WITH CIRCUMFLEX
@@ -3106,11 +3116,11 @@
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'1'	,0x010E	,0x2223	,0x0000), // '1' ➔ "∣" U+2223 DIVIDES
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'2'	,0x010E	,0x2016	,0x0000), // '2' ➔ "‖" U+2016 DOUBLE VERTICAL LINE
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'3'	,0x010E	,0x2980	,0x0000), // '3' ➔ "⦀" U+2980 TRIPLE VERTICAL BAR DELIMITER
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'4'	,0x010E	,0x2225	,0x0000), // '4' ➔ "∥" U+2225 PARALLEL TO
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'5'	,0x010E	,0x01C0	,0x0000), // '5' ➔ "ǀ" U+01C0 LATIN LETTER DENTAL CLICK
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'4'	,0x010E	,0x00A6	,0x0000), // '4' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'5'	,0x010E	,0x2225	,0x0000), // '5' ➔ "∥" U+2225 PARALLEL TO
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'6'	,0x010E	,0x2AF4	,0x0000), // '6' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'7'	,0x010E	,0x2AFF	,0x0000), // '7' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'8'	,0x010E	,0x01C1	,0x0000), // '8' ➔ "ǁ" U+01C1 LATIN LETTER LATERAL CLICK
+/*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'8'	,0x010E	,0x2226	,0x0000), // '8' ➔ "∦" U+2226 NOT PARALLEL TO
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'9'	,0x010E	,0x2AFC	,0x0000), // '9' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'A'	,0x010E	,0x0100	,0x0000), // 'A' ➔ "Ā" U+0100 LATIN CAPITAL LETTER A WITH MACRON
 /*<!diaeresis><!diaeresis>                                         */ DEADTRANS( L'a'	,0x010E	,0x0101	,0x0000), // 'a' ➔ "ā" U+0101 LATIN SMALL LETTER A WITH MACRON
@@ -3240,9 +3250,13 @@
 /*<!diaeresis>                                                     */ DEADTRANS( L'\\'	,0x00EB	,0x00A6	,0x0000), // '\' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
 /*<!diaeresis>                                                     */ DEADTRANS( L'^'	,0x00EB	,0x1ADC	,0x0000), // '^' ➔ "᫜" U+1ADC COMBINING DIAERESIS WITH RAISED LEFT DOT
 /*<!diaeresis>                                                     */ DEADTRANS( L'$'	,0x00EB	,0x017F	,0x0000), // '$' ➔ "ſ" U+017F LATIN SMALL LETTER LONG S
-/*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x2E40	,0x0000), // '-' ➔ "⹀" U+2E40 DOUBLE HYPHEN
+/*<!diaeresis>                                                     */ DEADTRANS( L'='	,0x00EB	,0x207C	,0x0000), // '=' ➔ "⁼" U+207C SUPERSCRIPT EQUALS SIGN
+/*<!diaeresis>                                                     */ DEADTRANS( L'-'	,0x00EB	,0x207B	,0x0000), // '-' ➔ "⁻" U+207B SUPERSCRIPT MINUS
+/*<!diaeresis>                                                     */ DEADTRANS( L'('	,0x00EB	,0x207D	,0x0000), // '(' ➔ "⁽" U+207D SUPERSCRIPT LEFT PARENTHESIS
+/*<!diaeresis>                                                     */ DEADTRANS( L')'	,0x00EB	,0x207E	,0x0000), // ')' ➔ "⁾" U+207E SUPERSCRIPT RIGHT PARENTHESIS
 /*<!diaeresis>                                                     */ DEADTRANS( L'%'	,0x00EB	,0x2030	,0x0000), // '%' ➔ "‰" U+2030 PER MILLE SIGN
 /*<!diaeresis>                                                     */ DEADTRANS( L'.'	,0x00EB	,0x2026	,0x0000), // '.' ➔ "…" U+2026 HORIZONTAL ELLIPSIS
+/*<!diaeresis>                                                     */ DEADTRANS( L'+'	,0x00EB	,0x207A	,0x0000), // '+' ➔ "⁺" U+207A SUPERSCRIPT PLUS SIGN
 /*<!diaeresis>                                                     */ DEADTRANS( L'"'	,0x00EB	,0x201E	,0x0000), // '"' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( 0x20AC	,0x00EB	,0x201E	,0x0000), // '€' ➔ "„" U+201E DOUBLE LOW-9 QUOTATION MARK, low double comma quotation mark
 /*<!diaeresis>                                                     */ DEADTRANS( L'/'	,0x00EB	,0x2016	,0x0000), // '/' ➔ "‖" U+2016 DOUBLE VERTICAL LINE
@@ -3299,8 +3313,7 @@
 /*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x202F	,0x0390	,0x0385	,0x0000), // ' ' ➔ "΅" U+0385 GREEK DIALYTIKA TONOS
 /*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( L' '	,0x0390	,0x0344	,0x0000), // ' ' ➔ "̈́" U+0344 COMBINING GREEK DIALYTIKA TONOS
 /*<!doubleacute><!diaeresis><!greek>                               */ DEADTRANS( 0x200B	,0x0390	,0x0344	,0x0000), // '​' ➔ "̈́" U+0344 COMBINING GREEK DIALYTIKA TONOS
-/*<!doubleacute><!doubleacute>                                     */ DEADTRANS( L' '	,0x2034	,0x1ACB	,0x0000), // ' ' ➔ "᫋" U+1ACB COMBINING TRIPLE ACUTE ACCENT
-/*<!doubleacute><!doubleacute>                                     */ DEADTRANS( 0x200B	,0x2034	,0x1ACB	,0x0000), // '​' ➔ "᫋" U+1ACB COMBINING TRIPLE ACUTE ACCENT
+/*<!doubleacute>                                                   */ DEADTRANS( 0x0151	,0x0151	,0x1ACB	,0x0000), // 'ő' ➔ "᫋" U+1ACB COMBINING TRIPLE ACUTE ACCENT
 /*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( L'i'	,0x03B0	,0x0390	,0x0000), // 'i' ➔ "ΐ" U+0390 GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
 /*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( L'y'	,0x03B0	,0x03B0	,0x0000), // 'y' ➔ "ΰ" U+03B0 GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 /*<!doubleacute><!greek><!diaeresis>                               */ DEADTRANS( 0x00A0	,0x03B0	,0x0385	,0x0000), // ' ' ➔ "΅" U+0385 GREEK DIALYTIKA TONOS
@@ -3519,7 +3532,9 @@
 /*<!flag><!group><3>                                               */ DEADTRANS( L'\''	,0x2287	,0x2287	,0x0000), // ''' ➔ "⊇" U+2287 SUPERSET OF OR EQUAL TO
 /*<!flag><!group><3>                                               */ DEADTRANS( 0x2019	,0x2287	,0x2287	,0x0000), // '’' ➔ "⊇" U+2287 SUPERSET OF OR EQUAL TO
 /*<!flag><!group><3>                                               */ DEADTRANS( L'`'	,0x2287	,0x22BD	,0x0000), // '`' ➔ "⊽" U+22BD NOR
+/*<!flag>                                                          */ DEADTRANS( L'\\'	,0x2690	,0xDFF4	,0x0000), // High surrogate: D83C; '\' ➔ "🏴" U+1F3F4 WAVING BLACK FLAG
 /*<!flag>                                                          */ DEADTRANS( L'-'	,0x2690	,0x2E40	,0x0000), // '-' ➔ "⹀" U+2E40 DOUBLE HYPHEN
+/*<!flag>                                                          */ DEADTRANS( L'/'	,0x2690	,0xDFF3	,0x0000), // High surrogate: D83C; '/' ➔ "🏳" U+1F3F3 WAVING WHITE FLAG
 /*<!flag>                                                          */ DEADTRANS( L'0'	,0x2690	,0x21D5	,0x0000), // '0' ➔ "⇕" U+21D5 UP DOWN DOUBLE ARROW
 /*<!flag>                                                          */ DEADTRANS( L'1'	,0x2690	,0x21D9	,0x0000), // '1' ➔ "⇙" U+21D9 SOUTH WEST DOUBLE ARROW
 /*<!flag>                                                          */ DEADTRANS( L'2'	,0x2690	,0x21D3	,0x0000), // '2' ➔ "⇓" U+21D3 DOWNWARDS DOUBLE ARROW
@@ -3530,6 +3545,7 @@
 /*<!flag>                                                          */ DEADTRANS( L'7'	,0x2690	,0x21D6	,0x0000), // '7' ➔ "⇖" U+21D6 NORTH WEST DOUBLE ARROW
 /*<!flag>                                                          */ DEADTRANS( L'8'	,0x2690	,0x21D1	,0x0000), // '8' ➔ "⇑" U+21D1 UPWARDS DOUBLE ARROW
 /*<!flag>                                                          */ DEADTRANS( L'9'	,0x2690	,0x21D7	,0x0000), // '9' ➔ "⇗" U+21D7 NORTH EAST DOUBLE ARROW
+/*<!flag>                                                          */ DEADTRANS( 0x00B7	,0x2690	,0xDFF4	,0x0000), // High surrogate: D83C; '·' ➔ "🏴" U+1F3F4 WAVING BLACK FLAG
 /*<!flag>                                                          */ DEADTRANS( 0x00A0	,0x2690	,0x02ED	,0x0000), // ' ' ➔ "˭" U+02ED MODIFIER LETTER UNASPIRATED
 /*<!flag>                                                          */ DEADTRANS( 0x202F	,0x2690	,0x02ED	,0x0000), // ' ' ➔ "˭" U+02ED MODIFIER LETTER UNASPIRATED
 /*<!flag>                                                          */ DEADTRANS( L' '	,0x2690	,0x1AE8	,0x0000), // ' ' ➔ "᫨" U+1AE8 COMBINING EQUALS SIGN ABOVE
@@ -7905,6 +7921,7 @@
 /*<!invertedbreve><!invertedbreve>                                 */ DEADTRANS( L' '	,0x1D16	,0x032F	,0x0000), // ' ' ➔ "̯" U+032F COMBINING INVERTED BREVE BELOW
 /*<!invertedbreve><!invertedbreve>                                 */ DEADTRANS( 0x200B	,0x1D16	,0x032F	,0x0000), // '​' ➔ "̯" U+032F COMBINING INVERTED BREVE BELOW
 /*<!invertedbreve>                                                 */ DEADTRANS( L'$'	,0x0213	,0x0361	,0x0000), // '$' ➔ "͡" U+0361 COMBINING DOUBLE INVERTED BREVE
+/*<!invertedbreve>                                                 */ DEADTRANS( L'='	,0x0213	,0x2258	,0x0000), // '=' ➔ "≘" U+2258 CORRESPONDS TO
 /*<!invertedbreve>                                                 */ DEADTRANS( L'A'	,0x0213	,0x0202	,0x0000), // 'A' ➔ "Ȃ" U+0202 LATIN CAPITAL LETTER A WITH INVERTED BREVE
 /*<!invertedbreve>                                                 */ DEADTRANS( L'a'	,0x0213	,0x0203	,0x0000), // 'a' ➔ "ȃ" U+0203 LATIN SMALL LETTER A WITH INVERTED BREVE
 /*<!invertedbreve>                                                 */ DEADTRANS( L'C'	,0x0213	,0x02D3	,0x0000), // 'C' ➔ "˓" U+02D3 MODIFIER LETTER CENTRED LEFT HALF RING
@@ -8134,11 +8151,11 @@
 /*<!macron>                                                        */ DEADTRANS( L'1'	,0x0101	,0x2223	,0x0000), // '1' ➔ "∣" U+2223 DIVIDES
 /*<!macron>                                                        */ DEADTRANS( L'2'	,0x0101	,0x2016	,0x0000), // '2' ➔ "‖" U+2016 DOUBLE VERTICAL LINE
 /*<!macron>                                                        */ DEADTRANS( L'3'	,0x0101	,0x2980	,0x0000), // '3' ➔ "⦀" U+2980 TRIPLE VERTICAL BAR DELIMITER
-/*<!macron>                                                        */ DEADTRANS( L'4'	,0x0101	,0x2225	,0x0000), // '4' ➔ "∥" U+2225 PARALLEL TO
-/*<!macron>                                                        */ DEADTRANS( L'5'	,0x0101	,0x01C0	,0x0000), // '5' ➔ "ǀ" U+01C0 LATIN LETTER DENTAL CLICK
+/*<!macron>                                                        */ DEADTRANS( L'4'	,0x0101	,0x00A6	,0x0000), // '4' ➔ "¦" U+00A6 BROKEN BAR repurposed as multikey symbol
+/*<!macron>                                                        */ DEADTRANS( L'5'	,0x0101	,0x2225	,0x0000), // '5' ➔ "∥" U+2225 PARALLEL TO
 /*<!macron>                                                        */ DEADTRANS( L'6'	,0x0101	,0x2AF4	,0x0000), // '6' ➔ "⫴" U+2AF4 TRIPLE VERTICAL BAR BINARY RELATION
 /*<!macron>                                                        */ DEADTRANS( L'7'	,0x0101	,0x2AFF	,0x0000), // '7' ➔ "⫿" U+2AFF N-ARY WHITE VERTICAL BAR
-/*<!macron>                                                        */ DEADTRANS( L'8'	,0x0101	,0x01C1	,0x0000), // '8' ➔ "ǁ" U+01C1 LATIN LETTER LATERAL CLICK
+/*<!macron>                                                        */ DEADTRANS( L'8'	,0x0101	,0x2226	,0x0000), // '8' ➔ "∦" U+2226 NOT PARALLEL TO
 /*<!macron>                                                        */ DEADTRANS( L'9'	,0x0101	,0x2AFC	,0x0000), // '9' ➔ "⫼" U+2AFC LARGE TRIPLE VERTICAL BAR OPERATOR
 /*<!macron>                                                        */ DEADTRANS( L'A'	,0x0101	,0x0100	,0x0000), // 'A' ➔ "Ā" U+0100 LATIN CAPITAL LETTER A WITH MACRON
 /*<!macron>                                                        */ DEADTRANS( L'a'	,0x0101	,0x0101	,0x0000), // 'a' ➔ "ā" U+0101 LATIN SMALL LETTER A WITH MACRON
@@ -8200,8 +8217,7 @@
 /*<!ogonek>                                                        */ DEADTRANS( 0x1EBB	,0x01EB	,0x20E3	,0x0000), // 'ẻ' ➔ "⃣" U+20E3 COMBINING ENCLOSING KEYCAP
 /*<!ogonek><!macron>                                               */ DEADTRANS( L'O'	,0x01ED	,0x01EC	,0x0000), // 'O' ➔ "Ǭ" U+01EC LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
 /*<!ogonek><!macron>                                               */ DEADTRANS( L'o'	,0x01ED	,0x01ED	,0x0000), // 'o' ➔ "ǭ" U+01ED LATIN SMALL LETTER O WITH OGONEK AND MACRON
-/*<!ogonek><!ogonek>                                               */ DEADTRANS( L' '	,0xA71A	,0x1DCE	,0x0000), // ' ' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
-/*<!ogonek><!ogonek>                                               */ DEADTRANS( 0x200B	,0xA71A	,0x1DCE	,0x0000), // '​' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
+/*<!ogonek>                                                        */ DEADTRANS( 0x01EB	,0x01EB	,0x1DCE	,0x0000), // 'ǫ' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
 /*<!ogonek>                                                        */ DEADTRANS( L'\''	,0x01EB	,0x1DCE	,0x0000), // ''' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
 /*<!ogonek>                                                        */ DEADTRANS( 0x2019	,0x01EB	,0x1DCE	,0x0000), // '’' ➔ "᷎" U+1DCE COMBINING OGONEK ABOVE
 /*<!ogonek>                                                        */ DEADTRANS( L'0'	,0x01EB	,0x2789	,0x0000), // '0' ➔ "➉" U+2789 DINGBAT CIRCLED SANS-SERIF NUMBER TEN
@@ -8637,10 +8653,11 @@
 /*<!reversed>                                                      */ DEADTRANS( L';'	,0x1D19	,0x204F	,0x0000), // ';' ➔ "⁏" U+204F REVERSED SEMICOLON
 /*<!reversed>                                                      */ DEADTRANS( L'~'	,0x1D19	,0x223D	,0x0000), // '~' ➔ "∽" U+223D REVERSED TILDE
 /*<!reversed>                                                      */ DEADTRANS( L'_'	,0x1D19	,0x2B88	,0x0000), // '_' ➔ "⮈" U+2B88 LEFTWARDS BLACK CIRCLED WHITE ARROW
-/*<!reversed>                                                      */ DEADTRANS( L'1'	,0x1D19	,0x2216	,0x0000), // '1' ➔ "∖" U+2216 SET MINUS
-/*<!reversed>                                                      */ DEADTRANS( L'2'	,0x1D19	,0x29F9	,0x0000), // '2' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
-/*<!reversed>                                                      */ DEADTRANS( L'3'	,0x1D19	,0x27CD	,0x0000), // '3' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
-/*<!reversed>                                                      */ DEADTRANS( L'4'	,0x1D19	,0x29F5	,0x0000), // '4' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!reversed>                                                      */ DEADTRANS( L'0'	,0x1D19	,0x2216	,0x0000), // '0' ➔ "∖" U+2216 SET MINUS
+/*<!reversed>                                                      */ DEADTRANS( L'1'	,0x1D19	,0x29F9	,0x0000), // '1' ➔ "⧹" U+29F9 BIG REVERSE SOLIDUS
+/*<!reversed>                                                      */ DEADTRANS( L'2'	,0x1D19	,0x27CD	,0x0000), // '2' ➔ "⟍" U+27CD MATHEMATICAL FALLING DIAGONAL
+/*<!reversed>                                                      */ DEADTRANS( L'3'	,0x1D19	,0x29F5	,0x0000), // '3' ➔ "⧵" U+29F5 REVERSE SOLIDUS OPERATOR
+/*<!reversed>                                                      */ DEADTRANS( L'4'	,0x1D19	,0x2216	,0x0000), // '4' ➔ "∖" U+2216 SET MINUS
 /*<!reversed>                                                      */ DEADTRANS( L'A'	,0x1D19	,0x29A5	,0x0000), // 'A' ➔ "⦥" U+29A5 REVERSED ANGLE WITH UNDERBAR
 /*<!reversed>                                                      */ DEADTRANS( L'a'	,0x1D19	,0xAB31	,0x0000), // 'a' ➔ "ꬱ" U+AB31 LATIN SMALL LETTER A REVERSED-SCHWA
 /*<!reversed>                                                      */ DEADTRANS( L'B'	,0x1D19	,0x204D	,0x0000), // 'B' ➔ "⁍" U+204D BLACK RIGHTWARDS BULLET
@@ -8775,10 +8792,12 @@
 /*<!stroke>                                                        */ DEADTRANS( L'<'	,0x00F8	,0x226E	,0x0000), // '<' ➔ "≮" U+226E NOT LESS-THAN
 /*<!stroke>                                                        */ DEADTRANS( L'"'	,0x00F8	,0x2204	,0x0000), // '"' ➔ "∄" U+2204 THERE DOES NOT EXIST
 /*<!stroke>                                                        */ DEADTRANS( 0x20AC	,0x00F8	,0x2204	,0x0000), // '€' ➔ "∄" U+2204 THERE DOES NOT EXIST
-/*<!stroke>                                                        */ DEADTRANS( L'1'	,0x00F8	,0x2215	,0x0000), // '1' ➔ "∕" U+2215 DIVISION SLASH
-/*<!stroke>                                                        */ DEADTRANS( L'2'	,0x00F8	,0x29F8	,0x0000), // '2' ➔ "⧸" U+29F8 BIG SOLIDUS
-/*<!stroke>                                                        */ DEADTRANS( L'3'	,0x00F8	,0x27CB	,0x0000), // '3' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
-/*<!stroke>                                                        */ DEADTRANS( L'4'	,0x00F8	,0x2044	,0x0000), // '4' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!stroke>                                                        */ DEADTRANS( L'~'	,0x00F8	,0x2241	,0x0000), // '~' ➔ "≁" U+2241 NOT TILDE
+/*<!stroke>                                                        */ DEADTRANS( L'0'	,0x00F8	,0x2215	,0x0000), // '0' ➔ "∕" U+2215 DIVISION SLASH
+/*<!stroke>                                                        */ DEADTRANS( L'1'	,0x00F8	,0x29F8	,0x0000), // '1' ➔ "⧸" U+29F8 BIG SOLIDUS
+/*<!stroke>                                                        */ DEADTRANS( L'2'	,0x00F8	,0x27CB	,0x0000), // '2' ➔ "⟋" U+27CB MATHEMATICAL RISING DIAGONAL
+/*<!stroke>                                                        */ DEADTRANS( L'3'	,0x00F8	,0x2044	,0x0000), // '3' ➔ "⁄" U+2044 FRACTION SLASH
+/*<!stroke>                                                        */ DEADTRANS( L'4'	,0x00F8	,0x2215	,0x0000), // '4' ➔ "∕" U+2215 DIVISION SLASH
 /*<!stroke>                                                        */ DEADTRANS( L'A'	,0x00F8	,0x023A	,0x0000), // 'A' ➔ "Ⱥ" U+023A LATIN CAPITAL LETTER A WITH STROKE
 /*<!stroke>                                                        */ DEADTRANS( L'a'	,0x00F8	,0x2C65	,0x0000), // 'a' ➔ "ⱥ" U+2C65 LATIN SMALL LETTER A WITH STROKE
 /*<!stroke>                                                        */ DEADTRANS( L'b'	,0x00F8	,0x0180	,0x0000), // 'b' ➔ "ƀ" U+0180 LATIN SMALL LETTER B WITH STROKE (lenient)
@@ -9606,6 +9625,7 @@
 /*<!tilde><!tilde><!tilde>                                         */ DEADTRANS( 0x200B	,0xAB38	,0x0334	,0x0000), // '​' ➔ "̴" U+0334 COMBINING TILDE OVERLAY
 /*<!tilde><!tilde><!turned>                                        */ DEADTRANS( L'r'	,0x223F	,0xAB68	,0x0000), // 'r' ➔ "ꭨ" U+AB68 LATIN SMALL LETTER TURNED R WITH MIDDLE TILDE
 /*<!tilde><!tilde>                                                 */ DEADTRANS( L'&'	,0x02F7	,0x0334	,0x0000), // '&' ➔ "̴" U+0334 COMBINING TILDE OVERLAY
+/*<!tilde><!tilde>                                                 */ DEADTRANS( L':'	,0x02F7	,0x223B	,0x0000), // ':' ➔ "∻" U+223B HOMOTHETIC
 /*<!tilde><!tilde>                                                 */ DEADTRANS( L'='	,0x02F7	,0x1DFD	,0x0000), // '=' ➔ "᷽" U+1DFD COMBINING ALMOST EQUAL TO BELOW
 /*<!tilde><!tilde>                                                 */ DEADTRANS( L'+'	,0x02F7	,0x2A26	,0x0000), // '+' ➔ "⨦" U+2A26 PLUS SIGN WITH TILDE BELOW
 /*<!tilde><!tilde>                                                 */ DEADTRANS( L'A'	,0x02F7	,0xFE29	,0x0000), // 'A' ➔ "︩" U+FE29 COMBINING TILDE LEFT HALF BELOW
@@ -9973,6 +9993,7 @@
 /*<!turned>                                                        */ DEADTRANS( L')'	,0x0250	,0x203F	,0x0000), // ')' ➔ "‿" U+203F UNDERTIE
 /*<!turned>                                                        */ DEADTRANS( L'?'	,0x0250	,0x00BF	,0x0000), // '?' ➔ "¿" U+00BF INVERTED QUESTION MARK
 /*<!turned>                                                        */ DEADTRANS( L';'	,0x0250	,0x2E35	,0x0000), // ';' ➔ "⸵" U+2E35 TURNED SEMICOLON
+/*<!turned>                                                        */ DEADTRANS( L'~'	,0x0250	,0x2240	,0x0000), // '~' ➔ "≀" U+2240 WREATH PRODUCT
 /*<!turned>                                                        */ DEADTRANS( L'2'	,0x0250	,0x218A	,0x0000), // '2' ➔ "↊" U+218A TURNED DIGIT TWO
 /*<!turned>                                                        */ DEADTRANS( L'3'	,0x0250	,0x218B	,0x0000), // '3' ➔ "↋" U+218B TURNED DIGIT THREE
 /*<!turned>                                                        */ DEADTRANS( L'8'	,0x0250	,0x221E	,0x0000), // '8' ➔ "∞" U+221E INFINITY
