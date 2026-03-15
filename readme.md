@@ -27,7 +27,7 @@ Ce nouvel AZERTY en mode ASCII à capitales verrouillées :
 
 Ces vues ont été générées par le [Keyboard Layout Editor](https://keyboard-layout-editor.com) de [Ian Prest](https://github.com/ijprest).
 
-## Utilisation : généralités
+## Utilisation
 
 Ce mode d’emploi commun introduit aux fonctionnalités communes à toutes les versions distribuées. Les fonctionnalités propres aux versions pour tel système d’exploitation sont décrites dans le [Mode d’emploi sous Linux](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/readme.md), le [Mode d’emploi sous Windows](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/readme.md), et le Mode d’emploi sous macOS qui sera fourni avec la mise à jour de la mise en œuvre sous macOS.
 
@@ -521,4 +521,4 @@ L’essentiel pour désactiver une séquence quelle qu’elle soit est d’insé
 
 ## Nom de fichier
 
-Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dépôt de ce nouvel AZERTY où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-commun.md » qu’il est inclus dans les dossiers des versions.
+Ce mode d’emploi porte le nom de fichier « readme.md » afin que GitHub l’affiche automatiquement à la racine du dépôt de ce nouvel AZERTY où il se trouve. Mais c’est sous le nom de « Mode-d-emploi-commun.pdf » qu’il est inclus dans les dossiers des versions.
