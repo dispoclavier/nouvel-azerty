@@ -1004,7 +1004,6 @@
 #   See #^# MACRON input facility by DIAERESIS
 #   See #^# COMBINING_ABOVE
 #   See #^# INVERTED
-#   See #^# TRIPLE_ACUTE
 #   See #^# MIDDLE_TILDE
 #   See #^# DOUBLE_MIDDLE_TILDE
 #   See #^# CIRCLED
@@ -1021,7 +1020,6 @@
 #   See #^# HIGH_BAR
 #   See #^# COMBINING_OVERLAY
 #   See #^# COMBINING_BELOW
-#   See #^# OGONEK_ABOVE
 #   See #^# GLOTTAL
 #   See #^# MACRON_BELOW
 #   See #^# LINE_BELOW
@@ -1033,13 +1031,20 @@
 #   See #^# FLAG_EMOJI
 #   See #^# REGIONAL_INDICATOR_SYMBOL
 #   See #^# DOUBLE_GRAVE
-#   See #^# CEDILLA_ABOVE
 #   See #^# COMMA_ABOVE
 #   See #^# DIAERESIS_BELOW
 #   See #^# VERTICAL_LINE_BELOW
 #   See #^# GROUP_2
 #   See #^# GROUP_3
 #   See #^# GROUP_4
+#
+#   The only dead keys where multiple press directly yields a combining
+#   diacritic are dead_ogonek and dead_cedilla on double press — but not the
+#   combining ogonek nor the combining cedilla —, and dead_acute on triple
+#   press for the combining triple acute accent.
+#   See #^# OGONEK_ABOVE
+#   See #^# TRIPLE_ACUTE
+#   See #^# CEDILLA_ABOVE
 #
 #   Hence it is proposed to use space as a base character to get the combining
 #   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s
@@ -4589,12 +4594,19 @@
 #^# TRIPLE_ACUTE
 #   dead_doubleacute double press
 #
-<dead_doubleacute><dead_doubleacute>                                                       <space> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
-<Multi_key><quotedbl><quotedbl>                                                            <space> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
-<Multi_key><EuroSign><EuroSign>                                                            <space> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
-<dead_doubleacute><dead_doubleacute>                                                       <U200B> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
-<Multi_key><quotedbl><quotedbl>                                                            <U200B> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
-<Multi_key><EuroSign><EuroSign>                                                            <U200B> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
+#   As this dead key exists for "᫋" U1ACB only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#   Another input method for "᫋" U1ACB COMBINING TRIPLE ACUTE ACCENT is
+#   provided in dead_acute triple press in an attempt to meet straightforward
+#   user expectations, at the expense of a streamlined user experience.
+#   See #^# DOUBLE_ACUTE
+#
+#dead_doubleacute><dead_doubleacute>                                                       <space> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
+<dead_doubleacute><dead_doubleacute>                                                               : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
+<Multi_key><quotedbl><quotedbl>                                                                    : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
+<Multi_key><EuroSign><EuroSign>                                                                    : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
 #
 #
 #*# REVERSED
@@ -7760,6 +7772,14 @@
 #   as comma-shaped apostrophe-based characters, and "ʹ" U02B9, "ʺ" U02BA as
 #   prime-shaped characters.
 #
+#
+#   Diacritics
+#
+#   In an attempt to meet straightforward user expectations as of dead key
+#   multiple press, " U1ACB # COMBINING TRIPLE ACUTE ACCENT is supported on
+#   triple press, consistently with "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
+#   on double press followed by space.
+#
 <dead_acute><dead_acute>                                                                   <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <Multi_key><apostrophe><apostrophe>                                                        <space> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
 <dead_acute><dead_acute>                                                                   <U200B> : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
@@ -7776,6 +7796,8 @@
 <Multi_key><apostrophe><apostrophe>                                                   <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <dead_acute><dead_acute>                                                    <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key><apostrophe><apostrophe>                                         <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_acute><dead_acute>                                                              <dead_acute> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
+#   Multikey conflicts with "ʼ" U02BC.                                                <apostrophe> : "᫋" U1ACB # COMBINING TRIPLE ACUTE ACCENT
 <dead_acute><dead_acute>                                                                       <1> : "ʹ" U02B9 # MODIFIER LETTER PRIME
 <Multi_key><apostrophe><apostrophe>                                                            <1> : "ʹ" U02B9 # MODIFIER LETTER PRIME
 <dead_acute><dead_acute>                                                                    <KP_1> : "ʹ" U02B9 # MODIFIER LETTER PRIME
@@ -8996,9 +9018,9 @@
 <dead_abovedot>                                                                             <KP_9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
 <Multi_key><period>                                                                         <KP_9> : "͘" U0358 # COMBINING DOT ABOVE RIGHT
 <dead_abovedot>                                                                                <A> : "Ȧ" U0226 # LATIN CAPITAL LETTER A WITH DOT ABOVE
-<Multi_key><period>                                                                            <A> : "Ȧ" U0226 # LATIN CAPITAL LETTER A WITH DOT ABOVE
+#   Multikey conflicts with "⩑" U2A51.                                                         <A> : "Ȧ" U0226 # LATIN CAPITAL LETTER A WITH DOT ABOVE
 <dead_abovedot>                                                                                <a> : "ȧ" U0227 # LATIN SMALL LETTER A WITH DOT ABOVE
-<Multi_key><period>                                                                            <a> : "ȧ" U0227 # LATIN SMALL LETTER A WITH DOT ABOVE
+#   Multikey conflicts with "⩑" U2A51.                                                         <a> : "ȧ" U0227 # LATIN SMALL LETTER A WITH DOT ABOVE
 <dead_abovedot>                                                                                <B> : "Ḃ" U1E02 # LATIN CAPITAL LETTER B WITH DOT ABOVE
 <Multi_key><period>                                                                            <B> : "Ḃ" U1E02 # LATIN CAPITAL LETTER B WITH DOT ABOVE
 <dead_abovedot>                                                                                <b> : "ḃ" U1E03 # LATIN SMALL LETTER B WITH DOT ABOVE
@@ -9080,9 +9102,9 @@
 <dead_abovedot>                                                                                <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE: ALA-LC romanization
 <Multi_key><period>                                                                            <u> : "u̇" # U0075 U0307 LATIN SMALL LETTER U WITH DOT ABOVE: ALA-LC romanization
 <dead_abovedot>                                                                                <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE: Medical notations
-<Multi_key><period>                                                                            <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE: Medical notations
+#   Multikey conflicts with "⩑" U2A51, "⩒" U2A52.                                              <V> : "V̇" # U0056 U0307 LATIN CAPITAL LETTER V WITH DOT ABOVE: Medical notations
 <dead_abovedot>                                                                                <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE: Medical notations
-<Multi_key><period>                                                                            <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE: Medical notations
+#   Multikey conflicts with "⩑" U2A51, "⩒" U2A52.                                              <v> : "v̇" # U0076 U0307 LATIN SMALL LETTER V WITH DOT ABOVE: Medical notations
 <dead_abovedot>                                                                                <W> : "Ẇ" U1E86 # LATIN CAPITAL LETTER W WITH DOT ABOVE
 <Multi_key><period>                                                                            <W> : "Ẇ" U1E86 # LATIN CAPITAL LETTER W WITH DOT ABOVE
 <dead_abovedot>                                                                                <w> : "ẇ" U1E87 # LATIN SMALL LETTER W WITH DOT ABOVE
@@ -11339,9 +11361,9 @@
 <UEFD2>                                                                                        <m> : "ₘ" U2098 # LATIN SUBSCRIPT SMALL LETTER M
 <Multi_key><underscore>                                                                        <m> : "ₘ" U2098 # LATIN SUBSCRIPT SMALL LETTER M
 <UEFD2>                                                                                        <N> : "ɴ" U0274 # LATIN LETTER SMALL CAPITAL N
-<Multi_key><underscore>                                                                        <N> : "ɴ" U0274 # LATIN LETTER SMALL CAPITAL N
+#   Multikey conflicts with "⩃" U2A43.                                                         <N> : "ɴ" U0274 # LATIN LETTER SMALL CAPITAL N
 <UEFD2>                                                                                        <n> : "ₙ" U2099 # LATIN SUBSCRIPT SMALL LETTER N
-<Multi_key><underscore>                                                                        <n> : "ₙ" U2099 # LATIN SUBSCRIPT SMALL LETTER N
+#   Multikey conflicts with "⩃" U2A43.                                                         <n> : "ₙ" U2099 # LATIN SUBSCRIPT SMALL LETTER N
 <UEFD2>                                                                                        <O> : "ᴏ" U1D0F # LATIN LETTER SMALL CAPITAL O
 <Multi_key><underscore>                                                                        <O> : "ᴏ" U1D0F # LATIN LETTER SMALL CAPITAL O
 <UEFD2>                                                                                        <o> : "ₒ" U2092 # LATIN SUBSCRIPT SMALL LETTER O
@@ -11367,9 +11389,9 @@
 <UEFD2>                                                                                        <t> : "ₜ" U209C # LATIN SUBSCRIPT SMALL LETTER T
 <Multi_key><underscore>                                                                        <t> : "ₜ" U209C # LATIN SUBSCRIPT SMALL LETTER T
 <UEFD2>                                                                                        <U> : "ᴜ" U1D1C # LATIN LETTER SMALL CAPITAL U
-<Multi_key><underscore>                                                                        <U> : "ᴜ" U1D1C # LATIN LETTER SMALL CAPITAL U
+#   Multikey conflicts with "⩂" U2A42, "⩐" U2A50.                                              <U> : "ᴜ" U1D1C # LATIN LETTER SMALL CAPITAL U
 <UEFD2>                                                                                        <u> : "ᵤ" U1D64 # LATIN SUBSCRIPT SMALL LETTER U
-<Multi_key><underscore>                                                                        <u> : "ᵤ" U1D64 # LATIN SUBSCRIPT SMALL LETTER U
+#   Multikey conflicts with "⩂" U2A42, "⩐" U2A50.                                              <u> : "ᵤ" U1D64 # LATIN SUBSCRIPT SMALL LETTER U
 <UEFD2>                                                                                        <V> : "ᴠ" U1D20 # LATIN LETTER SMALL CAPITAL V
 <Multi_key><underscore>                                                                        <V> : "ᴠ" U1D20 # LATIN LETTER SMALL CAPITAL V
 <UEFD2>                                                                                        <v> : "ᵥ" U1D65 # LATIN SUBSCRIPT SMALL LETTER V
@@ -12068,10 +12090,13 @@
 #
 #^# OGONEK_ABOVE
 #
-<dead_ogonek><dead_ogonek>                                                                 <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
-#   Multikey conflicts with "⟦" U27E6.                                                     <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
-<dead_ogonek><dead_ogonek>                                                                 <U200B> : "᷎" U1DCE # COMBINING OGONEK ABOVE
-<Multi_key><bracketleft><bracketleft>                                                      <U200B> : "᷎" U1DCE # COMBINING OGONEK ABOVE
+#   As this dead key exists for "᷎" U1DCE only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#dead_ogonek><dead_ogonek>                                                                 <space> : "᷎" U1DCE # COMBINING OGONEK ABOVE
+<dead_ogonek><dead_ogonek>                                                                         : "᷎" U1DCE # COMBINING OGONEK ABOVE
+#   Multikey conflicts with "⟦" U27E6.                                                             : "᷎" U1DCE # COMBINING OGONEK ABOVE
 #
 #
 #*# HOOK_ABOVE
@@ -16706,14 +16731,13 @@
 #
 #   The cedilla above is the turned comma above, per Unicode informative alias.
 #
-<dead_cedilla><dead_cedilla>                                                               <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<Multi_key><comma><comma>                                                                  <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<dead_cedilla><dead_cedilla>                                                               <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<Multi_key><comma><comma>                                                                  <U200B> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
-<dead_cedilla><dead_cedilla>                                                        <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><comma><comma>                                                           <nobreakspace> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<dead_cedilla><dead_cedilla>                                                               <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><comma><comma>                                                                  <U202F> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+#   As this dead key exists for "̒" U0312 only, it is streamlined by cropping
+#   the base characters.
+#   See # # Single-character dead keys
+#
+#dead_cedilla><dead_cedilla>                                                               <space> : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<dead_cedilla><dead_cedilla>                                                                       : "̒" U0312 # COMBINING TURNED COMMA ABOVE
+<Multi_key><comma><comma>                                                                          : "̒" U0312 # COMBINING TURNED COMMA ABOVE
 #
 #
 #*# COMMA_BELOW
@@ -16760,11 +16784,11 @@
 #   See #*# CEDILLA
 #
 <dead_belowcomma>                                                                          <space> : "̦" U0326 # COMBINING COMMA BELOW
-<Multi_key><semicolon>                                                                     <space> : "̦" U0326 # COMBINING COMMA BELOW
+#   Multikey conflicts with "⨾" U2A3E.                                                     <space> : "̦" U0326 # COMBINING COMMA BELOW
 <dead_belowcomma>                                                                          <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <Multi_key><semicolon>                                                                     <U200B> : "̦" U0326 # COMBINING COMMA BELOW
 <dead_belowcomma>                                                                   <nobreakspace> : "⸴" U2E34 # RAISED COMMA
-<Multi_key><semicolon>                                                              <nobreakspace> : "⸴" U2E34 # RAISED COMMA
+#   Multikey conflicts with "⨾" U2A3E.                                              <nobreakspace> : "⸴" U2E34 # RAISED COMMA
 <dead_belowcomma>                                                                          <U202F> : "⸴" U2E34 # RAISED COMMA
 <Multi_key><semicolon>                                                                     <U202F> : "⸴" U2E34 # RAISED COMMA
 <dead_belowcomma>                                                                              <0> : "⒛" U249B # NUMBER TWENTY FULL STOP

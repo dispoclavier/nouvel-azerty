@@ -7057,7 +7057,7 @@
 <Multi_key><periodcentered><periodcentered><slash>                                         <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><periodcentered><periodcentered><slash>                                  <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><slash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
-<Multi_key><slash><backslash><slash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><backslash><slash>                                                 <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><periodcentered><slash>                                                  <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><periodcentered><slash>                                           <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
@@ -8980,20 +8980,19 @@
 <Multi_key><space><periodcentered><slash><bar>                                                     : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 <Multi_key><nobreakspace><periodcentered><slash><bar>                                              : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 #
-#   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
-#   like that of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION, except that it is a
-#   bit smaller. Therefore, its character has almost the same sequences as its
-#   sibling, with one leading space less for uniqueness. The mnemonic is:
-#   The smaller the glyph, the shorter the sequences.
+#   The glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION may look almost like
+#   that of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION, except that it is a
+#   bit taller. Therefore, its character has almost the same sequences as its
+#   sibling, with one leading space for uniqueness. The mnemonic is:
+#   The taller the glyph, the longer the sequences.
 #
 #Multi_key><space><z><semicolon>                                                                   : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><space><z>                                                                              : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><nobreakspace><z>                                                                       : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><space><Z>                                                                              : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><nobreakspace><Z>                                                                       : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><space><space><semicolon>                                                               : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><nobreakspace><space><semicolon>                                                        : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
-<Multi_key><nobreakspace><nobreakspace><semicolon>                                                 : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><space><semicolon>                                                                      : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
+<Multi_key><nobreakspace><semicolon>                                                               : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><space><o><semicolon>                                                                   : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><nobreakspace><o><semicolon>                                                            : "⨟" U2A1F # Z NOTATION SCHEMA COMPOSITION
 <Multi_key><z><greater><greater>                                                                   : "⨠" U2A20 # Z NOTATION SCHEMA PIPING
@@ -9114,6 +9113,7 @@
 <Multi_key><slash><periodcentered><underscore><x>                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><backslash><slash><underscore><x>                                                       : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 <Multi_key><periodcentered><slash><underscore><x>                                                  : "⨻" U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key><minus><apostrophe><asciicircum>                                                        : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><space><minus><apostrophe>                                                      <space> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><space><minus><apostrophe>                                               <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><apostrophe>                                               <space> : "⨼" U2A3C # INTERIOR PRODUCT
@@ -9122,6 +9122,7 @@
 <Multi_key><space><minus><rightsinglequotemark>                                     <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><rightsinglequotemark>                                     <space> : "⨼" U2A3C # INTERIOR PRODUCT
 <Multi_key><nobreakspace><minus><rightsinglequotemark>                              <nobreakspace> : "⨼" U2A3C # INTERIOR PRODUCT
+<Multi_key><apostrophe><minus><asciicircum>                                                        : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 <Multi_key><space><apostrophe><minus>                                                              : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 <Multi_key><nobreakspace><apostrophe><minus>                                                       : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 <Multi_key><space><rightsinglequotemark><minus>                                                    : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
@@ -9130,11 +9131,11 @@
 #   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
 #   like that of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION, except that it is a
 #   bit smaller. Therefore, its character has almost the same sequences as its
-#   sibling, with one leading space less for uniqueness. The mnemonic is:
+#   sibling, without any leading space for uniqueness. The mnemonic is:
 #   The smaller the glyph, the shorter the sequences.
 #
-<Multi_key><space><semicolon>                                                                      : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
-<Multi_key><nobreakspace><semicolon>                                                               : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><semicolon>                                                                     <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
+<Multi_key><semicolon>                                                              <nobreakspace> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><o><semicolon>                                                                          : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><z><semicolon>                                                                          : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
 <Multi_key><Z><semicolon>                                                                          : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
@@ -9146,18 +9147,12 @@
 <Multi_key><N><period>                                                                             : "⩀" U2A40 # INTERSECTION WITH DOT
 <Multi_key><u><minus>                                                                              : "⩁" U2A41 # UNION WITH MINUS SIGN
 <Multi_key><U><minus>                                                                              : "⩁" U2A41 # UNION WITH MINUS SIGN
-<Multi_key><space><underscore><u>                                                          <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><underscore><u>                                                   <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><u>                                                   <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><u>                                            <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><underscore><U>                                                          <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><underscore><U>                                                   <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><U>                                                   <space> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><U>                                            <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
-<Multi_key><space><underscore><n>                                                                  : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><n>                                                           : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><space><underscore><N>                                                                  : "⩃" U2A43 # INTERSECTION WITH OVERBAR
-<Multi_key><nobreakspace><underscore><N>                                                           : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><underscore><u>                                                                 <space> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><underscore><u>                                                          <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><underscore><U>                                                                 <space> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><underscore><U>                                                          <nobreakspace> : "⩂" U2A42 # UNION WITH OVERBAR
+<Multi_key><underscore><n>                                                                         : "⩃" U2A43 # INTERSECTION WITH OVERBAR
+<Multi_key><underscore><N>                                                                         : "⩃" U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key><n><a>                                                                          <space> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
 <Multi_key><n><a>                                                                   <nobreakspace> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
 <Multi_key><N><A>                                                                          <space> : "⩄" U2A44 # INTERSECTION WITH LOGICAL AND
@@ -9184,10 +9179,8 @@
 <Multi_key><u><u>                                                                                  : "⩊" U2A4A # UNION BESIDE AND JOINED WITH UNION
 <Multi_key><U><U>                                                                                  : "⩊" U2A4A # UNION BESIDE AND JOINED WITH UNION
 <Multi_key><n><n>                                                                                  : "⩋" U2A4B # INTERSECTION BESIDE AND JOINED WITH INTERSECTION
-#Multi_key><space><space><underscore><u>                                                           : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><space><space><underscore>                                                              : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><nobreakspace><space><underscore>                                                       : "⩌" U2A4C # CLOSED UNION WITH SERIFS
-<Multi_key><nobreakspace><nobreakspace><underscore>                                                : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><space><underscore><u>                                                                  : "⩌" U2A4C # CLOSED UNION WITH SERIFS
+<Multi_key><nobreakspace><underscore><u>                                                           : "⩌" U2A4C # CLOSED UNION WITH SERIFS
 <Multi_key><n><underscore>                                                                 <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
 <Multi_key><n><underscore>                                                          <nobreakspace> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
 <Multi_key><N><underscore>                                                                 <space> : "⩍" U2A4D # CLOSED INTERSECTION WITH SERIFS
@@ -9208,27 +9201,17 @@
 <Multi_key><KP_2><u><bracketright>                                                                 : "⩏" U2A4F # DOUBLE SQUARE UNION
 <Multi_key><2><U><bracketright>                                                                    : "⩏" U2A4F # DOUBLE SQUARE UNION
 <Multi_key><KP_2><U><bracketright>                                                                 : "⩏" U2A4F # DOUBLE SQUARE UNION
-#Multi_key><space><underscore><u><numbersign><percent>                                             : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><underscore><u><numbersign>                                                      : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><underscore><u><numbersign>                                               : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><underscore><U><numbersign>                                                      : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><nobreakspace><underscore><U><numbersign>                                               : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
-<Multi_key><space><period><a>                                                                      : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><a>                                                               : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><A>                                                                      : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><A>                                                               : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><v><v>                                                                   : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><v><v>                                                            : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><V><V>                                                                   : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><nobreakspace><period><V><V>                                                            : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
-<Multi_key><space><period><v>                                                              <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><space><period><v>                                                       <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><v>                                                       <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><v>                                                <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><space><period><V>                                                              <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><space><period><V>                                                       <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><V>                                                       <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
-<Multi_key><nobreakspace><period><V>                                                <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+#Multi_key><underscore><u><numbersign><percent>                                                    : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><underscore><u><numbersign>                                                             : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><underscore><U><numbersign>                                                             : "⩐" U2A50 # CLOSED UNION WITH SERIFS AND SMASH PRODUCT
+<Multi_key><period><a>                                                                             : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><period><A>                                                                             : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><period><v><v>                                                                          : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><period><V><V>                                                                          : "⩑" U2A51 # LOGICAL AND WITH DOT ABOVE
+<Multi_key><period><v>                                                                     <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><period><v>                                                              <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><period><V>                                                                     <space> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
+<Multi_key><period><V>                                                              <nobreakspace> : "⩒" U2A52 # LOGICAL OR WITH DOT ABOVE
 <Multi_key><2><A>                                                                                  : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><KP_2><A>                                                                               : "⩓" U2A53 # DOUBLE LOGICAL AND
 <Multi_key><2><a>                                                                                  : "⩓" U2A53 # DOUBLE LOGICAL AND
@@ -9243,7 +9226,7 @@
 <Multi_key><nobreakspace><KP_2><V>                                                                 : "⩔" U2A54 # DOUBLE LOGICAL OR
 #
 #   These "⩕" U2A55, "⩖" U2A56 are smaller than "⨇" U2A07, "⨈" U2A08 and use
-#   therefore lowercase rather than leading space.
+#   therefore lowercase instead of or additionally to leading space.
 #
 <Multi_key><w><percent>                                                                            : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
 <Multi_key><w><backslash>                                                                          : "⩕" U2A55 # TWO INTERSECTING LOGICAL AND
