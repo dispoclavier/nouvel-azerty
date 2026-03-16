@@ -9,7 +9,7 @@
 # 2025-12-31T1259+0100
 # 2026-01-26T0514+0100
 # 2026-03-04T1042+0100
-# 2026-03-16T1426+0100
+# 2026-03-16T1433+0100
 # = last modified.
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
@@ -1598,7 +1598,6 @@ foreach my $line ( @multikey_out ) {
 				$high_out     = 'High surrogate: ' . $high_su . '; ';
 				$uplus_output = 'U+' . $output_code . ' ';
 				$output_code = sprintf( "%X", ( 56320 + hex( $output_code ) - int( hex( $output_code ) / 1024 ) * 1024 ) );
-				++$half;
 				print LOG $high_su . ', ' . $deadkey . "\n";
 
 			} else {
