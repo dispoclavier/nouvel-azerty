@@ -1392,9 +1392,9 @@
 #   https://forums.steinberg.net/t/versicle-and-response-symbols/729230
 #   See # # Letterlike symbols in block U2100 used in mathematics
 #
-#   Leading or trailing space for distinction is duplicated for nobreakspace
-#   support, if synergy with Multi_key or an ASCII symbol matters, consistently
-#   with what is done for math symbols.
+#   A space prepended or appended for uniqueness is so both as space and as
+#   nobreakspace if synergy with Multi_key or an ASCII symbol matters,
+#   consistently with what is done for math symbols.
 #   See #   Trailing space
 #   See #   Leading space
 #
@@ -5253,6 +5253,9 @@
 #   and to keep things simple and straightforward.
 #   See #   Angle symbols
 #
+#   Also, mirror arrows have alternative right-to-left sequences.
+#   See #   Mirror arrows
+#
 #
 #   Order sensitivity
 #
@@ -5285,7 +5288,7 @@
 #
 #   Leading space
 #
-#   Distinguishing math sequences from each other is the main usage for leading
+#   Distinguishing math sequences from each other is the main usage of leading
 #   space. This occurs when intuitivity requires similar sequences for various
 #   symbols, like for "⋈" U22C8 BOWTIE and "⨝" U2A1D JOIN. To fix these issues,
 #   sequences start with a space, or with no-break space supported for the sake
@@ -5497,6 +5500,19 @@
 #   Harpoon barbs, by contrast, become grave or apostrophe/rightsinglequotemark
 #   depending on their slant, no matter whether their stem is horizontal or
 #   vertical.
+#
+#
+#   Mirror arrows
+#
+#   A number of leftwards arrows have been encoded as a mirrored counterpart of
+#   a rightwards arrow. For convenience, these may be supported both by regular
+#   descriptive sequences and by alternative copies of the rightwards sequences
+#   with minimal changes, mainly "less" instead of "greater", following the
+#   logic through by parsing the mirrored arrow from right to left.
+#   See #   Parsing order
+#   See #   Mirror of
+#   See "⬰" U2B30
+#   See "⇴" U21F4
 #
 #
 #   Angle symbols
@@ -7994,9 +8010,8 @@
 <Multi_key><G>                                                                      <nobreakspace> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><g>                                                                             <space> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
 <Multi_key><g>                                                                      <nobreakspace> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
-#Multi_key><o><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-<Multi_key><o><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
-<Multi_key><O><plus><minus>                                                                        : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
+<Multi_key><o><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
+<Multi_key><O><plus><minus><greater>                                                               : "⟴" U27F4 # RIGHT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><minus>                                                            <space> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><less><minus><minus>                                                     <nobreakspace> : "⟵" U27F5 # LONG LEFTWARDS ARROW
 <Multi_key><minus><minus><greater>                                                         <space> : "⟶" U27F6 # LONG RIGHTWARDS ARROW
@@ -8230,9 +8245,8 @@
 <Multi_key><minus><greater><plus>                                                                  : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><less><minus><plus>                                                                     : "⥆" U2946 # LEFTWARDS ARROW WITH PLUS BELOW
 #   Mirror is "⬾" U2B3E.
-#Multi_key><x><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
-<Multi_key><x><minus>                                                                              : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
-<Multi_key><X><minus>                                                                              : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
+<Multi_key><x><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
+<Multi_key><X><minus><greater>                                                                     : "⥇" U2947 # RIGHTWARDS ARROW THROUGH X
 <Multi_key><less><minus><o><minus><greater>                                                        : "⥈" U2948 # LEFT RIGHT ARROW THROUGH SMALL CIRCLE
 <Multi_key><less><less><exclam><o>                                                                 : "⥉" U2949 # UPWARDS TWO-HEADED ARROW FROM SMALL CIRCLE
 <Multi_key><less><less><section><o>                                                                : "⥉" U2949 # UPWARDS TWO-HEADED ARROW FROM SMALL CIRCLE
@@ -8996,8 +9010,8 @@
 <Multi_key><nobreakspace><periodcentered><slash><bar>                                              : "⨞" U2A1E # LARGE LEFT TRIANGLE OPERATOR
 #
 #   The glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION may look almost like
-#   that of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION, except that it is a
-#   bit taller. Therefore, its character has almost the same sequences as its
+#   the glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION, except that it is
+#   a bit taller. Therefore, its character has almost the same sequences as its
 #   sibling, with one leading space for uniqueness. The mnemonic is:
 #   The taller the glyph, the longer the sequences.
 #
@@ -9144,9 +9158,9 @@
 <Multi_key><nobreakspace><rightsinglequotemark><minus>                                             : "⨽" U2A3D # RIGHTHAND INTERIOR PRODUCT
 #
 #   The glyph of "⨾" U2A3E Z NOTATION RELATIONAL COMPOSITION may look almost
-#   like that of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION, except that it is a
-#   bit smaller. Therefore, its character has almost the same sequences as its
-#   sibling, without any leading space for uniqueness. The mnemonic is:
+#   like the glyph of "⨟" U2A1F Z NOTATION SCHEMA COMPOSITION, except that it
+#   is a bit smaller. Therefore, its character has almost the same sequences as
+#   its sibling, without any leading space for uniqueness. The mnemonic is:
 #   The smaller the glyph, the shorter the sequences.
 #
 <Multi_key><semicolon>                                                                     <space> : "⨾" U2A3E # Z NOTATION RELATIONAL COMPOSITION
@@ -9828,32 +9842,45 @@
 #   https://www.unicode.org/charts/PDF/U2B00.pdf
 #   https://www.unicode.org/charts/nameslist/n_2B00.html
 #
-#   Mirror of "⇴" U21F4.
+<Multi_key><less><minus><o>                                                                <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
+<Multi_key><less><minus><o>                                                         <nobreakspace> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><less><minus><o><minus>                                                         <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><less><minus><o><minus>                                                  <nobreakspace> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
-#   Mirror of "⇶" U21F6.
+#   Mirror of "⇴" U21F4.
+<Multi_key><o><minus><less>                                                                        : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><3><less><minus>                                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><KP_3><less><minus>                                                                     : "⬱" U2B31 # THREE LEFTWARDS ARROWS
+#   Mirror of "⇶" U21F6.
+<Multi_key><3><minus><less>                                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
+<Multi_key><KP_3><minus><less>                                                                     : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 #Multi_key><less><minus><less><minus><less><minus>                                                 : "⬱" U2B31 # THREE LEFTWARDS ARROWS
 <Multi_key><less><minus><less><minus><less>                                                        : "⬱" U2B31 # THREE LEFTWARDS ARROWS
-#   Mirror of "⟴" U27F4.
 <Multi_key><less><minus><o><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 <Multi_key><less><minus><O><plus>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
-#   Mirror of "⟿" U27FF.
+#   Mirror of "⟴" U27F4.
+<Multi_key><o><plus><minus><less>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
+<Multi_key><O><plus><minus><less>                                                                  : "⬲" U2B32 # LEFT ARROW WITH CIRCLED PLUS
 <Multi_key><less><asciitilde><asciitilde><asciitilde>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
-#   Mirror of "⤀" U2900.
+#   Mirror of "⟿" U27FF.
+<Multi_key><asciitilde><asciitilde><asciitilde><less>                                              : "⬳" U2B33 # LONG LEFTWARDS SQUIGGLE ARROW
 <Multi_key><less><less><bar><minus>                                                        <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><bar><minus>                                                 <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                                 <space> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><minus><bar><minus>                                          <nobreakspace> : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
-#   Mirror of "⤁" U2901.
+#   Mirror of "⤀" U2900.
+<Multi_key><minus><bar><less><less>                                                                : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
+<Multi_key><minus><bar><minus><less><less>                                                         : "⬴" U2B34 # LEFTWARDS TWO-HEADED ARROW WITH VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus>                                                   <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus>                                            <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                            <space> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus>                                     <nobreakspace> : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
-#   Mirror of "⤅" U2905.
+#   Mirror of "⤁" U2901.
+<Multi_key><minus><bar><bar><less><less>                                                           : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
+<Multi_key><minus><bar><bar><minus><less><less>                                                    : "⬵" U2B35 # LEFTWARDS TWO-HEADED ARROW WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar>                                                        <space> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 <Multi_key><less><less><minus><bar>                                                 <nobreakspace> : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
+#   Mirror of "⤅" U2905.
+<Multi_key><bar><minus><less><less>                                                                : "⬶" U2B36 # LEFTWARDS TWO-HEADED ARROW FROM BAR
 #
 #   The sequences for "⬷" U2B37 without tail as intended per the character name
 #   would be completed with an optional tail (DejaVu Serif features it) if they
@@ -9864,8 +9891,10 @@
 #Multi_key><less><less><minus><0><minus><0><minus><less>                                           : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><0>                                                                  : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
 <Multi_key><less><less><minus><KP_0>                                                               : "⬷" U2B37 # LEFTWARDS TWO-HEADED TRIPLE DASH ARROW
-#   Mirror of "⤑" U2911.
 <Multi_key><less><period><period>                                                                  : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
+#   Mirror of "⤑" U2911.
+<Multi_key><period><period><less>                                                                  : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
+<Multi_key><period><period><period><less>                                                          : "⬸" U2B38 # LEFTWARDS ARROW WITH DOTTED STEM
 #   Mirrors of "⤔" U2914.."⤘" U2918.
 <Multi_key><less><bar><minus><less>                                                                : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><minus><bar><minus><less>                                                         : "⬹" U2B39 # LEFTWARDS ARROW WITH TAIL WITH VERTICAL STROKE
@@ -9876,12 +9905,15 @@
 <Multi_key><less><less><minus><bar><minus><less>                                                   : "⬼" U2B3C # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH VERTICAL STROKE
 <Multi_key><less><less><bar><bar><minus><less>                                                     : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
 <Multi_key><less><less><minus><bar><bar><minus><less>                                              : "⬽" U2B3D # LEFTWARDS TWO-HEADED ARROW WITH TAIL WITH DOUBLE VERTICAL STROKE
-#   Mirror of "⥇" U2947.
 <Multi_key><less><minus><x>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 <Multi_key><less><minus><X>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
-#   Mirror of "⤳" U2933.
+#   Mirror of "⥇" U2947.
+<Multi_key><x><minus><less>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
+<Multi_key><X><minus><less>                                                                        : "⬾" U2B3E # LEFTWARDS ARROW THROUGH X
 <Multi_key><less><minus><asciitilde>                                                       <space> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
+#   Mirror of "⤳" U2933.
+<Multi_key><asciitilde><minus><less>                                                               : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 #   Mirrors of "⥱" U2971, "⥲" U2972, "⥵" U2975.
 <Multi_key><equal><less><minus>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
