@@ -144,7 +144,7 @@ Correction de contenu de touche morte.
 
 Débogage des séquences de composition dédiées en conflit avec des équivalents en composition de touches mortes.
 
-Correction des noms donnés aux touches modificatrices supplémentaires sous Windows.
+Correction des noms donnés aux touches modificatrices supplémentaires AltEm et AltMa.
 
 Correction et complétion du contenu des touches mortes.
 
@@ -152,8 +152,8 @@ Complétion des séquences de touches mortes spécifiques sous Windows.
 
 Généralisation de raccourcis à touche morte développés sous Windows.
 
-* Disposition :
-	* Renommer AltLe en AltEm. kbcommon-1.c [4f7a9dc](https://github.com/dispoclavier/nouvel-azerty/commit/4f7a9dc242e44a6d6a089b779aa21f7b56439f4b), windows/readme.md alias Mode-d-emploi-sous-Windows.pdf [83c5798](https://github.com/dispoclavier/nouvel-azerty/commit/83c579898a4b6324b1b8c6fbe59145e514772eb4)
+* Disposition :AltEm
+	* Renommer AltLe en . kbcommon-1.c [4f7a9dc](https://github.com/dispoclavier/nouvel-azerty/commit/4f7a9dc242e44a6d6a089b779aa21f7b56439f4b), windows/readme.md alias Mode-d-emploi-sous-Windows.pdf [83c5798](https://github.com/dispoclavier/nouvel-azerty/commit/83c579898a4b6324b1b8c6fbe59145e514772eb4)
 	* Renommer AltQr en AltMa. ibidem, dispocla.cpp [dd24fd5](https://github.com/dispoclavier/nouvel-azerty/commit/dd24fd51d8abd697d0c02c7ea6ab6bfc9b1bcd44)
 * Composition : Déboguer "∓" U+2213 par « ¦-+ », "⫩" U+2AE9 par « ¦'=' », "⥍" U+294D par « ¦'!' », "⥠" U+2960 par « ¦'!| », "⥮" U+296E par « ¦'!! », […]. dead-key-convert.pl [3a8c224](https://github.com/dispoclavier/nouvel-azerty/commit/3a8c224608e03fd30a8edd2e41900d0e63d9e887) (entre les builds 0 et 1)
 * Transformations :
