@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.6.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.7.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -8354,9 +8354,8 @@
 <Multi_key><section><grave><grave>                                                                 : "⥯" U296F # DOWNWARDS HARPOON WITH BARB LEFT BESIDE UPWARDS HARPOON WITH BARB RIGHT
 <Multi_key><equal><parenright>                                                                     : "⥰" U2970 # RIGHT DOUBLE ARROW WITH ROUNDED HEAD
 <Multi_key><equal><minus><greater>                                                                 : "⥱" U2971 # EQUALS SIGN ABOVE RIGHTWARDS ARROW
-#Multi_key><space><asciitilde><minus><greater>                                                     : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><space><asciitilde><minus>                                                              : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><nobreakspace><asciitilde><minus>                                                       : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><space><asciitilde><minus><greater>                                                     : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><nobreakspace><asciitilde><minus><greater>                                              : "⥲" U2972 # TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><space><less><minus><asciitilde>                                                        : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><nobreakspace><less><minus><asciitilde>                                                 : "⥳" U2973 # LEFTWARDS ARROW ABOVE TILDE OPERATOR
 <Multi_key><minus><greater><asciitilde>                                                    <space> : "⥴" U2974 # RIGHTWARDS ARROW ABOVE TILDE OPERATOR
@@ -9842,8 +9841,6 @@
 #   https://www.unicode.org/charts/PDF/U2B00.pdf
 #   https://www.unicode.org/charts/nameslist/n_2B00.html
 #
-<Multi_key><less><minus><o>                                                                <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
-<Multi_key><less><minus><o>                                                         <nobreakspace> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><less><minus><o><minus>                                                         <space> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 <Multi_key><less><minus><o><minus>                                                  <nobreakspace> : "⬰" U2B30 # LEFT ARROW WITH SMALL CIRCLE
 #   Mirror of "⇴" U21F4.
@@ -9914,29 +9911,36 @@
 <Multi_key><less><minus><asciitilde>                                                <nobreakspace> : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
 #   Mirror of "⤳" U2933.
 <Multi_key><asciitilde><minus><less>                                                               : "⬿" U2B3F # WAVE ARROW POINTING DIRECTLY LEFT
-#   Mirrors of "⥱" U2971, "⥲" U2972, "⥵" U2975.
 <Multi_key><equal><less><minus>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
+#   Mirror of "⥱" U2971.
+<Multi_key><equal><minus><less>                                                                    : "⭀" U2B40 # EQUALS SIGN ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><backslash><less><minus>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><asciitilde><periodcentered><less><minus>                                               : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
+#   Mirror of "⥲" U2972.
+<Multi_key><space><asciitilde><minus><less>                                                        : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
+<Multi_key><nobreakspace><asciitilde><minus><less>                                                 : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
+<Multi_key><asciitilde><backslash><minus><less>                                                    : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
+<Multi_key><asciitilde><periodcentered><minus><less>                                               : "⭁" U2B41 # REVERSE TILDE OPERATOR ABOVE LEFTWARDS ARROW
 <Multi_key><less><minus><asciitilde><asciitilde><backslash>                                        : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><less><minus><asciitilde><asciitilde><periodcentered>                                   : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
-#
-#   Among the three greater-minus-greater: "↣" U21A3, "⥸" U2978, "⭃" U2B43, and
-#   their mirrored counterparts "↢" U21A2, "⥶" U2976, "⥷" U2977, none seems to
-#   stand out enough to qualify for the most straightforward input method.
-#
+#   Mirror of "⥵" U2975.
+<Multi_key><minus><less><asciitilde><asciitilde>                                           <space> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><minus><less><asciitilde><asciitilde>                                    <nobreakspace> : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><minus><less><asciitilde><asciitilde><backslash>                                        : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
+<Multi_key><minus><less><asciitilde><asciitilde><periodcentered>                                   : "⭂" U2B42 # LEFTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 #   Mirror of "⥷" U2977.
 #Multi_key><space><space><greater><minus><greater>                                                 : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><space><space><greater><minus>                                                          : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><space><greater><minus>                                                   : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
 <Multi_key><nobreakspace><nobreakspace><greater><minus>                                            : "⭃" U2B43 # RIGHTWARDS ARROW THROUGH GREATER-THAN
-#   Mirror of "⥺" U297A.
 <Multi_key><b><minus><greater>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><backslash><minus><greater>                                                          : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><backslash><minus>                                                                   : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><periodcentered><minus>                                                              : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #Multi_key><c><c><minus><greater>                                                                  : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 <Multi_key><c><c><minus>                                                                           : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
+#   Mirror of "⥺" U297A.
+<Multi_key><greater><minus><c>                                                                     : "⭄" U2B44 # RIGHTWARDS ARROW THROUGH SUPERSET
 #
 #   Verticals of "⭅" U2B45, "⭆" U2B46 are "⟰" U27F0, "⟱" U27F1.
 #   "⭅" U2B45 and "⭆" U2B46 are not labeled as math but are included in TeX math
@@ -9947,9 +9951,8 @@
 <Multi_key><less><minus><KP_4>                                                                     : "⭅" U2B45 # LEFTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><4>                                                                     : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
 <Multi_key><minus><greater><KP_4>                                                                  : "⭆" U2B46 # RIGHTWARDS QUADRUPLE ARROW
-#Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><asciitilde><backslash><minus>                                                          : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
-<Multi_key><asciitilde><periodcentered><minus>                                                     : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><asciitilde><backslash><minus><greater>                                                 : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
+<Multi_key><asciitilde><periodcentered><minus><greater>                                            : "⭇" U2B47 # REVERSE TILDE OPERATOR ABOVE RIGHTWARDS ARROW
 <Multi_key><minus><greater><asciitilde><asciitilde><backslash>                                     : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><minus><greater><asciitilde><asciitilde><periodcentered>                                : "⭈" U2B48 # RIGHTWARDS ARROW ABOVE REVERSE ALMOST EQUAL TO
 <Multi_key><asciitilde><less><minus>                                                               : "⭉" U2B49 # TILDE OPERATOR ABOVE LEFTWARDS ARROW
