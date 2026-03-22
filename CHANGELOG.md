@@ -14,7 +14,16 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 ## 6.3.0 (projet)
 
-Mise à jour pour macOS des dispositions développées pour Windows, portées sous macOS puis sous Linux, portées sous Windows, et complétées pour Windows et pour Linux.
+Mise à jour pour macOS des dispositions développées pour Windows, portées sous macOS puis sous Linux, rétroportées sous Windows et complétées pour Windows et pour Linux.
+
+## 6.2.7 (2026-03-22)
+
+Complétion des séquences droite-à-gauche pour symboles mathématiques.
+
+* Composition :
+	* Compléter les séquences de "⭀" U+2B40, "⭁" U+2B41, "⭂" U+2B42, "⭄" U+2B44. compose-1.yml [fb45879](https://github.com/dispoclavier/nouvel-azerty/commit/fb458796b6c42484f0b55a69031c685d437a6a57)
+	* Adapter les séquences de "⥲" U+2972, "⬰" U+2B30, "⭇" U+2B47. ibidem
+* Build : 6.2.7.0 [ad97918](https://github.com/dispoclavier/nouvel-azerty/commit/ad97918691bc7515fb2ea4185024e2031870725b)
 
 ## 6.2.6 (2026-03-16)
 
