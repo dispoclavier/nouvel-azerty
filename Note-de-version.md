@@ -41,7 +41,7 @@ Correction et mise à jour du contenu des touches mortes.
 	* Simplifier la saisie de "⩞" U+2A5E, "⩟" U+2A5F, "⩠" U+2A60, "⩢" U+2A62, "⩣" U+2A63. compose-1.yml [e2171d1](https://github.com/dispoclavier/nouvel-azerty/commit/e2171d1e3b82f6a2afda0d9e72bf25bcf4ae0cd4)
 	* Adapter les séquences de "ª" U+00AA, "º" U+00BA. ibidem
 	* Simplifier la saisie de "⎄" U+2384, "⩰" U+2A70, "⩹" U+2A79, "⩺" U+2A7A, "⪣" U+2AA3, "⫃" U+2AC3, "⫄" U+2AC4, "⫰" U+2AF0, "⫻" U+2AFB, "⫽" U+2AFD, "⫾" U+2AFE, "⫿" U+2AFF, "⬶" U+2B36. compose-2.yml [26cb429](https://github.com/dispoclavier/nouvel-azerty/commit/26cb42989e9b76ce9167682f394cd4e58e8d7661)
-	* Compléter les séquences de "⬰" U+2B30, "⬱" U+2B31, "⬲" U+2B32, "⬳" U+2B33, "⬴" U+2B34, "⬵" U+2B35, "⬶" U+2B36, "⬸" U+2B38, "⬾" U+2B3E. compose-1.yml [e7348e0](https://github.com/dispoclavier/nouvel-azerty/commit/e7348e080f713993ad408cbbfb665819e032f183)
+	* Compléter les séquences de "⬰" U+2B30, "⬱" U+2B31, "⬲" U+2B32, "⬳" U+2B33, "⬴" U+2B34, "⬵" U+2B35, "⬶" U+2B36, "⬸" U+2B38, "⬾" U+2B3E, "⬿" U+2B3F. compose-1.yml [e7348e0](https://github.com/dispoclavier/nouvel-azerty/commit/e7348e080f713993ad408cbbfb665819e032f183)
 	* Adapter les séquences de "⟴" U+27F4, "⥇" U+2947. ibidem
 * Transformations :
 	* Tourné : Redonder "≀" U+2240. compose-2.yml [09e7d3e](https://github.com/dispoclavier/nouvel-azerty/commit/09e7d3e8be5969e3808a34acdbd20cf675dbed43)
