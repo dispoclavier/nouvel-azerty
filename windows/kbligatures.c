@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Debug modification ##6..7 of VK_SPACE    6.2.8.0.0 Tue 2026-03-24T1840+0100
 * Remove padding zero in version number    6.0.9.7.0 Thu 2025-10-02T0335+0200
 * Duplicate leading space in version #     6.0.9.0.0 Mon 2025-09-29T1457+0200
 * Annotate leading space in version #      6.0.8.0.0 Thu 2025-09-25T1150+0200
@@ -27,11 +28,11 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '2', '.', '7', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '2', '.', '8', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
-  * Ligature array.
+  * Ligature array
   *
   * Windows crashed when a multiunit string with five or more code units was at
   * the Shift + Ctrl + Alt level in the default keyboard layout.
@@ -65,8 +66,6 @@
   * https://unicode.org/emoji/charts/emoji-list.html#subdivision-flag
   * See * Known bugs
   *
-  * Modification ## 17 and 18 are also grouped below.
-  *
   *
   * Breton trigraph
   *
@@ -82,6 +81,23 @@
   {'1'          ,0      ,'c'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,1      ,'C'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   
+  /*****************************************************************************\
+	* Common ligatures
+	*
+	* Alphabetic keys:       up to modification #7
+	* Numeric keys:          up to modification #17
+	* Non-alphanumeric keys: up to modification #18
+  *
+  * For modification #17, the alphabet is grouped below.
+	* See * Regional indicator symbol letters
+	*
+  * For modification #18, the digits and the alphabet are grouped below.
+	* See * Digit emoji and letter emoji
+	*
+	* On alphabetic keys, modification ##7..16 are blanked out, because they are
+	* not subject to Kana Lock, for Caps Lock sensitivity.
+  \*****************************************************************************/
+
   {'1'          ,6      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,7      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'1'          ,16     ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -200,6 +216,8 @@
   {VK_OEM_8     ,17     ,0xd83c   ,0xdff4   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_OEM_8     ,18     ,0xd83c   ,0xDDFA   ,0xd83c   ,0xDDF3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,5      ,' '      ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,6      ,' '      ,0xFEFF   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {VK_SPACE     ,7      ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,12     ,'&'      ,'n'      ,'b'      ,'s'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,14     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {VK_SPACE     ,15     ,'&'      ,'#'      ,'x'      ,'2'      ,'0'      ,'2'      ,'F'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -219,7 +237,7 @@
   {VK_ADD       ,16     ,'0'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Regional indicator symbol letters.
+  * Regional indicator symbol letters
   *
   * Standalone regional indicator symbol letters as a country flag input method.
   *
@@ -253,7 +271,7 @@
   {'Z'          ,17     ,0xd83c   ,0xDDFF   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Letter emoji along with digit emoji.
+  * Digit emoji and letter emoji
   *
   * Writing in letter emoji requires U+2060 WORD JOINER, since the cursive
   * non-joiner U+200C is not a break preventer, and letter emoji just like most
@@ -305,7 +323,7 @@
   {'Z'          ,18     ,0xd83c   ,0xDDFF   ,0x2060   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Mathematical alphabetic symbols.
+  * Mathematical alphabetic symbols
   *
   * Unicode warns that “[t]he characters in this block are intended for use
   * only in mathematical or technical notation, and not in nontechnical text.”
@@ -342,7 +360,7 @@
   *
   *
   /*****************************************************************************\
-  * Italic "𝐴" U1D434.."𝑧" U1D467 with sans-serif digits "𝟢" U1D7E2.."𝟫" U1D7EB.
+  * Italic "𝐴" U1D434.."𝑧" U1D467 with sans-serif digits "𝟢" U1D7E2.."𝟫" U1D7EB
   *
   * These are the user-perceived (Shift +) AltQr levels.
   *
@@ -423,7 +441,7 @@
   {'Z'          ,20     ,0xd835   ,0xDC4D   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Double-struck "𝔸" U1D538.."𝕫" U1D56B, "𝟘" U1D7D8.."𝟡" U1D7E1.
+  * Double-struck "𝔸" U1D538.."𝕫" U1D56B, "𝟘" U1D7D8.."𝟡" U1D7E1
   *
   * These are the user-perceived (Shift +) AltGr + AltQr levels.
   *
@@ -505,7 +523,7 @@
 
   /*****************************************************************************\
   * Bold Script, Bold Roundhand; Bold Calligraphic, Bold Chancery
-  * "𝓐" U1D4D0.."𝔃" U1D503 with bold "𝟎" U1D7CE.."𝟗" U1D7D7.
+  * "𝓐" U1D4D0.."𝔃" U1D503 with bold "𝟎" U1D7CE.."𝟗" U1D7D7
   *
   * These are the user-perceived (Shift +) AltFr + AltQr levels.
   *
@@ -586,7 +604,7 @@
   {'Z'          ,24     ,0xd835   ,0xDCE9   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Sans-serif bold "𝗔" U1D5D4.."𝘇" U1D607, "𝟬" U1D7EC.."𝟵" U1D7F5.
+  * Sans-serif bold "𝗔" U1D5D4.."𝘇" U1D607, "𝟬" U1D7EC.."𝟵" U1D7F5
   *
   * These are the user-perceived (Shift +) AltGr + AltFr + AltQr levels.
   *
@@ -668,7 +686,7 @@
 
   /*****************************************************************************\
   * Script, Roundhand; Calligraphic, Chancery "𝒜" U1D49C.."𝓏" U1D4CF
-  * with monospace "𝟶" U1D7F6.."𝟿" U1D7FF.
+  * with monospace "𝟶" U1D7F6.."𝟿" U1D7FF
   *
   * These are the user-perceived (AltGr +) AltLe + AltQr levels, as
   * Shift + AltLe does not work in column 02. But Shift + AltLe + AltQr is
@@ -759,7 +777,7 @@
   {VK_OEM_6     ,28     ,0xd835   ,0xDCB5   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Emoji (oncoming).
+  * Emoji (oncoming)
   *
   * Non-alphanumeric keys at the levels of the math alphabets are used for
   * emoji, except the space bar used for ordinary interword space in synergy
@@ -1084,7 +1102,7 @@
   {'Z'          ,32     ,0xD83D   ,0xDD1C   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   /*****************************************************************************\
-  * Extra modification number for broken modifier key combinations.
+  * Extra modification number for broken modifier key combinations
   *
   * This just outputs the okay emoji "🆗" U1F197 so nobody is afraid of missing
   * out on anything when some keys happen to work in between. 
