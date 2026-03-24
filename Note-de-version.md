@@ -1,13 +1,12 @@
-# 6.2.7 (2026-03-22)
+# 6.2.8 (2026-03-24)
 
-Complétion des séquences droite-à-gauche pour symboles mathématiques.
+Débogage de la barre d’espace sous Windows.
 
 ## Modifications
 
-* Composition :
-	* Compléter les séquences de "⭀" U+2B40, "⭁" U+2B41, "⭂" U+2B42, "⭄" U+2B44. compose-1.yml [fb45879](https://github.com/dispoclavier/nouvel-azerty/commit/fb458796b6c42484f0b55a69031c685d437a6a57)
-	* Adapter les séquences de "⥲" U+2972, "⬰" U+2B30, "⭇" U+2B47. ibidem
-* Build : 6.2.7.0 [ad97918](https://github.com/dispoclavier/nouvel-azerty/commit/ad97918691bc7515fb2ea4185024e2031870725b)
+* Disposition : Windows : Déboguer les niveaux 7 et 8 de la barre d’espace en mode français. kbligatures.c [5ea04bf](https://github.com/dispoclavier/nouvel-azerty/commit/5ea04bfa4a04f7ad902a221089a0b06f209828d4)
+* Documentation : Corriger, compléter et mettre à jour des annotations. ibidem, compose-1.yml [bfea557](https://github.com/dispoclavier/nouvel-azerty/commit/bfea55793cf18444d0e84dd4b49931fdc245e20e)
+* Build : 6.2.8.0 [5ea04bf](https://github.com/dispoclavier/nouvel-azerty/commit/5ea04bfa4a04f7ad902a221089a0b06f209828d4)
 
 ## Pour Windows
 
@@ -17,7 +16,7 @@ La variante AZERTY pour la langue bretonne, celle pour la Polynésie française,
 
 ### Installation
 
-Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.2.7.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.7/Un-nouvel-AZERTY-Windows-6.2.7.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.2.7.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.7/Un-nouvel-AZERTY-Windows-variantes-6.2.7.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
+Télécharger le paquet « [Un-nouvel-AZERTY-Windows-6.2.8.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.8/Un-nouvel-AZERTY-Windows-6.2.8.zip) » ou le paquet « [Un-nouvel-AZERTY-Windows-variantes-6.2.8.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.8/Un-nouvel-AZERTY-Windows-variantes-6.2.8.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Démarrage-rapide.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/D%C3%A9marrage-rapide.md) » ou dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/Lisez-moi-svp.md) ».
 
 Le meilleur mode d’emploi [coule de source sûre dans CCM](https://www.commentcamarche.net/informatique/windows/33353-majuscules-accentuees-windows-quad/) pour une autre disposition de clavier. Il est facilement transposable au cas où.
 
@@ -29,7 +28,7 @@ Toutes les variantes AZERTY ou redisposées sont incluses pour installation et f
 
 ### Activation ou installation
 
-Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.2.7.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.7/Un-nouvel-AZERTY-Linux-6.2.7.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
+Télécharger le dossier « [Un-nouvel-AZERTY-Linux-6.2.8.zip](https://github.com/dispoclavier/nouvel-azerty/releases/download/6.2.8/Un-nouvel-AZERTY-Linux-6.2.8.zip) » sous le titre « Assets », l’extraire, et procéder comme indiqué dans « [Lisez-moi-svp.pdf](https://github.com/dispoclavier/nouvel-azerty/blob/main/linux-chromeos/Lisez-moi-svp.md) ».
 
 ## Pour macOS
 
@@ -53,5 +52,5 @@ Du total il faut soustraire les téléchargements effectués par SourceForge, so
 
 Cette note est [versionnée](https://github.com/dispoclavier/nouvel-azerty/blob/main/Note-de-version.md).
 
-| Dernière mise à jour : 2026-03-22 |
+| Dernière mise à jour : 2026-03-24 |
 |-|

@@ -16,6 +16,14 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Windows, portées sous macOS puis sous Linux, rétroportées sous Windows et complétées pour Windows et pour Linux.
 
+## 6.2.8 (2026-03-24)
+
+Débogage de la barre d’espace sous Windows.
+
+* Disposition : Windows : Déboguer les niveaux 7 et 8 de la barre d’espace en mode français. kbligatures.c [5ea04bf](https://github.com/dispoclavier/nouvel-azerty/commit/5ea04bfa4a04f7ad902a221089a0b06f209828d4)
+* Documentation : Corriger, compléter et mettre à jour des annotations. ibidem, compose-1.yml [bfea557](https://github.com/dispoclavier/nouvel-azerty/commit/bfea55793cf18444d0e84dd4b49931fdc245e20e)
+* Build : 6.2.8.0 [5ea04bf](https://github.com/dispoclavier/nouvel-azerty/commit/5ea04bfa4a04f7ad902a221089a0b06f209828d4)
+
 ## 6.2.7 (2026-03-22)
 
 Complétion des séquences droite-à-gauche pour symboles mathématiques.
