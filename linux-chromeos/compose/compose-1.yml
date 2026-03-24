@@ -2,7 +2,7 @@
 #               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.7.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.8.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -715,7 +715,9 @@
 #   trailing break-preventer is by courtesy of Jakub Stachu, who reported this
 #   usage on 2017-11-05 in "Non‐breakable space justification in Word 2016",
 #   Microsoft Community forum MS Office > Word > Windows 8, page 3.
-#   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=3
+#   https://learn.microsoft.com/en-us/answers/questions/4940301/non-breakable-space-justification-in-word-2016?page=2
+#   Initially:
+#   https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-mso_windows8/nonbreakable-space-justification-in-word-2016/4fa1ad30-004c-454f-9775-a3beaa91c88b?page=2
 #
 #   This issue has been formally submitted to Unicode in L2/19-114
 #   “Proposal to focus line break prevention design on end-user input”.
