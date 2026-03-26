@@ -16,6 +16,10 @@ Prise en charge par touches mortes pour Linux et macOS, des émojis additionnels
 
 Mise à jour pour macOS des dispositions développées pour Windows, portées sous macOS puis sous Linux, rétroportées sous Windows et complétées pour Windows et pour Linux.
 
+## 6.2.9 (projet)
+
+* Documentation : Corriger des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9)
+
 ## 6.2.8 (2026-03-24)
 
 Débogage de la barre d’espace sous Windows.
