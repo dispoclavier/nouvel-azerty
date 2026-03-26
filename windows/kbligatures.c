@@ -82,20 +82,20 @@
   {'1'          ,1      ,'C'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   
   /*****************************************************************************\
-	* Common ligatures
-	*
-	* Alphabetic keys:       up to modification #7
-	* Numeric keys:          up to modification #17
-	* Non-alphanumeric keys: up to modification #18
+  * Common ligatures
+  *
+  * Alphabetic keys:       up to modification #7
+  * Numeric keys:          up to modification #17
+  * Non-alphanumeric keys: up to modification #18
   *
   * For modification #17, the alphabet is grouped below.
-	* See * Regional indicator symbol letters
-	*
+  * See * Regional indicator symbol letters
+  *
   * For modification #18, the digits and the alphabet are grouped below.
-	* See * Digit emoji and letter emoji
-	*
-	* On alphabetic keys, modification ##7..16 are blanked out, because they are
-	* not subject to Kana Lock, for Caps Lock sensitivity.
+  * See * Digit emoji and letter emoji
+  *
+  * On alphabetic keys, modification ##7..16 are blanked out, because they are
+  * not subject to Kana Lock, for Caps Lock sensitivity.
   \*****************************************************************************/
 
   {'1'          ,6      ,'1'      ,0xfe0f   ,0x20e3   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
@@ -273,15 +273,16 @@
   /*****************************************************************************\
   * Digit emoji and letter emoji
   *
-  * Writing in letter emoji requires U+2060 WORD JOINER, since the cursive
-  * non-joiner U+200C is not a break preventer, and letter emoji just like most
-  * emoji are word boundaries, so that contiguous runs break apart at line end.
+  * Writing in letter emoji requires U+2060 WORD JOINER, because the cursive
+  * non-joiner U+200C is not a break preventer, and letter emoji are word
+  * boundaries like most emoji. Continuous runs break apart at line end.
   *
-  * Digit emoji, by contrast, inherit the word boundary rules applied to digits,
-  * and when digits are followed by letter emoji, these are exposed to breaking
+  * Digit emoji, by contrast, inherit the word boundary rules applied to digits.
+  * But when digits are followed by letter emoji, these are exposed to breaking
   * off, unless a word joiner is inserted. This needs to be built-in when digits
   * are input at level 10, modification # 18, so as to get the expected behavior
-  * without screwing things up. Word joiner on the space bar is at level 9, # 17.
+  * without screwing things up. Word joiner on the space bar is at level 9,
+  * modification #17.
   *
   \*****************************************************************************/
 
