@@ -18,7 +18,7 @@ Mise à jour pour macOS des dispositions développées pour Windows, portées so
 
 ## 6.2.9 (projet)
 
-* Documentation : Corriger des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9)
+* Documentation : Corriger ou mettre à jour des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), compose-1.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b)
 
 ## 6.2.8 (2026-03-24)
 
