@@ -1,4 +1,4 @@
-//                       Date: 2026-02-22T2250+0100
+//                       Date: 2026-03-29T0624+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1267,7 +1267,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ],
 		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ]
-	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U2044 ⁄ FRACTION SLASH; U1F525 🔥 FIRE 15th-ranking emoji
+	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U1F525 🔥 FIRE 15th-ranking emoji
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
@@ -1456,7 +1456,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              KP_Add,               U202F,           plusminus,               U2248,           plusminus,               U2248,           plusminus,               U2248 ],
 		[              KP_Add,          numbersign,           plusminus,               UEF7C,           plusminus,               UEF7C,           plusminus,               UEF7C ]
-	}; // U2248 ≈ ALMOST EQUAL; UEF7C '0x'
+	}; // U202F ' ' NARROW NO-BREAK SPACE; U2248 ≈ ALMOST EQUAL; UEF7C '0x'
 
 	//
 	// ## Digit keys
