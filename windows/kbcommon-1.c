@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Reinstate VK_OEM_AX as modifier 0x10     6.2.9.1.0 Wed 2026-04-08T2104+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0923+0200
 * Rename AltLe to AltEm, AltQr to AltMa    6.2.3.0.0 Sat 2026-02-14T1236+0100
 * Further document the dead key bug        6.0.9.0.0 Mon 2025-09-29T1419+0200
@@ -171,8 +172,7 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_CONTROL  ,   KBDCTRL      }, // 2
     { VK_MENU     ,   KBDALT       }, // 4
                                       // 8 is KANA
-    //{ VK_OEM_AX   ,   16           }, // AltGr key
-    { VK_RMENU    ,   16           }, // AltGr key
+    { VK_OEM_AX   ,   16           }, // AltGr key
     { VK_OEM_102  ,   32           }, // AltFr key
     { VK_CAPITAL  ,   64           }, // AltEm key on top of Caps Lock
     { VK_KANA     ,   128          }, // AltMa key on top of Kana Lock

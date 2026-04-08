@@ -7,6 +7,7 @@
 * 1985..2001 Microsoft Corporation (pro parte)
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
+* Reinstate VK_OEM_AX as modifier 0x10     6.2.9.0.0 Wed 2026-04-08T2119+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0926+0200
 * Define TYPEDEF_VK_TO_WCHARS up to 56     6.0.5.0.0 Sat 2025-08-30T2048+0200
 * Fix misspelling                          6.0.0.0.0 Tue 2025-07-29T0457+0200
@@ -287,7 +288,10 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 *   * It fits user habits.
 *   * It does not impact low-level keyboard access using scancodes directly.
 *
-* This however does not work when using the key’s native virtual key name RMENU.
+* This however does not work when using the key’s native virtual key name RMENU,
+* no matter whether the KLLF_ALTGR flag is set or not.
+* See kbcommon-3.c * Locale-specific special processing
+*
 * So this key needs to be renamed, at the expense of the KbdUTool transpiler not
 * recognizing the new VK.
 *
@@ -303,8 +307,8 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 * The scancode used here is T5E (VK_OEM_BACKTAB), see kbd.h:1123.
 \**********************************************************************************/
 // Dedicated modifier on Right Alt:
-// #undef  X38
-// #define X38 _EQ(                                    OEM_AX                     )
+   #undef  X38
+   #define X38 _EQ(                                    OEM_AX                     )
 // Unused scancode for optional mapping of Apps or RWin to Right Alt:
 // #undef  T5E
 // #define T5E _EQ(                                    RMENU                      )
