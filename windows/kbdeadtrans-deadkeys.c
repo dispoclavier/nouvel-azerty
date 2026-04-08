@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update                                   6.2.9.0.0 Wed 2026-04-08T0810+0200
 * Update                                   6.2.6.0.0 Sun 2026-03-15T2139+0100
 * Update                                   6.2.4.2.0 Wed 2026-03-04T2220+0100
 * Update                                   6.2.3.1.0 Mon 2026-02-23T0705+0100
@@ -59,7 +60,6 @@
 * all at level 4 (Shift + AltGr).
 *
 \*****************************************************************************/
-
 /*<!abovedot><!abovedot>                                           */ DEADTRANS( 0x1E57	,0x1E57	,0x02C8	,0x0001), // Virtual dead key’s intermediate chain link
 /*<!abovedot><!abovedot><!acute>                                   */ DEADTRANS( 0x00E1	,0x02C8	,0x02C7	,0x0001), // Virtual dead key’s intermediate chain link
 /*<!abovedot><!abovedot><!acute><!grave>                           */ DEADTRANS( 0x00F2	,0x02C7	,0x02B7	,0x0001), // Virtual dead key’s intermediate chain link
@@ -1011,6 +1011,8 @@
 /*<!abovedot>                                                      */ DEADTRANS( L'*'	,0x1E57	,0x2A30	,0x0000), // '*' ➔ "⨰" U+2A30 MULTIPLICATION SIGN WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'|'	,0x1E57	,0xA717	,0x0000), // '|' ➔ "ꜗ" U+A717 MODIFIER LETTER DOT VERTICAL BAR
 /*<!abovedot>                                                      */ DEADTRANS( L'{'	,0x1E57	,0x2AC4	,0x0000), // '{' ➔ "⫄" U+2AC4 SUPERSET OF OR EQUAL TO WITH DOT ABOVE
+/*<!abovedot>                                                      */ DEADTRANS( L'['	,0x1E57	,0x301A	,0x0000), // '[' ➔ "〚" U+301A LEFT WHITE SQUARE BRACKET
+/*<!abovedot>                                                      */ DEADTRANS( L']'	,0x1E57	,0x301B	,0x0000), // ']' ➔ "〛" U+301B RIGHT WHITE SQUARE BRACKET
 /*<!abovedot>                                                      */ DEADTRANS( L'='	,0x1E57	,0x2250	,0x0000), // '=' ➔ "≐" U+2250 APPROACHES THE LIMIT
 /*<!abovedot>                                                      */ DEADTRANS( L'`'	,0x1E57	,0x2A51	,0x0000), // '`' ➔ "⩑" U+2A51 LOGICAL AND WITH DOT ABOVE
 /*<!abovedot>                                                      */ DEADTRANS( L'>'	,0x1E57	,0x2A82	,0x0000), // '>' ➔ "⪂" U+2A82 GREATER-THAN OR SLANTED EQUAL TO WITH DOT ABOVE
@@ -5138,7 +5140,7 @@
 /*<!group>                                                         */ DEADTRANS( L'.'	,0x2460	,0x2027	,0x0000), // '.' ➔ "‧" U+2027 HYPHENATION POINT
 /*<!group>                                                         */ DEADTRANS( L'+'	,0x2460	,0x00B1	,0x0000), // '+' ➔ "±" U+00B1 PLUS-MINUS SIGN math
 /*<!group>                                                         */ DEADTRANS( L'?'	,0x2460	,0x00BF	,0x0000), // '?' ➔ "¿" U+00BF INVERTED QUESTION MARK
-/*<!group>                                                         */ DEADTRANS( L'"'	,0x2460	,0x2605	,0x0000), // '"' ➔ "★" U+2605 BLACK STAR math
+/*<!group>                                                         */ DEADTRANS( L'"'	,0x2460	,0x02BB	,0x0000), // '"' ➔ "ʻ" U+02BB MODIFIER LETTER TURNED COMMA
 /*<!group>                                                         */ DEADTRANS( 0x20AC	,0x2460	,0x2605	,0x0000), // '€' ➔ "★" U+2605 BLACK STAR math
 /*<!group>                                                         */ DEADTRANS( L';'	,0x2460	,0x02D0	,0x0000), // ';' ➔ "ː" U+02D0 MODIFIER LETTER TRIANGULAR COLON
 /*<!group>                                                         */ DEADTRANS( L'/'	,0x2460	,0x2718	,0x0000), // '/' ➔ "✘" U+2718 HEAVY BALLOT X
@@ -7358,6 +7360,8 @@
 /*<!hook><!hook><!group>                                           */ DEADTRANS( L'R'	,0x02A5	,0xAB4A	,0x0000), // 'R' ➔ "ꭊ" U+AB4A LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 /*<!hook><!hook><!group>                                           */ DEADTRANS( L's'	,0x02A5	,0x0286	,0x0000), // 's' ➔ "ʆ" U+0286 LATIN SMALL LETTER ESH WITH CURL
 /*<!hook><!hook><!group>                                           */ DEADTRANS( L't'	,0x02A5	,0x02A8	,0x0000), // 't' ➔ "ʨ" U+02A8 LATIN SMALL LETTER TC DIGRAPH WITH CURL
+/*<!hook><!hook><!hook>                                            */ DEADTRANS( L'['	,0xA796	,0x301A	,0x0000), // '[' ➔ "〚" U+301A LEFT WHITE SQUARE BRACKET
+/*<!hook><!hook><!hook>                                            */ DEADTRANS( L']'	,0xA796	,0x301B	,0x0000), // ']' ➔ "〛" U+301B RIGHT WHITE SQUARE BRACKET
 /*<!hook><!hook><!hook>                                            */ DEADTRANS( L'B'	,0xA796	,0xA796	,0x0000), // 'B' ➔ "Ꞗ" U+A796 LATIN CAPITAL LETTER B WITH FLOURISH
 /*<!hook><!hook><!hook>                                            */ DEADTRANS( L'b'	,0xA796	,0xA797	,0x0000), // 'b' ➔ "ꞗ" U+A797 LATIN SMALL LETTER B WITH FLOURISH
 /*<!hook><!hook><!hook>                                            */ DEADTRANS( L'd'	,0xA796	,0xDF25	,0x0000), // High surrogate: D837; 'd' ➔ "𝼥" U+1DF25 LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
@@ -7398,6 +7402,15 @@
 /*<!hook><!hook><!turned><!turned>                                 */ DEADTRANS( L'q'	,0x0296	,0xDF0E	,0x0000), // High surrogate: D837; 'q' ➔ "𝼎" U+1DF0E LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 /*<!hook><!hook><!turned>                                          */ DEADTRANS( L'q'	,0x028A	,0xDF0E	,0x0000), // High surrogate: D837; 'q' ➔ "𝼎" U+1DF0E LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 /*<!hook><!hook><!turned>                                          */ DEADTRANS( L't'	,0x028A	,0xDF0D	,0x0000), // High surrogate: D837; 't' ➔ "𝼍" U+1DF0D LATIN SMALL LETTER TURNED T WITH CURL
+/*<!hook><!hook>                                                   */ DEADTRANS( L'{'	,0x0255	,0x3018	,0x0000), // '{' ➔ "〘" U+3018 LEFT WHITE TORTOISE SHELL BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'}'	,0x0255	,0x3019	,0x0000), // '}' ➔ "〙" U+3019 RIGHT WHITE TORTOISE SHELL BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'['	,0x0255	,0x300E	,0x0000), // '[' ➔ "『" U+300E LEFT WHITE CORNER BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L']'	,0x0255	,0x300F	,0x0000), // ']' ➔ "』" U+300F RIGHT WHITE CORNER BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'>'	,0x0255	,0x300B	,0x0000), // '>' ➔ "》" U+300B RIGHT DOUBLE ANGLE BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'<'	,0x0255	,0x300A	,0x0000), // '<' ➔ "《" U+300A LEFT DOUBLE ANGLE BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'('	,0x0255	,0x3016	,0x0000), // '(' ➔ "〖" U+3016 LEFT WHITE LENTICULAR BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L')'	,0x0255	,0x3017	,0x0000), // ')' ➔ "〗" U+3017 RIGHT WHITE LENTICULAR BRACKET
+/*<!hook><!hook>                                                   */ DEADTRANS( L'~'	,0x0255	,0x3030	,0x0000), // '~' ➔ "〰" U+3030 WAVY DASH
 /*<!hook><!hook>                                                   */ DEADTRANS( L'A'	,0x0255	,0xA722	,0x0000), // 'A' ➔ "Ꜣ" U+A722 LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 /*<!hook><!hook>                                                   */ DEADTRANS( L'a'	,0x0255	,0xA723	,0x0000), // 'a' ➔ "ꜣ" U+A723 LATIN SMALL LETTER EGYPTOLOGICAL ALEF
 /*<!hook><!hook>                                                   */ DEADTRANS( L'c'	,0x0255	,0x0255	,0x0000), // 'c' ➔ "ɕ" U+0255 LATIN SMALL LETTER C WITH CURL
@@ -7485,7 +7498,7 @@
 /*<!hook><!superscript>                                            */ DEADTRANS( L'u'	,0x1D9D	,0xAB5F	,0x0000), // 'u' ➔ "ꭟ" U+AB5F MODIFIER LETTER SMALL U WITH LEFT HOOK
 /*<!hook><!superscript>                                            */ DEADTRANS( L'v'	,0x1D9D	,0x1DB9	,0x0000), // 'v' ➔ "ᶹ" U+1DB9 MODIFIER LETTER SMALL V WITH HOOK
 /*<!hook><!superscript>                                            */ DEADTRANS( L'z'	,0x1D9D	,0x1DBD	,0x0000), // 'z' ➔ "ᶽ" U+1DBD MODIFIER LETTER SMALL Z WITH CURL
-/*<!hook><!tilde>                                                  */ DEADTRANS( L'r'	,0x1D73	,0x1D73	,0x0000), // 'r' ➔ "ᵳ" U+1D73 LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+/*<!hook>                                                          */ DEADTRANS( 0x00F5	,0x0192	,0x1D73	,0x0000), // 'õ' ➔ "ᵳ" U+1D73 LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
 /*<!hook><!turned><!hook><!turned>                                 */ DEADTRANS( L'q'	,0x0294	,0xDF0E	,0x0000), // High surrogate: D837; 'q' ➔ "𝼎" U+1DF0E LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 /*<!hook><!turned><!hook>                                          */ DEADTRANS( L'q'	,0x0295	,0xDF0E	,0x0000), // High surrogate: D837; 'q' ➔ "𝼎" U+1DF0E LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 /*<!hook><!turned><!hook>                                          */ DEADTRANS( L't'	,0x0295	,0xDF0D	,0x0000), // High surrogate: D837; 't' ➔ "𝼍" U+1DF0D LATIN SMALL LETTER TURNED T WITH CURL
@@ -7497,12 +7510,28 @@
 /*<!hook><!turned>                                                 */ DEADTRANS( L'q'	,0x01BE	,0xDF0E	,0x0000), // High surrogate: D837; 'q' ➔ "𝼎" U+1DF0E LATIN LETTER INVERTED GLOTTAL STOP WITH CURL
 /*<!hook><!turned>                                                 */ DEADTRANS( L'r'	,0x01BE	,0x027B	,0x0000), // 'r' ➔ "ɻ" U+027B LATIN SMALL LETTER TURNED R WITH HOOK
 /*<!hook><!turned>                                                 */ DEADTRANS( L't'	,0x01BE	,0xDF0D	,0x0000), // High surrogate: D837; 't' ➔ "𝼍" U+1DF0D LATIN SMALL LETTER TURNED T WITH CURL
-/*<!hook>                                                          */ DEADTRANS( L'.'	,0x0192	,0x2055	,0x0000), // '.' ➔ "⁕" U+2055 FLOWER PUNCTUATION MARK
+/*<!hook>                                                          */ DEADTRANS( L'\''	,0x0192	,0x301E	,0x0000), // ''' ➔ "〞" U+301E DOUBLE PRIME QUOTATION MARK
+/*<!hook>                                                          */ DEADTRANS( 0x2019	,0x0192	,0x301E	,0x0000), // '’' ➔ "〞" U+301E DOUBLE PRIME QUOTATION MARK
+/*<!hook>                                                          */ DEADTRANS( L'{'	,0x0192	,0x3014	,0x0000), // '{' ➔ "〔" U+3014 LEFT TORTOISE SHELL BRACKET
+/*<!hook>                                                          */ DEADTRANS( L'}'	,0x0192	,0x3015	,0x0000), // '}' ➔ "〕" U+3015 RIGHT TORTOISE SHELL BRACKET
+/*<!hook>                                                          */ DEADTRANS( L'['	,0x0192	,0x300C	,0x0000), // '[' ➔ "「" U+300C LEFT CORNER BRACKET
+/*<!hook>                                                          */ DEADTRANS( L']'	,0x0192	,0x300D	,0x0000), // ']' ➔ "」" U+300D RIGHT CORNER BRACKET
+/*<!hook>                                                          */ DEADTRANS( L','	,0x0192	,0x301F	,0x0000), // ',' ➔ "〟" U+301F LOW DOUBLE PRIME QUOTATION MARK
+/*<!hook>                                                          */ DEADTRANS( L'`'	,0x0192	,0x301D	,0x0000), // '`' ➔ "〝" U+301D REVERSED DOUBLE PRIME QUOTATION MARK
+/*<!hook>                                                          */ DEADTRANS( L'>'	,0x0192	,0x3009	,0x0000), // '>' ➔ "〉" U+3009 RIGHT ANGLE BRACKET
+/*<!hook>                                                          */ DEADTRANS( L'<'	,0x0192	,0x3008	,0x0000), // '<' ➔ "〈" U+3008 LEFT ANGLE BRACKET
+/*<!hook>                                                          */ DEADTRANS( L'('	,0x0192	,0x3010	,0x0000), // '(' ➔ "【" U+3010 LEFT BLACK LENTICULAR BRACKET
+/*<!hook>                                                          */ DEADTRANS( L')'	,0x0192	,0x3011	,0x0000), // ')' ➔ "】" U+3011 RIGHT BLACK LENTICULAR BRACKET
+/*<!hook>                                                          */ DEADTRANS( L'"'	,0x0192	,0x3003	,0x0000), // '"' ➔ "〃" U+3003 DITTO MARK
+/*<!hook>                                                          */ DEADTRANS( 0x20AC	,0x0192	,0x3003	,0x0000), // '€' ➔ "〃" U+3003 DITTO MARK
+/*<!hook>                                                          */ DEADTRANS( L'~'	,0x0192	,0x301C	,0x0000), // '~' ➔ "〜" U+301C WAVE DASH
 /*<!hook>                                                          */ DEADTRANS( L'1'	,0x0192	,0x02E9	,0x0000), // '1' ➔ "˩" U+02E9 MODIFIER LETTER EXTRA-LOW TONE BAR
 /*<!hook>                                                          */ DEADTRANS( L'2'	,0x0192	,0x02E8	,0x0000), // '2' ➔ "˨" U+02E8 MODIFIER LETTER LOW TONE BAR
 /*<!hook>                                                          */ DEADTRANS( L'3'	,0x0192	,0x02E7	,0x0000), // '3' ➔ "˧" U+02E7 MODIFIER LETTER MID TONE BAR
 /*<!hook>                                                          */ DEADTRANS( L'4'	,0x0192	,0x02E6	,0x0000), // '4' ➔ "˦" U+02E6 MODIFIER LETTER HIGH TONE BAR
 /*<!hook>                                                          */ DEADTRANS( L'5'	,0x0192	,0x02E5	,0x0000), // '5' ➔ "˥" U+02E5 MODIFIER LETTER EXTRA-HIGH TONE BAR
+/*<!hook>                                                          */ DEADTRANS( L'A'	,0x0192	,0x303D	,0x0000), // 'A' ➔ "〽" U+303D PART ALTERNATION MARK
+/*<!hook>                                                          */ DEADTRANS( L'a'	,0x0192	,0x303D	,0x0000), // 'a' ➔ "〽" U+303D PART ALTERNATION MARK
 /*<!hook>                                                          */ DEADTRANS( L'B'	,0x0192	,0x0181	,0x0000), // 'B' ➔ "Ɓ" U+0181 LATIN CAPITAL LETTER B WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'b'	,0x0192	,0x0253	,0x0000), // 'b' ➔ "ɓ" U+0253 LATIN SMALL LETTER B WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'C'	,0x0192	,0x0187	,0x0000), // 'C' ➔ "Ƈ" U+0187 LATIN CAPITAL LETTER C WITH HOOK
@@ -7536,6 +7565,8 @@
 /*<!hook>                                                          */ DEADTRANS( L'v'	,0x0192	,0x028B	,0x0000), // 'v' ➔ "ʋ" U+028B LATIN SMALL LETTER V WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'W'	,0x0192	,0x2C72	,0x0000), // 'W' ➔ "Ⱳ" U+2C72 LATIN CAPITAL LETTER W WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'w'	,0x0192	,0x2C73	,0x0000), // 'w' ➔ "ⱳ" U+2C73 LATIN SMALL LETTER W WITH HOOK
+/*<!hook>                                                          */ DEADTRANS( L'X'	,0x0192	,0x3037	,0x0000), // 'X' ➔ "〷" U+3037 IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
+/*<!hook>                                                          */ DEADTRANS( L'x'	,0x0192	,0x303F	,0x0000), // 'x' ➔ "〿" U+303F IDEOGRAPHIC HALF FILL SPACE
 /*<!hook>                                                          */ DEADTRANS( L'Y'	,0x0192	,0x01B3	,0x0000), // 'Y' ➔ "Ƴ" U+01B3 LATIN CAPITAL LETTER Y WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'y'	,0x0192	,0x01B4	,0x0000), // 'y' ➔ "ƴ" U+01B4 LATIN SMALL LETTER Y WITH HOOK
 /*<!hook>                                                          */ DEADTRANS( L'Z'	,0x0192	,0x0224	,0x0000), // 'Z' ➔ "Ȥ" U+0224 LATIN CAPITAL LETTER Z WITH HOOK
@@ -8440,7 +8471,16 @@
 /*<!retroflexhook><!turned>                                        */ DEADTRANS( L'^'	,0x2C7B	,0xDFA7	,0x0000), // High surrogate: D801; '^' ➔ "𐞧" U+107A7 MODIFIER LETTER SMALL TURNED R WITH LONG LEG AND RETROFLEX HOOK
 /*<!retroflexhook><!turned>                                        */ DEADTRANS( L'h'	,0x2C7B	,0x02AE	,0x0000), // 'h' ➔ "ʮ" U+02AE LATIN SMALL LETTER TURNED H WITH FISHHOOK
 /*<!retroflexhook><!turned>                                        */ DEADTRANS( L'r'	,0x2C7B	,0x2C79	,0x0000), // 'r' ➔ "ⱹ" U+2C79 LATIN SMALL LETTER TURNED R WITH TAIL
+/*<!retroflexhook>                                                 */ DEADTRANS( L'{'	,0x0273	,0x3018	,0x0000), // '{' ➔ "〘" U+3018 LEFT WHITE TORTOISE SHELL BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L'}'	,0x0273	,0x3019	,0x0000), // '}' ➔ "〙" U+3019 RIGHT WHITE TORTOISE SHELL BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L'['	,0x0273	,0x300E	,0x0000), // '[' ➔ "『" U+300E LEFT WHITE CORNER BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L']'	,0x0273	,0x300F	,0x0000), // ']' ➔ "』" U+300F RIGHT WHITE CORNER BRACKET
 /*<!retroflexhook>                                                 */ DEADTRANS( L'!'	,0x0273	,0xDF0A	,0x0000), // High surrogate: D837; '!' ➔ "𝼊" U+1DF0A LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
+/*<!retroflexhook>                                                 */ DEADTRANS( L'>'	,0x0273	,0x300B	,0x0000), // '>' ➔ "》" U+300B RIGHT DOUBLE ANGLE BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L'<'	,0x0273	,0x300A	,0x0000), // '<' ➔ "《" U+300A LEFT DOUBLE ANGLE BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L'('	,0x0273	,0x3016	,0x0000), // '(' ➔ "〖" U+3016 LEFT WHITE LENTICULAR BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L')'	,0x0273	,0x3017	,0x0000), // ')' ➔ "〗" U+3017 RIGHT WHITE LENTICULAR BRACKET
+/*<!retroflexhook>                                                 */ DEADTRANS( L'~'	,0x0273	,0x3030	,0x0000), // '~' ➔ "〰" U+3030 WAVY DASH
 /*<!retroflexhook>                                                 */ DEADTRANS( L'0'	,0x0273	,0x2672	,0x0000), // '0' ➔ "♲" U+2672 UNIVERSAL RECYCLING SYMBOL
 /*<!retroflexhook>                                                 */ DEADTRANS( L'1'	,0x0273	,0x2673	,0x0000), // '1' ➔ "♳" U+2673 RECYCLING SYMBOL FOR TYPE-1 PLASTICS
 /*<!retroflexhook>                                                 */ DEADTRANS( L'2'	,0x0273	,0x2674	,0x0000), // '2' ➔ "♴" U+2674 RECYCLING SYMBOL FOR TYPE-2 PLASTICS
@@ -9606,7 +9646,7 @@
 /*<!tilde><!diaeresis>                                             */ DEADTRANS( L'o'	,0x1E4F	,0x1E4F	,0x0000), // 'o' ➔ "ṏ" U+1E4F LATIN SMALL LETTER O WITH TILDE AND DIAERESIS
 /*<!tilde><!diaeresis>                                             */ DEADTRANS( L' '	,0x1E4F	,0x034B	,0x0000), // ' ' ➔ "͋" U+034B COMBINING HOMOTHETIC ABOVE
 /*<!tilde><!diaeresis>                                             */ DEADTRANS( 0x200B	,0x1E4F	,0x034B	,0x0000), // '​' ➔ "͋" U+034B COMBINING HOMOTHETIC ABOVE
-/*<!tilde><!hook>                                                  */ DEADTRANS( L'r'	,0x1D72	,0x1D73	,0x0000), // 'r' ➔ "ᵳ" U+1D73 LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+/*<!tilde>                                                         */ DEADTRANS( 0x0192	,0x00F5	,0x1D73	,0x0000), // 'ƒ' ➔ "ᵳ" U+1D73 LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
 /*<!tilde><!horn>                                                  */ DEADTRANS( L'O'	,0x1EE0	,0x1EE0	,0x0000), // 'O' ➔ "Ỡ" U+1EE0 LATIN CAPITAL LETTER O WITH HORN AND TILDE
 /*<!tilde><!horn>                                                  */ DEADTRANS( L'o'	,0x1EE0	,0x1EE1	,0x0000), // 'o' ➔ "ỡ" U+1EE1 LATIN SMALL LETTER O WITH HORN AND TILDE
 /*<!tilde><!horn>                                                  */ DEADTRANS( L'U'	,0x1EE0	,0x1EEE	,0x0000), // 'U' ➔ "Ữ" U+1EEE LATIN CAPITAL LETTER U WITH HORN AND TILDE
