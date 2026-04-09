@@ -5,7 +5,7 @@
 # 2024-05-16T1520+0200
 # 2024-10-28T1415+0100
 # 2025-11-30T2108+0100
-# 2026-01-29T2352+0100
+# 2026-01-30T0713+0100
 # = last modified.
 #
 # Generates HTML tables of dedicated non-math multikey sequences configured in
@@ -44,14 +44,14 @@ use feature 'unicode_strings';
 # By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-# By courtesy of https://www.geeksforgeeks.org/perl-date-and-time/
-use DateTime;
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+use Time::Piece;
 
-## Convert character names to localized names
-# my $names_file_path       = 'names/NamesList.txt';
-my $names_file_path       = 'names/ListeNoms.txt';
-## Convert character names to descriptors
-# my $descriptors_file_path = '';
+## Character names
+my $names_file_path       = 'names/NamesList.txt';
+## Localized names
+my $fr_names_file_path    = 'names/ListeNoms.txt';
+## Descriptors
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
@@ -77,16 +77,21 @@ my $wholeoutput_path     = $output_path;
 my $parsing_on           = !1;
 my $date_legend          = 'Tableau mis à jour le ';
 
-# By courtesy of https://stackoverflow.com/a/43881027
-my $nowDate              = DateTime->now(time_zone => 'local');
-my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
-my $date                 = "$day/$month/$year";
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+my $now_date             = Time::Piece->new;
+my $date                 = $now_date->strftime( '%d/%m/%Y' );
 
 my $table_id             = 'tableau-compose';
 my $table_header_1       = 'Caractère';
 my $table_header_2       = 'Séquence de composition';
 my $table_header_3       = 'Identifiant Unicode';
-my $start_tags_1         = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+my $table_header_4       = 'Descripteur';
+my $table_header_title   = 'Cliquer pour basculer entre français et anglais';
+my $checkbox_label       = 'Imprimer les descripteurs, non les identifiants';
+my $checkbox_checked     = '☑&nbsp;';
+my $checkbox_not_checked = '☐&nbsp;';
+my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
+my $start_tags_1        .= "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
 my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags             = "</tbody></table></figure>\n";
@@ -130,7 +135,9 @@ while ( my $line = <INPUT> ) {
 
 		unless ( $line =~ /^#/                 # Skip annotations.
 			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
+			|| $line =~ /<nobreakspace>/         # No-break space alias sequences.
 			|| $line =~ /<rightsinglequotemark>/ # Curly apostrophe alias sequences.
+			|| $line =~ /<dead_greek/            # Alias of <at> in multikey sequences.
 			|| $line =~ /\/Compose"/             # Output like "en_US.UTF-8/Compose".
 		) {
 			if ( $line =~ /<Multi_key>/ ) {

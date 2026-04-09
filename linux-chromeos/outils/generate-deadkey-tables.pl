@@ -80,14 +80,14 @@ use feature 'unicode_strings';
 # By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-# By courtesy of https://www.geeksforgeeks.org/perl-date-and-time/
-use DateTime;
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+use Time::Piece;
 
-## Convert character names to localized names
-# my $names_file_path       = 'names/NamesList.txt';
-my $names_file_path       = 'names/ListeNoms.txt';
-## Convert character names to descriptors
-# my $descriptors_file_path = '';
+## Character names
+my $names_file_path       = 'names/NamesList.txt';
+## Localized names
+my $fr_names_file_path    = 'names/ListeNoms.txt';
+## Descriptors
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
@@ -120,18 +120,24 @@ my $parse_on       = !1;
 my $comprehensive  = !0;
 my $date_legend    = 'Tableau mis à jour le ';
 
-# By courtesy of https://stackoverflow.com/a/43881027
-my $nowDate        = DateTime->now(time_zone => 'local');
-my ($month, $day, $year) = ($nowDate->month, $nowDate->day, $nowDate->year);
-my $date           = "$day/$month/$year";
-my $table_id       = 'tableau-tm';
-my $table_header_1 = 'Caractère(s)';
-my $table_header_2 = 'Touches';
-my $table_header_3 = 'Identifiant Unicode';
-my $start_tags_1   = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
-my $start_tags_2   = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
-my $start_tags     = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
-my $end_tags       = "</tbody></table></figure>\n";
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+my $now_date             = Time::Piece->new;
+my $date                 = $now_date->strftime( '%d/%m/%Y' );
+
+my $table_id             = 'tableau-tm';
+my $table_header_1       = 'Caractère(s)';
+my $table_header_2       = 'Touches';
+my $table_header_3       = 'Identifiant Unicode';
+my $table_header_4       = 'Descripteur';
+my $table_header_title   = 'Cliquer pour basculer entre français et anglais';
+my $checkbox_label       = 'Imprimer les descripteurs, non les identifiants';
+my $checkbox_checked     = '☑&nbsp;';
+my $checkbox_not_checked = '☐&nbsp;';
+my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
+my $start_tags_1        .= "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
+my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
+my $end_tags             = "</tbody></table></figure>\n";
 print WHOLEOUTPUT $start_tags;
 print OUTPUT $start_tags;
 my ( @anchors, $anchor, $check, $cp, $class, $descrip, $index, $line_nb, $math, $regex, $str,

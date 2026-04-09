@@ -6,7 +6,7 @@
 # 2025-09-25T0143+0200
 # 2025-11-30T2108+0100
 # 2025-12-26T0915+0100
-# 2026-01-29T2351+0100
+# 2026-01-30T0714+0100
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -44,15 +44,17 @@ use strict;
 use utf8;
 use feature 'unicode_strings';
 
-# Courtesy https://stackoverflow.com/a/12291409
+# By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-# Courtesy https://www.geeksforgeeks.org/perl-date-and-time/
-use DateTime;
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+use Time::Piece;
 
-## Character names localization
+## Character names
 my $names_file_path       = 'names/NamesList.txt';
+## Localized names
 my $fr_names_file_path    = 'names/ListeNoms.txt';
+## Descriptors
 my $descriptors_file_path = 'names/Udescripteurs.txt';
 my $names_count           = 0;
 my $descriptors_count     = 0;
@@ -77,20 +79,19 @@ print( "Processing math symbols from $input_path to $output_path.\n" );
 my $parse_on              = !1;
 my $date_legend           = 'Tableau mis à jour le ';
 
-# Courtesy https://stackoverflow.com/a/43881027
-my $nowDate               = DateTime->now(time_zone => 'local');
-my ($month, $day, $year)  = ($nowDate->month, $nowDate->day, $nowDate->year);
-my $date                  = "$day/$month/$year";
+# By courtesy of https://johnbokma.com/blog/2016/09/14/padding-numbers-with-zero-in-perl.html
+my $now_date             = Time::Piece->new;
+my $date                 = $now_date->strftime( '%d/%m/%Y' );
 
-my $table_id              = 'tableau-math';
-my $table_header_1        = 'Caractère';
-my $table_header_2        = 'Séquence de composition';
-my $table_header_3        = 'Identifiant Unicode';
-my $table_header_title    = 'Cliquer pour basculer entre français et anglais';
-my $checkbox_label        = 'Imprimer les descripteurs, non les identifiants';
-my $checkbox_checked      = '☑&nbsp;';
-my $checkbox_not_checked  = '☐&nbsp;';
-my $table_header_4        = 'Descripteur';
+my $table_id             = 'tableau-math';
+my $table_header_1       = 'Caractère';
+my $table_header_2       = 'Séquence de composition';
+my $table_header_3       = 'Identifiant Unicode';
+my $table_header_4       = 'Descripteur';
+my $table_header_title   = 'Cliquer pour basculer entre français et anglais';
+my $checkbox_label       = 'Imprimer les descripteurs, non les identifiants';
+my $checkbox_checked     = '☑&nbsp;';
+my $checkbox_not_checked = '☐&nbsp;';
 
 print OUTPUT "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
 print OUTPUT "<figure class=\"wp-block-table alignwide multikey math {{{anrghg-classes}}} {{{anrghg-value}}}\">\n";
@@ -113,6 +114,7 @@ while ( my $line = <INPUT> ) {
 	if ( $line =~ /END_MATH/ ) {
 		$parse_on = !1;
 	}
+
 	if ( $parse_on ) {
 		unless ( $line =~ /^#/                 # Skip annotations.
 			|| $line =~ /<KP_/                   # Keypad equivalents, a Linux feature.
