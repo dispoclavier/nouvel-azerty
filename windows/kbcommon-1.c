@@ -144,28 +144,33 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * See kbd.h for a full description.
 *
 * The keyboard has seven shifter keys:
-*     SHIFT (L & R) affects alphanumeric keys
-*     CTRL  (L & R) is used to generate control characters
-*     ALT   (Left)  used for generating characters by number with numpad
-*     0x10  (Right) used for the Alternate Graphic modifier key
-*     0x20  (Left)  AltFr (Alt French) for unspaced punctuation, graphic numpad
-*     0x40  (Left)  AltEm (Alt Emoji) for country flags and other emoji
-*     0x80  (Left)  AltMa (Alt Math) for mathematical alphabets and emoji
+* 0x01 SHIFT (Left & Right) affects alphanumeric keys
+* 0x02 CTRL  (Left & Right) is used to generate control characters
+* 0x04 ALT   (Left)  used for generating characters by number with numpad
+* 0x10 (Right) used for the Alternate Graphic (AltGr) modifier key
+* 0x20 (Left)  AltFr (Alt French) for unspaced punctuation, graphic numpad
+* 0x40 (Left)  AltEm (Alt Emoji) for country flags and other emoji
+* 0x80 (Left)  AltMa (Alt Math) for mathematical alphabets and emoji
 *
-* The eighth shifter (0x08) is used by the Kana Lock toggle.
+* The remaining shift state 0x08 is used by the Kana Lock toggle.
 *
-* AltGr is right Alt, but it is not emulated by the Ctrl + Alt combo any more.
+* AltGr is right Alt but is not emulated by the Ctrl + Alt combo any more,
+* because that conflicts with application shortcuts. This key is debugged
+* by renaming it from VK_RMENU to VK_OEM_AX, as assigning another modifier
+* is not enough, nor can removing the keyboard layout locale flag KLLF_ALTGR
+* do the job.
 *
 * AltFr is the ISO key B00, or it goes on the Caps Lock key, and that toggle
 * goes then on right Control, as this is also repurposed for the ISO key B00
 * on ANSI keyboards for markets accustomed to the ISO keyboard.
 *
-* AltEm is supercharged on the key of the Caps Lock toggle.
+* AltEm (Alt Emoji) is supercharged on the Caps Lock toggle key.
 *
-* AltMa is supercharged on the key of the Kana Lock toggle.
+* AltMa (Alt Math) is supercharged on the Kana Lock toggle key.
 *
-* For Kana Lock and AltMa, key E00 is repurposed (given that on French AZERTY,
-* E00 is just superscript 2).
+* For Kana Lock and AltMa (Alt Math), key E00 is repurposed, given that
+* on French AZERTY, E00 is allocated to nothing more than superscript 2.
+*
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_SHIFT    ,   KBDSHIFT     }, // 1
@@ -652,8 +657,8 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * Subsequently, starting with build 6.0.8.00, the source code is additionally
 * divided into even more snippets, included in a way exactly reproducing the
-* transpilation order of KbdUTool, even if the definite order is determined in
-* KbdTables. This is phase 1 of keyboard driver debugging.
+* transpilation order of KbdUTool, even if the definite order is determined
+* in KbdTables. This is phase 1 of keyboard driver debugging.
 * See kbcommon-3.c
 *
 * Build 6.0.8.00 (2025-09-25T1858+0200 was readily released as version 6.0.8
@@ -661,9 +666,12 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * as soon as on 2025-09-29T1004+0200 (and the Windows key too broke down a few
 * minutes later (2025-09-29T1032+0200)). A reboot fixed it all.
 *
-* As a consequence, phase 2 was ramped up, with a clone of the main layout and
-* its remapped variant: kbfrFRs is duplicated as kbfrFRs2, and kbfrFRsr, as
-* kbfrFRr2 (so as to not exceed the maximum length of 8), in version 6.0.9.
+* As a consequence,,starting with version 6.0.9, phase 2 was ramped up, with
+* a clone of the main layout and of its remapped variant.
+*
+* kbfrFRs is renamed to kbfrFRs1 and duplicated as kbfrFRs2, and kbfrFRsr
+* is renamed to kbfrFRr1 and duplicated as kbfrFRr2, so as to not exceed
+* the maximum file name length of 8 characters.
 *
 \*****************************************************************************/
 
