@@ -18,7 +18,26 @@ Mise à jour pour macOS des dispositions développées pour Windows, portées so
 
 ## 6.2.9 (projet)
 
-* Documentation : Corriger ou mettre à jour des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), compose-1.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe)
+* Transformations :
+	* Crosse :
+		* Ajouter "〃" U+3003, "〈" U+3008, "〉" U+3009, "「" U+300C, "」" U+300D, "【" U+3010, "】" U+3011, "〔" U+3014, "〕" U+3015, "〜" U+301C, "〝" U+301D, "〞" U+301E, "〟" U+301F, "〷" U+3037, "〽" U+303D, "〿" U+303F. compose-2.yml [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
+		* Crosse et tilde : Simplifier la saisie de "ᵳ" U+1D73. ibidem
+		* Boucle :
+			* Ajouter "《" U+300A, "》" U+300B, "『" U+300E, "』" U+300F, "〖" U+3016, "〗" U+3017, "〘" U+3018, "〙" U+3019, "〰" U+3030. ibidem
+			* Simplifier la saisie de "Ɋ" U+024A, "ɋ" U+024B, qui prend la place de "ᴥ" U+1D25, qui va par "i". ibidem
+			* Simplifier la saisie de "Ꞗ" U+A796, "ꞗ" U+A797, "ꬴ" U+AB34, et de "Ꝓ" U+A752, "ꝓ" U+A753 qui prend la place de "Ꝕ" U+A754, "ꝕ" U+A755, qui va dans triple frappe, renommée de fioriture en queue d’écureuil. ibidem
+		* Fioriture :
+			* Renommer en queue d’écureuil et y mettre "Ꝕ" U+A754, "ꝕ" U+A755. ibidem
+			* Supprimer "Ꝓ" U+A752, "ꝓ" U+A753, "Ꞗ" U+A796, "ꞗ" U+A797, "ꬴ" U+AB34, qui vont dans boucle, en double frappe. ibidem
+			* Ajouter "〚" U+301A, "〛" U+301B. ibidem
+	* Crochet rétroflexe : Redonder "《" U+300A, "》" U+300B, "『" U+300E, "』" U+300F, "〖" U+3016, "〗" U+3017, "〘" U+3018, "〙" U+3019, "〰" U+3030. ibidem
+	* Point en chef : Redonder "〚" U+301A, "〛" U+301B. ibidem
+	* Groupes des symboles : "\"" groupe 1 : Redonder "ʻ" U+02BB à la place de "★" U+2605, qui est par "€" U+20AC et en composition. compose-3.yml [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
+* Documentation : Corriger ou mettre à jour des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), kbcommon.h, kbcommon-3.c [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388), compose-1.yml, compose-2.yml, compose-3.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe), dispocla.cpp [b219e8b](https://github.com/dispoclavier/nouvel-azerty/commit/b219e8bd22cd1585be239bda66c4174a425d79e8), [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
+* Builds :
+	* 6.2.9.0 [ce5a9a5](https://github.com/dispoclavier/nouvel-azerty/commit/ce5a9a55e799344d877b450ee811fae00f07cac0)
+	* 6.2.9.1 [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388)
+	* 6.2.9.2 [d5defc4](https://github.com/dispoclavier/nouvel-azerty/commit/d5defc4a9d651285dc8644ef704e108b946f3ed6)
 
 ## 6.2.8 (2026-03-24)
 
