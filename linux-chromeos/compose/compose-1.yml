@@ -1,14 +1,14 @@
 #                      Scope: Part 1 of Compose.yml
-#               Installation: Please use the all-in-one file Compose.yml, not this file.
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 6.2.8.0" # See #   End of line comments
+<UEFA0>                     : "version 6.2.9.3" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: Linux using XKB with XCompose**
 #     Syntactic highlighting: YAML
+#               Installation: Please see in the all-in-one file Compose.yml.
 #
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
@@ -62,7 +62,10 @@
 #                                Setting the input method to XIM to begin with is essential,
 #                                because some Linux distros may not ship XIM as the default.
 #
-#                             2. Make sure to be using the full-length file XCompose.yml.
+#                             2. Make sure to be using the full-length file Compose.yml,
+#                                or alternatively, please first concatenate the 3 partials
+#                                compose-1,yml, compose-2,yml and compose-3,yml, available
+#                                on GitHub for displayability in the full-fledged interface.
 #
 #                             3. Proceed following method A, B or C:
 #
@@ -5599,7 +5602,10 @@
 #   Alternative keysyms
 #
 #   Sequences including quotedbl need to be duplicated using EuroSign instead,
-#   because EuroSign replaces quotedbl on AltGr/Option + E.
+#   because EuroSign replaces quotedbl on AltGr/Option + E. As an exception to
+#   the rule, group 1 of EuroSign yields "★" U2605, while group 1 of quotedbl
+#   yields the turned letter apostrophe "ʻ" U02BB.
+#   See # # D03 quotedbl, EuroSign
 #
 #   Sequences including exclam need to be duplicated using section instead, as
 #   in French mode, on key B10 at level 3, section replaces exclam.
@@ -7644,8 +7650,8 @@
 #   https://www.unicode.org/charts/PDF/U2600.pdf
 #   https://www.unicode.org/charts/nameslist/n_2600.html
 #
-#   "★" U2605 is also in group 1 of EuroSign and quotedbl on the "E" key with
-#   a French alphabetic mnemonic. Leading space is supported incrementally for
+#   "★" U2605 is also in group 1 of EuroSign on the "E" key with a French
+#   alphabetic mnemonic. Leading space is supported incrementally for
 #   consistency and lenience.
 #   See #   Leading space
 #

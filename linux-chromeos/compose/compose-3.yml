@@ -1,11 +1,12 @@
 #                      Scope: Part 3 of Compose.yml
+#                       Date: See Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
 #     Syntactic highlighting: YAML
-#               Installation: Please use the all-in-one file Compose.yml, not this file.
+#               Installation: Please see in the all-in-one file Compose.yml.
 #
 #
 #   START_PART_3
@@ -3105,13 +3106,16 @@
 #   to map € on AltGr + E, EuroSign works as a base character as well.
 #   See dispocla.cpp ## Note about EURO SIGN
 #
+#   As quotedbl is also on key E03, level 1, its group 1 is used as a shortcut
+#   for the turned letter apostrophe "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
+#
 #   "〃" U3003 DITTO MARK is also used in Western contexts.
 #   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
 #
 <UEFD0>                                                                                 <EuroSign> : "★" U2605 # BLACK STAR math
 <Multi_key><numbersign>                                                                 <EuroSign> : "★" U2605 # BLACK STAR math
-<UEFD0>                                                                                 <quotedbl> : "★" U2605 # BLACK STAR math
-<Multi_key><numbersign>                                                                 <quotedbl> : "★" U2605 # BLACK STAR math
+<UEFD0>                                                                                 <quotedbl> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><numbersign>                                                                 <quotedbl> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD0><UEFD0>                                                                          <EuroSign> : "∈" U2208 # ELEMENT OF math
 <Multi_key><numbersign><numbersign>                                                     <EuroSign> : "∈" U2208 # ELEMENT OF math
 <UEFD0><UEFD0>                                                                          <quotedbl> : "∈" U2208 # ELEMENT OF math

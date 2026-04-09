@@ -1,15 +1,15 @@
 #                      Scope: Part 2 of Compose.yml
+#                       Date: See Compose.yml
 #                    Version: See compose-1.yml
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
 #                Description: Multicharacter and multikey configuration
 #                   Platform: XKB with XCompose using OSes Linux and ChromeOS
 #     Syntactic highlighting: YAML
-#               Installation: Please use the all-in-one file Compose.yml, not this file.
+#               Installation: Please see in the all-in-one file Compose.yml.
 #
 #
-#
-#   START_LATIN_BY_DEAD_KEYS
+#   START_PART_2
 #
 #
 ### Dead keys
@@ -985,6 +985,32 @@
 #
 # # Combining diacritics
 #
+#   The Unicode Standard states:
+#
+#      A common implementation for the input of combining character sequences
+#      is the use of dead keys. These keys match the mechanics used by
+#      typewriters to generate such sequences through overtyping the base
+#      character after the nonspacing mark. In computer implementations,
+#      keyboards enter a special state when a dead key is pressed for the
+#      accent and emit a precomposed character only when one of a limited
+#      number of “legal” base characters is entered. It is straightforward
+#      to adapt such a system to emit combining character sequences or
+#      precomposed characters as needed.
+#
+#      Typists, especially in the Latin script, are trained on systems that
+#      work using dead keys. However, many scripts in the Unicode Standard
+#      (including the Latin script) may be implemented according to the
+#      handwriting sequence, in which users type the base character first,
+#      followed by the accents or other nonspacing marks (see Figure 5-4).
+#
+#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
+#   https://unicode.org/mail-arch/unicode-ml/y2016-m11/0046.html
+#
+#   As a consequence, keyboard layouts should feature dead keys as well as easy
+#   access to combining marks, so as to support out of the box the characters
+#   used in phonetics, also supported using Praat with sequences like multikey:
+#   https://www.fon.hum.uva.nl/praat/manual/Phonetic_symbols__diacritics.html
+#
 #   In en_US.UTF-8/Compose, combining diacritics are supported using the base
 #   character nobreakspace, while space yields a legacy spacing character if
 #   available (not for dead_hook, dead_belowcomma, dead_doubleacute properly).
@@ -1009,7 +1035,7 @@
 #   See #^# CIRCLED
 #   See #^# DOUBLE_ACUTE
 #   See #^# CURL
-#   See #^# FLOURISH
+#   See #^# SQUIRREL_TAIL
 #   See #^# PALATAL_HOOK
 #   See #^# SWASH_TAIL
 #   See #^# VERTICAL_LINE_ABOVE
@@ -1047,37 +1073,15 @@
 #   See #^# CEDILLA_ABOVE
 #
 #   Hence it is proposed to use space as a base character to get the combining
-#   diacritic throughout, as implemented since 2010 on J. ‘Mach’ Wust’s
-#   US Custom keyboard layout for macOS.
-#   https://uscustom.sourceforge.net/
-#   https://sourceforge.net/projects/uscustom/
+#   diacritic throughout following J. ‘Mach’ Wust, as implemented:
 #
-#   Indeed, the Unicode Standard version 11.0.0, section 5.2, page 220 states:
+#     • since 2009 on Michael Langlois’ Clavier français diacrité 1.1.
+#       https://michaellanglois.fr/it/french-keyboard-with-diacritics-11-windows_clavier-francais-diacrite-11-windows/
+#       https://michaellanglois.fr/it/french-keyboard-with-diacritics-11-mac_clavier-francais-diacrite-11-mac/
 #
-#      A common implementation for the input of combining character sequences
-#      is the use of dead keys. These keys match the mechanics used by
-#      typewriters to generate such sequences through overtyping the base
-#      character after the nonspacing mark. In computer implementations,
-#      keyboards enter a special state when a dead key is pressed for the
-#      accent and emit a precomposed character only when one of a limited
-#      number of “legal” base characters is entered. It is straightforward
-#      to adapt such a system to emit combining character sequences or
-#      precomposed characters as needed.
-#
-#      Typists, especially in the Latin script, are trained on systems that
-#      work using dead keys. However, many scripts in the Unicode Standard
-#      (including the Latin script) may be implemented according to the
-#      handwriting sequence, in which users type the base character first,
-#      followed by the accents or other nonspacing marks (see Figure 5-4).
-#
-#   https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
-#   https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-5/#G1076
-#   https://unicode.org/mail-arch/unicode-ml/y2016-m11/0046.html
-#
-#   As a consequence, keyboard layouts should feature dead keys as well as easy
-#   access to combining marks, so as to support out of the box the characters
-#   used in phonetics and input using Praat with sequences like multikey:
-#   https://www.fon.hum.uva.nl/praat/manual/Phonetic_symbols__diacritics.html
+#     • since 2010 on J. ‘Mach’ Wust’s US Custom keyboard layout for macOS.
+#       https://uscustom.sourceforge.net/
+#       https://sourceforge.net/projects/uscustom/
 #
 #   Following a principle used in en_US.UTF-8/Compose, the most synergistic
 #   character after the default mappings of dead keys at level 4, ZWSP,
@@ -7843,6 +7847,44 @@
 #   See #*# BREVE
 #
 #
+#   Fullwidth punctuation
+#
+#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
+#   yields CJK symbols and punctuation, single on single press, most double on
+#   double press, and triple press yields "〚" U301A, "〛" U301B.
+#
+#                 quotedbl : "〃" U3003 DITTO MARK
+#                 EuroSign : "〃" U3003 DITTO MARK
+#                    grave : "〝" U301D REVERSED DOUBLE PRIME QUOTATION MARK
+#               apostrophe : "〞" U301E DOUBLE PRIME QUOTATION MARK
+#     rightsinglequotemark : "〞" U301E DOUBLE PRIME QUOTATION MARK
+#                    comma : "〟" U301F LOW DOUBLE PRIME QUOTATION MARK
+#               asciitilde : "〜" U301C WAVE DASH
+#                braceleft : "〔" U3014 LEFT TORTOISE SHELL BRACKET
+#               braceright : "〕" U3015 RIGHT TORTOISE SHELL BRACKET
+#                parenleft : "【" U3010 LEFT BLACK LENTICULAR BRACKET
+#               parenright : "】" U3011 RIGHT BLACK LENTICULAR BRACKET
+#              bracketleft : "「" U300C LEFT CORNER BRACKET
+#             bracketright : "」" U300D RIGHT CORNER BRACKET
+#                     less : "〈" U3008 LEFT ANGLE BRACKET
+#                  greater : "〉" U3009 RIGHT ANGLE BRACKET
+#                        A : "〽" U303D PART ALTERNATION MARK
+#                        a : "〽" U303D PART ALTERNATION MARK
+#                        X : "〷" U3037 IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
+#                        x : "〿" U303F IDEOGRAPHIC HALF FILL SPACE
+#
+#   Single press is in dead_hook.
+#   See #*# HOOK
+#
+#   Double press is duplicated in *dead_retroflexhook.
+#   See #^# CURL
+#   See #*# RETROFLEX_HOOK
+#
+#   Triple press is duplicated in dead_abovedot.
+#   See #^# SQUIRREL_TAIL
+#   See #*# DOT_ABOVE
+#
+#
 #   Diacritic
 #
 #   As a diacritic, "̡" U0321 COMBINING PALATALIZED HOOK BELOW is included, and
@@ -7859,8 +7901,36 @@
 <Multi_key><braceleft>                                                              <nobreakspace> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
 <dead_hook>                                                                                <U202F> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
 <Multi_key><braceleft>                                                                     <U202F> : "˞" U02DE # MODIFIER LETTER RHOTIC HOOK
-<dead_hook>                                                                               <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
-<Multi_key><braceleft>                                                                    <period> : "⁕" U2055 # FLOWER PUNCTUATION MARK
+<dead_hook>                                                                             <quotedbl> : "〃" U3003 # DITTO MARK
+<Multi_key><braceleft>                                                                  <quotedbl> : "〃" U3003 # DITTO MARK
+<dead_hook>                                                                             <EuroSign> : "〃" U3003 # DITTO MARK
+<Multi_key><braceleft>                                                                  <EuroSign> : "〃" U3003 # DITTO MARK
+<dead_hook>                                                                                <grave> : "〝" U301D # REVERSED DOUBLE PRIME QUOTATION MARK
+#   Multikey conflicts with "Ʋ̀", "ʋ̀".                                                      <grave> : "〝" U301D # REVERSED DOUBLE PRIME QUOTATION MARK
+<dead_hook>                                                                           <apostrophe> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
+#   Multikey conflicts with "Ʋ́", "ʋ́".                                                 <apostrophe> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
+<dead_hook>                                                                 <rightsinglequotemark> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
+<Multi_key><braceleft>                                                      <rightsinglequotemark> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
+<dead_hook>                                                                                <comma> : "〟" U301F # LOW DOUBLE PRIME QUOTATION MARK
+<Multi_key><braceleft>                                                                     <comma> : "〟" U301F # LOW DOUBLE PRIME QUOTATION MARK
+<dead_hook>                                                                           <asciitilde> : "〜" U301C # WAVE DASH
+#   Multikey conflicts with "ᵳ" U1D73.                                                <asciitilde> : "〜" U301C # WAVE DASH
+<dead_hook>                                                                            <braceleft> : "〔" U3014 # LEFT TORTOISE SHELL BRACKET
+#   Multikey conflicts with "Ɋ" U024A, "ɋ" U024B, "˒" U02D2, "˓" U02D3, "͚" U035A, […]  <braceleft> : "〔" U3014 # LEFT TORTOISE SHELL BRACKET
+<dead_hook>                                                                           <braceright> : "〕" U3015 # RIGHT TORTOISE SHELL BRACKET
+#   Multikey conflicts with "ʯ" U02AF, "ᶑ" U1D91, "𐞍" U1078D, "𝼉" U1DF09, "𝼖" U1DF16. <braceright> : "〕" U3015 # RIGHT TORTOISE SHELL BRACKET
+<dead_hook>                                                                            <parenleft> : "【" U3010 # LEFT BLACK LENTICULAR BRACKET
+<Multi_key><braceleft>                                                                 <parenleft> : "【" U3010 # LEFT BLACK LENTICULAR BRACKET
+<dead_hook>                                                                           <parenright> : "】" U3011 # RIGHT BLACK LENTICULAR BRACKET
+<Multi_key><braceleft>                                                                <parenright> : "】" U3011 # RIGHT BLACK LENTICULAR BRACKET
+<dead_hook>                                                                          <bracketleft> : "「" U300C # LEFT CORNER BRACKET
+<Multi_key><braceleft>                                                               <bracketleft> : "「" U300C # LEFT CORNER BRACKET
+<dead_hook>                                                                         <bracketright> : "」" U300D # RIGHT CORNER BRACKET
+<Multi_key><braceleft>                                                              <bracketright> : "」" U300D # RIGHT CORNER BRACKET
+<dead_hook>                                                                                 <less> : "〈" U3008 # LEFT ANGLE BRACKET
+#   Multikey conflicts with "Ʋ̌", "ʋ̌".                                                       <less> : "〈" U3008 # LEFT ANGLE BRACKET
+<dead_hook>                                                                              <greater> : "〉" U3009 # RIGHT ANGLE BRACKET
+#   Multikey conflicts with "Ʋ̌", "ʋ̌".                                                    <greater> : "〉" U3009 # RIGHT ANGLE BRACKET
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><braceleft>                                                                         <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <dead_hook>                                                                                 <KP_1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -7881,6 +7951,10 @@
 <Multi_key><braceleft>                                                                         <5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <dead_hook>                                                                                 <KP_5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <Multi_key><braceleft>                                                                      <KP_5> : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<dead_hook>                                                                                    <A> : "〽" U303D # PART ALTERNATION MARK
+<Multi_key><braceleft>                                                                         <A> : "〽" U303D # PART ALTERNATION MARK
+<dead_hook>                                                                                    <a> : "〽" U303D # PART ALTERNATION MARK
+<Multi_key><braceleft>                                                                         <a> : "〽" U303D # PART ALTERNATION MARK
 <dead_hook>                                                                                    <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
 <Multi_key><braceleft>                                                                         <B> : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
 <dead_hook>                                                                                    <b> : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
@@ -7947,6 +8021,10 @@
 <Multi_key><braceleft>                                                                         <W> : "Ⱳ" U2C72 # LATIN CAPITAL LETTER W WITH HOOK
 <dead_hook>                                                                                    <w> : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
 <Multi_key><braceleft>                                                                         <w> : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
+<dead_hook>                                                                                    <X> : "〷" U3037 # IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
+<Multi_key><braceleft>                                                                         <X> : "〷" U3037 # IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
+<dead_hook>                                                                                    <x> : "〿" U303F # IDEOGRAPHIC HALF FILL SPACE
+<Multi_key><braceleft>                                                                         <x> : "〿" U303F # IDEOGRAPHIC HALF FILL SPACE
 <dead_hook>                                                                                    <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
 <Multi_key><braceleft>                                                                         <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
 <dead_hook>                                                                                    <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
@@ -7988,10 +8066,15 @@
 #
 # # HOOK&TILDE
 #
-<dead_tilde><dead_hook>                                                                        <r> : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
-<Multi_key><asciitilde><braceleft>                                                             <r> : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
-<dead_hook><dead_tilde>                                                                        <r> : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
-<Multi_key><braceleft><asciitilde>                                                             <r> : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+#   As this dead key exists for "ᵳ" U1D73 only, it is streamlined by cropping
+#   the base character.
+#   See # # Single-character dead keys
+#
+#dead_tilde><dead_hook>                                                                        <r> : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+<dead_tilde><dead_hook>                                                                            : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+<Multi_key><asciitilde><braceleft>                                                                 : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+<dead_hook><dead_tilde>                                                                            : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
+<Multi_key><braceleft><asciitilde>                                                                 : "ᵳ" U1D73 # LATIN SMALL LETTER R WITH FISHHOOK AND MIDDLE TILDE
 #
 #
 # # HOOK&ACUTE
@@ -8077,33 +8160,71 @@
 #
 #
 #^# CURL
-#   curl, crossed-tail, loop, squirrel tail
+#   curl, crossed-tail, loop, flourish, hook tail
 #   dead_hook double press
 #   Multikey: ¦{{
 #
 #   This virtual dead key on dead_hook double press supports letters whose hook
 #   is elongated, mostly until crossing itself. The extension has various names
-#   and is found as a curl on "ɕ" U0255, "ȡ" U0221, "ʥ" U02A5, "ȴ" U0234,
+#   and is found as a CURL on "ɕ" U0255, "ȡ" U0221, "ʥ" U02A5, "ȴ" U0234,
 #   "ȵ" U0235, "𝼞" U1DF1E, "ȶ" U0236, "ʨ" U02A8, "ⱴ" U2C74, "ʑ" U0291 and
-#   "ʓ" U0293; as a crossed-tail on "ꬼ" UAB3C, "ꬶ" UAB36, "Ʝ" UA7B2, "ʝ" U029D,
-#   "ꬺ" UAB3A, "ꬻ" UAB3B, "ꭉ" UAB49 and "ꭊ" UAB4A; as a loop on "Ꝍ" UA74C,
-#   "ꝍ" UA74D and "Ỿ" U1EFE, "ỿ" U1EFF; and as a squirrel tail on "ꝕ" UA755.
-#   See WITH CURL
-#   See WITH CROSSED-TAIL
-#   See WITH LOOP
-#   See WITH SQUIRREL TAIL
+#   "ʓ" U0293; as a CROSSED-TAIL on "ꬼ" UAB3C, "ꬶ" UAB36, "Ʝ" UA7B2, "ʝ" U029D,
+#   "ꬺ" UAB3A, "ꬻ" UAB3B, "ꭉ" UAB49 and "ꭊ" UAB4A; and as a LOOP on "Ꝍ" UA74C,
+#   "ꝍ" UA74D and "Ỿ" U1EFE, "ỿ" U1EFF.
+#   See  WITH CURL
+#   See  WITH CROSSED-TAIL
+#   See  WITH LOOP
+#
+#   This also supports FLOURISH for the purpose of streamlining the input,
+#   instead of supporting "Ꝓ" UA752, "ꝓ" UA753, "Ꞗ" UA796, "ꞗ" UA797 and
+#   "ꬴ" UAB34 only by triple press.
+#
+#   Double press of dead_hook is also the straightforward input method for
+#   "Ɋ" U024A, "ɋ" U024B when considering its HOOK TAIL as a downwards hook,
+#   as opposed to the upwards HOOK of "ʠ" U02A0 in dead_hook single press.
 #
 #
 #   Ayin
 #
 #   This also supports the LATIN LETTER AIN "ᴥ" U1D25, for its loop form, by
-#   case insensitive "q" for the shape mnemonic based on its phonetic notation
-#   "ʕ" U0295.
+#   case insensitive "i" for the shape mnemonic based on its curly glyph close
+#   to a handwritten dotless "i", because "q" close to its phonetic notation
+#   "ʕ" U0295 is required for "Ɋ" U024A, "ɋ" U024B.
 #
 #   For consistency, the EGYPTOLOGICAL AIN "Ꜥ" UA724, "ꜥ" UA725 is supported as
-#   well, by "H", "h" by lack of any better base letter remaining; and for
-#   completeness, the EGYPTOLOGICAL ALEF "Ꜣ" UA722, "ꜣ" UA723 by "A", "a", even
-#   though these do not feature any curl.
+#   well, by "H", "h" by lack of any better base letter remaining, and with a
+#   mnemonic upside by immediately preceding the base letter "i" of "ᴥ" U1D25;
+#   and for completeness, the EGYPTOLOGICAL ALEF "Ꜣ" UA722, "ꜣ" UA723 by "A",
+#   "a", even though these do not feature any curl, while being somewhat curly
+#   by themselves.
+#
+#
+#   Fullwidth punctuation
+#
+#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
+#   yields CJK symbols and punctuation, single on single press, most double on
+#   double press, and triple press yields "〚" U301A, "〛" U301B.
+#
+#               asciitilde : "〰" U3030 WAVY DASH
+#                braceleft : "〘" U3018 LEFT WHITE TORTOISE SHELL BRACKET
+#               braceright : "〙" U3019 RIGHT WHITE TORTOISE SHELL BRACKET
+#                parenleft : "〖" U3016 LEFT WHITE LENTICULAR BRACKET
+#               parenright : "〗" U3017 RIGHT WHITE LENTICULAR BRACKET
+#              bracketleft : "『" U300E LEFT WHITE CORNER BRACKET
+#             bracketright : "』" U300F RIGHT WHITE CORNER BRACKET
+#                     less : "《" U300A LEFT DOUBLE ANGLE BRACKET
+#                  greater : "》" U300B RIGHT DOUBLE ANGLE BRACKET
+#
+#   Single press is in dead_hook.
+#   See #*# HOOK
+#
+#   Double press is duplicated in *dead_retroflexhook.
+#   See #^# CURL
+#   See #*# RETROFLEX_HOOK
+#
+#   Triple press is duplicated in dead_abovedot.
+#   See #^# SQUIRREL_TAIL
+#   See #*# DOT_ABOVE
 #
 #
 #   Diacritic
@@ -8123,16 +8244,40 @@
 #   Multikey conflicts with "⦃" U2983.                                              <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook>                                                                     <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
+<dead_hook><dead_hook>                                                                <asciitilde> : "〰" U3030 # WAVY DASH
+<Multi_key><braceleft><braceleft>                                                     <asciitilde> : "〰" U3030 # WAVY DASH
+<dead_hook><dead_hook>                                                                 <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
+#   Multikey conflicts with "Ɋ" U024A, "ɋ" U024B, "˒" U02D2, "˓" U02D3, "͚" U035A, […]  <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
+<dead_hook><dead_hook>                                                                <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
+<Multi_key><braceleft><braceleft>                                                     <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
+<dead_hook><dead_hook>                                                                 <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
+<Multi_key><braceleft><braceleft>                                                      <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
+<dead_hook><dead_hook>                                                                <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
+<Multi_key><braceleft><braceleft>                                                     <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
+<dead_hook><dead_hook>                                                               <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
+<Multi_key><braceleft><braceleft>                                                    <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
+<dead_hook><dead_hook>                                                              <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
+<Multi_key><braceleft><braceleft>                                                   <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
+<dead_hook><dead_hook>                                                                      <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
+<Multi_key><braceleft><braceleft>                                                           <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
+<dead_hook><dead_hook>                                                                   <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
+<Multi_key><braceleft><braceleft>                                                        <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
 <dead_hook><dead_hook>                                                                         <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 <Multi_key><braceleft><braceleft>                                                              <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 <dead_hook><dead_hook>                                                                         <a> : "ꜣ" UA723 # LATIN SMALL LETTER EGYPTOLOGICAL ALEF
 <Multi_key><braceleft><braceleft>                                                              <a> : "ꜣ" UA723 # LATIN SMALL LETTER EGYPTOLOGICAL ALEF
+<dead_hook><dead_hook>                                                                         <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
+<Multi_key><braceleft><braceleft>                                                              <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
+<dead_hook><dead_hook>                                                                         <b> : "ꞗ" UA797 # LATIN SMALL LETTER B WITH FLOURISH
+<Multi_key><braceleft><braceleft>                                                              <b> : "ꞗ" UA797 # LATIN SMALL LETTER B WITH FLOURISH
 <dead_hook><dead_hook>                                                                         <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <Multi_key><braceleft><braceleft>                                                              <c> : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <dead_hook><dead_hook>                                                                         <D> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <Multi_key><braceleft><braceleft>                                                              <D> : "ʥ" U02A5 # LATIN SMALL LETTER DZ DIGRAPH WITH CURL
 <dead_hook><dead_hook>                                                                         <d> : "ȡ" U0221 # LATIN SMALL LETTER D WITH CURL
 <Multi_key><braceleft><braceleft>                                                              <d> : "ȡ" U0221 # LATIN SMALL LETTER D WITH CURL
+<dead_hook><dead_hook>                                                                         <e> : "ꬴ" UAB34 # LATIN SMALL LETTER E WITH FLOURISH
+<Multi_key><braceleft><braceleft>                                                              <e> : "ꬴ" UAB34 # LATIN SMALL LETTER E WITH FLOURISH
 <dead_hook><dead_hook>                                                                         <G> : "ꬼ" UAB3C # LATIN SMALL LETTER ENG WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft>                                                              <G> : "ꬼ" UAB3C # LATIN SMALL LETTER ENG WITH CROSSED-TAIL
 <dead_hook><dead_hook>                                                                         <g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
@@ -8141,6 +8286,10 @@
 <Multi_key><braceleft><braceleft>                                                              <H> : "Ꜥ" UA724 # LATIN CAPITAL LETTER EGYPTOLOGICAL AIN
 <dead_hook><dead_hook>                                                                         <h> : "ꜥ" UA725 # LATIN SMALL LETTER EGYPTOLOGICAL AIN
 <Multi_key><braceleft><braceleft>                                                              <h> : "ꜥ" UA725 # LATIN SMALL LETTER EGYPTOLOGICAL AIN
+<dead_hook><dead_hook>                                                                         <I> : "ᴥ" U1D25 # LATIN LETTER AIN
+<Multi_key><braceleft><braceleft>                                                              <I> : "ᴥ" U1D25 # LATIN LETTER AIN
+<dead_hook><dead_hook>                                                                         <i> : "ᴥ" U1D25 # LATIN LETTER AIN
+<Multi_key><braceleft><braceleft>                                                              <i> : "ᴥ" U1D25 # LATIN LETTER AIN
 <dead_hook><dead_hook>                                                                         <J> : "Ʝ" UA7B2 # LATIN CAPITAL LETTER J WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft>                                                              <J> : "Ʝ" UA7B2 # LATIN CAPITAL LETTER J WITH CROSSED-TAIL
 <dead_hook><dead_hook>                                                                         <j> : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
@@ -8157,14 +8306,14 @@
 <Multi_key><braceleft><braceleft>                                                              <O> : "Ꝍ" UA74C # LATIN CAPITAL LETTER O WITH LOOP
 <dead_hook><dead_hook>                                                                         <o> : "ꝍ" UA74D # LATIN SMALL LETTER O WITH LOOP
 <Multi_key><braceleft><braceleft>                                                              <o> : "ꝍ" UA74D # LATIN SMALL LETTER O WITH LOOP
-<dead_hook><dead_hook>                                                                         <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
-<Multi_key><braceleft><braceleft>                                                              <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
-<dead_hook><dead_hook>                                                                         <p> : "ꝕ" UA755 # LATIN SMALL LETTER P WITH SQUIRREL TAIL
-<Multi_key><braceleft><braceleft>                                                              <p> : "ꝕ" UA755 # LATIN SMALL LETTER P WITH SQUIRREL TAIL
-<dead_hook><dead_hook>                                                                         <Q> : "ᴥ" U1D25 # LATIN LETTER AIN
-<Multi_key><braceleft><braceleft>                                                              <Q> : "ᴥ" U1D25 # LATIN LETTER AIN
-<dead_hook><dead_hook>                                                                         <q> : "ᴥ" U1D25 # LATIN LETTER AIN
-<Multi_key><braceleft><braceleft>                                                              <q> : "ᴥ" U1D25 # LATIN LETTER AIN
+<dead_hook><dead_hook>                                                                         <P> : "Ꝓ" UA752 # LATIN CAPITAL LETTER P WITH FLOURISH
+<Multi_key><braceleft><braceleft>                                                              <P> : "Ꝓ" UA752 # LATIN CAPITAL LETTER P WITH FLOURISH
+<dead_hook><dead_hook>                                                                         <p> : "ꝓ" UA753 # LATIN SMALL LETTER P WITH FLOURISH
+<Multi_key><braceleft><braceleft>                                                              <p> : "ꝓ" UA753 # LATIN SMALL LETTER P WITH FLOURISH
+<dead_hook><dead_hook>                                                                         <Q> : "Ɋ" U024A # LATIN CAPITAL LETTER SMALL Q WITH HOOK TAIL
+<Multi_key><braceleft><braceleft>                                                              <Q> : "Ɋ" U024A # LATIN CAPITAL LETTER SMALL Q WITH HOOK TAIL
+<dead_hook><dead_hook>                                                                         <q> : "ɋ" U024B # LATIN SMALL LETTER Q WITH HOOK TAIL
+<Multi_key><braceleft><braceleft>                                                              <q> : "ɋ" U024B # LATIN SMALL LETTER Q WITH HOOK TAIL
 <dead_hook><dead_hook>                                                                         <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <Multi_key><braceleft><braceleft>                                                              <R> : "ꭊ" UAB4A # LATIN SMALL LETTER DOUBLE R WITH CROSSED-TAIL
 <dead_hook><dead_hook>                                                                         <r> : "ꭉ" UAB49 # LATIN SMALL LETTER R WITH CROSSED-TAIL
@@ -8321,13 +8470,42 @@
 <Multi_key><braceleft><braceleft>                                            <numbersign><KP_5><g> : "ꬶ" UAB36 # LATIN SMALL LETTER SCRIPT G WITH CROSSED-TAIL
 #
 #
-#^# FLOURISH
-#   flourish, hook tail, mid-height left hook
+#^# SQUIRREL_TAIL
+#   mid-height left hook, squirrel tail
 #   dead_hook triple press
 #   Multikey: ¦{{{
 #
-#   As a diacritic, the double ring is used, as coming closest to a flourish.
-#   Since the combining double ring below has no spacing clone nor any modifier
+#   The squirrel tail and mid-height left hook are merged in a single dead key
+#   thanks to their empty intersection. This composite dead key is named after
+#   the squirrel tail for iconicity, and because the mid-height left hook uses
+#   two word separators while a single one, space, is required.
+#
+#
+#   Fullwidth punctuation
+#
+#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
+#   yields CJK symbols and punctuation, single on single press, most double on
+#   double press, and triple press yields "〚" U301A, "〛" U301B.
+#
+#            <bracketleft> : "〚" U301A LEFT WHITE SQUARE BRACKET
+#           <bracketright> : "〛" U301B RIGHT WHITE SQUARE BRACKET
+#
+#   Single press is in dead_hook.
+#   See #*# HOOK
+#
+#   Double press is duplicated in *dead_retroflexhook.
+#   See #^# CURL
+#   See #*# RETROFLEX_HOOK
+#
+#   Triple press is duplicated in dead_abovedot.
+#   See #^# SQUIRREL_TAIL
+#   See #*# DOT_ABOVE
+#
+#
+#   Diacritic
+#
+#   As a diacritic, double ring is used, as coming closest to a squirrel tail.
+#   As the combining double ring below has no spacing clone nor any modifier
 #   looking close to it, the centered half rings "˒" U02D2, "˓" U02D3 are used
 #   instead, with a rationale based on the laterality of the AltFr and AltGr
 #   modifier keys involved in typing these left and right half rings this way.
@@ -8341,26 +8519,20 @@
 <Multi_key><braceleft><braceleft><braceleft>                                        <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook><dead_hook>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft><braceleft>                                               <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<dead_hook><dead_hook><dead_hook>                                                              <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
-<Multi_key><braceleft><braceleft><braceleft>                                                   <B> : "Ꞗ" UA796 # LATIN CAPITAL LETTER B WITH FLOURISH
-<dead_hook><dead_hook><dead_hook>                                                              <b> : "ꞗ" UA797 # LATIN SMALL LETTER B WITH FLOURISH
-<Multi_key><braceleft><braceleft><braceleft>                                                   <b> : "ꞗ" UA797 # LATIN SMALL LETTER B WITH FLOURISH
+<dead_hook><dead_hook><dead_hook>                                                    <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
+<Multi_key><braceleft><braceleft><braceleft>                                         <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
+<dead_hook><dead_hook><dead_hook>                                                   <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
+<Multi_key><braceleft><braceleft><braceleft>                                        <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
 <dead_hook><dead_hook><dead_hook>                                                              <d> : "𝼥" U1DF25 # LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
 <Multi_key><braceleft><braceleft><braceleft>                                                   <d> : "𝼥" U1DF25 # LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
-<dead_hook><dead_hook><dead_hook>                                                              <e> : "ꬴ" UAB34 # LATIN SMALL LETTER E WITH FLOURISH
-<Multi_key><braceleft><braceleft><braceleft>                                                   <e> : "ꬴ" UAB34 # LATIN SMALL LETTER E WITH FLOURISH
 <dead_hook><dead_hook><dead_hook>                                                              <l> : "𝼦" U1DF26 # LATIN SMALL LETTER L WITH MID-HEIGHT LEFT HOOK
 <Multi_key><braceleft><braceleft><braceleft>                                                   <l> : "𝼦" U1DF26 # LATIN SMALL LETTER L WITH MID-HEIGHT LEFT HOOK
 <dead_hook><dead_hook><dead_hook>                                                              <n> : "𝼧" U1DF27 # LATIN SMALL LETTER N WITH MID-HEIGHT LEFT HOOK
 <Multi_key><braceleft><braceleft><braceleft>                                                   <n> : "𝼧" U1DF27 # LATIN SMALL LETTER N WITH MID-HEIGHT LEFT HOOK
-<dead_hook><dead_hook><dead_hook>                                                              <P> : "Ꝓ" UA752 # LATIN CAPITAL LETTER P WITH FLOURISH
-<Multi_key><braceleft><braceleft><braceleft>                                                   <P> : "Ꝓ" UA752 # LATIN CAPITAL LETTER P WITH FLOURISH
-<dead_hook><dead_hook><dead_hook>                                                              <p> : "ꝓ" UA753 # LATIN SMALL LETTER P WITH FLOURISH
-<Multi_key><braceleft><braceleft><braceleft>                                                   <p> : "ꝓ" UA753 # LATIN SMALL LETTER P WITH FLOURISH
-<dead_hook><dead_hook><dead_hook>                                                              <Q> : "Ɋ" U024A # LATIN CAPITAL LETTER SMALL Q WITH HOOK TAIL
-<Multi_key><braceleft><braceleft><braceleft>                                                   <Q> : "Ɋ" U024A # LATIN CAPITAL LETTER SMALL Q WITH HOOK TAIL
-<dead_hook><dead_hook><dead_hook>                                                              <q> : "ɋ" U024B # LATIN SMALL LETTER Q WITH HOOK TAIL
-<Multi_key><braceleft><braceleft><braceleft>                                                   <q> : "ɋ" U024B # LATIN SMALL LETTER Q WITH HOOK TAIL
+<dead_hook><dead_hook><dead_hook>                                                              <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
+<Multi_key><braceleft><braceleft><braceleft>                                                   <P> : "Ꝕ" UA754 # LATIN CAPITAL LETTER P WITH SQUIRREL TAIL
+<dead_hook><dead_hook><dead_hook>                                                              <p> : "ꝕ" UA755 # LATIN SMALL LETTER P WITH SQUIRREL TAIL
+<Multi_key><braceleft><braceleft><braceleft>                                                   <p> : "ꝕ" UA755 # LATIN SMALL LETTER P WITH SQUIRREL TAIL
 <dead_hook><dead_hook><dead_hook>                                                              <r> : "𝼨" U1DF28 # LATIN SMALL LETTER R WITH MID-HEIGHT LEFT HOOK
 <Multi_key><braceleft><braceleft><braceleft>                                                   <r> : "𝼨" U1DF28 # LATIN SMALL LETTER R WITH MID-HEIGHT LEFT HOOK
 <dead_hook><dead_hook><dead_hook>                                                              <s> : "𝼩" U1DF29 # LATIN SMALL LETTER S WITH MID-HEIGHT LEFT HOOK
@@ -8380,7 +8552,7 @@
 #   A shortcut for "Ꝕ" UA754, "ꝕ" UA755 P WITH SQUIRREL TAIL is provided for
 #   convenience and ease of input, thanks to the availability of the "P", "p"
 #   base characters.
-#   See #^# CURL
+#   See #^# SQUIRREL_TAIL
 #
 #   As a result, *dead_retroflexhook supports "ᶏ" U1D8F, "𝼝" U1DF1D, "Ɖ" U0189,
 #   "ɖ" U0256, "ᶒ" U1D92, "ᶖ" U1D96, "ɭ" U026D, "ɳ" U0273, "𝼛" U1DF1B,
@@ -8390,9 +8562,6 @@
 #   By contrast, the dead key of the similar-in-shape but backward-pointing
 #   palatal hook is virtualized by *dead_retroflexhook double press.
 #   See #^# PALATAL_HOOK
-#
-#   The spacing modifier slot is populated with "˾" U02FE MODIFIER LETTER OPEN
-#   SHELF, by lack of anything more to the point.
 #
 #
 #   Recycling symbols
@@ -8409,6 +8578,41 @@
 #   See # # D04 backslash
 #   See # # Recycling symbols
 #
+#
+#   Fullwidth punctuation
+#
+#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
+#   yields CJK symbols and punctuation, single on single press, most double on
+#   double press, and triple press yields "〚" U301A, "〛" U301B.
+#
+#               asciitilde : "〰" U3030 WAVY DASH
+#                braceleft : "〘" U3018 LEFT WHITE TORTOISE SHELL BRACKET
+#               braceright : "〙" U3019 RIGHT WHITE TORTOISE SHELL BRACKET
+#                parenleft : "〖" U3016 LEFT WHITE LENTICULAR BRACKET
+#               parenright : "〗" U3017 RIGHT WHITE LENTICULAR BRACKET
+#              bracketleft : "『" U300E LEFT WHITE CORNER BRACKET
+#             bracketright : "』" U300F RIGHT WHITE CORNER BRACKET
+#                     less : "《" U300A LEFT DOUBLE ANGLE BRACKET
+#                  greater : "》" U300B RIGHT DOUBLE ANGLE BRACKET
+#
+#   Single press is in dead_hook.
+#   See #*# HOOK
+#
+#   Double press is duplicated in *dead_retroflexhook.
+#   See #^# CURL
+#   See #*# RETROFLEX_HOOK
+#
+#   Triple press is duplicated in dead_abovedot.
+#   See #^# SQUIRREL_TAIL
+#   See #*# DOT_ABOVE
+#
+#
+#   Diacritic
+#
+#   While there is a COMBINING RETROFLEX HOOK BELOW diacritic "̢" U0322, the
+#   spacing modifier letter slot is populated with "˾" U02FE MODIFIER LETTER
+#   OPEN SHELF, by lack of anything more to the point.
+#
 <UEFD4>                                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <Multi_key><braceright>                                                                    <space> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
 <UEFD4>                                                                                    <U200B> : "̢" U0322 # COMBINING RETROFLEX HOOK BELOW
@@ -8417,6 +8621,24 @@
 <Multi_key><braceright>                                                             <nobreakspace> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
 <UEFD4>                                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
 <Multi_key><braceright>                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
+<UEFD4>                                                                               <asciitilde> : "〰" U3030 # WAVY DASH
+<Multi_key><braceright>                                                               <asciitilde> : "〰" U3030 # WAVY DASH
+<UEFD4>                                                                                <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
+#   Multikey conflicts with "ʯ" U02AF, "ᶑ" U1D91, "𐞍" U1078D, "𝼉" U1DF09, "𝼖" U1DF16.   <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
+<UEFD4>                                                                               <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
+#   Multikey conflicts with "ƫ" U01AB, "ȿ" U023F, "ɀ" U0240, "ɚ" U025A, "ʄ" U0284, […]<braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
+<UEFD4>                                                                                <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
+<Multi_key><braceright>                                                                <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
+<UEFD4>                                                                               <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
+#   Multikey conflicts with "ꞎ" UA78E, "𐞝" U1079D, "𝼓" U1DF13.                         <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
+<UEFD4>                                                                              <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
+<Multi_key><braceright>                                                              <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
+<UEFD4>                                                                             <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
+<Multi_key><braceright>                                                             <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
+<UEFD4>                                                                                     <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
+<Multi_key><braceright>                                                                     <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
+<UEFD4>                                                                                  <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
+<Multi_key><braceright>                                                                  <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
 <UEFD4>                                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright>                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4>                                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
@@ -8918,6 +9140,27 @@
 #   See #*# HORN
 #   See #^# Chinantec tone marks
 #
+#
+#   Fullwidth punctuation
+#
+#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
+#   yields CJK symbols and punctuation, single on single press, most double on
+#   double press, and triple press yields "〚" U301A, "〛" U301B.
+#
+#            <bracketleft> : "〚" U301A LEFT WHITE SQUARE BRACKET
+#           <bracketright> : "〛" U301B RIGHT WHITE SQUARE BRACKET
+#
+#   Single press is in dead_hook.
+#   See #*# HOOK
+#
+#   Double press is duplicated in *dead_retroflexhook.
+#   See #^# CURL
+#   See #*# RETROFLEX_HOOK
+#
+#   Triple press is duplicated in dead_abovedot.
+#   See #^# SQUIRREL_TAIL
+#   See #*# DOT_ABOVE
+#
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   plus yields "∔" U2214; equal yields "≐" U2250 in group 0, and "⩧" U2A67 in
 #   group 1 ("≡" U2261 is in group 1 of equal); quotedbl and EuroSign (where
@@ -8959,6 +9202,10 @@
 #   Multikey is supported as part of math symbols.                                          <plus> : "∔" U2214 # DOT PLUS
 <dead_abovedot>                                                                       <underscore> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 #   Multikey conflicts with "․" U2024.                                                <underscore> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<dead_abovedot>                                                                      <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
+<Multi_key><period>                                                                  <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
+<dead_abovedot>                                                                     <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
+<Multi_key><period>                                                                 <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
 <dead_abovedot>                                                                              <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 #   Multikey conflicts with "Ǡ" U01E0, "ǡ" U01E1, "Ȱ" U0230, "ȱ" U0231.                      <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_abovedot>                                                                            <slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
