@@ -1,16 +1,11 @@
 #!/usr/bin/perl
 # 2023-07-23T0239+0200
 # 2023-08-06T1934+0200
-# 2023-12-27T1519+0100
-# 2024-05-16T1520+0200
 # 2024-10-28T1416+0100
 # 2025-05-26T2331+0200
-# 2025-06-18T0815+0200
-# 2025-08-14T1938+0200
-# 2025-10-29T0554+0100
 # 2025-11-30T2107+0100
 # 2026-01-12T1834+0100
-# 2026-02-22T0023+0100
+# 2026-04-09T1106+0200
 # = last modified.
 #
 # Generates HTML tables of dead keys from dead key sequences in Compose.yml.
@@ -133,8 +128,8 @@ my $table_header_title   = 'Cliquer pour basculer entre français et anglais';
 my $checkbox_label       = 'Imprimer les descripteurs, non les identifiants';
 my $checkbox_checked     = '☑&nbsp;';
 my $checkbox_not_checked = '☐&nbsp;';
-my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
-my $start_tags_1        .= "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+#my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
+my $start_tags_1        = "<figure class=\"wp-block-table alignwide deadkeys {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
 my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags             = "</tbody></table></figure>\n";

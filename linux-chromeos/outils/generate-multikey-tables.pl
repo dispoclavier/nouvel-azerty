@@ -6,6 +6,7 @@
 # 2024-10-28T1415+0100
 # 2025-11-30T2108+0100
 # 2026-01-30T0713+0100
+# 2026-04-09T1107+0200
 # = last modified.
 #
 # Generates HTML tables of dedicated non-math multikey sequences configured in
@@ -90,8 +91,8 @@ my $table_header_title   = 'Cliquer pour basculer entre français et anglais';
 my $checkbox_label       = 'Imprimer les descripteurs, non les identifiants';
 my $checkbox_checked     = '☑&nbsp;';
 my $checkbox_not_checked = '☐&nbsp;';
-my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
-my $start_tags_1        .= "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
+#my $start_tags_1         = "<input type=\"checkbox\" checked=\"checked\" id=\"print\" />\n";
+my $start_tags_1        = "<figure class=\"wp-block-table alignwide multikey {{{anrghg-classes}}} {{{anrghg-value}}}\"><table id=\"";
 my $start_tags_2         = "\">$date_legend$date</a></caption><thead><tr><th colspan=\"2\" class=\"has-text-align-left\" data-align=\"left\">$table_header_1</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_2</th><th class=\"has-text-align-left\" data-align=\"left\">$table_header_3</th></tr></thead><tbody>\n";
 my $start_tags           = "$start_tags_1$table_id\"><caption><a href=\"#$table_id$start_tags_2";
 my $end_tags             = "</tbody></table></figure>\n";

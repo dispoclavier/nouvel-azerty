@@ -7,6 +7,7 @@
 # 2025-11-30T2108+0100
 # 2025-12-26T0915+0100
 # 2026-01-30T0714+0100
+# 2026-04-09T1108+0200
 # = last modified.
 #
 # Generates an HTML table of math symbols, based on multikey sequences in
@@ -74,8 +75,8 @@ my $output_file_name = 'math-table-partial.html';
 my $output_path      = "$output_directory/$output_file_name";
 open( OUTPUT, '>', $output_path ) or die $!;
 print( "Opened file $output_path.\n" );
-
 print( "Processing math symbols from $input_path to $output_path.\n" );
+
 my $parse_on              = !1;
 my $date_legend           = 'Tableau mis à jour le ';
 
