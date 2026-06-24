@@ -1,0 +1,25 @@
+Encodage OEM 850
+Propriétés du projet azertycomplet
+-------------------------------------------------------------------------------------------
+Fichier datant du 08/06/2026, 16:57:49
+Pour un projet multiple, listez les noms en-dessous du 3e trait, un par ligne.
+Le nom est le nom de fichier ;  dans la Barre des langues l’utilisateur lit la description.
+Ajoutez un point-virgule et la description, par exemple :  kbdnom;Clavier pour Claude
+N’utilisez pas de point-virgule par ailleurs, car il est pris pour un séparateur.
+Pour une reconnaissance correcte des diacrités français ce fichier doit être en OEM 850.
+Si l’édition des ressources est active, la description est celle figurant au fichier .RC.
+N’effacez ni ligne ni caractères avant les signes "=" car la lecture dépend de la position.
+-------------------------------------------------------------------------------------------
+                      Nom du projet ou du produit=azertycomplet
+        Nom de l’éventuelle source header commune=kbcommon
+-----------------------------------------------------------------------------------------
+kbbrFRs1;Breton
+kbbrFRs2;Breton_clone
+kbfrAFs1;Afrique
+kbfrAFs2;Afrique_clone
+kbfrFRs1;France
+kbfrFRs2;France_clone
+kbfrPFs1;Polynésie
+kbfrPFs2;Polynésie_clone
+kbfrFRr1;Redisposée
+kbfrFRr2;Redisposée_clone
