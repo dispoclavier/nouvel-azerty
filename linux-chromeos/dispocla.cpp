@@ -1195,13 +1195,13 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   t,                   T,          asciitilde,          asciitilde,          dead_tilde,               U1D57,           plusminus,              U1F60A ],
 		[                   t,                   T,          asciitilde,          asciitilde,          dead_tilde,               U1D57,           plusminus,              U1F60A ]
-	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; endash U2013 – EN DASH recommended for noting intervals; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
+	}; // U1D57 ᵗ MODIFIER LETTER SMALL T; 😊 U1F60A SMILING FACE WITH SMILING EYES worldwide fifth-most used emoji, fourth-most used smiling emoji in France
 
 	key <AD06> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[                   y,                   Y,          dead_greek,               U2212,          dead_greek,               U02B8,                 yen,              U1F60D ],
 		[                   y,                   Y,          dead_greek,               U2212,          dead_greek,               U02B8,                 yen,              U1F60D ]
-	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
+	}; // U02B8 ʸ MODIFIER LETTER SMALL Y; U2212 − MINUS SIGN; 😍 U1F60D SMILING FACE WITH HEART-SHAPED EYES third-most used smiling emoji in France, third-most overall worldwide
 
 	key <AD07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8

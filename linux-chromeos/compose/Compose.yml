@@ -394,17 +394,19 @@
 #   trigraph at Base level and Shift level of key E01. All variants, including
 #   the base variant and the remapped variants, support the Breton trigraph on
 #   (Shift +) AltGr + AltFr + A, key D01 as on the CʼHWERTY keyboard layout. On
-#   Linux and macOS, this is Caps Lock sensitive, too. Additionally, the letter
-#   apostrophe is in group 1 of apostrophe and rightsinglequotemark.
+#   Linux and macOS, this is Caps Lock sensitive, too.
+#
+#   The letter apostrophe in isolation is additionally in group 1 of apostrophe
+#   and rightsinglequotemark.
 #   See dispocla.cpp xkb_symbols "kbbrFRs"
 #   See dispocla.cpp xkb_symbols "kbbrFRsr"
 #   See dispocla.cpp key <AD01>
-#   See # # D07 apostrophe
+#   See # # D08 apostrophe
 #
 #   To ensure regular support, the Breton trigraph is configured here.
 #
 <c_h> : "cʼh" # The apostrophe is U02BC MODIFIER LETTER APOSTROPHE,
-<C_h> : "Cʼh" # consistently with the Breton exemplar "{cʼh}" stored in the
+<C_h> : "Cʼh" # consistently with the Breton exemplar "{cʼh}" recorded in the
 <C_H> : "CʼH" # Common Locale Data Repository (CLDR), cited and quoted above.
 #
 #
@@ -817,7 +819,7 @@
 <UEF87> : " ﻿›" # U2009 UFEFF U203A
 #
 #
-# # Abbreviation "Numéro" with a THIN SPACE, ZWNBSP string
+# # Abbreviation "Numéro" with TSP ZWNBSP
 #
 #   With regular superscript "ᵒ" U1D52.
 #
@@ -1325,13 +1327,14 @@
 #   See dead-key-convert.pl # Multikey
 #
 #   The two legacy ordinal indicators are supported with alphabetic mnemonics
-#   in group 12 of "^" on key "A", and in group 12 of "}" on key "O".
+#   in group 12 of "^" on key "A", and in group 12 of "{" on key "O".
 #   See # # D01 asciicircum
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 #   The following intuitive, case sensitive, underscore-terminated multikey
 #   sequences add to this support in the symbol groups. Underscore termination
 #   is consistent with "№" U2116 NUMERO SIGN in the next section.
+#   See #^# Abbreviations, Units and Legal Symbols
 #
 #   In many fonts, the legacy ordinal indicators have glyphs featuring a line
 #   below, that is not preferred in French and makes "º" U00BA unfit for use in
@@ -1339,7 +1342,7 @@
 #   See # # Abbreviation "Numéro" with trailing space
 #   See # # Abbreviation "Numéro" without spacing
 #   See # # Abbreviation "Numéro" with legacy NBSP
-#   See # # Abbreviation "Numéro" with a THIN SPACE, ZWNBSP string
+#   See # # Abbreviation "Numéro" with TSP ZWNBSP
 #   See # # Abbreviation "Numéro" with TSP WJ
 #
 <Multi_key><a><underscore>                                                                         : "ª" U00AA # FEMININE ORDINAL INDICATOR
@@ -15240,24 +15243,24 @@
 #
 ### Dead keys
 #
-#   While on Windows and macOS, input composition can be emulated by chaining
+#   While on Windows and macOS, input composition can be emulated using chained
 #   dead keys, XKB is to emulate dead keys by input composition. This resulting
-#   configuration file is very human readable, and it is easily converted into
+#   configuration file is very human readable, and it is easily converted to
 #   documentation.
 #   See # # Notes about documentation
 #
-#   Input composition implemented by chaining dead keys is more powerful in
-#   that it supports modularity, as opposed to XCompose that requires listing
-#   all supported sequences, verbatim and in extenso. The reason why is that
-#   this does not work:
+#   Input composition implemented by the means of chained dead keys is more
+#   powerful in that it supports modularity, as opposed to XCompose’
+#   requirement to list all supported sequences, verbatim and in extenso.
+#   The reason why is that this does not work:
 #
 #       <dead_circumflex> <dead_circumflex> : dead_belowcircumflex
 #
-#   then:
+#   Then:
 #
 #       <dead_belowcircumflex> <e>          : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 #
-#   Although X.org specifies:
+#   Indeed, the output is referred to only as "string", as X.org specifies:
 #
 #       If the string is omitted, Xlib figures it out from the keysym according
 #       to the current locale.
@@ -15288,8 +15291,9 @@
 #
 #   The issues related to SMP support do not affect Linux nor macOS, as opposed
 #   to Windows, whose DEADTRANS macro only supports one single code unit output
-#   instead of 2, 5 or more, and as a consequence, SMP characters are hard to
-#   input by dead keys.
+#   instead of at least 2 (to support SMP and simply diacriticized BMP), or 16
+#   (maximum length of live key output). As a consequence, SMP characters and
+#   composed letters are unstraightforward to input by dead keys.
 #
 #   Due to more comprehensive support for Unicode characters used in Latin
 #   script as encoded since version 1.1 of the Standard, some sequences in
@@ -15298,8 +15302,8 @@
 #
 #   With Multi_key thought of as a generic dead key taking arguments, the base
 #   letter that those modifications are applied to is typed last. This pattern
-#   empowers XCompose to apply multiple diacritics as used in Vietnamese and in
-#   Lithuanian. Therefore, it performs much better than the other way around.
+#   empowers XCompose to support multiple diacritics as used in Vietnamese and
+#   in Lithuanian. Therefore, performing much better than the other way around.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
 #   en_US.UTF-8/Compose. For example, the multikey equivalent of dead_breve
@@ -15310,9 +15314,9 @@
 #   a prepended "U" with a shape-based mnemonic: <Multi_key><U><a>,
 #   as well as a prepended initial: <Multi_key><b><a>.
 #
-#   While that change alone would not warrant a comprehensive overhaul, more
-#   tweaks are required, such as supporting superscript and subscript, using
-#   asciicircum and underscore repurposed, formerly circumflex and macron.
+#   While that change alone would not warrant a thorough overhaul, more tweaks
+#   are required, such as supporting superscript and subscript by repurposing
+#   asciicircum and underscore, formerly circumflex and macron.
 #
 #   So, when "<" and ">" are used for circumflex and hacek (hatchek, caron)
 #   and "|" for macron, ":" gets used for diaeresis like in Vim, and quotedbl
@@ -15326,7 +15330,7 @@
 #
 #   New-school composition is designed to fully support the Latin script. This
 #   requires repurposing several ASCII symbols, so that en_US.UTF-8/Compose
-#   ends up disrupted, breaking user experience. Such a step is taken only
+#   ends up disrupted, and user experience, broken. Such a step is taken only
 #   because it is unavoidable.
 #
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
@@ -15518,15 +15522,19 @@
 #   double press of dead_macron.
 #   See #^# MACRON_BELOW
 #
-#   Letters with a real line below are used in languages of Gabon and in Oneida
-#   and require a line-below dead key, standardized in ISO/IEC 9995-11, where
-#   dead keys output combining diacritics to begin with, for post-processing by
-#   applications on Windows that part 11 of the standard has been designed for.
+#   Letters with a real line below are used to write Oneida and languages of
+#   Gabon, and require either an input method for the combining line-below
+#   diacritic ("̲" U0332), or alternatively — and depending on typing habits,
+#   more intuitively — a line-below dead key, standardized in ISO/IEC 9995-11,
+#   where dead keys output combining diacritics to begin with, and require an
+#   additional post-processing step, disqualifying the scheme as a part of the
+#   ISO keyboard layout standard.
 #   See #^# LINE_BELOW
 #
-#   As the output only consists in an added combining diacritic to any letter
-#   typed after, implementing this dead key on non-Windows keyboards requires
-#   knowing the list of letters expected to be supported.
+#   As this dead key’s output only consists in an added combining diacritic,
+#   implementing this dead key on Windows cannot be done in keyboard layout
+#   drivers. Other implementations are based on a list of letters expected to
+#   be supported.
 #
 #   (Although "̲" U0332 COMBINING LOW LINE is defined as connecting, it may not
 #   be used to underline a text span in plain text, due to vertical alignment
@@ -35069,7 +35077,7 @@
 #   introduced by ISO/IEC 9995.
 #
 #   ASCII symbols and punctuation, space, no-break space:
-#   See ### Space and symbol groups
+#   See ### Symbol groups
 #
 #   Latin base alphabet:
 #   See ### Letter groups
@@ -35178,7 +35186,7 @@
 #   See ### Group dead key introduction
 #
 #   This section is limited to digits and non-ASCII symbols.
-#   See ### Space and symbol groups
+#   See ### Symbol groups
 #   See ### Letter groups
 #
 #
@@ -35460,9 +35468,9 @@
 #   https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Punctuation/faq0011.html
 #
 #   HAIR SPACE is in group 11 on the space bar. The following facility using
-#   no-break thin space U202F as a base character is only a shortcut.
-#   See # # A03-level_1 space
-#   See # # A03-level_3 nobreakspace
+#   no-break thin space U202F as a base character is a shortcut adding to the
+#   regular support in the space groups.
+#   See ### Space groups
 #
 <UEFD0>                                                                                    <U202F> : " " U200A # HAIR SPACE
 <Multi_key><numbersign>                                                                    <U202F> : " " U200A # HAIR SPACE
@@ -36128,31 +36136,28 @@
 <Multi_key><numbersign><KP_2>                                                               <KP_9> : "🢅" U1F885 # WIDE-HEADED NORTH EAST VERY HEAVY BARB ARROW
 #
 #
-### Space and symbol groups
+### Symbol groups
 #
-#   The base characters in this section are mapped on AltGr/Option or unshifted
-#   keys as of comma, period and space. Symbols and punctuation mapped at
-#   level 3 assume using the group dead key in synergy on AltGr/Option.
+#   The base characters in this section are mapped at level 3, or on unshifted
+#   positions as of comma and period. Symbols and punctuation mapped at level 3
+#   assume using the group dead key in synergy at the same level.
 #
-#   Consistently, this section is ordered by keys rather than by groups, while
-#   each one of the 32 ASCII symbols supports the 12 groups.
+#   This section is ordered by keys rather than by groups, although each ASCII
+#   symbol supports the 12 groups.
 #
-#   Mnemonics use either the ASCII symbols or the letters of the base alphabet.
-#   Accordingly, the ASCII symbols are not meant to be printed on the keycaps.
+#   Mnemonics are not limited to using the ASCII symbol, and may also — or
+#   alternatively — be based on the letter or the other punctuation on the same
+#   key.
 #
 #
 # # Math symbols in symbol groups
 #
-#   Mathematical symbols outside the math section, in the dead key section and
-#   especially in the symbol groups, are labeled as "math", because this label
-#   is converted to link text, with a hyperlink to the first instance of that
-#   symbol on the math symbols page, on the condition that the "math" string is
-#   appended as the very last element.
-#
-#   Non-math characters, such as the letter pi and the envelope emoji, are also
-#   given this "math" label, as far as a multikey sequence in the math section
-#   is available for input. This "math" label is therefore more of a UX feature
-#   than of an information about the "Math" status.
+#   When mathematical and other symbols supported in the math section occur in
+#   the dead key section, notably in the symbol groups, they are labeled as
+#   "math", because this label is converted to link text hyperlinked to the
+#   first instance of that symbol on the math symbols page, on the condition
+#   that the "math" string is followed by the end of line. This "math" label is
+#   more a UX feature than an information about the "Math" status.
 #   See ### Mathematical symbols by multikey
 #
 #
@@ -36161,9 +36166,8 @@
 #   Supporting all emoji in the Basic Multilingual Plane except Chinese letter
 #   emoji makes sense because input by dead keys is cross-platform compatible,
 #   whereas SMP emoji are excluded from this scheme because of cross-platform
-#   incompatibilities due to design mistakes in Windows, where keyboard layouts
-#   have been coded by a single developer whose errors persistently degraded
-#   the usability of most of the world’s computers.
+#   incompatibilities due to a design mistake in the Windows keyboard layout
+#   drivers.
 #
 #   A number of BMP emoji are supported alternatively or only elsewhere:
 #
@@ -36220,18 +36224,17 @@
 #   See # # B06 grave
 #   See "❆" U2746
 #
-#   The triggering character is ellipsis, typed right before the base character
-#   and right after the group dead key or its multikey equivalent; « ¦#…$ » for
-#   "☀" U2600, « ¦#…~ » for "☠" U2620, « ¦#…` » for "❄" U2744.
+#   The extra sequence constituent is dead_tilde, typed right before the base character
+#   and right after the group dead key or its multikey equivalent.
 #
 #   In French, this extra group is called "groupe 1 bis", with a Latin word for
 #   "twice", in English "group 1a". Consistently, in this code, the extra group
-#   comes after group 1, with "<ellipsis>" prepended to the base character.
+#   comes after group 1, with "<dead_tilde>" prepended to the base character.
 #
-#   Both glyphs and shapes may not match exactly, as opposed to the character
-#   names. In any event, safety goes first, in order to make this project more
-#   resilient against suspicions about fostering the input of either disguised
-#   or explicit symbols related to ideologies or practices that are firmly
+#   Glyphs and shapes may not match exactly, as opposed to the character names.
+#   In any event, safety goes first, in order to make this project more
+#   resilient against suspicions about fostering the input of disguised or
+#   explicit symbols related to ideologies or practices that are firmly
 #   rejected and condemned.
 #   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
 #   https://de.wikipedia.org/wiki/Schwarze_Sonne
@@ -36252,20 +36255,20 @@
 #   See # # C01 numbersign
 #
 #
-#	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace		
-#	  	^	%	€	\	~	@	'	{	}	&	#	$	(	)	-	+	_	[	]	|	/	*	<	>	=	`	,	?	.	;	:	!	␣	⍽	
-#	  1	⚠	☆	★	√	≃	◌	ʼ	∫	Ω	π	☐	␣	⌀	➔	⁃	±	•	⟨	⟩	†	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	ː	⋅	¡	EMSP	MQSP	
-#	  2	♿	⚡	∈	∛	≈	⚫	⊂	∬	∅	☮	☑	⍽	∂	➜	➖	➕	◦	❰	❱	‡	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	ˑ	꞉	‼	ENSP	NQSP	
-#	  3	⚛	↯	∋	∜	≅	⚪	⊃	∭	∐	∏	☒	∑	☹	☺	☻	∓	‣	❮	❯	⁂	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	⋯	⋮	❕	3/MSP	3/MSP	
-#	  4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☼	∆	♀	♨	⊎	⬝	⟦	⟧	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP	
-#	  5	∠	☇	⚕	☢	☥	○	⤵	⯀	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♚	♔	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⏳	⌚	⁉	MMSP	MMSP	
-#	  6	✈	☈	✍	♼	☎	❍	⤴	▢	⛔	☂	◼	⛷	✡	⚽	☪	☝	♛	♕	⦜	Ⓜ	◻	❇	▲	▼	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP	
-#	  7	⚓	⚮	✉	♽	☏	⚬	⚭	⚯	❂	⛸	⬛	⛵	〽	⛴	⛳	⛫	♜	♖	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		⧗	⏰	❣	FSP	FSP	
-#	  8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⮽	⛩	☸	✊	⛼	⛬	♝	♗	✝	✋	⛆	✴	⚰	✌	⛓	⛅		♃		⧖	⏲	❢	PSP	PSP	
-#	  9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♞	♘	⚜	⛰	〰	✳	☄	➸	☕	☁		♄		⸫	∴	∵	TSP	TSP	
-#	10	⎋	�	⌦	⌫	☧	⏺	⏫	∝	⏬	⸿	⏹	§	⚚	⎍	−	✙	♟	♙	◊	⏸	➿	❎	⏪	⏩	⚘	⛎		♅		⸪	⋰	⋱	WNJ	WJ	
-#	11	‸	‰	⏏	®	™	⁁	ˈ	∞	⚒	¶ 	♯	☉	☾	☽	⁒	⁜	➲	❐	❒	∣	➰	※	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP	 
-#	12	ª	‱	〃	∖	☘	❖	ˌ	♾	º	⛏	⚧	✒	⁀	‿	‐	﬩	⮊	❑	❏	∥	∕	∗	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP	
+                           	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace	
+#	  	^	%	€	\	~	@	&	'	{	}	#	$	(	)	-	+	_	|	[	]	/	*	<	>	=	`	,	?	.	;	:	!	␣	⍽
+#	1	⚠	☆	★	√	≃	◌	∕	ʼ	Ω	π	☐	␣	⌀	➔	⁃	±	•	†	⟨	⟩	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	ː	⋅	¡	EMSP	MQSP
+#	2	♿	⚡	∈	∛	≈	⚫	⊂	ˈ	∅	☮	☑	⍽	∂	➜	➖	➕	◦	‡	❰	❱	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	ˑ	꞉	‼	ENSP	NQSP
+#	3	⚛	↯	∋	∜	≅	⚪	⊃	ˌ	∐	∏	☒	∑	☹	☺	☻	∓	‣	⁂	❮	❯	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	⋯	⋮	❕	3/MSP	3/MSP
+#	4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☼	∆	♀	♨	⊎	⬝	⁑ 	⦜	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP
+#	5	∠	☇	⚕	☢	☥	○	⤵	∫	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♚	♔	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⏳	⌚	⁉	MMSP	MMSP
+#	6	✈	☈	✍	♼	☎	❍	⤴	∬	▢	☂	◼	⛷	✡	⚽	☪	☝	♛	♕	⦝ 	Ⓜ	◻	❇	⏪	⏩	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP
+#	7	⚓	⚮	✉	♽	☏	⚬	⚭	∭	⚯	⛸	⬛	⛵	〽	⛴	⛳	⛫	♜	♖	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		⧗	⏰	❣	FSP	FSP
+#	8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⮽	⛩	☸	✊	⛼	⛬	♝	♗	✝	✋	⛆	✴	⚰	✌	⛓	⛅		♃		⧖	⏲	❢	PSP	PSP
+#	9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♞	♘	⚜	⛰	⛎	✳	☄	➸	☕	☁		♄		⸫	∴	∵	TSP	TSP
+#	10	⎋	�	⌦	⌫	⛾ 	⏺	※	⛔	❂	⸿	⏹	§	⚚	⎍	‐	✙	♟	♙	◊	⏸	〰	❎	⮊	➲	⚘	⯀		♅		⸪	⋰	⋱	WNJ	WJ
+#	11	‸	‰	⏏	®	™	⁁	⏫	∞	⚒	¶ 	♯	☉	☾	☽	−	⁜	▲	∣	❐	❒	➰	☧	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP
+#	12	ª	‱	〃	∖	☘	❖	⏬	♾	º	⛏	⚧	✒	⁀	‿	⁒	﬩	▼	∥	❑	❏	➿	∗	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP
 #
 #
 #
@@ -36647,8 +36650,8 @@
 #
 <UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
-<UEFD0>                                                                     <ellipsis><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
-<Multi_key><numbersign>                                                     <ellipsis><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
+<UEFD0>                                                                   <dead_tilde><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
+<Multi_key><numbersign>                                                   <dead_tilde><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
 <UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO math
@@ -37193,8 +37196,8 @@
 #
 <UEFD0>                                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
 <Multi_key><numbersign>                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
-<UEFD0>                                                                         <ellipsis><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
-<Multi_key><numbersign>                                                         <ellipsis><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<UEFD0>                                                                       <dead_tilde><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><numbersign>                                                       <dead_tilde><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
 <UEFD0><UEFD0>                                                                            <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <Multi_key><numbersign><numbersign>                                                       <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <UEFD0><3>                                                                                <dollar> : "∑" U2211 # N-ARY SUMMATION math
@@ -38068,8 +38071,8 @@
 #
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<UEFD0>                                                                          <ellipsis><grave> : "❄" U2744 # SNOWFLAKE emoji
-<Multi_key><numbersign>                                                          <ellipsis><grave> : "❄" U2744 # SNOWFLAKE emoji
+<UEFD0>                                                                        <dead_tilde><grave> : "❄" U2744 # SNOWFLAKE emoji
+<Multi_key><numbersign>                                                        <dead_tilde><grave> : "❄" U2744 # SNOWFLAKE emoji
 <UEFD0><UEFD0>                                                                             <grave> : "∧" U2227 # LOGICAL AND math
 <Multi_key><numbersign><numbersign>                                                        <grave> : "∧" U2227 # LOGICAL AND math
 <UEFD0><3>                                                                                 <grave> : "∨" U2228 # LOGICAL OR math
@@ -38546,9 +38549,17 @@
 <Multi_key><numbersign><KP_2>                                                            <section> : "⌨" U2328 # KEYBOARD emoji
 #
 #
+### Space groups
+#
+#   Initially a part of the space and symbol groups, or symbol groups for short
+#   (as opposed to the letter groups), the space groups make up a section of
+#   their own since version 7.
+#   See ### Symbol groups
+#
+#
 # # A03-level_1 space
 #
-#   ISO A03 should be the left Thumb Shift (Oyayubi Shifuto).
+#   ISO A03 should be the left Thumb Shift, Oyayubi Shifuto in Japanese.
 #   https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
 #
 #   U200B ZERO WIDTH SPACE has an alternate, more intuitive and more familiar
