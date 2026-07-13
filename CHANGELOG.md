@@ -2479,21 +2479,6 @@ Amélioration de la prise en charge de l’écriture latine.
 		* Prendre en charge "¦" U+00A6. ibidem
 		* Corriger la séquence de "⎄" U+2384. ibidem
 * Transformations :
-	* Groupes des symboles :
-		* Adapter à la redisposition de "&", "’", "{", "}", "|", "[", "]".
-			* 
-			* 
-			* 
-			* 
-			* 
-			* 
-		* Assurer l’utilité et la cohérence des symboles dans les groupes.
-			* 
-			* 
-			* 
-			* 
-			* 
-			* 
 	* Exposant et groupe 1 :
 		* Ajouter "ˀ" U+02C0. compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a)
 		* Ajouter "ᵞ" U+1D5E en Majuscule. ibidem
