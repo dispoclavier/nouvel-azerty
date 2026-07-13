@@ -20,6 +20,10 @@ Mise à jour pour macOS des dispositions développées pour Windows, portées so
 
 Correction de la disposition des symboles et ponctuations ASCII.
 
+Inclusion du tilde ASCII au pavé numérique graphique (niveau 5).
+
+Amélioration de l’utilité du niveau 7 avec un tiret et deux flèches.
+
 Prise en charge de ponctuations chinoises, japonaises et coréennes (CJC).
 
 Suspension de la prise en charge de Linux suite aux disruptions d’XKB post-2016.
@@ -43,10 +47,16 @@ Suspension de la prise en charge de Linux suite aux disruptions d’XKB post-201
 			* B10 : Redonder "|" à la place de "!", qui est au niveau AltFr. ibidem
 			* C11 : Redonder "[" à la place de "%", qui est sur D02, niveau 3. dispocla.cpp [e48e4f9](https://github.com/dispoclavier/azerty-complet/commit/e48e4f977111385f610e3fc376fa0fd4067be226), [9c53526](https://github.com/dispoclavier/azerty-complet/commit/9c53526c39b3b46767a252276a178db133bc65f4), ibidem
 			* C12 : Redonder "]" à la place de "*", qui est sur B02, niveau 3. ibidem 
-	* Niveau 3 :
-		* Mettre "|" et la touche morte macron de C10 sur C08 à la place de "[" et de la touche morte ogonek, qui vont sur C09 à la place de "]" et de la touche morte crochet en chef, qui prennent la place de "|" et de la touche morte macron sur C10. dispocla.cpp [659fa37](https://github.com/dispoclavier/azerty-complet/commit/659fa378fb7cc1fc6e0fb14cd6d3752f24779620), [abd9f16](https://github.com/dispoclavier/azerty-complet/commit/abd9f163bcb3d20430a3f5a9db29abf3e43d1c26), kbcomazerty.c [dc6e511](https://github.com/dispoclavier/azerty-complet/commit/dc6e5112d6023397d83e17c4e39eb1ed862fdd7d), [708d865](https://github.com/dispoclavier/azerty-complet/commit/708d865bc3c88d25ca17ecd4ca9a62cf976acd83), kbcomredispo.c [f9e9028](https://github.com/dispoclavier/azerty-complet/commit/f9e902828ee0b4670f78af7ad213643e227a895d), [c09cf2d](https://github.com/dispoclavier/azerty-complet/commit/c09cf2dd7bec20ca17fe80862579052d6177cab1)
+	* Niveaux 3 et 4 :
+		* Mettre "|" et la touche morte macron de C10 sur C08 à la place de "[" et de la touche morte ogonek, qui vont sur C09 à la place de "]" et de la touche morte crochet en chef, qui prennent la place de "|" et de la touche morte macron sur C10. dispocla.cpp [659fa37](https://github.com/dispoclavier/azerty-complet/commit/659fa378fb7cc1fc6e0fb14cd6d3752f24779620), [abd9f16](https://github.com/dispoclavier/azerty-complet/commit/abd9f163bcb3d20430a3f5a9db29abf3e43d1c26), kbcomazerty.c [dc6e511](https://github.com/dispoclavier/azerty-complet/commit/dc6e5112d6023397d83e17c4e39eb1ed862fdd7d), [708d865](https://github.com/dispoclavier/azerty-complet/commit/708d865bc3c88d25ca17ecd4ca9a62cf976acd83), kbcomredispo.c [f9e9028](https://github.com/dispoclavier/azerty-complet/commit/f9e902828ee0b4670f78af7ad213643e227a895d), [c09cf2d](https://github.com/dispoclavier/azerty-complet/commit/c09cf2dd7bec20ca17fe80862579052d6177cab1), compose-1.yml, compose-2.yml, compose-3.yml [f1788aa](https://github.com/dispoclavier/azerty-complet/commit/f1788aa655fedcee336a7c25a4c8022a0aa31421)
 		* Mettre "&" et la touche morte point en chef de D10 sur D07 à la place de "'" et de la touche morte accent aigu, qui vont sur D08 à la place de "{" et de la touche morte crosse, qui vont sur D09 à la place de "}" et de la touche morte crochet rétroflexe, qui prennent la place de "&" et de la touche morte point en chef sur D10. dispocla.cpp [40a50fc](https://github.com/dispoclavier/azerty-complet/commit/40a50fcce1c48c39a2e494a3cec9e8be382638e2), ibidem
+	* Niveau 5 : Redonder "~" sur D05 à la place de "−" U+2212, qui va sur D06 à la place de "µ" U+00B5, qui est au niveau 7 sur C10 "M". dispocla.cpp [e41c128](https://github.com/dispoclavier/azerty-complet/commit/e41c12807c97f48b0c43bd64f1f3e72a1c9d128b), kbcomazerty.c, kbcomredispo.c [3aaaefe](https://github.com/dispoclavier/azerty-complet/commit/3aaaefe576eed158f28deee124015d829fa979c2), [3679c6b](https://github.com/dispoclavier/azerty-complet/commit/3679c6b4fee112c3e6d8e27bfd451c96f4803782)
+	* Niveaux 7 et 8 : Mettre "–" U+2013 de C04 sur C02 à la place de "🙂" U+1F642, qui y monte au niveau 8 à la place de "😔" U+1F614, qui va sur C05 à la place de "⇒" U+21D2, qui y descend au niveau 7 à la place de "→" U+2193, qui va sur C04 à la place laissée par "–" U+2013.
 * Transformations :
+	* Groupes des symboles :
+		* Mettre à jour suite aux redispositions au niveau 3 :
+		* Améliorer l’utilité :
+		* Améliorer la cohérence :
 	* Crosse :
 		* Ajouter "〃" U+3003, "〈" U+3008, "〉" U+3009, "「" U+300C, "」" U+300D, "【" U+3010, "】" U+3011, "〔" U+3014, "〕" U+3015, "〜" U+301C, "〝" U+301D, "〞" U+301E, "〟" U+301F, "〷" U+3037, "〽" U+303D, "〿" U+303F. compose-2.yml [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
 		* Crosse et tilde : Simplifier la saisie de "ᵳ" U+1D73. ibidem
@@ -61,11 +71,12 @@ Suspension de la prise en charge de Linux suite aux disruptions d’XKB post-201
 	* Crochet rétroflexe : Redonder "《" U+300A, "》" U+300B, "『" U+300E, "』" U+300F, "〖" U+3016, "〗" U+3017, "〘" U+3018, "〙" U+3019, "〰" U+3030. ibidem
 	* Point en chef : Redonder "〚" U+301A, "〛" U+301B. ibidem
 	* Groupes des symboles : "\"" groupe 1 : Redonder "ʻ" U+02BB à la place de "★" U+2605, qui est par "€" U+20AC et en composition. compose-3.yml [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
-* Documentation : Corriger ou mettre à jour des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), kbcommon.h, kbcommon-3.c [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388), compose-1.yml, compose-2.yml, compose-3.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe), dispocla.cpp [b219e8b](https://github.com/dispoclavier/nouvel-azerty/commit/b219e8bd22cd1585be239bda66c4174a425d79e8), [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
+* Documentation : Corriger ou mettre à jour des annotations. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), kbcommon.h, kbcommon-3.c [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388), compose-1.yml, compose-2.yml, compose-3.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe), [3679c6b](https://github.com/dispoclavier/azerty-complet/commit/3679c6b4fee112c3e6d8e27bfd451c96f4803782), dispocla.cpp [b219e8b](https://github.com/dispoclavier/nouvel-azerty/commit/b219e8bd22cd1585be239bda66c4174a425d79e8), [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
 * Builds :
 	* 6.2.9.0 [ce5a9a5](https://github.com/dispoclavier/nouvel-azerty/commit/ce5a9a55e799344d877b450ee811fae00f07cac0)
 	* 6.2.9.1 [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388)
 	* 6.2.9.2 [d5defc4](https://github.com/dispoclavier/nouvel-azerty/commit/d5defc4a9d651285dc8644ef704e108b946f3ed6)
+	* 7.0.0.0
 
 ## 6.2.8 (2026-03-24)
 
@@ -2468,6 +2479,21 @@ Amélioration de la prise en charge de l’écriture latine.
 		* Prendre en charge "¦" U+00A6. ibidem
 		* Corriger la séquence de "⎄" U+2384. ibidem
 * Transformations :
+	* Groupes des symboles :
+		* Adapter à la redisposition de "&", "’", "{", "}", "|", "[", "]".
+			* 
+			* 
+			* 
+			* 
+			* 
+			* 
+		* Assurer l’utilité et la cohérence des symboles dans les groupes.
+			* 
+			* 
+			* 
+			* 
+			* 
+			* 
 	* Exposant et groupe 1 :
 		* Ajouter "ˀ" U+02C0. compose-2.yml [32f4db9](https://github.com/dispoclavier/nouvel-azerty/commit/32f4db95799bdfb438dcb58efebb243c58e7745a)
 		* Ajouter "ᵞ" U+1D5E en Majuscule. ibidem
