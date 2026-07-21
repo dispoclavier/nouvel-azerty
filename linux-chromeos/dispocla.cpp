@@ -1,4 +1,4 @@
-//                       Date: 2026-03-29T0624+0200
+//                       Date: 2026-07-21T0547+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1251,9 +1251,9 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC02> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ],
-		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              U1F642,              U1F614 ]
-	}; // U02E2 ˢ MODIFIER LETTER SMALL S; U1F642 🙂 SLIGHTLY SMILING FACE 49th-ranking emoji in 2019; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
+		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              endash,              U1F642 ],
+		[                   s,                   S,              dollar,              dollar,       dead_currency,               U02E2,              endash,              U1F642 ]
+	}; // U02E2 ˢ MODIFIER LETTER SMALL S; U1F642 🙂 SLIGHTLY SMILING FACE 49th-ranking emoji in 2019
 
 	key <AC03> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
@@ -1263,15 +1263,15 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC04> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ],
-		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,              endash,              U1F525 ]
-	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; U1F525 🔥 FIRE 15th-ranking emoji
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,          rightarrow,              U1F525 ],
+		[                   f,                   F,          parenright,          parenright,          dead_breve,               U1DA0,          rightarrow,              U1F525 ]
+	}; // U1DA0 ᶠ MODIFIER LETTER SMALL F; rightarrow U2192 → RIGHTWARDS ARROW; U1F525 🔥 FIRE 15th-ranking emoji
 
 	key <AC05> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,          rightarrow,             implies ],
-		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,          rightarrow,             implies ]
-	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; rightarrow U2192 → RIGHTWARDS ARROW; implies U21D2 ⇒ RIGHTWARDS DOUBLE ARROW
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,             implies,              U1F614 ],
+		[                   g,                   G,               minus,               minus,               UEFD8,               U1D4D,             implies,              U1F614 ]
+	}; // U1D4D ᵍ MODIFIER LETTER SMALL G; UEFD8 *dead_bar; implies U21D2 ⇒ RIGHTWARDS DOUBLE ARROW; U1F614 😔 PENSIVE FACE 4th-top sad face emoji
 
 	key <AC06> {
 		[                   h,                   H,                plus,                plus,           dead_horn,               U02B0,               U2064,              U1F44D ],

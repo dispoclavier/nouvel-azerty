@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Move U1F642 and U1F614 on C02 and C05    7.0.0.0.0 Tue 2026-07-21T0647+0200
 * Debug modification ##6..7 of VK_SPACE    6.2.8.0.0 Tue 2026-03-24T1840+0100
 * Remove padding zero in version number    6.0.9.7.0 Thu 2025-10-02T0335+0200
 * Duplicate leading space in version #     6.0.9.0.0 Mon 2025-09-29T1457+0200
@@ -16,7 +17,7 @@
 * Permutate version # and variant ID       6.0.7.2.0 Tue 2025-09-16T0319+0200
 * Add okay emoji for broken key combos     6.0.4.1.0 Wed 2025-08-27T1840+0200
 * Duplicate Breton trigraph on VK_1        6.0.3.3.0 Thu 2025-08-21T1958+0200
-* Move MCUs to kbligatures.c & others      6.0.3.0.0 Wed 2025-08-20T1930+0200
+* Move MCUs to kbligatures.c and others    6.0.3.0.0 Wed 2025-08-20T1930+0200
 * Add partial file kbligatures.c           6.0.3.0.0 Wed 2025-08-20T1710+0200
 *
 * This file only contains ligatures that do not change across layouts.
@@ -28,7 +29,7 @@
 
 // static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '6', '.', '2', '.', '9', '.', '2', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
+  {VK_ESCAPE, 2, ' ', ' ', 'v', '_', '7', '.', '0', '.', '0', '.', '0', WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE, WCH_NONE},
   // The first code unit of long multiunit ligatures may not be output, hence the leading spaces.
 
   /*****************************************************************************\
@@ -168,8 +169,7 @@
 
   // […]
 
-  {'S'          ,6      ,0xd83d   ,0xde42   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
-  {'S'          ,7      ,0xd83d   ,0xde14   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
+  {'S'          ,7      ,0xd83d   ,0xde42   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   // […]
 

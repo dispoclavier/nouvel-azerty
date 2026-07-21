@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Improve en dash and arrows at level 7    7.0.0.0.0 Tue 2026-07-21T0634+0200
 * Make room for tilde at level 5, D05..D06 7.0.0.0.0 Tue 2026-06-23T1020+0200
 * Invert '_' and '|' and their dead keys   7.0.0.0.0 Mon 2026-06-08T0724+0200
 * Correct ASCII symbols map                7.0.0.0.0 Fri 2026-05-29T0739+0200
