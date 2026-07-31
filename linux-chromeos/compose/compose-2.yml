@@ -14,24 +14,24 @@
 #
 ### Dead keys
 #
-#   While on Windows and macOS, input composition can be emulated by chaining
+#   While on Windows and macOS, input composition can be emulated using chained
 #   dead keys, XKB is to emulate dead keys by input composition. This resulting
-#   configuration file is very human readable, and it is easily converted into
+#   configuration file is very human readable, and it is easily converted to
 #   documentation.
 #   See # # Notes about documentation
 #
-#   Input composition implemented by chaining dead keys is more powerful in
-#   that it supports modularity, as opposed to XCompose that requires listing
-#   all supported sequences, verbatim and in extenso. The reason why is that
-#   this does not work:
+#   Input composition implemented by the means of chained dead keys is more
+#   powerful in that it supports modularity, as opposed to XCompose’
+#   requirement to list all supported sequences, verbatim and in extenso.
+#   The reason why is that this does not work:
 #
 #       <dead_circumflex> <dead_circumflex> : dead_belowcircumflex
 #
-#   then:
+#   Then:
 #
 #       <dead_belowcircumflex> <e>          : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
 #
-#   Although X.org specifies:
+#   Indeed, the output is referred to only as "string", as X.org specifies:
 #
 #       If the string is omitted, Xlib figures it out from the keysym according
 #       to the current locale.
@@ -62,8 +62,9 @@
 #
 #   The issues related to SMP support do not affect Linux nor macOS, as opposed
 #   to Windows, whose DEADTRANS macro only supports one single code unit output
-#   instead of 2, 5 or more, and as a consequence, SMP characters are hard to
-#   input by dead keys.
+#   instead of at least 2 (to support SMP and simply diacriticized BMP), or 16
+#   (maximum length of live key output). As a consequence, SMP characters and
+#   composed letters are unstraightforward to input by dead keys.
 #
 #   Due to more comprehensive support for Unicode characters used in Latin
 #   script as encoded since version 1.1 of the Standard, some sequences in
@@ -72,8 +73,8 @@
 #
 #   With Multi_key thought of as a generic dead key taking arguments, the base
 #   letter that those modifications are applied to is typed last. This pattern
-#   empowers XCompose to apply multiple diacritics as used in Vietnamese and in
-#   Lithuanian. Therefore, it performs much better than the other way around.
+#   empowers XCompose to support multiple diacritics as used in Vietnamese and
+#   in Lithuanian. Therefore, performing much better than the other way around.
 #
 #   As a result, semantics of paired punctuation may be switched compared to
 #   en_US.UTF-8/Compose. For example, the multikey equivalent of dead_breve
@@ -84,9 +85,9 @@
 #   a prepended "U" with a shape-based mnemonic: <Multi_key><U><a>,
 #   as well as a prepended initial: <Multi_key><b><a>.
 #
-#   While that change alone would not warrant a comprehensive overhaul, more
-#   tweaks are required, such as supporting superscript and subscript, using
-#   asciicircum and underscore repurposed, formerly circumflex and macron.
+#   While that change alone would not warrant a thorough overhaul, more tweaks
+#   are required, such as supporting superscript and subscript by repurposing
+#   asciicircum and underscore, formerly circumflex and macron.
 #
 #   So, when "<" and ">" are used for circumflex and hacek (hatchek, caron)
 #   and "|" for macron, ":" gets used for diaeresis like in Vim, and quotedbl
@@ -100,7 +101,7 @@
 #
 #   New-school composition is designed to fully support the Latin script. This
 #   requires repurposing several ASCII symbols, so that en_US.UTF-8/Compose
-#   ends up disrupted, breaking user experience. Such a step is taken only
+#   ends up disrupted, and user experience, broken. Such a step is taken only
 #   because it is unavoidable.
 #
 #   "^" and "_" need to be freed up for super- and subscript/smallcap, applying
@@ -292,15 +293,19 @@
 #   double press of dead_macron.
 #   See #^# MACRON_BELOW
 #
-#   Letters with a real line below are used in languages of Gabon and in Oneida
-#   and require a line-below dead key, standardized in ISO/IEC 9995-11, where
-#   dead keys output combining diacritics to begin with, for post-processing by
-#   applications on Windows that part 11 of the standard has been designed for.
+#   Letters with a real line below are used to write Oneida and languages of
+#   Gabon, and require either an input method for the combining line-below
+#   diacritic ("̲" U0332), or alternatively — and depending on typing habits,
+#   more intuitively — a line-below dead key, standardized in ISO/IEC 9995-11,
+#   where dead keys output combining diacritics to begin with, and require an
+#   additional post-processing step, disqualifying the scheme as a part of the
+#   ISO keyboard layout standard.
 #   See #^# LINE_BELOW
 #
-#   As the output only consists in an added combining diacritic to any letter
-#   typed after, implementing this dead key on non-Windows keyboards requires
-#   knowing the list of letters expected to be supported.
+#   As this dead key’s output only consists in an added combining diacritic,
+#   implementing this dead key on Windows cannot be done in keyboard layout
+#   drivers. Other implementations are based on a list of letters expected to
+#   be supported.
 #
 #   (Although "̲" U0332 COMBINING LOW LINE is defined as connecting, it may not
 #   be used to underline a text span in plain text, due to vertical alignment
@@ -5008,7 +5013,7 @@
 #
 #   The tilde dead key has also intuitive support for the swung dash "⁓" U2053,
 #   with any of the remaining dashes U2013, U2015 as a base character, as well
-#   as with underscore as an alternative ASCII base character.
+#   as with underscore as an ASCII alternative.
 #
 #   As a convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is supported
 #   by dead_tilde followed by asterisk, like "⁂" U2042 ASTERISM is in
@@ -14648,8 +14653,8 @@
 #   Multikey conflicts with "⇍" U21CD, "⇎" U21CE, "⇐" U21D0, "⇔" U21D4, "⟸" U27F8, […]     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <dead_circumflex>                                                                       <question> : "‽" U203D # INTERROBANG
 <Multi_key><less>                                                                       <question> : "‽" U203D # INTERROBANG
-<dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                         <period> : "·" U00B7 # MIDDLE DOT
 #   Multikey conflicts with "⋖" U22D6, "⟐" U27D0, "⪃" U2A83, "⬸" U2B38.                   <period> : "·" U00B7 # MIDDLE DOT
 <dead_circumflex>                                                                      <semicolon> : "‧" U2027 # HYPHENATION POINT

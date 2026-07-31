@@ -20242,7 +20242,7 @@
 #
 #   The tilde dead key has also intuitive support for the swung dash "⁓" U2053,
 #   with any of the remaining dashes U2013, U2015 as a base character, as well
-#   as with underscore as an alternative ASCII base character.
+#   as with underscore as an ASCII alternative.
 #
 #   As a convenience, "⁑" U2051 TWO ASTERISKS ALIGNED VERTICALLY is supported
 #   by dead_tilde followed by asterisk, like "⁂" U2042 ASTERISM is in
@@ -29882,8 +29882,8 @@
 #   Multikey conflicts with "⇍" U21CD, "⇎" U21CE, "⇐" U21D0, "⇔" U21D4, "⟸" U27F8, […]     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <dead_circumflex>                                                                       <question> : "‽" U203D # INTERROBANG
 <Multi_key><less>                                                                       <question> : "‽" U203D # INTERROBANG
-<dead_circumflex>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><less>                                                                          <comma> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                         <period> : "·" U00B7 # MIDDLE DOT
 #   Multikey conflicts with "⋖" U22D6, "⟐" U27D0, "⪃" U2A83, "⬸" U2B38.                   <period> : "·" U00B7 # MIDDLE DOT
 <dead_circumflex>                                                                      <semicolon> : "‧" U2027 # HYPHENATION POINT
@@ -36408,16 +36408,13 @@
 #   to map € on AltGr + E, EuroSign works as a base character as well.
 #   See dispocla.cpp ## Note about EURO SIGN
 #
-#   As quotedbl is also on key E03, level 1, its group 1 is used as a shortcut
-#   for the turned letter apostrophe "ʻ" U02BB MODIFIER LETTER TURNED COMMA.
-#
 #   "〃" U3003 DITTO MARK is also used in Western contexts.
 #   https://github.com/ampproject/amp-wp/pull/4984#discussion_r451953172
 #
 <UEFD0>                                                                                 <EuroSign> : "★" U2605 # BLACK STAR math
 <Multi_key><numbersign>                                                                 <EuroSign> : "★" U2605 # BLACK STAR math
-<UEFD0>                                                                                 <quotedbl> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
-<Multi_key><numbersign>                                                                 <quotedbl> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
+<UEFD0>                                                                                 <quotedbl> : "★" U2605 # BLACK STAR math
+<Multi_key><numbersign>                                                                 <quotedbl> : "★" U2605 # BLACK STAR math
 <UEFD0><UEFD0>                                                                          <EuroSign> : "∈" U2208 # ELEMENT OF math
 <Multi_key><numbersign><numbersign>                                                     <EuroSign> : "∈" U2208 # ELEMENT OF math
 <UEFD0><UEFD0>                                                                          <quotedbl> : "∈" U2208 # ELEMENT OF math
@@ -38049,9 +38046,9 @@
 # # B06 grave
 #
 #   Polynesian ʻeta, Hawaiʻian ʻokina "ʻ" U02BB is here in group 1 of grave for
-#   intuitivity, but an easier alternative is dead_circumflex followed by comma
-#   for an similar user experience as for "ʼ" U02BC in group 1 of apostrophe.
-#   See #*# CIRCUMFLEX
+#   intuitivity, but an easier alternative is dead_circumflex double press
+#   followed by comma.
+#   See #*# HACEK
 #   See # # D07 apostrophe
 #
 #   The "❄" U2744 emoji was previously in group 7 with an alphabetic mnemonic
