@@ -1,4 +1,4 @@
-//                       Date: 2026-07-21T0547+0200
+//                       Date: 2026-08-01T1713+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1205,15 +1205,15 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   u,                   U,           ampersand,                   4,       dead_abovedot,               U1D58,               UEF9F,               UEF8C ],
-		[                   u,                   U,           ampersand,                   4,       dead_abovedot,               U1D58,               UEF9F,               UEF8C ]
-	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEF9F Unicode prefix 'U+'; UEF8C '&apos;'
+		[                   u,                   U,           ampersand,                   4,          dead_acute,               U1D58,               UEF9F,              U1F64F ],
+		[                   u,                   U,           ampersand,                   4,          dead_acute,               U1D58,               UEF9F,              U1F64F ]
+	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEF9F Unicode prefix 'U+'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key <AD08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   i,                   I,          apostrophe,                   5,          dead_acute,               U2071,               UEF7E,              U1F64F ],
-		[                   i,                   I,          apostrophe,                   5,          dead_acute,               U2071,               UEF7E,              U1F64F ]
-	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+		[                   i,                   I,          apostrophe,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ],
+		[                   i,                   I,          apostrophe,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ]
+	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; UEF8C '&apos;'
 
 	key <AD09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
