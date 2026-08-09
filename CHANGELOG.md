@@ -18,9 +18,9 @@ Mise à jour pour macOS des dispositions développées pour Windows, portées so
 
 ## 7.0.0 (projet)
 
-Correction de la disposition des symboles et ponctuations ASCII.
+Correction de la disposition des symboles et ponctuations ASCII au niveau 3.
 
-Inclusion du tilde ASCII au pavé numérique graphique (niveau 5).
+Inclusion du tilde ASCII au pavé numérique graphique du niveau 5.
 
 Correction de la disposition du tiret et des flèches au niveau 7.
 
