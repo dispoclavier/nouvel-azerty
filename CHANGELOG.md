@@ -31,6 +31,7 @@ Prise en charge de ponctuations chinoises, japonaises et coréennes (CJC).
 Suspension de la prise en charge de Linux suite aux disruptions d’XKB post-2016.
 
 * Disposition :
+	* Ajouter une variante d’entrée de gamme limitant les disruptions au débogage du verrouillage Majuscule, et une autre avec quelques retouches logiques.
 	* Niveau Majuscule :
 		* Mode français :
 			* Mouvoir "―" U+2015 de E08 sur E03 à la place de "–" U+2013, qui prend la place de "­" U+00AD sur E05, qui prend la place laissée par "―" U+2015 sur E08. dispocla.cpp [e28b00a](https://github.com/dispoclavier/azerty-complet/commit/e28b00a9aab67e821397481c24dc583bf235b535), [1bb50f0](https://github.com/dispoclavier/azerty-complet/commit/1bb50f00383a58beb7afee3419009b007b36fc4d), [6689afc](https://github.com/dispoclavier/azerty-complet/commit/6689afcdd78e4c38f3f5627753461a3aa6e228d7), [e289bcd](https://github.com/dispoclavier/azerty-complet/commit/e289bcd43c3e77be8b7a93ac37e692de34d9ca51), dispocla_perso.cpp [8dab92e](https://github.com/dispoclavier/azerty-complet/commit/8dab92e088acfb13d83c8d6d9b807a50e508054e), dispotypes.c [3cbce28](https://github.com/dispoclavier/azerty-complet/commit/3cbce281ec7fd328a2ca8a5707c72c85fdc80814), kbfrFRs-allo.c [4a188a0](https://github.com/dispoclavier/azerty-complet/commit/4a188a08329b9ab98911e5f6c13526af959b6727), [29feaa1](https://github.com/dispoclavier/azerty-complet/commit/29feaa157bddf827be786db346e327f461d57c8d), [29b2977](https://github.com/dispoclavier/azerty-complet/commit/29b29776f13aa23e84f828a846cccceb021bf240)
