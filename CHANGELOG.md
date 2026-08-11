@@ -26,6 +26,8 @@ Correction de la disposition du tiret et des flèches au niveau 7.
 
 Mise à jour des groupes des symboles suite aux redispositions au niveau 3.
 
+Émulation des codes Alt + pavé numérique pour claviers compacts sans pavé numérique intégré.
+
 Prise en charge de ponctuations chinoises, japonaises et coréennes (CJC).
 
 Suspension de la prise en charge de Linux suite aux disruptions d’XKB post-2016.
