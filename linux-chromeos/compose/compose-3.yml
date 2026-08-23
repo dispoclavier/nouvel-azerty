@@ -2899,17 +2899,12 @@
 # # Extra symbol group
 #
 #   Three symbols, namely dollar, asciitilde and grave, have an extra group for
-#   the emoji "☀" U2600, "☠" U2620 and "❄" U2744, respectively, As these are in
-#   the BMP, they benefit from the full-support policy. All need a disclaimer.
-#   While the scull-and-crossbones emoji is intrinsically prone to misuse after
-#   its assumed original intent to warn against life threats through poisons,
-#   sun and snowflake are basically inoffensive, but these are hijacked, due to
-#   their "black" text representation as of the sun, or due to the emoji status
-#   and subsequent availability on devices. Against this there is no safeguard,
-#   but for the sun, a possible solution is to use the white sun for the emoji.
-#   See # # Sun emoji
+#   the non-emoji "☼" U263C and the emoji "☠" U2620 and "❄" U2744. The latter
+#   benefit from the BMP full-support policy, but the scull-and-crossbones are
+#   intrinsically prone to misuse beyond the assumed original intent of warning
+#   about life threats, and the snowflake is hijacked based on a slang meaning.
+#   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
 #   See # # C02 dollar
-#   See "☼" U263C
 #   See # # Skull and crossbones emoji
 #   See # # D05 asciitilde
 #   See "☥" U2625
@@ -2923,17 +2918,6 @@
 #   In French, this extra group is called "groupe 1 bis", with a Latin word for
 #   "twice", in English "group 1a". Consistently, in this code, the extra group
 #   comes after group 1, with "<dead_tilde>" prepended to the base character.
-#
-#   Glyphs and shapes may not match exactly, as opposed to the character names.
-#   In any event, safety goes first, in order to make this project more
-#   resilient against suspicions about fostering the input of disguised or
-#   explicit symbols related to ideologies or practices that are firmly
-#   rejected and condemned.
-#   https://en.wikipedia.org/wiki/Black_Sun_(symbol)
-#   https://de.wikipedia.org/wiki/Schwarze_Sonne
-#   https://fr.wikipedia.org/wiki/Soleil_noir_(symbole_occulte)
-#   https://www.lemonde.fr/societe/article/2025/02/15/le-neonazisme-en-france-une-menace-diffuse-et-hybride_6548247_3224.html
-#   https://www.francetvinfo.fr/replay-radio/le-choix-franceinfo/pizza-pilule-bleue-ou-rouge-c-ur-violet-le-sens-cache-de-ces-emojis-que-vous-utilisez-souvent-sur-les-reseaux-sociaux_7130340.html
 #
 #
 # # Symbol group overview
@@ -3878,16 +3862,16 @@
 #   any no-break space, notably the no-break thin space U202F, is uncommon.
 #   https://books.google.com/ngrams/graph?content=%E2%90%A3%2C%E2%8D%BD&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 #
-#   The sun emoji "☀" U2600 BLACK SUN WITH RAYS should be "☼" U263C WHITE SUN
-#   WITH RAYS. As a consequence, the sun emoji is supported in an extra group
-#   and by multikey.
+#   The sun emoji "☀" U2600 BLACK SUN WITH RAYS is also supported by multikey,
+#   and its alternative "☼" U263C WHITE SUN WITH RAYS is supported in the extra
+#   group for convenience, with respect to its use in text style.
 #   See # # Sun emoji
 #   See # # Extra symbol group
 #
 <UEFD0>                                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
 <Multi_key><numbersign>                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
-<UEFD0>                                                                       <dead_tilde><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
-<Multi_key><numbersign>                                                       <dead_tilde><dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<UEFD0>                                                                       <dead_tilde><dollar> : "☼" U263C # WHITE SUN WITH RAYS
+<Multi_key><numbersign>                                                       <dead_tilde><dollar> : "☼" U263C # WHITE SUN WITH RAYS
 <UEFD0><UEFD0>                                                                            <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <Multi_key><numbersign><numbersign>                                                       <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <UEFD0><3>                                                                                <dollar> : "∑" U2211 # N-ARY SUMMATION math
@@ -3896,12 +3880,12 @@
 <Multi_key><numbersign><KP_3>                                                             <dollar> : "∑" U2211 # N-ARY SUMMATION math
 <UEFD0><UEFD0><UEFD0>                                                                     <dollar> : "∑" U2211 # N-ARY SUMMATION math
 <Multi_key><numbersign><numbersign><numbersign>                                           <dollar> : "∑" U2211 # N-ARY SUMMATION math
-<UEFD0><4>                                                                                <dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<Multi_key><numbersign><4>                                                                <dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<UEFD0><KP_4>                                                                             <dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<Multi_key><numbersign><KP_4>                                                             <dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                              <dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                               <dollar> : "☼" U263C # WHITE SUN WITH RAYS
+<UEFD0><4>                                                                                <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><numbersign><4>                                                                <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<UEFD0><KP_4>                                                                             <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><numbersign><KP_4>                                                             <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                              <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                               <dollar> : "☀" U2600 # BLACK SUN WITH RAYS emoji
 <UEFD0><5>                                                                                <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
 <Multi_key><numbersign><5>                                                                <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
 <UEFD0><KP_5>                                                                             <dollar> : "⛑" U26D1 # HELMET WITH WHITE CROSS emoji, rescue worker’s helmet
