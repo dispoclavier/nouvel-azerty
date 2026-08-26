@@ -8,14 +8,15 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Tweak include order for consistency      7.0.0.0.0 Tue 2026-08-25T1816+0200
 * Update variant descriptor string output  6.0.9.9.0 Thu 2025-10-02T1916+0200
 * Copy from kbbrFRs1.C                     6.0.9.9.0 Thu 2025-10-02T1857+0200
 *
 \*****************************************************************************/
 
 #include <windows.h>
-#include "kbazerty.h"
 #include "kbcommon.h"
+#include "kbazerty.h"
 
 #if defined(_M_IA64)
 #pragma section(".data")

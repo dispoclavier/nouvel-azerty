@@ -241,21 +241,27 @@ http://keyman.typepad.com/keyman_weblog/2008/06/robust-key-mess.html
 * The recommended modifier bit for AltGr is 0x10.
 *
 * Then, bicameral letters should not be mapped on levels accessed with AltGr,
-* because on those levels, Caps Lock is unavailable.
+* because on those levels, Caps Lock is ineffective.
 *
 * See [WDK]\inc\api\kbd.h
 * and [WDK]\inc\api\WINUSER.H
 *
+* Key E00 on legacy French AZERTY is VK_OEM_7, while on the default keyboard type
+* it is VK_OEM_3, and it was subsequently defined as such on the French standard
+* AZERTY, while on the French standard BÉPO it is consistently VK_OEM_7.
+*
+* See [WDK]\inc\api\kbd.h:1074
+*
 \**********************************************************************************/
-// Key E00 to Kana Lock:
+// Key E00 (OEM_7) to Kana Lock:
    #undef  T29
    #define T29 _EQ(                                     KANA                      )
 //
-// Key C00 (Caps Lock) to Kana Lock:
+// Key C00 (CAPITAL) to Kana Lock:
 // #undef  T3A
 // #define T3A _EQ(                                     KANA                      )
 //
-// Key E00 to Caps Lock:
+// Key E00 (OEM_7) to Caps Lock:
 // #undef  T29
 // #define T29 _EQ(                                     CAPITAL                   )
 //

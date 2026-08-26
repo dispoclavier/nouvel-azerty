@@ -55,17 +55,17 @@ static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
 
     /*
      * Locale-specific special processing
-		 *
-		 * KLLF_ALTGR is required for VK_RMENU to be distinct from VK_MENU. If this
-		 * flag is not set, the AltGr key has the same effect as the Alt key.
-		 *
-		 * Other flags can also be set and can be combined. Set 0 for no flag.
-		 *
-		 *     KLLF_ALTGR = 1
-		 *     KLLF_SHIFTLOCK = 2
-		 *     KLLF_LRM_RLM = 4
-		 *
-		 * https://kbdlayout.info/features/flags
+     *
+     * KLLF_ALTGR is required for VK_RMENU to be distinct from VK_MENU. If this
+     * flag is not set, the AltGr key has the same effect as the Alt key.
+     *
+     * Other flags can also be set and can be combined. Set 0 for no flag.
+     *
+     *     KLLF_ALTGR = 1
+     *     KLLF_SHIFTLOCK = 2
+     *     KLLF_LRM_RLM = 4
+     *
+     * https://kbdlayout.info/features/flags
      */
     MAKELONG(KLLF_ALTGR, KBD_VERSION),
 

@@ -160,8 +160,8 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * is not enough, nor can removing the keyboard layout locale flag KLLF_ALTGR
 * do the job.
 *
-* AltFr is the ISO key B00, or it goes on the Caps Lock key, and that toggle
-* goes then on right Control, as this is also repurposed for the ISO key B00
+* AltFr is the ISO key B00, or it goes on the Caps Lock key. Then, that toggle
+* goes on right Control, because this is also repurposed for the ISO key B00
 * on ANSI keyboards for markets accustomed to the ISO keyboard.
 *
 * AltEm (Alt Emoji) is supercharged on the Caps Lock toggle key.
@@ -169,7 +169,7 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * AltMa (Alt Math) is supercharged on the Kana Lock toggle key.
 *
 * For Kana Lock and AltMa (Alt Math), key E00 is repurposed, given that
-* on French AZERTY, E00 is allocated to nothing more than superscript 2.
+* on French AZERTY, the only character allocated to E00 is superscript 2.
 *
 \*****************************************************************************/
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
@@ -550,7 +550,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 * ### Caps Lock bug
 *
 * The feature named Swiss German Capitals (SGCAPS) is unable to support dead
-* keys, and above all, it is unable to support multiple code units (ligatures).
+* keys. Even worse, it is unable to support multiple code units (ligatures).
 *
 * https://archives.miloush.net/michkap/archive/2010/07/07/10032340.html
 * https://archives.miloush.net/michkap/archive/2006/01/16/513088.html
@@ -572,7 +572,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 * ### Level 7 bug
 *
-* The level 7 (AltGr + AltFr, i.e. VK_OEM_AX + VK_OEM_102) does not work when
+* The level 7 (AltGr [VK_OEM_AX] + AltFr [VK_OEM_102]) does not work when
 * KanaLock is on, if the key is subject to KanaLock.
 *
 * To work around this issue, the level 7 with KanaLock should be redundant.

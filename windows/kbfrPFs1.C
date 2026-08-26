@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Tweak include order for consistency      7.0.0.0.0 Tue 2026-08-25T1813+0200
 * Rename kbfrPFs.C to kbfrPFs1.C           6.0.9.8.0 Thu 2025-10-02T1515+0200
 * Move alloc table to kbfrPFs-allo.c       6.0.8.0.0 Thu 2025-09-25T1835+0200
 * Move variant ID to UX level 4            6.0.7.3.0 Sun 2025-09-21T1332+0200
@@ -18,8 +19,8 @@
 \*****************************************************************************/
 
 #include <windows.h>
-#include "kbazerty.h"
 #include "kbcommon.h"
+#include "kbazerty.h"
 
 #if defined(_M_IA64)
 #pragma section(".data")

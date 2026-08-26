@@ -25,7 +25,7 @@
 *
 * The Keyboard Table Generation Tool (Unicode) built-in transpiler advises to
 // Put this last so that VkKeyScan interprets number characters
-// as coming from the main section of the kbd [aVkToWch33 for instance]
+// as coming from the main section of the kbd [aVkToWch40 for instance]
 // before considering the numpad [aVkToWch17 for instance].
 *
 * Numpad specials are deactivated as redundant and detrimentally affecting the
