@@ -8,7 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Change VK for modifier 0x20 to VK_PA1    7.0.0.0.0 Thu 2026-08-27T0150+0200
+* Change VK to VK_PA1 for modifier 0x20    7.0.0.0.0 Thu 2026-08-27T0150+0200
 * Reinstate VK_OEM_AX as modifier 0x10     6.2.9.1.0 Wed 2026-04-08T2104+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0923+0200
 * Rename AltLe to AltEm, AltQr to AltMa    6.2.3.0.0 Sat 2026-02-14T1236+0100

@@ -1,7 +1,7 @@
 /*****************************************************************************\
 * Module Name: kbfrdcs-allo.c
 *
-* Row E of main keyboard layout.
+* Row E of DCS AZERTY keyboard layout
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation (pro parte)

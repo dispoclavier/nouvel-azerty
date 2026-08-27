@@ -1,7 +1,7 @@
 /*****************************************************************************\
 * Module Name: kbfrdcs-common.c
 *
-* Rows A..D of AZERTY DCS keyboard layout
+* Rows A..D of DCS AZERTY keyboard layout
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation (pro parte)
