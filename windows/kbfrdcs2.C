@@ -1,5 +1,5 @@
 /*****************************************************************************\
-* Module Name: kbfrFRs2.C
+* Module Name: kbfrdcs2.C
 *
 * Keyboard layout C source.
 *
@@ -8,15 +8,14 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Tweak include order for consistency      7.0.0.0.0 Tue 2026-08-25T1814+0200
-* Update variant descriptor string output  6.0.9.0.1 Mon 2025-09-29T1502+0200
-* Copy from kbfrFRs.C                      6.0.9.0.0 Mon 2025-09-29T1423+0200
+* Adapt to kbfrdcs2.C                      7.0.0.0.0 Tue 2026-08-25T1955+0200
+* Copy from kbfrFRs2.C                     7.0.0.0.0 Tue 2026-08-25T1816+0200
 *
 \*****************************************************************************/
 
 #include <windows.h>
 #include "kbcommon.h"
-#include "kbazerty.h"
+#include "kbfrdcs.h"
 
 #if defined(_M_IA64)
 #pragma section(".data")
@@ -26,14 +25,14 @@
 #define ALLOC_SECTION_LDATA
 #endif
 
-#include "kbfrFRs-allo.c"
+#include "kbfrdcs-allo.c"
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE ,3 ,' ' ,'f' ,'r' ,'_' ,'F' ,'R' ,'_' ,'s' ,'e' ,'m' ,'i' ,'_' ,'_' ,'b' ,'i' ,'s' },
+  {VK_ESCAPE ,3 ,' ' ,'f' ,'r' ,'_' ,'r' ,0x00e9 ,'t' ,'r' ,'o' ,'c' ,'o' ,'m' ,'p' ,'a' ,'t' ,'i' },
 	// The first code unit of long multiunit ligatures may not be output, hence the leading space.
 
-  #include "kbligazerty.c"
+  #include "kbfrdcs-ligatures.c"
   #include "kbligatures.c"
 
   {0         ,0 ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   }
@@ -49,16 +48,16 @@ static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 #include "kbcommon-3.c"
 
 /*****************************************************************************\
-* Note on kbfrFRs2.DEF
+* Note on kbfrdcs2.DEF
 *
 * The .DEF file is not provided. The Keyboard Table Generation Tool (Unicode)
-* generates a .DEF file on the fly while transpiling kbfrFRs2.klc right before
+* generates a .DEF file on the fly while transpiling kbfrdcs2.klc right before
 * giving the sources to the compiler. So, no need to support the .DEF file as
 * a part of the source code.
 *
-* For reference, this is the content of kbfrFRs2.DEF:
+* For reference, this is the content of kbfrdcs2.DEF:
 
-LIBRARY kbfrFRs2
+LIBRARY kbfrdcs2
  
  EXPORTS 
     KbdLayerDescriptor @1

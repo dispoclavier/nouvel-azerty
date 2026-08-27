@@ -7,6 +7,7 @@
 * 1985..2001 Microsoft Corporation (pro parte)
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
+* Define B00 as VK_PA1 for modifier 0x20   7.0.0.0.0 Thu 2026-08-27T0146+0200
 * Reinstate VK_OEM_AX as modifier 0x10     6.2.9.0.0 Wed 2026-04-08T2119+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0926+0200
 * Define TYPEDEF_VK_TO_WCHARS up to 56     6.0.5.0.0 Sat 2025-08-30T2048+0200
@@ -341,10 +342,14 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 *
 \**********************************************************************************/
 /**********************************************************************************\
-* 3.3  KANA ON KEY B00 (VK_OEM_102)
+* 3.3  MODIFIER ON KEY B00 (VK_OEM_102)
+*
+* As B00 is a graphic key by design, its repurposing as a modifier is configurable
+* in the locale header. Therefore, its VK is redefined here, as VK_PA1 for instance
+* (see winuser.h:631).
 *
 * On keyboards with either B00 (VK_OEM_102) or Right Windows (or both),
-* B00 is preferredly mapped to Shift, following user preferences,
+* B00 may be mapped to Shift, following a number of user preferences,
 * while the actual Shift key or Left Windows key could be mapped to Alt.
 * This remapping facilitates Ctrl + Alt (and Shift + Ctrl) key combinations.
 *
@@ -358,6 +363,9 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx
 * Conversely the original mapping of B00 as VK_OEM_102 may be restored
 * using the Scan Code Mapper.
 \**********************************************************************************/
+// AltFr modifier on B00 (VK_OEM_102):
+   #undef  T56
+   #define T56 _EQ(                                    PA1                        )
 // Kana modifier on B00 (VK_OEM_102):
 // #undef  T56
 // #define T56 _EQ(                                    OEM_WSCTRL                 )

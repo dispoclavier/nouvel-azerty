@@ -1,18 +1,16 @@
 /*****************************************************************************\
-* Module Name: kbazerty.h
+* Module Name: kbfrdcs.h
 *
-* Virtual key defines for AZERTY keyboard layouts
+* Virtual key defines for the DCS AZERTY keyboard layout
 *
 * Copyright:
 * 1985..2001 Microsoft Corporation (pro parte)
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Remove redundant T29 _EQ( KANA ) define  7.0.0.0.0 Mon 2026-08-24T1702+0200
-* Move #include <windows.h> back to C sources        Wed 2025-08-27T1300+0200
-* Rename from kbfrFRs.H to kbazerty.h                Fri 2025-08-22T1127+0200
-* Fix non-transpilation of KANA                      Sun 2025-07-20T0354+0200
-* created by KBDTOOL v3.40                           Tue Jun 03 20:53:21 2025
+* Add define for key B00                   7.0.0.0.0 Wed 2026-08-26T1739+0200
+* Add define for key E00                   7.0.0.0.0 Tue 2026-08-25T1947+0200
+* Copy from kbazerty.h                     7.0.0.0.0 Tue 2026-08-25T1101+0200
 *
 \*****************************************************************************/
 
@@ -38,6 +36,15 @@
 *     | code | |   type 1 |   type 2 |   type 3 |   type 4 |   type 5 |   type 6 |
 \****+-------+_+----------+----------+----------+----------+----------+----------+*/
 
+// Key E00
+#undef  T29
+ #define T29 _EQ(                                      OEM_7                      )
+
+// Key B00
+#undef  T56
+ #define T56 _EQ(                                    OEM_102                      )
+
+// Other keys
 #undef  T10
  #define T10 _EQ(                                        'A'                      )
 #undef  T11
@@ -62,4 +69,3 @@
  #define T34 _EQ(                                      OEM_2                      )
 #undef  T35
  #define T35 _EQ(                                      OEM_8                      )
-
