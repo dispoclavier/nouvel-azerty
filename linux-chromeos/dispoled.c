@@ -1,4 +1,4 @@
-//                       Date: 2025-07-15T0726+0200
+//                       Date: 2026-08-29T1326+0200
 //        Operating file name: dispoled
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -15,7 +15,7 @@
 //              Email address: dev[arobase]dispoclavier.com
 //
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-//     in the CLDR, Linux is supported alongside ChromeOS, or through ChromeOS.
+//     in the CLDR, Linux is supported through ChromeOS.
 //
 //               Installation: 1. Add this file in /usr/share/X11/xkb/compat/
 //                             2. In /usr/share/X11/xkb/compat/complete

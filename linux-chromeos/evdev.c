@@ -1,4 +1,4 @@
-//                       Date: 2025-08-01T0630+0200
+//                       Date: 2026-08-29T1328+0200
 //        Operating file name: evdev
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -15,7 +15,7 @@
 //              Email address: dev[arobase]dispoclavier.com
 //
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-//     in the CLDR, Linux is supported alongside ChromeOS, or through ChromeOS.
+//     in the CLDR, Linux is supported through ChromeOS.
 //
 //               Installation: 1. Rename the file
 //                                /usr/share/X11/xkb/keycodes/evdev

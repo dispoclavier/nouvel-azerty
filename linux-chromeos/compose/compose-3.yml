@@ -3486,7 +3486,95 @@
 <Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 #
 #
-# # D07 ampersand
+# # C07 underscore
+#
+#   Thanks to not needing to support U2015 in group 1 of underscore, the first
+#   four groups are available for bullets. While "•" U2022 and "◦" U25E6 are
+#   consistent with mainstream practice, the pick for the intended level-3
+#   bullet is "‣" U2023, consistently with its triangular shape, with the group
+#   number, and with the Unicode scalars. The usual level-3 bullet "▪" U25AA is
+#   an emoji, and as such it is supported group 4 of numbersign as part of a
+#   set of four emoji.
+#   See # # C01 numbersign
+#
+#   Default HTML-CSS bullets are often associated with Unicode characters
+#   "•" U2022 for level 1 "list-style-type: disc", and "◦" U25E6 for level 2
+#   "list-style-type: circle".
+#
+#   The bullet for level 3 and below is usually "list-style-type: square", and
+#   the official square bullet per the Unicode Standard is "▪" U25AA, an emoji
+#   supported in group 4 of numbersign as part of a set of four square emoji.
+#   https://www.unicode.org/charts/nameslist/n_25A0.html
+#   See # # C01 numbersign
+#
+#   Browsers may display "▪" U25AA smaller than CSS "list-style-type: square".
+#   In case it is still considered too big as a lower-level bullet, there is
+#   also "⬝" U2B1D BLACK VERY SMALL SQUARE, eventually somewhat confusable with
+#   "·" U00B7 MIDDLE DOT. "⬝" U2B1D is supported here, in group 4, alongside
+#   "‣" U2023 TRIANGULAR BULLET in group 3 as an interesting alternative, while
+#   "⁃" U2043 HYPHEN BULLET is in group 1 of minus.
+#   See # # C05 minus
+#
+#   The rationale for supporting bullets in the groups of underscore is based
+#   on alphabetic mnemonics when underscore was on C09 "L", level 3, but it has
+#   vanished when underscore moved to C07 "J" in the wake of making room for
+#   EuroSign on D03 "E", level 3 (requiring the braces to move to "I" and "O"
+#   for ergonomics, and the brackets to move to "K" and "L" for consistency).
+#   Still, even after the move, underscore remains the only option for bullets
+#   in the symbol groups, additionally to bullets by multikey.
+#   See #^# Bullets
+#
+<UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
+<Multi_key><numbersign>                                                              <underscore> : "•" U2022 # BULLET
+<UEFD0><UEFD0>                                                                       <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><numbersign>                                                  <underscore> : "◦" U25E6 # WHITE BULLET
+<UEFD0><3>                                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><3>                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><KP_3>                                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><KP_3>                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><4>                                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><4>                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><KP_4>                                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><KP_4>                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><5>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><5>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><KP_5>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><KP_5>                                                        <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><6>                                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><6>                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><KP_6>                                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><KP_6>                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><7>                                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><7>                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><KP_7>                                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><KP_7>                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><8>                                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><8>                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><KP_8>                                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><KP_8>                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><9>                                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><9>                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><KP_9>                                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><KP_9>                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><0>                                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><0>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<UEFD0><KP_0>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><KP_0>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<UEFD0><1>                                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<Multi_key><numbersign><1>                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<UEFD0><KP_1>                                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<Multi_key><numbersign><KP_1>                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<UEFD0><2>                                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<Multi_key><numbersign><2>                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<UEFD0><KP_2>                                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<Multi_key><numbersign><KP_2>                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+#
+#
+# # D08 ampersand
 #
 <UEFD0>                                                                                <ampersand> : "∕" U2215 # DIVISION SLASH math
 <Multi_key><numbersign>                                                                <ampersand> : "∕" U2215 # DIVISION SLASH math
@@ -3536,114 +3624,6 @@
 <Multi_key><numbersign><2>                                                             <ampersand> : "⏬" U23EC # BLACK DOWN-POINTING DOUBLE TRIANGLE emoji, fast down button
 <UEFD0><KP_2>                                                                          <ampersand> : "⏬" U23EC # BLACK DOWN-POINTING DOUBLE TRIANGLE emoji, fast down button
 <Multi_key><numbersign><KP_2>                                                          <ampersand> : "⏬" U23EC # BLACK DOWN-POINTING DOUBLE TRIANGLE emoji, fast down button
-#
-#
-# # D08 apostrophe
-#
-#   For a straightforward user experience, rightsinglequotemark is synced with
-#   apostrophe so as to work as an alias throughout, as done for math symbols.
-#   See #   Alternative keysyms
-#
-#   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
-#   apostrophe and rightsinglequotemark. Its turned counterpart "ʻ" U02BB is
-#   similarly supported in group 1 of grave.
-#   See # # B06 grave
-#
-<UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-<UEFD0><UEFD0>                                                                        <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><numbersign>                                                   <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
-<UEFD0><3>                                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><3>                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><KP_3>                                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><KP_3>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><UEFD0><UEFD0>                                                                 <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><numbersign><numbersign>                                       <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><3>                                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><KP_3>                                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<Multi_key><numbersign><4>                                                            <apostrophe> : "∩" U2229 # INTERSECTION math
-<UEFD0><KP_4>                                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
-<Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                          <apostrophe> : "∩" U2229 # INTERSECTION math
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                           <apostrophe> : "∩" U2229 # INTERSECTION math
-<UEFD0><4>                                                                  <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
-<UEFD0><5>                                                                            <apostrophe> : "∫" U222B # INTEGRAL math
-<Multi_key><numbersign><5>                                                            <apostrophe> : "∫" U222B # INTEGRAL math
-<UEFD0><KP_5>                                                                         <apostrophe> : "∫" U222B # INTEGRAL math
-<Multi_key><numbersign><KP_5>                                                         <apostrophe> : "∫" U222B # INTEGRAL math
-<UEFD0><5>                                                                  <rightsinglequotemark> : "∫" U222B # INTEGRAL math
-<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "∫" U222B # INTEGRAL math
-<UEFD0><KP_5>                                                               <rightsinglequotemark> : "∫" U222B # INTEGRAL math
-<Multi_key><numbersign><KP_5>                                               <rightsinglequotemark> : "∫" U222B # INTEGRAL math
-<UEFD0><6>                                                                            <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
-<Multi_key><numbersign><6>                                                            <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
-<UEFD0><KP_6>                                                                         <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
-<Multi_key><numbersign><KP_6>                                                         <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
-<UEFD0><6>                                                                  <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
-<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
-<UEFD0><KP_6>                                                               <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
-<Multi_key><numbersign><KP_6>                                               <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
-<UEFD0><7>                                                                            <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
-<Multi_key><numbersign><7>                                                            <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
-<UEFD0><KP_7>                                                                         <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
-<Multi_key><numbersign><KP_7>                                                         <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
-<UEFD0><7>                                                                  <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
-<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
-<UEFD0><KP_7>                                                               <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
-<Multi_key><numbersign><KP_7>                                               <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
-<UEFD0><8>                                                                            <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<Multi_key><numbersign><8>                                                            <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<UEFD0><KP_8>                                                                         <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<Multi_key><numbersign><KP_8>                                                         <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<UEFD0><8>                                                                  <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<UEFD0><KP_8>                                                               <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<Multi_key><numbersign><KP_8>                                               <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
-<UEFD0><9>                                                                            <apostrophe> : "♏" U264F # SCORPIUS emoji
-<Multi_key><numbersign><9>                                                            <apostrophe> : "♏" U264F # SCORPIUS emoji
-<UEFD0><KP_9>                                                                         <apostrophe> : "♏" U264F # SCORPIUS emoji
-<Multi_key><numbersign><KP_9>                                                         <apostrophe> : "♏" U264F # SCORPIUS emoji
-<UEFD0><9>                                                                  <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
-<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
-<UEFD0><KP_9>                                                               <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
-<Multi_key><numbersign><KP_9>                                               <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
-<UEFD0><0>                                                                            <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><0>                                                            <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><KP_0>                                                                         <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><KP_0>                                                         <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><0>                                                                  <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><KP_0>                                                               <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
-<Multi_key><numbersign><KP_0>                                               <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
-<UEFD0><1>                                                                            <apostrophe> : "∞" U221E # INFINITY math
-<Multi_key><numbersign><1>                                                            <apostrophe> : "∞" U221E # INFINITY math
-<UEFD0><KP_1>                                                                         <apostrophe> : "∞" U221E # INFINITY math
-<Multi_key><numbersign><KP_1>                                                         <apostrophe> : "∞" U221E # INFINITY math
-<UEFD0><1>                                                                  <rightsinglequotemark> : "∞" U221E # INFINITY math
-<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "∞" U221E # INFINITY math
-<UEFD0><KP_1>                                                               <rightsinglequotemark> : "∞" U221E # INFINITY math
-<Multi_key><numbersign><KP_1>                                               <rightsinglequotemark> : "∞" U221E # INFINITY math
-<UEFD0><2>                                                                            <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<Multi_key><numbersign><2>                                                            <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<UEFD0><KP_2>                                                                         <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<Multi_key><numbersign><KP_2>                                                         <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<UEFD0><2>                                                                  <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<UEFD0><KP_2>                                                               <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
-<Multi_key><numbersign><KP_2>                                               <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
 #
 #
 # # D09 braceleft
@@ -4159,94 +4139,6 @@
 <Multi_key><numbersign><KP_2>                                                             <KP_Add> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
 #
 #
-# # C07 underscore
-#
-#   Thanks to not needing to support U2015 in group 1 of underscore, the first
-#   four groups are available for bullets. While "•" U2022 and "◦" U25E6 are
-#   consistent with mainstream practice, the pick for the intended level-3
-#   bullet is "‣" U2023, consistently with its triangular shape, with the group
-#   number, and with the Unicode scalars. The usual level-3 bullet "▪" U25AA is
-#   an emoji, and as such it is supported group 4 of numbersign as part of a
-#   set of four emoji.
-#   See # # C01 numbersign
-#
-#   Default HTML-CSS bullets are often associated with Unicode characters
-#   "•" U2022 for level 1 "list-style-type: disc", and "◦" U25E6 for level 2
-#   "list-style-type: circle".
-#
-#   The bullet for level 3 and below is usually "list-style-type: square", and
-#   the official square bullet per the Unicode Standard is "▪" U25AA, an emoji
-#   supported in group 4 of numbersign as part of a set of four square emoji.
-#   https://www.unicode.org/charts/nameslist/n_25A0.html
-#   See # # C01 numbersign
-#
-#   Browsers may display "▪" U25AA smaller than CSS "list-style-type: square".
-#   In case it is still considered too big as a lower-level bullet, there is
-#   also "⬝" U2B1D BLACK VERY SMALL SQUARE, eventually somewhat confusable with
-#   "·" U00B7 MIDDLE DOT. "⬝" U2B1D is supported here, in group 4, alongside
-#   "‣" U2023 TRIANGULAR BULLET in group 3 as an interesting alternative, while
-#   "⁃" U2043 HYPHEN BULLET is in group 1 of minus.
-#   See # # C05 minus
-#
-#   The rationale for supporting bullets in the groups of underscore is based
-#   on alphabetic mnemonics when underscore was on C09 "L", level 3, but it has
-#   vanished when underscore moved to C07 "J" in the wake of making room for
-#   EuroSign on D03 "E", level 3 (requiring the braces to move to "I" and "O"
-#   for ergonomics, and the brackets to move to "K" and "L" for consistency).
-#   Still, even after the move, underscore remains the only option for bullets
-#   in the symbol groups, additionally to bullets by multikey.
-#   See #^# Bullets
-#
-<UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
-<Multi_key><numbersign>                                                              <underscore> : "•" U2022 # BULLET
-<UEFD0><UEFD0>                                                                       <underscore> : "◦" U25E6 # WHITE BULLET
-<Multi_key><numbersign><numbersign>                                                  <underscore> : "◦" U25E6 # WHITE BULLET
-<UEFD0><3>                                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><3>                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><KP_3>                                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><KP_3>                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><4>                                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><4>                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><KP_4>                                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><KP_4>                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><5>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><5>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><KP_5>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><KP_5>                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><6>                                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><6>                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><KP_6>                                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><KP_6>                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><7>                                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><7>                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><KP_7>                                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><KP_7>                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><8>                                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><8>                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><KP_8>                                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><KP_8>                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><9>                                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><9>                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><KP_9>                                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><KP_9>                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><0>                                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><0>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><KP_0>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><KP_0>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><1>                                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<Multi_key><numbersign><1>                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<UEFD0><KP_1>                                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<Multi_key><numbersign><KP_1>                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<UEFD0><2>                                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<Multi_key><numbersign><2>                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<UEFD0><KP_2>                                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<Multi_key><numbersign><KP_2>                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-#
-#
 # # C08 bar
 #
 #   While daggers are more extensively supported in dead_tilde together with
@@ -4315,6 +4207,114 @@
 <Multi_key><numbersign><2>                                                                   <bar> : "∥" U2225 # PARALLEL TO math
 <UEFD0><KP_2>                                                                                <bar> : "∥" U2225 # PARALLEL TO math
 <Multi_key><numbersign><KP_2>                                                                <bar> : "∥" U2225 # PARALLEL TO math
+#
+#
+# # D08 apostrophe
+#
+#   For a straightforward user experience, rightsinglequotemark is synced with
+#   apostrophe so as to work as an alias throughout, as done for math symbols.
+#   See #   Alternative keysyms
+#
+#   Letter apostrophe "ʼ" U02BC, used in Breton, is here in group 1 of
+#   apostrophe and rightsinglequotemark. Its turned counterpart "ʻ" U02BB is
+#   similarly supported in group 1 of grave.
+#   See # # B06 grave
+#
+<UEFD0>                                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><numbersign>                                                               <apostrophe> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD0>                                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<Multi_key><numbersign>                                                     <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
+<UEFD0><UEFD0>                                                                        <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><numbersign>                                                   <apostrophe> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><UEFD0>                                                              <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<Multi_key><numbersign><numbersign>                                         <rightsinglequotemark> : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
+<UEFD0><3>                                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><3>                                                            <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><KP_3>                                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><KP_3>                                                         <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><UEFD0><UEFD0>                                                                 <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><numbersign><numbersign>                                       <apostrophe> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><3>                                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><3>                                                  <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><KP_3>                                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<Multi_key><numbersign><4>                                                            <apostrophe> : "∩" U2229 # INTERSECTION math
+<UEFD0><KP_4>                                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
+<Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                          <apostrophe> : "∩" U2229 # INTERSECTION math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                           <apostrophe> : "∩" U2229 # INTERSECTION math
+<UEFD0><4>                                                                  <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<Multi_key><numbersign><4>                                                  <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<UEFD0><KP_4>                                                               <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<Multi_key><numbersign><KP_4>                                               <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                 <rightsinglequotemark> : "∩" U2229 # INTERSECTION math
+<UEFD0><5>                                                                            <apostrophe> : "∫" U222B # INTEGRAL math
+<Multi_key><numbersign><5>                                                            <apostrophe> : "∫" U222B # INTEGRAL math
+<UEFD0><KP_5>                                                                         <apostrophe> : "∫" U222B # INTEGRAL math
+<Multi_key><numbersign><KP_5>                                                         <apostrophe> : "∫" U222B # INTEGRAL math
+<UEFD0><5>                                                                  <rightsinglequotemark> : "∫" U222B # INTEGRAL math
+<Multi_key><numbersign><5>                                                  <rightsinglequotemark> : "∫" U222B # INTEGRAL math
+<UEFD0><KP_5>                                                               <rightsinglequotemark> : "∫" U222B # INTEGRAL math
+<Multi_key><numbersign><KP_5>                                               <rightsinglequotemark> : "∫" U222B # INTEGRAL math
+<UEFD0><6>                                                                            <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
+<Multi_key><numbersign><6>                                                            <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
+<UEFD0><KP_6>                                                                         <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
+<Multi_key><numbersign><KP_6>                                                         <apostrophe> : "∬" U222C # DOUBLE INTEGRAL math
+<UEFD0><6>                                                                  <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
+<Multi_key><numbersign><6>                                                  <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
+<UEFD0><KP_6>                                                               <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
+<Multi_key><numbersign><KP_6>                                               <rightsinglequotemark> : "∬" U222C # DOUBLE INTEGRAL math
+<UEFD0><7>                                                                            <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
+<Multi_key><numbersign><7>                                                            <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
+<UEFD0><KP_7>                                                                         <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
+<Multi_key><numbersign><KP_7>                                                         <apostrophe> : "∭" U222D # TRIPLE INTEGRAL math
+<UEFD0><7>                                                                  <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
+<Multi_key><numbersign><7>                                                  <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
+<UEFD0><KP_7>                                                               <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
+<Multi_key><numbersign><KP_7>                                               <rightsinglequotemark> : "∭" U222D # TRIPLE INTEGRAL math
+<UEFD0><8>                                                                            <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><8>                                                            <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<UEFD0><KP_8>                                                                         <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><KP_8>                                                         <apostrophe> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<UEFD0><8>                                                                  <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><8>                                                  <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<UEFD0><KP_8>                                                               <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<Multi_key><numbersign><KP_8>                                               <rightsinglequotemark> : "ℹ" U2139 # INFORMATION SOURCE emoji
+<UEFD0><9>                                                                            <apostrophe> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><9>                                                            <apostrophe> : "♏" U264F # SCORPIUS emoji
+<UEFD0><KP_9>                                                                         <apostrophe> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><KP_9>                                                         <apostrophe> : "♏" U264F # SCORPIUS emoji
+<UEFD0><9>                                                                  <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><9>                                                  <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
+<UEFD0><KP_9>                                                               <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
+<Multi_key><numbersign><KP_9>                                               <rightsinglequotemark> : "♏" U264F # SCORPIUS emoji
+<UEFD0><0>                                                                            <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><0>                                                            <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><KP_0>                                                                         <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><KP_0>                                                         <apostrophe> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><0>                                                                  <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><0>                                                  <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><KP_0>                                                               <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
+<Multi_key><numbersign><KP_0>                                               <rightsinglequotemark> : "⛔" U26D4 # NO ENTRY emoji
+<UEFD0><1>                                                                            <apostrophe> : "∞" U221E # INFINITY math
+<Multi_key><numbersign><1>                                                            <apostrophe> : "∞" U221E # INFINITY math
+<UEFD0><KP_1>                                                                         <apostrophe> : "∞" U221E # INFINITY math
+<Multi_key><numbersign><KP_1>                                                         <apostrophe> : "∞" U221E # INFINITY math
+<UEFD0><1>                                                                  <rightsinglequotemark> : "∞" U221E # INFINITY math
+<Multi_key><numbersign><1>                                                  <rightsinglequotemark> : "∞" U221E # INFINITY math
+<UEFD0><KP_1>                                                               <rightsinglequotemark> : "∞" U221E # INFINITY math
+<Multi_key><numbersign><KP_1>                                               <rightsinglequotemark> : "∞" U221E # INFINITY math
+<UEFD0><2>                                                                            <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<Multi_key><numbersign><2>                                                            <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<UEFD0><KP_2>                                                                         <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<Multi_key><numbersign><KP_2>                                                         <apostrophe> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<UEFD0><2>                                                                  <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<Multi_key><numbersign><2>                                                  <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<UEFD0><KP_2>                                                               <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
+<Multi_key><numbersign><KP_2>                                               <rightsinglequotemark> : "♾" U267E # PERMANENT PAPER SIGN emoji, infinity
 #
 #
 # # C09 bracketleft

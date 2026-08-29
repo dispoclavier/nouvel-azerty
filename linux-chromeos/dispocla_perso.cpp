@@ -1,4 +1,4 @@
-//                      Date : 2025-11-11T1337+0100
+//                      Date : 2026-08-29T1325+0200
 //      Nom de fichier final : dispocla_perso
 //                  Encodage : UTF-8
 //                      Type : texte/configuration XKB
@@ -15,7 +15,7 @@
 //              Adresse mail : dev[arobase]dispoclavier.com
 //
 //   * Au CLDR d’Unicode, cette plateforme s’appelle ChromeOS, avec comme explication
-//     qu’au CLDR, Linux est pris en charge aux côtés de ChromeOS, ou par ChromeOS.
+//     qu’au CLDR, Linux est pris en charge au travers de ChromeOS.
 //
 //              Installation : Ce fichier doit être installé en premier dans
 //

@@ -1,4 +1,4 @@
-//                       Date: 2026-08-27T2003+0200
+//                       Date: 2026-08-29T1535+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -15,7 +15,7 @@
 //              Email address: dev[arobase]dispoclavier.com
 //
 //   * In Unicode CLDR, this platform is labeled ChromeOS, and it is explained that
-//     in the CLDR, Linux is supported alongside ChromeOS, or through ChromeOS.
+//     in the CLDR, Linux is supported through ChromeOS.
 //
 //               Installation: 1. Add the file dispocla_perso.cpp in
 //
@@ -180,7 +180,7 @@
 // features found on Japanese keyboards such as the halfwidth/fullwidth toggle
 // (hankaku/zenkaku kanji) on B00, the left and the right Thumb Shift modifiers
 // (Oyayubi Shifuto). ISO does not even provide numbers for these, calling the
-// spacebar A03
+// space bar A03.
 // https://web.stanford.edu/class/cs140/projects/pintos/specs/kbd/scancodes-7.html
 //
 // A Windows equivalent of the XKB level 5 modifier key is used in Jan James’
@@ -455,7 +455,7 @@
 //    https://bepo.fr/wiki/Version_1.1rc1/Touches_vives/Espaces
 //
 // b. Semi-automatic punctuation spacing.
-//    Punctuation characters are mapped with NNBSP as polygrams on single key
+//    Punctuation characters are mapped with NBTSP as polygrams on single key
 //    positions along with the same punctuation characters mapped in isolation
 //    on the same keys on another level. Requirements:
 //
@@ -469,7 +469,7 @@
 // A. Advantages of synergistic over semiautomatic punctuation spacing:
 //
 //    1. Transparency. The knowledge about whether a punctuation mark is
-//       being spaced out is intuitive: no spacebar press, no spacing.
+//       being spaced out is intuitive: no space bar press, no spacing.
 //    3. Flexibility. The user decides in every instance whether a character
 //       is spaced out or not, without significant change in gestures.
 //    2. Simplicity. No multiple mapping of the same character with and without
@@ -495,7 +495,7 @@
 // These keyboard layouts support both manual and semiautomatic punctuation
 // spacing, where the spaced-out punctuation characters and the unspaced-out
 // ones are on the same key with different modifiers: Shift for spaced-out,
-// AltFr for unspaced-out while the spacebar yields the no-break thin space.
+// AltFr for unspaced-out while the space bar yields the no-break thin space.
 // Additionally, Shift + AltFr yields unspaced-out punctuation marks "?!:;",
 // with the rationale that after typing a spaced-out punctuation and while the
 // little finger is still on Shift, the ring finger can easily press AltFr, so
@@ -512,7 +512,7 @@
 //
 // Advantages of AltFr over Shift for spaced-out punctuation characters:
 //
-//   1  No inadvertent insertion of NNBSP while typing unspaced punctuation;
+//   1  No inadvertent insertion of NBTSP while typing unspaced punctuation;
 //   2  Consistency with the key name "AltFr" as "Alternate French" modifier;
 //   3  Shift is often considered too far left, while AltFr is better placed;
 //   4  Stability of the question mark as the only unmoved big punctuation;
@@ -527,7 +527,7 @@
 //
 // The NARROW NO-BREAK SPACE is used mainly as a group separator, for SI/BIPM
 // conformant representation of numeric values with more than 3 digits before
-// the comma. That brings the need to map NNBSP and digits at the same level.
+// the comma. That brings the need to map NBTSP and digits at the same level.
 // The first possible level is level 3 (when row E has diacriticized letters)
 // and the next possible level is level 5. The digits at level 3 are used for
 // short numbers followed by a word, where the justifying NO-BREAK SPACE must
@@ -536,7 +536,7 @@
 // on B, for easy input of numbers grouped into triads by the group separator
 // NARROW NO-BREAK SPACE, which is a no-break thin space and as such is fixed
 // width. The level 5 layout is useful too for number input with interspersed
-// typographic operators. These require padding, where NNBSP can be used too.
+// typographic operators. These require padding, where NBTSP can be used too.
 //
 //
 // ## Note about EURO SIGN
@@ -566,9 +566,9 @@
 // mode only.
 // See Compose.yml  Acknowledgements
 //
-// The euro sign is attached to the preceding numeric value using NNBSP, also
+// The euro sign is attached to the preceding numeric value using NBTSP, also
 // used before abbreviated measurement units. As a consequence, the euro sign
-// needs to be mapped at level 5 alongside, in synergy with NNBSP, and so are
+// needs to be mapped at level 5 alongside, in synergy with NBTSP, and so are
 // the dollar, pound, and yen signs, the latter two not at level 3 though.
 //
 // The linked page (https://www.open-std.org/cen/tc304/Euro/Euroreport.html)
@@ -1205,14 +1205,14 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   u,                   U,           ampersand,                   4,          dead_acute,               U1D58,               UEF9F,              U1F64F ],
-		[                   u,                   U,           ampersand,                   4,          dead_acute,               U1D58,               UEF9F,              U1F64F ]
-	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEF9F Unicode prefix 'U+'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,              U1F64F ],
+		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,              U1F64F ]
+	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEFD2 *dead_subscript; UEF9F Unicode prefix 'U+'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key <AD08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   i,                   I,          apostrophe,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ],
-		[                   i,                   I,          apostrophe,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ]
+		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ],
+		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ]
 	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; UEF8C '&apos;'
 
 	key <AD09> {
@@ -1233,13 +1233,13 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[     dead_circumflex,               UEF66,          dead_tilde,               U2039,         asciicircum,      dead_diaeresis,                   C,         bracketleft ],
 		[            quotedbl,           braceleft,         asciicircum,                   C,          underscore,         asciicircum,          underscore,         bracketleft ]
-	}; // UEF66 '‹ ' spaced out with NNBSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
+	}; // UEF66 '‹ ' spaced out with NBTSP; U2039 ‹ SINGLE LEFT-POINTING ANGLE QUOTATION MARK; LEFT BRACKET for application shortcut mapping
 
 	key <AD12> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[          dead_acute,               UEF67,          dead_grave,               U203A,              dollar,            sterling,                   D,        bracketright ],
 		[          underscore,          braceright,           Multi_key,                   D,            currency,               U207C,               U208C,        bracketright ]
-	}; // UEF67 ' ›' spaced out with NNBSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
+	}; // UEF67 ' ›' spaced out with NBTSP; U203A › SINGLE RIGHT-POINTING ANGLE QUOTATION MARK; U207C ⁼ SUPERSCRIPT EQUALS SIGN; U208C ₌ SUBSCRIPT EQUALS SIGN; RIGHT BRACKET for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1280,14 +1280,14 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ],
-		[                   j,                   J,          underscore,                   1,               UEFD2,               U02B2,               U203E,              U1F602 ]
-	}; // U02B2 ʲ MODIFIER LETTER SMALL J; UEFD2 *dead_subscript; U203E ‾ OVERLINE; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
+		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,               U203E,              U1F602 ],
+		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,               U203E,              U1F602 ]
+	}; // U02B2 ʲ MODIFIER LETTER SMALL J; U203E ‾ OVERLINE; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   k,                   K,                 bar,                   2,         dead_macron,               U1D4F,               UEF7B,              U1F605 ],
-		[                   k,                   K,                 bar,                   2,         dead_macron,               U1D4F,               UEF7B,              U1F605 ]
+		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,               UEF7B,              U1F605 ],
+		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,               UEF7B,              U1F605 ]
 	}; // U1D4F ᵏ MODIFIER LETTER SMALL K; UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AC09> {
@@ -1308,7 +1308,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              ugrave,               UEF64,            ellipsis,       guillemotleft,               UEF6C,             percent,                   A,          apostrophe ],
 		[          apostrophe,         bracketleft,               grave,                   A,               U208D,               U207D,               U208D,          apostrophe ]
-	}; // UEF64 '« ' spaced out with NNBSP; UEF6C '[…]' See ## Sequences; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
+	}; // UEF64 '« ' spaced out with NBTSP; UEF6C '[…]' See ## Sequences; U207D ⁽ SUPERSCRIPT LEFT PARENTHESIS; U208D ₍ SUBSCRIPT LEFT PARENTHESIS; APOSTROPHE for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
@@ -1316,7 +1316,7 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               UEFD0,               UEF65,               UEFD0,      guillemotright,            asterisk,                  mu,                   B,           semicolon ],
 		[               minus,        bracketright,               UEFD0,                   B,               U208E,               U207E,               U208E,           semicolon ]
-	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NNBSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; U208E ₎ SUBSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
+	}; // UEFD0 *dead_group; UEF65 ' »' spaced out with NBTSP; U207E ⁾ SUPERSCRIPT RIGHT PARENTHESIS; U208E ₎ SUBSCRIPT RIGHT PARENTHESIS; SEMICOLON for application shortcut mapping
 
 	key.type[Group1] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
@@ -1364,13 +1364,13 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               comma,               UEF63,            question,            question,        dead_cedilla,            question,               U2063,              U1F499 ],
 		[               comma,               grave,            question,            question,        dead_cedilla,               UEF7B,          digitspace,              U1F49A ]
-	}; // UEF63 ' ?' spaced out with NNBSP; UEF7B '&#x'; U2063 INVISIBLE SEPARATOR; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
+	}; // UEF63 ' ?' spaced out with NBTSP; UEF7B '&#x'; U2063 INVISIBLE SEPARATOR; U1F499 💙 BLUE HEART 18th-ranking emoji; U1F49A 💚 GREEN HEART emoji
 
 	key <AB08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[              period,               UEF62,           semicolon,           semicolon,     dead_belowcomma,           semicolon,              U1F631,              U1F4E3 ],
 		[              period,           backslash,           semicolon,           semicolon,     dead_belowcomma,               UEF7A,          punctspace,              U1F4E2 ]
-	}; // UEF62 ' ;' spaced out with NNBSP; UEF7A '&#'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
+	}; // UEF62 ' ;' spaced out with NBTSP; UEF7A '&#'; U1F631 😱 FACE SCREAMING IN FEAR 2nd-top sad face emoji; U1F4E3 📣 CHEERING MEGAPHONE emoji; U1F4E2 📢 PUBLIC ADDRESS LOUDSPEAKER emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_PUNCTUATION_GROUP1";
 	key.type[Group2] = "EIGHT_LEVELS_PUNCTUATION_GROUP2";
@@ -1378,13 +1378,13 @@ xkb_symbols "kbfrFRs" {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[               slash,               UEF61,               colon,               colon,      dead_diaeresis,               U2044,              U1F615,               slash ],
 		[               colon,               slash,               colon,               colon,      dead_diaeresis,               U2044,              U1F612,               slash ]
-	}; // UEF61 ' :' spaced out with NNBSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji
+	}; // UEF61 ' :' spaced out with NBTSP; U2044 ⁄ FRACTION SLASH; U1F615 😕 CONFUSED FACE emoji; U1F612 😒 UNAMUSED FACE 3rd-top sad face emoji
 
 	key <AB10> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
 		[      periodcentered,               UEF60,             section,              exclam,       dead_belowdot,             section,              U1F494,           backslash ],
 		[           semicolon,                 bar,              exclam,              exclam,       dead_belowdot,             section,              U1F609,           backslash ]
-	}; // UEF60 ' !' spaced out with NNBSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
+	}; // UEF60 ' !' spaced out with NBTSP; U1F494 💔 BROKEN HEART 16th-ranking emoji; U1F609 😉 WINKING FACE 24th-ranking emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL1_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL1_CONTROL";
