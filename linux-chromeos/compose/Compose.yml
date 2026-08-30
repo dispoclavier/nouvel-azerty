@@ -1,5 +1,5 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
-#                       Date: 2026-08-29T1622+0200
+#                       Date: 2026-08-30T1810+0200
 #                    Version: See # # Output of keyboard layout version number
 <UEFA0>                     : "version 7.0.0.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
@@ -36238,20 +36238,20 @@
 #   See # # C01 numbersign
 #
 #
-                           	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace	
+#	  	A	Z	E	R	T	Y	U	I	O	P	Q	S	D	F	G	H	J	K	L	M	W	X	C	V	B	N	,		.		/	\	Espace	
 #	  	^	%	€	\	~	@	&	'	{	}	#	$	(	)	-	+	_	|	[	]	/	*	<	>	=	`	,	?	.	;	:	!	␣	⍽
 #	1	⚠	☆	★	√	≃	◌	∕	ʼ	Ω	π	☐	␣	⌀	➔	⁃	±	•	†	⟨	⟩	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	ː	⋅	¡	EMSP	MQSP
 #	2	♿	⚡	∈	∛	≈	⚫	⊂	ˈ	∅	☮	☑	⍽	∂	➜	➖	➕	◦	‡	❰	❱	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	ˑ	꞉	‼	ENSP	NQSP
 #	3	⚛	↯	∋	∜	≅	⚪	⊃	ˌ	∐	∏	☒	∑	☹	☺	☻	∓	‣	⁂	❮	❯	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	⋯	⋮	❕	3/MSP	3/MSP
-#	4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☼	∆	♀	♨	⊎	⬝	⁑ 	⦜	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP
+#	4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☀	∆	♀	♨	⊎	⬝	⁑	⦜	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP
 #	5	∠	☇	⚕	☢	☥	○	⤵	∫	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♚	♔	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⏳	⌚	⁉	MMSP	MMSP
-#	6	✈	☈	✍	♼	☎	❍	⤴	∬	▢	☂	◼	⛷	✡	⚽	☪	☝	♛	♕	⦝ 	Ⓜ	◻	❇	⏪	⏩	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP
+#	6	✈	☈	✍	♼	☎	❍	⤴	∬	▢	☂	◼	⛷	✡	⚽	☪	☝	♛	♕	⦝	Ⓜ	◻	❇	⏪	⏩	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP
 #	7	⚓	⚮	✉	♽	☏	⚬	⚭	∭	⚯	⛸	⬛	⛵	〽	⛴	⛳	⛫	♜	♖	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		⧗	⏰	❣	FSP	FSP
 #	8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⮽	⛩	☸	✊	⛼	⛬	♝	♗	✝	✋	⛆	✴	⚰	✌	⛓	⛅		♃		⧖	⏲	❢	PSP	PSP
 #	9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♞	♘	⚜	⛰	⛎	✳	☄	➸	☕	☁		♄		⸫	∴	∵	TSP	TSP
-#	10	⎋	�	⌦	⌫	⛾ 	⏺	※	⛔	❂	⸿	⏹	§	⚚	⎍	‐	✙	♟	♙	◊	⏸	〰	❎	⮊	➲	⚘	⯀		♅		⸪	⋰	⋱	WNJ	WJ
-#	11	‸	‰	⏏	®	™	⁁	⏫	∞	⚒	¶ 	♯	☉	☾	☽	−	⁜	▲	∣	❐	❒	➰	☧	©	⛛	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP
-#	12	ª	‱	〃	∖	☘	❖	⏬	♾	º	⛏	⚧	✒	⁀	‿	⁒	﬩	▼	∥	❑	❏	➿	∗	✏	⋈	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP
+#	10	⎋	�	⌦	⌫	⛾ 	⏺	※	⛔	❂	⸿	⏹	§	⚚	⎍	‐	⁜	♟	♙	◊	⏸	〰	❎	⋈	➲	⚘	⯀		♅		⸪	⋰	⋱	WNJ	WJ
+#	11	‸	‰	⏏	®	™	⁁	⏫	∞	⚒	¶ 	♯	☉	☾	☽	−	✙	▲	∣	❒	❐	➰	☧	©	⮊	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP
+#	12	ª	‱	〃	∖	☘	❖	⏬	♾	º	⛏	⚧	✒	⁀	‿	⁒	﬩	▼	∥	❑	❏	➿	∗	✏	⛛	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP
 #
 #
 #
@@ -37546,6 +37546,7 @@
 <Multi_key><numbersign><KP_3>                                               <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <UEFD0><UEFD0><UEFD0>                                                       <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key><numbersign><numbersign><numbersign>                             <rightsinglequotemark> : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
+<UEFD0><4>                                                                            <apostrophe> : "∩" U2229 # INTERSECTION math
 <Multi_key><numbersign><4>                                                            <apostrophe> : "∩" U2229 # INTERSECTION math
 <UEFD0><KP_4>                                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
 <Multi_key><numbersign><KP_4>                                                         <apostrophe> : "∩" U2229 # INTERSECTION math
