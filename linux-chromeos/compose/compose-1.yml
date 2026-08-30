@@ -7100,7 +7100,7 @@
 <Multi_key><periodcentered><periodcentered><slash>                                         <space> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><periodcentered><periodcentered><slash>                                  <nobreakspace> : "⋋" U22CB # LEFT SEMIDIRECT PRODUCT
 <Multi_key><slash><backslash><slash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
-<Multi_key><slash><backslash><slash>                                                 <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
+<Multi_key><slash><backslash><slash>                                                <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><periodcentered><slash>                                                  <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><periodcentered><slash>                                           <nobreakspace> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT
 <Multi_key><slash><slash><backslash>                                                       <space> : "⋌" U22CC # RIGHT SEMIDIRECT PRODUCT

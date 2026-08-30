@@ -3524,54 +3524,54 @@
 #   in the symbol groups, additionally to bullets by multikey.
 #   See #^# Bullets
 #
-<UEFD0>                                                                              <underscore> : "•" U2022 # BULLET
-<Multi_key><numbersign>                                                              <underscore> : "•" U2022 # BULLET
-<UEFD0><UEFD0>                                                                       <underscore> : "◦" U25E6 # WHITE BULLET
-<Multi_key><numbersign><numbersign>                                                  <underscore> : "◦" U25E6 # WHITE BULLET
-<UEFD0><3>                                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><3>                                                           <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><KP_3>                                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><KP_3>                                                        <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><UEFD0><UEFD0>                                                                <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<Multi_key><numbersign><numbersign><numbersign>                                      <underscore> : "‣" U2023 # TRIANGULAR BULLET
-<UEFD0><4>                                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><4>                                                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><KP_4>                                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><KP_4>                                                        <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
-<UEFD0><5>                                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><5>                                                           <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><KP_5>                                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<Multi_key><numbersign><KP_5>                                                        <underscore> : "♚" U265A # BLACK CHESS KING
-<UEFD0><6>                                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><6>                                                           <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><KP_6>                                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<Multi_key><numbersign><KP_6>                                                        <underscore> : "♛" U265B # BLACK CHESS QUEEN
-<UEFD0><7>                                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><7>                                                           <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><KP_7>                                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<Multi_key><numbersign><KP_7>                                                        <underscore> : "♜" U265C # BLACK CHESS ROOK
-<UEFD0><8>                                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><8>                                                           <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><KP_8>                                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<Multi_key><numbersign><KP_8>                                                        <underscore> : "♝" U265D # BLACK CHESS BISHOP
-<UEFD0><9>                                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><9>                                                           <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><KP_9>                                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<Multi_key><numbersign><KP_9>                                                        <underscore> : "♞" U265E # BLACK CHESS KNIGHT
-<UEFD0><0>                                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><0>                                                           <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><KP_0>                                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<Multi_key><numbersign><KP_0>                                                        <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
-<UEFD0><1>                                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<Multi_key><numbersign><1>                                                           <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<UEFD0><KP_1>                                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<Multi_key><numbersign><KP_1>                                                        <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
-<UEFD0><2>                                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<Multi_key><numbersign><2>                                                           <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<UEFD0><KP_2>                                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
-<Multi_key><numbersign><KP_2>                                                        <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<UEFD0>                                                                               <underscore> : "•" U2022 # BULLET
+<Multi_key><numbersign>                                                               <underscore> : "•" U2022 # BULLET
+<UEFD0><UEFD0>                                                                        <underscore> : "◦" U25E6 # WHITE BULLET
+<Multi_key><numbersign><numbersign>                                                   <underscore> : "◦" U25E6 # WHITE BULLET
+<UEFD0><3>                                                                            <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><3>                                                            <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><KP_3>                                                                         <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><KP_3>                                                         <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><UEFD0><UEFD0>                                                                 <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<Multi_key><numbersign><numbersign><numbersign>                                       <underscore> : "‣" U2023 # TRIANGULAR BULLET
+<UEFD0><4>                                                                            <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><4>                                                            <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><KP_4>                                                                         <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><KP_4>                                                         <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                          <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                           <underscore> : "⬝" U2B1D # BLACK VERY SMALL SQUARE
+<UEFD0><5>                                                                            <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><5>                                                            <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><KP_5>                                                                         <underscore> : "♚" U265A # BLACK CHESS KING
+<Multi_key><numbersign><KP_5>                                                         <underscore> : "♚" U265A # BLACK CHESS KING
+<UEFD0><6>                                                                            <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><6>                                                            <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><KP_6>                                                                         <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<Multi_key><numbersign><KP_6>                                                         <underscore> : "♛" U265B # BLACK CHESS QUEEN
+<UEFD0><7>                                                                            <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><7>                                                            <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><KP_7>                                                                         <underscore> : "♜" U265C # BLACK CHESS ROOK
+<Multi_key><numbersign><KP_7>                                                         <underscore> : "♜" U265C # BLACK CHESS ROOK
+<UEFD0><8>                                                                            <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><8>                                                            <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><KP_8>                                                                         <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<Multi_key><numbersign><KP_8>                                                         <underscore> : "♝" U265D # BLACK CHESS BISHOP
+<UEFD0><9>                                                                            <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><9>                                                            <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><KP_9>                                                                         <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<Multi_key><numbersign><KP_9>                                                         <underscore> : "♞" U265E # BLACK CHESS KNIGHT
+<UEFD0><0>                                                                            <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><0>                                                            <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<UEFD0><KP_0>                                                                         <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<Multi_key><numbersign><KP_0>                                                         <underscore> : "♟" U265F # BLACK CHESS PAWN emoji
+<UEFD0><1>                                                                            <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<Multi_key><numbersign><1>                                                            <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<UEFD0><KP_1>                                                                         <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<Multi_key><numbersign><KP_1>                                                         <underscore> : "▲" U25B2 # BLACK UP-POINTING TRIANGLE math
+<UEFD0><2>                                                                            <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<Multi_key><numbersign><2>                                                            <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<UEFD0><KP_2>                                                                         <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
+<Multi_key><numbersign><KP_2>                                                         <underscore> : "▼" U25BC # BLACK DOWN-POINTING TRIANGLE math
 #
 #
 # # D08 ampersand
@@ -4324,54 +4324,54 @@
 #   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L73
 #
-<UEFD0>                                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
-<Multi_key><numbersign>                                                             <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
-<UEFD0><UEFD0>                                                                      <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><numbersign><numbersign>                                                 <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
-<UEFD0><3>                                                                          <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><3>                                                          <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><KP_3>                                                                       <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><KP_3>                                                       <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><UEFD0><UEFD0>                                                               <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><numbersign><numbersign>                                     <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><4>                                                                          <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><numbersign><4>                                                          <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<UEFD0><KP_4>                                                                       <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><numbersign><KP_4>                                                       <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                        <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                         <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
-<UEFD0><5>                                                                          <bracketleft> : "∟" U221F # RIGHT ANGLE math
-<Multi_key><numbersign><5>                                                          <bracketleft> : "∟" U221F # RIGHT ANGLE math
-<UEFD0><KP_5>                                                                       <bracketleft> : "∟" U221F # RIGHT ANGLE math
-<Multi_key><numbersign><KP_5>                                                       <bracketleft> : "∟" U221F # RIGHT ANGLE math
-<UEFD0><6>                                                                          <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<Multi_key><numbersign><6>                                                          <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<UEFD0><KP_6>                                                                       <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<Multi_key><numbersign><KP_6>                                                       <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
-<UEFD0><7>                                                                          <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
-<Multi_key><numbersign><7>                                                          <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
-<UEFD0><KP_7>                                                                       <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
-<Multi_key><numbersign><KP_7>                                                       <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
-<UEFD0><8>                                                                          <bracketleft> : "✝" U271D # LATIN CROSS emoji
-<Multi_key><numbersign><8>                                                          <bracketleft> : "✝" U271D # LATIN CROSS emoji
-<UEFD0><KP_8>                                                                       <bracketleft> : "✝" U271D # LATIN CROSS emoji
-<Multi_key><numbersign><KP_8>                                                       <bracketleft> : "✝" U271D # LATIN CROSS emoji
-<UEFD0><9>                                                                          <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
-<Multi_key><numbersign><9>                                                          <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
-<UEFD0><KP_9>                                                                       <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
-<Multi_key><numbersign><KP_9>                                                       <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
-<UEFD0><0>                                                                          <bracketleft> : "◊" U25CA # LOZENGE math
-<Multi_key><numbersign><0>                                                          <bracketleft> : "◊" U25CA # LOZENGE math
-<UEFD0><KP_0>                                                                       <bracketleft> : "◊" U25CA # LOZENGE math
-<Multi_key><numbersign><KP_0>                                                       <bracketleft> : "◊" U25CA # LOZENGE math
-<UEFD0><1>                                                                          <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><1>                                                          <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<UEFD0><KP_1>                                                                       <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_1>                                                       <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
-<UEFD0><2>                                                                          <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                          <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                       <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                       <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<UEFD0>                                                                              <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
+<Multi_key><numbersign>                                                              <bracketleft> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET math
+<UEFD0><UEFD0>                                                                       <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><numbersign><numbersign>                                                  <bracketleft> : "❰" U2770 # HEAVY LEFT-POINTING ANGLE BRACKET ORNAMENT
+<UEFD0><3>                                                                           <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><3>                                                           <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><KP_3>                                                                        <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><KP_3>                                                        <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><UEFD0><UEFD0>                                                                <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><numbersign><numbersign>                                      <bracketleft> : "❮" U276E # HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><4>                                                                           <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><numbersign><4>                                                           <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<UEFD0><KP_4>                                                                        <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><numbersign><KP_4>                                                        <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                         <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                          <bracketleft> : "⦜" U299C # RIGHT ANGLE VARIANT WITH SQUARE
+<UEFD0><5>                                                                           <bracketleft> : "∟" U221F # RIGHT ANGLE math
+<Multi_key><numbersign><5>                                                           <bracketleft> : "∟" U221F # RIGHT ANGLE math
+<UEFD0><KP_5>                                                                        <bracketleft> : "∟" U221F # RIGHT ANGLE math
+<Multi_key><numbersign><KP_5>                                                        <bracketleft> : "∟" U221F # RIGHT ANGLE math
+<UEFD0><6>                                                                           <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
+<Multi_key><numbersign><6>                                                           <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
+<UEFD0><KP_6>                                                                        <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
+<Multi_key><numbersign><KP_6>                                                        <bracketleft> : "⦝" U299D # MEASURED RIGHT ANGLE WITH DOT
+<UEFD0><7>                                                                           <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
+<Multi_key><numbersign><7>                                                           <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
+<UEFD0><KP_7>                                                                        <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
+<Multi_key><numbersign><KP_7>                                                        <bracketleft> : "☨" U2628 # CROSS OF LORRAINE
+<UEFD0><8>                                                                           <bracketleft> : "✝" U271D # LATIN CROSS emoji
+<Multi_key><numbersign><8>                                                           <bracketleft> : "✝" U271D # LATIN CROSS emoji
+<UEFD0><KP_8>                                                                        <bracketleft> : "✝" U271D # LATIN CROSS emoji
+<Multi_key><numbersign><KP_8>                                                        <bracketleft> : "✝" U271D # LATIN CROSS emoji
+<UEFD0><9>                                                                           <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
+<Multi_key><numbersign><9>                                                           <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
+<UEFD0><KP_9>                                                                        <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
+<Multi_key><numbersign><KP_9>                                                        <bracketleft> : "⚜" U269C # FLEUR-DE-LIS emoji
+<UEFD0><0>                                                                           <bracketleft> : "◊" U25CA # LOZENGE math
+<Multi_key><numbersign><0>                                                           <bracketleft> : "◊" U25CA # LOZENGE math
+<UEFD0><KP_0>                                                                        <bracketleft> : "◊" U25CA # LOZENGE math
+<Multi_key><numbersign><KP_0>                                                        <bracketleft> : "◊" U25CA # LOZENGE math
+<UEFD0><1>                                                                           <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><1>                                                           <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><KP_1>                                                                        <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_1>                                                        <bracketleft> : "❐" U2750 # UPPER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                           <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><2>                                                           <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><KP_2>                                                                        <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_2>                                                        <bracketleft> : "❑" U2751 # LOWER RIGHT SHADOWED WHITE SQUARE
 #
 #
 # # C10 bracketright
@@ -4380,54 +4380,54 @@
 #   https://github.com/unicode-org/cldr/blob/9f25bc73c08d43293a83b7699b73135ef3218769/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L74
 #   https://github.com/unicode-org/cldr/blob/main/tools/cldr-code/src/main/java/org/unicode/cldr/util/CodePointEscaper.java#L74
 #
-<UEFD0>                                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
-<Multi_key><numbersign>                                                            <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
-<UEFD0><UEFD0>                                                                     <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<Multi_key><numbersign><numbersign>                                                <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
-<UEFD0><3>                                                                         <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><3>                                                         <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><KP_3>                                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><KP_3>                                                      <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><UEFD0><UEFD0>                                                              <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<Multi_key><numbersign><numbersign><numbersign>                                    <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
-<UEFD0><4>                                                                         <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<Multi_key><numbersign><4>                                                         <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<UEFD0><KP_4>                                                                      <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<Multi_key><numbersign><KP_4>                                                      <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<UEFD0><UEFD0><UEFD0><UEFD0>                                                       <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<Multi_key><numbersign><numbersign><numbersign><numbersign>                        <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
-<UEFD0><5>                                                                         <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
-<Multi_key><numbersign><5>                                                         <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
-<UEFD0><KP_5>                                                                      <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
-<Multi_key><numbersign><KP_5>                                                      <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
-<UEFD0><6>                                                                         <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<Multi_key><numbersign><6>                                                         <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<UEFD0><KP_6>                                                                      <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<Multi_key><numbersign><KP_6>                                                      <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
-<UEFD0><7>                                                                         <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<Multi_key><numbersign><7>                                                         <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<UEFD0><KP_7>                                                                      <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<Multi_key><numbersign><KP_7>                                                      <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
-<UEFD0><8>                                                                         <bracketright> : "✋" U270B # RAISED HAND emoji
-<Multi_key><numbersign><8>                                                         <bracketright> : "✋" U270B # RAISED HAND emoji
-<UEFD0><KP_8>                                                                      <bracketright> : "✋" U270B # RAISED HAND emoji
-<Multi_key><numbersign><KP_8>                                                      <bracketright> : "✋" U270B # RAISED HAND emoji
-<UEFD0><9>                                                                         <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
-<Multi_key><numbersign><9>                                                         <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
-<UEFD0><KP_9>                                                                      <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
-<Multi_key><numbersign><KP_9>                                                      <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
-<UEFD0><0>                                                                         <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<Multi_key><numbersign><0>                                                         <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<UEFD0><KP_0>                                                                      <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<Multi_key><numbersign><KP_0>                                                      <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
-<UEFD0><1>                                                                         <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><1>                                                         <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><KP_1>                                                                      <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_1>                                                      <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
-<UEFD0><2>                                                                         <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><2>                                                         <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<UEFD0><KP_2>                                                                      <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
-<Multi_key><numbersign><KP_2>                                                      <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0>                                                                             <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
+<Multi_key><numbersign>                                                             <bracketright> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET math
+<UEFD0><UEFD0>                                                                      <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<Multi_key><numbersign><numbersign>                                                 <bracketright> : "❱" U2771 # HEAVY RIGHT-POINTING ANGLE BRACKET ORNAMENT
+<UEFD0><3>                                                                          <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><3>                                                          <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><KP_3>                                                                       <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><KP_3>                                                       <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><UEFD0><UEFD0>                                                               <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<Multi_key><numbersign><numbersign><numbersign>                                     <bracketright> : "❯" U276F # HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
+<UEFD0><4>                                                                          <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<Multi_key><numbersign><4>                                                          <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<UEFD0><KP_4>                                                                       <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<Multi_key><numbersign><KP_4>                                                       <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<UEFD0><UEFD0><UEFD0><UEFD0>                                                        <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<Multi_key><numbersign><numbersign><numbersign><numbersign>                         <bracketright> : "♂" U2642 # MALE SIGN emoji, Mars, math
+<UEFD0><5>                                                                          <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
+<Multi_key><numbersign><5>                                                          <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
+<UEFD0><KP_5>                                                                       <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
+<Multi_key><numbersign><KP_5>                                                       <bracketright> : "☣" U2623 # BIOHAZARD SIGN emoji
+<UEFD0><6>                                                                          <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
+<Multi_key><numbersign><6>                                                          <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
+<UEFD0><KP_6>                                                                       <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
+<Multi_key><numbersign><KP_6>                                                       <bracketright> : "Ⓜ" U24C2 # CIRCLED LATIN CAPITAL LETTER M emoji
+<UEFD0><7>                                                                          <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<Multi_key><numbersign><7>                                                          <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<UEFD0><KP_7>                                                                       <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<Multi_key><numbersign><KP_7>                                                       <bracketright> : "⏯" U23EF # BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR emoji, play or pause button
+<UEFD0><8>                                                                          <bracketright> : "✋" U270B # RAISED HAND emoji
+<Multi_key><numbersign><8>                                                          <bracketright> : "✋" U270B # RAISED HAND emoji
+<UEFD0><KP_8>                                                                       <bracketright> : "✋" U270B # RAISED HAND emoji
+<Multi_key><numbersign><KP_8>                                                       <bracketright> : "✋" U270B # RAISED HAND emoji
+<UEFD0><9>                                                                          <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
+<Multi_key><numbersign><9>                                                          <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
+<UEFD0><KP_9>                                                                       <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
+<Multi_key><numbersign><KP_9>                                                       <bracketright> : "⛰" U26F0 # MOUNTAIN emoji
+<UEFD0><0>                                                                          <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<Multi_key><numbersign><0>                                                          <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<UEFD0><KP_0>                                                                       <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<Multi_key><numbersign><KP_0>                                                       <bracketright> : "⏸" U23F8 # DOUBLE VERTICAL BAR emoji, pause button
+<UEFD0><1>                                                                          <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><1>                                                          <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><KP_1>                                                                       <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_1>                                                       <bracketright> : "❒" U2752 # UPPER RIGHT SHADOWED WHITE SQUARE
+<UEFD0><2>                                                                          <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><2>                                                          <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<UEFD0><KP_2>                                                                       <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
+<Multi_key><numbersign><KP_2>                                                       <bracketright> : "❏" U274F # LOWER RIGHT DROP-SHADOWED WHITE SQUARE
 #
 #
 # # B01 slash
