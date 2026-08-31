@@ -83,7 +83,7 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 			* Mouvoir "−" U+2212 dans le groupe 11 de "-" à la place de "⁒" U+2052, qui va dans le groupe 12 de "-" à la place de "‐" U+2010, qui va dans le groupe 10 de "-" à la place laissée par "−" U+2212. ibidem
 			* Permuter "❒" U+2752, qui va dans le groupe 11 de "[", et "❐" U+2750, qui va dans le groupe 11 de "]", conformément à "❑" U+2751 et "❏" U+274F dans le groupe 12 de "[" et "]". ibidem
 		* Suite à la redisposition des touches C07, C08, D07 et D08 :
-			* Mouvoir "∕" U+2215, "⊂" U+2282, "⊃" U+2283, "∪" U+222A, "⤵" U+2935, "⤴" U+2934, "⚭" U+26AD, "⚱" U+26B1, "♎" U+264E, "※" U+203B, "⏫" U+23EB, "⏬" U+23EC des groupes 1 à 12 de "&" aux mêmes de "_". compose-3.yml []()
+			* Mouvoir "∕" U+2215, "⊂" U+2282, "⊃" U+2283, "∪" U+222A, "⤵" U+2935, "⤴" U+2934, "⚭" U+26AD, "⚱" U+26B1, "♎" U+264E, "※" U+203B, "⏫" U+23EB, "⏬" U+23EC des groupes 1 à 12 de "&" aux mêmes de "_". compose-3.yml [90ead6e](https://github.com/dispoclavier/azerty-complet/commit/90ead6e5168b73f859607eacbbe00f3ce0ee4fd9)
 			* Mouvoir "⬝" U+2B1D, "♚" U+265A, "♛" U+265B, "♜" U+265C, "♝" U+265D, "♞" U+265E, "♟" U+265F, "▲" U+25B2, "▼" U+25BC des groupes 4 à 12 de "_" aux mêmes de "'". ibidem
 			* Mouvoir "•" U+2022, "◦" U+25E6, "‣" U+2023 des groupes 1 à 3 de "_" aux mêmes de "&". ibidem
 			* Mouvoir "∩" U+2229, "∫" U+222B, "∬" U+222C, "∭" U+222D, "ℹ" U+2139, "♏" U+264F, "⛔" U+26D4, "∞" U+221E, "♾" U+267E des groupes 4 à 12 de "'" aux mêmes de "&". ibidem

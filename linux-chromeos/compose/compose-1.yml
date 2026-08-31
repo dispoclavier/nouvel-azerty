@@ -10,6 +10,7 @@
 #     Syntactic highlighting: YAML
 #               Installation: Please see in the all-in-one file Compose.yml.
 #
+#
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
 #                      Maxim: Simplify typewriting, not French.
@@ -5089,7 +5090,6 @@
 <Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
 <Multi_key><parenright>                                                               <0><1><0><3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 <Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
-#
 #
 #
 #   START_MATH

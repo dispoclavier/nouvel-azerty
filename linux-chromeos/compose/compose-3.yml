@@ -3483,7 +3483,7 @@
 <Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 #
 #
-# # C07 underscore
+# # D07 underscore
 #
 <UEFD0>                                                                               <underscore> : "∕" U2215 # DIVISION SLASH math
 <Multi_key><numbersign>                                                               <underscore> : "∕" U2215 # DIVISION SLASH math
@@ -4126,7 +4126,7 @@
 <Multi_key><numbersign><KP_2>                                                             <KP_Add> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
 #
 #
-# # C08 bar
+# # C07 bar
 #
 #   While daggers are more extensively supported in dead_tilde together with
 #   their left/right guard or turned counterparts by the base characters digits
@@ -4196,7 +4196,7 @@
 <Multi_key><numbersign><KP_2>                                                                <bar> : "∥" U2225 # PARALLEL TO math
 #
 #
-# # D08 apostrophe
+# # C08 apostrophe
 #
 #   For a straightforward user experience, rightsinglequotemark is synced with
 #   apostrophe so as to work as an alias throughout, as done for math symbols.

@@ -1,5 +1,5 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
-#                       Date: 2026-08-31T1816+0200
+#                       Date: 2026-08-31T1943+0200
 #                    Version: See # # Output of keyboard layout version number
 <UEFA0>                     : "version 7.0.0.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
@@ -5088,7 +5088,6 @@
 <Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
 <Multi_key><parenright>                                                               <0><1><0><3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 <Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
-#
 #
 #
 #   START_MATH
@@ -36799,7 +36798,7 @@
 <Multi_key><numbersign><KP_2>                                                         <dead_greek> : "❖" U2756 # BLACK DIAMOND MINUS WHITE X
 #
 #
-# # C07 underscore
+# # D07 underscore
 #
 <UEFD0>                                                                               <underscore> : "∕" U2215 # DIVISION SLASH math
 <Multi_key><numbersign>                                                               <underscore> : "∕" U2215 # DIVISION SLASH math
@@ -37442,7 +37441,7 @@
 <Multi_key><numbersign><KP_2>                                                             <KP_Add> : "﬩" UFB29 # HEBREW LETTER ALTERNATIVE PLUS SIGN math
 #
 #
-# # C08 bar
+# # C07 bar
 #
 #   While daggers are more extensively supported in dead_tilde together with
 #   their left/right guard or turned counterparts by the base characters digits
@@ -37512,7 +37511,7 @@
 <Multi_key><numbersign><KP_2>                                                                <bar> : "∥" U2225 # PARALLEL TO math
 #
 #
-# # D08 apostrophe
+# # C08 apostrophe
 #
 #   For a straightforward user experience, rightsinglequotemark is synced with
 #   apostrophe so as to work as an alias throughout, as done for math symbols.
