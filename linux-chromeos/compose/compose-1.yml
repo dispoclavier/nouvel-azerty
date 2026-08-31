@@ -2794,6 +2794,15 @@
 <Multi_key><parenleft><parenright><minus>                                                          : "⁐" U2050 # CLOSE UP
 #
 #
+# # Replacement character
+#
+#   This character is usually handled at rendering level only. Making it part
+#   of the original text stream may be considered questionable. Therefore, this
+#   is experimental.
+#
+<Multi_key><less><question>                                                                        : "�" UFFFD # REPLACEMENT CHARACTER
+#
+#
 #^# Tone bars
 #
 #   The bar may be a dot, and the stem may be to the right or alternatively to
@@ -5080,6 +5089,7 @@
 <Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
 <Multi_key><parenright>                                                               <0><1><0><3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 <Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
+#
 #
 #
 #   START_MATH
