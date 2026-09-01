@@ -2042,7 +2042,7 @@
 #   U2E3A and THREE-EM DASH U2E3B, the SOFT HYPHEN and NON-BREAKING HYPHEN are
 #   left over as base characters for HORIZONTAL BAR.
 #   See ### Group dead key introduction
-#   See # # C07 underscore
+#   See # # D07 underscore
 #
 #   The HORIZONTAL BAR Unicode informative alias is “quotation dash”. No doubt
 #   the Cambria font makes the most sense of it, giving it a three-quarter em
@@ -2937,13 +2937,13 @@
 #	1	⚠	☆	★	√	≃	◌	∕	•	Ω	π	☐	␣	⌀	➔	⁃	±	†	ʼ	⟨	⟩	✘	✗	✓	✔	≡	ʻ	❤	¿	‧	ː	⋅	¡	EMSP	MQSP
 #	2	♿	⚡	∈	∛	≈	⚫	⊂	◦	∅	☮	☑	⍽	∂	➜	➖	➕	‡	ˈ	❰	❱	➗	✖	⩽	⩾	≙	∧	♥	⁇	∙	ˑ	꞉	‼	ENSP	NQSP
 #	3	⚛	↯	∋	∜	≅	⚪	⊃	‣	∐	∏	☒	∑	☹	☺	☻	∓	⁂	ˌ	❮	❯	÷	×	✂	✅	≠	∨	♣	❔	ꞏ	⋯	⋮	❕	3/MSP	3/MSP
-#	4	∀	∄	∃	♻	⛺	●	∪	∩	⭕	⛱	▪	☀	∆	♀	♨	⊎	⁑	⬝	⦜	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP
-#	5	∠	☇	⚕	☢	☥	○	⤵	∫	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♔	♚	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⏳	⌚	⁉	MMSP	MMSP
-#	6	✈	☈	✍	♼	☎	❍	⤴	∬	▢	☂	◼	⛷	✡	⚽	☪	☝	♕	♛	⦝	Ⓜ	◻	❇	⏪	⏩	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP
-#	7	⚓	⚮	✉	♽	☏	⚬	⚭	∭	⚯	⛸	⬛	⛵	〽	⛴	⛳	⛫	♖	♜	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		⧗	⏰	❣	FSP	FSP
+#	4	∀	∄	∃	♻	⛺	●	∪	⬝	⭕	⛱	▪	☀	∆	♀	♨	⊎	⁑	⁎	⦜	♂	▫	❌	✀	►	≜	¬	♦	❓	⋅	⁛	⁞	❗	4/MSP	4/MSP
+#	5	∠	☇	⚕	☢	☥	○	∩	∫	⛈	☔	◾	⛑	∇	⛲	⛐	☤	♔	♚	∟	☣	◽	⭐	◀	▶	⚖	⛄	♠	⁈	·	⏳	⌚	⁉	MMSP	MMSP
+#	6	✈	☈	✍	♼	☎	❍	⤴	∬	▢	☂	◼	⛷	⤵	⚽	☪	☝	♕	♛	⦝	Ⓜ	◻	❇	⏪	⏩	⚾	☃		☿		⌛	⏱	⚠	6/MSP	6/MSP
+#	7	⚓	⚮	✉	♽	☏	⚬	⚭	∭	⚯	⛸	⬛	⛵	✡	⛴	⛳	⛫	♖	♜	☨	⏯	⬜	✨	⏮	⏭	⛹	❆		♁		⧗	⏰	❣	FSP	FSP
 #	8	⚗	†	⛪	⛯	⚙	☯	⚱	ℹ	☦	⛽	⮽	⛩	☸	✊	⛼	⛬	♗	♝	✝	✋	⛆	✴	⚰	✌	⛓	⛅		♃		⧖	⏲	❢	PSP	PSP
 #	9	♈	♉	♊	♋	♌	♍	♎	♏	♐	♑	♒	♓	↪	↩	➟	✚	♘	♞	⚜	⛰	⛎	✳	☄	➸	☕	☁		♄		⸫	∴	∵	TSP	TSP
-#	10	⎋	�	⌦	⌫	⛾ 	⏺	※	⛔	❂	⸿	⏹	§	⚚	⎍	‐	⁜	♙	♟	◊	⏸	〰	❎	⋈	➲	⚘	⯀		♅		⸪	⋰	⋱	WNJ	WJ
+#	10	⎋	〽	⌦	⌫	⛾ 	⏺	※	⛔	❂	⸿	⏹	§	⚚	⎍	‐	⁜	♙	♟	◊	⏸	〰	❎	⋈	➲	⚘	⯀		♅		⸪	⋰	⋱	WNJ	WJ
 #	11	‸	‰	⏏	®	™	⁁	⏫	∞	⚒	¶ 	♯	☉	☾	☽	−	✙	∣	▲	❒	❐	➰	☧	©	⮊	♭	♮	⚑	♆	⁖	⸙	¦	⟰	HSP	HSP
 #	12	ª	‱	〃	∖	☘	❖	⏬	♾	º	⛏	⚧	✒	⁀	‿	⁒	﬩	∥	▼	❑	❏	➿	∗	✏	⛛	⚔	⟂	⚐	♇	⁘	⌘	‖	⌨	IDSP	IDSP
 #
@@ -2961,7 +2961,7 @@
 #   here in symbol group 12 consistently with "a" and "o" and are additionally
 #   supported by multikey.
 #   See #^# Legacy ordinal indicators
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 <UEFD0>                                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
 <Multi_key><numbersign>                                                              <asciicircum> : "⚠" U26A0 # WARNING SIGN emoji, ergonomic mapping
@@ -3025,7 +3025,7 @@
 #   in group 8, additionally to the two main daggers in groups 1 and 2 of bar
 #   where they are prone to replacement, the full set of daggers in dead_tilde,
 #   and several shortcuts in other dead keys.
-#   See # # C10 bar
+#   See # # C07 bar
 #   See #*# TILDE
 #
 <UEFD0>                                                                                  <percent> : "☆" U2606 # WHITE STAR math
@@ -3750,7 +3750,7 @@
 #   The light checkbox variant "⮽" U2BBD is in group 10 rather than in group 4,
 #   because group 4 is used for "▪" U25AA consistently with "⬝" U2B1D in the
 #   same group of underscore.
-#   See # # C07 underscore
+#   See # # D07 underscore
 #
 #   The black or white square emoji, coming in four sizes as U25AA, U25AB,
 #   U25FB, U25FC, U25FD, U25FE, U2B1B, U2B1C, are dispatched by color in two
@@ -5038,7 +5038,7 @@
 #   to group 12 used for "‖" U2016 DOUBLE VERTICAL LINE, consistently with
 #   "∥" U2225 in the same group of bar.
 #   See # # Symbols for multikey
-#   See # # C10 bar
+#   See # # C07 bar
 #
 #   For an easier input method with respect to its potentially high frequency
 #   due to its intended repurposing as multikey symbol, "¦" U00A6 is also in

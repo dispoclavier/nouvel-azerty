@@ -10,7 +10,6 @@
 #     Syntactic highlighting: YAML
 #               Installation: Please see in the all-in-one file Compose.yml.
 #
-#
 #               Project name: Dispoclavier
 #                Project URL: https://dispoclavier.com
 #                      Maxim: Simplify typewriting, not French.
@@ -2439,7 +2438,7 @@
 #   <Multi_key><period><minus> ("·" U00B7) and <Multi_key><period><equal>
 #   ("•" U2022) sequences cannot be maintained throughout.
 #   See #^# Bullets
-#   See # # C07 underscore
+#   See # # D07 underscore
 #
 #
 # # Dashes and hyphens
@@ -2670,7 +2669,7 @@
 #   See #^# Legacy ordinal indicators
 #   See # # C05 minus
 #   See # # D01 asciicircum
-#   See # # D09 braceright
+#   See # # D10 braceright
 #   See # # Fallback input methods for HORIZONTAL BAR
 #
 #   In any event, as a matter of leaving nobody stranded, HYPHEN has an easy,
@@ -3203,7 +3202,7 @@
 #   A set of bullets is supported in the symbol groups, but it is limited to
 #   "•" U2022, "◦" U25E6, "‣" U2023 and "⬝" U2B1D, as well as "▪" U25AA and
 #   "⁃" U2043.
-#   See # # C07 underscore
+#   See # # D08 ampersand
 #   See # # C01 numbersign
 #   See # # C05 minus
 #
@@ -5744,7 +5743,7 @@
 #
 #   With a similar mnemonic, "∥" U2225 is in group 12 of bar, while "‖" U2016
 #   is in the same group of colon, mitigating a potential accessibility bias.
-#   See # # C10 bar
+#   See # # C07 bar
 #   See # # B09 colon
 #
 #   Additionally, this can be input by dead_diaeresis followed by slash (not
@@ -10011,7 +10010,7 @@
 #   See # # C06 plus
 #   See # # B02 asterisk
 #   See # # D04 backslash
-#   See # # C10 bar
+#   See # # C07 bar
 #   See # # B01 slash
 #   See # # B04 greater
 #   See # # B06 grave

@@ -4649,7 +4649,7 @@
 #
 #   "⦰" U29B0 is supported with braceright as a base character consistently
 #   with the base character of "∅" U2205 in the symbol group 2.
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 #
 #   Glottal stop
@@ -7943,6 +7943,9 @@
 #   For i and j, dead_abovedot results in DOTLESS, applying binary logic. As a
 #   consequence, dotless letters do not need support on live keys or in groups.
 #
+#
+#   Combining diacritics
+#
 #   This supports various combining dots, with digits as base characters, and
 #   with numeric or numpad-based mnemonics using the position of the key on the
 #   numpad or the bump on key "5" (C52):
@@ -7953,16 +7956,19 @@
 #       7    "᷸" U1DF8 COMBINING DOT ABOVE LEFT
 #       9    "͘" U0358 COMBINING DOT ABOVE RIGHT
 #
-#   This scheme also includes three paper symbols, with alphabetic mnemonic,
-#   as well as — for the permanent paper symbol — a shape-based mnemonic using
-#   digit 8. The remaining two slots 4 and 6 are populated with duplicates.
-#   See #*# RETROFLEX_HOOK
-#   See # # D04 backslash
-#   See # # D08 braceleft
+#
+#   Paper symbols
+#
+#   This scheme also includes three paper symbols, with a shape-based mnemonic
+#   using digit 8 for the permanent paper symbol. The remaining slots are
+#   populated with duplicates.
 #
 #       0 and 6    "♼" U267C RECYCLED PAPER SYMBOL
 #       2 and 4    "♽" U267D PARTIALLY-RECYCLED PAPER SYMBOL
 #       8          "♾" U267E PERMANENT PAPER SIGN
+#
+#
+#   Chinantec tone marks
 #
 #   The Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718, "ꜙ" UA719 are intuitively
 #   supported with matching base characters bar, slash and underscore (due to
@@ -7973,25 +7979,7 @@
 #   See #^# Chinantec tone marks
 #
 #
-#   Fullwidth punctuation
-#
-#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
-#   yields CJK symbols and punctuation, single on single press, most double on
-#   double press, and triple press yields "〚" U301A, "〛" U301B.
-#
-#            <bracketleft> : "〚" U301A LEFT WHITE SQUARE BRACKET
-#           <bracketright> : "〛" U301B RIGHT WHITE SQUARE BRACKET
-#
-#   Single press is in dead_hook.
-#   See #*# HOOK
-#
-#   Double press is duplicated in *dead_retroflexhook.
-#   See #^# CURL
-#   See #*# RETROFLEX_HOOK
-#
-#   Triple press is duplicated in dead_abovedot.
-#   See #^# SQUIRREL_TAIL
-#   See #*# DOT_ABOVE
+#   Math symbols
 #
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   plus yields "∔" U2214; equal yields "≐" U2250 in group 0, and "⩧" U2A67 in
@@ -8034,10 +8022,6 @@
 #   Multikey is supported as part of math symbols.                                          <plus> : "∔" U2214 # DOT PLUS
 <dead_abovedot>                                                                       <underscore> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
 #   Multikey conflicts with "․" U2024.                                                <underscore> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<dead_abovedot>                                                                      <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
-<Multi_key><period>                                                                  <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
-<dead_abovedot>                                                                     <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
-<Multi_key><period>                                                                 <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
 <dead_abovedot>                                                                              <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 #   Multikey conflicts with "Ǡ" U01E0, "ǡ" U01E1, "Ȱ" U0230, "ȱ" U0231.                      <bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
 <dead_abovedot>                                                                            <slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
@@ -8485,8 +8469,10 @@
 #
 #   Tone bars
 #
-#   This includes tone bars, due to good mnemonic based on "I", mapped like "{"
-#   on D08. Tone bars also have dedicated multikey support.
+#   This includes tone bars, because there is no room in dead_tilde (with
+#   alphabetic mnemonic) and in dead_abovedot (with graphic mnemonic), with
+#   some far-fetched mnemonic based on "O", mapped like "{" on D09. Tone bars
+#   also have dedicated multikey support.
 #   See #^# Tone bars
 #
 #
@@ -8496,44 +8482,6 @@
 #   a mnemonic both semantic based on sentence-ending period and flower, and
 #   graphic based on keycap "I".
 #   See #*# BREVE
-#
-#
-#   Fullwidth punctuation
-#
-#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
-#   yields CJK symbols and punctuation, single on single press, most double on
-#   double press, and triple press yields "〚" U301A, "〛" U301B.
-#
-#                 quotedbl : "〃" U3003 DITTO MARK
-#                 EuroSign : "〃" U3003 DITTO MARK
-#                    grave : "〝" U301D REVERSED DOUBLE PRIME QUOTATION MARK
-#               apostrophe : "〞" U301E DOUBLE PRIME QUOTATION MARK
-#     rightsinglequotemark : "〞" U301E DOUBLE PRIME QUOTATION MARK
-#                    comma : "〟" U301F LOW DOUBLE PRIME QUOTATION MARK
-#               asciitilde : "〜" U301C WAVE DASH
-#                braceleft : "〔" U3014 LEFT TORTOISE SHELL BRACKET
-#               braceright : "〕" U3015 RIGHT TORTOISE SHELL BRACKET
-#                parenleft : "【" U3010 LEFT BLACK LENTICULAR BRACKET
-#               parenright : "】" U3011 RIGHT BLACK LENTICULAR BRACKET
-#              bracketleft : "「" U300C LEFT CORNER BRACKET
-#             bracketright : "」" U300D RIGHT CORNER BRACKET
-#                     less : "〈" U3008 LEFT ANGLE BRACKET
-#                  greater : "〉" U3009 RIGHT ANGLE BRACKET
-#                        A : "〽" U303D PART ALTERNATION MARK
-#                        a : "〽" U303D PART ALTERNATION MARK
-#                        X : "〷" U3037 IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
-#                        x : "〿" U303F IDEOGRAPHIC HALF FILL SPACE
-#
-#   Single press is in dead_hook.
-#   See #*# HOOK
-#
-#   Double press is duplicated in *dead_retroflexhook.
-#   See #^# CURL
-#   See #*# RETROFLEX_HOOK
-#
-#   Triple press is duplicated in dead_abovedot.
-#   See #^# SQUIRREL_TAIL
-#   See #*# DOT_ABOVE
 #
 #
 #   Diacritic
@@ -8556,32 +8504,6 @@
 <Multi_key><braceleft>                                                                  <quotedbl> : "〃" U3003 # DITTO MARK
 <dead_hook>                                                                             <EuroSign> : "〃" U3003 # DITTO MARK
 <Multi_key><braceleft>                                                                  <EuroSign> : "〃" U3003 # DITTO MARK
-<dead_hook>                                                                                <grave> : "〝" U301D # REVERSED DOUBLE PRIME QUOTATION MARK
-#   Multikey conflicts with "Ʋ̀", "ʋ̀".                                                    <grave> : "〝" U301D # REVERSED DOUBLE PRIME QUOTATION MARK
-<dead_hook>                                                                           <apostrophe> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
-#   Multikey conflicts with "Ʋ́", "ʋ́".                                               <apostrophe> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
-<dead_hook>                                                                 <rightsinglequotemark> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
-<Multi_key><braceleft>                                                      <rightsinglequotemark> : "〞" U301E # DOUBLE PRIME QUOTATION MARK
-<dead_hook>                                                                                <comma> : "〟" U301F # LOW DOUBLE PRIME QUOTATION MARK
-<Multi_key><braceleft>                                                                     <comma> : "〟" U301F # LOW DOUBLE PRIME QUOTATION MARK
-<dead_hook>                                                                           <asciitilde> : "〜" U301C # WAVE DASH
-#   Multikey conflicts with "ᵳ" U1D73.                                                <asciitilde> : "〜" U301C # WAVE DASH
-<dead_hook>                                                                            <braceleft> : "〔" U3014 # LEFT TORTOISE SHELL BRACKET
-#   Multikey conflicts with "Ɋ" U024A, "ɋ" U024B, "˒" U02D2, "˓" U02D3, "͚" U035A, […] <braceleft> : "〔" U3014 # LEFT TORTOISE SHELL BRACKET
-<dead_hook>                                                                           <braceright> : "〕" U3015 # RIGHT TORTOISE SHELL BRACKET
-#   Multikey conflicts with "ʯ" U02AF, "ᶑ" U1D91, "𐞍" U1078D, "𝼉" U1DF09, "𝼖" U1DF16. <braceright> : "〕" U3015 # RIGHT TORTOISE SHELL BRACKET
-<dead_hook>                                                                            <parenleft> : "【" U3010 # LEFT BLACK LENTICULAR BRACKET
-<Multi_key><braceleft>                                                                 <parenleft> : "【" U3010 # LEFT BLACK LENTICULAR BRACKET
-<dead_hook>                                                                           <parenright> : "】" U3011 # RIGHT BLACK LENTICULAR BRACKET
-<Multi_key><braceleft>                                                                <parenright> : "】" U3011 # RIGHT BLACK LENTICULAR BRACKET
-<dead_hook>                                                                          <bracketleft> : "「" U300C # LEFT CORNER BRACKET
-<Multi_key><braceleft>                                                               <bracketleft> : "「" U300C # LEFT CORNER BRACKET
-<dead_hook>                                                                         <bracketright> : "」" U300D # RIGHT CORNER BRACKET
-<Multi_key><braceleft>                                                              <bracketright> : "」" U300D # RIGHT CORNER BRACKET
-<dead_hook>                                                                                 <less> : "〈" U3008 # LEFT ANGLE BRACKET
-#   Multikey conflicts with "Ʋ̌", "ʋ̌".                                                     <less> : "〈" U3008 # LEFT ANGLE BRACKET
-<dead_hook>                                                                              <greater> : "〉" U3009 # RIGHT ANGLE BRACKET
-#   Multikey conflicts with "Ʋ̌", "ʋ̌".                                                  <greater> : "〉" U3009 # RIGHT ANGLE BRACKET
 <dead_hook>                                                                                    <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <Multi_key><braceleft>                                                                         <1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
 <dead_hook>                                                                                 <KP_1> : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
@@ -8672,10 +8594,6 @@
 <Multi_key><braceleft>                                                                         <W> : "Ⱳ" U2C72 # LATIN CAPITAL LETTER W WITH HOOK
 <dead_hook>                                                                                    <w> : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
 <Multi_key><braceleft>                                                                         <w> : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
-<dead_hook>                                                                                    <X> : "〷" U3037 # IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
-<Multi_key><braceleft>                                                                         <X> : "〷" U3037 # IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL
-<dead_hook>                                                                                    <x> : "〿" U303F # IDEOGRAPHIC HALF FILL SPACE
-<Multi_key><braceleft>                                                                         <x> : "〿" U303F # IDEOGRAPHIC HALF FILL SPACE
 <dead_hook>                                                                                    <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
 <Multi_key><braceleft>                                                                         <Y> : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
 <dead_hook>                                                                                    <y> : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
@@ -8850,34 +8768,6 @@
 #   by themselves.
 #
 #
-#   Fullwidth punctuation
-#
-#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
-#   yields CJK symbols and punctuation, single on single press, most double on
-#   double press, and triple press yields "〚" U301A, "〛" U301B.
-#
-#               asciitilde : "〰" U3030 WAVY DASH
-#                braceleft : "〘" U3018 LEFT WHITE TORTOISE SHELL BRACKET
-#               braceright : "〙" U3019 RIGHT WHITE TORTOISE SHELL BRACKET
-#                parenleft : "〖" U3016 LEFT WHITE LENTICULAR BRACKET
-#               parenright : "〗" U3017 RIGHT WHITE LENTICULAR BRACKET
-#              bracketleft : "『" U300E LEFT WHITE CORNER BRACKET
-#             bracketright : "』" U300F RIGHT WHITE CORNER BRACKET
-#                     less : "《" U300A LEFT DOUBLE ANGLE BRACKET
-#                  greater : "》" U300B RIGHT DOUBLE ANGLE BRACKET
-#
-#   Single press is in dead_hook.
-#   See #*# HOOK
-#
-#   Double press is duplicated in *dead_retroflexhook.
-#   See #^# CURL
-#   See #*# RETROFLEX_HOOK
-#
-#   Triple press is duplicated in dead_abovedot.
-#   See #^# SQUIRREL_TAIL
-#   See #*# DOT_ABOVE
-#
-#
 #   Diacritic
 #
 #   As a diacritic, the double ring is provided, for coming closest to a curl
@@ -8895,24 +8785,6 @@
 #   Multikey conflicts with "⦃" U2983.                                              <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook>                                                                     <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<dead_hook><dead_hook>                                                                <asciitilde> : "〰" U3030 # WAVY DASH
-<Multi_key><braceleft><braceleft>                                                     <asciitilde> : "〰" U3030 # WAVY DASH
-<dead_hook><dead_hook>                                                                 <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
-#   Multikey conflicts with "Ɋ" U024A, "ɋ" U024B, "˒" U02D2, "˓" U02D3, "͚" U035A, […] <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
-<dead_hook><dead_hook>                                                                <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
-<Multi_key><braceleft><braceleft>                                                     <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
-<dead_hook><dead_hook>                                                                 <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
-<Multi_key><braceleft><braceleft>                                                      <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
-<dead_hook><dead_hook>                                                                <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
-<Multi_key><braceleft><braceleft>                                                     <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
-<dead_hook><dead_hook>                                                               <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
-<Multi_key><braceleft><braceleft>                                                    <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
-<dead_hook><dead_hook>                                                              <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
-<Multi_key><braceleft><braceleft>                                                   <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
-<dead_hook><dead_hook>                                                                      <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
-<Multi_key><braceleft><braceleft>                                                           <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
-<dead_hook><dead_hook>                                                                   <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
-<Multi_key><braceleft><braceleft>                                                        <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
 <dead_hook><dead_hook>                                                                         <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 <Multi_key><braceleft><braceleft>                                                              <A> : "Ꜣ" UA722 # LATIN CAPITAL LETTER EGYPTOLOGICAL ALEF
 <dead_hook><dead_hook>                                                                         <a> : "ꜣ" UA723 # LATIN SMALL LETTER EGYPTOLOGICAL ALEF
@@ -9132,27 +9004,6 @@
 #   two word separators while a single one, space, is required.
 #
 #
-#   Fullwidth punctuation
-#
-#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
-#   yields CJK symbols and punctuation, single on single press, most double on
-#   double press, and triple press yields "〚" U301A, "〛" U301B.
-#
-#            <bracketleft> : "〚" U301A LEFT WHITE SQUARE BRACKET
-#           <bracketright> : "〛" U301B RIGHT WHITE SQUARE BRACKET
-#
-#   Single press is in dead_hook.
-#   See #*# HOOK
-#
-#   Double press is duplicated in *dead_retroflexhook.
-#   See #^# CURL
-#   See #*# RETROFLEX_HOOK
-#
-#   Triple press is duplicated in dead_abovedot.
-#   See #^# SQUIRREL_TAIL
-#   See #*# DOT_ABOVE
-#
-#
 #   Diacritic
 #
 #   As a diacritic, double ring is used, as coming closest to a squirrel tail.
@@ -9170,10 +9021,6 @@
 <Multi_key><braceleft><braceleft><braceleft>                                        <nobreakspace> : "˒" U02D2 # MODIFIER LETTER CENTRED RIGHT HALF RING
 <dead_hook><dead_hook><dead_hook>                                                          <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
 <Multi_key><braceleft><braceleft><braceleft>                                               <U202F> : "˓" U02D3 # MODIFIER LETTER CENTRED LEFT HALF RING
-<dead_hook><dead_hook><dead_hook>                                                    <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
-<Multi_key><braceleft><braceleft><braceleft>                                         <bracketleft> : "〚" U301A # LEFT WHITE SQUARE BRACKET
-<dead_hook><dead_hook><dead_hook>                                                   <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
-<Multi_key><braceleft><braceleft><braceleft>                                        <bracketright> : "〛" U301B # RIGHT WHITE SQUARE BRACKET
 <dead_hook><dead_hook><dead_hook>                                                              <d> : "𝼥" U1DF25 # LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
 <Multi_key><braceleft><braceleft><braceleft>                                                   <d> : "𝼥" U1DF25 # LATIN SMALL LETTER D WITH MID-HEIGHT LEFT HOOK
 <dead_hook><dead_hook><dead_hook>                                                              <l> : "𝼦" U1DF26 # LATIN SMALL LETTER L WITH MID-HEIGHT LEFT HOOK
@@ -9215,47 +9062,13 @@
 #   See #^# PALATAL_HOOK
 #
 #
-#   Recycling symbols
+#   Plastic recycling symbols
 #
-#   The full set of 10 recycling symbols is supported with digits as base chars
-#   consistently with the paper symbols in dead_abovedot, with graphic mnemonic
-#   based on the cycle-shaped letter "O" (D09) this dead key is on, by lack of
-#   the alphabetic mnemonic, except when considering the dead key name, since
-#   *dead_retroflexhook moved from key "R" (D04) in the wake of making room for
-#   the Euro sign. The proximity with dead_abovedot also has a mnemonic upside.
+#   The full set of 10 plastic recycling symbols is supported with digits as
+#   base characters, with an alphabetic mnemonic based on key D10 "P" starting
+#   with version 7 when "}" moved to D10.
 #   https://www.unicode.org/L2/L2000/00292-n2240.pdf
-#   See #*# DOT_ABOVE
-#   See #*# REVERSED
-#   See # # D04 backslash
 #   See # # Recycling symbols
-#
-#
-#   Fullwidth punctuation
-#
-#   With an alphabetic mnemonic, dead_hook on key D08 "I" as "IDEOGRAPHIC"
-#   yields CJK symbols and punctuation, single on single press, most double on
-#   double press, and triple press yields "〚" U301A, "〛" U301B.
-#
-#               asciitilde : "〰" U3030 WAVY DASH
-#                braceleft : "〘" U3018 LEFT WHITE TORTOISE SHELL BRACKET
-#               braceright : "〙" U3019 RIGHT WHITE TORTOISE SHELL BRACKET
-#                parenleft : "〖" U3016 LEFT WHITE LENTICULAR BRACKET
-#               parenright : "〗" U3017 RIGHT WHITE LENTICULAR BRACKET
-#              bracketleft : "『" U300E LEFT WHITE CORNER BRACKET
-#             bracketright : "』" U300F RIGHT WHITE CORNER BRACKET
-#                     less : "《" U300A LEFT DOUBLE ANGLE BRACKET
-#                  greater : "》" U300B RIGHT DOUBLE ANGLE BRACKET
-#
-#   Single press is in dead_hook.
-#   See #*# HOOK
-#
-#   Double press is duplicated in *dead_retroflexhook.
-#   See #^# CURL
-#   See #*# RETROFLEX_HOOK
-#
-#   Triple press is duplicated in dead_abovedot.
-#   See #^# SQUIRREL_TAIL
-#   See #*# DOT_ABOVE
 #
 #
 #   Diacritic
@@ -9272,24 +9085,6 @@
 <Multi_key><braceright>                                                             <nobreakspace> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
 <UEFD4>                                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
 <Multi_key><braceright>                                                                    <U202F> : "˾" U02FE # MODIFIER LETTER OPEN SHELF
-<UEFD4>                                                                               <asciitilde> : "〰" U3030 # WAVY DASH
-<Multi_key><braceright>                                                               <asciitilde> : "〰" U3030 # WAVY DASH
-<UEFD4>                                                                                <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
-#   Multikey conflicts with "ʯ" U02AF, "ᶑ" U1D91, "𐞍" U1078D, "𝼉" U1DF09, "𝼖" U1DF16.  <braceleft> : "〘" U3018 # LEFT WHITE TORTOISE SHELL BRACKET
-<UEFD4>                                                                               <braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
-#   Multikey conflicts with "ƫ" U01AB, "ȿ" U023F, "ɀ" U0240, "ɚ" U025A, "ʄ" U0284, […]<braceright> : "〙" U3019 # RIGHT WHITE TORTOISE SHELL BRACKET
-<UEFD4>                                                                                <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
-<Multi_key><braceright>                                                                <parenleft> : "〖" U3016 # LEFT WHITE LENTICULAR BRACKET
-<UEFD4>                                                                               <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
-#   Multikey conflicts with "ꞎ" UA78E, "𐞝" U1079D, "𝼓" U1DF13.                        <parenright> : "〗" U3017 # RIGHT WHITE LENTICULAR BRACKET
-<UEFD4>                                                                              <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
-<Multi_key><braceright>                                                              <bracketleft> : "『" U300E # LEFT WHITE CORNER BRACKET
-<UEFD4>                                                                             <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
-<Multi_key><braceright>                                                             <bracketright> : "』" U300F # RIGHT WHITE CORNER BRACKET
-<UEFD4>                                                                                     <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
-<Multi_key><braceright>                                                                     <less> : "《" U300A # LEFT DOUBLE ANGLE BRACKET
-<UEFD4>                                                                                  <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
-<Multi_key><braceright>                                                                  <greater> : "》" U300B # RIGHT DOUBLE ANGLE BRACKET
 <UEFD4>                                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <Multi_key><braceright>                                                                   <exclam> : "𝼊" U1DF0A # LATIN LETTER RETROFLEX CLICK WITH RETROFLEX HOOK
 <UEFD4>                                                                                        <0> : "♲" U2672 # UNIVERSAL RECYCLING SYMBOL
@@ -10676,7 +10471,7 @@
 #   Consistently with other dead keys supporting diacriticized math symbols,
 #   braceright yields "⦵" U29B5, with mnemonics based on braceright as the base
 #   character of "∅" U2205 in the symbol group 2.
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 #   Beyond the arrows "←" U2190 and "→" U2192 documented above, the not sign
 #   "¬" U00AC is also a candidate for support in *dead_bar, with comma as a
@@ -11655,7 +11450,7 @@
 #   yields "⦱" U29B1; grave on B06, level 3 (base character of "∧" U2227 in the
 #   symbol group 2) yields "⊼" U22BC; question on B07, level 3 (and 5), yields
 #   "⊽" U22BD; case insensitive "T" yields "⫧" U2AE7.
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 #   For consistency and mnemonics, the MINUS-OR-PLUS SIGN "∓" U2213 is
 #   supported by plus, consistently with its non-inverted counterpart in
@@ -12417,7 +12212,7 @@
 #   bracketleft/right yield "⦋" U298B, "⦌" U298C; grave on B06, level 3 (base
 #   character of "∧" U2227 in the symbol group 2) yields "⩟" U2A5F; question
 #   on B07, level 3 (and 5), yields "⩣" U2A63, bar yields "⫨" U2AE8.
-#   See # # D09 braceright
+#   See # # D10 braceright
 #
 #   For consistency and mnemonics, the PLUS-MINUS SIGN "±" U00B1 is supported
 #   by plus, consistently with its inverted counterpart "∓" U2213 in
@@ -14117,7 +13912,7 @@
 #   case insensitive "T" yields "⟟" U27DF; braceright (base character of
 #   "∅" U2205 in the symbol group 2) yields "⦲" U29B2; plus yields "⨢" U2A22;
 #   bar yields "⫯" U2AEF.
-#   See # # D09 braceright
+#   See # # D10 braceright
 #   See #*# DOT_ABOVE
 #
 <dead_abovering>                                                                           <space> : "̊" U030A # COMBINING RING ABOVE
@@ -14546,7 +14341,7 @@
 #
 #   "⁂" U2042 ASTERISM is also expected to be supported by dead_circumflex,
 #   additionally to its support in the symbol groups and by dead_abovering.
-#   See # # C10 bar
+#   See # # C07 bar
 #   See #*# RING_ABOVE
 #
 #
