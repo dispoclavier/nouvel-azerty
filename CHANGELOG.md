@@ -58,7 +58,7 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 * Composition :
 	* Symboles météo par séquences commençant par "m-".
 	* Émulation des codes Alt + pavé numérique par séquences commençant par "+".
-	* "�" U+FFFD par « ¦<? ».
+	* Caractère de remplacement "�" U+FFFD par « ¦<? ».
 * Transformations :
 	* Groupes des symboles :
 		* Suite à la redisposition des touches C08 à C10 et D07 à D10 :
@@ -97,7 +97,7 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 			* Supprimer "Ꝓ" U+A752, "ꝓ" U+A753, "Ꞗ" U+A796, "ꞗ" U+A797, "ꬴ" U+AB34, qui vont dans boucle, en double frappe. ibidem
 	* Accent circonflexe : Redonder "ʻ" U+02BB par "," à la place de "ʼ" U+02BC, qui est dans le groupe 1 de "'". compose-2.yml [5927c6c](https://github.com/dispoclavier/azerty-complet/commit/5927c6c3d77a929763506ff53cde44b94ebce8ef)
 * Documentation :
-	* Corriger ou mettre à jour des annotations ou l’alignement. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), kbcommon.h, kbcommon-3.c [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388), compose-1.yml, compose-2.yml, compose-3.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe), [3679c6b](https://github.com/dispoclavier/azerty-complet/commit/3679c6b4fee112c3e6d8e27bfd451c96f4803782), dispocla.cpp [b219e8b](https://github.com/dispoclavier/nouvel-azerty/commit/b219e8bd22cd1585be239bda66c4174a425d79e8), [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d), compose-1.yml, compose-2.yml, compose-3.yml [ccf0702](https://github.com/dispoclavier/azerty-complet/commit/ccf0702be4c856881c38745f07774b7ddf155dd1)
+	* Corriger ou mettre à jour des annotations ou l’alignement. kbligatures.c [afda6b6](https://github.com/dispoclavier/nouvel-azerty/commit/afda6b6e1b9eaeea4402d8757ec6f4781e3b41a9), kbcommon.h, kbcommon-3.c [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388), kbcommon-1.c [2ad66fb](https://github.com/dispoclavier/azerty-complet/commit/2ad66fbac312504fdf5d6f1c0ffdb5a5f6a9e9df), compose-1.yml, compose-2.yml, compose-3.yml [64f11fb](https://github.com/dispoclavier/nouvel-azerty/commit/64f11fb514d3dac30cdac699fc8de23c9dfce71b), [ddbafac](https://github.com/dispoclavier/nouvel-azerty/commit/ddbafaca68a4fa65227ac5d96ed0ec9843e37bbe), [3679c6b](https://github.com/dispoclavier/azerty-complet/commit/3679c6b4fee112c3e6d8e27bfd451c96f4803782),  [ccf0702](https://github.com/dispoclavier/azerty-complet/commit/ccf0702be4c856881c38745f07774b7ddf155dd1), dispocla.cpp [b219e8b](https://github.com/dispoclavier/nouvel-azerty/commit/b219e8bd22cd1585be239bda66c4174a425d79e8), [8660a75](https://github.com/dispoclavier/nouvel-azerty/commit/8660a7560a67c84df765a25748ce4e11fd51b20d)
 	* Utiliser "mouvoir" au sens de "déplacer" au lieu de "mettre". CHANGELOG.md [31f1e43](https://github.com/dispoclavier/azerty-complet/commit/31f1e43ee4bd4aa289c2b8549f10047c3fbe9ac1)
 * Builds :
 	* 6.2.9.0 [ce5a9a5](https://github.com/dispoclavier/nouvel-azerty/commit/ce5a9a55e799344d877b450ee811fae00f07cac0)
