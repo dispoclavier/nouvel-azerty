@@ -8,7 +8,8 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Change VK to VK_PA1 for modifier 0x20    7.0.0.0.0 Thu 2026-08-27T0150+0200
+* Document the Right Shift bug on key B02  7.0.0.0.6 Wed 2026-09-02T1700+0200
+* Update VK to VK_PA1 for modifier 0x20    7.0.0.0.0 Thu 2026-08-27T0150+0200
 * Reinstate VK_OEM_AX as modifier 0x10     6.2.9.1.0 Wed 2026-04-08T2104+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0923+0200
 * Rename AltLe to AltEm, AltQr to AltMa    6.2.3.0.0 Sat 2026-02-14T1236+0100
@@ -569,6 +570,16 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
   {0xff         ,0      ,0x00d9   ,0x00ab   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 //{VK_OEM_3     ,0      ,0x00d9   ,WCH_LGTR }, // This does not work.
 //{VK_OEM_3     ,0      ,0x00d9   ,0x00ab   }, // This works.
+*
+*
+* ### Right Shift bug on key B02
+*
+* On key B02, the levels 6 and 8 do not work with right Shift, that is usually
+* pressed when the left hand is busy actioning the level-5 (AltFr) modifier
+* alongside key B02 "X".
+*
+* To work around this issue, the left Shift key must be used additionally to
+* the level-5 modifier and key B02, which is very challenging.
 *
 *
 * ### Level 7 bug
