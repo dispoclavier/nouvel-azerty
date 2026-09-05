@@ -54,10 +54,11 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 	* Niveau 5 : Redonder "~" sur D05 à la place de "−" U+2212, qui va sur D06 à la place de "µ" U+00B5, qui est au niveau 7 sur C10 "M". dispocla.cpp [e41c128](https://github.com/dispoclavier/azerty-complet/commit/e41c12807c97f48b0c43bd64f1f3e72a1c9d128b), kbcomazerty.c, kbcomredispo.c [3aaaefe](https://github.com/dispoclavier/azerty-complet/commit/3aaaefe576eed158f28deee124015d829fa979c2), [3679c6b](https://github.com/dispoclavier/azerty-complet/commit/3679c6b4fee112c3e6d8e27bfd451c96f4803782)
 	* Niveaux 7 et 8 :
 		* Mouvoir "–" U+2013 de C04 sur C02 à la place de "🙂" U+1F642, qui y monte au niveau 8 à la place de "😔" U+1F614, qui va sur C05 à la place de "⇒" U+21D2, qui y descend au niveau 7 à la place de "→" U+2193, qui va sur C04 à la place laissée par "–" U+2013. dispocla.cpp, kbcomazerty.c, kbcomredispo.c, kbligatures.c, kbligazerty.c, kbligredispo.c [a9d9109](https://github.com/dispoclavier/azerty-complet/commit/a9d910980b58405d47c93e7be2ae0f5b03b44888)
-		* Permuter "&amp;apos;", qui va sur D08 "'" et "I", et "🙏" U+1F64F, qui va sur D07 "U" et "&". dispocla.cpp, kbligazerty.c, kbligredispo.c [501cd06](https://github.com/dispoclavier/azerty-complet/commit/501cd0622106987df00b56478ba140f36d771763)
+		* Mouvoir "🙏" U+1F64F du niveau 8 de D08 "I" sur D10 "P" à la place de "&amp;amp;", qui descend au niveau 7 de D08 "&" à la place de "\u{", qui monte au niveau 8 de D07 "U" à la place de "&amp;apos;", qui va sur C08 "'" et "K" à la place de "😅" U+1F605, qui va sur D08 à la place laissée par "🙏" U+1F64F. dispocla.cpp, kbcomazerty.c, kbcomredispo.c, kbligatures.c, kbligazerty.c, kbligredispo.c [501cd06](https://github.com/dispoclavier/azerty-complet/commit/501cd0622106987df00b56478ba140f36d771763), []()
+		* Redonder le sélecteur de variante émoji "️️" U+FE0F au niveau 8 de D03 "E" à la place de "&amp;quot;", qui descend au niveau 7 à la place de "″" U+2033, qui va sur C08 "K" à la place de "&#x", qui va sur D02 "Z" à la place de "′" U+2032, qui va sur C07 "J" à la place de "‾" U+203E, qui va sur D09 "O" à la place de "Ω" U+03A9, qui est dans le groupe 1 de "{" et dans la touche morte grec ou cerclé. ibidem
 * Composition :
-	* Symboles météo par séquences commençant par "m-".
-	* Émulation des codes Alt + pavé numérique par séquences commençant par "+".
+	* Symboles météo par séquences commençant par « ¦m- ».
+	* Émulation des codes Alt + pavé numérique par séquences commençant par « ¦+ ».
 	* Caractère de remplacement "�" U+FFFD par « ¦<? ».
 * Transformations :
 	* Groupes des symboles :

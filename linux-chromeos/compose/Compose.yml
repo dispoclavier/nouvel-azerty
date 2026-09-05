@@ -1,5 +1,5 @@
 # START_additions_XCompose_Dispoclavier (please do not delete this keyword - ne pas effacer ce mot-clé s.v.p.)
-#                       Date: 2026-09-01T1141+0200
+#                       Date: 2026-09-05T1017+0200
 #                    Version: See # # Output of keyboard layout version number
 <UEFA0>                     : "version 7.0.0.0" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
@@ -5088,6 +5088,25 @@
 <Multi_key><parenright>                                                   <KP_1><KP_0><KP_3><KP_0> : "╾" U257E # BOX DRAWINGS HEAVY LEFT AND LIGHT RIGHT
 <Multi_key><parenright>                                                               <0><1><0><3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 <Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
+#
+#
+#^# Alt + numpad emulation
+#
+#   This feature is designed to mitigate a design flaw on some laptops shipped
+#   both without a full-size numeric keypad and without any emulation thereof
+#   at function level, as it traditionally occurs on compact keyboards
+#   featuring a Function modifier key.
+#
+#   Initially targeted at Windows users, this Alt + numpad emulation is also
+#   available to Linux users and macOS users, so far as the dead key and
+#   multikey configuration in this file is transpiled to C and XML.
+#
+#   The purpose of the leading plus is to prevent conflicts with the vulgar
+#   fractions.
+#   See # # Vulgar fractions
+#   See #*# HORN
+#
+<Multi_key><plus>                                                                     <0><2><0><1> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
 #
 #
 #   START_MATH
@@ -26249,45 +26268,45 @@
 <dead_horn>                                                                              <greater> : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <Multi_key><plus>                                                                        <greater> : "⥅" U2945 # RIGHTWARDS ARROW WITH PLUS BELOW
 <dead_horn>                                                                                    <0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key><plus>                                                                              <0> : "↕" U2195 # UP DOWN ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                                 <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_0> : "↕" U2195 # UP DOWN ARROW emoji
 <dead_horn>                                                                                    <1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key><plus>                                                                              <1> : "↙" U2199 # SOUTH WEST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <1> : "↙" U2199 # SOUTH WEST ARROW emoji
 <dead_horn>                                                                                 <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_1> : "↙" U2199 # SOUTH WEST ARROW emoji
 <dead_horn>                                                                                    <2> : "↓" U2193 # DOWNWARDS ARROW
 #   Multikey conflicts with "⨧" U2A27.                                                         <2> : "↓" U2193 # DOWNWARDS ARROW
 <dead_horn>                                                                                 <KP_2> : "↓" U2193 # DOWNWARDS ARROW
 #   Multikey conflicts with "⨧" U2A27.                                                      <KP_2> : "↓" U2193 # DOWNWARDS ARROW
 <dead_horn>                                                                                    <3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key><plus>                                                                              <3> : "↘" U2198 # SOUTH EAST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <3> : "↘" U2198 # SOUTH EAST ARROW emoji
 <dead_horn>                                                                                 <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_3> : "↘" U2198 # SOUTH EAST ARROW emoji
 <dead_horn>                                                                                    <4> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key><plus>                                                                              <4> : "←" U2190 # LEFTWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                            <4> : "←" U2190 # LEFTWARDS ARROW
 <dead_horn>                                                                                 <KP_4> : "←" U2190 # LEFTWARDS ARROW
-<Multi_key><KP_Add>                                                                         <KP_4> : "←" U2190 # LEFTWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_4> : "←" U2190 # LEFTWARDS ARROW
 <dead_horn>                                                                                    <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key><plus>                                                                              <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <5> : "↔" U2194 # LEFT RIGHT ARROW emoji
 <dead_horn>                                                                                 <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_5> : "↔" U2194 # LEFT RIGHT ARROW emoji
 <dead_horn>                                                                                    <6> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key><plus>                                                                              <6> : "→" U2192 # RIGHTWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                            <6> : "→" U2192 # RIGHTWARDS ARROW
 <dead_horn>                                                                                 <KP_6> : "→" U2192 # RIGHTWARDS ARROW
-<Multi_key><KP_Add>                                                                         <KP_6> : "→" U2192 # RIGHTWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_6> : "→" U2192 # RIGHTWARDS ARROW
 <dead_horn>                                                                                    <7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key><plus>                                                                              <7> : "↖" U2196 # NORTH WEST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <7> : "↖" U2196 # NORTH WEST ARROW emoji
 <dead_horn>                                                                                 <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_7> : "↖" U2196 # NORTH WEST ARROW emoji
 <dead_horn>                                                                                    <8> : "↑" U2191 # UPWARDS ARROW
-<Multi_key><plus>                                                                              <8> : "↑" U2191 # UPWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                            <8> : "↑" U2191 # UPWARDS ARROW
 <dead_horn>                                                                                 <KP_8> : "↑" U2191 # UPWARDS ARROW
-<Multi_key><KP_Add>                                                                         <KP_8> : "↑" U2191 # UPWARDS ARROW
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_8> : "↑" U2191 # UPWARDS ARROW
 <dead_horn>                                                                                    <9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key><plus>                                                                              <9> : "↗" U2197 # NORTH EAST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                            <9> : "↗" U2197 # NORTH EAST ARROW emoji
 <dead_horn>                                                                                 <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
-<Multi_key><KP_Add>                                                                         <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
+#   Multikey conflicts with Alt + numpad emulation.                                         <KP_9> : "↗" U2197 # NORTH EAST ARROW emoji
 <dead_horn>                                                                                    <A> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <Multi_key><plus>                                                                              <A> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
 <dead_horn>                                                                                    <a> : "˖" U02D6 # MODIFIER LETTER PLUS SIGN
@@ -29684,7 +29703,7 @@
 <dead_circumflex>                                                                          <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 #   Multikey conflicts with "⇍" U21CD, "⇎" U21CE, "⇐" U21D0, "⇔" U21D4, "⟸" U27F8, […]     <equal> : "⁼" U207C # SUPERSCRIPT EQUALS SIGN
 <dead_circumflex>                                                                       <question> : "‽" U203D # INTERROBANG
-<Multi_key><less>                                                                       <question> : "‽" U203D # INTERROBANG
+#   Multikey conflicts with "�" UFFFD.                                                  <question> : "‽" U203D # INTERROBANG
 <dead_circumflex>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><less>                                                                          <comma> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <dead_circumflex>                                                                         <period> : "·" U00B7 # MIDDLE DOT

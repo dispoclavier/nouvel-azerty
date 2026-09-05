@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update levels 7 and 8                    7.0.0.0.6 Sat 2026-09-05T1036+0200
 * Move U1F642 and U1F614 on C02 and C05    7.0.0.0.0 Tue 2026-07-21T0647+0200
 * Debug modification ##6..7 of VK_SPACE    6.2.8.0.0 Tue 2026-03-24T1840+0100
 * Remove padding zero in version number    6.0.9.7.0 Thu 2025-10-02T0335+0200
@@ -152,6 +153,7 @@
 
   // […]
 
+  {'Z'          ,6      ,'&'      ,'#'      ,'x'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'Z'          ,7      ,0xd83d   ,0xde27   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
 
   // […]

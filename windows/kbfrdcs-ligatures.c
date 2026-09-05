@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Replace invisible + with "&amp;" on E01  7.0.0.0.6 Fri 2026-09-04T0816+0200
 * Adapt to kbfrdcs-ligatures.c             7.0.0.0.0 Thu 2026-08-27T1921+0200
 * Copy from kbligazerty.c                  7.0.0.0.0 Mon 2026-08-24T1938+0200
 
@@ -20,6 +21,7 @@
 
   // […]
 
+  {'1'          ,3      ,'&'      ,'a'      ,'m'      ,'p'      ,';'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'C'          ,3      ,'c'      ,0x02bc   ,'h'      ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'N'          ,2      ,'n'      ,0x1d52   ,0x202f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },
   {'N'          ,3      ,'N'      ,0x1d52   ,0x202f   ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE ,WCH_NONE },

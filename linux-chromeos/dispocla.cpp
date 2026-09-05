@@ -1,4 +1,4 @@
-//                       Date: 2026-08-29T1535+0200
+//                       Date: 2026-09-05T1059+0200
 //        Operating file name: dispocla
 //                   Encoding: UTF-8
 //                       Type: text/XKB configuration
@@ -1175,14 +1175,14 @@ xkb_symbols "kbfrFRs" {
 	key.type[Group2] = "EIGHT_LEVELS_FIRSTALPHABETIC";
 	key <AD02> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,             minutes,              U1F627 ],
-		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,             minutes,              U1F627 ]
-	}; // U1DBB ᶻ MODIFIER LETTER SMALL Z; UEFD5 *dead_turned; 😧 U1F627 ANGUISHED FACE emoji
+		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,               UEF7B,              U1F627 ],
+		[                   z,                   Z,             percent,             percent,               UEFD5,               U1DBB,               UEF7B,              U1F627 ]
+	}; // U1DBB ᶻ MODIFIER LETTER SMALL Z; UEFD5 *dead_turned; UEF7B '&#x'; 😧 U1F627 ANGUISHED FACE emoji
 
 	key <AD03> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,             seconds,               UEF8D ],
-		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,             seconds,               UEF8D ]
+		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,               UEF8D,               UFE0F ],
+		[                   e,                   E,            EuroSign,            EuroSign,    dead_doubleacute,               U1D49,               UEF8D,               UFE0F ]
 	}; // U1D49 ᵉ MODIFIER LETTER SMALL E; UEF8D '&quot;'
 
 	key <AD04> {
@@ -1205,27 +1205,27 @@ xkb_symbols "kbfrFRs" {
 
 	key <AD07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,              U1F64F ],
-		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,              U1F64F ]
-	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEFD2 *dead_subscript; UEF9F Unicode prefix 'U+'; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
+		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,               UEF7E ],
+		[                   u,                   U,          underscore,                   4,               UEFD2,               U1D58,               UEF9F,               UEF7E ]
+	}; // U1D58 ᵘ MODIFIER LETTER SMALL U; UEFD2 *dead_subscript; UEF9F Unicode prefix 'U+'; UEF7E '\\u{'
 
 	key <AD08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ],
-		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF7E,               UEF8C ]
-	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF7E '\\u{'; UEF8C '&apos;'
+		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF8B,              U1F605 ],
+		[                   i,                   I,           ampersand,                   5,       dead_abovedot,               U2071,               UEF8B,              U1F605 ]
+	}; // U2071 ⁱ SUPERSCRIPT LATIN SMALL LETTER I; UEF8B '&amp;'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
 
 	key <AD09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   o,                   O,           braceleft,                   6,           dead_hook,               U1D52,         Greek_OMEGA,              U1F601 ],
-		[                   o,                   O,           braceleft,                   6,           dead_hook,               U1D52,         Greek_OMEGA,              U1F601 ]
-	}; // U1D52 ᵒ MODIFIER LETTER SMALL O; UEFD4 *dead_retroflexhook; Greek_OMEGA is preferred over U2126 Ω OHM SIGN; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
+		[                   o,                   O,           braceleft,                   6,           dead_hook,               U1D52,               U203E,              U1F601 ],
+		[                   o,                   O,           braceleft,                   6,           dead_hook,               U1D52,               U203E,              U1F601 ]
+	}; // U1D52 ᵒ MODIFIER LETTER SMALL O; UEFD4 *dead_retroflexhook; U203E ‾ OVERLINE; 😁 U1F601 GRINNING FACE WITH SMILING EYES 13th-ranking emoji
 
 	key <AD10> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   p,                   P,          braceright,              period,               UEFD4,               U1D56,           paragraph,               UEF8B ],
-		[                   p,                   P,          braceright,              period,               UEFD4,               U1D56,           paragraph,               UEF8B ]
-	}; // U1D56 ᵖ MODIFIER LETTER SMALL P; UEF8B '&amp;'
+		[                   p,                   P,          braceright,              period,               UEFD4,               U1D56,           paragraph,              U1F64F ],
+		[                   p,                   P,          braceright,              period,               UEFD4,               U1D56,           paragraph,              U1F64F ]
+	}; // U1D56 ᵖ MODIFIER LETTER SMALL P; 🙏 U1F64F PERSON WITH FOLDED HANDS worldwide sixth-most used emoji
 
 	key.type[Group1] = "EIGHT_LEVELS_LEVEL8_CONTROL";
 	key.type[Group2] = "EIGHT_LEVELS_LEVEL8_CONTROL";
@@ -1280,15 +1280,15 @@ xkb_symbols "kbfrFRs" {
 
 	key <AC07> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,               U203E,              U1F602 ],
-		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,               U203E,              U1F602 ]
-	}; // U02B2 ʲ MODIFIER LETTER SMALL J; U203E ‾ OVERLINE; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
+		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,             minutes,              U1F602 ],
+		[                   j,                   J,                 bar,                   1,         dead_macron,               U02B2,             minutes,              U1F602 ]
+	}; // U02B2 ʲ MODIFIER LETTER SMALL J; U1F602 😂 FACE WITH TEARS OF JOY worldwide most used emoji, second-most used in France after ❤ U2764
 
 	key <AC08> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8
-		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,               UEF7B,              U1F605 ],
-		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,               UEF7B,              U1F605 ]
-	}; // U1D4F ᵏ MODIFIER LETTER SMALL K; UEF7B '&#x'; U1F605 😅 SMILING FACE WITH OPEN MOUTH AND COLD SWEAT worldwide eleventh-most used emoji
+		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,             seconds,               UEF8C ],
+		[                   k,                   K,          apostrophe,                   2,          dead_acute,               U1D4F,             seconds,               UEF8C ]
+	}; // U1D4F ᵏ MODIFIER LETTER SMALL K; UEF8C '&apos;'
 
 	key <AC09> {
 		// Index:           1,                   2,                   3,                   4,                   5,                   6,                   7,                   8

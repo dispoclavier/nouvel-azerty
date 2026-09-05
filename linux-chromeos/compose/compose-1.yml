@@ -5091,6 +5091,25 @@
 <Multi_key><parenright>                                                   <KP_0><KP_1><KP_0><KP_3> : "╿" U257F # BOX DRAWINGS HEAVY UP AND LIGHT DOWN
 #
 #
+#^# Alt + numpad emulation
+#
+#   This feature is designed to mitigate a design flaw on some laptops shipped
+#   both without a full-size numeric keypad and without any emulation thereof
+#   at function level, as it traditionally occurs on compact keyboards
+#   featuring a Function modifier key.
+#
+#   Initially targeted at Windows users, this Alt + numpad emulation is also
+#   available to Linux users and macOS users, so far as the dead key and
+#   multikey configuration in this file is transpiled to C and XML.
+#
+#   The purpose of the leading plus is to prevent conflicts with the vulgar
+#   fractions.
+#   See # # Vulgar fractions
+#   See #*# HORN
+#
+<Multi_key><plus>                                                                     <0><2><0><1> : "É" U00C9 # LATIN CAPITAL LETTER E WITH ACUTE
+#
+#
 #   START_MATH
 #
 #
