@@ -8,12 +8,25 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Update SGCAPS attribute                  7.0.0.1.0 Sat 2026-09-05T1625+0200
 * Include kbd.h in kbcommon.h, not here    7.0.0.0.7 Sat 2026-09-05T1428+0200
 * Add define for key B00                   7.0.0.0.2 Wed 2026-08-26T1739+0200
 * Add define for key E00                   7.0.0.0.1 Tue 2026-08-25T1947+0200
 * Copy from kbazerty.h                     7.0.0.0.0 Tue 2026-08-25T1101+0200
 *
 \*****************************************************************************/
+
+/**********************************************************************************\
+* Attribute for allocation table
+*
+* As the SGCAPS attribute is upgraded in kbcommon.h to support Kana Lock
+* alongside, it must be restored to its original definition in kbd.h:369 for
+* backward compatible layouts, because Kana Lock is persistent across keyboard
+* layouts.
+*
+\**********************************************************************************/
+#undef SGCAPS
+#define SGCAPS  0x02  // SGCAPS is downgraded to unsupport Kana Lock.
 
 /*
  * kbd type should be controlled by cl command-line argument

@@ -8,7 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Correct file name kbfrdcs-common.c       7.0.0.0.7 Sat 2026-09-05T1437+0200
+* Correct name kbfrdcs-common.c in include 7.0.0.0.7 Sat 2026-09-05T1446+0200
 * Replace invisible + with "&amp;" on E01  7.0.0.0.6 Fri 2026-09-04T0806+0200
 * Adapt to kbfrdcs-allo.c                  7.0.0.0.0 Thu 2026-08-27T1157+0200
 * Copy from kbfrFRs-allo.c                 7.0.0.0.0 Mon 2026-08-24T1938+0200

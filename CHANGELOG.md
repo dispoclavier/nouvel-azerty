@@ -104,7 +104,7 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 	* 6.2.9.0 [ce5a9a5](https://github.com/dispoclavier/nouvel-azerty/commit/ce5a9a55e799344d877b450ee811fae00f07cac0)
 	* 6.2.9.1 [a207474](https://github.com/dispoclavier/nouvel-azerty/commit/a2074745a66f7b74328c5c1bbd027fdc1bc62388)
 	* 6.2.9.2 [d5defc4](https://github.com/dispoclavier/nouvel-azerty/commit/d5defc4a9d651285dc8644ef704e108b946f3ed6)
-	* 7.0.0.0
+	* 7.0.0.0 [306c5ae](https://github.com/dispoclavier/azerty-complet/commit/306c5aead05523866f11659008101c890844ceaf)
 
 ## 6.2.8 (2026-03-24)
 
