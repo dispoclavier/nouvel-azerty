@@ -7,6 +7,7 @@
 * 1985..2001 Microsoft Corporation (pro parte)
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
+* Include kbd.h here, not in locale header 7.0.0.0.7 Sat 2026-09-05T1431+0200
 * Define B00 as VK_PA1 for modifier 0x20   7.0.0.0.0 Thu 2026-08-27T0146+0200
 * Reinstate VK_OEM_AX as modifier 0x10     6.2.9.0.0 Wed 2026-04-08T2119+0200
 * Reinstate VK_RMENU as modifier 0x10      6.2.9.0.0 Wed 2026-04-08T0926+0200
@@ -60,6 +61,12 @@
 * File History:
 * Tue Sep 08, 2015  Forked from kbdfre.H
 \**********************************************************************************/
+
+/*
+ * Include the basis of all keyboard table values
+ */
+#include "kbd.h"
+
 /**********************************************************************************\
 * 0  INTRODUCTION
 *

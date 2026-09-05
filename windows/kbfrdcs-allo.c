@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Correct file name kbfrdcs-common.c       7.0.0.0.7 Sat 2026-09-05T1437+0200
 * Replace invisible + with "&amp;" on E01  7.0.0.0.6 Fri 2026-09-04T0806+0200
 * Adapt to kbfrdcs-allo.c                  7.0.0.0.0 Thu 2026-08-27T1157+0200
 * Copy from kbfrFRs-allo.c                 7.0.0.0.0 Mon 2026-08-24T1938+0200
@@ -59,7 +60,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS40 aVkToWch40[] = {
   // Modification #     |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |   10    |   11    |   12    |   13    |   14    |   15    |   16    |   17    |   18    |   19    |   20    |   21    |   22    |   23    |   24    |   25    |   26    |   27    |   28    |   29    |   30    |   31    |   32    |   33    |   34    |   35    |   36    |   37    |   38    |   39    |
 
   // Rows A..D are in an extra file due to not changing across AZERTY variants.
-  #include "kbdcs-common.c"
+  #include "kbfrdcs-common.c"
 
   {0            ,0      ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        ,0        }
 };

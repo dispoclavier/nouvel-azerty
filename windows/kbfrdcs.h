@@ -8,8 +8,9 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Add define for key B00                   7.0.0.0.0 Wed 2026-08-26T1739+0200
-* Add define for key E00                   7.0.0.0.0 Tue 2026-08-25T1947+0200
+* Include kbd.h in kbcommon.h, not here    7.0.0.0.7 Sat 2026-09-05T1428+0200
+* Add define for key B00                   7.0.0.0.2 Wed 2026-08-26T1739+0200
+* Add define for key E00                   7.0.0.0.1 Tue 2026-08-25T1947+0200
 * Copy from kbazerty.h                     7.0.0.0.0 Tue 2026-08-25T1101+0200
 *
 \*****************************************************************************/
@@ -18,11 +19,6 @@
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
-
-/*
- * Include the basis of all keyboard table values
- */
-#include "kbd.h"
 
 /**********************************************************************************\
 * The table below defines the virtual keys for various keyboard types where

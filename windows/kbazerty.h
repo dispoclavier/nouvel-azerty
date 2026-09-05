@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Include kbd.h in kbcommon.h, not here    7.0.0.0.7 Sat 2026-09-05T1429+0200
 * Remove redundant T29 _EQ( KANA ) define  7.0.0.0.0 Mon 2026-08-24T1702+0200
 * Move #include <windows.h> back to C sources        Wed 2025-08-27T1300+0200
 * Rename from kbfrFRs.H to kbazerty.h                Fri 2025-08-22T1127+0200
@@ -20,11 +21,6 @@
  * kbd type should be controlled by cl command-line argument
  */
 #define KBD_TYPE 4
-
-/*
- * Include the basis of all keyboard table values
- */
-#include "kbd.h"
 
 /**********************************************************************************\
 * The table below defines the virtual keys for various keyboard types where
