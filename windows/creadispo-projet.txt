@@ -13,6 +13,8 @@ N’effacez ni ligne ni caractères avant les signes "=" car la lecture dépend 
                       Nom du projet ou du produit=azertycomplet
         Nom de l’éventuelle source header commune=kbcommon
 -----------------------------------------------------------------------------------------
+kbfrdcs1;Français_DCS
+kbfrdcs2;Français_DCS_clone
 kbbrFRs1;Breton
 kbbrFRs2;Breton_clone
 kbfrAFs1;Afrique

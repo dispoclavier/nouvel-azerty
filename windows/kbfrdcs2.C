@@ -8,6 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
+* Edit ID string output                    7.0.0.2.0 Sun 2026-09-06T0908+0200
 * Adapt to kbfrdcs2.C                      7.0.0.0.0 Tue 2026-08-25T1955+0200
 * Copy from kbfrFRs2.C                     7.0.0.0.0 Tue 2026-08-25T1816+0200
 *
@@ -29,8 +30,9 @@
 
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
-  {VK_ESCAPE ,3 ,' ' ,'f' ,'r' ,'_' ,'r' ,0x00e9 ,'t' ,'r' ,'o' ,'c' ,'o' ,'m' ,'p' ,'a' ,'t' ,'i' },
-	// The first code unit of long multiunit ligatures may not be output, hence the leading space.
+  {VK_ESCAPE ,3 ,' ' ,'f' ,'r' ,'_' ,'r' ,0x00e9 ,'t' ,'r' ,'o' ,'c' ,'o' ,'m' ,'_' ,'D' ,'C' ,'S' },
+                 // The first code unit of long multiunit ligatures may not be output, hence the leading space.
+
 
   #include "kbfrdcs-ligatures.c"
   #include "kbligatures.c"

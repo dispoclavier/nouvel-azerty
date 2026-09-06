@@ -7,8 +7,8 @@ rem  La mise à niveau vers Unicode de l’interpréteur de commandes Windows es
 ::  nom          creadispo
 ::  description  programme de commandes en batch pour l’interpréteur cmd.exe de Windows
 ::               utilisant le KbdUTool 3.40 du Microsoft Keyboard Layout Creator 1.4
-::  version      1.9.3
-::  date         2025-07-21T0707+0200 (1.8.3 : 2018-03-15T1954+0100)
+::  version      1.9.4
+::  date         2026-09-06T0540+0200 (1.8.3 : 2018-03-15T1954+0100)
 ::  contact      dev[arobase]dispoclavier.com
 ::  dépôt        https://github.com/dispoclavier/nouvel-azerty/blob/main/windows/outils/creadispo.cmd
 ::
@@ -33,7 +33,7 @@ rem  Cette couleur introduit la transition du fond noir par défaut vers le fond
 rem  Les couleurs d’affichage sont personnalisables dans les préférences de ce script.
 
 :: Initialise :
-set MSKLCprofile="%ProgramFiles%\Microsoft Keyboard Layout Creator 1.4"
+set MSKLCprofile="C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4"
 set soundfile="C:\Windows\Media\Windows Print complete.wav"
 set seen=no
 :: Crée les dossiers de stockage :
@@ -148,7 +148,7 @@ if "%allfiles%" equ "yes" if "%adhoc%" equ "oui" (
 	if %helplevel% neq 0 goto freshen
 )
 if %helplevel% equ  0 goto welcome
-if %helplevel% equ  1 if exist %MSKLCprofile%\MSKLC.exe ( goto callhelpMSKLCstart ) else ( goto MSKLCprofilehelp )
+if %helplevel% equ  1 if exist "%MSKLCprofile%\MSKLC.exe" ( goto callhelpMSKLCstart ) else ( goto MSKLCprofilehelp )
 if %helplevel% equ  2 goto callhelpMSKLCenh0
 if %helplevel% equ  3 goto callhelpMSKLCenh1
 if %helplevel% equ  4 goto callhelpMSKLCenh2
@@ -283,7 +283,7 @@ echo    étapes de la confection de dispositions de clavier pour votre ordinateu
 echo    compatibles Windows 11, 10, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
 echo.
 
-if exist %MSKLCprofile%\MSKLC.exe (
+if exist "%MSKLCprofile%\MSKLC.exe" (
 
 echo.
 echo    Grâce au Microsoft Keyboard Layout Creator que vous avez -- félicitations
@@ -302,7 +302,7 @@ echo    de clavier de votre choix afin que vous puissiez les éditer pour abouti
 echo    à un clavier plus performant ; et je pourrai faire compiler les pilotes.
 echo.
 
-if exist %MSKLCprofile%\MSKLC.exe (
+if exist "%MSKLCprofile%\MSKLC.exe" (
 
 echo    Sans le MSKLC en effet, je ne peux absolument rien faire. Avec le MSKLC
 echo    vous voilà donc bien équipé·e pour faire des claviers performants, pour
@@ -424,7 +424,8 @@ goto :eof
 :: Contrôle de présence du KbdUTool :
 :MSKLCcheck
 set MSKLCava=yes
-if exist %MSKLCprofile%\MSKLC.exe goto :eof
+::if exist "%MSKLCprofile%\MSKLC.exe" goto :eof
+if exist "C:\Program Files (x86)\Microsoft Keyboard Layout Creator 1.4\MSKLC.exe" goto :eof
 set MSKLCava=no
 color cf
 echo.&echo.&echo.&echo.&echo.&echo.&echo.
@@ -448,7 +449,7 @@ echo    %hello%, je m’appelle Creadispo, et en l’occurrence je suis là pour
 echo    le%pls% pilote%pls% de disposition de clavier à partir des sources ici, qui ser%vba%
 echo    compatible%pls% Windows 11, 10, 8.1, 8, 7, Vista, Server 2003, XP, 2000, et NT 4.0.
 
-if exist %MSKLCprofile%\MSKLC.exe (
+if exist "%MSKLCprofile%\MSKLC.exe" (
 echo.
 echo    Grâce au Microsoft Keyboard Layout Creator que vous avez -- félicitations
 echo    au passage, car ce logiciel plutôt indispensable est trop peu connu --,
@@ -481,7 +482,7 @@ if %helplevel% neq 10 (
 	call :saveuserprofile
 )
 if "%agree:~,1%" equ "?" goto help
-if exist %MSKLCprofile%\MSKLC.exe goto freshen
+if exist "%MSKLCprofile%\MSKLC.exe" goto freshen
 goto MSKLC
 
 :allfilecheck
@@ -690,8 +691,8 @@ echo    de mettre ce qu’il veut sur son clavier. Je vais vous ouvrir le dossie
 echo    la licence avant d’illustrer mes propos par deux exemples. Juste un appui…
 color f2
 pause >nul
-call %MSKLCprofile%
-call %MSKLCprofile%\license.rtf
+call "%MSKLCprofile%"
+call "%MSKLCprofile%\license.rtf"
 if %helplevel% neq 10 (
 	set /a helplevel=3
 	call :saveuserprofile
@@ -726,7 +727,7 @@ echo    touche et je vous montre où elles apparaissent. Et autre chose encore�
 color f2
 pause >nul
 call %TEMP%
-call %MSKLCprofile%\nameslist.txt
+call "%MSKLCprofile%\nameslist.txt"
 if %helplevel% neq 10 (
 	set /a helplevel=4
 	call :saveuserprofile
@@ -909,7 +910,7 @@ echo        mettrai une copie ici auprès de moi pour que vous l’ayez sous la 
 color f2
 pause >nul
 echo.
-copy  %MSKLCprofile%\inc\kbd.h   kbd-H(copie_pour_lecture_humaine).txt
+copy  "%MSKLCprofile%\inc\kbd.h"   kbd-H(copie_pour_lecture_humaine).txt
 call kbd-H(copie_pour_lecture_humaine).txt
 if %helplevel% neq 10 (
 	set /a helplevel=7
@@ -2346,7 +2347,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-	%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -x %name%.klc
+	"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -x %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote pour votre ordinateur,
@@ -2367,7 +2368,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-	%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -m %name%.klc
+	"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -m %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote principal pour votre ordinateur,
@@ -2387,7 +2388,7 @@ echo  Je vais maintenant demander à KbdUTool de compiler un pilote.
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-	%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -i %name%.klc
+	"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -i %name%.klc
 echo.&echo.
 	if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote principal pour votre ordinateur,
@@ -2405,7 +2406,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -o %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -o %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote auxiliaire pour votre ordinateur,
@@ -2532,7 +2533,7 @@ goto sourcesfinish
 rem  Cette routine est utilisée par ailleurs.
 echo.
 echo  Je vais maintenant demander à KbdUTool de générer les sources de %name%.
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -s %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -s %name%.klc
 echo  KbdUTool a terminé de générer les sources de %name%.
 mkdir %name%_sources_origine
 echo  J’ai créé le dossier "%name%_sources_origine"
@@ -2794,7 +2795,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -x %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -x %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 mkdir %testdirname%\i386
@@ -2816,7 +2817,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -m %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -m %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 mkdir %testdirname%\amd64
@@ -2835,7 +2836,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -i %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -i %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 mkdir %testdirname%\ia64
@@ -2854,7 +2855,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -o %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -o %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 mkdir %testdirname%\wow64
@@ -3284,7 +3285,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -x %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -x %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote 32 bit.
@@ -3302,7 +3303,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -m %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -m %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote 64 bit.
@@ -3320,7 +3321,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -i %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -i %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote 64 bit pour Itanium.
@@ -3338,7 +3339,7 @@ if %nbroa% neq 0 (
 echo    Quand KbdUTool ne pourra pas ouvrir une source pour la récrire,
 echo    c’est parce que j’ai bloqué cette source. Donc c’est bon signe.
 )
-%MSKLCprofile%\bin\i386\kbdutool.exe -%enc% -v -w -o %name%.klc
+"%MSKLCprofile%\bin\i386\kbdutool.exe" -%enc% -v -w -o %name%.klc
 echo.&echo.
 if not exist %name%.dll goto failure
 echo  J’ai fait compiler le pilote auxiliaire Windows On Windows (WoW)

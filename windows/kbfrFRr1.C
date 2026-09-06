@@ -124,7 +124,7 @@
 static ALLOC_SECTION_LDATA LIGATURE16 aLigature[] = {
 
   {VK_ESCAPE ,3 ,' ' ,'f' ,'r' ,'_' ,'F' ,'R' ,'_' ,'r' ,'e' ,'d' ,'i' ,'s' ,'p' ,'o' ,'s' ,0x00e9 },
-	// The first code unit of long multiunit ligatures may not be output, hence the leading space.
+                 // The first code unit of long multiunit ligatures may not be output, hence the leading space.
 
   #include "kbligredispo.c"
   #include "kbligatures.c"

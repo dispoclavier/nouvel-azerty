@@ -10,14 +10,21 @@
 # 2026-01-26T0514+0100
 # 2026-03-04T1042+0100
 # 2026-03-16T1433+0100
-# = last modified.
+# 2026-09-06T1635+0200
+# = last modified
 #
 # This “dead key converter” generates DEADTRANS macro calls for Windows. As it
 # takes in the dead key configuration file for Linux, Compose.yml, it is part
-# of the toolset for Linux that also encompasses the HTML	table generators for
+# of the toolset for Linux that also encompasses the HTML table generators for
 # the documentation.
 #
-# This script has the two replacerulesets documented in Compose.yml built in,
+# Lines parsed for single character dead key or multikey content must contain
+# the output as a literal followed by a code point and a "#" (not necessarily
+# a comment, typically the character name). This is consistent with what is
+# expected by the XCompose parser, notably the trailing hash, as documented in
+# Compose.yml #   End of line comments
+#
+# This script has the two replace rulesets documented in Compose.yml built in,
 # and sorting is improved.
 # https://alvinalexander.com/perl/perl-array-sort-sorting-string-case-insensitive/
 # See Compose.yml # # Notes for maintenance
@@ -86,19 +93,15 @@
 # unchained dead keys may have their multikey equivalent supported.
 #
 # However, on Windows, the dead characters cannot be in sync with those of
-# dead key chains, because if they were, the commented-out multikey equivalents
-# would be uncommented, and the conflicts would break part of the sequences.
+# multikey chains, because if they were, this would work around commenting out
+# the conflicting multikey equivalents, and the conflicts would break part of
+# the sequences.
 #
-# Given that supporting all multikey equivalents breaks the layout drivers and
-# the OS, keeping the source code file size below the 2MB file size limit of
-# github.com is not mandatory. Yet, when skipping all equivalents, it happens.
-#
-# Even for all equivalents, using private use characters, all the intermediate
-# chains can be supported, as the first area E000..F8FF encompassing 6400 code
-# points is not used up by dedicated multikey sequences, and not even when
-# multikey equivalents are added. On 2025-12-22, a set of 1302 intermediate
-# multikey chains used E201..E715. The full set of 2357 intermediate multikey
-# chains with multikey equivalents of dead keys used E200..EAAF (2026-01-03).
+# Unsupporting most of the multikey equivalents is only a matter of keeping the
+# layout driver file size below the Windows-specific bug threshold. Otherwise,
+# the 6400 code points of the BMP private use area E000..F8FF are enough to
+# support both dedicated multikey sequences and dead key multikey equivalents.
+# On 2026-09-06, a set of 2827 intermediate multikey chains used E200..ED0A.
 #
 # For test purposes, this can be toggled here by replacing false (!1) with
 # true (!0):
@@ -108,20 +111,20 @@ my $support_all_multikey_equivalents    = !1;
 #
 # Multicharacter output
 #
-# On 2025-10-29, 1 097 sequences had multicharacter output. Most are letters
+# On 2026-09-06, 1 287 sequences had multicharacter output. Most are letters
 # with combining diacritics, since composed letters are standard and mostly do
 # not have precomposed equivalents. Additionally, an "ê" key and a "ç" key are
-# emulated by digraphs or trigraphs output by the related dead keys.
-#
-# But Windows is unable to output any of these strings by dead keys, due to an
-# improperly designed DEADTRANS macro. To mitigate the resulting UX disruption,
-# string start output is configured in kbdeadtrans.c.
-# See there * Diacriticized letter key emulations.
+# emulated by digraphs or trigraphs output by the related dead keys, and even
+# the defective DEADTRANS macro on Windows supports the lowercase part of this.
+# Otherwise, Windows is unable to output composed letters by dead keys. In an
+# attempt to mitigate the resulting UX disruption, the string start output is
+# configured in kbdeadtrans.c.
+# See kbdeadtrans.c * Diacriticized letter key emulations
 #
 # In order to compensate Windows users for a defective dead key implementation
 # that disregards the official Unicode recommendation as of supporting composed
-# letters by dead keys, alternative input may be provided in Compose.yml, so as
-# to have all sequences in a single place, given that documenting them requires
+# letters by dead keys, alternative output is provided in Compose.yml, so as to
+# have all sequences in a single place, given that documenting them requires
 # special formatting in the dead key tables, that Compose.yml is the source of.
 # These lines starting with "#@" are parsed in Compose.yml alongside.
 # https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-5/#G1076
@@ -200,32 +203,32 @@ use feature 'unicode_strings';
 # By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-my $console_log_path = 'WINDOWS/dead-key-convert-display.txt';
+my $console_log_path = '../../windows/outils/dead-key-convert-display.txt';
 open( CONSOLE, '>', $console_log_path ) or die $!;
 print( "Opened file $console_log_path.\n" );
 print CONSOLE ( "Opened file $console_log_path.\n" );
 
-my $input_path = 'Compose.yml';
+my $input_path = '../compose/Compose.yml';
 open( INPUT, '<', $input_path ) or die $!;
 print( "Opened file $input_path.\n" );
 print CONSOLE ( "Opened file $input_path.\n" );
 
-my $deadkey_path = 'WINDOWS/dead-keys.c';
+my $deadkey_path = '../../windows/outils/dead-keys.c';
 open( DEADKEYS, '>', $deadkey_path ) or die $!;
 print( "Opened file $deadkey_path.\n" );
 print CONSOLE ( "Opened file $deadkey_path.\n" );
 
-my $multikey_path = 'WINDOWS/multikey.c';
+my $multikey_path = '../../windows/outils/multikey.c';
 open( MULTIKEY, '>', $multikey_path ) or die $!;
 print( "Opened file $multikey_path.\n" );
 print CONSOLE ( "Opened file $multikey_path.\n" );
 
-my $report_path = 'WINDOWS/dead-keys.txt';
+my $report_path = '../../windows/outils/dead-keys.txt';
 open( REPORT, '>', $report_path ) or die $!;
 print( "Opened file $report_path.\n" );
 print CONSOLE ( "Opened file $report_path.\n" );
 
-my $log_path = 'WINDOWS/dead-key-high-log.txt';
+my $log_path = '../../windows/outils/dead-key-high-log.txt';
 open( LOG, '>', $log_path ) or die $!;
 print( "Opened file $log_path.\n" );
 print CONSOLE ( "Opened file $log_path.\n" );
@@ -550,6 +553,7 @@ my @dead_key_characters = (
 	'<!group><!group>➔2461',#<UEFD0><UEFD0>
 	'<!group><!group><!group>➔2462',#<UEFD0><UEFD0><UEFD0>
 	'<!group><!group><!group><!group>➔2463',#<UEFD0><UEFD0><UEFD0><UEFD0>
+	'<!group><!tilde>➔263C',#<UEFD0><dead_tilde>
 	'<!group><0>➔2469',#<UEFD0><0>
 	'<!group><0><%comma>➔213F',#<UEFD0><0><comma>
 	'<!group><0><%comma><%period>➔2145',#<UEFD0><0><comma><period>
@@ -1488,7 +1492,7 @@ print CONSOLE ( "Processing the dead key output in progress ---\n" );
 foreach my $line ( @dead_key_out ) {
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Single-character output.
 		unless ( $line =~ /<UEF/ ) {       # Multicharacter input.
-			$line          =~ m/(<.+>)(<.+>) *: *"(.)" *U([0-9A-F]{4,5}) *# *(.+)/u;
+			$line          =~ m/(<.+>)(<.+>) *: *"(.)" *U([0-9A-F]{4,5}) *# *(.*)/u;
 			$deadkey       = $1;
 			$input         = $2;
 			$output_string = $3;
@@ -1562,7 +1566,7 @@ print CONSOLE ( "Processing the multikey output in progress ---\n" );
 foreach my $line ( @multikey_out ) {
 	if ( $line =~ /" U[0-9A-F]{4,5}/ ) { # Single-character output.
 		unless ( $line =~ /<UEF/ ) {       # Multicharacter input.
-			$line          =~ m/((<.+>)(<.+>)) : "(.)" U([0-9A-F]{4,5}) # (.+)/u;
+			$line          =~ m/((<.+>)(<.+>)) *: *"(.)" U([0-9A-F]{4,5}) *# *(.*)/u;
 			$full_chain    = $1;
 			$deadkey       = $2;
 			$input         = $3;
@@ -1732,5 +1736,5 @@ print CONSOLE ( "  This terminal output is logged in $console_log_path.\n" );
 print( "\nDone processing.\n" );
 print CONSOLE ( "\nDone processing.\n" );
 print( "Closing file $console_log_path.\n" );
-print CONSOLE ( "Closing file $console_log_path.\n" );
+print CONSOLE ( "Closing file $console_log_path.\n\n" );
 close( CONSOLE );

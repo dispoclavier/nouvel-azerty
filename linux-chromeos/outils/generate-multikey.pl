@@ -4,7 +4,8 @@
 # 2024-05-13T1842+0200
 # 2024-07-26T1942+0200
 # 2026-01-26T0431+0100
-# = last modified.
+# 2026-09-06T1645+0200
+# = last modified
 # 
 # Adds the Multi_key equivalent below the dead key
 # lines prefixed with an '@' sign for the purpose.
@@ -22,7 +23,7 @@
 # Adds the literal to lines prefixed with an '&'.
 #
 # Adds code point comments to composed characters
-# prefixed with a '?'.
+# and single-character literals prefixed with a '?'.
 #
 #
 # # Multi_key equivalents
@@ -54,7 +55,7 @@ use feature 'unicode_strings';
 # By courtesy of https://stackoverflow.com/a/12291409
 use open ":std", ":encoding(UTF-8)";
 
-my $file_path = 'Compose.yml';
+my $file_path = '../compose/Compose.yml';
 open( INPUT, '<', $file_path ) or die $!;
 print( "Opened file $file_path for reading.\n" );
 
@@ -256,4 +257,4 @@ print( "File content processed successfully.\n" );
 close( BACKUP );
 print( "Closed file $backup_path.\n" );
 close( OUTPUT );
-print( "Closed file $file_path.\n" );
+print( "Closed file $file_path.\n\n" );

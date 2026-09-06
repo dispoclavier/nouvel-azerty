@@ -8,7 +8,7 @@
 * 2014..2026 Marcel Schneider dev[arobase]dispoclavier.com (pro parte)
 *
 * History:
-* Correct level 4, keys D02, D04, D07, D08 7.0.0.2.0 Sat 2026-09-05T1947+0200
+* Level 3, D02, 04, 07, 08; level 4, D03   7.0.0.2.0 Sat 2026-09-05T1947+0200
 * Update attributes (remove KANALOK alias) 7.0.0.1.0 Sat 2026-09-05T1611+0200
 * Replace "Ω" with invisible plus on D06   7.0.0.0.6 Fri 2026-09-04T0802+0200
 * Update levels 3, 4 on C07, C08, D07, D08 7.0.0.0.5 Sat 2026-08-29T1650+0200
