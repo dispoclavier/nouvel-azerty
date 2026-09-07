@@ -3322,7 +3322,7 @@
 <UEFD0>                                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <Multi_key><numbersign>                                                               <asciitilde> : "≃" U2243 # ASYMPTOTICALLY EQUAL TO math
 <UEFD0>                                                                   <dead_tilde><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
-<Multi_key><numbersign>                                                   <dead_tilde><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
+#   Multikey is nonconformant and out of scope.                           <dead_tilde><asciitilde> : "☠" U2620 # SKULL AND CROSSBONES emoji
 <UEFD0><UEFD0>                                                                        <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <Multi_key><numbersign><numbersign>                                                   <asciitilde> : "≈" U2248 # ALMOST EQUAL TO math
 <UEFD0><3>                                                                            <asciitilde> : "≅" U2245 # APPROXIMATELY EQUAL TO math
@@ -3837,7 +3837,7 @@
 <UEFD0>                                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
 <Multi_key><numbersign>                                                                   <dollar> : "␣" U2423 # OPEN BOX, space character
 <UEFD0>                                                                       <dead_tilde><dollar> : "☼" U263C # WHITE SUN WITH RAYS
-<Multi_key><numbersign>                                                       <dead_tilde><dollar> : "☼" U263C # WHITE SUN WITH RAYS
+#   Multikey is nonconformant and out of scope.                               <dead_tilde><dollar> : "☼" U263C # WHITE SUN WITH RAYS
 <UEFD0><UEFD0>                                                                            <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <Multi_key><numbersign><numbersign>                                                       <dollar> : "⍽" U237D # SHOULDERED OPEN BOX, no-break space
 <UEFD0><3>                                                                                <dollar> : "∑" U2211 # N-ARY SUMMATION math
@@ -4732,7 +4732,7 @@
 <UEFD0>                                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <Multi_key><numbersign>                                                                    <grave> : "ʻ" U02BB # MODIFIER LETTER TURNED COMMA
 <UEFD0>                                                                        <dead_tilde><grave> : "❄" U2744 # SNOWFLAKE emoji
-<Multi_key><numbersign>                                                        <dead_tilde><grave> : "❄" U2744 # SNOWFLAKE emoji
+#   Multikey is nonconformant and out of scope.                                <dead_tilde><grave> : "❄" U2744 # SNOWFLAKE emoji
 <UEFD0><UEFD0>                                                                             <grave> : "∧" U2227 # LOGICAL AND math
 <Multi_key><numbersign><numbersign>                                                        <grave> : "∧" U2227 # LOGICAL AND math
 <UEFD0><3>                                                                                 <grave> : "∨" U2228 # LOGICAL OR math

@@ -1,7 +1,7 @@
 #                      Scope: Part 1 of Compose.yml
 #                       Date: See Compose.yml
 #                    Version: See # # Output of keyboard layout version number
-<UEFA0>                     : "version 7.0.0.0" # See #   End of line comments
+<UEFA0>                     : "version 7.0.0.3" # See #   End of line comments
 #       Operating file name*: .XCompose or Compose
 #                   Encoding: UTF-8
 #                       Type: text/XCompose
@@ -970,7 +970,7 @@
 <UEFAA> : "Breton et français disposition de clavier semi-automatique redisposée – kbbrFRr " #
 <UEFAB> : "Polynésie française disposition de clavier semi-automatique redisposée – kbfrPFr " #
 <UEFAC> : "Afrique francophone disposition de clavier semi-automatique redisposée – kbfrAFr " #
-<UEFAD> : "" #
+<UEFAD> : "Français disposition de clavier déboguée complétée semi-automatique – kbfrdcs" #
 <UEFAE> : "" #
 <UEFAF> : "" #
 #
@@ -1073,6 +1073,10 @@
 #           "startAlignEndAligned": {
 #             "find": "^([^ ]+)( *)([^ ]+)( *: .*)$",
 #             "replace": "$1$3$2$4"
+#           },
+#           "startAlignMixedAligned": {
+#             "find": "^([^ ]+)( +)([^ ]+)( +)([^ ]+)( *: .*)$",
+#             "replace": "$1$3$5$2$4$6"
 #           }
 #         },
 #         "replacerules.rulesets": {
@@ -1081,7 +1085,8 @@
 #               "removeCommentLines",
 #               "removeMulticharForLiveKeys",
 #               "removeKeypadEquivalents",
-#               "startAlignEndAligned"
+#               "startAlignEndAligned",
+#               "startAlignMixedAligned"
 #             ]
 #           }
 #         }
@@ -2298,6 +2303,243 @@
 #   See # # A03-level_3 nobreakspace
 #
 #
+#^# Tone marks
+#
+# # Tone bars
+#
+#   The bar may be a dot, and the stem may be to the right or alternatively to
+#   the left. This scheme supports all four sets using digits 1..5 and letters
+#   "t" for bar-shaped tone bars, or "i" for dotted tone bars, with leading
+#   digits for standard tone bars, or trailing digits for left-stem tone bars.
+#
+#   Digits are assigned mnemonically from 1 for extra-low to 5 for extra-high.
+#
+#   Order matters since the tone bars "꜈" UA708.."꜖" UA716 are supported.
+#
+#   As "T" is used for mathematical tack or turnstile symbols, "t" is case
+#   sensitive when it occurs in association with leading or trailing "2" or "3"
+#   (used for double- and triple-line tacks and turnstiles). Otherwise, both
+#   letters are case insensitive so far.
+#   See #   Tacks and turnstiles
+#
+#
+# # Standard tone bars
+#
+#   Shortcuts using a visual mnemonic based on capital I are in dead_hook.
+#   See #*# HOOK
+#
+<Multi_key><1><t>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><KP_1><t>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
+<Multi_key><2><t>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+<Multi_key><KP_2><t>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
+#   <Multi_key><2><T> is used for tacks and turnstiles.
+#   <Multi_key><KP_2><T> is used for tacks and turnstiles.
+<Multi_key><3><t>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+<Multi_key><KP_3><t>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
+#   <Multi_key><3><T> is used for tacks and turnstiles.
+#   <Multi_key><KP_3><T> is used for tacks and turnstiles.
+<Multi_key><4><t>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><KP_4><t>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><KP_4><T>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
+<Multi_key><5><t>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><KP_5><t>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+<Multi_key><KP_5><T>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
+#
+#
+# # Left-stem tone bars
+#
+<Multi_key><t><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><t><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><T><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><T><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
+<Multi_key><t><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+<Multi_key><t><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
+#   <Multi_key><T><2> is used for tacks and turnstiles.
+#   <Multi_key><T><KP_2> is used for tacks and turnstiles.
+<Multi_key><t><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+<Multi_key><t><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
+#   <Multi_key><T><3> is used for tacks and turnstiles.
+#   <Multi_key><T><KP_3> is used for tacks and turnstiles.
+<Multi_key><t><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><t><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><T><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
+<Multi_key><t><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><t><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><T><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+<Multi_key><T><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
+#
+#
+# # Dotted tone bars
+#
+<Multi_key><1><i>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><KP_1><i>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><1><I>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><KP_1><I>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
+<Multi_key><2><i>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><KP_2><i>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><2><I>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><KP_2><I>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
+<Multi_key><3><i>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><KP_3><i>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><3><I>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><KP_3><I>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
+<Multi_key><4><i>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><KP_4><i>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><4><I>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><KP_4><I>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
+<Multi_key><5><i>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><KP_5><i>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><5><I>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+<Multi_key><KP_5><I>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
+#
+#
+# # Dotted left-stem tone bars
+#
+<Multi_key><i><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><i><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+<Multi_key><I><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
+#
+#
+# # Chinantec tone marks
+#
+#   The dotted Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718 and "ꜙ" UA719 are
+#   intuitively supported in dead_abovedot with base characters matching the
+#   vertical, diagonal or horizontal dash, but without multikey equivalents,
+#   while "ꜚ" UA71A is in dead_horn in lieu of a spacing clone of horn.
+#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
+#   https://www.unicode.org/L2/L2004/04349r-chinantec.pdf
+#   See #*# DOT_ABOVE
+#   See #*# HORN
+#
+#   For an unconflicting, partially order insensitive emulation of the
+#   deactivated multikey sequences in dead_abovedot, case insensitive "C" is
+#   prepended. "ꜚ" UA71A is supported consistently with minus-bar sequences.
+#
+<Multi_key><C>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+#   <Multi_key><C><bar><period> conflicts with "₵" U20B5.                                          : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><c>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><c>                                                                       <bar><period> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
+<Multi_key><C>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+#   <Multi_key><C><slash><period> conflicts with "₡" U20A1.                                        : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><c>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><c>                                                                     <slash><period> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
+<Multi_key><C>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><C>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><c>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><c>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
+<Multi_key><C>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+#   <Multi_key><C><bar><minus> conflicts with "₵" U20B5.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+<Multi_key><c>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+#   <Multi_key><c><bar><minus> conflicts with "⫑" U2AD1.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
+#
+#
+# # Zhuang tone letters
+#
+#   Zhuang tone letters are casing and thus require sequences with letters,
+#   most appropriately with Z avoiding conflicts with tone bars, paired with
+#   the digit both ways for ease of input. Zhuang tone one is unwritten.
+#   https://omniglot.com/writing/zhuang.htm
+#
+<Multi_key><2><Z>                                                                                  : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><KP_2><Z>                                                                               : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><Z><2>                                                                                  : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><Z><KP_2>                                                                               : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
+<Multi_key><2><z>                                                                                  : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><KP_2><z>                                                                               : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><z><2>                                                                                  : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><z><KP_2>                                                                               : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
+<Multi_key><3><Z>                                                                                  : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><KP_3><Z>                                                                               : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><Z><3>                                                                                  : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><Z><KP_3>                                                                               : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
+<Multi_key><3><z>                                                                                  : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><KP_3><z>                                                                               : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><z><3>                                                                                  : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><z><KP_3>                                                                               : "з" U0437 # CYRILLIC SMALL LETTER ZE
+<Multi_key><4><Z>                                                                                  : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><KP_4><Z>                                                                               : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><Z><4>                                                                                  : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><Z><KP_4>                                                                               : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
+<Multi_key><4><z>                                                                                  : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><KP_4><z>                                                                               : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><z><4>                                                                                  : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><z><KP_4>                                                                               : "ч" U0447 # CYRILLIC SMALL LETTER CHE
+<Multi_key><5><Z>                                                                                  : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><KP_5><Z>                                                                               : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><Z><5>                                                                                  : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><Z><KP_5>                                                                               : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
+<Multi_key><5><z>                                                                                  : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><KP_5><z>                                                                               : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><z><5>                                                                                  : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><z><KP_5>                                                                               : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
+<Multi_key><6><Z>                                                                                  : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><KP_6><Z>                                                                               : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><Z><6>                                                                                  : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><Z><KP_6>                                                                               : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
+<Multi_key><6><z>                                                                                  : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><KP_6><z>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><z><6>                                                                                  : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+<Multi_key><z><KP_6>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
+#
+#
+# # Bracketing tone marks
+#
+#   The tone height is denoted by a leading digit, 1 for low, 9 for high. so as
+#   to avoid localization and conflicts with angle symbols like "⊾" U22BE. For
+#   the high tone, 5 and 2 are also supported. The start or end semantics is
+#   carried by a trailing parenthesis.
+#
+#   "꜠" UA720 and "꜡" UA721 are supported by trailing percent, as ligatures of
+#   begin tone marks and stress.
+#
+<Multi_key><9><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><KP_9><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><5><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><KP_5><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><2><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><KP_2><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
+<Multi_key><9><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><KP_9><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><5><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><KP_5><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><2><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><KP_2><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
+<Multi_key><1><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><KP_1><parenleft>                                                                       : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
+<Multi_key><1><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
+<Multi_key><KP_1><parenright>                                                                      : "˼" U02FC # MODIFIER LETTER END LOW TONE
+<Multi_key><9><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><KP_9><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><5><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><KP_5><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><2><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><KP_2><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
+<Multi_key><1><percent>                                                                            : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+<Multi_key><KP_1><percent>                                                                         : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
+#
+#
 #^# Punctuation and proofreading
 #
 # # Question and exclamation
@@ -2802,241 +3044,6 @@
 #   is experimental.
 #
 <Multi_key><less><question>                                                                        : "�" UFFFD # REPLACEMENT CHARACTER
-#
-#
-#^# Tone bars
-#
-#   The bar may be a dot, and the stem may be to the right or alternatively to
-#   the left. This scheme supports all four sets using digits 1..5 and letters
-#   "t" for bar-shaped tone bars, or "i" for dotted tone bars, with leading
-#   digits for standard tone bars, or trailing digits for left-stem tone bars.
-#
-#   Digits are assigned mnemonically from 1 for extra-low to 5 for extra-high.
-#
-#   Order matters since the tone bars "꜈" UA708.."꜖" UA716 are supported.
-#
-#   As "T" is used for mathematical tack or turnstile symbols, "t" is case
-#   sensitive when it occurs in association with leading or trailing "2" or "3"
-#   (used for double- and triple-line tacks and turnstiles). Otherwise, both
-#   letters are case insensitive so far.
-#   See #   Tacks and turnstiles
-#
-#
-# # Standard tone bars
-#
-#   Shortcuts using a visual mnemonic based on capital I are in dead_hook.
-#   See #*# HOOK
-#
-<Multi_key><1><t>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><KP_1><t>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><1><T>                                                                                  : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><KP_1><T>                                                                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-<Multi_key><2><t>                                                                                  : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-<Multi_key><KP_2><t>                                                                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
-#   <Multi_key><2><T> is used for tacks and turnstiles.
-#   <Multi_key><KP_2><T> is used for tacks and turnstiles.
-<Multi_key><3><t>                                                                                  : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-<Multi_key><KP_3><t>                                                                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
-#   <Multi_key><3><T> is used for tacks and turnstiles.
-#   <Multi_key><KP_3><T> is used for tacks and turnstiles.
-<Multi_key><4><t>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><KP_4><t>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><4><T>                                                                                  : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><KP_4><T>                                                                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
-<Multi_key><5><t>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><KP_5><t>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><5><T>                                                                                  : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-<Multi_key><KP_5><T>                                                                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
-#
-#
-# # Left-stem tone bars
-#
-<Multi_key><t><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-<Multi_key><t><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-<Multi_key><T><1>                                                                                  : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-<Multi_key><T><KP_1>                                                                               : "꜖" UA716 # MODIFIER LETTER EXTRA-LOW LEFT-STEM TONE BAR
-<Multi_key><t><2>                                                                                  : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
-<Multi_key><t><KP_2>                                                                               : "꜕" UA715 # MODIFIER LETTER LOW LEFT-STEM TONE BAR
-#   <Multi_key><T><2> is used for tacks and turnstiles.
-#   <Multi_key><T><KP_2> is used for tacks and turnstiles.
-<Multi_key><t><3>                                                                                  : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
-<Multi_key><t><KP_3>                                                                               : "꜔" UA714 # MODIFIER LETTER MID LEFT-STEM TONE BAR
-#   <Multi_key><T><3> is used for tacks and turnstiles.
-#   <Multi_key><T><KP_3> is used for tacks and turnstiles.
-<Multi_key><t><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-<Multi_key><t><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-<Multi_key><T><4>                                                                                  : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-<Multi_key><T><KP_4>                                                                               : "꜓" UA713 # MODIFIER LETTER HIGH LEFT-STEM TONE BAR
-<Multi_key><t><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-<Multi_key><t><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-<Multi_key><T><5>                                                                                  : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-<Multi_key><T><KP_5>                                                                               : "꜒" UA712 # MODIFIER LETTER EXTRA-HIGH LEFT-STEM TONE BAR
-#
-#
-# # Dotted tone bars
-#
-<Multi_key><1><i>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
-<Multi_key><KP_1><i>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
-<Multi_key><1><I>                                                                                  : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
-<Multi_key><KP_1><I>                                                                               : "꜌" UA70C # MODIFIER LETTER EXTRA-LOW DOTTED TONE BAR
-<Multi_key><2><i>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
-<Multi_key><KP_2><i>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
-<Multi_key><2><I>                                                                                  : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
-<Multi_key><KP_2><I>                                                                               : "꜋" UA70B # MODIFIER LETTER LOW DOTTED TONE BAR
-<Multi_key><3><i>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
-<Multi_key><KP_3><i>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
-<Multi_key><3><I>                                                                                  : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
-<Multi_key><KP_3><I>                                                                               : "꜊" UA70A # MODIFIER LETTER MID DOTTED TONE BAR
-<Multi_key><4><i>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
-<Multi_key><KP_4><i>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
-<Multi_key><4><I>                                                                                  : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
-<Multi_key><KP_4><I>                                                                               : "꜉" UA709 # MODIFIER LETTER HIGH DOTTED TONE BAR
-<Multi_key><5><i>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
-<Multi_key><KP_5><i>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
-<Multi_key><5><I>                                                                                  : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
-<Multi_key><KP_5><I>                                                                               : "꜈" UA708 # MODIFIER LETTER EXTRA-HIGH DOTTED TONE BAR
-#
-#
-# # Dotted left-stem tone bars
-#
-<Multi_key><i><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><1>                                                                                  : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><KP_1>                                                                               : "꜍" UA70D # MODIFIER LETTER EXTRA-HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><2>                                                                                  : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><KP_2>                                                                               : "꜎" UA70E # MODIFIER LETTER HIGH DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><3>                                                                                  : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><KP_3>                                                                               : "꜏" UA70F # MODIFIER LETTER MID DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><4>                                                                                  : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><KP_4>                                                                               : "꜐" UA710 # MODIFIER LETTER LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><i><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><5>                                                                                  : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-<Multi_key><I><KP_5>                                                                               : "꜑" UA711 # MODIFIER LETTER EXTRA-LOW DOTTED LEFT-STEM TONE BAR
-#
-#
-#^# Chinantec tone marks
-#
-#   The dotted Chinantec tone marks "ꜗ" UA717, "ꜘ" UA718 and "ꜙ" UA719 are
-#   intuitively supported in dead_abovedot with base characters matching the
-#   vertical, diagonal or horizontal dash, but without multikey equivalents,
-#   while "ꜚ" UA71A is in dead_horn in lieu of a spacing clone of horn.
-#   https://fr.wikipedia.org/wiki/Barre_de_ton_chinant%C3%A8que
-#   https://www.unicode.org/L2/L2004/04349r-chinantec.pdf
-#   See #*# DOT_ABOVE
-#   See #*# HORN
-#
-#   For an unconflicting, partially order insensitive emulation of the
-#   deactivated multikey sequences in dead_abovedot, case insensitive "C" is
-#   prepended. "ꜚ" UA71A is supported consistently with minus-bar sequences.
-#
-<Multi_key><C>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-#   <Multi_key><C><bar><period> conflicts with "₵" U20B5.                                          : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><c>                                                                       <period><bar> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><c>                                                                       <bar><period> : "ꜗ" UA717 # MODIFIER LETTER DOT VERTICAL BAR
-<Multi_key><C>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-#   <Multi_key><C><slash><period> conflicts with "₡" U20A1.                                        : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><c>                                                                     <period><slash> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><c>                                                                     <slash><period> : "ꜘ" UA718 # MODIFIER LETTER DOT SLASH
-<Multi_key><C>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><C>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><c>                                                                     <period><minus> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><c>                                                                     <minus><period> : "ꜙ" UA719 # MODIFIER LETTER DOT HORIZONTAL BAR
-<Multi_key><C>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-#   <Multi_key><C><bar><minus> conflicts with "₵" U20B5.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-<Multi_key><c>                                                                        <minus><bar> : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-#   <Multi_key><c><bar><minus> conflicts with "⫑" U2AD1.                                           : "ꜚ" UA71A # MODIFIER LETTER LOWER RIGHT CORNER ANGLE
-#
-#
-#^# Zhuang tone letters
-#
-#   Zhuang tone letters are casing and thus require sequences with letters,
-#   most appropriately with Z avoiding conflicts with tone bars, paired with
-#   the digit both ways for ease of input. Zhuang tone one is unwritten.
-#   https://omniglot.com/writing/zhuang.htm
-#
-<Multi_key><2><Z>                                                                                  : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><KP_2><Z>                                                                               : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><Z><2>                                                                                  : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><Z><KP_2>                                                                               : "Ƨ" U01A7 # LATIN CAPITAL LETTER TONE TWO
-<Multi_key><2><z>                                                                                  : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><KP_2><z>                                                                               : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><z><2>                                                                                  : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><z><KP_2>                                                                               : "ƨ" U01A8 # LATIN SMALL LETTER TONE TWO
-<Multi_key><3><Z>                                                                                  : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><KP_3><Z>                                                                               : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><Z><3>                                                                                  : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><Z><KP_3>                                                                               : "З" U0417 # CYRILLIC CAPITAL LETTER ZE
-<Multi_key><3><z>                                                                                  : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><KP_3><z>                                                                               : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><z><3>                                                                                  : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><z><KP_3>                                                                               : "з" U0437 # CYRILLIC SMALL LETTER ZE
-<Multi_key><4><Z>                                                                                  : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><KP_4><Z>                                                                               : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><Z><4>                                                                                  : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><Z><KP_4>                                                                               : "Ч" U0427 # CYRILLIC CAPITAL LETTER CHE
-<Multi_key><4><z>                                                                                  : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><KP_4><z>                                                                               : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><z><4>                                                                                  : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><z><KP_4>                                                                               : "ч" U0447 # CYRILLIC SMALL LETTER CHE
-<Multi_key><5><Z>                                                                                  : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><KP_5><Z>                                                                               : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><Z><5>                                                                                  : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><Z><KP_5>                                                                               : "Ƽ" U01BC # LATIN CAPITAL LETTER TONE FIVE
-<Multi_key><5><z>                                                                                  : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><KP_5><z>                                                                               : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><z><5>                                                                                  : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><z><KP_5>                                                                               : "ƽ" U01BD # LATIN SMALL LETTER TONE FIVE
-<Multi_key><6><Z>                                                                                  : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><KP_6><Z>                                                                               : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><Z><6>                                                                                  : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><Z><KP_6>                                                                               : "Ƅ" U0184 # LATIN CAPITAL LETTER TONE SIX
-<Multi_key><6><z>                                                                                  : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-<Multi_key><KP_6><z>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-<Multi_key><z><6>                                                                                  : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-<Multi_key><z><KP_6>                                                                               : "ƅ" U0185 # LATIN SMALL LETTER TONE SIX
-#
-#
-#^# Bracketing tone marks
-#
-#   The tone height is denoted by a leading digit, 1 for low, 9 for high. so as
-#   to avoid localization and conflicts with angle symbols like "⊾" U22BE. For
-#   the high tone, 5 and 2 are also supported. The start or end semantics is
-#   carried by a trailing parenthesis.
-#
-#   "꜠" UA720 and "꜡" UA721 are supported by trailing percent, as ligatures of
-#   begin tone marks and stress.
-#
-<Multi_key><9><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><KP_9><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><5><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><KP_5><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><2><parenleft>                                                                          : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><KP_2><parenleft>                                                                       : "˹" U02F9 # MODIFIER LETTER BEGIN HIGH TONE
-<Multi_key><9><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><KP_9><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><5><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><KP_5><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><2><parenright>                                                                         : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><KP_2><parenright>                                                                      : "˺" U02FA # MODIFIER LETTER END HIGH TONE
-<Multi_key><1><parenleft>                                                                          : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
-<Multi_key><KP_1><parenleft>                                                                       : "˻" U02FB # MODIFIER LETTER BEGIN LOW TONE
-<Multi_key><1><parenright>                                                                         : "˼" U02FC # MODIFIER LETTER END LOW TONE
-<Multi_key><KP_1><parenright>                                                                      : "˼" U02FC # MODIFIER LETTER END LOW TONE
-<Multi_key><9><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><KP_9><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><5><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><KP_5><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><2><percent>                                                                            : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><KP_2><percent>                                                                         : "꜠" UA720 # MODIFIER LETTER STRESS AND HIGH TONE
-<Multi_key><1><percent>                                                                            : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
-<Multi_key><KP_1><percent>                                                                         : "꜡" UA721 # MODIFIER LETTER STRESS AND LOW TONE
 #
 #
 #^# Vulgar fractions
@@ -4086,6 +4093,32 @@
 <Multi_key><S><E><R>                                                                               : "⛎" U26CE # OPHIUCHUS emoji
 #
 #
+#^# Meteorological symbols
+#
+#   This set is redundant with the symbol groups but is required due to the
+#   inconsistent mapping of meteorological symbols across groups instead of
+#   having them all in a single group as is done for Western zodiacal signs
+#   in group 9.
+#
+#   For mnemonics, based on French, alphabetic sequences are case sensitive.
+#
+<Multi_key><m><minus>                                                                      <slash> : "⛆" U26C6 # RAIN
+<Multi_key><m><minus>                                                                          <b> : "⛄" U26C4 # SNOWMAN WITHOUT SNOW emoji
+<Multi_key><m><minus>                                                                          <B> : "☃" U2603 # SNOWMAN emoji, snowman with snow
+<Multi_key><m><minus>                                                                          <e> : "☇" U2607 # LIGHTNING
+<Multi_key><m><minus>                                                                          <E> : "⚡" U26A1 # HIGH VOLTAGE SIGN emoji, lightning
+<Multi_key><m><minus>                                                                          <f> : "❆" U2746 # HEAVY CHEVRON SNOWFLAKE
+<Multi_key><m><minus>                                                                          <F> : "❄" U2744 # SNOWFLAKE emoji
+<Multi_key><m><minus>                                                                          <n> : "☁" U2601 # CLOUD emoji
+<Multi_key><m><minus>                                                                          <N> : "⛅" U26C5 # SUN BEHIND CLOUD emoji
+<Multi_key><m><minus>                                                                          <o> : "☈" U2608 # THUNDERSTORM
+<Multi_key><m><minus>                                                                          <O> : "⛈" U26C8 # THUNDER CLOUD AND RAIN emoji
+<Multi_key><m><minus>                                                                          <p> : "☂" U2602 # UMBRELLA emoji
+<Multi_key><m><minus>                                                                          <P> : "☔" U2614 # UMBRELLA WITH RAIN DROPS emoji
+<Multi_key><m><minus>                                                                          <s> : "☼" U263C # WHITE SUN WITH RAYS
+<Multi_key><m><minus>                                                                          <S> : "☀" U2600 # BLACK SUN WITH RAYS emoji
+#
+#
 #^# Circle quadrants
 #
 #   These extend filled and empty circles on D06, groups 1..3.
@@ -5099,9 +5132,10 @@
 #   at function level, as it is traditionally built into compact keyboards
 #   featuring a Function modifier key.
 #
-#   Initially targeted at Windows users, this Alt + numpad emulation is also
-#   available to Linux users and macOS users, so far as the dead key and
-#   multikey configuration in this file is transpiled to C and XML.
+#   Initially targeted at Windows users, this Alt + numpad input method
+#   emulation is also available to Linux users and macOS users, so far as
+#   the dead key and multikey configuration in this file is transpiled to C
+#   and XML.
 #
 #   The purpose of the leading plus is to prevent conflicts with the vulgar
 #   fractions.
@@ -5115,602 +5149,602 @@
 #   https://www.freecodecamp.org/news/alt-codes-special-characters-keyboard-symbols-windows-list/
 #   https://www.asciitable.com/alt-codes
 #
-<Multi_key><plus>                                                                <1>       <space> : "☺" #
-<Multi_key><plus>                                                                <1><nobreakspace> : "☺" #
-<Multi_key><plus>                                                                <2>       <space> : "☻" #
-<Multi_key><plus>                                                                <2><nobreakspace> : "☻" #
-<Multi_key><plus>                                                                <3>       <space> : "♥" #
-<Multi_key><plus>                                                                <3><nobreakspace> : "♥" #
-<Multi_key><plus>                                                                <4>       <space> : "♦" #
-<Multi_key><plus>                                                                <4><nobreakspace> : "♦" #
-<Multi_key><plus>                                                                <5>       <space> : "♣" #
-<Multi_key><plus>                                                                <5><nobreakspace> : "♣" #
-<Multi_key><plus>                                                                <6>       <space> : "♠" #
-<Multi_key><plus>                                                                <6><nobreakspace> : "♠" #
-<Multi_key><plus>                                                                <7>       <space> : "•" #
-<Multi_key><plus>                                                                <7><nobreakspace> : "•" #
-<Multi_key><plus>                                                                <8>       <space> : "◘" #
-<Multi_key><plus>                                                                <8><nobreakspace> : "◘" #
-<Multi_key><plus>                                                                <9>       <space> : "○" #
-<Multi_key><plus>                                                                <9><nobreakspace> : "○" #
-<Multi_key><plus>                                                             <1><0>       <space> : "◙" #
-<Multi_key><plus>                                                             <1><0><nobreakspace> : "◙" #
-<Multi_key><plus>                                                             <1><1>       <space> : "♂" #
-<Multi_key><plus>                                                             <1><1><nobreakspace> : "♂" #
-<Multi_key><plus>                                                             <1><2>       <space> : "♀" #
-<Multi_key><plus>                                                             <1><2><nobreakspace> : "♀" #
-<Multi_key><plus>                                                             <1><3>       <space> : "♪" #
-<Multi_key><plus>                                                             <1><3><nobreakspace> : "♪" #
-<Multi_key><plus>                                                             <1><4>       <space> : "♫" #
-<Multi_key><plus>                                                             <1><4><nobreakspace> : "♫" #
-<Multi_key><plus>                                                             <1><5>       <space> : "☼" #
-<Multi_key><plus>                                                             <1><5><nobreakspace> : "☼" #
-<Multi_key><plus>                                                             <1><6>       <space> : "►" #
-<Multi_key><plus>                                                             <1><6><nobreakspace> : "►" #
-<Multi_key><plus>                                                             <1><7>       <space> : "◄" #
-<Multi_key><plus>                                                             <1><7><nobreakspace> : "◄" #
-<Multi_key><plus>                                                             <1><8>       <space> : "↕" #
-<Multi_key><plus>                                                             <1><8><nobreakspace> : "↕" #
-<Multi_key><plus>                                                             <1><9>       <space> : "‼" #
-<Multi_key><plus>                                                             <1><9><nobreakspace> : "‼" #
-<Multi_key><plus>                                                             <2><0>       <space> : "¶" #
-<Multi_key><plus>                                                             <2><0><nobreakspace> : "¶" #
-<Multi_key><plus>                                                             <2><1>       <space> : "§" #
-<Multi_key><plus>                                                             <2><1><nobreakspace> : "§" #
-<Multi_key><plus>                                                             <2><2>       <space> : "▬" #
-<Multi_key><plus>                                                             <2><2><nobreakspace> : "▬" #
-<Multi_key><plus>                                                             <2><3>       <space> : "↨" #
-<Multi_key><plus>                                                             <2><3><nobreakspace> : "↨" #
-<Multi_key><plus>                                                             <2><4>       <space> : "↑" #
-<Multi_key><plus>                                                             <2><4><nobreakspace> : "↑" #
-<Multi_key><plus>                                                             <2><5>       <space> : "↓" #
-<Multi_key><plus>                                                             <2><5><nobreakspace> : "↓" #
-<Multi_key><plus>                                                             <2><6>       <space> : "→" #
-<Multi_key><plus>                                                             <2><6><nobreakspace> : "→" #
-<Multi_key><plus>                                                             <2><7>       <space> : "←" #
-<Multi_key><plus>                                                             <2><7><nobreakspace> : "←" #
-<Multi_key><plus>                                                             <2><8>       <space> : "∟" #
-<Multi_key><plus>                                                             <2><8><nobreakspace> : "∟" #
-<Multi_key><plus>                                                             <2><9>       <space> : "↔" #
-<Multi_key><plus>                                                             <2><9><nobreakspace> : "↔" #
-<Multi_key><plus>                                                             <3><0>       <space> : "▲" #
-<Multi_key><plus>                                                             <3><0><nobreakspace> : "▲" #
-<Multi_key><plus>                                                             <3><1>       <space> : "▼" #
-<Multi_key><plus>                                                             <3><1><nobreakspace> : "▼" #
-<Multi_key><plus>                                                             <3><2>       <space> : " " #
-<Multi_key><plus>                                                             <3><2><nobreakspace> : " " #
-<Multi_key><plus>                                                             <3><3>       <space> : "!" #
-<Multi_key><plus>                                                             <3><3><nobreakspace> : "!" #
-<Multi_key><plus>                                                             <3><4>       <space> : """ #
-<Multi_key><plus>                                                             <3><4><nobreakspace> : """ #
-<Multi_key><plus>                                                             <3><5>       <space> : "#" #
-<Multi_key><plus>                                                             <3><5><nobreakspace> : "#" #
-<Multi_key><plus>                                                             <3><6>       <space> : "$" #
-<Multi_key><plus>                                                             <3><6><nobreakspace> : "$" #
-<Multi_key><plus>                                                             <3><7>       <space> : "%" #
-<Multi_key><plus>                                                             <3><7><nobreakspace> : "%" #
-<Multi_key><plus>                                                             <3><8>       <space> : "&" #
-<Multi_key><plus>                                                             <3><8><nobreakspace> : "&" #
-<Multi_key><plus>                                                             <3><9>       <space> : "'" #
-<Multi_key><plus>                                                             <3><9><nobreakspace> : "'" #
-<Multi_key><plus>                                                             <4><0>       <space> : "(" #
-<Multi_key><plus>                                                             <4><0><nobreakspace> : "(" #
-<Multi_key><plus>                                                             <4><1>       <space> : ")" #
-<Multi_key><plus>                                                             <4><1><nobreakspace> : ")" #
-<Multi_key><plus>                                                             <4><2>       <space> : "*" #
-<Multi_key><plus>                                                             <4><2><nobreakspace> : "*" #
-<Multi_key><plus>                                                             <4><3>       <space> : "+" #
-<Multi_key><plus>                                                             <4><3><nobreakspace> : "+" #
-<Multi_key><plus>                                                             <4><4>       <space> : "," #
-<Multi_key><plus>                                                             <4><4><nobreakspace> : "," #
-<Multi_key><plus>                                                             <4><5>       <space> : "-" #
-<Multi_key><plus>                                                             <4><5><nobreakspace> : "-" #
-<Multi_key><plus>                                                             <4><6>       <space> : "." #
-<Multi_key><plus>                                                             <4><6><nobreakspace> : "." #
-<Multi_key><plus>                                                             <4><7>       <space> : "/" #
-<Multi_key><plus>                                                             <4><7><nobreakspace> : "/" #
-<Multi_key><plus>                                                             <4><8>       <space> : "0" #
-<Multi_key><plus>                                                             <4><8><nobreakspace> : "0" #
-<Multi_key><plus>                                                             <4><9>       <space> : "1" #
-<Multi_key><plus>                                                             <4><9><nobreakspace> : "1" #
-<Multi_key><plus>                                                             <5><0>       <space> : "2" #
-<Multi_key><plus>                                                             <5><0><nobreakspace> : "2" #
-<Multi_key><plus>                                                             <5><1>       <space> : "3" #
-<Multi_key><plus>                                                             <5><1><nobreakspace> : "3" #
-<Multi_key><plus>                                                             <5><2>       <space> : "4" #
-<Multi_key><plus>                                                             <5><2><nobreakspace> : "4" #
-<Multi_key><plus>                                                             <5><3>       <space> : "5" #
-<Multi_key><plus>                                                             <5><3><nobreakspace> : "5" #
-<Multi_key><plus>                                                             <5><4>       <space> : "6" #
-<Multi_key><plus>                                                             <5><4><nobreakspace> : "6" #
-<Multi_key><plus>                                                             <5><5>       <space> : "7" #
-<Multi_key><plus>                                                             <5><5><nobreakspace> : "7" #
-<Multi_key><plus>                                                             <5><6>       <space> : "8" #
-<Multi_key><plus>                                                             <5><6><nobreakspace> : "8" #
-<Multi_key><plus>                                                             <5><7>       <space> : "9" #
-<Multi_key><plus>                                                             <5><7><nobreakspace> : "9" #
-<Multi_key><plus>                                                             <5><8>       <space> : ":" #
-<Multi_key><plus>                                                             <5><8><nobreakspace> : ":" #
-<Multi_key><plus>                                                             <5><9>       <space> : ";" #
-<Multi_key><plus>                                                             <5><9><nobreakspace> : ";" #
-<Multi_key><plus>                                                             <6><0>       <space> : "<" #
-<Multi_key><plus>                                                             <6><0><nobreakspace> : "<" #
-<Multi_key><plus>                                                             <6><1>       <space> : "=" #
-<Multi_key><plus>                                                             <6><1><nobreakspace> : "=" #
-<Multi_key><plus>                                                             <6><2>       <space> : ">" #
-<Multi_key><plus>                                                             <6><2><nobreakspace> : ">" #
-<Multi_key><plus>                                                             <6><3>       <space> : "?" #
-<Multi_key><plus>                                                             <6><3><nobreakspace> : "?" #
-<Multi_key><plus>                                                             <6><4>       <space> : "@" #
-<Multi_key><plus>                                                             <6><4><nobreakspace> : "@" #
-<Multi_key><plus>                                                             <6><5>       <space> : "A" #
-<Multi_key><plus>                                                             <6><5><nobreakspace> : "A" #
-<Multi_key><plus>                                                             <6><6>       <space> : "B" #
-<Multi_key><plus>                                                             <6><6><nobreakspace> : "B" #
-<Multi_key><plus>                                                             <6><7>       <space> : "C" #
-<Multi_key><plus>                                                             <6><7><nobreakspace> : "C" #
-<Multi_key><plus>                                                             <6><8>       <space> : "D" #
-<Multi_key><plus>                                                             <6><8><nobreakspace> : "D" #
-<Multi_key><plus>                                                             <6><9>       <space> : "E" #
-<Multi_key><plus>                                                             <6><9><nobreakspace> : "E" #
-<Multi_key><plus>                                                             <7><0>       <space> : "F" #
-<Multi_key><plus>                                                             <7><0><nobreakspace> : "F" #
-<Multi_key><plus>                                                             <7><1>       <space> : "G" #
-<Multi_key><plus>                                                             <7><1><nobreakspace> : "G" #
-<Multi_key><plus>                                                             <7><2>       <space> : "H" #
-<Multi_key><plus>                                                             <7><2><nobreakspace> : "H" #
-<Multi_key><plus>                                                             <7><3>       <space> : "I" #
-<Multi_key><plus>                                                             <7><3><nobreakspace> : "I" #
-<Multi_key><plus>                                                             <7><4>       <space> : "J" #
-<Multi_key><plus>                                                             <7><4><nobreakspace> : "J" #
-<Multi_key><plus>                                                             <7><5>       <space> : "K" #
-<Multi_key><plus>                                                             <7><5><nobreakspace> : "K" #
-<Multi_key><plus>                                                             <7><6>       <space> : "L" #
-<Multi_key><plus>                                                             <7><6><nobreakspace> : "L" #
-<Multi_key><plus>                                                             <7><7>       <space> : "M" #
-<Multi_key><plus>                                                             <7><7><nobreakspace> : "M" #
-<Multi_key><plus>                                                             <7><8>       <space> : "N" #
-<Multi_key><plus>                                                             <7><8><nobreakspace> : "N" #
-<Multi_key><plus>                                                             <7><9>       <space> : "O" #
-<Multi_key><plus>                                                             <7><9><nobreakspace> : "O" #
-<Multi_key><plus>                                                             <8><0>       <space> : "P" #
-<Multi_key><plus>                                                             <8><0><nobreakspace> : "P" #
-<Multi_key><plus>                                                             <8><1>       <space> : "Q" #
-<Multi_key><plus>                                                             <8><1><nobreakspace> : "Q" #
-<Multi_key><plus>                                                             <8><2>       <space> : "R" #
-<Multi_key><plus>                                                             <8><2><nobreakspace> : "R" #
-<Multi_key><plus>                                                             <8><3>       <space> : "S" #
-<Multi_key><plus>                                                             <8><3><nobreakspace> : "S" #
-<Multi_key><plus>                                                             <8><4>       <space> : "T" #
-<Multi_key><plus>                                                             <8><4><nobreakspace> : "T" #
-<Multi_key><plus>                                                             <8><5>       <space> : "U" #
-<Multi_key><plus>                                                             <8><5><nobreakspace> : "U" #
-<Multi_key><plus>                                                             <8><6>       <space> : "V" #
-<Multi_key><plus>                                                             <8><6><nobreakspace> : "V" #
-<Multi_key><plus>                                                             <8><7>       <space> : "W" #
-<Multi_key><plus>                                                             <8><7><nobreakspace> : "W" #
-<Multi_key><plus>                                                             <8><8>       <space> : "X" #
-<Multi_key><plus>                                                             <8><8><nobreakspace> : "X" #
-<Multi_key><plus>                                                             <8><9>       <space> : "Y" #
-<Multi_key><plus>                                                             <8><9><nobreakspace> : "Y" #
-<Multi_key><plus>                                                             <9><0>       <space> : "Z" #
-<Multi_key><plus>                                                             <9><0><nobreakspace> : "Z" #
-<Multi_key><plus>                                                             <9><1>       <space> : "[" #
-<Multi_key><plus>                                                             <9><1><nobreakspace> : "[" #
-<Multi_key><plus>                                                             <9><2>       <space> : "\\" #
-<Multi_key><plus>                                                             <9><2><nobreakspace> : "\\" #
-<Multi_key><plus>                                                             <9><3>       <space> : "]" #
-<Multi_key><plus>                                                             <9><3><nobreakspace> : "]" #
-<Multi_key><plus>                                                             <9><4>       <space> : "^" #
-<Multi_key><plus>                                                             <9><4><nobreakspace> : "^" #
-<Multi_key><plus>                                                             <9><5>       <space> : "_" #
-<Multi_key><plus>                                                             <9><5><nobreakspace> : "_" #
-<Multi_key><plus>                                                             <9><6>       <space> : "`" #
-<Multi_key><plus>                                                             <9><6><nobreakspace> : "`" #
-<Multi_key><plus>                                                             <9><7>       <space> : "a" #
-<Multi_key><plus>                                                             <9><7><nobreakspace> : "a" #
-<Multi_key><plus>                                                             <9><8>       <space> : "b" #
-<Multi_key><plus>                                                             <9><8><nobreakspace> : "b" #
-<Multi_key><plus>                                                             <9><9>       <space> : "c" #
-<Multi_key><plus>                                                             <9><9><nobreakspace> : "c" #
-<Multi_key><plus>                                                          <1><0><0>       <space> : "d" #
-<Multi_key><plus>                                                          <1><0><0><nobreakspace> : "d" #
-<Multi_key><plus>                                                          <1><0><1>       <space> : "e" #
-<Multi_key><plus>                                                          <1><0><1><nobreakspace> : "e" #
-<Multi_key><plus>                                                          <1><0><2>       <space> : "f" #
-<Multi_key><plus>                                                          <1><0><2><nobreakspace> : "f" #
-<Multi_key><plus>                                                          <1><0><3>       <space> : "g" #
-<Multi_key><plus>                                                          <1><0><3><nobreakspace> : "g" #
-<Multi_key><plus>                                                          <1><0><4>       <space> : "h" #
-<Multi_key><plus>                                                          <1><0><4><nobreakspace> : "h" #
-<Multi_key><plus>                                                          <1><0><5>       <space> : "i" #
-<Multi_key><plus>                                                          <1><0><5><nobreakspace> : "i" #
-<Multi_key><plus>                                                          <1><0><6>       <space> : "j" #
-<Multi_key><plus>                                                          <1><0><6><nobreakspace> : "j" #
-<Multi_key><plus>                                                          <1><0><7>       <space> : "k" #
-<Multi_key><plus>                                                          <1><0><7><nobreakspace> : "k" #
-<Multi_key><plus>                                                          <1><0><8>       <space> : "l" #
-<Multi_key><plus>                                                          <1><0><8><nobreakspace> : "l" #
-<Multi_key><plus>                                                          <1><0><9>       <space> : "m" #
-<Multi_key><plus>                                                          <1><0><9><nobreakspace> : "m" #
-<Multi_key><plus>                                                          <1><1><0>       <space> : "n" #
-<Multi_key><plus>                                                          <1><1><0><nobreakspace> : "n" #
-<Multi_key><plus>                                                          <1><1><1>       <space> : "o" #
-<Multi_key><plus>                                                          <1><1><1><nobreakspace> : "o" #
-<Multi_key><plus>                                                          <1><1><2>       <space> : "p" #
-<Multi_key><plus>                                                          <1><1><2><nobreakspace> : "p" #
-<Multi_key><plus>                                                          <1><1><3>       <space> : "q" #
-<Multi_key><plus>                                                          <1><1><3><nobreakspace> : "q" #
-<Multi_key><plus>                                                          <1><1><4>       <space> : "r" #
-<Multi_key><plus>                                                          <1><1><4><nobreakspace> : "r" #
-<Multi_key><plus>                                                          <1><1><5>       <space> : "s" #
-<Multi_key><plus>                                                          <1><1><5><nobreakspace> : "s" #
-<Multi_key><plus>                                                          <1><1><6>       <space> : "t" #
-<Multi_key><plus>                                                          <1><1><6><nobreakspace> : "t" #
-<Multi_key><plus>                                                          <1><1><7>       <space> : "u" #
-<Multi_key><plus>                                                          <1><1><7><nobreakspace> : "u" #
-<Multi_key><plus>                                                          <1><1><8>       <space> : "v" #
-<Multi_key><plus>                                                          <1><1><8><nobreakspace> : "v" #
-<Multi_key><plus>                                                          <1><1><9>       <space> : "w" #
-<Multi_key><plus>                                                          <1><1><9><nobreakspace> : "w" #
-<Multi_key><plus>                                                          <1><2><0>       <space> : "x" #
-<Multi_key><plus>                                                          <1><2><0><nobreakspace> : "x" #
-<Multi_key><plus>                                                          <1><2><1>       <space> : "y" #
-<Multi_key><plus>                                                          <1><2><1><nobreakspace> : "y" #
-<Multi_key><plus>                                                          <1><2><2>       <space> : "z" #
-<Multi_key><plus>                                                          <1><2><2><nobreakspace> : "z" #
-<Multi_key><plus>                                                          <1><2><3>       <space> : "{" #
-<Multi_key><plus>                                                          <1><2><3><nobreakspace> : "{" #
-<Multi_key><plus>                                                          <1><2><4>       <space> : "|" #
-<Multi_key><plus>                                                          <1><2><4><nobreakspace> : "|" #
-<Multi_key><plus>                                                          <1><2><5>       <space> : "}" #
-<Multi_key><plus>                                                          <1><2><5><nobreakspace> : "}" #
-<Multi_key><plus>                                                          <1><2><6>       <space> : "~" #
-<Multi_key><plus>                                                          <1><2><6><nobreakspace> : "~" #
-<Multi_key><plus>                                                          <1><2><7>       <space> : "⌂" #
-<Multi_key><plus>                                                          <1><2><7><nobreakspace> : "⌂" #
-<Multi_key><plus>                                                          <1><2><8>       <space> : "Ç" # Latin capital letter C with cedilla
-<Multi_key><plus>                                                          <1><2><8><nobreakspace> : "Ç" # Latin capital letter C with cedilla
-<Multi_key><plus>                                                          <1><2><9>       <space> : "ü" # Latin small letter u with diaeresis
-<Multi_key><plus>                                                          <1><2><9><nobreakspace> : "ü" # Latin small letter u with diaeresis
-<Multi_key><plus>                                                          <1><3><0>       <space> : "é" # Latin small letter e with acute
-<Multi_key><plus>                                                          <1><3><0><nobreakspace> : "é" # Latin small letter e with acute
-<Multi_key><plus>                                                          <1><3><1>       <space> : "â" # Latin small letter a with circumflex
-<Multi_key><plus>                                                          <1><3><1><nobreakspace> : "â" # Latin small letter a with circumflex
-<Multi_key><plus>                                                          <1><3><2>       <space> : "ä" # Latin small letter a with diaeresis
-<Multi_key><plus>                                                          <1><3><2><nobreakspace> : "ä" # Latin small letter a with diaeresis
-<Multi_key><plus>                                                          <1><3><3>       <space> : "à" # Latin small letter a with grave
-<Multi_key><plus>                                                          <1><3><3><nobreakspace> : "à" # Latin small letter a with grave
-<Multi_key><plus>                                                          <1><3><4>       <space> : "å" # Latin small letter a with ring above
-<Multi_key><plus>                                                          <1><3><4><nobreakspace> : "å" # Latin small letter a with ring above
-<Multi_key><plus>                                                          <1><3><5>       <space> : "ç" # Latin small letter c with cedilla
-<Multi_key><plus>                                                          <1><3><5><nobreakspace> : "ç" # Latin small letter c with cedilla
-<Multi_key><plus>                                                          <1><3><6>       <space> : "ê" # Latin small letter e with circumflex
-<Multi_key><plus>                                                          <1><3><6><nobreakspace> : "ê" # Latin small letter e with circumflex
-<Multi_key><plus>                                                          <1><3><7>       <space> : "ë" # Latin small letter e with diaeresis
-<Multi_key><plus>                                                          <1><3><7><nobreakspace> : "ë" # Latin small letter e with diaeresis
-<Multi_key><plus>                                                          <1><3><8>       <space> : "è" # Latin small letter e with grave
-<Multi_key><plus>                                                          <1><3><8><nobreakspace> : "è" # Latin small letter e with grave
-<Multi_key><plus>                                                          <1><3><9>       <space> : "ï" # Latin small letter i with diaeresis
-<Multi_key><plus>                                                          <1><3><9><nobreakspace> : "ï" # Latin small letter i with diaeresis
-<Multi_key><plus>                                                          <1><4><0>       <space> : "î" # Latin small letter i with circumflex
-<Multi_key><plus>                                                          <1><4><0><nobreakspace> : "î" # Latin small letter i with circumflex
-<Multi_key><plus>                                                          <1><4><1>       <space> : "ì" # Latin small letter i with grave
-<Multi_key><plus>                                                          <1><4><1><nobreakspace> : "ì" # Latin small letter i with grave
-<Multi_key><plus>                                                          <1><4><2>       <space> : "Ä" # Latin capital letter A with diaeresis
-<Multi_key><plus>                                                          <1><4><2><nobreakspace> : "Ä" # Latin capital letter A with diaeresis
-<Multi_key><plus>                                                          <1><4><3>       <space> : "Å" # Latin capital letter A with ring above
-<Multi_key><plus>                                                          <1><4><3><nobreakspace> : "Å" # Latin capital letter A with ring above
-<Multi_key><plus>                                                          <1><4><4>       <space> : "É" # Latin capital letter E with acute
-<Multi_key><plus>                                                          <1><4><4><nobreakspace> : "É" # Latin capital letter E with acute
-<Multi_key><plus>                                                          <1><4><5>       <space> : "æ" # Latin small letter ae
-<Multi_key><plus>                                                          <1><4><5><nobreakspace> : "æ" # Latin small letter ae
-<Multi_key><plus>                                                          <1><4><6>       <space> : "Æ" # Latin capital letter AE
-<Multi_key><plus>                                                          <1><4><6><nobreakspace> : "Æ" # Latin capital letter AE
-<Multi_key><plus>                                                          <1><4><7>       <space> : "ô" # Latin small letter o with circumflex
-<Multi_key><plus>                                                          <1><4><7><nobreakspace> : "ô" # Latin small letter o with circumflex
-<Multi_key><plus>                                                          <1><4><8>       <space> : "ö" # Latin small letter o with diaeresis
-<Multi_key><plus>                                                          <1><4><8><nobreakspace> : "ö" # Latin small letter o with diaeresis
-<Multi_key><plus>                                                          <1><4><9>       <space> : "ò" # Latin small letter o with grave
-<Multi_key><plus>                                                          <1><4><9><nobreakspace> : "ò" # Latin small letter o with grave
-<Multi_key><plus>                                                          <1><5><0>       <space> : "û" # Latin small letter u with circumflex
-<Multi_key><plus>                                                          <1><5><0><nobreakspace> : "û" # Latin small letter u with circumflex
-<Multi_key><plus>                                                          <1><5><1>       <space> : "ù" # Latin small letter u with grave
-<Multi_key><plus>                                                          <1><5><1><nobreakspace> : "ù" # Latin small letter u with grave
-<Multi_key><plus>                                                          <1><5><2>       <space> : "ÿ" # Latin small letter y with diaeresis
-<Multi_key><plus>                                                          <1><5><2><nobreakspace> : "ÿ" # Latin small letter y with diaeresis
-<Multi_key><plus>                                                          <1><5><3>       <space> : "Ö" # Latin capital letter O with diaeresis
-<Multi_key><plus>                                                          <1><5><3><nobreakspace> : "Ö" # Latin capital letter O with diaeresis
-<Multi_key><plus>                                                          <1><5><4>       <space> : "Ü" # Latin capital letter U with diaeresis
-<Multi_key><plus>                                                          <1><5><4><nobreakspace> : "Ü" # Latin capital letter U with diaeresis
-<Multi_key><plus>                                                          <1><5><5>       <space> : "¢" #
-<Multi_key><plus>                                                          <1><5><5><nobreakspace> : "¢" #
-<Multi_key><plus>                                                          <1><5><6>       <space> : "£" #
-<Multi_key><plus>                                                          <1><5><6><nobreakspace> : "£" #
-<Multi_key><plus>                                                          <1><5><7>       <space> : "¥" #
-<Multi_key><plus>                                                          <1><5><7><nobreakspace> : "¥" #
-<Multi_key><plus>                                                          <1><5><8>       <space> : "₧" #
-<Multi_key><plus>                                                          <1><5><8><nobreakspace> : "₧" #
-<Multi_key><plus>                                                          <1><5><9>       <space> : "ƒ" #
-<Multi_key><plus>                                                          <1><5><9><nobreakspace> : "ƒ" #
-<Multi_key><plus>                                                          <1><6><4>       <space> : "ñ" #
-<Multi_key><plus>                                                          <1><6><4><nobreakspace> : "ñ" #
-<Multi_key><plus>                                                          <1><6><5>       <space> : "Ñ" #
-<Multi_key><plus>                                                          <1><6><5><nobreakspace> : "Ñ" #
-<Multi_key><plus>                                                          <1><6><6>       <space> : "ª" #
-<Multi_key><plus>                                                          <1><6><6><nobreakspace> : "ª" #
-<Multi_key><plus>                                                          <1><6><7>       <space> : "º" #
-<Multi_key><plus>                                                          <1><6><7><nobreakspace> : "º" #
-<Multi_key><plus>                                                          <1><6><8>       <space> : "¿" #
-<Multi_key><plus>                                                          <1><6><8><nobreakspace> : "¿" #
-<Multi_key><plus>                                                          <1><6><9>       <space> : "®" #
-<Multi_key><plus>                                                          <1><6><9><nobreakspace> : "®" #
-<Multi_key><plus>                                                          <1><7><0>       <space> : "¬" #
-<Multi_key><plus>                                                          <1><7><0><nobreakspace> : "¬" #
-<Multi_key><plus>                                                          <1><7><1>       <space> : "½" #
-<Multi_key><plus>                                                          <1><7><1><nobreakspace> : "½" #
-<Multi_key><plus>                                                          <1><7><2>       <space> : "¼" #
-<Multi_key><plus>                                                          <1><7><2><nobreakspace> : "¼" #
-<Multi_key><plus>                                                          <1><7><3>       <space> : "¡" #
-<Multi_key><plus>                                                          <1><7><3><nobreakspace> : "¡" #
-<Multi_key><plus>                                                          <1><7><4>       <space> : "«" #
-<Multi_key><plus>                                                          <1><7><4><nobreakspace> : "«" #
-<Multi_key><plus>                                                          <1><7><5>       <space> : "»" #
-<Multi_key><plus>                                                          <1><7><5><nobreakspace> : "»" #
-<Multi_key><plus>                                                          <1><7><6>       <space> : "░" #
-<Multi_key><plus>                                                          <1><7><6><nobreakspace> : "░" #
-<Multi_key><plus>                                                          <1><7><7>       <space> : "▒" #
-<Multi_key><plus>                                                          <1><7><7><nobreakspace> : "▒" #
-<Multi_key><plus>                                                          <1><7><8>       <space> : "▓" #
-<Multi_key><plus>                                                          <1><7><8><nobreakspace> : "▓" #
-<Multi_key><plus>                                                          <1><7><9>       <space> : "│" #
-<Multi_key><plus>                                                          <1><7><9><nobreakspace> : "│" #
-<Multi_key><plus>                                                          <1><8><0>       <space> : "┤" #
-<Multi_key><plus>                                                          <1><8><0><nobreakspace> : "┤" #
-<Multi_key><plus>                                                          <1><8><1>       <space> : "╡" #
-<Multi_key><plus>                                                          <1><8><1><nobreakspace> : "╡" #
-<Multi_key><plus>                                                          <1><8><2>       <space> : "╢" #
-<Multi_key><plus>                                                          <1><8><2><nobreakspace> : "╢" #
-<Multi_key><plus>                                                          <1><8><3>       <space> : "╖" #
-<Multi_key><plus>                                                          <1><8><3><nobreakspace> : "╖" #
-<Multi_key><plus>                                                          <1><8><4>       <space> : "╕" #
-<Multi_key><plus>                                                          <1><8><4><nobreakspace> : "╕" #
-<Multi_key><plus>                                                          <1><8><5>       <space> : "╣" #
-<Multi_key><plus>                                                          <1><8><5><nobreakspace> : "╣" #
-<Multi_key><plus>                                                          <1><8><6>       <space> : "║" #
-<Multi_key><plus>                                                          <1><8><6><nobreakspace> : "║" #
-<Multi_key><plus>                                                          <1><8><7>       <space> : "╗" #
-<Multi_key><plus>                                                          <1><8><7><nobreakspace> : "╗" #
-<Multi_key><plus>                                                          <1><8><8>       <space> : "╝" #
-<Multi_key><plus>                                                          <1><8><8><nobreakspace> : "╝" #
-<Multi_key><plus>                                                          <1><8><9>       <space> : "╜" #
-<Multi_key><plus>                                                          <1><8><9><nobreakspace> : "╜" #
-<Multi_key><plus>                                                          <1><9><0>       <space> : "╛" #
-<Multi_key><plus>                                                          <1><9><0><nobreakspace> : "╛" #
-<Multi_key><plus>                                                          <1><9><1>       <space> : "┐" #
-<Multi_key><plus>                                                          <1><9><1><nobreakspace> : "┐" #
-<Multi_key><plus>                                                          <1><9><2>       <space> : "└" #
-<Multi_key><plus>                                                          <1><9><2><nobreakspace> : "└" #
-<Multi_key><plus>                                                          <1><9><3>       <space> : "┴" #
-<Multi_key><plus>                                                          <1><9><3><nobreakspace> : "┴" #
-<Multi_key><plus>                                                          <1><9><4>       <space> : "┬" #
-<Multi_key><plus>                                                          <1><9><4><nobreakspace> : "┬" #
-<Multi_key><plus>                                                          <1><9><5>       <space> : "├" #
-<Multi_key><plus>                                                          <1><9><5><nobreakspace> : "├" #
-<Multi_key><plus>                                                          <1><9><6>       <space> : "─" #
-<Multi_key><plus>                                                          <1><9><6><nobreakspace> : "─" #
-<Multi_key><plus>                                                          <1><9><7>       <space> : "┼" #
-<Multi_key><plus>                                                          <1><9><7><nobreakspace> : "┼" #
-<Multi_key><plus>                                                          <1><9><8>       <space> : "╞" #
-<Multi_key><plus>                                                          <1><9><8><nobreakspace> : "╞" #
-<Multi_key><plus>                                                          <1><9><9>       <space> : "╟" #
-<Multi_key><plus>                                                          <1><9><9><nobreakspace> : "╟" #
-<Multi_key><plus>                                                          <2><0><0>       <space> : "╚" #
-<Multi_key><plus>                                                          <2><0><0><nobreakspace> : "╚" #
-<Multi_key><plus>                                                          <2><0><1>       <space> : "╔" #
-<Multi_key><plus>                                                          <2><0><1><nobreakspace> : "╔" #
-<Multi_key><plus>                                                          <2><0><2>       <space> : "╩" #
-<Multi_key><plus>                                                          <2><0><2><nobreakspace> : "╩" #
-<Multi_key><plus>                                                          <2><0><3>       <space> : "╦" #
-<Multi_key><plus>                                                          <2><0><3><nobreakspace> : "╦" #
-<Multi_key><plus>                                                          <2><0><4>       <space> : "╠" #
-<Multi_key><plus>                                                          <2><0><4><nobreakspace> : "╠" #
-<Multi_key><plus>                                                          <2><0><5>       <space> : "═" #
-<Multi_key><plus>                                                          <2><0><5><nobreakspace> : "═" #
-<Multi_key><plus>                                                          <2><0><6>       <space> : "╬" #
-<Multi_key><plus>                                                          <2><0><6><nobreakspace> : "╬" #
-<Multi_key><plus>                                                          <2><0><7>       <space> : "╧" #
-<Multi_key><plus>                                                          <2><0><7><nobreakspace> : "╧" #
-<Multi_key><plus>                                                          <2><0><8>       <space> : "╨" #
-<Multi_key><plus>                                                          <2><0><8><nobreakspace> : "╨" #
-<Multi_key><plus>                                                          <2><0><9>       <space> : "╤" #
-<Multi_key><plus>                                                          <2><0><9><nobreakspace> : "╤" #
-<Multi_key><plus>                                                          <2><1><0>       <space> : "╥" #
-<Multi_key><plus>                                                          <2><1><0><nobreakspace> : "╥" #
-<Multi_key><plus>                                                          <2><1><1>       <space> : "╙" #
-<Multi_key><plus>                                                          <2><1><1><nobreakspace> : "╙" #
-<Multi_key><plus>                                                          <2><1><2>       <space> : "╘" #
-<Multi_key><plus>                                                          <2><1><2><nobreakspace> : "╘" #
-<Multi_key><plus>                                                          <2><1><3>       <space> : "╒" #
-<Multi_key><plus>                                                          <2><1><3><nobreakspace> : "╒" #
-<Multi_key><plus>                                                          <2><1><4>       <space> : "╓" #
-<Multi_key><plus>                                                          <2><1><4><nobreakspace> : "╓" #
-<Multi_key><plus>                                                          <2><1><5>       <space> : "╫" #
-<Multi_key><plus>                                                          <2><1><5><nobreakspace> : "╫" #
-<Multi_key><plus>                                                          <2><1><6>       <space> : "╪" #
-<Multi_key><plus>                                                          <2><1><6><nobreakspace> : "╪" #
-<Multi_key><plus>                                                          <2><1><7>       <space> : "┘" #
-<Multi_key><plus>                                                          <2><1><7><nobreakspace> : "┘" #
-<Multi_key><plus>                                                          <2><1><8>       <space> : "┌" #
-<Multi_key><plus>                                                          <2><1><8><nobreakspace> : "┌" #
-<Multi_key><plus>                                                          <2><1><9>       <space> : "█" #
-<Multi_key><plus>                                                          <2><1><9><nobreakspace> : "█" #
-<Multi_key><plus>                                                          <2><2><0>       <space> : "▄" #
-<Multi_key><plus>                                                          <2><2><0><nobreakspace> : "▄" #
-<Multi_key><plus>                                                          <2><2><1>       <space> : "▌" #
-<Multi_key><plus>                                                          <2><2><1><nobreakspace> : "▌" #
-<Multi_key><plus>                                                          <2><2><2>       <space> : "▐" #
-<Multi_key><plus>                                                          <2><2><2><nobreakspace> : "▐" #
-<Multi_key><plus>                                                          <2><2><3>       <space> : "▀" #
-<Multi_key><plus>                                                          <2><2><3><nobreakspace> : "▀" #
-<Multi_key><plus>                                                          <2><2><4>       <space> : "α" #
-<Multi_key><plus>                                                          <2><2><4><nobreakspace> : "α" #
-<Multi_key><plus>                                                          <2><2><5>       <space> : "ß" #
-<Multi_key><plus>                                                          <2><2><5><nobreakspace> : "ß" #
-<Multi_key><plus>                                                          <2><2><6>       <space> : "Γ" #
-<Multi_key><plus>                                                          <2><2><6><nobreakspace> : "Γ" #
-<Multi_key><plus>                                                          <2><2><7>       <space> : "π" #
-<Multi_key><plus>                                                          <2><2><7><nobreakspace> : "π" #
-<Multi_key><plus>                                                          <2><2><8>       <space> : "Σ" #
-<Multi_key><plus>                                                          <2><2><8><nobreakspace> : "Σ" #
-<Multi_key><plus>                                                          <2><2><9>       <space> : "σ" #
-<Multi_key><plus>                                                          <2><2><9><nobreakspace> : "σ" #
-<Multi_key><plus>                                                          <2><3><0>       <space> : "µ" #
-<Multi_key><plus>                                                          <2><3><0><nobreakspace> : "µ" #
-<Multi_key><plus>                                                          <2><3><1>       <space> : "τ" #
-<Multi_key><plus>                                                          <2><3><1><nobreakspace> : "τ" #
-<Multi_key><plus>                                                          <2><3><2>       <space> : "Φ" #
-<Multi_key><plus>                                                          <2><3><2><nobreakspace> : "Φ" #
-<Multi_key><plus>                                                          <2><3><3>       <space> : "Θ" #
-<Multi_key><plus>                                                          <2><3><3><nobreakspace> : "Θ" #
-<Multi_key><plus>                                                          <2><3><4>       <space> : "Ω" #
-<Multi_key><plus>                                                          <2><3><4><nobreakspace> : "Ω" #
-<Multi_key><plus>                                                          <2><3><5>       <space> : "δ" #
-<Multi_key><plus>                                                          <2><3><5><nobreakspace> : "δ" #
-<Multi_key><plus>                                                          <2><3><6>       <space> : "∞" #
-<Multi_key><plus>                                                          <2><3><6><nobreakspace> : "∞" #
-<Multi_key><plus>                                                          <2><3><7>       <space> : "φ" #
-<Multi_key><plus>                                                          <2><3><7><nobreakspace> : "φ" #
-<Multi_key><plus>                                                          <2><3><8>       <space> : "ε" #
-<Multi_key><plus>                                                          <2><3><8><nobreakspace> : "ε" #
-<Multi_key><plus>                                                          <2><3><9>       <space> : "∩" #
-<Multi_key><plus>                                                          <2><3><9><nobreakspace> : "∩" #
-<Multi_key><plus>                                                          <2><4><0>       <space> : "≡" #
-<Multi_key><plus>                                                          <2><4><0><nobreakspace> : "≡" #
-<Multi_key><plus>                                                          <2><4><1>       <space> : "±" #
-<Multi_key><plus>                                                          <2><4><1><nobreakspace> : "±" #
-<Multi_key><plus>                                                          <2><4><2>       <space> : "≥" #
-<Multi_key><plus>                                                          <2><4><2><nobreakspace> : "≥" #
-<Multi_key><plus>                                                          <2><4><3>       <space> : "≤" #
-<Multi_key><plus>                                                          <2><4><3><nobreakspace> : "≤" #
-<Multi_key><plus>                                                          <2><4><4>       <space> : "⌠" #
-<Multi_key><plus>                                                          <2><4><4><nobreakspace> : "⌠" #
-<Multi_key><plus>                                                          <2><4><5>       <space> : "⌡" #
-<Multi_key><plus>                                                          <2><4><5><nobreakspace> : "⌡" #
-<Multi_key><plus>                                                          <2><4><7>       <space> : "≈" #
-<Multi_key><plus>                                                          <2><4><7><nobreakspace> : "≈" #
-<Multi_key><plus>                                                          <2><4><8>       <space> : "°" #
-<Multi_key><plus>                                                          <2><4><8><nobreakspace> : "°" #
-<Multi_key><plus>                                                          <2><4><9>       <space> : "·" #
-<Multi_key><plus>                                                          <2><4><9><nobreakspace> : "·" #
-<Multi_key><plus>                                                          <2><5><0>       <space> : "·" #
-<Multi_key><plus>                                                          <2><5><0><nobreakspace> : "·" #
-<Multi_key><plus>                                                          <2><5><1>       <space> : "√" #
-<Multi_key><plus>                                                          <2><5><1><nobreakspace> : "√" #
-<Multi_key><plus>                                                          <2><5><2>       <space> : "ⁿ" #
-<Multi_key><plus>                                                          <2><5><2><nobreakspace> : "ⁿ" #
-<Multi_key><plus>                                                          <2><5><4>       <space> : "■" #
-<Multi_key><plus>                                                          <2><5><4><nobreakspace> : "■" #
-<Multi_key><plus>                                                          <2><5><5>       <space> : " " #
-<Multi_key><plus>                                                          <2><5><5><nobreakspace> : " " #
-<Multi_key><plus>                                                       <0><1><2><8>               : "€" #
-<Multi_key><plus>                                                       <0><1><3><0>               : "‘" #
-<Multi_key><plus>                                                       <0><1><3><2>               : "„" #
-<Multi_key><plus>                                                       <0><1><3><3>               : "…" #
-<Multi_key><plus>                                                       <0><1><3><4>               : "†" #
-<Multi_key><plus>                                                       <0><1><3><5>               : "‡" #
-<Multi_key><plus>                                                       <0><1><3><7>               : "‰" #
-<Multi_key><plus>                                                       <0><1><3><8>               : "Š" #
-<Multi_key><plus>                                                       <0><1><3><9>               : "‹" #
-<Multi_key><plus>                                                       <0><1><4><0>               : "Œ" #
-<Multi_key><plus>                                                       <0><1><4><2>               : "Ž" #
-<Multi_key><plus>                                                       <0><1><4><5>               : "‘" #
-<Multi_key><plus>                                                       <0><1><4><6>               : "’" #
-<Multi_key><plus>                                                       <0><1><4><7>               : "“" #
-<Multi_key><plus>                                                       <0><1><4><8>               : "”" #
-<Multi_key><plus>                                                       <0><1><5><1>               : "—" #
-<Multi_key><plus>                                                       <0><1><5><3>               : "™" #
-<Multi_key><plus>                                                       <0><1><5><4>               : "š" #
-<Multi_key><plus>                                                       <0><1><5><5>               : "›" #
-<Multi_key><plus>                                                       <0><1><5><6>               : "œ" #
-<Multi_key><plus>                                                       <0><1><5><8>               : "ž" #
-<Multi_key><plus>                                                       <0><1><5><9>               : "Ÿ" #
-<Multi_key><plus>                                                       <0><1><6><4>               : "¤" #
-<Multi_key><plus>                                                       <0><1><6><6>               : "¦" #
-<Multi_key><plus>                                                       <0><1><6><8>               : "¨" #
-<Multi_key><plus>                                                       <0><1><6><9>               : "©" #
-<Multi_key><plus>                                                       <0><1><7><5>               : "¯" #
-<Multi_key><plus>                                                       <0><1><7><8>               : "²" #
-<Multi_key><plus>                                                       <0><1><7><9>               : "³" #
-<Multi_key><plus>                                                       <0><1><8><0>               : "´" #
-<Multi_key><plus>                                                       <0><1><8><3>               : "·" #
-<Multi_key><plus>                                                       <0><1><8><4>               : "¸" #
-<Multi_key><plus>                                                       <0><1><8><5>               : "¹" #
-<Multi_key><plus>                                                       <0><1><8><8>               : "¼" #
-<Multi_key><plus>                                                       <0><1><8><9>               : "½" #
-<Multi_key><plus>                                                       <0><1><9><0>               : "¾" #
-<Multi_key><plus>                                                       <0><1><9><2>               : "À" #
-<Multi_key><plus>                                                       <0><1><9><3>               : "Á" #
-<Multi_key><plus>                                                       <0><1><9><4>               : "Â" #
-<Multi_key><plus>                                                       <0><1><9><5>               : "Ã" #
-<Multi_key><plus>                                                       <0><1><9><6>               : "Ä" #
-<Multi_key><plus>                                                       <0><1><9><7>               : "Å" #
-<Multi_key><plus>                                                       <0><1><9><8>               : "Æ" #
-<Multi_key><plus>                                                       <0><1><9><9>               : "Ç" #
-<Multi_key><plus>                                                       <0><2><0><0>               : "È" #
-<Multi_key><plus>                                                       <0><2><0><1>               : "É" #
-<Multi_key><plus>                                                       <0><2><0><2>               : "Ê" #
-<Multi_key><plus>                                                       <0><2><0><3>               : "Ë" #
-<Multi_key><plus>                                                       <0><2><0><4>               : "Ì" #
-<Multi_key><plus>                                                       <0><2><0><5>               : "Í" #
-<Multi_key><plus>                                                       <0><2><0><6>               : "Ï" #
-<Multi_key><plus>                                                       <0><2><0><7>               : "Ï" #
-<Multi_key><plus>                                                       <0><2><0><8>               : "Ð" #
-<Multi_key><plus>                                                       <0><2><1><0>               : "Ò" #
-<Multi_key><plus>                                                       <0><2><1><1>               : "Ó" #
-<Multi_key><plus>                                                       <0><2><1><2>               : "Ô" #
-<Multi_key><plus>                                                       <0><2><1><3>               : "Õ" #
-<Multi_key><plus>                                                       <0><2><1><4>               : "Ö" #
-<Multi_key><plus>                                                       <0><2><1><5>               : "×" #
-<Multi_key><plus>                                                       <0><2><1><6>               : "Ø" #
-<Multi_key><plus>                                                       <0><2><1><7>               : "Ù" #
-<Multi_key><plus>                                                       <0><2><1><8>               : "Ú" #
-<Multi_key><plus>                                                       <0><2><1><9>               : "Û" #
-<Multi_key><plus>                                                       <0><2><2><0>               : "Ü" #
-<Multi_key><plus>                                                       <0><2><2><1>               : "Ý" #
-<Multi_key><plus>                                                       <0><2><2><2>               : "Þ" #
-<Multi_key><plus>                                                       <0><2><2><3>               : "ß" #
-<Multi_key><plus>                                                       <0><2><2><4>               : "à" #
-<Multi_key><plus>                                                       <0><2><2><5>               : "á" #
-<Multi_key><plus>                                                       <0><2><2><6>               : "â" #
-<Multi_key><plus>                                                       <0><2><2><7>               : "ã" #
-<Multi_key><plus>                                                       <0><2><2><8>               : "ä" #
-<Multi_key><plus>                                                       <0><2><2><9>               : "å" #
-<Multi_key><plus>                                                       <0><2><3><0>               : "æ" #
-<Multi_key><plus>                                                       <0><2><3><1>               : "ç" #
-<Multi_key><plus>                                                       <0><2><3><2>               : "è" #
-<Multi_key><plus>                                                       <0><2><3><3>               : "é" #
-<Multi_key><plus>                                                       <0><2><3><4>               : "ê" #
-<Multi_key><plus>                                                       <0><2><3><5>               : "ë" #
-<Multi_key><plus>                                                       <0><2><3><6>               : "ì" #
-<Multi_key><plus>                                                       <0><2><3><7>               : "í" #
-<Multi_key><plus>                                                       <0><2><3><8>               : "î" #
-<Multi_key><plus>                                                       <0><2><3><9>               : "ï" #
-<Multi_key><plus>                                                       <0><2><4><0>               : "ð" #
-<Multi_key><plus>                                                       <0><2><4><2>               : "ò" #
-<Multi_key><plus>                                                       <0><2><4><3>               : "ó" #
-<Multi_key><plus>                                                       <0><2><4><4>               : "ô" #
-<Multi_key><plus>                                                       <0><2><4><5>               : "õ" #
-<Multi_key><plus>                                                       <0><2><4><6>               : "ö" #
-<Multi_key><plus>                                                       <0><2><4><7>               : "÷" #
-<Multi_key><plus>                                                       <0><2><4><8>               : "ø" #
-<Multi_key><plus>                                                       <0><2><4><9>               : "ú" #
-<Multi_key><plus>                                                       <0><2><5><0>               : "û" #
-<Multi_key><plus>                                                       <0><2><5><1>               : "ü" #
-<Multi_key><plus>                                                       <0><2><5><2>               : "ù" #
-<Multi_key><plus>                                                       <0><2><5><3>               : "ý" #
-<Multi_key><plus>                                                       <0><2><5><4>               : "þ" #
-<Multi_key><plus>                                                       <0><2><5><5>               : "ÿ" #
+<Multi_key><plus>                                                                <1>       <space> : "☺" U263A #
+<Multi_key><plus>                                                                <1><nobreakspace> : "☺" U263A #
+<Multi_key><plus>                                                                <2>       <space> : "☻" U263B #
+<Multi_key><plus>                                                                <2><nobreakspace> : "☻" U263B #
+<Multi_key><plus>                                                                <3>       <space> : "♥" U2665 #
+<Multi_key><plus>                                                                <3><nobreakspace> : "♥" U2665 #
+<Multi_key><plus>                                                                <4>       <space> : "♦" U2666 #
+<Multi_key><plus>                                                                <4><nobreakspace> : "♦" U2666 #
+<Multi_key><plus>                                                                <5>       <space> : "♣" U2663 #
+<Multi_key><plus>                                                                <5><nobreakspace> : "♣" U2663 #
+<Multi_key><plus>                                                                <6>       <space> : "♠" U2660 #
+<Multi_key><plus>                                                                <6><nobreakspace> : "♠" U2660 #
+<Multi_key><plus>                                                                <7>       <space> : "•" U2022 #
+<Multi_key><plus>                                                                <7><nobreakspace> : "•" U2022 #
+<Multi_key><plus>                                                                <8>       <space> : "◘" U25D8 #
+<Multi_key><plus>                                                                <8><nobreakspace> : "◘" U25D8 #
+<Multi_key><plus>                                                                <9>       <space> : "○" U25CB #
+<Multi_key><plus>                                                                <9><nobreakspace> : "○" U25CB #
+<Multi_key><plus>                                                             <1><0>       <space> : "◙" U25D9 #
+<Multi_key><plus>                                                             <1><0><nobreakspace> : "◙" U25D9 #
+<Multi_key><plus>                                                             <1><1>       <space> : "♂" U2642 #
+<Multi_key><plus>                                                             <1><1><nobreakspace> : "♂" U2642 #
+<Multi_key><plus>                                                             <1><2>       <space> : "♀" U2640 #
+<Multi_key><plus>                                                             <1><2><nobreakspace> : "♀" U2640 #
+<Multi_key><plus>                                                             <1><3>       <space> : "♪" U266A #
+<Multi_key><plus>                                                             <1><3><nobreakspace> : "♪" U266A #
+<Multi_key><plus>                                                             <1><4>       <space> : "♫" U266B #
+<Multi_key><plus>                                                             <1><4><nobreakspace> : "♫" U266B #
+<Multi_key><plus>                                                             <1><5>       <space> : "☼" U263C #
+<Multi_key><plus>                                                             <1><5><nobreakspace> : "☼" U263C #
+<Multi_key><plus>                                                             <1><6>       <space> : "►" U25BA #
+<Multi_key><plus>                                                             <1><6><nobreakspace> : "►" U25BA #
+<Multi_key><plus>                                                             <1><7>       <space> : "◄" U25C4 #
+<Multi_key><plus>                                                             <1><7><nobreakspace> : "◄" U25C4 #
+<Multi_key><plus>                                                             <1><8>       <space> : "↕" U2195 #
+<Multi_key><plus>                                                             <1><8><nobreakspace> : "↕" U2195 #
+<Multi_key><plus>                                                             <1><9>       <space> : "‼" U203C #
+<Multi_key><plus>                                                             <1><9><nobreakspace> : "‼" U203C #
+<Multi_key><plus>                                                             <2><0>       <space> : "¶" U00B6 #
+<Multi_key><plus>                                                             <2><0><nobreakspace> : "¶" U00B6 #
+<Multi_key><plus>                                                             <2><1>       <space> : "§" U00A7 #
+<Multi_key><plus>                                                             <2><1><nobreakspace> : "§" U00A7 #
+<Multi_key><plus>                                                             <2><2>       <space> : "▬" U25AC #
+<Multi_key><plus>                                                             <2><2><nobreakspace> : "▬" U25AC #
+<Multi_key><plus>                                                             <2><3>       <space> : "↨" U21A8 #
+<Multi_key><plus>                                                             <2><3><nobreakspace> : "↨" U21A8 #
+<Multi_key><plus>                                                             <2><4>       <space> : "↑" U2191 #
+<Multi_key><plus>                                                             <2><4><nobreakspace> : "↑" U2191 #
+<Multi_key><plus>                                                             <2><5>       <space> : "↓" U2193 #
+<Multi_key><plus>                                                             <2><5><nobreakspace> : "↓" U2193 #
+<Multi_key><plus>                                                             <2><6>       <space> : "→" U2192 #
+<Multi_key><plus>                                                             <2><6><nobreakspace> : "→" U2192 #
+<Multi_key><plus>                                                             <2><7>       <space> : "←" U2190 #
+<Multi_key><plus>                                                             <2><7><nobreakspace> : "←" U2190 #
+<Multi_key><plus>                                                             <2><8>       <space> : "∟" U221F #
+<Multi_key><plus>                                                             <2><8><nobreakspace> : "∟" U221F #
+<Multi_key><plus>                                                             <2><9>       <space> : "↔" U2194 #
+<Multi_key><plus>                                                             <2><9><nobreakspace> : "↔" U2194 #
+<Multi_key><plus>                                                             <3><0>       <space> : "▲" U25B2 #
+<Multi_key><plus>                                                             <3><0><nobreakspace> : "▲" U25B2 #
+<Multi_key><plus>                                                             <3><1>       <space> : "▼" U25BC #
+<Multi_key><plus>                                                             <3><1><nobreakspace> : "▼" U25BC #
+<Multi_key><plus>                                                             <3><2>       <space> : " " U0020 #
+<Multi_key><plus>                                                             <3><2><nobreakspace> : " " U0020 #
+<Multi_key><plus>                                                             <3><3>       <space> : "!" U0021 #
+<Multi_key><plus>                                                             <3><3><nobreakspace> : "!" U0021 #
+<Multi_key><plus>                                                             <3><4>       <space> : """ U0022 #
+<Multi_key><plus>                                                             <3><4><nobreakspace> : """ U0022 #
+<Multi_key><plus>                                                             <3><5>       <space> : "#" U0023 #
+<Multi_key><plus>                                                             <3><5><nobreakspace> : "#" U0023 #
+<Multi_key><plus>                                                             <3><6>       <space> : "$" U0024 #
+<Multi_key><plus>                                                             <3><6><nobreakspace> : "$" U0024 #
+<Multi_key><plus>                                                             <3><7>       <space> : "%" U0025 #
+<Multi_key><plus>                                                             <3><7><nobreakspace> : "%" U0025 #
+<Multi_key><plus>                                                             <3><8>       <space> : "&" U0026 #
+<Multi_key><plus>                                                             <3><8><nobreakspace> : "&" U0026 #
+<Multi_key><plus>                                                             <3><9>       <space> : "'" U0027 #
+<Multi_key><plus>                                                             <3><9><nobreakspace> : "'" U0027 #
+<Multi_key><plus>                                                             <4><0>       <space> : "(" U0028 #
+<Multi_key><plus>                                                             <4><0><nobreakspace> : "(" U0028 #
+<Multi_key><plus>                                                             <4><1>       <space> : ")" U0029 #
+<Multi_key><plus>                                                             <4><1><nobreakspace> : ")" U0029 #
+<Multi_key><plus>                                                             <4><2>       <space> : "*" U002A #
+<Multi_key><plus>                                                             <4><2><nobreakspace> : "*" U002A #
+<Multi_key><plus>                                                             <4><3>       <space> : "+" U002B #
+<Multi_key><plus>                                                             <4><3><nobreakspace> : "+" U002B #
+<Multi_key><plus>                                                             <4><4>       <space> : "," U002C #
+<Multi_key><plus>                                                             <4><4><nobreakspace> : "," U002C #
+<Multi_key><plus>                                                             <4><5>       <space> : "-" U002D #
+<Multi_key><plus>                                                             <4><5><nobreakspace> : "-" U002D #
+<Multi_key><plus>                                                             <4><6>       <space> : "." U002E #
+<Multi_key><plus>                                                             <4><6><nobreakspace> : "." U002E #
+<Multi_key><plus>                                                             <4><7>       <space> : "/" U002F #
+<Multi_key><plus>                                                             <4><7><nobreakspace> : "/" U002F #
+<Multi_key><plus>                                                             <4><8>       <space> : "0" U0030 #
+<Multi_key><plus>                                                             <4><8><nobreakspace> : "0" U0030 #
+<Multi_key><plus>                                                             <4><9>       <space> : "1" U0031 #
+<Multi_key><plus>                                                             <4><9><nobreakspace> : "1" U0031 #
+<Multi_key><plus>                                                             <5><0>       <space> : "2" U0032 #
+<Multi_key><plus>                                                             <5><0><nobreakspace> : "2" U0032 #
+<Multi_key><plus>                                                             <5><1>       <space> : "3" U0033 #
+<Multi_key><plus>                                                             <5><1><nobreakspace> : "3" U0033 #
+<Multi_key><plus>                                                             <5><2>       <space> : "4" U0034 #
+<Multi_key><plus>                                                             <5><2><nobreakspace> : "4" U0034 #
+<Multi_key><plus>                                                             <5><3>       <space> : "5" U0035 #
+<Multi_key><plus>                                                             <5><3><nobreakspace> : "5" U0035 #
+<Multi_key><plus>                                                             <5><4>       <space> : "6" U0036 #
+<Multi_key><plus>                                                             <5><4><nobreakspace> : "6" U0036 #
+<Multi_key><plus>                                                             <5><5>       <space> : "7" U0037 #
+<Multi_key><plus>                                                             <5><5><nobreakspace> : "7" U0037 #
+<Multi_key><plus>                                                             <5><6>       <space> : "8" U0038 #
+<Multi_key><plus>                                                             <5><6><nobreakspace> : "8" U0038 #
+<Multi_key><plus>                                                             <5><7>       <space> : "9" U0039 #
+<Multi_key><plus>                                                             <5><7><nobreakspace> : "9" U0039 #
+<Multi_key><plus>                                                             <5><8>       <space> : ":" U003A #
+<Multi_key><plus>                                                             <5><8><nobreakspace> : ":" U003A #
+<Multi_key><plus>                                                             <5><9>       <space> : ";" U003B #
+<Multi_key><plus>                                                             <5><9><nobreakspace> : ";" U003B #
+<Multi_key><plus>                                                             <6><0>       <space> : "<" U003C #
+<Multi_key><plus>                                                             <6><0><nobreakspace> : "<" U003C #
+<Multi_key><plus>                                                             <6><1>       <space> : "=" U003D #
+<Multi_key><plus>                                                             <6><1><nobreakspace> : "=" U003D #
+<Multi_key><plus>                                                             <6><2>       <space> : ">" U003E #
+<Multi_key><plus>                                                             <6><2><nobreakspace> : ">" U003E #
+<Multi_key><plus>                                                             <6><3>       <space> : "?" U003F #
+<Multi_key><plus>                                                             <6><3><nobreakspace> : "?" U003F #
+<Multi_key><plus>                                                             <6><4>       <space> : "@" U0040 #
+<Multi_key><plus>                                                             <6><4><nobreakspace> : "@" U0040 #
+<Multi_key><plus>                                                             <6><5>       <space> : "A" U0041 #
+<Multi_key><plus>                                                             <6><5><nobreakspace> : "A" U0041 #
+<Multi_key><plus>                                                             <6><6>       <space> : "B" U0042 #
+<Multi_key><plus>                                                             <6><6><nobreakspace> : "B" U0042 #
+<Multi_key><plus>                                                             <6><7>       <space> : "C" U0043 #
+<Multi_key><plus>                                                             <6><7><nobreakspace> : "C" U0043 #
+<Multi_key><plus>                                                             <6><8>       <space> : "D" U0044 #
+<Multi_key><plus>                                                             <6><8><nobreakspace> : "D" U0044 #
+<Multi_key><plus>                                                             <6><9>       <space> : "E" U0045 #
+<Multi_key><plus>                                                             <6><9><nobreakspace> : "E" U0045 #
+<Multi_key><plus>                                                             <7><0>       <space> : "F" U0046 #
+<Multi_key><plus>                                                             <7><0><nobreakspace> : "F" U0046 #
+<Multi_key><plus>                                                             <7><1>       <space> : "G" U0047 #
+<Multi_key><plus>                                                             <7><1><nobreakspace> : "G" U0047 #
+<Multi_key><plus>                                                             <7><2>       <space> : "H" U0048 #
+<Multi_key><plus>                                                             <7><2><nobreakspace> : "H" U0048 #
+<Multi_key><plus>                                                             <7><3>       <space> : "I" U0049 #
+<Multi_key><plus>                                                             <7><3><nobreakspace> : "I" U0049 #
+<Multi_key><plus>                                                             <7><4>       <space> : "J" U004A #
+<Multi_key><plus>                                                             <7><4><nobreakspace> : "J" U004A #
+<Multi_key><plus>                                                             <7><5>       <space> : "K" U004B #
+<Multi_key><plus>                                                             <7><5><nobreakspace> : "K" U004B #
+<Multi_key><plus>                                                             <7><6>       <space> : "L" U004C #
+<Multi_key><plus>                                                             <7><6><nobreakspace> : "L" U004C #
+<Multi_key><plus>                                                             <7><7>       <space> : "M" U004D #
+<Multi_key><plus>                                                             <7><7><nobreakspace> : "M" U004D #
+<Multi_key><plus>                                                             <7><8>       <space> : "N" U004E #
+<Multi_key><plus>                                                             <7><8><nobreakspace> : "N" U004E #
+<Multi_key><plus>                                                             <7><9>       <space> : "O" U004F #
+<Multi_key><plus>                                                             <7><9><nobreakspace> : "O" U004F #
+<Multi_key><plus>                                                             <8><0>       <space> : "P" U0050 #
+<Multi_key><plus>                                                             <8><0><nobreakspace> : "P" U0050 #
+<Multi_key><plus>                                                             <8><1>       <space> : "Q" U0051 #
+<Multi_key><plus>                                                             <8><1><nobreakspace> : "Q" U0051 #
+<Multi_key><plus>                                                             <8><2>       <space> : "R" U0052 #
+<Multi_key><plus>                                                             <8><2><nobreakspace> : "R" U0052 #
+<Multi_key><plus>                                                             <8><3>       <space> : "S" U0053 #
+<Multi_key><plus>                                                             <8><3><nobreakspace> : "S" U0053 #
+<Multi_key><plus>                                                             <8><4>       <space> : "T" U0054 #
+<Multi_key><plus>                                                             <8><4><nobreakspace> : "T" U0054 #
+<Multi_key><plus>                                                             <8><5>       <space> : "U" U0055 #
+<Multi_key><plus>                                                             <8><5><nobreakspace> : "U" U0055 #
+<Multi_key><plus>                                                             <8><6>       <space> : "V" U0056 #
+<Multi_key><plus>                                                             <8><6><nobreakspace> : "V" U0056 #
+<Multi_key><plus>                                                             <8><7>       <space> : "W" U0057 #
+<Multi_key><plus>                                                             <8><7><nobreakspace> : "W" U0057 #
+<Multi_key><plus>                                                             <8><8>       <space> : "X" U0058 #
+<Multi_key><plus>                                                             <8><8><nobreakspace> : "X" U0058 #
+<Multi_key><plus>                                                             <8><9>       <space> : "Y" U0059 #
+<Multi_key><plus>                                                             <8><9><nobreakspace> : "Y" U0059 #
+<Multi_key><plus>                                                             <9><0>       <space> : "Z" U005A #
+<Multi_key><plus>                                                             <9><0><nobreakspace> : "Z" U005A #
+<Multi_key><plus>                                                             <9><1>       <space> : "[" U005B #
+<Multi_key><plus>                                                             <9><1><nobreakspace> : "[" U005B #
+<Multi_key><plus>                                                             <9><2>       <space> : "\\" # U005U005C #
+<Multi_key><plus>                                                             <9><2><nobreakspace> : "\\" # U005U005C #
+<Multi_key><plus>                                                             <9><3>       <space> : "]" U005D #
+<Multi_key><plus>                                                             <9><3><nobreakspace> : "]" U005D #
+<Multi_key><plus>                                                             <9><4>       <space> : "^" U005E #
+<Multi_key><plus>                                                             <9><4><nobreakspace> : "^" U005E #
+<Multi_key><plus>                                                             <9><5>       <space> : "_" U005F #
+<Multi_key><plus>                                                             <9><5><nobreakspace> : "_" U005F #
+<Multi_key><plus>                                                             <9><6>       <space> : "`" U0060 #
+<Multi_key><plus>                                                             <9><6><nobreakspace> : "`" U0060 #
+<Multi_key><plus>                                                             <9><7>       <space> : "a" U0061 #
+<Multi_key><plus>                                                             <9><7><nobreakspace> : "a" U0061 #
+<Multi_key><plus>                                                             <9><8>       <space> : "b" U0062 #
+<Multi_key><plus>                                                             <9><8><nobreakspace> : "b" U0062 #
+<Multi_key><plus>                                                             <9><9>       <space> : "c" U0063 #
+<Multi_key><plus>                                                             <9><9><nobreakspace> : "c" U0063 #
+<Multi_key><plus>                                                          <1><0><0>       <space> : "d" U0064 #
+<Multi_key><plus>                                                          <1><0><0><nobreakspace> : "d" U0064 #
+<Multi_key><plus>                                                          <1><0><1>       <space> : "e" U0065 #
+<Multi_key><plus>                                                          <1><0><1><nobreakspace> : "e" U0065 #
+<Multi_key><plus>                                                          <1><0><2>       <space> : "f" U0066 #
+<Multi_key><plus>                                                          <1><0><2><nobreakspace> : "f" U0066 #
+<Multi_key><plus>                                                          <1><0><3>       <space> : "g" U0067 #
+<Multi_key><plus>                                                          <1><0><3><nobreakspace> : "g" U0067 #
+<Multi_key><plus>                                                          <1><0><4>       <space> : "h" U0068 #
+<Multi_key><plus>                                                          <1><0><4><nobreakspace> : "h" U0068 #
+<Multi_key><plus>                                                          <1><0><5>       <space> : "i" U0069 #
+<Multi_key><plus>                                                          <1><0><5><nobreakspace> : "i" U0069 #
+<Multi_key><plus>                                                          <1><0><6>       <space> : "j" U006A #
+<Multi_key><plus>                                                          <1><0><6><nobreakspace> : "j" U006A #
+<Multi_key><plus>                                                          <1><0><7>       <space> : "k" U006B #
+<Multi_key><plus>                                                          <1><0><7><nobreakspace> : "k" U006B #
+<Multi_key><plus>                                                          <1><0><8>       <space> : "l" U006C #
+<Multi_key><plus>                                                          <1><0><8><nobreakspace> : "l" U006C #
+<Multi_key><plus>                                                          <1><0><9>       <space> : "m" U006D #
+<Multi_key><plus>                                                          <1><0><9><nobreakspace> : "m" U006D #
+<Multi_key><plus>                                                          <1><1><0>       <space> : "n" U006E #
+<Multi_key><plus>                                                          <1><1><0><nobreakspace> : "n" U006E #
+<Multi_key><plus>                                                          <1><1><1>       <space> : "o" U006F #
+<Multi_key><plus>                                                          <1><1><1><nobreakspace> : "o" U006F #
+<Multi_key><plus>                                                          <1><1><2>       <space> : "p" U0070 #
+<Multi_key><plus>                                                          <1><1><2><nobreakspace> : "p" U0070 #
+<Multi_key><plus>                                                          <1><1><3>       <space> : "q" U0071 #
+<Multi_key><plus>                                                          <1><1><3><nobreakspace> : "q" U0071 #
+<Multi_key><plus>                                                          <1><1><4>       <space> : "r" U0072 #
+<Multi_key><plus>                                                          <1><1><4><nobreakspace> : "r" U0072 #
+<Multi_key><plus>                                                          <1><1><5>       <space> : "s" U0073 #
+<Multi_key><plus>                                                          <1><1><5><nobreakspace> : "s" U0073 #
+<Multi_key><plus>                                                          <1><1><6>       <space> : "t" U0074 #
+<Multi_key><plus>                                                          <1><1><6><nobreakspace> : "t" U0074 #
+<Multi_key><plus>                                                          <1><1><7>       <space> : "u" U0075 #
+<Multi_key><plus>                                                          <1><1><7><nobreakspace> : "u" U0075 #
+<Multi_key><plus>                                                          <1><1><8>       <space> : "v" U0076 #
+<Multi_key><plus>                                                          <1><1><8><nobreakspace> : "v" U0076 #
+<Multi_key><plus>                                                          <1><1><9>       <space> : "w" U0077 #
+<Multi_key><plus>                                                          <1><1><9><nobreakspace> : "w" U0077 #
+<Multi_key><plus>                                                          <1><2><0>       <space> : "x" U0078 #
+<Multi_key><plus>                                                          <1><2><0><nobreakspace> : "x" U0078 #
+<Multi_key><plus>                                                          <1><2><1>       <space> : "y" U0079 #
+<Multi_key><plus>                                                          <1><2><1><nobreakspace> : "y" U0079 #
+<Multi_key><plus>                                                          <1><2><2>       <space> : "z" U007A #
+<Multi_key><plus>                                                          <1><2><2><nobreakspace> : "z" U007A #
+<Multi_key><plus>                                                          <1><2><3>       <space> : "{" U007B #
+<Multi_key><plus>                                                          <1><2><3><nobreakspace> : "{" U007B #
+<Multi_key><plus>                                                          <1><2><4>       <space> : "|" U007C #
+<Multi_key><plus>                                                          <1><2><4><nobreakspace> : "|" U007C #
+<Multi_key><plus>                                                          <1><2><5>       <space> : "}" U007D #
+<Multi_key><plus>                                                          <1><2><5><nobreakspace> : "}" U007D #
+<Multi_key><plus>                                                          <1><2><6>       <space> : "~" U007E #
+<Multi_key><plus>                                                          <1><2><6><nobreakspace> : "~" U007E #
+<Multi_key><plus>                                                          <1><2><7>       <space> : "⌂" U2302 #
+<Multi_key><plus>                                                          <1><2><7><nobreakspace> : "⌂" U2302 #
+<Multi_key><plus>                                                          <1><2><8>       <space> : "Ç" # U00C7 Latin capital letter C wi cedi #
+<Multi_key><plus>                                                          <1><2><8><nobreakspace> : "Ç" # U00C7 Latin capital letter C wi cedi #
+<Multi_key><plus>                                                          <1><2><9>       <space> : "ü" # U00FC Latin small letter u withiaere #
+<Multi_key><plus>                                                          <1><2><9><nobreakspace> : "ü" # U00FC Latin small letter u withiaere #
+<Multi_key><plus>                                                          <1><3><0>       <space> : "é" # U00E9 Latin small letter e th ac #
+<Multi_key><plus>                                                          <1><3><0><nobreakspace> : "é" # U00E9 Latin small letter e th ac #
+<Multi_key><plus>                                                          <1><3><1>       <space> : "â" # U00E2 Latin small letter a with rcumf #
+<Multi_key><plus>                                                          <1><3><1><nobreakspace> : "â" # U00E2 Latin small letter a with rcumf #
+<Multi_key><plus>                                                          <1><3><2>       <space> : "ä" # U00E4 Latin small letter a withiaere #
+<Multi_key><plus>                                                          <1><3><2><nobreakspace> : "ä" # U00E4 Latin small letter a withiaere #
+<Multi_key><plus>                                                          <1><3><3>       <space> : "à" # U00E0 Latin small letter a th gr #
+<Multi_key><plus>                                                          <1><3><3><nobreakspace> : "à" # U00E0 Latin small letter a th gr #
+<Multi_key><plus>                                                          <1><3><4>       <space> : "å" # U00E5 Latin small letter a with ng ab #
+<Multi_key><plus>                                                          <1><3><4><nobreakspace> : "å" # U00E5 Latin small letter a with ng ab #
+<Multi_key><plus>                                                          <1><3><5>       <space> : "ç" # U00E7 Latin small letter c wi cedi #
+<Multi_key><plus>                                                          <1><3><5><nobreakspace> : "ç" # U00E7 Latin small letter c wi cedi #
+<Multi_key><plus>                                                          <1><3><6>       <space> : "ê" # U00EA Latin small letter e with rcumf #
+<Multi_key><plus>                                                          <1><3><6><nobreakspace> : "ê" # U00EA Latin small letter e with rcumf #
+<Multi_key><plus>                                                          <1><3><7>       <space> : "ë" # U00EB Latin small letter e withiaere #
+<Multi_key><plus>                                                          <1><3><7><nobreakspace> : "ë" # U00EB Latin small letter e withiaere #
+<Multi_key><plus>                                                          <1><3><8>       <space> : "è" # U00E8 Latin small letter e th gr #
+<Multi_key><plus>                                                          <1><3><8><nobreakspace> : "è" # U00E8 Latin small letter e th gr #
+<Multi_key><plus>                                                          <1><3><9>       <space> : "ï" # U00EF Latin small letter i withiaere #
+<Multi_key><plus>                                                          <1><3><9><nobreakspace> : "ï" # U00EF Latin small letter i withiaere #
+<Multi_key><plus>                                                          <1><4><0>       <space> : "î" # U00EE Latin small letter i with rcumf #
+<Multi_key><plus>                                                          <1><4><0><nobreakspace> : "î" # U00EE Latin small letter i with rcumf #
+<Multi_key><plus>                                                          <1><4><1>       <space> : "ì" # U00EC Latin small letter i th gr #
+<Multi_key><plus>                                                          <1><4><1><nobreakspace> : "ì" # U00EC Latin small letter i th gr #
+<Multi_key><plus>                                                          <1><4><2>       <space> : "Ä" # U00C4 Latin capital letter A withiaere #
+<Multi_key><plus>                                                          <1><4><2><nobreakspace> : "Ä" # U00C4 Latin capital letter A withiaere #
+<Multi_key><plus>                                                          <1><4><3>       <space> : "Å" # U00C5 Latin capital letter A with ng ab #
+<Multi_key><plus>                                                          <1><4><3><nobreakspace> : "Å" # U00C5 Latin capital letter A with ng ab #
+<Multi_key><plus>                                                          <1><4><4>       <space> : "É" # U00C9 Latin capital letter E th ac #
+<Multi_key><plus>                                                          <1><4><4><nobreakspace> : "É" # U00C9 Latin capital letter E th ac #
+<Multi_key><plus>                                                          <1><4><5>       <space> : "æ" # U00E6 Latin smalletter #
+<Multi_key><plus>                                                          <1><4><5><nobreakspace> : "æ" # U00E6 Latin smalletter #
+<Multi_key><plus>                                                          <1><4><6>       <space> : "Æ" # U00C6 Latin capitaletter #
+<Multi_key><plus>                                                          <1><4><6><nobreakspace> : "Æ" # U00C6 Latin capitaletter #
+<Multi_key><plus>                                                          <1><4><7>       <space> : "ô" # U00F4 Latin small letter o with rcumf #
+<Multi_key><plus>                                                          <1><4><7><nobreakspace> : "ô" # U00F4 Latin small letter o with rcumf #
+<Multi_key><plus>                                                          <1><4><8>       <space> : "ö" # U00F6 Latin small letter o withiaere #
+<Multi_key><plus>                                                          <1><4><8><nobreakspace> : "ö" # U00F6 Latin small letter o withiaere #
+<Multi_key><plus>                                                          <1><4><9>       <space> : "ò" # U00F2 Latin small letter o th gr #
+<Multi_key><plus>                                                          <1><4><9><nobreakspace> : "ò" # U00F2 Latin small letter o th gr #
+<Multi_key><plus>                                                          <1><5><0>       <space> : "û" # U00FB Latin small letter u with rcumf #
+<Multi_key><plus>                                                          <1><5><0><nobreakspace> : "û" # U00FB Latin small letter u with rcumf #
+<Multi_key><plus>                                                          <1><5><1>       <space> : "ù" # U00F9 Latin small letter u th gr #
+<Multi_key><plus>                                                          <1><5><1><nobreakspace> : "ù" # U00F9 Latin small letter u th gr #
+<Multi_key><plus>                                                          <1><5><2>       <space> : "ÿ" # U00FF Latin small letter y withiaere #
+<Multi_key><plus>                                                          <1><5><2><nobreakspace> : "ÿ" # U00FF Latin small letter y withiaere #
+<Multi_key><plus>                                                          <1><5><3>       <space> : "Ö" # U00D6 Latin capital letter O withiaere #
+<Multi_key><plus>                                                          <1><5><3><nobreakspace> : "Ö" # U00D6 Latin capital letter O withiaere #
+<Multi_key><plus>                                                          <1><5><4>       <space> : "Ü" # U00DC Latin capital letter U withiaere #
+<Multi_key><plus>                                                          <1><5><4><nobreakspace> : "Ü" # U00DC Latin capital letter U withiaere #
+<Multi_key><plus>                                                          <1><5><5>       <space> : "¢" U00A2 #
+<Multi_key><plus>                                                          <1><5><5><nobreakspace> : "¢" U00A2 #
+<Multi_key><plus>                                                          <1><5><6>       <space> : "£" U00A3 #
+<Multi_key><plus>                                                          <1><5><6><nobreakspace> : "£" U00A3 #
+<Multi_key><plus>                                                          <1><5><7>       <space> : "¥" U00A5 #
+<Multi_key><plus>                                                          <1><5><7><nobreakspace> : "¥" U00A5 #
+<Multi_key><plus>                                                          <1><5><8>       <space> : "₧" U20A7 #
+<Multi_key><plus>                                                          <1><5><8><nobreakspace> : "₧" U20A7 #
+<Multi_key><plus>                                                          <1><5><9>       <space> : "ƒ" U0192 #
+<Multi_key><plus>                                                          <1><5><9><nobreakspace> : "ƒ" U0192 #
+<Multi_key><plus>                                                          <1><6><4>       <space> : "ñ" U00F1 #
+<Multi_key><plus>                                                          <1><6><4><nobreakspace> : "ñ" U00F1 #
+<Multi_key><plus>                                                          <1><6><5>       <space> : "Ñ" U00D1 #
+<Multi_key><plus>                                                          <1><6><5><nobreakspace> : "Ñ" U00D1 #
+<Multi_key><plus>                                                          <1><6><6>       <space> : "ª" U00AA #
+<Multi_key><plus>                                                          <1><6><6><nobreakspace> : "ª" U00AA #
+<Multi_key><plus>                                                          <1><6><7>       <space> : "º" U00BA #
+<Multi_key><plus>                                                          <1><6><7><nobreakspace> : "º" U00BA #
+<Multi_key><plus>                                                          <1><6><8>       <space> : "¿" U00BF #
+<Multi_key><plus>                                                          <1><6><8><nobreakspace> : "¿" U00BF #
+<Multi_key><plus>                                                          <1><6><9>       <space> : "®" U00AE #
+<Multi_key><plus>                                                          <1><6><9><nobreakspace> : "®" U00AE #
+<Multi_key><plus>                                                          <1><7><0>       <space> : "¬" U00AC #
+<Multi_key><plus>                                                          <1><7><0><nobreakspace> : "¬" U00AC #
+<Multi_key><plus>                                                          <1><7><1>       <space> : "½" U00BD #
+<Multi_key><plus>                                                          <1><7><1><nobreakspace> : "½" U00BD #
+<Multi_key><plus>                                                          <1><7><2>       <space> : "¼" U00BC #
+<Multi_key><plus>                                                          <1><7><2><nobreakspace> : "¼" U00BC #
+<Multi_key><plus>                                                          <1><7><3>       <space> : "¡" U00A1 #
+<Multi_key><plus>                                                          <1><7><3><nobreakspace> : "¡" U00A1 #
+<Multi_key><plus>                                                          <1><7><4>       <space> : "«" U00AB #
+<Multi_key><plus>                                                          <1><7><4><nobreakspace> : "«" U00AB #
+<Multi_key><plus>                                                          <1><7><5>       <space> : "»" U00BB #
+<Multi_key><plus>                                                          <1><7><5><nobreakspace> : "»" U00BB #
+<Multi_key><plus>                                                          <1><7><6>       <space> : "░" U2591 #
+<Multi_key><plus>                                                          <1><7><6><nobreakspace> : "░" U2591 #
+<Multi_key><plus>                                                          <1><7><7>       <space> : "▒" U2592 #
+<Multi_key><plus>                                                          <1><7><7><nobreakspace> : "▒" U2592 #
+<Multi_key><plus>                                                          <1><7><8>       <space> : "▓" U2593 #
+<Multi_key><plus>                                                          <1><7><8><nobreakspace> : "▓" U2593 #
+<Multi_key><plus>                                                          <1><7><9>       <space> : "│" U2502 #
+<Multi_key><plus>                                                          <1><7><9><nobreakspace> : "│" U2502 #
+<Multi_key><plus>                                                          <1><8><0>       <space> : "┤" U2524 #
+<Multi_key><plus>                                                          <1><8><0><nobreakspace> : "┤" U2524 #
+<Multi_key><plus>                                                          <1><8><1>       <space> : "╡" U2561 #
+<Multi_key><plus>                                                          <1><8><1><nobreakspace> : "╡" U2561 #
+<Multi_key><plus>                                                          <1><8><2>       <space> : "╢" U2562 #
+<Multi_key><plus>                                                          <1><8><2><nobreakspace> : "╢" U2562 #
+<Multi_key><plus>                                                          <1><8><3>       <space> : "╖" U2556 #
+<Multi_key><plus>                                                          <1><8><3><nobreakspace> : "╖" U2556 #
+<Multi_key><plus>                                                          <1><8><4>       <space> : "╕" U2555 #
+<Multi_key><plus>                                                          <1><8><4><nobreakspace> : "╕" U2555 #
+<Multi_key><plus>                                                          <1><8><5>       <space> : "╣" U2563 #
+<Multi_key><plus>                                                          <1><8><5><nobreakspace> : "╣" U2563 #
+<Multi_key><plus>                                                          <1><8><6>       <space> : "║" U2551 #
+<Multi_key><plus>                                                          <1><8><6><nobreakspace> : "║" U2551 #
+<Multi_key><plus>                                                          <1><8><7>       <space> : "╗" U2557 #
+<Multi_key><plus>                                                          <1><8><7><nobreakspace> : "╗" U2557 #
+<Multi_key><plus>                                                          <1><8><8>       <space> : "╝" U255D #
+<Multi_key><plus>                                                          <1><8><8><nobreakspace> : "╝" U255D #
+<Multi_key><plus>                                                          <1><8><9>       <space> : "╜" U255C #
+<Multi_key><plus>                                                          <1><8><9><nobreakspace> : "╜" U255C #
+<Multi_key><plus>                                                          <1><9><0>       <space> : "╛" U255B #
+<Multi_key><plus>                                                          <1><9><0><nobreakspace> : "╛" U255B #
+<Multi_key><plus>                                                          <1><9><1>       <space> : "┐" U2510 #
+<Multi_key><plus>                                                          <1><9><1><nobreakspace> : "┐" U2510 #
+<Multi_key><plus>                                                          <1><9><2>       <space> : "└" U2514 #
+<Multi_key><plus>                                                          <1><9><2><nobreakspace> : "└" U2514 #
+<Multi_key><plus>                                                          <1><9><3>       <space> : "┴" U2534 #
+<Multi_key><plus>                                                          <1><9><3><nobreakspace> : "┴" U2534 #
+<Multi_key><plus>                                                          <1><9><4>       <space> : "┬" U252C #
+<Multi_key><plus>                                                          <1><9><4><nobreakspace> : "┬" U252C #
+<Multi_key><plus>                                                          <1><9><5>       <space> : "├" U251C #
+<Multi_key><plus>                                                          <1><9><5><nobreakspace> : "├" U251C #
+<Multi_key><plus>                                                          <1><9><6>       <space> : "─" U2500 #
+<Multi_key><plus>                                                          <1><9><6><nobreakspace> : "─" U2500 #
+<Multi_key><plus>                                                          <1><9><7>       <space> : "┼" U253C #
+<Multi_key><plus>                                                          <1><9><7><nobreakspace> : "┼" U253C #
+<Multi_key><plus>                                                          <1><9><8>       <space> : "╞" U255E #
+<Multi_key><plus>                                                          <1><9><8><nobreakspace> : "╞" U255E #
+<Multi_key><plus>                                                          <1><9><9>       <space> : "╟" U255F #
+<Multi_key><plus>                                                          <1><9><9><nobreakspace> : "╟" U255F #
+<Multi_key><plus>                                                          <2><0><0>       <space> : "╚" U255A #
+<Multi_key><plus>                                                          <2><0><0><nobreakspace> : "╚" U255A #
+<Multi_key><plus>                                                          <2><0><1>       <space> : "╔" U2554 #
+<Multi_key><plus>                                                          <2><0><1><nobreakspace> : "╔" U2554 #
+<Multi_key><plus>                                                          <2><0><2>       <space> : "╩" U2569 #
+<Multi_key><plus>                                                          <2><0><2><nobreakspace> : "╩" U2569 #
+<Multi_key><plus>                                                          <2><0><3>       <space> : "╦" U2566 #
+<Multi_key><plus>                                                          <2><0><3><nobreakspace> : "╦" U2566 #
+<Multi_key><plus>                                                          <2><0><4>       <space> : "╠" U2560 #
+<Multi_key><plus>                                                          <2><0><4><nobreakspace> : "╠" U2560 #
+<Multi_key><plus>                                                          <2><0><5>       <space> : "═" U2550 #
+<Multi_key><plus>                                                          <2><0><5><nobreakspace> : "═" U2550 #
+<Multi_key><plus>                                                          <2><0><6>       <space> : "╬" U256C #
+<Multi_key><plus>                                                          <2><0><6><nobreakspace> : "╬" U256C #
+<Multi_key><plus>                                                          <2><0><7>       <space> : "╧" U2567 #
+<Multi_key><plus>                                                          <2><0><7><nobreakspace> : "╧" U2567 #
+<Multi_key><plus>                                                          <2><0><8>       <space> : "╨" U2568 #
+<Multi_key><plus>                                                          <2><0><8><nobreakspace> : "╨" U2568 #
+<Multi_key><plus>                                                          <2><0><9>       <space> : "╤" U2564 #
+<Multi_key><plus>                                                          <2><0><9><nobreakspace> : "╤" U2564 #
+<Multi_key><plus>                                                          <2><1><0>       <space> : "╥" U2565 #
+<Multi_key><plus>                                                          <2><1><0><nobreakspace> : "╥" U2565 #
+<Multi_key><plus>                                                          <2><1><1>       <space> : "╙" U2559 #
+<Multi_key><plus>                                                          <2><1><1><nobreakspace> : "╙" U2559 #
+<Multi_key><plus>                                                          <2><1><2>       <space> : "╘" U2558 #
+<Multi_key><plus>                                                          <2><1><2><nobreakspace> : "╘" U2558 #
+<Multi_key><plus>                                                          <2><1><3>       <space> : "╒" U2552 #
+<Multi_key><plus>                                                          <2><1><3><nobreakspace> : "╒" U2552 #
+<Multi_key><plus>                                                          <2><1><4>       <space> : "╓" U2553 #
+<Multi_key><plus>                                                          <2><1><4><nobreakspace> : "╓" U2553 #
+<Multi_key><plus>                                                          <2><1><5>       <space> : "╫" U256B #
+<Multi_key><plus>                                                          <2><1><5><nobreakspace> : "╫" U256B #
+<Multi_key><plus>                                                          <2><1><6>       <space> : "╪" U256A #
+<Multi_key><plus>                                                          <2><1><6><nobreakspace> : "╪" U256A #
+<Multi_key><plus>                                                          <2><1><7>       <space> : "┘" U2518 #
+<Multi_key><plus>                                                          <2><1><7><nobreakspace> : "┘" U2518 #
+<Multi_key><plus>                                                          <2><1><8>       <space> : "┌" U250C #
+<Multi_key><plus>                                                          <2><1><8><nobreakspace> : "┌" U250C #
+<Multi_key><plus>                                                          <2><1><9>       <space> : "█" U2588 #
+<Multi_key><plus>                                                          <2><1><9><nobreakspace> : "█" U2588 #
+<Multi_key><plus>                                                          <2><2><0>       <space> : "▄" U2584 #
+<Multi_key><plus>                                                          <2><2><0><nobreakspace> : "▄" U2584 #
+<Multi_key><plus>                                                          <2><2><1>       <space> : "▌" U258C #
+<Multi_key><plus>                                                          <2><2><1><nobreakspace> : "▌" U258C #
+<Multi_key><plus>                                                          <2><2><2>       <space> : "▐" U2590 #
+<Multi_key><plus>                                                          <2><2><2><nobreakspace> : "▐" U2590 #
+<Multi_key><plus>                                                          <2><2><3>       <space> : "▀" U2580 #
+<Multi_key><plus>                                                          <2><2><3><nobreakspace> : "▀" U2580 #
+<Multi_key><plus>                                                          <2><2><4>       <space> : "α" U03B1 #
+<Multi_key><plus>                                                          <2><2><4><nobreakspace> : "α" U03B1 #
+<Multi_key><plus>                                                          <2><2><5>       <space> : "ß" U00DF #
+<Multi_key><plus>                                                          <2><2><5><nobreakspace> : "ß" U00DF #
+<Multi_key><plus>                                                          <2><2><6>       <space> : "Γ" U0393 #
+<Multi_key><plus>                                                          <2><2><6><nobreakspace> : "Γ" U0393 #
+<Multi_key><plus>                                                          <2><2><7>       <space> : "π" U03C0 #
+<Multi_key><plus>                                                          <2><2><7><nobreakspace> : "π" U03C0 #
+<Multi_key><plus>                                                          <2><2><8>       <space> : "Σ" U03A3 #
+<Multi_key><plus>                                                          <2><2><8><nobreakspace> : "Σ" U03A3 #
+<Multi_key><plus>                                                          <2><2><9>       <space> : "σ" U03C3 #
+<Multi_key><plus>                                                          <2><2><9><nobreakspace> : "σ" U03C3 #
+<Multi_key><plus>                                                          <2><3><0>       <space> : "µ" U00B5 #
+<Multi_key><plus>                                                          <2><3><0><nobreakspace> : "µ" U00B5 #
+<Multi_key><plus>                                                          <2><3><1>       <space> : "τ" U03C4 #
+<Multi_key><plus>                                                          <2><3><1><nobreakspace> : "τ" U03C4 #
+<Multi_key><plus>                                                          <2><3><2>       <space> : "Φ" U03A6 #
+<Multi_key><plus>                                                          <2><3><2><nobreakspace> : "Φ" U03A6 #
+<Multi_key><plus>                                                          <2><3><3>       <space> : "Θ" U0398 #
+<Multi_key><plus>                                                          <2><3><3><nobreakspace> : "Θ" U0398 #
+<Multi_key><plus>                                                          <2><3><4>       <space> : "Ω" U2126 #
+<Multi_key><plus>                                                          <2><3><4><nobreakspace> : "Ω" U2126 #
+<Multi_key><plus>                                                          <2><3><5>       <space> : "δ" U03B4 #
+<Multi_key><plus>                                                          <2><3><5><nobreakspace> : "δ" U03B4 #
+<Multi_key><plus>                                                          <2><3><6>       <space> : "∞" U221E #
+<Multi_key><plus>                                                          <2><3><6><nobreakspace> : "∞" U221E #
+<Multi_key><plus>                                                          <2><3><7>       <space> : "φ" U03C6 #
+<Multi_key><plus>                                                          <2><3><7><nobreakspace> : "φ" U03C6 #
+<Multi_key><plus>                                                          <2><3><8>       <space> : "ε" U03B5 #
+<Multi_key><plus>                                                          <2><3><8><nobreakspace> : "ε" U03B5 #
+<Multi_key><plus>                                                          <2><3><9>       <space> : "∩" U2229 #
+<Multi_key><plus>                                                          <2><3><9><nobreakspace> : "∩" U2229 #
+<Multi_key><plus>                                                          <2><4><0>       <space> : "≡" U2261 #
+<Multi_key><plus>                                                          <2><4><0><nobreakspace> : "≡" U2261 #
+<Multi_key><plus>                                                          <2><4><1>       <space> : "±" U00B1 #
+<Multi_key><plus>                                                          <2><4><1><nobreakspace> : "±" U00B1 #
+<Multi_key><plus>                                                          <2><4><2>       <space> : "≥" U2265 #
+<Multi_key><plus>                                                          <2><4><2><nobreakspace> : "≥" U2265 #
+<Multi_key><plus>                                                          <2><4><3>       <space> : "≤" U2264 #
+<Multi_key><plus>                                                          <2><4><3><nobreakspace> : "≤" U2264 #
+<Multi_key><plus>                                                          <2><4><4>       <space> : "⌠" U2320 #
+<Multi_key><plus>                                                          <2><4><4><nobreakspace> : "⌠" U2320 #
+<Multi_key><plus>                                                          <2><4><5>       <space> : "⌡" U2321 #
+<Multi_key><plus>                                                          <2><4><5><nobreakspace> : "⌡" U2321 #
+<Multi_key><plus>                                                          <2><4><7>       <space> : "≈" U2248 #
+<Multi_key><plus>                                                          <2><4><7><nobreakspace> : "≈" U2248 #
+<Multi_key><plus>                                                          <2><4><8>       <space> : "°" U00B0 #
+<Multi_key><plus>                                                          <2><4><8><nobreakspace> : "°" U00B0 #
+<Multi_key><plus>                                                          <2><4><9>       <space> : "·" U00B7 #
+<Multi_key><plus>                                                          <2><4><9><nobreakspace> : "·" U00B7 #
+<Multi_key><plus>                                                          <2><5><0>       <space> : "·" U00B7 #
+<Multi_key><plus>                                                          <2><5><0><nobreakspace> : "·" U00B7 #
+<Multi_key><plus>                                                          <2><5><1>       <space> : "√" U221A #
+<Multi_key><plus>                                                          <2><5><1><nobreakspace> : "√" U221A #
+<Multi_key><plus>                                                          <2><5><2>       <space> : "ⁿ" U207F #
+<Multi_key><plus>                                                          <2><5><2><nobreakspace> : "ⁿ" U207F #
+<Multi_key><plus>                                                          <2><5><4>       <space> : "■" U25A0 #
+<Multi_key><plus>                                                          <2><5><4><nobreakspace> : "■" U25A0 #
+<Multi_key><plus>                                                          <2><5><5>       <space> : " " U0020 #
+<Multi_key><plus>                                                          <2><5><5><nobreakspace> : " " U0020 #
+<Multi_key><plus>                                                       <0><1><2><8>               : "€" U20AC #
+<Multi_key><plus>                                                       <0><1><3><0>               : "‘" U2018 #
+<Multi_key><plus>                                                       <0><1><3><2>               : "„" U201E #
+<Multi_key><plus>                                                       <0><1><3><3>               : "…" U2026 #
+<Multi_key><plus>                                                       <0><1><3><4>               : "†" U2020 #
+<Multi_key><plus>                                                       <0><1><3><5>               : "‡" U2021 #
+<Multi_key><plus>                                                       <0><1><3><7>               : "‰" U2030 #
+<Multi_key><plus>                                                       <0><1><3><8>               : "Š" U0160 #
+<Multi_key><plus>                                                       <0><1><3><9>               : "‹" U2039 #
+<Multi_key><plus>                                                       <0><1><4><0>               : "Œ" U0152 #
+<Multi_key><plus>                                                       <0><1><4><2>               : "Ž" U017D #
+<Multi_key><plus>                                                       <0><1><4><5>               : "‘" U2018 #
+<Multi_key><plus>                                                       <0><1><4><6>               : "’" U2019 #
+<Multi_key><plus>                                                       <0><1><4><7>               : "“" U201C #
+<Multi_key><plus>                                                       <0><1><4><8>               : "”" U201D #
+<Multi_key><plus>                                                       <0><1><5><1>               : "—" U2014 #
+<Multi_key><plus>                                                       <0><1><5><3>               : "™" U2122 #
+<Multi_key><plus>                                                       <0><1><5><4>               : "š" U0161 #
+<Multi_key><plus>                                                       <0><1><5><5>               : "›" U203A #
+<Multi_key><plus>                                                       <0><1><5><6>               : "œ" U0153 #
+<Multi_key><plus>                                                       <0><1><5><8>               : "ž" U017E #
+<Multi_key><plus>                                                       <0><1><5><9>               : "Ÿ" U0178 #
+<Multi_key><plus>                                                       <0><1><6><4>               : "¤" U00A4 #
+<Multi_key><plus>                                                       <0><1><6><6>               : "¦" U00A6 #
+<Multi_key><plus>                                                       <0><1><6><8>               : "¨" U00A8 #
+<Multi_key><plus>                                                       <0><1><6><9>               : "©" U00A9 #
+<Multi_key><plus>                                                       <0><1><7><5>               : "¯" U00AF #
+<Multi_key><plus>                                                       <0><1><7><8>               : "²" U00B2 #
+<Multi_key><plus>                                                       <0><1><7><9>               : "³" U00B3 #
+<Multi_key><plus>                                                       <0><1><8><0>               : "´" U00B4 #
+<Multi_key><plus>                                                       <0><1><8><3>               : "·" U00B7 #
+<Multi_key><plus>                                                       <0><1><8><4>               : "¸" U00B8 #
+<Multi_key><plus>                                                       <0><1><8><5>               : "¹" U00B9 #
+<Multi_key><plus>                                                       <0><1><8><8>               : "¼" U00BC #
+<Multi_key><plus>                                                       <0><1><8><9>               : "½" U00BD #
+<Multi_key><plus>                                                       <0><1><9><0>               : "¾" U00BE #
+<Multi_key><plus>                                                       <0><1><9><2>               : "À" U00C0 #
+<Multi_key><plus>                                                       <0><1><9><3>               : "Á" U00C1 #
+<Multi_key><plus>                                                       <0><1><9><4>               : "Â" U00C2 #
+<Multi_key><plus>                                                       <0><1><9><5>               : "Ã" U00C3 #
+<Multi_key><plus>                                                       <0><1><9><6>               : "Ä" U00C4 #
+<Multi_key><plus>                                                       <0><1><9><7>               : "Å" U00C5 #
+<Multi_key><plus>                                                       <0><1><9><8>               : "Æ" U00C6 #
+<Multi_key><plus>                                                       <0><1><9><9>               : "Ç" U00C7 #
+<Multi_key><plus>                                                       <0><2><0><0>               : "È" U00C8 #
+<Multi_key><plus>                                                       <0><2><0><1>               : "É" U00C9 #
+<Multi_key><plus>                                                       <0><2><0><2>               : "Ê" U00CA #
+<Multi_key><plus>                                                       <0><2><0><3>               : "Ë" U00CB #
+<Multi_key><plus>                                                       <0><2><0><4>               : "Ì" U00CC #
+<Multi_key><plus>                                                       <0><2><0><5>               : "Í" U00CD #
+<Multi_key><plus>                                                       <0><2><0><6>               : "Ï" U00CF #
+<Multi_key><plus>                                                       <0><2><0><7>               : "Ï" U00CF #
+<Multi_key><plus>                                                       <0><2><0><8>               : "Ð" U00D0 #
+<Multi_key><plus>                                                       <0><2><1><0>               : "Ò" U00D2 #
+<Multi_key><plus>                                                       <0><2><1><1>               : "Ó" U00D3 #
+<Multi_key><plus>                                                       <0><2><1><2>               : "Ô" U00D4 #
+<Multi_key><plus>                                                       <0><2><1><3>               : "Õ" U00D5 #
+<Multi_key><plus>                                                       <0><2><1><4>               : "Ö" U00D6 #
+<Multi_key><plus>                                                       <0><2><1><5>               : "×" U00D7 #
+<Multi_key><plus>                                                       <0><2><1><6>               : "Ø" U00D8 #
+<Multi_key><plus>                                                       <0><2><1><7>               : "Ù" U00D9 #
+<Multi_key><plus>                                                       <0><2><1><8>               : "Ú" U00DA #
+<Multi_key><plus>                                                       <0><2><1><9>               : "Û" U00DB #
+<Multi_key><plus>                                                       <0><2><2><0>               : "Ü" U00DC #
+<Multi_key><plus>                                                       <0><2><2><1>               : "Ý" U00DD #
+<Multi_key><plus>                                                       <0><2><2><2>               : "Þ" U00DE #
+<Multi_key><plus>                                                       <0><2><2><3>               : "ß" U00DF #
+<Multi_key><plus>                                                       <0><2><2><4>               : "à" U00E0 #
+<Multi_key><plus>                                                       <0><2><2><5>               : "á" U00E1 #
+<Multi_key><plus>                                                       <0><2><2><6>               : "â" U00E2 #
+<Multi_key><plus>                                                       <0><2><2><7>               : "ã" U00E3 #
+<Multi_key><plus>                                                       <0><2><2><8>               : "ä" U00E4 #
+<Multi_key><plus>                                                       <0><2><2><9>               : "å" U00E5 #
+<Multi_key><plus>                                                       <0><2><3><0>               : "æ" U00E6 #
+<Multi_key><plus>                                                       <0><2><3><1>               : "ç" U00E7 #
+<Multi_key><plus>                                                       <0><2><3><2>               : "è" U00E8 #
+<Multi_key><plus>                                                       <0><2><3><3>               : "é" U00E9 #
+<Multi_key><plus>                                                       <0><2><3><4>               : "ê" U00EA #
+<Multi_key><plus>                                                       <0><2><3><5>               : "ë" U00EB #
+<Multi_key><plus>                                                       <0><2><3><6>               : "ì" U00EC #
+<Multi_key><plus>                                                       <0><2><3><7>               : "í" U00ED #
+<Multi_key><plus>                                                       <0><2><3><8>               : "î" U00EE #
+<Multi_key><plus>                                                       <0><2><3><9>               : "ï" U00EF #
+<Multi_key><plus>                                                       <0><2><4><0>               : "ð" U00F0 #
+<Multi_key><plus>                                                       <0><2><4><2>               : "ò" U00F2 #
+<Multi_key><plus>                                                       <0><2><4><3>               : "ó" U00F3 #
+<Multi_key><plus>                                                       <0><2><4><4>               : "ô" U00F4 #
+<Multi_key><plus>                                                       <0><2><4><5>               : "õ" U00F5 #
+<Multi_key><plus>                                                       <0><2><4><6>               : "ö" U00F6 #
+<Multi_key><plus>                                                       <0><2><4><7>               : "÷" U00F7 #
+<Multi_key><plus>                                                       <0><2><4><8>               : "ø" U00F8 #
+<Multi_key><plus>                                                       <0><2><4><9>               : "ú" U00FA #
+<Multi_key><plus>                                                       <0><2><5><0>               : "û" U00FB #
+<Multi_key><plus>                                                       <0><2><5><1>               : "ü" U00FC #
+<Multi_key><plus>                                                       <0><2><5><2>               : "ù" U00F9 #
+<Multi_key><plus>                                                       <0><2><5><3>               : "ý" U00FD #
+<Multi_key><plus>                                                       <0><2><5><4>               : "þ" U00FE #
+<Multi_key><plus>                                                       <0><2><5><5>               : "ÿ" U00FF #
 #
 #
 #   START_MATH
@@ -9697,10 +9731,10 @@
 <Multi_key><plus><period>                                                                          : "⨥" U2A25 # PLUS SIGN WITH DOT BELOW
 <Multi_key><plus><asciitilde>                                                              <space> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
 <Multi_key><plus><asciitilde>                                                       <nobreakspace> : "⨦" U2A26 # PLUS SIGN WITH TILDE BELOW
-<Multi_key><plus><2>                                                                               : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><KP_add><KP_2>                                                                          : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><KP_add><2>                                                                             : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
-<Multi_key><plus><KP_2>                                                                            : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><plus><2><underscore>                                                                   : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><KP_add><KP_2><underscore>                                                              : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><KP_add><2><underscore>                                                                 : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
+<Multi_key><plus><KP_2><underscore>                                                                : "⨧" U2A27 # PLUS SIGN WITH SUBSCRIPT TWO
 <Multi_key><space><plus><asciicircum>                                                              : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
 <Multi_key><nobreakspace><plus><asciicircum>                                                       : "⨨" U2A28 # PLUS SIGN WITH BLACK TRIANGLE
 <Multi_key><comma><minus>                                                                          : "⨩" U2A29 # MINUS SIGN WITH COMMA ABOVE

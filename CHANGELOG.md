@@ -59,6 +59,7 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 * Composition :
 	* Symboles météo par séquences commençant par « ¦m- ».
 	* Émulation des codes Alt + pavé numérique par séquences commençant par « ¦+ ». compose-1.yml, compose-2.yml [e0f0057](https://github.com/dispoclavier/azerty-complet/commit/e0f0057c479c51fe6209faadf4a0f31573376fc1), [e75719e](https://github.com/dispoclavier/azerty-complet/commit/e75719e314bfe0d115a6839986df89d5ba348abe)
+	* Adapter les séquences de "⨧" U+2A27 en « ¦+2_ ».
 	* Caractère de remplacement "�" U+FFFD par « ¦<? ». ibidem
 * Transformations :
 	* Groupes des symboles :
