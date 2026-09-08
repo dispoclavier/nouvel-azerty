@@ -57,10 +57,10 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 		* Mouvoir "🙏" U+1F64F du niveau 8 de D08 "I" sur D10 "P" à la place de "&amp;amp;", qui descend au niveau 7 de D08 "&" à la place de "\u{", qui monte au niveau 8 de D07 "U" à la place de "&amp;apos;", qui va sur C08 "'" et "K" à la place de "😅" U+1F605, qui va sur D08 à la place laissée par "🙏" U+1F64F. dispocla.cpp, kbcomazerty.c, kbcomredispo.c, kbligatures.c, kbligazerty.c, kbligredispo.c [501cd06](https://github.com/dispoclavier/azerty-complet/commit/501cd0622106987df00b56478ba140f36d771763), [e0f0057](https://github.com/dispoclavier/azerty-complet/commit/e0f0057c479c51fe6209faadf4a0f31573376fc1)
 		* Redonder le sélecteur de variante émoji "️️" U+FE0F au niveau 8 de D03 "E" à la place de "&amp;quot;", qui descend au niveau 7 à la place de "″" U+2033, qui va sur C08 "K" à la place de "&#x", qui va sur D02 "Z" à la place de "′" U+2032, qui va sur C07 "J" à la place de "‾" U+203E, qui va sur D09 "O" à la place de "Ω" U+03A9, qui est dans le groupe 1 de "{" et dans la touche morte grec ou cerclé. ibidem
 * Composition :
-	* Symboles météo par séquences commençant par « ¦m- ».
+	* Symboles météo par séquences commençant par « ¦m- ». compose-1.yml [6b74ee1](https://github.com/dispoclavier/azerty-complet/commit/6b74ee1c346428e4781a8c1ed44df6c7457eb0fc)
 	* Émulation des codes Alt + pavé numérique par séquences commençant par « ¦+ ». compose-1.yml, compose-2.yml [e0f0057](https://github.com/dispoclavier/azerty-complet/commit/e0f0057c479c51fe6209faadf4a0f31573376fc1), [e75719e](https://github.com/dispoclavier/azerty-complet/commit/e75719e314bfe0d115a6839986df89d5ba348abe)
-	* Adapter les séquences de "⨧" U+2A27 en « ¦+2_ ».
-	* Caractère de remplacement "�" U+FFFD par « ¦<? ». ibidem
+	* Adapter les séquences de "⨧" U+2A27 en « ¦+2_ ». compose-1.yml [6b74ee1](https://github.com/dispoclavier/azerty-complet/commit/6b74ee1c346428e4781a8c1ed44df6c7457eb0fc)
+	* Caractère de remplacement "�" U+FFFD par « ¦<? ». compose-1.yml [90ead6e](https://github.com/dispoclavier/azerty-complet/commit/90ead6e5168b73f859607eacbbe00f3ce0ee4fd9)
 * Transformations :
 	* Groupes des symboles :
 		* Suite à la redisposition des touches C08 à C10 et D07 à D10 :
@@ -108,6 +108,8 @@ Suspension de la prise en charge de Linux suite aux régressions d’XKB post-20
 	* 7.0.0.0 [306c5ae](https://github.com/dispoclavier/azerty-complet/commit/306c5aead05523866f11659008101c890844ceaf)
 	* 7.0.0.1 [0243d21](https://github.com/dispoclavier/azerty-complet/commit/0243d219e59e28d55989032d11ddb21eaa95d830)
 	* 7.0.0.2 [e75719e](https://github.com/dispoclavier/azerty-complet/commit/e75719e314bfe0d115a6839986df89d5ba348abe)
+	* 7.0.0.3 [6b74ee1](https://github.com/dispoclavier/azerty-complet/commit/6b74ee1c346428e4781a8c1ed44df6c7457eb0fc)
+	* 7.0.0.4
 
 ## 6.2.8 (2026-03-24)
 
